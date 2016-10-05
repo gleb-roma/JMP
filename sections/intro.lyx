@@ -1,0 +1,1374 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usepackage{xcolor}
+ \usepackage{relsize}
+\usepackage{graphicx}
+
+
+\AtBeginDocument{%
+\let\ref\autoref
+\renewcommand\equationautorefname{\@gobble}
+\providecommand{\propautorefname}{Proposition}
+\providecommand{\thmautorefname}{Theorem}
+\providecommand{\claimautorefname}{Claim}
+%\providecommand{\conjautorefname}{Conjecture}
+\providecommand{\exaautorefname}{Example}
+\providecommand{\lemautorefname}{Lemma}
+\providecommand{\figureautorefname}{Figure}
+}
+
+%\newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
+%\newref{prop}{name=proposition~,Name=Proposition~,names=propositions~,Names=Propositions~}
+
+
+%\newref{claim}{refcmd={Claim~\ref{#1}}}
+%\newref{lem}{refcmd={Lemma~\ref{#1}}}
+%\newref{prop}{refcmd={Proposition~\ref{#1}}}
+%\newref{thm}{refcmd={Theorem~\ref{#1}}}
+%\newref{conj}{refcmd={Conjecture~\ref{#1}}}
+%\newref{exa}{refcmd={Example~\ref{#1}}}
+\newref{eq}{refcmd={(\ref{#1})}}
+\newref{fig}{refcmd={Figure~\ref{#1}}}
+%\newref{assu}{refcmd={Assumption~\ref{#1}}}
+
+
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\Exp}{\mathbb{E}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\Norm}{\mathcal{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\sigmasq}{\sigma^{2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\argmin}{\operatorname*{argmin}}
+{\mathrm{argmin}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\argmax}{\operatorname*{argmax}}
+{\mathrm{argmax}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\supp}{\operatorname{supp}}
+{\mathrm{supp}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\oV}{\overline{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uV}{\underline{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\oW}{\overline{W}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uW}{\underline{W}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Wedge 1.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The existing economics literature mainly focused on two-sided pricing to
+ influence participation on the sides of the market.
+ But many new marketplaces, such as Uber and Airbnb, are transactional matching
+ marketplaces, in which the matching stage, which occurs after the stage
+ of affiliation with the platform, matters a lot.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Wedge 2.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The new platforms, such as Uber and Airbnb, set the goal of bringing the
+ idle capacities possessed by dispersed owners to the market where they
+ can be efficiently traded.
+ These platforms are dynamic matching marketplaces, that is characterized
+ by the following features: the participants' preferences can be highly
+ heterogenous, supply is limited in the short run, and the market runs continuou
+sly.
+ Therefore, bringing the owners to the platform is only half of the problem,
+ because capacity may end up being under-utilized in the matching stage
+ even when all participants are formally affiliated with the platform.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The platform operator has limited number of design tools at its disposal
+ because it acts as an intermediary whose goal is to facilitate search and
+ transactions, and often leaves price setting to the workers' discretion.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Wedge 3.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+New platforms, such as Uber and Airbnb, were created with the aspiration
+ of bringing to the market the idle capacities possessed by dispersed owners.
+ These platforms facilitate search and transactions in order to match the
+ capacities with potential buyers.
+ Typically, in matching marketplaces, where heterogeneity is pronounced,
+ the information provision is the key because it improves matching efficiency.
+ Yet information availability increases workers' ability to screen potential
+ buyers.
+ The precise characterization and various consequences of this tradeoff
+ constitute the theme of the present paper.
+\end_layout
+
+\begin_layout Plain Layout
+First we show that in a matching marketplace with independent workers and
+ stochastic buyer arrival, information availability creates undersirable
+ competition among worker for better buyers which results in wasted capacity.
+ Therefore, the intermeidary can improve matching by coarsening the information
+ about buyers visible to the workers.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Second, we characterize the optimal information disclosure policy as a function
+ of worker cost heterogeneity and ...
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+New platforms, such as Airbnb and Upwork, were created with the aspiration
+ of bringing to the market the idle capacities possessed by dispersed owners.
+ These platforms are matching marketplaces in the sense that both buyer
+ and worker preferences are potentially highly heterogenous (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "DELS14,Fradkin2014,CFwp,Horton2015"
+
+\end_inset
+
+).
+ Hence a platform's goal is to facilitate search and transactions between
+ buyers and workers.
+ In markets with pronounced heterogeneity, the information provision is
+ the key because it improves matching efficiency (e.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HMS09"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ ?
+\end_layout
+
+\end_inset
+
+).
+ Yet information availability also gives service providers more control
+ over the matching process, grants them more market power that may lead
+ to inferior market outcomes.
+ This creates a tradeoff between matching efficiency and rent-seeking.
+ The precise characterization and various consequences of this tradeoff
+ constitute the theme of the present paper.
+ 
+\end_layout
+
+\begin_layout Standard
+I develop a model of a 
+\emph on
+dynamic peer-to-peer market 
+\emph default
+in which buyers arrive stochastically and request services from workers;
+ a participating worker has heterogenous matching value across buyers (e.g.,
+ heterogenous costs but posted price), his capacity is limited
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A distinguishing feature of a peer-to-peer marketplace relative to a retailer
+ from the perspective of a consumer is the presence of heterogeneous sellers
+ or goods with limited capacity or availability.
+ (Fradkin 2016)
+\end_layout
+
+\end_inset
+
+, and he is free to accept or reject buyer requests.
+ Coarse segmentation of buyer tasks degrades matching quality for workers
+ but also expands the set of equilibrium outcomes, namely it eliminates
+ undesirable cream-skimming competition among workers.
+ As a result, capacity utilization may increase.
+ A combination of these two effects is that generically there exists a coarse
+ segmentation of tasks on which the worker profits increase.
+ Furthermore, buyers are also better off because higher capacity utilization
+ implies shorter delays for buyers.
+ 
+\end_layout
+
+\begin_layout Standard
+Dynamic peer-to-peer markets are increasingly relevant: there has been a
+ 10-fold growth in worker participation in online platforms over the last
+ 3 years (JP Morgan Chase, 2016).
+ Nowadays 19% of the total US adult population has engaged in a sharing
+ economy transaction (2015, PWC); Airbnb now lists more rooms than the three
+ largest hotel chains combined (Fradkin); Uber has more drivers than taxi
+ drivers in US.
+ By 2025, online talent platforms could boost global GDP by $2.7 trillion
+ (McKinsey, 2015).
+ 
+\end_layout
+
+\begin_layout Standard
+Many existing platforms have the problem of failed matches.
+ For example, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fradkin2014"
+
+\end_inset
+
+ finds that hosts on Airbnb reject proposals to transact by searchers 49%
+ of the time.
+ Using TaskRabbit data (from June 2010 to May 2014), 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CFwp"
+
+\end_inset
+
+ find that only 49% of posted tasks were successfully completed.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hor15"
+
+\end_inset
+
+ provides empirical evidence from online labor market UpWork that information
+ asymmetry about workers capacity impacts the formation of matches in important
+ ways.
+ Part of the failed matches occurs due to workers' picking out buyers
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fradkin2014"
+
+\end_inset
+
+ reports that on Airbnb 20% of requests fail due to hosts' cream-skimming.
+ 
+\end_layout
+
+\end_inset
+
+.
+ In this paper I study how the platform can use segmentation of buyer tasks
+ to improve the utilization rates, where utilization is defined as the fraction
+ of the aggregate service providers' capacity being used on average.
+\end_layout
+
+\begin_layout Standard
+Uber addressed the cream-skimming problem by limiting drivers rejection
+ rate, and additionally hiding some passenger information from drivers,
+ such as ride destination.
+ Airbnb is also aware of the problem of worker low acceptance rate, and
+ as a solution, introduced Instant Book feature.
+ In my framework, a host who adopted Instant Book faces a single segment
+ of guests so that he cannot discriminate among them.
+ Airbnb is now working on fine tuning the Instant Book feature that would
+ allow hosts to use a somewhat finer consumer segments.
+ The natural question is how fine these segments should be allowed to be?
+ TaskRabbit design defaults workers into accepting incoming tasks, so that
+ rejecting tasks is harder because it requires additional actions.
+ Moreover, TaskRabbit does not collect task details from customers before
+ directing them to the search results.
+ Offline markets which possess the same features as peer-to-peer platform
+ are housing market, where the real-estate agency is the intermediary.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In firm-worker matching markets, individual firms may find it beneficial
+ to engage in sequential rounds of interviews.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a peer-to-peer market, coarsening the segmentation of consumer tasks
+ can improve utilization rates.
+ Workers can discriminate only across segments, and thus coarser segments
+ limit the extent of discrimination.
+ For intuition, consider a simple static example: there is one worker, his
+ hourly rate 
+\begin_inset Formula $p$
+\end_inset
+
+ is posted in advance but the costs across potential tasks are heterogenous.
+ The worker's optimal strategy is to accept all tasks with cost below 
+\begin_inset Formula $p$
+\end_inset
+
+ and reject the tasks with cost above 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ The intermediary can increase the worker's acceptance rate by grouping
+ tasks right above 
+\begin_inset Formula $p$
+\end_inset
+
+ with the tasks below 
+\begin_inset Formula $p$
+\end_inset
+
+ into one segment.
+ The worker infers his expected cost for the segment.
+ If the segment contains sufficiently many low-cost tasks, the average cost
+ of a task from the segment is low enough, so that the worker is willing
+ to accept a random task from the segment.
+ Consequently, for any fixed price, the platform can increase the utilization
+ rate by coarsening the segments of buyer tasks.
+ This simple example, however, does not explain how segmentation influences
+ the worker dynamic optimization problem and competition between workers,
+ therefore we can't evaluate the equilibrium effect of segmentation and
+ can't study implications for the welfare.
+ Also in the example I assumed that the platform has complete information
+ about the worker's cost, which would be a strong assumption in many application
+s.
+ 
+\end_layout
+
+\begin_layout Standard
+Coarse segmentation may improve worker profits because information availability
+ creates undesirable competition among workers for better buyers.
+ Workers choose to keep their schedule open by ignoring low-return jobs
+ in order to increase their individual chances of receiving high-return
+ jobs.
+ I call this behavior
+\emph on
+ dynamic cream-skimming.
+
+\emph default
+ Collectively, this behavior is sub-optimal for workers because all profitable
+ jobs should be completed to maximize the joint profits.
+ Dynamic cream-skimming results in wasted capacity and lowered worker profits.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, I characterize the optimal segmentation for the intermediary that
+ wants to maximize total matches, as a function of worker cost heterogeneity
+ and the distribution of workers' productivity.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ [Then I compare utilizaton-maximizing information policy with welfare-maximizin
+g and profit-maximizing policies.
+ I find ...
+ ]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Paragraph
+Minimal example of dynamic cream-skimming.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Suppose there are two identical workers.
+ Every time period 
+\begin_inset Formula $t=1,2,...$
+\end_inset
+
+ one task arrives.
+ Each task has profit 
+\begin_inset Formula $\pi=1$
+\end_inset
+
+ or 
+\begin_inset Formula $\pi=1/5$
+\end_inset
+
+ with equal probabilities.
+ The new task is directed to one of the available workers chosen uniformly
+ at random.
+ If the worker accepts the task, he works on it the next period and does
+ not receive new tasks.
+ Each worker maximizes the all-time average profit; there is no discounting.
+ I will compare two situations: in the first, the workers coordinate to
+ maximize the joint profits, in the second, the workers play a blind Nash
+ equilibrium.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+When the workers coordinate, it is optimal to accept every task.
+ The expected per period profit for each worker is then 
+\begin_inset Formula $V^{o}=\frac{1}{2}\frac{1}{2}(1+\frac{1}{5})=.3$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Now consider a Nash equilibrium in which workers do not observe each other
+ states and act independently.
+ I claim that a pair of strategies where each worker accepts only 
+\begin_inset Formula $\pi=1$
+\end_inset
+
+ is such an equilibrium.
+ Indeed, in this equilibrium, expected per period profit for each worker
+ must be 
+\begin_inset Formula $V^{*}=1/4$
+\end_inset
+
+.
+ Suppose a worker receives a task with profit 
+\begin_inset Formula $\pi=1$
+\end_inset
+
+.
+ If he accepts the task, he earns 
+\begin_inset Formula $1$
+\end_inset
+
+ over the course of two periods.
+ If he rejects the task, he earns zero today and expects to earn 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ tomorrow.
+ Therefore the net payoff of accepting 
+\begin_inset Formula $\pi=1$
+\end_inset
+
+ is 
+\begin_inset Formula $1-1/4=3/4>0$
+\end_inset
+
+, and so tasks 
+\begin_inset Formula $\pi=1$
+\end_inset
+
+ are accepted.
+ Analogously, we find that the net payoff of accepting 
+\begin_inset Formula $\pi=1/5$
+\end_inset
+
+ is 
+\begin_inset Formula $1/5-1/4<0$
+\end_inset
+
+, and so tasks 
+\begin_inset Formula $\pi=1/5$
+\end_inset
+
+ are rejected.
+ We conclude that the equilibrium outcome is not optimal for the workers.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The platform can increase the workers' profits by not revealing the value
+ of 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ Then the expected profit of each task is 
+\begin_inset Formula $\frac{1}{2}(1+\frac{1}{5})=.6>0$
+\end_inset
+
+, and so every task is accepted.
+ This attains the optimum.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+This example shows that in peer-to-peer markets, independent service providers
+ engage in self-defeating cream-skimming competition which results in lower
+ profits compared to the case when workers coordinate.
+ Fundamentally, this happens because jointly the workers are less capacity
+ constrained than individually.
+ In the example above, it is physically possible for workers to complete
+ every buyer task (No Excess Demand assumption in the main model), and so
+ collectively, the workers are not capacity constrained.
+ Therefore, if the workers coordinate, they accept all profitable tasks
+ and obtain the maximal profits.
+ However, each individual worker 
+\emph on
+is
+\emph default
+ capacity constrained (in time), and thus has the option value of rejecting.
+ Therefore, when workers act independently, they accept fewer tasks and
+ make less profits.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Closely related intuition.
+ workers wait to thicken the market in order to choose the best tasks.
+ But this creates wasteful delays for buyers who are more time-sensitive.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip 
+\end_layout
+
+\end_inset
+
+I proceed as follows.
+ ...
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+LANGUAGE
+\end_layout
+
+\begin_layout Itemize
+platform instead of matching marketplace? – to differentiate myself from
+ kidney exchange
+\end_layout
+
+\begin_layout Itemize
+Platform facilitates transactions between the participants.
+ It is an intermediary in a broad sense.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+platform can be one-sided (network goods like mobile phones) or two-sided.
+ 
+\end_layout
+
+\begin_layout Itemize
+platform can offer homogenous good, e.g.
+ credit card companies or video games.
+ These are two-sided but not 
+\begin_inset Quotes eld
+\end_inset
+
+matching
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Product company – sells products to consumers.
+ 
+\end_layout
+
+\begin_layout Itemize
+Matching platform.
+ Airbnb and Upwork are matching markets but they are not centralized the
+ way kidney exchanges are.
+ Peer-to-peer?
+\end_layout
+
+\begin_layout Itemize
+Seller v.
+ 
+\bar under
+worker
+\bar default
+ v.
+ service provider.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Buyer
+\bar default
+ v.
+ customer v.
+ client
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+ This paper necessarily focuses on a limited set of digital marketplace
+ design choices.
+ Other mechanisms also play an important role in these markets.
+ Reputation systems reveal seller quality in ways that reduce both adverse
+ selection and moral hazard on the part of sell- ers (Resnick et al.
+ (2000), Klein, Lambertz and Stahl (Forthcoming), Fradkin et al.
+ (2015)).
+ Innovative pricing and matching mechanisms such as auctions (Einav et al.
+ (Forthcoming), employer initiated search (Horton (Forthcoming)), and surge
+ pricing (Hall, Kendrick and Nosko (2016)) are frequently used to clear
+ the market.
+ The informational structure of the market, including the ability to post
+ photos (Lewis (2011)) and disclose quality (Tadelis and Zettelmeyer (2015)),
+ can also affect market eciency.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Related-Literature"
+
+\end_inset
+
+Related Work
+\end_layout
+
+\begin_layout Standard
+My paper is adjacent to several literatures.
+ 
+\end_layout
+
+\begin_layout Standard
+First, vis-a-vis literature on pricing in two-sided platform (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RT06,Wey10"
+
+\end_inset
+
+), I make a point that in peer-to-peer markets, not only prices matter but
+ also the matching mechanism.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For example, in Rochet and Tirole, a factor affecting elasticities on a
+ given side is the size of the installed base of end-users on that side.
+ 
+\end_layout
+
+\end_inset
+
+ Second, vis-a-vis DAA literature which studies the centralized matching
+ mechanism (kidney exchange, National Resident Matching Program), the markets
+ I am interested in feature less control by the intermediary.
+ The distinguishing feature of a peer-to-peer market is that a participant
+ can typically decide whether to participate in a transaction or not after
+ learning his counter-party.
+ Intermediation in peer-to-peer platforms is therefore akin to regulation
+ and anti-trust policies in industries.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The theory of two-sided matching generally assumes that agents know their
+ true preferences over potential partners prior to engaging in a match —
+ For a survey, see Roth and Sotomayor (1990)
+\end_layout
+
+\end_inset
+
+ Third, peer-to-peer market is not a bargaining network often found in health
+ (cite Robin Lee).
+ The intermediary imposes some basic structure on the marketplace, such
+ as posted prices.
+ 
+\end_layout
+
+\begin_layout Standard
+Fourth, labor literature often assumes the black-box matching mechanism
+ – matching function (Becker (1973); 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Shimer2000"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kircher2009"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+ This does not allow to evaluate the policies that affect the matching mechanism
+, such as information intermediation and minimal acceptance rate.
+ 
+\end_layout
+
+\begin_layout Standard
+Fifth, on the search side of the platform, the interaction of product differenti
+ation and search costs have been studied by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AR99"
+
+\end_inset
+
+.
+ They showed that when product differentiation increases, buyers search
+ more.
+ However, the total effect on price elasticity of demand is ambiguous.
+ In the present paper the workers do not search but reject or accept incoming
+ requests.
+ Information coarsening decreases buyer task differentiation.
+ On the one hand, workers are worse off because due to lack of information
+ (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bla53"
+
+\end_inset
+
+).
+ On the other hand, information coarsening softens cream-skimming competition
+ among workers.
+ 
+\end_layout
+
+\begin_layout Standard
+There have been studies on dynamic matching markets and two-sided platforms
+ in the literatures of economics and operations research.
+ To the best of my knowledge, no prior work examined information disclosure
+ in a dynamic mechanism design setting.
+ 
+\end_layout
+
+\begin_layout Standard
+Our main contribution is to the market design literature.
+ A related paper that also studies dynamic matching is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AJM13"
+
+\end_inset
+
+.
+ They show that waiting to thicken improves matching in kidney exchange
+ because individual agents do not fully incorporate the benefits of waiting.
+ I show there is a 
+\begin_inset Quotes eld
+\end_inset
+
+reversed
+\begin_inset Quotes erd
+\end_inset
+
+ effect: individual workers wait too long because they do not fully incorporate
+ the lost value of rejection for buyers (or buyer waiting costs).
+ Another related paper is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ALG16"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+add description
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+look into Pathak's syllabus for more.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Effects of information disclosure in matching markets are multi-dimensional.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HMS09"
+
+\end_inset
+
+ shows that disclosing too much information can induce excessive costly
+ signaling which overcomes the gains from improved matching.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mil10"
+
+\end_inset
+
+ shows that conflation increases prices of auctioned items if the items
+ are identical and buyers have bidding costs.
+ In his model, supply is fixed because the number of goods is pre-determined.
+ Moreover, there is no cost of mismatch.
+ In a closely related literature on targeting in advertising, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BB11"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AG10"
+
+\end_inset
+
+ evaluate the economic implications of improved targeting on market for
+ advertising.
+ In both 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BB11"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AG10"
+
+\end_inset
+
+, better targeting increases demand for advertising (efficiency effect).
+ Higher demand pushes prices up.
+ In both papers, supply effect of better targeting gives the same effect
+ on prices but the underlying mechanisms are distinct.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BB11"
+
+\end_inset
+
+, better targeting leads to fewer advertisers in each outlet which lowers
+ competition between advertisers and pushes prices down.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AG10"
+
+\end_inset
+
+, better targeting allows each outlet to better allocate scarce advertising
+ space, so that more advertisers can be accommodated.
+ This pushes prices down.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Search and matching also plays a large role in the economics of labor, housing,
+ and household formation.
+ Theoretical results in this literature such as Burdett, Shi and Wright
+ (2001), Albrecht, Gautier and Vroman (2006), and Kircher (2009) show that
+ markets where sellers have limited capacity, such as Airbnb, are inherently
+ more frictional than markets with large firms.
+ However, the main cause of inefficiency in these papers is congestion,
+ which I show is relatively unimportant for Airbnb.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "DELS14"
+
+\end_inset
+
+ uses data from eBay to study ranking algorithms for differentiated products.
+ In the framework of this paper, their Best Match algorithm is de-conflation
+ of vertically differentiated goods.
+ By making price a more important feature in search results, the goods are
+ effectively grouped into price categories, so that it is now easier for
+ buyers to find lower-priced goods.
+ 
+\end_layout
+
+\begin_layout Standard
+Another closely related couple of papers is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HW15"
+
+\end_inset
+
+ and Hagiu and Wright (2016) that study the question of the intermediary's
+ span of control in the platform it's running.
+ There, the focus is on who, the platform or sellers, engages in complimentary
+ activities (marketing, advertising).
+ My explanation focuses on the matching mechanics and underscores the importance
+ of buyer delays and supply heterogeneity in supply-demand fit.
+ 
+\end_layout
+
+\begin_layout Standard
+My paper relies on communication games literature (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AMS95"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GH80"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mil81"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RS10"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BBM15"
+
+\end_inset
+
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "JM06"
+
+\end_inset
+
+ connect demand rotations to the company's information disclosure policy
+ about its product.
+ The contribution to this literature is that I study the effects of information
+ coarsening on the market with network effects where one of the sides is
+ potentially competitive.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM13-Ecma,BM16-TE"
+
+\end_inset
+
+ examine the general question, in strategic many-player settings, of what
+ behavior could arise in an incomplete information game if players observe
+ additional information, private or public among themselves, that is not
+ known to the analyst.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM16-TE"
+
+\end_inset
+
+ showed that a joint distribution over actions and states is Bayes correlated
+ equilibrium if and only if it forms a Bayes Nash equilibrium distribution
+ under some information structure.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM13-Ecma"
+
+\end_inset
+
+ illustrate how to find all BCE in linear best-response games with Gaussian
+ uncertainty.
+ Compared to them, the game the workers play in my model is asynchronous,
+ there is no hidden common state but there are private types which are not
+ observed by the intermediary.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM13-Ecma"
+
+\end_inset
+
+ focus on linear-quadratic setting with Gaussian beliefs.
+ My model is non-linear where non-linearity intrinsically arises due to
+ redistribution of buyers across endogenous masses of available workers.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+This result illustrates the more general connection between Bayes correlated
+ equilibrium and Bayes Nash equilibrium for all information structures studied
+ in Bergemann and Morris (2016 TE), where we showed that a joint distribution
+ over actions and states is Bayes correlated equilibrium if and only if
+ it forms a Bayes Nash equilibrium distribution under some information structure.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is extensive operations research literature on staffing and queuing
+ problems for platforms.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GLM15,BJR15"
+
+\end_inset
+
+ study price incentives schemes for staffing problem under uncertain demand
+ but in both papers the supply side does not cream-skim.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CDL16"
+
+\end_inset
+
+ shows that surge-price practices of ride-sharing platforms is nearly revenue-ma
+ximizing but also generates higher welfare than in the fixed-price or fixed-wage
+ contract.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Tay16"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AJK14"
+
+\end_inset
+
+ study how congestion affect the platform performance.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Tay16"
+
+\end_inset
+
+ show that congestion may have a counter-intuitive effect on optimal pricing
+ in two-sided markets.
+ Namely, in the presence of the uncertainty congestion may increase the
+ optimal customer price and decrease the optimal wage.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AJK14"
+
+\end_inset
+
+ study the matching market when applicants can send multiple applications
+ and employer's screening is costly.
+ They show that if the screening cost is large enough, restricting the number
+ of applications is strict Pareto improvement for both applicants and employers.
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,2010 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usepackage{xcolor}
+ \usepackage{relsize}
+\usepackage{graphicx}
+
+
+\AtBeginDocument{%
+\let\ref\autoref
+\renewcommand\equationautorefname{\@gobble}
+\providecommand{\propautorefname}{Proposition}
+\providecommand{\thmautorefname}{Theorem}
+\providecommand{\claimautorefname}{Claim}
+%\providecommand{\conjautorefname}{Conjecture}
+\providecommand{\exaautorefname}{Example}
+\providecommand{\lemautorefname}{Lemma}
+\providecommand{\figureautorefname}{Figure}
+}
+
+%\newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
+%\newref{prop}{name=proposition~,Name=Proposition~,names=propositions~,Names=Propositions~}
+
+
+%\newref{claim}{refcmd={Claim~\ref{#1}}}
+%\newref{lem}{refcmd={Lemma~\ref{#1}}}
+%\newref{prop}{refcmd={Proposition~\ref{#1}}}
+%\newref{thm}{refcmd={Theorem~\ref{#1}}}
+%\newref{conj}{refcmd={Conjecture~\ref{#1}}}
+%\newref{exa}{refcmd={Example~\ref{#1}}}
+\newref{eq}{refcmd={(\ref{#1})}}
+\newref{fig}{refcmd={Figure~\ref{#1}}}
+%\newref{assu}{refcmd={Assumption~\ref{#1}}}
+
+
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\Exp}{\mathbb{E}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\Norm}{\mathcal{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\sigmasq}{\sigma^{2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\argmin}{\operatorname*{argmin}}
+{\mathrm{argmin}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\argmax}{\operatorname*{argmax}}
+{\mathrm{argmax}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\supp}{\operatorname{supp}}
+{\mathrm{supp}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\oV}{\overline{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uV}{\underline{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\oW}{\overline{W}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uW}{\underline{W}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Appendix
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Lemmas
+\end_layout
+
+\begin_layout Standard
+The next lemma solves for optimal cutoff in worker problem 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-via-pi"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:pi(c)"
+
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+, which we call worker
+\emph on
+ 
+\emph default
+profit.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:c*"
+
+\end_inset
+
+The optimal cutoff 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ is found from
+\begin_inset Formula 
+\begin{equation}
+p-c^{*}=\tau\beta_{A}\int\limits _{0}^{c^{*}}(c^{*}-c)dF(c).\label{eq:c*}
+\end{equation}
+
+\end_inset
+
+worker accepts all 
+\begin_inset Formula $c\leq c^{*}$
+\end_inset
+
+ and rejects all 
+\begin_inset Formula $c>c^{*}$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $F$
+\end_inset
+
+ is discrete and takes values 
+\begin_inset Formula $c_{1}<c_{2}<...<c_{n}$
+\end_inset
+
+ with probabilities 
+\begin_inset Formula $f(c_{i})$
+\end_inset
+
+, you should read formula 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:c*"
+
+\end_inset
+
+ as 
+\begin_inset Formula $p-c^{*}=\tau\beta_{A}\sum_{c_{j}\leq c^{*}}(c^{*}-c_{j})f(c_{j})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+worker profit is
+\begin_inset Formula 
+\begin{equation}
+V=\frac{p-c^{*}}{\tau}.\label{eq:V}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Before going into formal proof, let me give intuition behind 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:c*"
+
+\end_inset
+
+: When faced with a task with cost 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+, over the next time interval 
+\begin_inset Formula $\tau$
+\end_inset
+
+, the worker can: either accept the task and earn 
+\begin_inset Formula $p-c^{*}$
+\end_inset
+
+; or skip the task and receive on average 
+\begin_inset Formula $\beta_{A}\tau$
+\end_inset
+
+ new requests, each of them having option value 
+\begin_inset Formula $\int_{0}^{c^{*}}(c^{*}-c)dF(c)$
+\end_inset
+
+.
+ At 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+, the worker is indifferent between taking and skipping.
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:pi(c)"
+
+\end_inset
+
+, there is cutoff 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $V_{1}(c)=p-c-\tau V$
+\end_inset
+
+ if 
+\begin_inset Formula $c<c^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{1}(c)=0$
+\end_inset
+
+ if 
+\begin_inset Formula $c>c^{*}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+need not be in the support of 
+\begin_inset Formula $F$
+\end_inset
+
+, this is just a cutoff value.
+ Therefore, 
+\begin_inset Formula 
+\begin{equation}
+p-c^{*}=V\tau.\label{eq:p-c}
+\end{equation}
+
+\end_inset
+
+We find
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\Exp[V_{1}(c)]=\int_{0}^{c^{*}}(c^{*}-c)dF(c).
+\]
+
+\end_inset
+
+Plug in into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-via-pi"
+
+\end_inset
+
+ to obtain:
+\begin_inset Formula 
+\begin{equation}
+V=\beta_{A}\int_{0}^{c^{*}}(c^{*}-c)dF(c).\label{eq:Vint}
+\end{equation}
+
+\end_inset
+
+Combine 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:p-c"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Vint"
+
+\end_inset
+
+ to obtain the desired results.
+ 
+\end_layout
+
+\begin_layout Note*
+I consider time average payoff rather than discounted sum because discount
+ rate is not essential for my tradeoffs.
+ However, the results generalize to the case when the worker has discount
+ rate 
+\begin_inset Formula $\rho$
+\end_inset
+
+ by changing 
+\begin_inset Formula $\tau$
+\end_inset
+
+ to 
+\begin_inset Formula $\tau_{\rho}=\frac{1-e^{-\rho\tau}}{\rho}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The next two results provide comparative statics on parameters.
+ We find that the worker's utilization rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is higher when each job is more profitable (higher price 
+\begin_inset Formula $p$
+\end_inset
+
+) and takes less time to complete (smaller 
+\begin_inset Formula $\tau$
+\end_inset
+
+).
+ Importantly, the utilization rate is lower when buyer arrival rate is higher
+ (high 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+).
+ The result also shows that as the platform conflates more, the workers
+ become worse off.
+ However, the effect of information coarsening on 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is ambiguous (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "exa:Acceptance-rate-not-monotone"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:comp-stat-in-sellers-problem"
+
+\end_inset
+
+ 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $p$
+\end_inset
+
+, and is decreasing in 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Worker's payoff is increasing in 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+, and is decreasing in 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Furthermore, let 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ be a mean-preserving spread of 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $c^{*}(F_{1})\leq c^{*}(F_{2})$
+\end_inset
+
+, and worker's payoff is weakly greater under 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ than under 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:comp-stat-in-sellers-problem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:lem-comp-static"
+
+\end_inset
+
+Comparative statics with respect to 
+\begin_inset Formula $p,\beta_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is straightforward.
+ 
+\end_layout
+
+\begin_layout Proof
+Denote 
+\begin_inset Formula $c_{1}:=c^{*}(F_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}:=c^{*}(F_{2})$
+\end_inset
+
+.
+ Suppose towards contradiction that 
+\begin_inset Formula $c_{1}>c_{2}$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula 
+\begin{gather*}
+p-c_{2}>p-c_{1}=\tau\beta_{A}\int_{0}^{\infty}(c_{1}-c)^{+}dF_{1}(c)\geq\tau\beta_{A}\int_{0}^{\infty}(c_{2}-c)^{+}dF_{1}(c)\geq\\
+\geq\tau\beta_{A}\int_{0}^{\infty}(c_{2}-c)^{+}dF_{2}(c)=p-c_{2}.
+\end{gather*}
+
+\end_inset
+
+A contradiction.
+ The last inequality follows from the fact that 
+\begin_inset Formula $(c_{2}-c)^{+}\equiv\max\{c_{2}-c,0\}$
+\end_inset
+
+ is a convex function of 
+\begin_inset Formula $c$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ second-order stochastically dominates 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Denote by 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ the average number of matches worker 
+\begin_inset Formula $j$
+\end_inset
+
+ completes per unit of time.
+ Denote by 
+\begin_inset Formula $N$
+\end_inset
+
+ the measure of matches all workers complete per unit of time.
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $N$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ if 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tau\beta\frac{f_{j}(c')}{F_{j}(c')}W_{j}(c')\leq1\quad\forall c',
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\tau\frac{n_{j}}{F_{j}(c')}\frac{f_{j}(c')}{F_{j}(c')}W_{j}(c')\leq1\quad\forall c',\forall j,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $W_{j}(c')=\int_{0}^{c'}F_{j}(c)dc$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ is not too dispersed, namely 
+\begin_inset Formula $var_{G}\left\{ \frac{dn_{j}}{d\beta}\right\} var_{G}\left\{ \lambda_{j}\right\} \leq1.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+Moreover, if all workers are identical, 
+\begin_inset Formula $N$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\tau\beta\frac{f(c^{*})}{F(c^{*})}W(c^{*})\leq1$
+\end_inset
+
+, where 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ is the optimal cutoff from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:c*"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An interesting case comes out from the case of identical workers when the
+ condition is violated.
+ If the condition is violated, then the platform can increase the flow of
+ matches by 
+\bar under
+contracting
+\bar default
+ the demand.
+ 
+\end_layout
+
+\begin_layout Proof
+First, worker 
+\begin_inset Formula $j$
+\end_inset
+
+'s profit flow 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula 
+\[
+V_{j}=(p_{j}-AC_{j}(\alpha_{j}))n_{j},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ is the average number of matches, and 
+\begin_inset Formula $p_{j}-AC_{j}(\alpha_{j})$
+\end_inset
+
+ is the average markup.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:p-c"
+
+\end_inset
+
+, find that
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{p_{j}-c_{j}^{*}}{\tau} & = & (p_{j}-AC_{j}(\alpha_{j}))n_{j},\\
+\frac{p-c^{*}}{\tau(p-\Exp[c|c<c^{*}])} & = & n_{j}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Second, I find the derivative of 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\alpha_{j}$
+\end_inset
+
+.
+ Start by finding the following derivative:
+\begin_inset Formula 
+\[
+\frac{d}{dc_{j}^{*}}\left(\Exp[c|c<c_{j}^{*}]\right)=\frac{d}{dc_{j}^{*}}\left(\frac{\int_{0}^{c_{j}^{*}}cdF_{j}(c)}{F_{j}(c_{j}^{*})}\right)=\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c).
+\]
+
+\end_inset
+
+Now differentiate 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ wrt 
+\begin_inset Formula $c_{j}^{*}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dn_{j}}{dc_{j}^{*}} & \propto & -1(p-\Exp[c|c<c_{j}^{*}])+(p-c_{j}^{*})\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c)\\
+ & \propto & -1+\tau n_{j}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c)=-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dn_{j}}{dc^{*}}=\frac{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}{\tau(p-\Exp[c|c<c^{*}])}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dn_{j}}{d\alpha_{j}}=\frac{dn_{j}}{f(c_{j}^{*})dc_{j}^{*}}=\frac{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}{f(c^{*})\tau(p-\Exp[c|c<c^{*}])}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Third, the flow balance condition 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:beta_A"
+
+\end_inset
+
+ can be rewritten as
+\begin_inset Formula 
+\[
+\int\frac{n_{j}}{\alpha_{j}}dG(j)=\beta.
+\]
+
+\end_inset
+
+Differentiate wrt 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\int\left[\frac{dn_{j}}{d\beta}\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{d\beta}\frac{n_{j}}{\alpha_{j}}\right]dG(j) & = & 1\\
+\int\frac{dn_{j}}{d\beta}\left[\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{dn_{j}}\frac{n_{j}}{\alpha_{j}}\right]dG(j) & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+I will show now that for any 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{dn_{j}}\frac{n_{j}}{\alpha_{j}}\geq0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\frac{1}{\alpha_{j}}-\frac{n_{j}}{\alpha_{j}^{2}}\frac{f(c^{*})\tau(p-\Exp[c|c<c^{*}])}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{-\alpha_{j}+\tau n_{j}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})-n_{j}f(c^{*})\tau(p-\Exp[c|c<c^{*}])}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{-\alpha_{j}-n_{j}f(c_{j}^{*})\tau(p-c_{j}^{*})}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
+\]
+
+\end_inset
+
+The numerator is non-positive because price is above the marginal cost.
+ The denominator is negative by the assumption.
+ Therefore, the inequality holds.
+ Finally, this implies that
+\begin_inset Formula 
+\[
+\frac{dN}{d\beta}=\int\frac{dn_{j}}{d\beta}dG(j)\geq0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:unique-x"
+
+\end_inset
+
+For any vector 
+\begin_inset Formula $\alpha(\theta)$
+\end_inset
+
+, there exists a unique vector solution 
+\begin_inset Formula $x(\theta)$
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset FormulaMacro
+\newcommand{\bx}{\mathbf{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bA}{\mathbf{A}}
+\end_inset
+
+Denote 
+\begin_inset Formula $x=\sum_{\theta'}x(\theta')$
+\end_inset
+
+ the mass of all available workers.
+ Rewrite 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\tau\beta(\theta,\alpha(\theta),p_{\theta},x(\theta)/x)\alpha(\theta)+x(\theta)=g(\theta).\label{eq:Ax=g}
+\end{equation}
+
+\end_inset
+
+Denote the left-hand side of the equation by 
+\begin_inset Formula $\mathbf{A}(\mathbf{x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\bx=(x(\theta))_{\theta\in\Theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a correspondence that maps 
+\begin_inset Formula $\bx$
+\end_inset
+
+ into 
+\begin_inset Formula $\R^{dim\Theta}$
+\end_inset
+
+.
+ First we show that the solution to 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ exists, then we show that it is unique.
+ 
+\end_layout
+
+\begin_layout Proof
+For existence, consider a mapping 
+\begin_inset Formula $T$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+T_{i}(\bx)=g_{i}-\tau\beta(\theta_{i},\alpha(\theta_{i}),p_{\theta_{i}},x(\theta_{i})/x)\alpha(\theta_{i}).
+\]
+
+\end_inset
+
+Define 
+\begin_inset Formula $X=\{(x_{1},...x_{\dim\Theta})\colon0\leq x_{i}\leq g_{i}\}$
+\end_inset
+
+.
+ We will show that mapping 
+\begin_inset Formula $T$
+\end_inset
+
+ satisfies the conditions of Brouwer's fixed point theorem.
+ First, 
+\begin_inset Formula $T$
+\end_inset
+
+ maps 
+\begin_inset Formula $X$
+\end_inset
+
+ to itself.
+ Indeed, 
+\begin_inset Formula $T_{i}(\bx)\leq g_{i}$
+\end_inset
+
+.
+ But also
+\begin_inset Formula 
+\[
+T_{i}(\bx)\geq g_{i}-\tau\beta(\theta_{i},1,p_{\theta_{i}},1)>0.
+\]
+
+\end_inset
+
+The first inequality uses 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "assu:Frictional-consumer-search"
+
+\end_inset
+
+ and demand monotonicity in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The second inequality uses 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "assu:no-excess-demand"
+
+\end_inset
+
+.
+ Second, 
+\begin_inset Formula $X$
+\end_inset
+
+ is compact.
+ Finally, 
+\begin_inset Formula $T$
+\end_inset
+
+ is continuous.
+ Therefore, Brouwer's theorem ensures the existence of a fixed point, which
+ is a solution to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Ax=g"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+In the rest of the proof we prove uniqueness.
+ We will show that the principal minors of Jacobian matrix of 
+\begin_inset Formula $\bA$
+\end_inset
+
+ are non-negative everywhere.
+ Then by Gale-Nikaido (1965), the mapping is one-to-one and hence 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ has a unique solution.
+ 
+\begin_inset Formula 
+\[
+J=\begin{bmatrix}\frac{\partial A_{1}}{\partial x_{1}} & \frac{\partial A_{1}}{\partial x_{2}} & ...\\
+\frac{\partial A_{2}}{\partial x_{1}} & \frac{\partial A_{2}}{\partial x_{2}}\\
+\vdots &  & \ddots
+\end{bmatrix},
+\]
+
+\end_inset
+
+where we use a simplified notation 
+\begin_inset Formula $x_{1}:=x(\theta_{1})$
+\end_inset
+
+.
+ Use notation 
+\begin_inset Formula $\nu_{1}=x_{1}/x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial A_{1}}{\partial x_{1}} & = & \tau\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}\frac{d(x(\theta_{1})/x)}{dx_{1}}+1=\\
+ & = & \tau\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}\frac{x-x_{1}}{x^{2}}+1.
+\end{eqnarray*}
+
+\end_inset
+
+Denote for brevity 
+\begin_inset Formula $\beta_{1}=\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\frac{\partial A_{1}}{\partial x_{1}}=\frac{\tau}{x}\beta_{1}(1-\nu_{1})+1.
+\]
+
+\end_inset
+
+Similary find
+\begin_inset Formula 
+\[
+\frac{\partial A_{1}}{\partial x_{2}}=-\frac{\tau}{x}\beta_{1}\nu_{1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We need to show that all principle minors of matrix 
+\begin_inset Formula $J$
+\end_inset
+
+ are non-negative.
+ Without loss of generality, consider the leading principal minor of size
+ 
+\begin_inset Formula $K=1,...,\dim\Theta$
+\end_inset
+
+, denote it by 
+\begin_inset Formula $J_{K}$
+\end_inset
+
+.
+ It can be rewritten as follows
+\begin_inset Formula 
+\[
+J_{K}=\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}+\frac{\tau}{x}\begin{bmatrix}-\beta_{1}\nu_{1}\\
+\vdots\\
+-\beta_{2}\nu_{2}
+\end{bmatrix}\begin{bmatrix}1 & 1 & 1\end{bmatrix}.
+\]
+
+\end_inset
+
+Now I will use the following formula for the determinants:
+\begin_inset Formula 
+\[
+\det(X+AB)=\det X\det(I+BX^{-1}A).
+\]
+
+\end_inset
+
+In case of matrix 
+\begin_inset Formula $J_{K}$
+\end_inset
+
+, we obtain:
+\begin_inset Formula 
+\[
+\det J_{K}=\det\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}\det(1+\begin{bmatrix}1 & 1 & 1\end{bmatrix}\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}^{-1}\frac{\tau}{x}\begin{bmatrix}-\beta_{1}\nu_{1}\\
+\vdots\\
+-\beta_{2}\nu_{2}
+\end{bmatrix}).
+\]
+
+\end_inset
+
+We need to show that 
+\begin_inset Formula $\det J_{K}\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\bx$
+\end_inset
+
+.
+ It is sufficient to the second determinant on the right hand side of the
+ formula above.
+ We need to show
+\begin_inset Formula 
+\[
+1+\frac{\tau}{x}\sum_{i=1}^{K}\frac{-\beta_{i}\nu_{i}}{1+\frac{\tau}{x}\beta_{i}}\geq0.
+\]
+
+\end_inset
+
+First observe that 
+\begin_inset Formula $\frac{\beta_{i}\tau/x}{\beta_{i}\tau/x+1}\leq1$
+\end_inset
+
+, and then
+\begin_inset Formula 
+\[
+1+\frac{\tau}{x}\sum_{i=1}^{K}\frac{-\beta_{i}\nu_{i}}{1+\frac{\tau}{x}\beta_{i}}\geq1-\sum_{i=1}^{K}\nu_{i}\geq0,
+\]
+
+\end_inset
+
+because 
+\begin_inset Formula $\sum_{i=1}^{\dim\Theta}\nu_{i}=1$
+\end_inset
+
+.
+ This proves that all principal minors of 
+\begin_inset Formula $J$
+\end_inset
+
+ are non-negative, and by Gale-Nikaido (1965), 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ has a unique solutions.
+\end_layout
+
+\begin_layout Section
+Proofs omitted from the main text
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists"
+
+\end_inset
+
+ We need to show that there is a unique solution 
+\begin_inset Formula $(\alpha(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
+\end_inset
+
+ to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1"
+
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Proof
+Use Kakutani theorem.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Equilibrium-exists-and-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists-1"
+
+\end_inset
+
+ We need to show that there is a unique solution 
+\begin_inset Formula $(\alpha(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
+\end_inset
+
+ to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1-1"
+
+\end_inset
+
+}, where we treat 
+\begin_inset Formula $x$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, as has been determined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:unique-x"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Use Kakutani theorem.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:dM/dW"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof2"
+
+\end_inset
+
+Step 1.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are positively related.
+ Indeed, when the mass of available workers is 
+\begin_inset Formula $X$
+\end_inset
+
+, the flow of matches is 
+\begin_inset Formula 
+\[
+M=\frac{1-X}{\tau}.
+\]
+
+\end_inset
+
+The buyer arrival rate on available workers is 
+\begin_inset Formula $\beta_{A}=\beta/X$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+M=\frac{1-\beta/\beta_{A}}{\tau}.
+\]
+
+\end_inset
+
+We are interested in the sign of 
+\begin_inset Formula $\delta M/\delta W$
+\end_inset
+
+, therefore we will find 
+\begin_inset Formula $\delta\beta_{A}/\delta W$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ The equilibrium values of 
+\begin_inset Formula $\alpha(\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are found from the system of equations 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-shat-W"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:beta_A"
+
+\end_inset
+
+, which we reproduce here:
+\begin_inset Formula 
+\begin{align}
+p+\theta-\hat{m}(\theta) & =\tau\beta_{A}W(\hat{m}(\theta)),\quad\forall\theta\in\Theta;\label{eq:20}\\
+\int\frac{dG(\theta)}{\tau\alpha(\theta)+1/\beta_{A}} & =\beta.\label{eq:21}
+\end{align}
+
+\end_inset
+
+Take the differential of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:21"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\int\frac{dG(\theta)\left(\tau\delta\alpha(\theta)-\delta\beta_{A}/\beta_{A}^{2}\right)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\delta\beta_{A}=\frac{\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}}{\frac{1}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}}.\label{eq:delta-betaA}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now use the fact that
+\begin_inset Formula 
+\begin{equation}
+\alpha(\theta)=W'(\hat{m}(\theta)+)\label{eq:alpha=W'}
+\end{equation}
+
+\end_inset
+
+to find the differential
+\begin_inset Formula 
+\begin{equation}
+\delta\alpha(\theta)=\delta W'(\hat{m}(\theta))+W''(\hat{m}(\theta))\delta\hat{m}(\theta).\label{eq:delta-alpha}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Take the differential of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:20"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\delta\hat{m}(\theta)=\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}W'(\hat{m}(\theta))\delta\hat{m}(\theta)+\tau\beta_{A}\delta W(\hat{m}(\theta))\nonumber \\
+-\delta\hat{m}(\theta)(1+\tau\beta_{A}\alpha(\theta))=\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}\delta W(\hat{m}(\theta)).\label{eq:delta-mhat}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Plug in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-mhat"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-alpha"
+
+\end_inset
+
+ and then into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-betaA"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta W'(\hat{m}(\theta))+W''(\hat{m}(\theta))\delta\hat{m}(\theta)\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta W'(\hat{m}(\theta))\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau\int\frac{W''(\hat{m}(\theta))\left(\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}\delta W(\hat{m}(\theta))\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{3}\beta_{A}}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\delta\beta_{A}\left[\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}+\tau^{2}\int\frac{W''(\hat{m}(\theta))\beta_{A}^{2}W(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{3}}\right]=\\
+=\tau\int\frac{\delta W'(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau^{2}\int\frac{W''(\hat{m}(\theta))\delta W(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{3}}
+\end{multline*}
+
+\end_inset
+
+We have both 
+\begin_inset Formula $\delta W$
+\end_inset
+
+ and 
+\begin_inset Formula $(\delta W)'$
+\end_inset
+
+ on the right hand side of the expression above, and we need to have only
+ 
+\begin_inset Formula $\delta W$
+\end_inset
+
+ .
+ To get it, we will use integration by parts.
+ Consider separately the first term in the previous line:
+\begin_inset Formula 
+\begin{gather*}
+Z_{1}:=\tau\int\frac{\delta W'(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\tau\beta_{A}^{2}\int\frac{\left(\delta W(\hat{m}(\theta))\right)'g(\theta)d\theta}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}=\tau\beta_{A}^{2}\int\frac{g(\theta)d\left(\delta W(\hat{m}(\theta))\right)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}=\\
+=\tau\beta_{A}^{2}\frac{g(\theta)\delta W(\hat{m}(\theta))}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}|_{\underline{\theta}}^{\overline{\theta}}-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))d\left(\frac{g(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))d\left(\frac{g(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\frac{g'(\theta)\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}-2g(\theta)\left(\tau\alpha(\theta)\beta_{A}+1\right)\tau\beta_{A}\alpha'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{4}}d\theta=\\
+=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-\frac{g'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}+\frac{2g(\theta)\tau\beta_{A}\alpha'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{3}}\right]d\theta
+\end{gather*}
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha=W'"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\alpha'(\theta)=W''(\hat{m}(\theta))\hat{m}'(\theta).
+\]
+
+\end_inset
+
+Differentiate 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:20"
+
+\end_inset
+
+ wrt 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+1-\hat{m}'(\theta) & =\tau\beta_{A}\alpha(\theta)\hat{m}'(\theta)\\
+\hat{m}'(\theta) & =\frac{1}{1+\tau\beta_{A}\alpha(\theta)}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For brevity, adopt the notation 
+\begin_inset Formula 
+\[
+\nu(\theta):=\frac{1}{1+\tau\beta_{A}\alpha(\theta)}.
+\]
+
+\end_inset
+
+The notation is not coincidental, 
+\begin_inset Formula $\nu(\theta)$
+\end_inset
+
+ is equal to the fraction of type-
+\begin_inset Formula $\theta$
+\end_inset
+
+ workers who are available in equilibrium.
+ Return to compute
+\begin_inset Formula 
+\[
+Z_{1}=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{3}2g(\theta)\tau\beta_{A}W''\nu\right]d\theta.
+\]
+
+\end_inset
+
+Now we finish computing the differential 
+\begin_inset Formula $\delta\beta_{A}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
+=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{3}2g(\theta)\tau\beta_{A}W''\nu\right]d\theta-\tau^{2}\int W''(\hat{m}(\theta))\delta W(\hat{m}(\theta))\nu^{3}\beta_{A}^{3}dG(\theta)=\\
+=\tau\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}\beta_{A}^{2}+\nu(\theta)^{4}2g(\theta)\tau\beta_{A}W''\beta_{A}^{2}-\tau W''(\hat{m}(\theta))\nu^{3}g(\theta)\beta_{A}^{3}\right]d\theta.
+\end{multline*}
+
+\end_inset
+
+We are interested in the expression in the square brackets in the formula
+ above.
+ Therefore, for some 
+\begin_inset Formula $K>0$
+\end_inset
+
+ that is constant in 
+\begin_inset Formula $\theta$
+\end_inset
+
+ we have: 
+\begin_inset Formula 
+\begin{align*}
+\frac{\delta\beta_{A}}{\delta W} & =K\left(-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{4}2g(\theta)\tau\beta_{A}W''-\tau W''(\hat{m}(\theta))\nu^{3}g(\theta)\beta_{A}\right)=\\
+ & =K\nu(\theta)^{2}\left(-g'(\theta)+g(\theta)\nu(\theta)\tau\beta_{A}W''(\hat{m}(\theta))(2\nu(\theta)-1)\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Extensions"
+
+\end_inset
+
+Technical Extensions
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:No-Excess-Demand"
+
+\end_inset
+
+No Excess Demand Assumption relaxed
+\end_layout
+
+\begin_layout Standard
+Allow for the case when 
+\begin_inset Formula $\beta(1)\tau\geq1$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta(1)\tau>1$
+\end_inset
+
+, then workers get overwhelmed by the buyer requests and can't respond to
+ all of them to the extent that they can't even reject them.
+ To cover this situation we assume that if there are no available workers
+ to reject a pending buyer request, the platform rejects it automatically.
+ 
+\end_layout
+
+\begin_layout Standard
+Since some requests can be rejected by the platform, the acceptance rate
+ as perceived by buyers does not coincide with the acceptance rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ generated by workers.
+ Denote by 
+\begin_inset Formula $\alpha^{e}$
+\end_inset
+
+ the effective acceptance rate that 
+\bar under
+buyers
+\bar default
+ face.
+ Let at some moment of time there is 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ mass of available workers, and let buyers arrive to the platform at rate
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Then within the next time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+, there are 
+\begin_inset Formula $\beta dt$
+\end_inset
+
+ new request, and 
+\begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)$
+\end_inset
+
+ available workers.
+ What is 
+\begin_inset Formula $\alpha^{e}$
+\end_inset
+
+ when workers use acceptance rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+? Consider three cases.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+ There is plenty of available workers, 
+\begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)>\beta dt$
+\end_inset
+
+.
+ Fraction 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ of buyers are accepted, therefore 
+\begin_inset Formula $\alpha^{e}=\alpha$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\beta<\frac{1}{\tau}$
+\end_inset
+
+.
+ There are few workers that just became available but in sufficient number
+ to process all buyers.
+ In the same fashion as in case 1, 
+\begin_inset Formula $\alpha^{e}=\alpha$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x=0$
+\end_inset
+
+ but 
+\begin_inset Formula $\alpha\beta\geq\frac{1}{\tau}$
+\end_inset
+
+.
+ Not sufficient workers to process all buyers, some buyers are rejected
+ by the platform.
+ The number of accepted tasks is 
+\begin_inset Formula $\frac{1}{\tau}dt$
+\end_inset
+
+.
+ The acceptance rate is therefore 
+\begin_inset Formula $\alpha^{e}=\frac{1/\tau}{\beta}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Combining all there cases, we have that 
+\begin_inset Formula 
+\[
+\alpha^{e}=\min\{\alpha,\frac{1}{\tau\beta}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The adjusted definition of equilibrium is then the following.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\alpha\in[F(c^{*}(\beta_{A})-),F(c^{*}(\beta_{A})+)].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\beta_{A}=\frac{\beta(\alpha^{e})}{1-\beta(\alpha^{e})\alpha^{e}\tau}=\begin{cases}
+\frac{\beta(\alpha)}{1-\beta(\alpha)\alpha\tau}, & \alpha\beta(\alpha)\tau<1\\
++\infty, & \alpha\beta(\alpha)\tau\geq1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{A}=+\infty$
+\end_inset
+
+ reflects the fact that when the demand is overwhelming, buyers line up
+ for workers so workers start a new task immediately after they finish the
+ previous one.
+ The No Excess Demand assumption makes sure that this never happens, 
+\begin_inset Formula $\alpha\beta(\alpha)\tau<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The next result shows that in the equilibrium there are no lines.
+ By this reason for the clarity of exposition we decided to restrict the
+ analysis to the case of no lines to begin with.
+ 
+\end_layout
+
+\begin_layout Claim*
+In equilibrium, 
+\begin_inset Formula $\beta_{A}<\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
