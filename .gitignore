@@ -1,0 +1,26 @@
+# osx noise
+.DS_Store
+profile
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS
+*~
+*\#
+Job market talk at lunches/test.lyx
+Job market talk at lunches/jm talk 100216.lyx
+Job market talk at lunches/jm talk for comments from Thummim.pdf
+Job market talk at lunches/jm talk for jeff comments.pdf
+Susan Athey slides. MBA Digital Platforms L9-Sharing Economy 2015.pdf
+test.lyx

@@ -6,6 +6,7 @@
 \origin unavailable
 \textclass beamer
 \begin_preamble
+
 \usepackage{fleqn}
 \usetheme{CambridgeUS}
 %\usetheme{Madrid}
@@ -108,8 +109,8 @@ theorems-named
 \begin_body
 
 \begin_layout Title (Plain Frame)
-Ignorance is Strength: Improving Performance of Peer-to-peer Markets by
- Limiting Information 
+Ignorance is Strength: Improving Performance of Decentralized Matching Markets
+ by Limiting Information 
 \begin_inset Note Note
 status collapsed
 
@@ -325,7 +326,7 @@ rental housing
 \end_layout
 
 \begin_layout Itemize
-taxi rides
+transportation
 \end_layout
 
 \begin_layout Itemize
@@ -357,11 +358,7 @@ bigskip
 
 \end_inset
 
-
-\emph on
-Platform's
-\emph default
- value proposition is to facilitate matching
+Platform's value proposition is to facilitate matching
 \end_layout
 
 \end_deeper
@@ -391,7 +388,7 @@ Matching Problem and Design Tools
 status open
 
 \begin_layout Plain Layout
-Problem
+Matching Problem
 \end_layout
 
 \end_inset
@@ -405,7 +402,8 @@ If one side shops too much for better options, the other side suffers (from
 \end_layout
 
 \begin_layout Itemize
-E.g., employers on labor platforms, such as Upwork, prefer one-session transaction
+E.g., freelancers on labor platforms, such as Upwork, shop for better jobs
+ and delay transactions, while employers prefer one-session transactions
 \end_layout
 
 \begin_layout Itemize
@@ -465,7 +463,8 @@ s:
 \end_layout
 
 \begin_layout Itemize
-10-fold growth in worker participation over the last 3 years (2016, JPMC)
+10-fold growth in worker participation in US over the last 3 years (2016,
+ JPMC)
 \end_layout
 
 \begin_layout Itemize
@@ -508,6 +507,11 @@ However, information availability makes participants too picky -> matches
  take longer to consummate
 \end_layout
 
+\begin_layout Itemize
+Other problems with info disclosure: excessive signaling (Hoppe et al.
+ 2009), failure to share risk (Hirschleifer 1971)
+\end_layout
+
 \begin_layout Block
 \begin_inset Argument 2
 status open
@@ -525,122 +529,8 @@ Question
 What should be information disclosure policy in matching markets?
 \end_layout
 
-\begin_layout Itemize
-E.g., reviews, ride destination, guest star ratings, etc
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-xxx
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Important observation #1: Capacity utilization affects welfare on both sides
- of the m
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-xx
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Important observation #1: Capacity utilization affects welfare on both sides
- of the m
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Information Disclosure in Peer-to-peer Markets
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-How does information disclosure in peer-to-peer markets affect benefits
- from participation on either side? 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Standard economics literature on two-sided markets (Rochet-Tirole 2006,
- Weyl 2010, Armstrong 2006) develops price theory for two-sided markets
- where cross-side effects are held fixed
-\end_layout
-
-\begin_layout Itemize
-The theory applies well to product platforms such as video game platforms
- and credit card companies
-\end_layout
-
-\begin_layout Itemize
-In peer-to-peer markets, such as Airbnb, other design choices become important:
- reputation systems, flexible pricing, search, 
-\bar under
-information structure
-\bar default
-, etc
+\begin_layout Examples
+Reviews, ride destination, guest star ratings, etc.
 \end_layout
 
 \end_deeper
@@ -664,10 +554,12 @@ Capacity Utilization
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Important observation #1: Capacity utilization affects welfare on both sides
- of the market
+\begin_layout Frame
+In decentralized platforms, 
+\emph on
+capacity utilization
+\emph default
+ is an important factor of marketplace efficiency
 \end_layout
 
 \begin_deeper
@@ -676,19 +568,18 @@ Capacity = maximal worker output per unit of time
 \end_layout
 
 \begin_layout Itemize
-
-\emph on
-Capacity utilization rate
-\emph default
- = proportion of capacity that is actually realized 
+Capacity utilization rate = proportion of capacity that is actually realized
+ 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
- 
+
 \backslash
 bigskip
+\backslash
+pause
 \end_layout
 
 \end_inset
@@ -696,39 +587,39 @@ bigskip
 
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Workers face a tradeoff between higher capacity utilization and higher match
- quality
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Observation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Capacity utilization affects welfare on both sides of the market
 \end_layout
 
 \begin_layout Itemize
-Buyers benefit from higher capacity utilization due to matching frictions
+Higher utilization -> 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-higher capacity utilization <-> higher acceptance rate
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
+more buyer requests are accepted -> buyers are better off
 \end_layout
 
-\end_inset
-
-
+\begin_layout Itemize
+worker marginal cost goes up -> worse/better off if above/below price 
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-In peer-to-peer markets, the platform does not have direct control over
- capacity utilization, and the workers resolve utilization-quality tradeoff
- individually
+In contrast, RT06, Weyl 2010: utilization is fixed
 \end_layout
 
 \end_deeper
@@ -744,7 +635,7 @@ In peer-to-peer markets, the platform does not have direct control over
 status open
 
 \begin_layout Plain Layout
-Information Disclosure
+Conceptual Preview of Results
 \end_layout
 
 \end_inset
@@ -753,17 +644,12 @@ Information Disclosure
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Key observation #2: availability of information about buyers affects capacity
- utilization 
-\begin_inset ERT
+\begin_layout Block
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-bigskip
+Important Observation #1
 \end_layout
 
 \end_inset
@@ -771,11 +657,90 @@ bigskip
 
 \end_layout
 
+\begin_layout Block
+Controlling match information available to workers can increase capacity
+ utilization 
+\end_layout
+
 \begin_layout Itemize
-So, information disclosure can be used to balance the sides of the market
+by reducing worker rejection rate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Important Observation #2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Full disclosure gives rise to 
+\emph on
+scheduling externality
+\emph default
+ among workers that decreases utilization rate
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -814,7 +779,11 @@ driver utility is hump-shaped in utilization
 
 \end_deeper
 \begin_layout Itemize
-Passengers like high acceptance rates
+Passengers do not like waiting
+\end_layout
+
+\begin_layout Itemize
+Hiding ride destination from drivers increases driver acceptance rate
 \end_layout
 
 \end_deeper
@@ -826,6 +795,26 @@ Passengers like high acceptance rates
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1-2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+label=preview
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -860,7 +849,7 @@ pause
 \end_layout
 
 \begin_layout Enumerate
-Un-mediated market -> market outcome is Pareto dominated due to 
+Unmediated market -> market outcome is Pareto dominated due to 
 \emph on
 scheduling externality
 \begin_inset ERT
@@ -870,7 +859,7 @@ status open
 
 
 \backslash
-vspace{3cm}
+bigskip
 \end_layout
 
 \end_inset
@@ -878,6 +867,34 @@ vspace{3cm}
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+Optimal disclosure in linear cost environment to maximize utilization.
+ Information coarsening if
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+there are fewer low-skill workers than high-skill workers
+\end_layout
+
+\begin_layout Itemize
+higher buyer-to-worker ratio
+\end_layout
+
+\begin_layout Itemize
+capacity constraints are more severe
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -927,7 +944,7 @@ status open
 
 
 \backslash
-input{../pictures/pareto_frontier_slides.tex}
+input{../pictures/pareto_frontier_slides_words.tex}
 \end_layout
 
 \end_inset
@@ -948,77 +965,19 @@ input{../pictures/pareto_frontier_slides.tex}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout AgainFrame
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
-Preview of Results
+3
 \end_layout
 
 \end_inset
 
-
+preview
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Identical workers -> information disclosure implements any point on the
- Pareto frontier in axes of buyer surplus and worker surplus
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Un-mediated market -> market outcome is Pareto dominated due to 
-\emph on
-scheduling externality
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Optimal disclosure in linear cost environment to maximize utilization.
- Information coarsening if
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-there are fewer low-skill workers than high-skill workers
-\end_layout
-
-\begin_layout Itemize
-higher buyer-to-worker ratio
-\end_layout
-
-\begin_layout Itemize
-capacity constraints are more severe
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1122,7 +1081,7 @@ OR: Ashlagi et al.
 
 \end_deeper
 \begin_layout Section
-Model of P2P Market
+Model of Decentralized Matching Market
 \end_layout
 
 \begin_layout Frame
@@ -1213,16 +1172,6 @@ centering
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-use a hypothetical Uber as an example? 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1301,22 +1250,8 @@ one buyer - one job
 \end_layout
 
 \end_deeper
-\begin_layout Assumption
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Random Assignment
-\end_layout
-
-\end_inset
-
-Buyers are assigned uniformly at random to the available workers.
- 
-\end_layout
-
 \begin_layout Itemize
-Search is costly:
+Buyer search is costly:
 \end_layout
 
 \begin_deeper
@@ -1485,7 +1420,7 @@ Cdf, pdf
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $u(x,y)-p_{y}$
+\begin_inset Formula $u(x,y)-p$
 \end_inset
 
 
@@ -1497,7 +1432,7 @@ Cdf, pdf
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $p_{y}-C(x,y)$
+\begin_inset Formula $p-C(x,y)$
 \end_inset
 
 
@@ -1548,7 +1483,7 @@ Cdf, pdf
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $u(x,y)-p_{y}\geq0$
+\begin_inset Formula $u(x,y)-p\geq0$
 \end_inset
 
  for any 
@@ -1556,6 +1491,104 @@ Cdf, pdf
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Suppose 
+\begin_inset Formula $\min_{x}C(y,x)<p_{y}<\max_{x}C(y,x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Spot Matching Process, ctd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula $\tau$
+\end_inset
+
+ – time to complete any job
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula $\beta$
+\end_inset
+
+ – buyer arrival rate (mass of buyers per unit of time)
+\end_layout
+
+\begin_deeper
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Buyer Search is Perfectly Frictional
+\end_layout
+
+\end_inset
+
+Buyers contact an available worker chosen uniformly at random
+\end_layout
+
+\begin_layout Itemize
+Relaxed in an extension in the paper
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+No Excess Demand
+\end_layout
+
+\end_inset
+
+ Collectively, it is physically possible for workers to complete every buyer
+ job: 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Simplifies the notation, otherwise deal with queues
+\end_layout
+
+\begin_layout Itemize
+Easy extension in the paper
 \end_layout
 
 \end_deeper
@@ -1688,7 +1721,7 @@ status open
 \begin_layout Itemize
 s.t.
  average posterior = prior, 
-\begin_inset Formula $\int_{S}s\mu(ds)=f$
+\begin_inset Formula $\int_{S}s\mu(ds)\sim f$
 \end_inset
 
 
@@ -1705,10 +1738,6 @@ default is full disclosure
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Separator plain
 \end_inset
 
@@ -1720,316 +1749,7 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
-Supply: Worker Repeated Search Problem
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-input{../pictures/worker_problem.tex}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Plain Layout
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Worker Repeated Search Problem, ctd
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-A worker is in one of two states: 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-available and has no requests
-\end_layout
-
-\begin_layout Enumerate
-busy working on a job
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-When worker is available, buyers arrive at Poisson rate 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- is endogenous b/c mass of available workers is endogenous
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\beta_{A}>\beta$
-\end_inset
-
- because jobs are directed to available workers only
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- is constant in steady state
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_inset
-
-
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Worker Repeated Search Problem, ctd
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "back_ImpatientWorkers"
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-When available, buyers arrive at Poisson rate 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- is endogenous b/c mass of available workers is endogenous
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\begin_inset Formula $V(y)$
-\end_inset
-
- per-moment value of being available, in the optimum
-\end_layout
-
-\begin_layout Itemize
-Every time a job with signal 
-\begin_inset Formula $s$
-\end_inset
-
- arrives, worker 
-\begin_inset Formula $y$
-\end_inset
-
- gets 
-\begin_inset Formula $\pi(s,y)$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\pi(s,y)$
-\end_inset
-
- includes option value of waiting
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\begin_inset Formula $C(y,s):=\int_{X}C(y,x)s(dx)$
-\end_inset
-
- expected cost after signal 
-\begin_inset Formula $s$
-\end_inset
-
- for worker 
-\begin_inset Formula $y$
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-medskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Worker optimization problem
-\begin_inset Formula 
-\[
-\begin{cases}
-\pi(s,y)=\max\{0,p_{y}-C(y,s)-\tau V(y)\}\\
-V(y)=\beta_{A}\int\pi(s,y)\mu(ds)
-\end{cases}
-\]
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-V(y) & = & \beta_{A}\int\pi(s,y)\mu(ds)\\
-\pi(s,y) & = & \max\{0,p_{y}-C(y,s)-\tau V(y)\}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-No discounting 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hfill
-\backslash
-hyperlink{ImpatientWorkers}{
-\backslash
-beamergotobutton{Impatient Workers}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-State of the Matching System
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2128,7 +1848,7 @@ fraction of time type-
 status open
 
 \begin_layout Plain Layout
-Steady State
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2224,7 +1944,7 @@ centering
 status open
 
 \begin_layout Plain Layout
-Steady State
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2336,7 +2056,7 @@ centering
 status open
 
 \begin_layout Plain Layout
-Steady State
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2448,7 +2168,7 @@ centering
 status open
 
 \begin_layout Plain Layout
-Steady State
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2560,7 +2280,7 @@ centering
 status open
 
 \begin_layout Plain Layout
-Steady State
+Steady State of the Matching Process
 \end_layout
 
 \end_inset
@@ -2656,6 +2376,155 @@ Average utilization
 
 \end_deeper
 \begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Worker Repeated Search Problem
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "back_ImpatientWorkers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When available, buyers arrive at Poisson rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ is endogenous b/c mass of available workers is endogenous
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $V(y)$
+\end_inset
+
+ per-moment value of being available, in the optimum
+\end_layout
+
+\begin_layout Itemize
+Every time a job with signal 
+\begin_inset Formula $s$
+\end_inset
+
+ arrives, worker 
+\begin_inset Formula $y$
+\end_inset
+
+ gets 
+\begin_inset Formula $\pi(s,y)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\pi(s,y)$
+\end_inset
+
+ includes option value of waiting
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $C(y,s):=\int_{X}C(y,x)s(dx)$
+\end_inset
+
+ expected cost after signal 
+\begin_inset Formula $s$
+\end_inset
+
+ for worker 
+\begin_inset Formula $y$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Worker optimization problem
+\begin_inset Formula 
+\[
+\begin{cases}
+\pi(s,y)=\max\{0,p_{y}-C(y,s)-\tau V(y)\}\\
+V(y)=\beta_{A}\int\pi(s,y)\mu(ds)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+No discounting 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\backslash
+hyperlink{ImpatientWorkers}{
+\backslash
+beamergotobutton{Impatient Workers}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma(s,y)\colon S\to[0,1]$
+\end_inset
+
+ acceptance strategy
+\end_layout
+
+\end_deeper
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -2675,9 +2544,8 @@ Steady-State Equilibrium
 
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $((\alpha(y))_{y\in Y},\rhobar)$
+\begin_layout Frame
+\begin_inset Formula $(\sigma,\rhobar)$
 \end_inset
 
  is a 
@@ -2687,29 +2555,34 @@ steady-state equilibrium
  if
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-[SS] Utilization 
-\begin_inset Formula $\rhobar$
-\end_inset
-
- arises in a steady state given acceptance rates 
-\begin_inset Formula $\alpha(\cdot)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-[optimality] Every available worker takes as given Poisson arrival rate
+[Optimality] Every available worker takes as given Poisson arrival rate
  
 \begin_inset Formula $\beta_{A}=\beta/(1-\rhobar)$
 \end_inset
 
  and acts optimally –> 
-\begin_inset Formula $\alpha(\cdot)$
+\begin_inset Formula $\sigma$
 \end_inset
 
  
+\end_layout
+
+\begin_layout Enumerate
+[SS] 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ induces acceptance rates 
+\begin_inset Formula $\alpha(\cdot)$
+\end_inset
+
+ –> utilization 
+\begin_inset Formula $\rhobar$
+\end_inset
+
+ arises in a steady state 
 \end_layout
 
 \begin_layout Standard
@@ -2727,26 +2600,7 @@ bigskip
 
 \end_inset
 
-We make the following assumption to make the exposition easier.
-\end_layout
 
-\begin_layout Assumption
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-No Excess Demand
-\end_layout
-
-\end_inset
-
- Collectively, it is physically possible for workers to complete every buyer
- job: 
-\begin_inset Formula $\beta\tau<1$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Proposition
@@ -2787,7 +2641,7 @@ Market Design: Information Disclosure
 \begin_deeper
 \begin_layout Standard
 Equilibrium 
-\begin_inset Formula $(\alpha(.),\rhobar)$
+\begin_inset Formula $(\sigma,\rhobar)$
 \end_inset
 
  is a function of disclosure policy 
@@ -2819,50 +2673,6 @@ How does equilibrium welfare of each side depend on
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Section
-Examples
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Examples of Peer-to-peer Markets
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-TNC (Uber, Lyft, Convoy)
-\end_layout
-
-\begin_layout Itemize
-Airbnb
-\end_layout
-
-\begin_layout Itemize
-Upwork
-\end_layout
-
-\begin_layout Itemize
-TaskRabbit
-\end_layout
-
-\end_deeper
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Market Design: Information Disclosure
 \end_layout
@@ -3188,18 +2998,6 @@ pause
 \end_layout
 
 \begin_layout Itemize
-Denote worker-
-\begin_inset Formula $y$
-\end_inset
-
-'s acceptance strategy by 
-\begin_inset Formula $\sigma(s,y)\colon S\to[0,1]$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $V^{\sigma}(y)$
 \end_inset
 
@@ -3229,15 +3027,6 @@ status open
 
 \end_inset
 
-Suppose 
-\begin_inset Formula $\min_{x}C(y,x)<p_{y}<\max_{x}C(y,x)$
-\end_inset
-
- for all 
-\begin_inset Formula $y$
-\end_inset
-
-.
  Let 
 \begin_inset Formula $\sigma^{FD}$
 \end_inset
@@ -3902,7 +3691,15 @@ status open
 \begin_inset Formula $\beta\tau<1/2$
 \end_inset
 
-, then it's impossible to improve upon full disclosure by local coarsening.
+, then it's impossible to improve upon full disclosure by 
+\begin_inset Quotes eld
+\end_inset
+
+local coarsening
+\begin_inset Quotes erd
+\end_inset
+
+.
  
 \end_layout
 
@@ -4017,6 +3814,32 @@ Worker Optimization Problem
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z=\left\{ \int x\,s(dx)\colon s\in S\right\} $
+\end_inset
+
+ is the set of posterior means of 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F^{\mu}(\zeta)=\mu\left\{ \int x\,s(dx)\leq\zeta\right\} $
+\end_inset
+
+ is the cdf of posterior means of 
+\begin_inset Formula $x$
+\end_inset
+
+ under 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Lemma
 \begin_inset Argument 1
 status open
@@ -4027,7 +3850,7 @@ status open
 
 \end_inset
 
-For any disclosure 
+For any disclosure policy 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -4044,24 +3867,6 @@ p+y-\smuth & =\tau\beta_{A}W^{\mu}(\smuth)
 
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-and the worker payoff is
-\begin_inset Formula 
-\[
-V^{\mu}(y)=\frac{p+y-\smuth}{\tau}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 where
 \begin_inset Formula 
 \[
@@ -4072,15 +3877,7 @@ W^{\mu}(z):=\int_{0}^{z}(z-\zeta)dF^{\mu}(\zeta)
 
 is the 
 \emph on
-option value function, 
-\begin_inset Formula $F^{\mu}$
-\end_inset
-
- is the distribution of posterior means of 
-\begin_inset Formula $x$
-\end_inset
-
-.
+option value function.
  
 \end_layout
 
