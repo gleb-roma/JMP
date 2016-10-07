@@ -1296,9 +1296,9 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
-<column alignment="right" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="right" valignment="top" width="25text%">
+<column alignment="center" valignment="middle" width="25text%">
+<column alignment="center" valignment="middle" width="25text%">
 <row>
 <cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
@@ -1342,7 +1342,7 @@ Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $x\in X$
+\begin_inset Formula $x\in X\subset\R^{n}$
 \end_inset
 
 
@@ -1354,7 +1354,7 @@ Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $y\in Y$
+\begin_inset Formula $y\in Y\subset\R^{m}$
 \end_inset
 
 
@@ -1381,7 +1381,7 @@ Cdf, pdf
 \end_inset
 
 , 
-\begin_inset Formula $f$
+\begin_inset Formula $f>0$
 \end_inset
 
 
@@ -1397,7 +1397,7 @@ Cdf, pdf
 \end_inset
 
 , 
-\begin_inset Formula $g$
+\begin_inset Formula $g>0$
 \end_inset
 
 
@@ -1411,16 +1411,16 @@ Cdf, pdf
 \begin_inset Text
 
 \begin_layout Plain Layout
-1-match net payoff
+1-match net payoff (net of prices)
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $u(x,y)-p$
+\begin_inset Formula $u(x,y)\geq0$
 \end_inset
 
 
@@ -1428,11 +1428,11 @@ Cdf, pdf
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $p-C(x,y)$
+\begin_inset Formula $\pi(x,y)\gtrless0$
 \end_inset
 
 
@@ -1473,17 +1473,41 @@ Cdf, pdf
 \end_inset
 
  have full support
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $C(x,y)\geq0$
+\begin_inset Formula $\pi(x,y)$
 \end_inset
 
  continuous 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $u(x,y)-p\geq0$
+\begin_inset Formula $\min_{x}\pi(x,y)<0<\max_{x}\pi(x,y)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u(x,y)\geq0$
 \end_inset
 
  for any 
@@ -1491,18 +1515,6 @@ Cdf, pdf
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Suppose 
-\begin_inset Formula $\min_{x}C(y,x)<p_{y}<\max_{x}C(y,x)$
-\end_inset
-
- for all 
-\begin_inset Formula $y$
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
@@ -2421,10 +2433,18 @@ When available, buyers arrive at Poisson rate
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $V(y)$
+\begin_inset Formula $\pi(s,y):=\int_{X}\pi(x,y)\,s(dx)$
 \end_inset
 
- per-moment value of being available, in the optimum
+ expected profit for worker 
+\begin_inset Formula $y$
+\end_inset
+
+ on job with signal 
+\begin_inset Formula $s$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -2437,7 +2457,7 @@ Every time a job with signal
 \end_inset
 
  gets 
-\begin_inset Formula $\pi(s,y)$
+\begin_inset Formula $v(s,y)$
 \end_inset
 
  
@@ -2445,26 +2465,18 @@ Every time a job with signal
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $\pi(s,y)$
+\begin_inset Formula $v(s,y)$
 \end_inset
 
- includes option value of waiting
+ includes option value of rejecting and opportunity cost of being unavailable
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $C(y,s):=\int_{X}C(y,x)s(dx)$
+\begin_inset Formula $V(y)$
 \end_inset
 
- expected cost after signal 
-\begin_inset Formula $s$
-\end_inset
-
- for worker 
-\begin_inset Formula $y$
-\end_inset
-
- 
+ per-moment value of being available, in the optimum
 \begin_inset ERT
 status open
 
@@ -2485,8 +2497,8 @@ Worker optimization problem
 \begin_inset Formula 
 \[
 \begin{cases}
-\pi(s,y)=\max\{0,p_{y}-C(y,s)-\tau V(y)\}\\
-V(y)=\beta_{A}\int\pi(s,y)\mu(ds)
+v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}\\
+V(y)=\beta_{A}\int v(s,y)\mu(ds)
 \end{cases}
 \]
 
@@ -3179,7 +3191,26 @@ Drew: are all proofs written up? indicate what's left to do.
 For the case of identical workers
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ convex, 
+\begin_inset Formula $\pi$
+\end_inset
+
+ cts in 
+\begin_inset Formula $x$
+\end_inset
+
+ –> 
+\begin_inset Formula $V>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 Individually:
 \end_layout
 
@@ -3197,16 +3228,16 @@ Worker's option value of rejecting is
 \end_layout
 
 \begin_layout Itemize
-in eqm, accepted jobs have costs 
-\begin_inset Formula $c\leq p-\tau V$
+in eqm, accepted jobs have profit 
+\begin_inset Formula $\pi\geq\tau V$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-profitable jobs have 
-\begin_inset Formula $c\leq p$
+all profitable jobs are 
+\begin_inset Formula $\pi\geq0$
 \end_inset
 
 
@@ -3230,7 +3261,7 @@ medskip
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 Collectively:
 \end_layout
 
@@ -3241,7 +3272,7 @@ no capacity constraint in aggregate => zero option value of rejecting
 
 \begin_layout Itemize
 accepted jobs have 
-\begin_inset Formula $c\leq p$
+\begin_inset Formula $\pi\geq0$
 \end_inset
 
 
@@ -3405,7 +3436,7 @@ e.g.
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $C(x,y)=x-y$
+\begin_inset Formula $\pi(x,y)=y-x$
 \end_inset
 
 
@@ -3470,7 +3501,7 @@ The problem is not trivial because:
 \end_layout
 
 \begin_layout Enumerate
-workers are heterogenous
+workers are heterogeneous
 \end_layout
 
 \begin_layout Enumerate
@@ -3605,23 +3636,6 @@ status open
 \end_inset
 
  such that if
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\xi^{*}$
-\end_inset
-
- depends on 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula 
 \[
 g'(1)/g(1)>\xi^{*},
@@ -3862,7 +3876,7 @@ For any disclosure policy
  is the solution to:
 \begin_inset Formula 
 \begin{align*}
-p+y-\smuth & =\tau\beta_{A}W^{\mu}(\smuth)
+y-\smuth & =\tau\beta_{A}W^{\mu}(\smuth)
 \end{align*}
 
 \end_inset
