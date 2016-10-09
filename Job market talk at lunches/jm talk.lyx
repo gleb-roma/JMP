@@ -7,11 +7,17 @@
 \textclass beamer
 \begin_preamble
 
+
+
+
 \usepackage{fleqn}
 \usetheme{CambridgeUS}
 %\usetheme{Madrid}
 
+
+%\setbeameroption{show notes} 
 \setbeamertemplate{itemize items}[circle]
+
 
 \usepackage{hyperref}
 \usepackage{tikz}
@@ -304,7 +310,7 @@ Research question
 status open
 
 \begin_layout Plain Layout
-Matching Markets and Platforms
+Matching Markets
 \end_layout
 
 \end_inset
@@ -318,11 +324,41 @@ In
 matching markets
 \emph default
 , both buyers and sellers have preferences over the other side
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+SCRIPT: a distinguishing feature of a matching market relative to a consumer
+ market is that sellers have preference over buyers
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A distinguishing feature of a 
+\emph on
+matching market
+\emph default
+ relative to a retailer from the perspective of a consumer is the presence
+ of heterogeneous sellers or goods with limited capacity or availability
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 rental housing
+\end_layout
+
+\begin_layout Itemize
+labor market
 \end_layout
 
 \begin_layout Itemize
@@ -334,11 +370,11 @@ dating
 \end_layout
 
 \begin_layout Itemize
-contracted labor
+coaching, massage
 \end_layout
 
 \begin_layout Itemize
-coaching, massage
+kidney exchange
 \end_layout
 
 \begin_layout Itemize
@@ -346,19 +382,28 @@ etc.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Quotes eld
+\end_inset
+
+Imagine a situation where Uber drivers are excessively picky about the rides
+ and passengers.
+ Then passengers would have to wait longer to get a match with a driver,
+ which decreases his value of using Uber
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Flex Beamer Note
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-bigskip 
+SCRIPT: participants of the matching market want to search for better options
+ on the other side
 \end_layout
 
 \end_inset
 
-Platform's value proposition is to facilitate matching
+
 \end_layout
 
 \end_deeper
@@ -374,7 +419,7 @@ Platform's value proposition is to facilitate matching
 status open
 
 \begin_layout Plain Layout
-Matching Problem and Design Tools
+Matching Problem
 \end_layout
 
 \end_inset
@@ -397,41 +442,124 @@ Matching Problem
 \end_layout
 
 \begin_layout Block
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+When sellers shop for better options, they waste buyer time and search effort
+\end_layout
+
+\end_inset
+
+When participants on the one side shop for better options, they waste the
+ other side's time and/or search efforts 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 If one side shops too much for better options, the other side suffers (from
- higher search costs, delays, etc.)
+ longer delays and higher search costs)
 \end_layout
 
-\begin_layout Itemize
-E.g., freelancers on labor platforms, such as Upwork, shop for better jobs
- and delay transactions, while employers prefer one-session transactions
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Standard economics literature on two-sided platforms (Rochet-Tirole 2006,
- Weyl 2010, Armstrong 2006) studies pricing as a design tool
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Wide variety of policies that have economic effects:
+\begin_layout Examples
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-structured search
+In housing market, when buyers shop for better houses, they waste sellers
+ time
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
 
-\bar under
-information structure
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Airbnb hosts reject 20% of guest inquiries due to screening (Fradkin 2015)
+\begin_inset Flex Beamer Note
+status open
+
+\begin_layout Plain Layout
+For example, in Airbnb, guests send inquiries to hosts and hosts do not
+ accept immediately.
+ In fact, 20% of guest inquiries are rejected because a host didn't like
+ the guest.
+ 
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-flexible pricing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+If Uber drivers were allowed to cherry pick rides, passengers would have
+ to wait longer
+\begin_inset Flex Beamer Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Imagine a situation where Uber drivers are excessively picky about the rides
+ and passengers.
+ Then passengers would have to wait longer to get a match with a driver,
+ which decreases his value of using Uber
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-reputation mechanisms
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+On Upwork (labor platform for freelancers), workers prefer receiving many
+ inquiries from employers, while employers prefer to find a worker in a
+ single interaction session (Horton 2015)
 \end_layout
 
 \end_deeper
@@ -448,7 +576,7 @@ reputation mechanisms
 status open
 
 \begin_layout Plain Layout
-Digital Marketplaces
+Platform Design
 \end_layout
 
 \end_inset
@@ -458,6 +586,57 @@ Digital Marketplaces
 
 \begin_deeper
 \begin_layout Standard
+Platform's value proposition is to facilitate matching
+\end_layout
+
+\begin_layout Itemize
+Standard economics literature on two-sided platforms (Rochet-Tirole 2006,
+ Weyl 2010, Armstrong 2006) studies how pricing affects participation and
+ holds the matching system fixed
+\end_layout
+
+\begin_layout Itemize
+Wide variety of policies that have economic effects:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+structured search
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+information structure
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\bar under
+why do I focus on information disclosre? understudied? very important? cite
+ studies on the other bullet points? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+flexible pricing
+\end_layout
+
+\begin_layout Itemize
+recommendation systems 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Non-price tools are increasingly relevant with the advent of digital marketplace
 s: 
 \end_layout
@@ -473,6 +652,32 @@ Airbnb now lists more rooms than any hotel chain
 
 \begin_layout Itemize
 There are more Uber drivers than taxi drivers in US
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Beamer Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Matching markets feature high degree of heterogeneity, and so information
+ disclosure becomes an important aspect of platform design.
+ The role of information disclosure in addressing the matching problem on
+ the previous slide is not fully understood, especially because information
+ disclosure has opposing effects on market efficiency
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -498,13 +703,13 @@ Information Disclosure
 
 \begin_deeper
 \begin_layout Itemize
-We know that information disclosure facilitates trade and exchange (Akerlof
- 1970, Myerson-Saterthwaite 1983, Lewis 2011)
+We know that information disclosure facilitates trade and exchange (Blackwell
+ 1953, Akerlof 1970, Myerson-Saterthwaite 1983, Lewis 2011)
 \end_layout
 
 \begin_layout Itemize
-However, information availability makes participants too picky -> matches
- take longer to consummate
+However, information availability increases diversity of options -> induces
+ more shopping -> matches take longer to consummate
 \end_layout
 
 \begin_layout Itemize
@@ -527,12 +732,52 @@ Question
 
 \begin_layout Block
 What should be information disclosure policy in matching markets?
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Alternatively: What is the value of information intermediation in matching
+ markets? 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Examples
-Reviews, ride destination, guest star ratings, etc.
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Passenger attributes on Uber: show/not show destination, gender
+\end_layout
+
+\begin_layout Itemize
+Star ratings: half-star step/10th-of-star step
+\end_layout
+
+\begin_layout Itemize
+Guest's gender, age on Airbnb: show/not show
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+finess of categories on TaskRabbit.
+ InstantBook customization on Airbnb.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -555,6 +800,16 @@ Capacity Utilization
 \end_layout
 
 \begin_layout Frame
+\begin_inset Flex Beamer Note
+status open
+
+\begin_layout Plain Layout
+To formalize the notion of excessive shopping and its effect on the welfare
+ of the other side, I introduce the notion of capacity utilization 
+\end_layout
+
+\end_inset
+
 In decentralized platforms, 
 \emph on
 capacity utilization
@@ -614,7 +869,17 @@ more buyer requests are accepted -> buyers are better off
 \end_layout
 
 \begin_layout Itemize
+workers work more -> worse off if marginal job is unprofitable 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 worker marginal cost goes up -> worse/better off if above/below price 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -658,8 +923,8 @@ Important Observation #1
 \end_layout
 
 \begin_layout Block
-Controlling match information available to workers can increase capacity
- utilization 
+Controlling information available to workers can increase capacity utilization
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -763,8 +1028,7 @@ Example: Uber
 
 \begin_deeper
 \begin_layout Itemize
-Capacity utilization — fraction of time on the road workers actually giving
- rides
+Capacity utilization — fraction of work time drivers are not idle
 \end_layout
 
 \begin_layout Itemize
@@ -772,18 +1036,13 @@ Drivers like to be busy but also want to avoid too long rides or remote
  neighborhoods
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-driver utility is hump-shaped in utilization
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Passengers do not like waiting
+Higher utilization -> more passengers get rides
 \end_layout
 
 \begin_layout Itemize
-Hiding ride destination from drivers increases driver acceptance rate
+Hiding ride destination from drivers increases driver acceptance rate ->
+ increases utilization rate
 \end_layout
 
 \end_deeper
@@ -852,6 +1111,13 @@ pause
 Unmediated market -> market outcome is Pareto dominated due to 
 \emph on
 scheduling externality
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Unmediated = full disclsoure
+\emph on
+
 \begin_inset ERT
 status open
 
@@ -867,6 +1133,7 @@ bigskip
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset Argument item:2
 status open
@@ -877,7 +1144,7 @@ status open
 
 \end_inset
 
-Optimal disclosure in linear cost environment to maximize utilization.
+Optimal disclosure in linear payoff environment to maximize utilization.
  Information coarsening if
 \end_layout
 
@@ -1004,7 +1271,7 @@ Two-sided
 \begin_inset space ~
 \end_inset
 
-markets: Rochet-Tirole 2006, Weyl 2010, Armstrong 2006
+markets: Rochet-Tirole 2006, Armstrong 2006, Weyl 2010
 \end_layout
 
 \begin_layout Description
@@ -1076,7 +1343,8 @@ in
 \end_inset
 
 OR: Ashlagi et al.
- 2013, Taylor 2016
+ 2013, Arnosti et al.
+ 2014, Taylor 2016
 \end_layout
 
 \end_deeper
@@ -1634,27 +1902,17 @@ Information structure:
 \end_layout
 
 \begin_layout Itemize
-Platform observes 
+Platform observes buyer type 
 \begin_inset Formula $x$
 \end_inset
 
- but not 
+ but not worker type 
 \begin_inset Formula $y$
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Assume: platform does not elicit 
-\begin_inset Formula $y$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 Worker observes his 
 \begin_inset Formula $y$
@@ -1728,9 +1986,10 @@ status open
 \end_inset
 
  distribution of posteriors 
-\end_layout
+\begin_inset Note Note
+status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 s.t.
  average posterior = prior, 
 \begin_inset Formula $\int_{S}s\mu(ds)\sim f$
@@ -1739,13 +1998,38 @@ s.t.
 
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 public disclosure
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+default is full disclosure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-default is full disclosure
+Platform does not elicit 
+\begin_inset Formula $y$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2306,8 +2590,7 @@ Steady State of the Matching Process
 
 \begin_deeper
 \begin_layout Standard
-In a steady state, the flows to and from the pool of busy workers are equal,
- for each worker type:
+In a steady state, the flows to and from the pool of busy workers are equal:
 \begin_inset Formula 
 \[
 \beta\frac{(1-\rho(y))g(y)}{1-\rhobar}\alpha(y)=\frac{\rho(y)g(y)}{\tau},\quad\forall y\in Y.
@@ -2348,14 +2631,14 @@ Solution
 \end_layout
 
 \begin_layout Block
-Average utilization 
-\begin_inset Formula $\rhobar$
+Average utilization rate 
+\begin_inset Formula $\rhobar\in[0,1]$
 \end_inset
 
  is a solution to 
 \begin_inset Formula 
 \[
-1=\int\frac{dG(y)}{1-\rhobar+\beta\alpha(y)\tau}
+1=\int\frac{dG(y)}{1-\rhobar+\beta\tau\alpha(y)}
 \]
 
 \end_inset
@@ -2381,6 +2664,29 @@ Average utilization
 
  and in 
 \begin_inset Formula $\tau$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Proof parts: as a result, 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ increases in 
+\begin_inset Formula $\alpha(y')$
+\end_inset
+
+ for any 
+\begin_inset Formula $y'\in Y$
+\end_inset
+
+.
+ 
+\end_layout
+
 \end_inset
 
 
@@ -2416,11 +2722,10 @@ name "back_ImpatientWorkers"
 
 \begin_deeper
 \begin_layout Itemize
-When available, buyers arrive at Poisson rate 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
-
+ – buyer Poisson arrival rate when a worker is available
 \end_layout
 
 \begin_deeper
@@ -2440,7 +2745,7 @@ When available, buyers arrive at Poisson rate
 \begin_inset Formula $y$
 \end_inset
 
- on job with signal 
+ of job with signal 
 \begin_inset Formula $s$
 \end_inset
 
@@ -2492,13 +2797,25 @@ medskip
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
 Worker optimization problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
 \begin_inset Formula 
 \[
 \begin{cases}
 v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}\\
-V(y)=\beta_{A}\int v(s,y)\mu(ds)
+V(y)=\beta_{A}\int v(s,y)\,\mu(ds)
 \end{cases}
 \]
 
@@ -2627,6 +2944,48 @@ status open
 
 Steady-state equilibrium exists and is unique.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+say something about the proof?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For any 
+\begin_inset Formula $\alpha(.)$
+\end_inset
+
+, there is 
+\begin_inset Formula $\rhobar$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho(.)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ is increasing in any 
+\begin_inset Formula $\alpha(y')$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2660,7 +3019,7 @@ Equilibrium
 \begin_inset Formula $\mu$
 \end_inset
 
- and prices
+
 \begin_inset ERT
 status open
 
@@ -2821,18 +3180,32 @@ implementable
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-prices fixed
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Subsection
 Identical workers
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+label=prop2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 4
 status open
 
@@ -2857,8 +3230,8 @@ status open
 \end_inset
 
 Suppose workers are identical.
- Then any point on the Pareto frontier can be implemented by a disclosure
- policy.
+ Then any point on the Pareto frontier is implementable by information disclosur
+e.
  
 \end_layout
 
@@ -2870,24 +3243,55 @@ status open
 
 
 \backslash
-pause 
+onslide<2->{
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 Proof sketch:
 \end_layout
+
+\begin_layout Enumerate
+1 worker type, 2 actions -> 
+\begin_inset Formula $X=X_{acc}\cup X_{rej}$
+\end_inset
+
+ -> binary signaling structure is sufficient
+\end_layout
+
+\begin_layout Enumerate
+With binary signaling structure, worker dynamic problem reduces to static
+ problem
+\end_layout
+
+\begin_layout Enumerate
+Obedience holds because the worker gets 
+\begin_inset Formula $V$
+\end_inset
+
+ on 
+\begin_inset Formula $X_{acc}$
+\end_inset
+
+ and 
+\begin_inset Formula $V\geq0$
+\end_inset
+
+ by feasibility
+\begin_inset Note Note
+status open
 
 \begin_layout Enumerate
 Revelation Principle -> binary signaling structure
 \end_layout
 
 \begin_layout Enumerate
-With binary signaling structure, dynamic problem reduces to static problem
-\end_layout
-
-\begin_layout Enumerate
-By a standard argument (Auman-Maschler 1995, Kamenica-Gentzkow 2011), obedience
+With binary signaling structure, dynamic problem reduces to static problemBy
+ a standard argument (Aumann-Maschler 1995, Kamenica-Gentzkow 2011), obedience
  constraint -> 
 \begin_inset Formula $\alpha\in[\alpha^{min},\alpha^{max}]$
 \end_inset
@@ -2902,6 +3306,25 @@ Worker profit is hump shaped in
 
 , consumer surplus in increasing in 
 \begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
 \end_inset
 
 
@@ -2970,8 +3393,139 @@ input{../pictures/pareto_frontier_slides_no_fulldiscl.tex}
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout AgainFrame
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+prop2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why Information Coarsening Trades off Buyer and Worker Surplus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Intuition for static case with 1 worker
+\end_layout
+
+\begin_layout Standard
+Based on standard information disclosure (Aumann-Maschler 1995, Kamenica-Gentzko
+w 2011)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{../pictures/persuasion_intuition.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Scheduling externality
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -3098,6 +3652,10 @@ a worker keeps his schedule open by rejecting low-value jobs to increase
 \end_layout
 
 \begin_layout Itemize
+as a result in eqm, workers spend a lot of time waiting for high-value jobs
+\end_layout
+
+\begin_layout Itemize
 collectively, this behavior is suboptimal because all profitable jobs have
  to be completed
 \end_layout
@@ -3127,8 +3685,8 @@ bigskip
 \emph on
 Scheduling externality
 \emph default
-: by rejecting a job a worker decreases the other workers' chances of getting
- consequent jobs.
+: by rejecting a job a worker makes decreases the other workers' chances
+ of getting subsequent jobs.
 \begin_inset ERT
 status open
 
@@ -3137,6 +3695,16 @@ status open
 
 \backslash
 bigskip
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+explain better?
 \end_layout
 
 \end_inset
@@ -3398,7 +3966,45 @@ Workers differentiated by skill
 status open
 
 \begin_layout Plain Layout
-Linear Cost Environment
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Linear Payoff Environment
 \end_layout
 
 \end_inset
@@ -3422,7 +4028,7 @@ e.g.
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $Y=[0,1]$
+\begin_inset Formula $Y=[0,\bar{y}]$
 \end_inset
 
  
@@ -3472,8 +4078,29 @@ Maximal Capacity Utilization
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-What is the optimal disclosure policy to maximize utilization? 
+\begin_layout Itemize
+Imagine the platform is growing and wants to maximize #matches
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+What is the optimal disclosure policy?
+\end_layout
+
+\begin_layout Itemize
+Equivalent to maximizing capacity utilization:
 \begin_inset Formula 
 \[
 \max_{\mu\in\Delta(S)}\rhobar
@@ -3482,6 +4109,10 @@ What is the optimal disclosure policy to maximize utilization?
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Pareto efficient outcome
 \end_layout
 
 \begin_layout Standard
@@ -3563,35 +4194,57 @@ Suppose
 \begin_deeper
 \begin_layout Itemize
 If 
-\begin_inset Formula $G$
+\begin_inset Formula $g$
 \end_inset
 
- is concave, then full disclosure is optimal 
+ is decreasing, then full disclosure is optimal 
 \end_layout
 
 \begin_layout Itemize
 If 
-\begin_inset Formula $G$
+\begin_inset Formula $g$
 \end_inset
 
- is convex, no disclosure is optimal.
+ is increasing, no disclosure is optimal.
  
 \end_layout
 
 \begin_layout Itemize
-If 
-\begin_inset Formula $G$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+alert<2>{
+\end_layout
+
 \end_inset
 
- is linear, then utilization rate is information neutral
+If 
+\begin_inset Formula $g$
+\end_inset
+
+ is constant, then utilization rate is information neutral
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 Appears e.g.
  in Kolotilin et al.
- 2015.
- 
+ 2015
 \end_layout
 
 \begin_layout Itemize
@@ -3612,7 +4265,7 @@ tzkow 2011
 status open
 
 \begin_layout Plain Layout
-Full Disclosure is Optimal?
+Optimal Disclosure for Uniform Worker Distribution
 \end_layout
 
 \end_inset
@@ -3621,102 +4274,103 @@ Full Disclosure is Optimal?
 \end_layout
 
 \begin_deeper
+\begin_layout Definition
+Disclosure 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is 
+\emph on
+
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-censorship
+\emph default
+ for 
+\begin_inset Formula $x^{*}\in[0,1]$
+\end_inset
+
+ if 
+\begin_inset Formula $\mu$
+\end_inset
+
+ reveals 
+\begin_inset Formula $x<x^{*}$
+\end_inset
+
+ and pools all 
+\begin_inset Formula $x>x^{*}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Proposition
 \begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
-4: Necessary condition for optimality of full disclosure
+4
 \end_layout
 
 \end_inset
 
- There is 
-\begin_inset Formula $\xi^{*}\in\R$
-\end_inset
-
- such that if
-\begin_inset Formula 
-\[
-g'(1)/g(1)>\xi^{*},
-\]
-
-\end_inset
-
-then full disclosure is sub-optimal.
- Furthermore, if 
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Formula 
-\[
-\beta\tau>\chi^{*},
-\]
-
-\end_inset
-
-for some 
-\begin_inset Formula $\chi^{*}\in(1/2,1)$
-\end_inset
-
-, then 
-\begin_inset Formula $\xi^{*}<0$
+Assume 
+\begin_inset Formula $G=U[0,\bar{y}]$
 \end_inset
 
 .
+ Then there is unique 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-censorship is optimal.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause 
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
-
-\begin_inset Separator plain
-\end_inset
-
-
+Furthermore, 
 \end_layout
 
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-5: Sufficient condition for local optimality of full disclosure
-\end_layout
-
-\end_inset
-
- If 
-\begin_inset Formula $G$
-\end_inset
-
- is concave, and 
+\begin_deeper
+\begin_layout Itemize
+if 
 \begin_inset Formula $\beta\tau<1/2$
 \end_inset
 
-, then it's impossible to improve upon full disclosure by 
-\begin_inset Quotes eld
+, then 
+\begin_inset Formula $x^{*}=1$
 \end_inset
 
-local coarsening
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
+ (full disclosure is strictly optimal) 
 \end_layout
 
+\begin_layout Itemize
+if 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ is large enough, then there is 
+\begin_inset Formula $\chi^{*}\in(1/2,1)$
+\end_inset
+
+ such that if 
+\begin_inset Formula $\beta\tau>\chi^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{*}<1$
+\end_inset
+
+ (some coarsening is strictly optimal)
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -3730,7 +4384,88 @@ local coarsening
 status open
 
 \begin_layout Plain Layout
-No Disclosure is Optimal?
+Intuition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Additional effects in dynamic matching:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+availability effect
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+high types accept more jobs -> less available -> pdf of available workers
+ is decreasing 
+\end_layout
+
+\begin_layout Itemize
+-> motivation for platform to reveal 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+patience effect
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+high types have larger pool of profitable jobs -> larger opportunity cost
+ of accepting
+\end_layout
+
+\begin_layout Itemize
+-> motivation for platform to conceal high 
+\begin_inset Formula $x$
+\end_inset
+
+'s
+\end_layout
+
+\begin_layout Itemize
+overcomes availability effect when there are very high worker types (large
+ 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+) and strong buyer traffic (large 
+\begin_inset Formula $\beta$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimality of Information Coarsening: General 
+\begin_inset Formula $G$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3744,20 +4479,49 @@ No Disclosure is Optimal?
 status open
 
 \begin_layout Plain Layout
-6: Necessary condition for optimality of no disclosure
+5
 \end_layout
 
 \end_inset
 
- If 
+ There is 
+\begin_inset Formula $\xi^{*}\in\R$
+\end_inset
+
+ such that if
 \begin_inset Formula 
 \[
-g'(y)<g(\Exp x)\tau\beta(1-\beta\tau)^{2},\quad\forall y,
+g'(\bar{y})/g(\bar{y})>\xi^{*},
 \]
 
 \end_inset
 
-then no disclosure is suboptimal.
+then full disclosure is sub-optimal.
+ Furthermore, if 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ is large enough, then there is 
+\begin_inset Formula $\chi^{*}\in(1/2,1)$
+\end_inset
+
+ such that if
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula 
+\[
+\beta\tau>\chi^{*},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $\xi^{*}<0$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_deeper
@@ -3807,10 +4571,6 @@ tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 \begin_inset Separator plain
 \end_inset
 
-
-\end_layout
-
-\begin_layout Frame
 
 \end_layout
 
@@ -4302,10 +5062,105 @@ LHS decreasing in
 \end_inset
 
  such that 
-\begin_inset Formula $\delta W(1)<0$
+\begin_inset Formula $\delta W(\bar{y})<0$
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimality of Full Disclosure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6: Sufficient condition for local optimality of full disclosure
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula $G$
+\end_inset
+
+ is concave, and 
+\begin_inset Formula $\beta\tau<1/2$
+\end_inset
+
+, then it's impossible to improve upon full disclosure by 
+\begin_inset Quotes eld
+\end_inset
+
+local coarsening
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimality of No Disclosure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+7: Necessary condition for optimality of no disclosure
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula 
+\[
+g'(y)<g(\Exp x)\tau\beta(1-\beta\tau)^{2},\quad\forall y,
+\]
+
+\end_inset
+
+then no disclosure is suboptimal.
 \end_layout
 
 \end_deeper

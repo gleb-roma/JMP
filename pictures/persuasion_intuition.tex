@@ -1,0 +1,39 @@
+\begin{tikzpicture}[xscale=1,yscale=1] 
+
+
+
+
+	%\draw[step=1cm,gray,very thin] (0,0) grid (12,4);
+
+	\def\g{30}
+
+	\draw[thick,fill=red!\g] (0,0) rectangle (1,1);	
+	\node at (.5,.5) {-\$50};
+	\node[below] at (2,.5)  {...};
+	\draw[thick,fill=red!\g] (3,0) rectangle (4,1);
+	\node at (3.5,.5) {-\$1};
+	\draw[thick,fill=green!\g] (4.5,0) rectangle (5.5,1);
+	\node at (5,.5) {\$0};
+	\draw[thick,fill=green!\g] (6,0) rectangle (7,1);
+	\node at (6.5,.5) {\$1};
+	\draw[thick,fill=green!\g] (7.5,0) rectangle (8.5,1);
+	\node at (8,.5) {\$2};
+	\node[below] at (9.5,.5)  {...};
+	\draw[thick,fill=green!\g] (10.5,0) rectangle (11.5,1);
+	\node at (11,.5) {\$50};
+
+
+	\onslide<2->{
+	\draw [thick,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-4.5](2.8,0)--(8.7,0);
+	\draw[thick,fill=green!\g] (4.5,-2) rectangle (7,-1);
+	\node at (5.75,-1.5) {\$0.5};
+}
+
+
+
+
+
+
+
+        
+\end{tikzpicture}

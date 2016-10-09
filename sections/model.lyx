@@ -130,27 +130,27 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eps}{\varepsilon}
+\renewcommand{\eps}{\varepsilon}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Exp}{\mathbb{E}}
+\renewcommand{\Exp}{\mathbb{E}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\R}{\mathbb{R}}
+\renewcommand{\R}{\mathbb{R}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Norm}{\mathcal{N}}
+\renewcommand{\Norm}{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\sigmasq}{\sigma^{2}}
+\renewcommand{\sigmasq}{\sigma^{2}}
 \end_inset
 
 
@@ -158,7 +158,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmin}{\operatorname*{argmin}}
+\renewcommand{\argmin}{\operatorname*{argmin}}
 {\mathrm{argmin}}
 \end_inset
 
@@ -167,7 +167,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmax}{\operatorname*{argmax}}
+\renewcommand{\argmax}{\operatorname*{argmax}}
 {\mathrm{argmax}}
 \end_inset
 
@@ -176,28 +176,28 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\supp}{\operatorname{supp}}
 {\mathrm{supp}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oV}{\overline{V}}
+\renewcommand{\oV}{\overline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uV}{\underline{V}}
+\renewcommand{\uV}{\underline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\renewcommand{\oW}{\overline{W}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\renewcommand{\uW}{\underline{W}}
 \end_inset
 
 
@@ -391,7 +391,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../matching dynamics.png
+	filename /Users/gleb/Google Drive/Projects/JMP/matching dynamics.png
 	lyxscale 20
 	width 70text%
 

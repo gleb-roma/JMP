@@ -204,7 +204,8 @@ theorems-ams-extended-bytype
 \end_layout
 
 \begin_layout Title
-Information Intermediation and Capacity Utilization in Peer-to-peer Markets
+Ignorance is Strength: Improving Performance of Decentralized Matching Markets
+ by Limiting Information
 \end_layout
 
 \begin_layout Author
@@ -220,9 +221,8 @@ Preliminary and incomplete
 \end_layout
 
 \begin_layout Abstract
-Peer-to-peer markets are organized as decentralized matching systems and
- feature a high degree of heterogeneity in customer and service provider
- preferences.
+Decentralized matching markets feature a high degree of heterogeneity in
+ customer and service provider preferences.
  First, I emphasize that capacity utilization affects welfare on both sides
  of the market, with customers benefiting from higher utilization due to
  higher matching rate and lower delays, while service providers' benefit
