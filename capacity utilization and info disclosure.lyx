@@ -221,19 +221,24 @@ Preliminary and incomplete
 \end_layout
 
 \begin_layout Abstract
-Decentralized matching markets feature a high degree of heterogeneity in
- customer and service provider preferences.
- First, I emphasize that capacity utilization affects welfare on both sides
- of the market, with customers benefiting from higher utilization due to
- higher matching rate and lower delays, while service providers' benefit
- is hump shaped.
- Second, I show that coarsening of consumer information affects capacity
- utilization and therefore can be used to balance the sides of the market.
- I find that information coarsening can be Pareto improving because it alleviate
-s service providers' coordination problem.
- Finally, I characterize the range of outcomes achievable by information
- disclosure and find the optimal disclosure for linear cost structure when
- service providers have private cost component.
+I develop a model of a decentralized matching market in which buyers arrive
+ over time and pursue workers by proposing jobs.
+ Workers have heterogeneous preferences over jobs and independently decide
+ what jobs to accept.
+ First, I establish that the equilibrium outcome is inefficient because
+ of scheduling externality: by rejecting a job a worker makes himself available
+ and decreases the other workers’ chances of getting subsequent jobs.
+ Additionally, workers fail to internalize buyers' search efforts.
+ Second, I show that the platform's policy of coarse revelation of buyer
+ information to workers improves acceptance rates by decreasing the ability
+ of workers to “cherry-pick” desirable buyers.
+ This degrades worker match quality but improves buyer welfare.
+ Notably, this information coarsening can be Pareto improving because it
+ offsets the scheduling externality.
+ Finally, I characterize the disclosure policy that maximizes the number
+ of matches in the linear payoff environment and show that, compared to
+ the static case, there are additional availability and patience effects
+ that qualitatively change the form of the optimal disclosure policy.
  
 \end_layout
 
@@ -243,8 +248,8 @@ status open
 
 \begin_layout Plain Layout
 Acknowledgements: Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz Strzalecki,
- Chiara Farronato, Andrey Fradkin, Jeff Picel, Andrei Hagiu, Alex Smolin,
- Divya Kirti, Beyonce and the participants of Harvard and MIT lunch seminars.
+ Chiara Farronato, Fradkin, Jeff Picel, Andrei Hagiu, Alex Smolin, Divya
+ Kirti, Beyonce and the participants of Harvard and MIT lunch seminars.
  
 \end_layout
 
