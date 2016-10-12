@@ -379,7 +379,9 @@ status open
 \begin_inset Quotes eld
 \end_inset
 
-But search creates matching frictions
+But search creates matching frictions.
+ And in this talk, I study that matching frictions that pertain to heterogeneity
+ of preferences
 \begin_inset Quotes erd
 \end_inset
 
@@ -421,11 +423,27 @@ name "back_congestion"
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Studied in this papers
+that pertain to heterogeneity of preferences
 \end_layout
 
 \end_deeper
 \begin_layout Frame
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+I am gonna say that two sides of the market are buyers and workers
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Two sides: buyers and workers
 \begin_inset ERT
 status open
@@ -450,6 +468,23 @@ clients instead of buyers?
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+There are two negative search externalities
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -464,6 +499,24 @@ Cross-side Search Externality
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+There is a cross-side search externality, which can be rougly expressed
+ as:
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Block
@@ -472,19 +525,6 @@ When participants on the one side shop for better options, they waste the
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
-\end_inset
-
-
 \begin_inset Separator plain
 \end_inset
 
@@ -496,7 +536,24 @@ bigskip
 status open
 
 \begin_layout Plain Layout
-Same-side (Scheduling Externality)
+Same-side Search Externality
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+And there is a more subtle negatvie same-side externality
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -506,28 +563,16 @@ Same-side (Scheduling Externality)
 
 \begin_layout Block
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-A worker rejects an ok buyer to increase his individual chances of getting
- a high-value buyer 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-workers reject too many buyers to find the very best ones.
- 
-\end_layout
-
-\end_inset
-
 When a worker rejects offers from buyers, he keeps himself available and
  decreases other workers' chances of getting good subsequent buyers
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status collapsed
 
@@ -538,23 +583,13 @@ participants search too long for the best options and ignore other valuable
 
 \end_inset
 
-
+By remaining unmatched, a worker creates competition to the other workers
+ for better buyers
 \end_layout
 
 \begin_layout Block
 \begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-When a worker rejects a job he keeps himself available and decreases the
- other workers' chances of getting good subsequent jobs
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 worker preferences need to be aligned for this to work.
@@ -567,6 +602,23 @@ worker preferences need to be aligned for this to work.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The presence of these externalities results in excessive rejections reates
+ by workers
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Result: excessive search
 \end_layout
 
@@ -609,6 +661,23 @@ Examples
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Let me give you several examples that illustrate these externalities
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -633,16 +702,15 @@ status open
 
 \end_inset
 
-Airbnb hosts reject 20% of guest inquiries due to screening (Fradkin 2015)
+Airbnb hosts reject 20% of guest inquiries due to bad fit (Fradkin 2015)
 \begin_inset Flex Beamer Note
 status open
 
 \begin_layout Plain Layout
 For example, in Airbnb, guests send inquiries to hosts and hosts do not
  accept immediately.
- In fact, 20% of guest inquiries are rejected because a host didn't like
- the guest.
- 
+ In fact, 20% of guest inquiries are rejected because a host does not find
+ a guest to be a good fit
 \end_layout
 
 \end_inset
@@ -703,206 +771,6 @@ On Upwork (labor platform for freelancers), workers prefer receiving many
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Excessive Search Problem
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Excessive Search Problem
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Screening problem? 
-\begin_inset Quotes eld
-\end_inset
-
-screening
-\begin_inset Quotes erd
-\end_inset
-
- sounds too much of 2nd degree price discrimination.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-When sellers shop for better options, they waste buyer time and search effort
-\end_layout
-
-\end_inset
-
-When participants on the one side shop for better options, they waste the
- other side's time and/or search efforts 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If one side shops too much for better options, the other side suffers (from
- longer delays and higher search costs)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hyperlink{congestion}{
-\backslash
-beamergotobutton{Congestion}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Examples
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In housing market, when buyers shop for better houses, they waste sellers
- time
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-Airbnb hosts reject 20% of guest inquiries due to screening (Fradkin 2015)
-\begin_inset Flex Beamer Note
-status open
-
-\begin_layout Plain Layout
-For example, in Airbnb, guests send inquiries to hosts and hosts do not
- accept immediately.
- In fact, 20% of guest inquiries are rejected because a host didn't like
- the guest.
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<3->
-\end_layout
-
-\end_inset
-
-If Uber drivers were allowed to cherry pick rides, passengers would have
- to wait longer
-\begin_inset Flex Beamer Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-Imagine a situation where Uber drivers are excessively picky about the rides
- and passengers.
- Then passengers would have to wait longer to get a match with a driver,
- which decreases his value of using Uber
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<4->
-\end_layout
-
-\end_inset
-
-On Upwork (labor platform for freelancers), workers prefer receiving many
- inquiries from employers, while employers prefer to find a worker in a
- single interaction session (Horton 2015)
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -923,38 +791,46 @@ Platform Design
 
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
+\begin_layout Frame
 Platform's value proposition is to facilitate matching
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+...
+ and to offset search externalities as much as possible
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Standard economics literature on two-sided platforms (Rochet-Tirole 2006,
  Weyl 2010, Armstrong 2006) studies how pricing affects participation and
  assumes the matching system is fixed
 \end_layout
 
-\begin_layout Itemize
-Wide variety of policies that have economic effects:
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-structured search
-\end_layout
 
-\begin_layout Itemize
-
-\bar under
-information structure
-\begin_inset Note Note
-status collapsed
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
-\bar under
-why do I focus on information disclosre? understudied? very important? cite
- studies on the other bullet points? 
+
+\backslash
+bigskip
 \end_layout
 
 \end_inset
@@ -962,15 +838,44 @@ why do I focus on information disclosre? understudied? very important? cite
 
 \end_layout
 
+\begin_layout Frame
+Policies to overcome search externalities in heterogeneous environment:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+structured search
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+lower search costs
+\end_layout
+
+\begin_layout Itemize
+limit search
+\end_layout
+
+\begin_layout Itemize
+recommendation system
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\bar under
+information structure
+\end_layout
+
 \begin_layout Itemize
 flexible pricing
 \end_layout
 
 \begin_layout Itemize
-recommendation systems 
+trust mechanisms
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -1005,9 +910,9 @@ status open
 
 Matching markets feature high degree of heterogeneity, and so information
  disclosure becomes an important aspect of platform design.
- The role of information disclosure in addressing the matching problem on
- the previous slide is not fully understood, especially because information
- disclosure has opposing effects on market efficiency
+ The role of information disclosure in addressing the matching frictions
+ mentioned two slides ago is not fully understood, especially because informatio
+n disclosure can have the opposing effects on market efficiency
 \begin_inset Quotes erd
 \end_inset
 
@@ -1044,6 +949,25 @@ Information Disclosure
 \begin_layout Itemize
 We know that information disclosure facilitates trade and exchange (Blackwell
  1953, Akerlof 1970, Myerson-Saterthwaite 1983, Lewis 2011)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+...
+ by allowing the participants to find better options; or by alleviating
+ the adverse selection problems; or by removing the bargaining frictions
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1056,6 +980,28 @@ Other problems with info disclosure: excessive signaling (Hoppe et al.
  2009), failure to share risk (Hirschleifer 1971)
 \end_layout
 
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Research Question
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Block
 \begin_inset Argument 2
 status open
@@ -1094,11 +1040,22 @@ Passenger attributes on Uber: show/not show destination, gender
 \end_layout
 
 \begin_layout Itemize
-Star ratings: half-star step/10th-of-star step
+Airbnb: what information should be elicited from guests to be shown to hosts?
+ Gender, age, day schedule?
 \end_layout
 
 \begin_layout Itemize
+Star ratings: half-star step/10th-of-star step
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Guest's gender, age on Airbnb: show/not show
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -1116,124 +1073,6 @@ finess of categories on TaskRabbit.
 \end_deeper
 \end_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Capacity Utilization
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Flex Beamer Note
-status open
-
-\begin_layout Plain Layout
-To formalize the notion of excessive shopping and its effect on the welfare
- of the other side, I introduce the notion of capacity utilization 
-\end_layout
-
-\end_inset
-
-In decentralized platforms, 
-\emph on
-capacity utilization
-\emph default
- is an important factor of marketplace efficiency
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Capacity = maximal worker output per unit of time
-\end_layout
-
-\begin_layout Itemize
-Capacity utilization rate = proportion of capacity that is actually realized
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Observation
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-Capacity utilization affects welfare on both sides of the market
-\end_layout
-
-\begin_layout Itemize
-Higher utilization -> 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-more buyer requests are accepted -> buyers are better off
-\end_layout
-
-\begin_layout Itemize
-workers work more -> worse off if marginal job is unprofitable 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-worker marginal cost goes up -> worse/better off if above/below price 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-In contrast, RT06, Weyl 2010: utilization is fixed
-\end_layout
-
-\end_deeper
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -1246,6 +1085,24 @@ status open
 
 \begin_layout Plain Layout
 Conceptual Preview of Results
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Now let me preview my results on a high level.
+ I want you to at least take away this slide from my talk today
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1265,11 +1122,42 @@ Important Observation #1
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The first observation summarizes what I said earlier
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Block
+In decenetralized matching markets, search for better options is excessive
+ owing to negative same-side and cross-side search externalities
+\end_layout
+
+\begin_layout Block
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In decentralized matching markets, there is a problem of excessive search
- which results in negative cross-side and same-side effects
+ owing to negative cross-side and same-side effects
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1309,18 +1197,7 @@ Platform's policy of
 coarse
 \emph default
  revelation of buyer information alleviates the workers' excessive search
- problem 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Limited information revelation between the sides helps to alleviate the
- problem of excessive search
-\end_layout
-
-\end_inset
-
-
+ problem and improves efficiency of the marketplace 
 \end_layout
 
 \end_deeper
@@ -1573,6 +1450,24 @@ status open
 
 \begin_layout Plain Layout
 Preview of Results
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+To show how to think about information disclosure policies in decentralized
+ matching markets, I build a model...
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2373,7 +2268,7 @@ Simplifying assumption: lost search efforts
 status open
 
 \begin_layout Plain Layout
-Perfect Availability Coordination
+No Coordination Frictions
 \end_layout
 
 \end_inset
@@ -2382,7 +2277,12 @@ Buyers are directed to available workers only
 \end_layout
 
 \begin_layout Itemize
-Focus on non-availability related issues of matching
+I focus on search frictions due to preferences heterogeneity
+\end_layout
+
+\begin_layout Itemize
+Kircher 2009, Arnosti et al.
+ 2014: focus on coordination frictions
 \begin_inset Note Note
 status open
 
@@ -2407,7 +2307,7 @@ should I insert the congestion slide here?
 status open
 
 \begin_layout Plain Layout
-Buyer Search is Perfectly Frictional
+Homogenous Buyer Preferences
 \end_layout
 
 \end_inset
@@ -4732,15 +4632,11 @@ workers are heterogeneous
 \end_layout
 
 \begin_layout Enumerate
-disclosure affects workers' option value
+worker availability is endogenous
 \end_layout
 
 \begin_layout Enumerate
-disclosure alters equilibrium value of arrival rate 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-
+disclosure affects workers' option value of rejecting
 \end_layout
 
 \end_deeper

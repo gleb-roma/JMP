@@ -221,6 +221,33 @@ Preliminary and incomplete
 \end_layout
 
 \begin_layout Abstract
+\begin_inset Note Note
+status open
+
+\begin_layout Abstract
+I develop a model of a decentralized matching market in which buyers pursue
+ workers by proposing jobs.
+ No coordination friction.
+ Workers have non-trivial preferences over jobs and independently choose
+ what jobs to accept.
+ Preference heterogeneity induces same-side and cross-side search externalities
+ that generate inefficiently high levels of search activities.
+ Platform's policy of coarse revelation of buyer information to workers
+ improves acceptance rates by decreasing the ability of workers to “cherry-pick”
+ desirable buyers.
+ Implication for welfare-maximizing platfom is to limit information to the
+ side that is more patient and more substitutable.
+ However, if this side has unobserved heterogeneity, coarsening is effective
+ only if buyer-to-worker ration is large.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
 I develop a model of a decentralized matching market in which buyers arrive
  over time and pursue workers by proposing jobs.
  Workers have heterogeneous preferences over jobs and independently decide
