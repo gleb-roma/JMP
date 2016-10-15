@@ -1,0 +1,487 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Hello, today I am presenting my 
+\series bold
+job
+\series default
+ market paper where I study how 
+\series bold
+limiting
+\series default
+ 
+\series bold
+information
+\series default
+ can 
+\series bold
+improve
+\series default
+ 
+\series bold
+performance
+\series default
+ of decentralized matching markets.
+ 
+\end_layout
+
+\begin_layout Standard
+To fix ideas, I will start by 
+\series bold
+phrasing
+\series default
+ my research question in the context of 
+\series bold
+Airbnb
+\series default
+.
+ Then I will show that my 
+\series bold
+findings
+\series default
+ apply more 
+\series bold
+generally
+\series default
+, to many 
+\series bold
+other
+\series default
+ decentralized matching markets.
+ 
+\end_layout
+
+\begin_layout Standard
+Airbnb is a marketplace that's matching 
+\series bold
+guests
+\series default
+ and 
+\series bold
+hosts
+\series default
+.
+ In a 
+\series bold
+typical
+\series default
+ interaction, a guest 
+\series bold
+searches
+\series default
+ over available listings and sends inquiries to those he likes.
+ Hosts search passively.
+ A host 
+\series bold
+reviews
+\series default
+ the guest request and 
+\series bold
+accepts
+\series default
+ it only if he 
+\series bold
+likes
+\series default
+ the guest.
+ 
+\end_layout
+
+\begin_layout Standard
+It sounds nice and efficient but there is a problem.
+ If hosts reject too 
+\series bold
+often
+\series default
+, they slow 
+\series bold
+down
+\series default
+ the 
+\series bold
+guest
+\series default
+ side of the market.
+ By 
+\series bold
+rejecting
+\series default
+, hosts 
+\series bold
+waste
+\series default
+ the guests' 
+\series bold
+time
+\series default
+ and 
+\series bold
+search
+\series default
+ efforts.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[This is what I will call the cross-side search externality.
+ ]
+\end_layout
+
+\end_inset
+
+ And 
+\series bold
+indeed
+\series default
+, we observe on Airbnb data that hosts often prefer to remain 
+\series bold
+unmatched
+\series default
+ rather than accept someone (20% as found by Fradkin 2015).
+ Now, suppose that Airbnb's objective is to maximize total welfare on the
+ platform, where welfare includes both guest and hosts value from 
+\series bold
+matches,
+\series default
+ 
+\series bold
+and
+\series default
+ 
+\series bold
+also disutility
+\series default
+ from 
+\series bold
+search
+\series default
+ efforts and 
+\series bold
+wasted time
+\series default
+.
+ Then 
+\series bold
+excessive search
+\series default
+ is a problem for Airbnb because even if the participants 
+\series bold
+find
+\series default
+ the most 
+\series bold
+valuable
+\series default
+ matches, the 
+\series bold
+search
+\series default
+ costs are too 
+\series bold
+high
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, Airbnb is a digital marketplace and controls most aspects of the matching
+ system.
+ In particular, it controls the information guests and hosts see about each
+ other on their profiles.
+ 
+\series bold
+Question
+\series default
+: Can Airbnb design an information disclosure policy to alleviate the problem
+ of excessive search and improve efficiency of the marketplace? For example,
+ Airbnb hosts screen guests based on guest gender, socio-economic status,
+ day schedule, race, personality, messiness, star rating, reviews, etc.
+ How much communication between hosts and guests should be allowed? What
+ guests attributes should be made visible and others less visible? 
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+standard
+\series default
+ intuition suggests that to increase 
+\series bold
+matching value
+\series default
+, the designer wants hosts and guests to disclose the 
+\series bold
+maximum
+\series default
+ of relevant 
+\series bold
+information
+\series default
+ about themselves, so that the participants of the marketplace can 
+\series bold
+find
+\series default
+ and 
+\series bold
+form
+\series default
+ the 
+\series bold
+most
+\series default
+ 
+\series bold
+valuable
+\series default
+ matches.
+ However, abundance of information about match value can also have 
+\series bold
+negative
+\series default
+ effects on welfare.
+ More information about guests increases the perceived diversity of guests
+ and induces more search on the host side.
+ More search is inefficient if the guests and hosts preference are not perfectly
+ aligned.
+ For example, there is a conflict if guests are less picky than hosts but
+ are more time-sensitive.
+ 
+\end_layout
+
+\begin_layout Standard
+In my paper, I show how a policy of 
+\emph on
+coarse
+\emph default
+ revelation of guest information can be used to alleviate the excessive
+ search problem and improve the efficiency of the marketplace.
+ For example, ...
+ 
+\end_layout
+
+\begin_layout Standard
+The high-level intuition for the simplest case of static matching with 1
+ worker comes from standard papers on information disclosure (AM95 and KG11).
+ 
+\end_layout
+
+\begin_layout Standard
+What's missing in this simple example is the actual dynamic nature of matching
+ and heterogeneity of host audience – which both should be taken into account
+ while building the optimal information disclosure policy.
+ 
+\end_layout
+
+\begin_layout Standard
+To capture the dynamism and heterogeneity I build a model of a decentralized
+ matching marketplace...
+ [preview of results here].
+ 
+\end_layout
+
+\begin_layout Standard
+My framework applies more broadly to many others decentralized matching
+ markets.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Let me tell you what I mean by this.
+ When hosts 
+\series bold
+reject
+\series default
+ guest requests, they impose 
+\series bold
+externalities
+\series default
+ on 
+\series bold
+guests
+\series default
+ 
+\series bold
+and
+\series default
+ the 
+\series bold
+other
+\series default
+ workers.
+ First, when a host rejects, the guest's time and search effort is wasted.
+ As a result , when workers 
+\series bold
+screen
+\series default
+ guests, they 
+\series bold
+slow down
+\series default
+ the guest side of the market.
+ Second, when a host rejects, his listing remains active on the marketplace
+ and presents competition to other workers.
+ Ok, these were the two search externalities I am focusing on in my paper.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A natural reaction here would be to tax the externalities, for example,
+ charge a fee from a host when he rejects.
+ This is not really feasible because it creates the unsafe marketplace,
+ and also it's hard to calculate the exact fee amount.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

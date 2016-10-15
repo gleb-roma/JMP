@@ -235,8 +235,8 @@ I develop a model of a decentralized matching market in which buyers pursue
  Platform's policy of coarse revelation of buyer information to workers
  improves acceptance rates by decreasing the ability of workers to “cherry-pick”
  desirable buyers.
- Implication for welfare-maximizing platfom is to limit information to the
- side that is more patient and more substitutable.
+ Implication for welfare-maximizing platform is to limit information to
+ the side that is more patient and more substitutable.
  However, if this side has unobserved heterogeneity, coarsening is effective
  only if buyer-to-worker ration is large.
  
