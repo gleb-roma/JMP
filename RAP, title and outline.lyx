@@ -1,0 +1,319 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usepackage{xcolor}
+ \usepackage{relsize}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+
+\series bold
+RAP
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+R: 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+When can the designer of a decentralized matching market, such as Airbnb,
+ limit information exchange between buyers and sellers and improve efficiency
+ (or matching rate, or revenue)? 
+\end_layout
+
+\end_inset
+
+When is limiting information exchange between buyers and sellers in decentralize
+d matching markets, such as Airbnb, welfare-improving? (revenue-improving,
+ #matches-increasing)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+A: Coarsening marginal buyer characteristic 
+\begin_inset Formula $x$
+\end_inset
+
+ increases seller acceptance rate.
+ If uncertainty over characteristic 
+\begin_inset Formula $x$
+\end_inset
+
+ does not affect ex post match value, and buyer search is costly, coarsening
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is welfare improving.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hiding buyer characteristics increases seller acceptance rate.
+ Some coarsenig is efficiency-improving if buyer search is costly and sellers'
+ preferences over buyers are similar enough.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+If disclosure of buyer characteristic 
+\begin_inset Formula $x$
+\end_inset
+
+ does not affect total ex post match value, then coarsening 
+\begin_inset Formula $x$
+\end_inset
+
+ increases seller acceptance rate.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+P: We know that easy search and information availability is the key to a
+ well-functioning market (Blackwell 1953, Akerlof 1970, Roth 2008, Hagiu-Wright
+ 2011), what we don't understand well is how information availability affects
+ the interaction of welfare effect and search externalities.
+ 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Title: 
+\begin_inset Quotes eld
+\end_inset
+
+Ignorance is Strength: Improving Performance of Decentralized Matching Markets
+ by Limiting Information
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Outline
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Model of Decentralized Matching Market
+\end_layout
+
+\begin_layout Enumerate
+In this section I lay out a model of a decentralized matching market, in
+ which buyers arrive gradually over time and pursue sellers by proposing
+ a job; sellers have heterogenous preferences over buyers, seller capacities
+ are limited, and sellers independently choose what matches to accept.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Why? The model will allow me...
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What do we learn from this section? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Setup
+\end_layout
+
+\begin_layout Enumerate
+Equilibrium
+\end_layout
+
+\begin_layout Enumerate
+Examples of Marketplaces
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Market Design: Optimal Information Disclosure
+\begin_inset Newline newline
+\end_inset
+
+This section studies the platform's objective of maximizing welfare in the
+ decentralized matching market.
+ The platform's objective is the weighted average of seller profits and
+ buyer surplus.
+ Fist, I show in the benchmark case with identical sellers that information
+ disclosure policy can implement any Pareto-optimal outcome, and the optimal
+ policy necessarily involves information coarsening.
+ Then I show for the general setting that the full disclosure outcomes is
+ Pareto-suboptimal due to 
+\emph on
+crowding externality
+\emph default
+.
+ Finally, I characterize optimal information disclosure with heterogeneous
+ sellers in the linear payoff environment.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Optimal information disclosure with identical sellers
+\end_layout
+
+\begin_layout Enumerate
+Seller coordination problem
+\end_layout
+
+\begin_layout Enumerate
+Optimal information disclosure with heterogeneous sellers
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Extensions
+\end_layout
+
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\end_body
+\end_document

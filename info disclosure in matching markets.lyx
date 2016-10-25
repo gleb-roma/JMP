@@ -48,6 +48,7 @@
 \begin_modules
 theorems-ams-bytype
 theorems-ams-extended-bytype
+todonotes
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -192,12 +193,20 @@ theorems-ams-extended-bytype
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\newcommand{\oW}{\overline{\Lambda}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\newcommand{\uW}{\underline{\Lambda}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\betaa}{\beta_{A}}
 \end_inset
 
 
@@ -226,19 +235,19 @@ status open
 
 \begin_layout Abstract
 I develop a model of a decentralized matching market in which buyers pursue
- workers by proposing jobs.
+ sellers by proposing jobs.
  No coordination friction.
- Workers have non-trivial preferences over jobs and independently choose
+ sellers have non-trivial preferences over jobs and independently choose
  what jobs to accept.
  Preference heterogeneity induces same-side and cross-side search externalities
  that generate inefficiently high levels of search activities.
- Platform's policy of coarse revelation of buyer information to workers
- improves acceptance rates by decreasing the ability of workers to “cherry-pick”
+ Platform's policy of coarse revelation of buyer information to sellers
+ improves acceptance rates by decreasing the ability of sellers to “cherry-pick”
  desirable buyers.
  Implication for welfare-maximizing platform is to limit information to
  the side that is more patient and more substitutable.
  However, if this side has unobserved heterogeneity, coarsening is effective
- only if buyer-to-worker ration is large.
+ only if buyer-to-seller ration is large.
  
 \end_layout
 
@@ -249,17 +258,17 @@ I develop a model of a decentralized matching market in which buyers pursue
 
 \begin_layout Abstract
 I develop a model of a decentralized matching market in which buyers arrive
- over time and pursue workers by proposing jobs.
- Workers have heterogeneous preferences over jobs and independently decide
+ over time and pursue sellers by proposing jobs.
+ sellers have heterogeneous preferences over jobs and independently decide
  what jobs to accept.
  First, I establish that the equilibrium outcome is inefficient because
- of scheduling externality: by rejecting a job a worker makes himself available
- and decreases the other workers’ chances of getting subsequent jobs.
- Additionally, workers fail to internalize buyers' search efforts.
+ of scheduling externality: by rejecting a job a seller makes himself available
+ and decreases the other sellers’ chances of getting subsequent jobs.
+ Additionally, sellers fail to internalize buyers' search efforts.
  Second, I show that the platform's policy of coarse revelation of buyer
- information to workers improves acceptance rates by decreasing the ability
- of workers to “cherry-pick” desirable buyers.
- This degrades worker match quality but improves buyer welfare.
+ information to sellers improves acceptance rates by decreasing the ability
+ of sellers to “cherry-pick” desirable buyers.
+ This degrades seller match quality but improves buyer welfare.
  Notably, this information coarsening can be Pareto improving because it
  offsets the scheduling externality.
  Finally, I characterize the disclosure policy that maximizes the number
@@ -275,7 +284,7 @@ status open
 
 \begin_layout Plain Layout
 Acknowledgements: Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz Strzalecki,
- Chiara Farronato, Fradkin, Jeff Picel, Andrei Hagiu, Alex Smolin, Divya
+ Chiara Farronato, Andrei Hagiu, Fradkin, Jeff Picel, Alex Smolin, Divya
  Kirti, Beyonce and the participants of Harvard and MIT lunch seminars.
  
 \end_layout
@@ -298,21 +307,209 @@ filename "sections/intro.lyx"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+Model of Decentralized Matching Market
+\end_layout
+
+\begin_layout Standard
+In this section I lay out a model of a decentralized matching market, in
+ which buyers arrive gradually over time and pursue sellers by proposing
+ a job; sellers have heterogenous preferences over buyers, seller capacities
+ are limited, and sellers independently choose what matches to accept.
  
-\begin_inset CommandInset include
-LatexCommand include
-filename "sections/model.lyx"
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Why? The model will allow me...
+ 
+\end_layout
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What do we learn from this section? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Setup
+\end_layout
+
+\begin_layout Paragraph
+Spot matching process.
+ 
+\end_layout
+
+\begin_layout Standard
+There are three parties involved in the search and matching process: sellers,
+ buyers and the platform itself.
+ 
+\end_layout
+
+\begin_layout Standard
+There is mass 1 of sellers, who always stay on the platform, never leave
+ or arrive.
+ The sellers do not actively look for jobs, but instead screen the buyer
+ requests: each worker is presented with a sequence of job offers at Poisson
+ rate, and he decides whether to accept or reject them to maximize discounted
+ profit flow.
+ An accepted job takes time 
+\begin_inset Formula $\tau$
+\end_inset
+
+ to complete, during which time the seller cannot receive new jobs.
  
 \begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is the search friction.
+\end_layout
+
+\end_inset
+
+ At each moment a seller is either available and waits for new jobs, or
+ busy with working on a job.
+ 
+\end_layout
+
+\begin_layout Standard
+There is a continuum of potential buyers who gradually arrive over time
+ at flow rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ That is, within a time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+, mass 
+\begin_inset Formula $\beta dt$
+\end_inset
+
+ of buyers arrive to the platform.
+ Each buyer has a single job he wants to be completed.
+ Upon arrival, the buyer proposes the job to one of the available sellers.
+ I assume that the target seller is drawn uniformly at random from the pool
+ of available workers.
+ If the buyer's job is accepted, the buyer stays until the job is completed,
+ otherwise he leaves the platform.
+ 
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ which implies that collectively, it is physically possible for sellers
+ to complete every buyer job.
+ The assumption makes the exposition easier and relaxing it requires more
+ notation to deal with either automatic rejections or queues.
+ I do this in  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Extensions"
+
+\end_inset
+
+ and show that qualitatively results do not change.
+\end_layout
+
+\begin_layout Standard
+The platform opts out of the centralized matching process, instead it makes
+ disclosure of buyer characteristics part of its design, as described below.
+ See 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Search-and-matching"
+
+\end_inset
+
+ for the illustration of the matching process.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "chapters/capacity_utilization.lyx"
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pictures/matching_chart.eps
+	lyxscale 20
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spot matching process.
+ Buyers arrive at exogenous rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and contact available sellers.
+ If rejected, a buyer leaves the platform.
+ If accepted, the buyer forms a match which lasts for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ After the time elapses, the buyer leaves the platform, and the seller returns
+ to waiting.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Search-and-matching"
 
 \end_inset
 
@@ -321,35 +518,6873 @@ filename "chapters/capacity_utilization.lyx"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sections/seller-seq-search.png
+	lyxscale 20
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/seller_problem.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Seller dynamic optimization problem with repeated search and waiting.
+ An available seller receives requests at Poisson rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+.
+ If a request is accepted, the seller becomes busy for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+ when he does not receive new requests.
  
-\begin_inset CommandInset include
-LatexCommand include
-filename "sections/disclosure.lyx"
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sellers-repeated-search"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Search and matching process.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Heterogeneity and payoffs.
+\end_layout
+
+\begin_layout Standard
+There are two dimensions of heterogeneity in the matching market.
+ First, each seller has heterogeneous match payoff across buyers.
+ Second, different seller have different payoff functions over jobs.
+ Concerning the platform's information disclosure problem, I need the following
+ pieces of notation.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be buyer type, with the interpretation that 
+\begin_inset Formula $x$
+\end_inset
+
+ is the buyer characteristics 
+\bar under
+observed
+\bar default
+ by the platform.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Buyer type 
+\begin_inset Formula $x$
+\end_inset
+
+ captures the payoff-relevant information the platform elicits from the
+ buyer about the job, passively from the buyer's cookies and queries or
+ actively by asking questions.
+ For example, on Uber, 
+\begin_inset Formula $x$
+\end_inset
+
+ would include rider's destination; on Airbnb, 
+\begin_inset Formula $x$
+\end_inset
+
+ would include guest's race, age and gender.
+\end_layout
+
+\end_inset
+
+ The space of buyer types 
+\begin_inset Formula $X$
+\end_inset
+
+ is a compact subset of Euclidean space.
+ Distribution of 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $F$
+\end_inset
+
+ with full support.
+ Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be seller type, with the interpretation that 
+\begin_inset Formula $y$
+\end_inset
+
+ is the seller characteristics 
+\bar under
+unobserved
+\bar default
+ by the platform.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Seller type 
+\begin_inset Formula $y$
+\end_inset
+
+ captures the payoff-relevant information the platform did not elicit from
+ sellers by whatever reason – costly, unethical, etc.
+ For example, on Uber, 
+\begin_inset Formula $y$
+\end_inset
+
+ would include the driver's preference for long rides and traffic; on Airbnb,
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ would include the host's preference for his guest's age, gender, socio-economic
+ status, race, etc.
+\end_layout
+
+\end_inset
+
+ The space of seller types 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a compact subset of Euclidean space.
+ Distribution of 
+\begin_inset Formula $y$
+\end_inset
+
+ is 
+\begin_inset Formula $G$
+\end_inset
+
+ with full support that admits density 
+\begin_inset Formula $g$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+ is differentiable on 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Seller profit for one match is 
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is continuous and for any 
+\begin_inset Formula $y$
+\end_inset
+
+ there is 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi(x,y)>0$
+\end_inset
+
+.
+ Buyer net match payoff is 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+.
+ Assume that all incoming buyers have non-negative match payoff:
+\begin_inset Formula 
+\begin{equation}
+u(x,y)\geq0.\label{eq:buyer-net-payoff}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Information Disclosure.
+\end_layout
+
+\begin_layout Standard
+The platform plays a signaling game with sellers.
+ The platform observes buyer type 
+\begin_inset Formula $x$
+\end_inset
+
+ and chooses how to reveal it to sellers.
+ Sellers do not receive any additional information about 
+\begin_inset Formula $x$
+\end_inset
+
+ outside of what the platform tells them.
+ Let 
+\begin_inset Formula $S=\Delta(X)$
+\end_inset
+
+ be the set of all posterior distributions over 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\emph on
+Information disclosure policy
+\emph default
+ 
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ is a probability distribution of posteriors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $X$
+\end_inset
+
+ is a compact subset of a Euclidean space, 
+\begin_inset Formula $\Delta(S)$
+\end_inset
+
+ is the set of Borel-measurable probability distributions with the weak-*
+ topology on 
+\begin_inset Formula $\Delta(X)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ The interpretation is 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ is the platform's signal to the seller, and so 
+\begin_inset Formula $\lambda(S')$
+\end_inset
+
+ is the fraction of buyers with signals 
+\begin_inset Formula $S'\subset S$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I focus on the 
+\begin_inset Quotes eld
+\end_inset
+
+public
+\begin_inset Quotes erd
+\end_inset
+
+ signaling when the same 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ applies to all seller.
+ I am not studying the mechanism design problem where the platform tries
+ to elicit or learn the seller’s type 
+\begin_inset Formula $y$
+\end_inset
+
+ and tailor the disclosure policy to seller type.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+ find in the one-shot signaling game with linear payoffs that public signaling
+ is equivalent to private signaling.
+ 
+\end_layout
+
+\end_inset
+
+ Note that a disclosure policy can be seen as a two-stage lottery on 
+\begin_inset Formula $X$
+\end_inset
+
+ whose reduced lottery is prior 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The two-stage lottery framework for disclosure is adopted from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BBM15"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ The set of possible disclosure policies is then:
+\begin_inset Formula 
+\[
+\left\{ \lambda\in\Delta(S)\colon\int s\lambda(ds)\sim F\right\} .
+\]
+
+\end_inset
+
+ Full disclosure policy, denoted by 
+\begin_inset Formula $\lambda^{FD}$
+\end_inset
+
+, perfectly reveals buyer type 
+\begin_inset Formula $x$
+\end_inset
+
+ to the sellers.
+ No disclosure policy fully conceals 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Disclosure policy 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ is 
+\emph on
+coarser
+\emph default
+ than 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ if 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ is a Blackwell garbling of 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+.
+ That is, the platform can obtain 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ from 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ by taking 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ and partially concealing some 
+\begin_inset Formula $x$
+\end_inset
+
+'s.
+ When a buyer of type 
+\begin_inset Formula $x$
+\end_inset
+
+ arrives, the platform draws a signal according to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and shows it to the seller.
+ The seller knows the platform's choice of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, and so his interpretation of a signal as a posterior is correct.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Steady state.
+ 
+\end_layout
+
+\begin_layout Standard
+A steady state of the matching process is characterized by the fraction
+ of available sellers of every type and their acceptance rates.
+ Formally, let 
+\begin_inset Formula $\alpha(y)\geq0$
+\end_inset
+
+ be the acceptance rate of type-
+\begin_inset Formula $y$
+\end_inset
+
+ available sellers, and let 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ be the type-
+\begin_inset Formula $y$
+\end_inset
+
+
+\emph on
+ utilization rate
+\emph default
+ – the fraction of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers who are busy.
+ Denote the total fraction of busy sellers by 
+\begin_inset Formula $\bar{\rho}:=\int_{Y}\rho(y)dG(y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In a steady state, the flow of sellers who become busy is equal to the flow
+ of workers who become available.
+ The available-to-busy flow is equal to the buyer flow type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers receive times their acceptance rate.
+ Since buyer get distributed uniformly across the available sellers, the
+ buyer flow to type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers is 
+\begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}$
+\end_inset
+
+.
+ The acceptance rate is 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+.
+ Thus, the available-to-busy flow is 
+\begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)$
+\end_inset
+
+.
+ The busy-to-available flow is 
+\begin_inset Formula $g(y)\rho(y)/\tau$
+\end_inset
+
+ because the mass of busy 
+\begin_inset Formula $y$
+\end_inset
+
+-sellers is 
+\begin_inset Formula $g(y)\rho(y)$
+\end_inset
+
+, and jobs are completed in time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Hence, in a steady state, we have:
+\begin_inset Formula 
+\begin{equation}
+\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
+\end{equation}
+
+\end_inset
+
+See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Matching-process-in"
+
+\end_inset
+
+ for the illustration.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pictures/match_dynamics_pics/match_steady_state_complete.eps
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Matching process in a steady state.
+ 
+\begin_inset Formula $g(y)$
+\end_inset
+
+ is the mass of 
+\begin_inset Formula $y$
+\end_inset
+
+-sellers, 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ is utilization rate, 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is the average utilization rate.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Matching-process-in"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Seller repeated search problem.
+ 
+\end_layout
+
+\begin_layout Standard
+Buyers arrive at flow rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and get distributed uniformly at random across all available sellers.
+ Therefore, each individual available seller experiences a Poisson arrival
+ process of buyers, where the rate of the arrival is equal to the buyer-to-selle
+r ratio:
+\begin_inset Formula 
+\begin{equation}
+\beta_{A}:=\frac{\beta}{1-\bar{\rho}}\label{eq:beta_A-1}
+\end{equation}
+
+\end_inset
+
+(
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mye00"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cite the relevant theorem
+\end_layout
+
+\end_inset
+
+).
+ There is thus a contrast between individual arrival process and aggregate
+ arrival process in that the individual arrival process is stochastic while
+ the aggregate arrival process is deterministic (a consequence of law of
+ large numbers).
+ More concretely, an individual seller faces a stochastic arrival process,
+ such that over an infinitesimal time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+ the probability that one buyer arrives is 
+\begin_inset Formula $\beta_{A}dt+o(dt)$
+\end_inset
+
+.
+ Jointly, available sellers face the deterministic buyer arrival process,
+ such that over time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+ the continuum mass 
+\begin_inset Formula $\beta_{A}dt$
+\end_inset
+
+ of buyers arrive.
+ As we show in the rest of this section, stochasticity of individual arrival
+ process combined with independent decision-making creates seller coordination
+ problem which results in matching inefficiency.
+ 
+\end_layout
+
+\begin_layout Standard
+Each seller takes 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ as given
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This follows from the fact that there is a continuum of sellers on the platform,
+ and so any individual seller's actions does not affect 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ and solves the dynamic optimization problem where for each incoming job
+ he observes the platform's signal 
+\begin_inset Formula $s$
+\end_inset
+
+, and based on 
+\begin_inset Formula $s$
+\end_inset
+
+, chooses to accept or reject the job in order to maximize his average profit
+ flow.
+ See 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Sellers-repeated-search"
+
+\end_inset
+
+ for the illustration of the seller dynamic optimization problem.
+ The expected profit for seller 
+\begin_inset Formula $y$
+\end_inset
+
+ of a job with signal 
+\begin_inset Formula $s$
+\end_inset
+
+ is 
+\begin_inset Formula $\pi(s,y)=\int_{X}\pi(x,y)s(dx)$
+\end_inset
+
+.
+ Denote by 
+\begin_inset Formula $V(y)$
+\end_inset
+
+ the average profit flow when seller of type 
+\begin_inset Formula $y$
+\end_inset
+
+ acts optimally (value function)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For example, if a seller earns $1 on each job, and time interval between
+ starting consequent jobs is 2, then 
+\begin_inset Formula $V(y)=1/2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Sellers are risk neutral.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+and so for the decision-making, it is sufficient to know only the distribution
+ of posterior means.
+ 
+\end_layout
+
+\end_inset
+
+Denote by 
+\begin_inset Formula $v(s,y)$
+\end_inset
+
+ the value of one new job with signal 
+\begin_inset Formula $s$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ includes the option value of rejecting the job and the opportunity cost
+ of being unavailable.
+ Value of a new job is zero if the seller rejects it, and 
+\begin_inset Formula $\pi(s,y)-\tau V(y)$
+\end_inset
+
+ if he accepts it, where 
+\begin_inset Formula $\tau V(y)$
+\end_inset
+
+ is the opportunity cost of accepting due to being unavailable for time
+ 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ There is no discounting.
+ Seller optimization problem is then the system of the following two equations:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I consider time average payoff rather than discounted sum because discount
+ rate is not essential for my argument.
+ However, the results immediately generalize to the case when the seller
+ has discount rate 
+\begin_inset Formula $r$
+\end_inset
+
+ by replacing 
+\begin_inset Formula $\tau$
+\end_inset
+
+ with 
+\begin_inset Formula $\tau_{r}=\frac{1-e^{-r\tau}}{r}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+I still use this formulation because in the alternative I have to differentiate
+ 
+\begin_inset Formula $F(c)$
+\end_inset
+
+ which is not differentiable in the general case.
+ 
+\end_layout
 
 \end_inset
 
  
-\begin_inset CommandInset include
-LatexCommand include
-filename "sections/extensions.lyx"
+\begin_inset Formula 
+\begin{eqnarray}
+V(y) & = & \beta_{A}\int v(s,y)\lambda(ds)\label{eq:V-via-pi}\\
+v(s,y) & = & \max\{0,\pi(s,y)-\tau V(y)\}\label{eq:pi(c)}
+\end{eqnarray}
+
+\end_inset
+
+Seller strategy is function 
+\begin_inset Formula $\sigma(\cdot,y)\colon S\to[0,1]$
+\end_inset
+
+ that for every seller type maps a signal to the probability of accepting
+ it.
+ The seller acceptance rate is the ex ante probability of accepting a job:
+\begin_inset Formula 
+\begin{equation}
+\alpha(y)=\int\sigma(s,y)\lambda(ds).\label{eq:alpha}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Equilibrium
+\end_layout
+
+\begin_layout Standard
+I am interested in a steady state equilibrium of the market in which the
+ sellers take buyer arrival rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ as given and optimize independently, and the seller busy-available flows
+ balance out.
+ Recall that the exogenous objects in my model are: buyer flow rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, profit function 
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+, distribution of types 
+\begin_inset Formula $G(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $F(x)$
+\end_inset
+
+, and completion time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Based on the exogenous objects, a tuple 
+\begin_inset Formula $(\sigma,\bar{\rho})$
+\end_inset
+
+ constitute a 
+\emph on
+steady-state equilibrium
+\emph default
+ if
+\end_layout
+
+\begin_layout Enumerate
+[Optimality] For every type-
+\begin_inset Formula $y$
+\end_inset
+
+ seller for all 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma(\cdot,y)$
+\end_inset
+
+ is an optimal strategy given buyer Poisson arrival rate 
+\begin_inset Formula $\beta_{A}=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+[SS] Average utilization rate 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ arises in a steady state when sellers play 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, as shown in {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+}.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:Equilibrium-exists-and"
+
+\end_inset
+
+Steady-state equilibrium exists and is unique.
+ 
+\end_layout
+
+\begin_layout Standard
+In the proof in the Appendix, first, I show that for an arbitrary vector
+ of acceptance rates 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+, there is a unique steady state.
+ Then, average utilization 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ The uniqueness of equilibrium obtains by monotonicity of reaction curves
+ of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Namely, in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, as buyer traffic intensity 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ increases, sellers become more picky and acceptance rate 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ decreases.
+ As 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ increases, buyers get directed to a smaller set of sellers, hence 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ increases.
+ For details see the proof in the Appendix 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "proof:eqm-exists"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Examples of Marketplaces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add Convoy, CoachUp.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+BTW Uber has a version of this where drivers game the system to ride up
+ surge pricing.
+ They cancel jobs as prices surge so they make more money.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section I discuss how the model maps to the reality in the case
+ of Uber, Airbnb and labor platform such as TaskRabbit.
+ Recall that 
+\begin_inset Formula $y$
+\end_inset
+
+ denotes seller type, i.e.
+ the seller's unobserved heterogeneity; 
+\begin_inset Formula $x$
+\end_inset
+
+ denotes buyer type, i.e.
+ the information about buyer available to the platform.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+There is an equivalent phrasing of the model which for some real world applicati
+ons might be more relevant than the original phrasing.
+ In the original phrasing, a buyer first reveals his information 
+\begin_inset Formula $x$
+\end_inset
+
+ to the platform, then the platform coarsely matches 
+\begin_inset Formula $x$
+\end_inset
+
+ to signal 
+\begin_inset Formula $s=\lambda(x)$
+\end_inset
+
+, and finally 
+\begin_inset Formula $s$
+\end_inset
+
+ is communicated to sellers.
+ Alternatively, I can phrase the model in a different way.
+ Type 
+\begin_inset Formula $x$
+\end_inset
+
+ captures all cost-relevant information the buyer possesses.
+ The platform's disclosure policy is then a mechanism that partially elicits
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ from a buyer.
+ That is, the platform gets to observe only 
+\begin_inset Formula $s=\lambda(x)$
+\end_inset
+
+, and then 
+\begin_inset Formula $s$
+\end_inset
+
+ is communicated to sellers.
+ For example, the platform asks three questions about a buyer need, which
+ imperfectly describes what the buyer wants.
+ In this reinterpretation, the platform's information coarsening corresponds
+ to coarse elicitation of buyer information.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What is the platform's choice for the examples below? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Uber.
+ 
+\end_layout
+
+\begin_layout Standard
+Drivers receive requests from passenger when they are idle.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ is driver's location, 
+\begin_inset Formula $x$
+\end_inset
+
+ is passenger's destination and star rating.
+ Price per mile and minute is fixed (abstract away from surge pricing).
+ Drivers do not like short rides or rides to the neighborhoods far removed
+ from busy areas.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:indep-vs-coord"
+
+\end_inset
+
+ shows that if drivers have full discretion over accepting or rejecting,
+ the driver utilization rates are inefficiently low, and the demand-supply
+ fit is suboptimal.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Greg: It's a bit weird to talk about Proposition 2 before introducing it.
+ Could you instead talk about what the information disclosure policies of
+ the various platforms are - later you can explain why they are what they
+ are....
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Airbnb.
+\end_layout
+
+\begin_layout Standard
+Hosts are capacity constrained in rooms.
+ Once a room is booked for a specific date, the host cannot accept a better
+ guest.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ - room quality, location.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ - guest quality, e.g.
+ college student vs.
+ elderly couple.
+ Every host sets his own price that applies to all guests but he may prefer
+ to reject certain guests who he expects can be a pain in the neck.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:indep-vs-coord"
+
+\end_inset
+
+ shows that if hosts have full discretion over accepting or rejecting guest
+ requests, the apartment utilization rates are inefficiently low, and the
+ marketplace is removed from its full potential.
+ 
+\end_layout
+
+\begin_layout Paragraph
+TaskRabbit.
+ 
+\end_layout
+
+\begin_layout Standard
+The service providers are capacity constrained because they can do only
+ that many tasks per week.
+ Once a service provider agreed to do some job, he is constrained in picking
+ new tasks.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ - seller skill, specialization.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ - job category, job difficulty, professional/annoying client.
+ Service provider sets hourly rate  which applies to all tasks in the category.
+ The seller may prefer to reject the tasks which he does not find to be
+ a good fit, or too far, or bad timing of the lead.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:indep-vs-coord"
+
+\end_inset
+
+ shows that if service providers have full discretion over accepting or
+ rejecting client leads, the utilization of participating labor is inefficiently
+ low, and the matching efficiency is suboptimal.
+ 
+\end_layout
+
+\begin_layout Subsection
+Discussion of the Modeling Assumptions
+\end_layout
+
+\begin_layout Standard
+In this subsection I discuss in detail the important assumptions of my model.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:single-search-attempt"
+
+\end_inset
+
+Buyers make a single search attempt.
+ 
+\end_layout
+
+\begin_layout Standard
+Rejection-intolerant buyers is a simplifying assumption that help to avoid
+ endogenous distribution of buyer types.
+ It captures the real aspect of matching markets that rejections are costly
+ to buyers, e.g.
+ wasted time, wasted search effort, bidding costs, etc.
+ Moreover, buyers often do take rejections badly.
+ For example, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
+
+\end_inset
+
+ reports that on Airbnb, an initial rejection decreases the probability
+ that the guest eventually books any listing by 50%.
+ 
+\end_layout
+
+\begin_layout Assumption
+Buyers contact available sellers only.
+ 
+\end_layout
+
+\begin_layout Standard
+The goal of the paper is to explore the matching frictions that pertain
+ to preference heterogeneity and screening.
+ Therefore, I assume away the coordination frictions owing to several buyers
+ requesting the same seller and the coordination frictions owing to buyer
+ requesting unavailable sellers.
+ All three types of matching frictions are present in the matching marketplaces
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The coordination frictions in matching markets have been extensively studied
+ in the theoretical literature (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BSW01,Kir09,Halaburda2013,AJK14"
+
+\end_inset
+
+), and I assume away this channel of matching inefficiency to focus on screening.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Homogeneous Buyer Preferences
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:uniform-assignment"
+
+\end_inset
+
+Buyers contact an available seller chosen uniformly at random
+\end_layout
+
+\begin_layout Standard
+This assumption has two implications.
+ First, seller of any type faces the same intensity of buyer traffic.
+ Second, each seller faces the same distribution of buyer jobs.
+ This is a simplifying assumption that helps me to focus sellers excessive
+ screening problem.
+ In the extension 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:General-demand:-workers"
+
+\end_inset
+
+ I show how to deal with a more general demand system where demand for each
+ seller type can be different.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Also, Buyer surplus is independent of distribution of available sellers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+No Excess Demand
+\end_layout
 
 \end_inset
 
  
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:no-excess-demand"
+
+\end_inset
+
+Collectively, it is physically possible for sellers to complete every buyer
+ job: 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The assumption makes the exposition easier and relaxing it requires more
+ notation to deal with either automatic rejections or queues.
+ I do this in  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Extensions"
+
+\end_inset
+
+ and show that qualitatively results do not change.
+\end_layout
+
+\begin_layout Section
+Market Design: Information Disclosure
+\end_layout
+
+\begin_layout Standard
+This section studies the general platform's objective of maximizing the
+ weighted average of buyer and seller surplus, which incorporates welfare
+ maximization, profit maximization and maximizing the number of matches.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Fist, in the benchmark case with identical sellers I show that information
+ disclosure policy can implement any Pareto-optimal outcome, and the optimal
+ policy necessarily involves information coarsening.
+ Then I show for the general setting that the full disclosure outcome is
+ Pareto-suboptimal due to 
+\emph on
+crowding externality
+\emph default
+.
+ Finally, I characterize optimal information disclosure with heterogeneous
+ sellers in the linear payoff environment.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Seller coordination problem and crowding externality
+\end_layout
+
+\begin_layout Standard
+This subsection establishes that the full disclosure does not yield a Pareto
+ optimal market outcome.
+ In particular, it is not efficient.
+ The reason behind it is the sellers' coordination problem.
+ The inefficiency arises due to decentralization and dynamic nature of the
+ matching.
+ 
+\end_layout
+
+\begin_layout Standard
+To state the results of this and next sections, I need to define Pareto-optimali
+ty in my setting.
+ Market outcome 
+\begin_inset Formula $O=(\left\{ V(y)\right\} ,CS)$
+\end_inset
+
+ is a combination of seller profits and consumer surplus that arises in
+ a steady-state equilibrium.
+ I say that a market outcome is 
+\emph on
+feasible
+\emph default
+ if there is a seller strategy profile that generates it, and 
+\begin_inset Formula $V(y)\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ A feasible outcome 
+\begin_inset Formula $O$
+\end_inset
+
+ is Pareto-optimal if there is no other feasible 
+\begin_inset Formula $O'$
+\end_inset
+
+ such that 
+\begin_inset Formula $V(y)'>V(y)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Formula $CS'>CS$
+\end_inset
+
+.
+ The Pareto frontier is the set of all Pareto-optimal outcomes.
+ We say that market outcome 
+\begin_inset Formula $O$
+\end_inset
+
+ is 
+\emph on
+implementable
+\emph default
+ if there is a disclosure policy such that the equilibrium outcome is 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ The welfare is the sum of consumer surplus and seller profits.
+ A market outcome is 
+\emph on
+efficient
+\emph default
+ if there is no other feasible outcome with higher welfare.
+ 
+\end_layout
+
+\begin_layout Standard
+Write 
+\begin_inset Formula $V^{\sigma}(y)$
+\end_inset
+
+, 
+\begin_inset Formula $\rho^{\sigma}(y)$
+\end_inset
+
+, 
+\begin_inset Formula $CS^{\sigma}$
+\end_inset
+
+ for steady-state profits, utilization rates and consumer surplus when strategy
+ profile 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is played.
+ Imagine the platform starts with the full disclosure as its default disclosure
+ policy.
+ The next proposition shows that there is a feasible outcome at which sellers
+ are strictly better off than under the full disclosure, they complete more
+ jobs, and additionally, the buyers are also better off.
+ The result implies that there is a coordination problem among sellers.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:indep-vs-coord"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\sigma^{FD}$
+\end_inset
+
+ be the equilibrium strategy profile under full disclosure.
+ Then there exists 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $y$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{V}(y) & > & V^{FD}(y),\\
+\tilde{\rho}(y) & > & \rho^{FD}(y),\\
+\widetilde{CS} & > & CS^{FD}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The full proof is in the Appendix.
+ Here I give the sketch of the proof for the case of identical sellers,
+ which gives insights into the nature of the seller coordination problem.
+ Under the full disclosure, seller profit 
+\begin_inset Formula $V^{FD}$
+\end_inset
+
+ is strictly positive because sellers accept only profitable jobs.
+ Therefore, the opportunity cost of accepting 
+\begin_inset Formula $\tau V^{FD}$
+\end_inset
+
+ is strictly positive, too (see Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:pi(c)"
+
+\end_inset
+
+).
+ As a result, in equilibrium, the accepted jobs are those with profits 
+\begin_inset Formula $\pi\geq\tau V^{FD}$
+\end_inset
+
+.
+ However, the profitable jobs are those with 
+\begin_inset Formula $\pi\geq0$
+\end_inset
+
+.
+ Hence, some profitable jobs are rejected.
+ Consider strategy 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ that maximizes the joint seller profits.
+ It prescribes every seller to accept jobs with 
+\begin_inset Formula $\pi\geq0$
+\end_inset
+
+ (and this is feasible by the No Excess Demand assumption).
+ Naturally, 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ yields 
+\begin_inset Formula $\tilde{V}>V^{FD}$
+\end_inset
+
+.
+ It also increases acceptance rate, and thus the utilization rates, 
+\begin_inset Formula $\tilde{\rho}>\rho^{FD}$
+\end_inset
+
+.
+ Consumers are better off because consumer surplus is increasing in the
+ acceptance rate.
+ 
+\end_layout
+
+\begin_layout Standard
+A very high-level intuition for the coordination problem is the following.
+ A seller keeps his schedule open by rejecting low-value jobs to increase
+ his individual chances of getting high-value jobs.
+ As a result, in equilibrium, sellers spend a lot of time waiting for the
+ high-value jobs.
+ Collectively, this behavior is suboptimal because all profitable jobs have
+ to be completed.
+ 
+\end_layout
+
+\begin_layout Standard
+Interestingly, that unlike in the price competition, that benefits buyers
+ and improves market efficiency, seller coordination problem in this setting
+ results in inefficient outcome with both lower buyer and seller surplus.
+ This is a market failure.
+ I attribute the source of the failure to the 
+\emph on
+crowding externality 
+\emph default
+generated by sellers.
+ By rejecting a job, a seller remains available on the marketplace and attracts
+ a fraction of subsequent buyers, who otherwise would go the other sellers.
+ As a result, the other sellers face fewer profitable jobs and obtain lower
+ profits.
+ The key necessary conditions for the crowding externality to arise is the
+ dynamic nature of matching and dispersed seller capacities.
+ 
+\end_layout
+
+\begin_layout Standard
+The fundamental reason behind the coordination failure is that collectively,
+ the sellers are not capacity constrained (in time) while individually,
+ the sellers 
+\emph on
+are
+\emph default
+ capacity constrained.
+ When an individual seller accepts a job, he is off the market for time
+ 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and cannot accept new jobs.
+ He is afraid to miss valuable future jobs and therefore rejects low-value
+ jobs.
+ However, there are always 
+\bar under
+some
+\bar default
+ available workers in the market, and it is feasible to accept all profitable
+ jobs.
+ Mathematically, the distinction between individual and collective capacity
+ constraints is captured by having a continuum of sellers, so that while
+ buyer traffic to each individual seller is stochastic, the aggregate buyer
+ traffic is deterministic.
+ 
+\end_layout
+
+\begin_layout Standard
+Now we know that the full disclosure outcome is Pareto dominated by some
+ strategy profile 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+.
+ A natural question is whether there is an information disclosure policy
+ that induces 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+? In the next section we give the affirmative answer to this question in
+ the case of identical workers.
+ 
+\end_layout
+
+\begin_layout Subsection
+Optimal information disclosure with identical sellers
+\end_layout
+
+\begin_layout Standard
+I start by considering the case of identical sellers, i.e.
+ singleton 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ The next proposition establishes that any Pareto optimal outcome (in profit-sur
+plus space) is implementable by a disclosure policy.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:Pareto-frontier"
+
+\end_inset
+
+Suppose the sellers are identical.
+ Then for any Pareto optimal outcome 
+\begin_inset Formula $(V,CS)$
+\end_inset
+
+ there is a disclosure policy that implements it.
+ Furthermore, an optimal disclosure policy has binary structure.
+ 
+\end_layout
+
+\begin_layout Standard
+The proof relies on the Revelation principle.
+ Since there is one seller type and two actions, it is sufficient to consider
+ only disclosure policies that send two signals, where a signal is 
+\begin_inset Quotes eld
+\end_inset
+
+action recommendation
+\begin_inset Quotes erd
+\end_inset
+
+.
+ With such a binary signaling structure, the seller dynamic optimization
+ problem reduces to the static optimization problem.
+ Indeed, with only one type of acceptable jobs, there is no option value
+ of rejecting a profitable jobs.
+ All profitable jobs are the same! Since a Pareto optimal outcome is feasible
+ with 
+\begin_inset Formula $V\geq0$
+\end_inset
+
+, sellers have incentives to follow the platform's recommendations.
+ For the details of the proof, see the Appendix.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+ characterizes at once the range of possible objective functions.
+ Indeed, any point on the Pareto frontier maximizes 
+\begin_inset Formula $\gamma V+(1-\gamma)CS$
+\end_inset
+
+ for some 
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Outcomes-implementable-by"
+
+\end_inset
+
+ illustrates the result.
+ From 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:indep-vs-coord"
+
+\end_inset
+
+ we know that the full disclosure outcome is suboptimal.
+ The welfare maximization policy corresponds to 
+\begin_inset Formula $\gamma=1/2$
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/pareto_frontier.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Utility possibility set for buyer surplus and seller profits.
+ Disclosure policy can implement any point on the Pareto frontier (thick
+ solid line).
+ The full disclosure outcome, marked with 
+\begin_inset Formula $\bar{\rho}^{FD}$
+\end_inset
+
+, is suboptimal.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Outcomes-implementable-by"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+ is related to the result of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BBM15"
+
+\end_inset
+
+ who show that segmentation of a monopolistic market can achieve every feasible
+ combination of consumer and producer surplus.
+ Their segmentation problem is a static signaling game with single receiver
+ (monopolist) while my model is a signaling game with dynamically optimizing
+ receivers.
+ This dynamism is the novel element not present in the prior literature
+ on information disclosure.
+ 
+\end_layout
+
+\begin_layout Standard
+Disclosure of buyer characteristics to sellers has three competing effects
+ on welfare.
+ The first is the standard 
+\emph on
+Individual Choice effect
+\emph default
+ on the seller side.
+ From an individual seller’s point of view, more information increases his
+ set of attainable payoffs (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bla53"
+
+\end_inset
+
+).
+ Therefore, holding fixed the other sellers' behavior, he individually benefits
+ from more information about buyers.
+ Formally,
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Seller Individual Choice effect
+\end_layout
+
+\end_inset
+
+Fix 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ in the seller optimization problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ be coarser than 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+.
+ Then the profits 
+\begin_inset Formula $V'\leq V''$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The second effect of information disclosure is the
+\emph on
+ Buyer-side effect
+\emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Delaying is the misnomer...
+\end_layout
+
+\end_inset
+
+.
+ More information available to sellers reduces the platform's ability to
+ induce sellers to accept buyer-valuable jobs.
+ It results in higher rejection rates that 
+\begin_inset Quotes eld
+\end_inset
+
+slows down
+\begin_inset Quotes erd
+\end_inset
+
+ the buyer side of the market.
+ Formally, 
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Buyer-side effect
+\end_layout
+
+\end_inset
+
+Fix 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ be such that there is 
+\begin_inset Formula $s\in\supp\lambda''$
+\end_inset
+
+ with 
+\begin_inset Formula $\pi(s)<0$
+\end_inset
+
+.
+ Then there is coarsening 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ such that 
+\begin_inset Formula $CS'>CS''$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The third effect is the 
+\emph on
+Seller Option Value effect
+\emph default
+.
+ More information available to sellers increases their ability to 
+\begin_inset Quotes eld
+\end_inset
+
+cherry-pick
+\begin_inset Quotes erd
+\end_inset
+
+ the best jobs, and so creates the positive option value of rejecting.
+ In equilibrium, it hurts seller surplus because it is not efficient to
+ reject profitable jobs.
+ Formally,
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Seller Option Value effect
+\end_layout
+
+\end_inset
+
+Fix 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ in the seller optimization problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ be coarser than 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+.
+ Then the option values of rejection 
+\begin_inset Formula $\tau V'\leq\tau V''$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Both Delaying and Option Value effects lead to sellers' 
+\emph on
+excessive screening
+\emph default
+ — rejection rates are inefficiently high.
+ The Individual choice effect gives a motive to the platform to release
+ information while the Delaying and the Option Value effects give a motive
+ to conceal information.
+ The Delaying and the Option Value effects are the consequences of the general
+ principle that more information imposes more constraints on the designer
+ and reduces the set of outcomes he can induce (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM16-TE"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+When workers are identical, achieving efficiency requires coarse information
+ disclosure policy because the Delaying effect and the Option Value effects
+ win over the Individual Choice effect.
+ Denote the efficient disclosure policy by 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ and the set of efficient matches by 
+\begin_inset Formula $\hat{X}_{a}:=\{x\in X\colon\pi(x)+u(x)\geq0\}$
+\end_inset
+
+.
+ Disclosure 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ sends the recommendation 
+\begin_inset Quotes eld
+\end_inset
+
+accept
+\begin_inset Quotes erd
+\end_inset
+
+ for any jobs in 
+\begin_inset Formula $\hat{X}_{a}$
+\end_inset
+
+ and recommendation 
+\begin_inset Quotes eld
+\end_inset
+
+reject
+\begin_inset Quotes erd
+\end_inset
+
+ for jobs in 
+\begin_inset Formula $X\backslash\hat{X}_{a}$
+\end_inset
+
+.
+ Under full disclosure, the accepted jobs are 
+\begin_inset Formula $X_{a}^{FD}:=\{x\in X\colon\pi(x)\geq\tau V^{FD}\}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $X_{A}^{FD}$
+\end_inset
+
+ is a proper subset of 
+\begin_inset Formula $\hat{X}_{a}$
+\end_inset
+
+.
+ There are two sources of inefficiency under full disclosure.
+ Jobs 
+\begin_inset Formula $\{x\colon-u(x)\leq\pi(x)\leq0\}$
+\end_inset
+
+ are rejected because sellers fail to internalize the effect of their acceptance
+ decisions on buyers.
+ This is the Delaying effect.
+ Jobs 
+\begin_inset Formula $\{x\colon0\leq\pi(x)\leq\tau V\}$
+\end_inset
+
+ are rejected because sellers fail to internalize the crowding externality
+ they impose on each other.
+ This is the Option Value effect.
+\end_layout
+
+\begin_layout Standard
+How does the efficient disclosure policy 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ depends on the economic primitives of the market? What is interesting is
+ that 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ does not depend on the intensity of buyer traffic 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (optimal disclosure for other 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ have this property, too).
+ This implies that 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ is the same disclosure policy as would be optimal in a static case, when
+ 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+Suppose the sellers are identical.
+ Efficient information disclosure policy 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ is independent of the intensity of buyer traffic 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and seller capacity constraints 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ When buyer search costs are higher, 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ prescribes pooling more of marginal unprofitable jobs with inframarginal
+ profitable jobs.
+ 
+\end_layout
+
+\begin_layout Standard
+Independence of 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ from 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+ happens because the arrival rate to available sellers 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ matters only to the extent that it creates option value of rejection.
+ When the sellers are identical, the efficient 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ induces the posterior mean distribution 
+\begin_inset Formula $F^{\hat{\lambda}}$
+\end_inset
+
+ of payoffs that has only one acceptable value.
+ Therefore, the option value is zero, and so 
+\begin_inset Formula $\beta$
+\end_inset
+
+ does not matter.
+\end_layout
+
+\begin_layout Subsection
+Optimal information disclosure with heterogeneous sellers
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\smuth}{\hat{z}(y)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\oy}{\overline{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\uy}{\underline{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\zhaty}{\hat{z}(y)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\oL}{\overline{\Lambda}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\uL}{\underline{\Lambda}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\J}{\mathcal{J}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Typically, the platform observes seller preferences imperfectly, and there
+ is seller preference component that is known only to the seller (skill
+ level, willingness to do long rides, etc).
+ If there is privately known match value held by sellers, the intermediary’s
+ ability to influence the market outcome using information design  is limited.
+ Depending on the distribution of seller types, there may or may not exist
+ a coarse disclosure policy that improves acceptance rates.
+ In this section I provide sufficient conditions for this.
+ 
+\end_layout
+
+\begin_layout Standard
+To see the intuition behind additional problems the platform faces when
+ sellers have private information, imagine two types of sellers: professionals
+ and amateurs.
+ Professionals can profitably complete a larger set of jobs than amateurs.
+ When the platform designs the disclosure policy, it should take into considerat
+ion different effects the disclosure policy will have on the two groups
+ of sellers.
+ Amateurs can only do a small subset of jobs, and so they require more informati
+on to be able to profitable complete any jobs.
+ If insufficient information is provided, they reject all jobs because they
+ cannot tell apart profitable jobs from the unprofitable jobs.
+ On the other hand, more disclosure makes the professionals more picky and
+ decreases their acceptance rate.
+ The resolution of this tradeoff depends on the relative sizes of amateur
+ and professional populations.
+ If there are more professionals than amateurs, then less disclosure increases
+ the total acceptance rates even though amateurs stop working.
+ If there are more amateurs, coarse disclosure policy decreases the total
+ acceptance rate.
+ In the rest of this section we study this problem for the general continuous
+ distribution of seller types.
+ 
+\end_layout
+
+\begin_layout Standard
+Let the space of buyer types be 
+\begin_inset Formula $X=[0,1]$
+\end_inset
+
+, with the interpretation 
+\begin_inset Formula $x$
+\end_inset
+
+ is the difficulty of the job.
+ Let the space of seller types be 
+\begin_inset Formula $Y=[0,\oy]$
+\end_inset
+
+, 
+\begin_inset Formula $\oy\geq1$
+\end_inset
+
+, with the interpretation that 
+\begin_inset Formula $y$
+\end_inset
+
+ is the seller skill level.
+ The seller profit function is 
+\begin_inset Formula $\pi(x,y)=y-x$
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Professionals
+\begin_inset Quotes erd
+\end_inset
+
+ are the sellers with high 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+amateurs
+\begin_inset Quotes erd
+\end_inset
+
+ are the sellers with low 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Buyer match value is 
+\begin_inset Formula $u(x,y)=u$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Let the space of buyer types be 
+\begin_inset Formula $X=[0,1]$
+\end_inset
+
+, with the interpretation 
+\begin_inset Formula $x$
+\end_inset
+
+ is the difficulty of the job.
+ Let the space of seller types be 
+\begin_inset Formula $Y=[\underline{y},\overline{y}]$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq\uy<\oy$
+\end_inset
+
+, with the interpretation that 
+\begin_inset Formula $y$
+\end_inset
+
+ is the seller skill level.
+ The seller profit function is 
+\begin_inset Formula $\pi(x,y)=y-x$
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Professionals
+\begin_inset Quotes erd
+\end_inset
+
+ are the sellers with high 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+amateurs
+\begin_inset Quotes erd
+\end_inset
+
+ are the sellers with low 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Buyer match value is 
+\begin_inset Formula $u(x,y)=u(x)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Assume regularity condition necessary for the results below: 
+\begin_inset Formula $f(0)>0$
+\end_inset
+
+.
+ I call this 
+\emph on
+linear payoff
+\emph default
+ environment.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider the general platform's objective of maximizing the weighted average
+ of buyer surplus and joint seller profits.
+ 
+\begin_inset Formula 
+\[
+\J(\gamma)=\gamma CS+(1-\gamma)V,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V=\int_{Y}V(y)dG(y)$
+\end_inset
+
+ is the joint seller profits, and 
+\begin_inset Formula $CS=u\cdot M$
+\end_inset
+
+ is buyer surplus, where 
+\begin_inset Formula $M$
+\end_inset
+
+ is the total number of matches formed over unit of time.
+ The welfare maximizing platform has 
+\begin_inset Formula $\gamma=1/2$
+\end_inset
+
+.
+ Seller maximizing has 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+.
+ Maximizing buyer surplus corresponds to 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+ and is equivalent to maximizing the number of matches on the platform because
+ all buyers have the same matching value.
+ 
+\end_layout
+
+\begin_layout Standard
+I start by stating my second main result that characterizes the optimal
+ disclosure policy for maximizing the weighted average of buyer and seller
+ surplus 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+.
+ Then I will consider the special case of maximizing the number of matches
+ 
+\begin_inset Formula $(\gamma=1$
+\end_inset
+
+) and compare it to the result in the prior literature.
+ 
+\end_layout
+
+\begin_layout Definition*
+Disclosure 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is 
+\emph on
+
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-censorship
+\emph default
+ for some 
+\begin_inset Formula $x^{*}\in[0,1]$
+\end_inset
+
+ if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ fully reveals 
+\begin_inset Formula $x<x^{*}$
+\end_inset
+
+ and pools all 
+\begin_inset Formula $x>x^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Disclosure 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is 
+\emph on
+
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-lower-censorship
+\emph default
+ for some 
+\begin_inset Formula $x^{*}\in[0,1]$
+\end_inset
+
+ if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ fully reveals 
+\begin_inset Formula $x>x^{*}$
+\end_inset
+
+ and pools all 
+\begin_inset Formula $x<x^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:max-J"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+, 
+\begin_inset Formula $\oy\geq1$
+\end_inset
+
+.
+ Then for any 
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+, there is unique 
+\begin_inset Formula $x_{\gamma}^{*}\in[0,1]$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+-upper-censorship maximizes 
+\begin_inset Formula $\mathcal{J}(\gamma)$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $0<\beta\tau<1/2$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{\gamma}^{*}=1$
+\end_inset
+
+ for any 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ (full disclosure is strictly optimal).
+ 
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+, there exist 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough such that 
+\begin_inset Formula $x_{\gamma}^{*}<1$
+\end_inset
+
+ (some coarsening is strictly optimal).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I reserve notation 
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+ to denote the cutoff in the upper-censorship disclosure policy that maximizes
+ 
+\begin_inset Formula $\mathcal{J}(\gamma)$
+\end_inset
+
+.
+ This way, 
+\begin_inset Formula $x_{0}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1/2}^{*}$
+\end_inset
+
+ are the highest truthfully revealed buyer types under profits-maximizing
+ disclosure, match-maximizing disclosure and the efficient disclosure, respectiv
+ely.
+ Note that by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+, 
+\begin_inset Formula $x_{0}^{*}\geq x_{1/2}^{*}\geq x_{1}^{*}$
+\end_inset
+
+.
+ That implies that when the platform puts more weight on buyer surplus,
+ the optimal disclosure policy is coarser.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ shows that the optimal disclosure policy in the case of the uniform distributio
+n of seller types depends on the intensity of buyer traffic 
+\begin_inset Formula $\beta$
+\end_inset
+
+, tightness of seller capacity constraints 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and the spread of seller types 
+\begin_inset Formula $\oy$
+\end_inset
+
+ .
+ For any platform's objective of maximizing the weighted average of buyer
+ and seller surplus, if 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is large enough and there are sufficiently high seller types, then information
+ coarsening by pooling large 
+\begin_inset Formula $x$
+\end_inset
+
+ is the optimal.
+ If buyer traffic is low or capacity constraints are weak, full disclosure
+ is strictly optimal.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Say that I have a result for arbitrary 
+\begin_inset Formula $g$
+\end_inset
+
+ and refer to the main Lemma.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The goal of this subsection is to demonstrate that the dynamism of seller
+ optimization problem creates qualitatively new effects compared to the
+ static matching.
+ This goal motivates the choice of the linear payoff environment.
+ From the prior literature it is known that when the distribution of seller
+ types is uniform, the disclosure policy has no effect on the total number
+ of matches.
+ For the non-uniform distributions, the optimal disclosure policy depends
+ on whether the probability density function is decreasing or increasing.
+ 
+\end_layout
+
+\begin_layout Fact
+\begin_inset CommandInset label
+LatexCommand label
+name "fact:tau=0"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+ and consider the platform's objective of maximizing the number of matches
+ (
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $g$
+\end_inset
+
+ is decreasing, then full disclosure is optimal;
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g$
+\end_inset
+
+ is increasing, no disclosure is optimal;
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g$
+\end_inset
+
+ is constant, then any disclosure is optimal.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The result appears e.g.
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+, and the implied concavification reasoning goes back to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AMS95"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fact:tau=0"
+
+\end_inset
+
+ says that in case of uniform 
+\begin_inset Formula $G$
+\end_inset
+
+ and static matching, the information disclosure has no effect on number
+ of matches.
+ In contrast, in dynamic setting, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ shows that information disclosure does affect the number of matches.
+ If buyer traffic 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and seller capacity constraints 
+\begin_inset Formula $\tau$
+\end_inset
+
+ are small, then the full disclosure is optimal.
+ If 
+\begin_inset Formula $\tau\beta$
+\end_inset
+
+ is large and there are sufficiently high seller types, coarsening high
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is strictly optimal.
+ 
+\end_layout
+
+\begin_layout Standard
+To better understand the mechanics behind the result and the role of the
+ dynamic screening, consider two simplifications of the model.
+ In the first simplification, sellers optimize dynamically but are perfectly
+ replenished after leaving, so that the mass of available sellers is always
+ 1, and the distribution is always 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ In the second simplification, sellers are myopic, i.e.
+ they accept all profitable jobs.
+ 
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:replenished"
+
+\end_inset
+
+Suppose the distribution of available seller types is exogenous 
+\begin_inset Formula $G=U[0,1]$
+\end_inset
+
+.
+ Then only the policy of no disclosure maximizes the number of matches.
+ 
+\end_layout
+
+\begin_layout Standard
+The results explains the interplay between the Seller Individual Choice
+ effect, Buyer-side effect
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+quantitiy effect?
+\end_layout
+
+\end_inset
+
+ and the Seller Option Value effect.
+ In one-shot matching setting, coarsening information decreases the acceptance
+ rat of low-type sellers and increases the acceptance rate of high-type
+ sellers.
+ With uniform distribution of seller types, these two effects cancel out
+ and the total number of matches is unchanged (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fact:tau=0"
+
+\end_inset
+
+).
+ However, when sellers optimize dynamically, less information also decreases
+ their option value of rejection and increases the acceptance rate.
+ Therefore, no disclosure becomes optimal with dynamic matching.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:myopic-sellers"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $G=U[0,1]$
+\end_inset
+
+.
+ If sellers are myopic, then full disclosure is strictly optimal to maximize
+ the matching rate.
+ 
+\end_layout
+
+\begin_layout Standard
+In this result, we shut down the Option Value effect of information disclosure
+ and focus on the effect of endogenous distribution of seller types.
+ In the equilibrium, the pdf of available seller types is decreasing because
+ high seller types have higher acceptance rates.
+ By the result from the static matching (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fact:tau=0"
+
+\end_inset
+
+) one may suggest that that the full disclosure maximizes matching rate.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "cor:myopic-sellers"
+
+\end_inset
+
+ confirms that this is indeed the case.
+ 
+\end_layout
+
+\begin_layout Standard
+When we take 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+, we find that profit maximization may also involve coarsening of the disclosure
+ policy.
+ The coarsening is necessary to alleviate the seller coordination problem
+ when 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is large.
+ Large 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ implies large option value for sellers, and the option value is the largest
+ for high type sellers.
+ Large 
+\begin_inset Formula $x$
+\end_inset
+
+ are the marginal buyers for the high type sellers.
+ Therefore coarsening at the right end of 
+\begin_inset Formula $X$
+\end_inset
+
+ decreases the sellers' option and increases the fraction of accepted profitable
+ jobs.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Utility-possibility-set-heterog-sellers"
+
+\end_inset
+
+ illustrates 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ and contrasts it with the case of identical sellers.
+ From 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:indep-vs-coord"
+
+\end_inset
+
+ we know that the full disclosure outcome is suboptimal.
+ In the case of identical sellers, it was possible to implement any point
+ on the Pareto frontier by information disclosure (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+), and therefore coarsening was necessary for optimality.
+ In the case of heterogeneous sellers, the Pareto frontier is not implementable
+ because sellers have private information.
+ Therefore, the 
+\begin_inset Quotes eld
+\end_inset
+
+implementability frontier
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Utility-possibility-set-heterog-sellers"
+
+\end_inset
+
+ is below the Pareto frontier.
+ Now, if 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ are large enough then the full disclosure outcome is below the implementability
+ frontier, and efficiency requires some coarsening.
+ The optimal disclosures in this case are described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is small, the implementability frontier consists of only the full disclosure
+ outcome.
+ That is, the full disclosure is optimal for welfare maximization, match-rate
+ maximization or joint profits maximization.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pictures/implementabiliy-frontier-1.jpg
+	lyxscale 30
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is large enough and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ is large enough.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pictures/implementabiliy-frontier-2.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pictures/implementabiliy-frontier-3.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta\tau\in(0,1/2)$
+\end_inset
+
+.
+ The implementability frontier is degenerate and consists of only the full-discl
+osure outcome.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Set of feasible market outcomes and the limits of implementability using
+ information decisign in the case of heterogeneous workers in the linear
+ payoff environment with the uniform seller type distribution.
+ The charts are qualitative.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+FD
+\begin_inset Quotes erd
+\end_inset
+
+ stands for the full-disclosure outcome.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Utility-possibility-set-heterog-sellers"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Main Lemma and the Proof
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\I}{\mathcal{I}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this subsection I sketch the proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+.
+ The main idea behind the proof is to represent information disclosure 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ as a bounded convex function 
+\begin_inset Formula $\Lambda(\cdot)$
+\end_inset
+
+, and then use the calculus of variations to find the optimal 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ The main technical result of the paper is 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:dM/dL"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ relies on three lemmas.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Vmu"
+
+\end_inset
+
+ finds the convenient representation of the seller dynamic optimization
+ problem.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:representaion-of-lambda"
+
+\end_inset
+
+ establishes the one-to-one correspondence between information disclosure
+ policies and convex functions from some set.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:dM/dL"
+
+\end_inset
+
+ finds a necessary optimality condition for the problem of maximizing 
+\begin_inset Formula $\J$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Denote the posterior mean of 
+\begin_inset Formula $x$
+\end_inset
+
+ conditional on signal 
+\begin_inset Formula $s$
+\end_inset
+
+ by 
+\begin_inset Formula $z(s):=\int_{X}x\,s(dx)$
+\end_inset
+
+.
+ I reserve notation 
+\begin_inset Formula $z$
+\end_inset
+
+ for a typical posterior mean of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Denote by 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ the distribution of 
+\begin_inset Formula $z(s)$
+\end_inset
+
+ when the platform uses disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $F^{\lambda}(\zeta)=\lambda\{z(s)\leq\zeta\}$
+\end_inset
+
+.
+ Define the 
+\emph on
+option value function
+\emph default
+ 
+\begin_inset Formula $\Lambda\colon[0,\infty)\to\R_{+}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\Lambda(z;\lambda):=\int_{0}^{z}F^{\lambda}(\zeta)\,d\zeta,\label{eq:Lambda}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\Lambda(z;\lambda):=\int(z-z(s))I\{z(s)\leq z\}\lambda(ds).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For any 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda(z)$
+\end_inset
+
+ is non-negative, weakly increasing and convex.
+\end_layout
+
+\end_inset
+
+ As we will see from the next lemma, 
+\begin_inset Formula $\Lambda(z)$
+\end_inset
+
+ is proportional to the
+\emph on
+ 
+\emph default
+option value of rejecting a
+\emph on
+ 
+\emph default
+job with expected difficulty 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is it really the option value??
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\overline{\Lambda}$
+\end_inset
+
+ be the option value function under full disclosure, 
+\begin_inset Formula $\overline{\Lambda}(z):=\int_{0}^{z}F(\zeta)\,d\zeta.$
+\end_inset
+
+ Similarly, let 
+\begin_inset Formula $\underline{\Lambda}$
+\end_inset
+
+ be the option value function under no disclosure, 
+\begin_inset Formula $\underline{\Lambda}(z):=\max\{0,z-\Exp[x]\}.$
+\end_inset
+
+ Let 
+\begin_inset Formula 
+\[
+\mathcal{L}:=\left\{ \Lambda(z)\colon\Lambda(z)\text{ is increasing, convex and pointwise between }\oL(z)\text{ and }\uL(z)\right\} .
+\]
+
+\end_inset
+
+The next lemma establishes a one-to-one correspondence between functions
+ from 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ and option value functions defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:representaion-of-lambda"
+
+\end_inset
+
+
+\begin_inset Formula $\ell\in\mathcal{L}$
+\end_inset
+
+ if and only if there is 
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Lambda(\cdot,\lambda)=\ell$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Option value function 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is implementable by some disclosure policy if and only if 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is a convex function point-wise between 
+\begin_inset Formula $\oL$
+\end_inset
+
+ and 
+\begin_inset Formula $\uL$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The result is shown in e.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG16"
+
+\end_inset
+
+.
+ The proof uses the fact that distribution of 
+\begin_inset Formula $x$
+\end_inset
+
+ is the mean preserving spread of the distribution of posterior means of
+ 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ The power of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:representaion-of-lambda"
+
+\end_inset
+
+ is that it shows that any disclosure policy can be represented as some
+ non-negative, non-decreasing and convex function from 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sochi2014"
+
+\end_inset
+
+ for illustration.
+ We are going to use notation 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ for a typical element of 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+ Therefore, the optimization of 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ with respecto to 
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ is equivalent to the optimization with respecto to 
+\begin_inset Formula $\Lambda\in\mathcal{L}$
+\end_inset
+
+.
+ The latter allows me to use the calcuslus of variations to find the optimality
+ condition below.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/Lambda.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Any disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ can be represented as an increasing, convex function 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ point-wise between 
+\begin_inset Formula $\uL$
+\end_inset
+
+ and 
+\begin_inset Formula $\oL$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sochi2014"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next lemma shows that the seller optimization problem depends on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ only through 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Vmu"
+
+\end_inset
+
+For any disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, seller's optimal strategy has a cutoff form with cutoff 
+\begin_inset Formula $\smuth$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+-seller accepts all jobs with expected difficulty 
+\begin_inset Formula $z<\smuth$
+\end_inset
+
+ and rejects all jobs with 
+\begin_inset Formula $z>\smuth$
+\end_inset
+
+.
+ Furthermore, for any 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+, seller payoff 
+\begin_inset Formula $V(y)$
+\end_inset
+
+ and cutoff 
+\begin_inset Formula $\smuth$
+\end_inset
+
+ are solutions to the following system of equations:
+\begin_inset Formula 
+\begin{equation}
+V(y)=\frac{y-\smuth}{\tau}=\beta_{A}\Lambda(\hat{z}(y)).\label{eq:V-zhat-Lambda}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+picture to this equation would be very useful.
+ I use the graphical version of this equation for understanding 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The lemma implies that the platform's objective 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ also depends on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ only through 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ It is used in the next lemma, which is the main technical result of the
+ paper.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider functional 
+\begin_inset Formula $\mathcal{I}(\Lambda):\mathcal{L}\to\R$
+\end_inset
+
+ and consider variation 
+\begin_inset Formula $\delta\Lambda(y)$
+\end_inset
+
+.
+ The first variation of 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ is 
+\begin_inset Formula $\delta\I=\I(\Lambda+\delta\Lambda)-\I(\Lambda)$
+\end_inset
+
+.
+ The variational derivative of 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is function 
+\begin_inset Formula $\phi(y)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta\mathcal{I}=\int\phi(y)\delta\Lambda(y)dy.$
+\end_inset
+
+ If the variational derivative exists, it is denoted by 
+\begin_inset Formula $\delta\I/\delta\Lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Denote by 
+\begin_inset Formula $\nu(y):=1-\rho(y)$
+\end_inset
+
+ the fraction of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers who are available.
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Main Lemma
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:dM/dL"
+
+\end_inset
+
+At any initial 
+\begin_inset Formula $\Lambda\in\mathcal{L}$
+\end_inset
+
+, the variational derivative of 
+\begin_inset Formula $M$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ exists and equals:
+\begin_inset Formula 
+\begin{equation}
+\frac{\delta M}{\delta\Lambda}=K_{1}\cdot\left[g(y)\nu'(y)-(g(y)\nu^{2}(y))'\right],\label{eq:dM/dW}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $K_{1}=\beta/\int\left[\nu^{2}(y)-\tau V(y)\nu'(y)\right]dG(y)>0$
+\end_inset
+
+.
+ Similarly,
+\begin_inset Formula 
+\[
+\frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\delta\Lambda}\cdot K_{2}+\nu(y)\betaa,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $K_{2}=\tau\int\nu(y)V(y)dG(y)/\bar{\nu}>0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A way to see the contribution of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:dM/dL"
+
+\end_inset
+
+ is to compare it with the static case which has been studied in the prior
+ literature.
+ The seller's problem becomes static when 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+.
+ A variation of the following result has been shown in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+, and the implied concavification reasoning goes back to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AMS95"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:tau=0"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{equation}
+\frac{\delta M}{\delta\Lambda}\propto-g'(y).\label{eq:dM/dW-static}
+\end{equation}
+
+\end_inset
+
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is concave, then full disclosure is optimal.
+ If 
+\begin_inset Formula $G$
+\end_inset
+
+ is convex, no disclosure is optimal.
+ 
+\end_layout
+
+\begin_layout Standard
+The result easily follows from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:dM/dL"
+
+\end_inset
+
+ after noting that 
+\begin_inset Formula $\nu(y)=(1+\tau\beta_{A}\alpha(y))^{-1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+When matching is dynamic, the original formula 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:dM/dW-static"
+
+\end_inset
+
+ has to be adjusted for the dynamic effects, as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:dM/dW"
+
+\end_inset
+
+.
+ I now explain the additional dynamic effects in more detail.
+ 
+\end_layout
+
+\begin_layout Standard
+To better understand the additional effects, consider uniform distribution
+ of seller types, 
+\begin_inset Formula $G=U[0,1]$
+\end_inset
+
+.
+ Under uniform distribution in the static case, the disclosure policy does
+ not matter: 
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}=0$
+\end_inset
+
+ for any 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ In my model, however, we have that
+\begin_inset Formula 
+\[
+\frac{\delta M}{\delta\Lambda}\propto-(\nu^{2}(y)-\nu(y))'.
+\]
+
+\end_inset
+
+There are two additional forces that the intermediary has to consider when
+ the matching problem becomes dynamic: 
+\emph on
+availability effect 
+\emph default
+and
+\emph on
+ patience effect
+\emph default
+.
+ The availability effect arises because in equilibrium, high types are less
+ available than low types.
+ This makes the effective distribution of sellers concave, and creates a
+ motive for the intermediary to use finer disclosure policy.
+ Term 
+\begin_inset Formula $\nu^{2}(y)$
+\end_inset
+
+ in the expression above is responsible for the availability effect.
+ 
+\end_layout
+
+\begin_layout Standard
+The patience effect arises because sellers do not act myopically and may
+ reject jobs due to temporal optimization.
+ High types have greater option value of rejecting a job, and so all held
+ equal they are more picky than low types.
+ Note that this effect is dynamic and is distinct from the pure static effect
+ of high types having higher match value.
+ Relatively higher pickiness of high types creates a motive for the intermediary
+ to coarsen disclosure for high types.
+ Term 
+\begin_inset Formula $-\nu(y)$
+\end_inset
+
+ in the expression above is responsible for the patience effect.
+ 
+\end_layout
+
+\begin_layout Section
+Extensions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection
+General demand: sellers are imperfect substitutes
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:General-demand:-workers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+seller type space 
+\begin_inset Formula $Y$
+\end_inset
+
+ is finite.
+ There is a continuum of potential buyers who arrive continuously over time.
+ Let 
+\begin_inset Formula $\beta(y)$
+\end_inset
+
+ be the flow rate of buyers who arrive to request services of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers.
+ In other words, within an infinitesimal time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+, a continuum mass 
+\begin_inset Formula $\beta(y)dt$
+\end_inset
+
+ of buyers arrive to the platform and requests one of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers.
+ I refer to the collection of functions 
+\begin_inset Formula $\left\{ \beta(y)\right\} _{y\in Y}$
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+demand
+\begin_inset Quotes erd
+\end_inset
+
+ although it is different from the textbook notion of demand in that my
+ demand arrives continuously.
+ We make the following assumptions on the demand.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Frictional Consumer Search
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:Frictional-consumer-search"
+
+\end_inset
+
+Let the fraction of available type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers relative to the mass of all available sellers be 
+\begin_inset Formula $\nu(y)$
+\end_inset
+
+
+\begin_inset Formula $=x(y)/\sum x(y')$
+\end_inset
+
+.
+ Demand for type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers is 
+\begin_inset Formula 
+\[
+\beta(y)=\beta(y,\alpha(y),p_{y},\nu(y)).
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ is differentiable in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu$
+\end_inset
+
+.
+ Most importantly, 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\beta}{\partial\nu}\geq0.\label{eq:dDdnu>0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The assumption posits that the demand for type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers depends not only on the characteristics of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers but also on their number.
+ Critically, the larger the fraction of available type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers, the more demand they receive.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The steady state condition becomes:
+\begin_inset Formula 
+\begin{equation}
+\beta(y)\alpha(y)=\frac{g(y)-x(y)}{\tau},\quad\forall y\in Y.\label{eq:SS-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Each buyer type now had individual buyer arrival rate:
+\begin_inset Formula 
+\begin{equation}
+\beta_{A}(y):=\frac{\beta(y)}{x(y)}\label{eq:D_A-1-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+A tuple of endogenous objects 
+\begin_inset Formula $(\alpha(y),x(y),\beta_{A}(y))_{y\in Y}$
+\end_inset
+
+ constitute a 
+\emph on
+steady-state equilibrium
+\emph default
+ if
+\end_layout
+
+\begin_layout Enumerate
+sellers act optimally taking buyer arrival rate 
+\begin_inset Formula $\beta_{A}(y)$
+\end_inset
+
+ as given, so that the acceptance rates 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ are determined by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $\alpha(\cdot)$
+\end_inset
+
+, seller flows balance out, as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS-1"
+
+\end_inset
+
+.
+ Steady state flows determine 
+\begin_inset Formula $\beta_{A}(y)$
+\end_inset
+
+ according to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1-1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+No Excess Demand-2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:no-excess-demand-1"
+
+\end_inset
+
+Collectively, it is physically possible for sellers to complete every buyer
+ job: 
+\begin_inset Formula $\beta(y,1,p(y),1)\tau<g(y)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:Equilibrium-exists-and-1"
+
+\end_inset
+
+Steady-state equilibrium exists and is unique.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+First I establish that for any vector of acceptance rates 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+, there exists a unique steady state masses of available sellers 
+\begin_inset Formula $x(y)$
+\end_inset
+
+, as a solution to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS-1"
+
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:unique-x"
+
+\end_inset
+
+).
+ The existence of 
+\begin_inset Formula $\left\{ x(y)\right\} $
+\end_inset
+
+ crucially relies on the No Excess Demand assumption, and the uniquess follows
+ from the fact that demand depends on 
+\begin_inset Formula $\left\{ x(y)\right\} $
+\end_inset
+
+ through the share 
+\begin_inset Formula $\nu(y)$
+\end_inset
+
+
+\begin_inset Formula $=x(y)/\sum x(y')$
+\end_inset
+
+.
+ Then treating 
+\begin_inset Formula $x$
+\end_inset
+
+ as a funciton of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, I show that there is a unique solution 
+\begin_inset Formula $(\alpha(y),\beta_{A}(y))_{y\in Y}$
+\end_inset
+
+ to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1-1"
+
+\end_inset
+
+}.
+ For details see the proof in the Appendix 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "proof:eqm-exists-1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:C-M-MM-1"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\sigma^{FD}$
+\end_inset
+
+ be the equilibrium strategy profile under full disclosure.
+ Then there exists 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ such that for all y: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{V}(y) & > & V^{FD}(y),\\
+\tilde{\rho}(y) & > & \rho^{FD}(y),\\
+\widetilde{CS} & \geq & CS^{FD}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Endogenous price
+\end_layout
+
+\begin_layout Plain Layout
+In our base model we assumed that the price is set by the larger outside
+ market.
+ In this section we consider other scenarios of price setting: competitive
+ price and price set by the intermediary.
+ Main results of this section are: 1) there is a continuum of competitive
+ price equilibria; 2) characterization of #matches-maximizing pricing.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+We adjust our notation a little bit to account for the fact that demand
+ depends on price.
+ Namely, buyer arrival rate is given by
+\begin_inset Formula 
+\[
+\beta(\alpha,p),
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\beta(0,p)=0$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{\alpha}>0$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{p}<0$
+\end_inset
+
+.
+ The assumption I am making here is that buyer arrival rate responds to
+ the changes in platform policies only through the average acceptance rate
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and price 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Let buyer 
+\begin_inset Formula $i$
+\end_inset
+
+'s expected acceptance rate for his job be 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+, the expected match value conditional on being matched be 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ Additionally, buyer 
+\begin_inset Formula $i$
+\end_inset
+
+ has hassle cost 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ from using the platform.
+ If the buyer does not use the platform he gets payoff of zero.
+ If he uses the platform he experiences a disutility of 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+.
+ After requesting a service, if he is accepted, he pays price 
+\begin_inset Formula $p$
+\end_inset
+
+ and gets payoff of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ Therefore, buyer 
+\begin_inset Formula $i$
+\end_inset
+
+ joins iff 
+\begin_inset Formula 
+\[
+\alpha_{i}(v_{i}-p)-f_{i}\geqslant0.
+\]
+
+\end_inset
+
+As defined above, the average acceptance rate across buyers is 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The assumption is that 
+\begin_inset Formula $[\mbox{\#potential buyers}]\cdot\Pr(\alpha_{i}(v_{i}-p)-f_{i}\geq0)=\beta(\alpha,p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+Denote demand elasticities wrt 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and wrt 
+\begin_inset Formula $p$
+\end_inset
+
+ by 
+\begin_inset Formula $\eps_{\alpha}=\frac{\beta_{\alpha}\alpha}{\beta}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\eps_{p}=-\frac{\beta_{p}p}{\beta}>0$
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Subsection
+Price set by the intermediary
+\end_layout
+
+\begin_layout Plain Layout
+In this section we study a situation when the platform controls the price
+ on the platform (e.g.
+ in case of Uber and Instacart).
+ This brings us closer to the literature on pricing in two-sided markets
+ (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RT06,Wey10"
+
+\end_inset
+
+).
+ However, unlike these papers, we are more specific about where the network
+ effect is coming from and also sellers have a decision margin not related
+ to participation – acceptance rate.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Match-maximizing platform.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+From the previous section we know that whatever price a Walrasian auctioneer
+ picks, it can be sustained in a competitive equilibrium.
+ We thus pose a question: if the platform can set the price, what price
+ and disclosure policy should it use to maximize the number of matches?
+ The platform solves 
+\begin_inset Formula 
+\[
+\max_{\lambda,p}\alpha\beta(\alpha,p),
+\]
+
+\end_inset
+
+subject to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-via-pi"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:pi(c)"
+
+\end_inset
+
+}.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+We know from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+ the form of the optimal disclosure policy for given price.
+ How should the price be set? To induce more demand, the platform would
+ like to choose lower price.
+ But the lower the price, the lower seller utilization rate can be implemented.
+ The next result quantifies this tradeoff.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:opt-price-and-conflation-max-m"
+
+\end_inset
+
+Assume sellers have no private information.
+ The #matches-maximizing disclosure policy has the form 
+\begin_inset Formula 
+\[
+\hat{\lambda}(x)=\begin{cases}
+\Exp[x|x\leq mc], & \alpha\\
+\Exp[x|x>mc], & 1-\alpha
+\end{cases}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $mc$
+\end_inset
+
+ solve the system of equations
+\begin_inset Formula 
+\begin{eqnarray}
+\Exp[x|x\leq mc] & = & p\nonumber \\
+F(mc) & = & \alpha\nonumber \\
+\frac{\eps_{\alpha}+1}{\eps_{p}} & = & \frac{mc-p}{p}\label{eq:opt-price-via-elasticities}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The proof is the Appendix 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "proof:prop:confl-and-price"
+
+\end_inset
+
+.
+ From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:opt-price-via-elasticities"
+
+\end_inset
+
+ note that 
+\begin_inset Formula $mc>p$
+\end_inset
+
+, which is indication of the platform taking into account network effects,
+ namely the demand expansion for higher 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Compare it to the benchmark when the monopolist sets the price.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Revenue-maximizing platform.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+When the platform in the stage of growth, it wants to be bigger.
+ Later on, the platform turn to monetization.
+ We are interested in answering the following question: How does the platform
+ policies change when it is profit-maximizing? 
+\end_layout
+
+\begin_layout Plain Layout
+To get a cut from sellers revenue, the platform uses two prices: price 
+\begin_inset Formula $p$
+\end_inset
+
+ for buyers and wage 
+\begin_inset Formula $w$
+\end_inset
+
+ for sellers.
+ Additionally, it has disclosure policy as an instrument.
+ The platform's objective is
+\begin_inset Formula 
+\begin{eqnarray*}
+ &  & \max_{\lambda,p,w}\beta(\alpha,p)\alpha(p-w)\\
+ & \mbox{s.t.} & AC(\alpha)\leq w
+\end{eqnarray*}
+
+\end_inset
+
+and subject to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-via-pi"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:pi(c)"
+
+\end_inset
+
+}.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:opt-price-and-conflation-max-rent"
+
+\end_inset
+
+Assume sellers have no private information.
+ The profit-maximizing disclosure policy has the form 
+\begin_inset Formula 
+\[
+\hat{\lambda}(x)=\begin{cases}
+\Exp[x|x\leq mc], & \alpha\\
+\Exp[x|x>mc], & 1-\alpha
+\end{cases}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $mc$
+\end_inset
+
+ solve the system of equations
+\begin_inset Formula 
+\begin{eqnarray*}
+\Exp[x|x\leq mc] & = & w\\
+F(mc) & = & \alpha\\
+\frac{1}{\eps_{p}} & = & \frac{p-w}{p}\\
+\frac{\eps_{\alpha}+1}{\eps_{p}} & = & \frac{mc-w}{p}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The next results states how the marketplace variables change after the platform
+ transitions from the match-maximizing mode to the revenue-maximizing mode.
+ Imagine the platform starts with match-maximizing as in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:opt-price-and-conflation-max-m"
+
+\end_inset
+
+.
+ It makes zero revenue there because it takes zero fee on transactions.
+ There are two ways to increase the intermediary's revenue.
+ One is increase buy price, the other one is to decrease the wage.
+ However, decreasing 
+\begin_inset Formula $w$
+\end_inset
+
+ decreases acceptance rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, so it might be profitable to increase both 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Depending on the properties of the demand, the platform may find it optimal
+ either to increase both 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+, or decrease both 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+, or increase 
+\begin_inset Formula $p$
+\end_inset
+
+ and decrease 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ The next result provides sufficient conditions for when the acceptance
+ rate is higher (lower) under profit-maximization than under match-maximization.
+ 
+\end_layout
+
+\begin_layout Conjecture
+If 
+\begin_inset Formula $\beta_{p}+\alpha\beta_{\alpha p}>0$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{pp}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha^{PM}<\alpha^{MM}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{PM}<p^{MM}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta_{pp}<0$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{\alpha p}<0$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha^{PM}>\alpha^{MM}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{PM}>p^{MM}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Conclusion
 \end_layout
 
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Lemmas
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:nubar"
+
+\end_inset
+
+Fix the arbitrary increasing 
+\begin_inset Formula $\alpha(y)\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Average utilization rate 
+\begin_inset Formula $\bar{\rho}\in[0,1]$
+\end_inset
+
+ is a solution to 
+\begin_inset Formula 
+\begin{equation}
+1=\int\frac{dG(y)}{1-\bar{\rho}+\beta\tau\alpha(y)}.\label{eq:nubar}
+\end{equation}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+increases in 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+, in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and in 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "sections/appendix.lyx"
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:alpha"
+
+\end_inset
+
+Suppose the linear payoff environment
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ In the steady state equilibrium with disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(y)=\Lambda'(\zhaty+)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $\Lambda\in\mathcal{L}$
+\end_inset
+
+, there is 
+\begin_inset Formula $y'>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha(y)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $y\geq y'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Considering exogenous variations of 
+\begin_inset Formula $\betaa\tau$
+\end_inset
+
+ in the seller optimization problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:unique-x"
+
+\end_inset
+
+For any vector 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+, there exists a unique vector solution 
+\begin_inset Formula $x(y)$
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS-1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset FormulaMacro
+\newcommand{\bx}{\mathbf{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bA}{\mathbf{A}}
+\end_inset
+
+Denote 
+\begin_inset Formula $x=\sum_{y'}x(y')$
+\end_inset
+
+ the mass of all available sellers.
+ Rewrite 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS-1"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\tau\beta(y,\alpha(y),p_{y},x(y)/x)\alpha(y)+x(y)=g(y).\label{eq:Ax=g}
+\end{equation}
+
+\end_inset
+
+Denote the left-hand side of the equation by 
+\begin_inset Formula $\mathbf{A}(\mathbf{x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\bx=(x(y))_{y\in Y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a correspondence that maps 
+\begin_inset Formula $\bx$
+\end_inset
+
+ into 
+\begin_inset Formula $\R^{dimY}$
+\end_inset
+
+.
+ First we show that the solution to 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ exists, then we show that it is unique.
+ 
+\end_layout
+
+\begin_layout Proof
+For existence, consider a mapping 
+\begin_inset Formula $T$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+T_{i}(\bx)=g_{i}-\tau\beta(y_{i},\alpha(y_{i}),p_{y_{i}},x(y_{i})/x)\alpha(y_{i}).
+\]
+
+\end_inset
+
+Define 
+\begin_inset Formula $X=\{(x_{1},...x_{\dim Y})\colon0\leq x_{i}\leq g_{i}\}$
+\end_inset
+
+.
+ We will show that mapping 
+\begin_inset Formula $T$
+\end_inset
+
+ satisfies the conditions of Brouwer's fixed point theorem.
+ First, 
+\begin_inset Formula $T$
+\end_inset
+
+ maps 
+\begin_inset Formula $X$
+\end_inset
+
+ to itself.
+ Indeed, 
+\begin_inset Formula $T_{i}(\bx)\leq g_{i}$
+\end_inset
+
+.
+ But also
+\begin_inset Formula 
+\[
+T_{i}(\bx)\geq g_{i}-\tau\beta(y_{i},1,p_{y_{i}},1)>0.
+\]
+
+\end_inset
+
+The first inequality uses 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "assu:Frictional-consumer-search"
+
+\end_inset
+
+ and demand monotonicity in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The second inequality uses 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "assu:no-excess-demand"
+
+\end_inset
+
+.
+ Second, 
+\begin_inset Formula $X$
+\end_inset
+
+ is compact.
+ Finally, 
+\begin_inset Formula $T$
+\end_inset
+
+ is continuous.
+ Therefore, Brouwer's theorem ensures the existence of a fixed point, which
+ is a solution to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Ax=g"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+In the rest of the proof we prove uniqueness.
+ We will show that the principal minors of Jacobian matrix of 
+\begin_inset Formula $\bA$
+\end_inset
+
+ are non-negative everywhere.
+ Then by Gale-Nikaido (1965), the mapping is one-to-one and hence 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ has a unique solution.
+ 
+\begin_inset Formula 
+\[
+J=\begin{bmatrix}\frac{\partial A_{1}}{\partial x_{1}} & \frac{\partial A_{1}}{\partial x_{2}} & ...\\
+\frac{\partial A_{2}}{\partial x_{1}} & \frac{\partial A_{2}}{\partial x_{2}}\\
+\vdots &  & \ddots
+\end{bmatrix},
+\]
+
+\end_inset
+
+where we use a simplified notation 
+\begin_inset Formula $x_{1}:=x(y_{1})$
+\end_inset
+
+.
+ Use notation 
+\begin_inset Formula $\nu_{1}=x_{1}/x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial A_{1}}{\partial x_{1}} & = & \tau\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}\frac{d(x(y_{1})/x)}{dx_{1}}+1=\\
+ & = & \tau\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}\frac{x-x_{1}}{x^{2}}+1.
+\end{eqnarray*}
+
+\end_inset
+
+Denote for brevity 
+\begin_inset Formula $\beta_{1}=\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\frac{\partial A_{1}}{\partial x_{1}}=\frac{\tau}{x}\beta_{1}(1-\nu_{1})+1.
+\]
+
+\end_inset
+
+Similary find
+\begin_inset Formula 
+\[
+\frac{\partial A_{1}}{\partial x_{2}}=-\frac{\tau}{x}\beta_{1}\nu_{1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We need to show that all principle minors of matrix 
+\begin_inset Formula $J$
+\end_inset
+
+ are non-negative.
+ Without loss of generality, consider the leading principal minor of size
+ 
+\begin_inset Formula $K=1,...,\dim Y$
+\end_inset
+
+, denote it by 
+\begin_inset Formula $J_{K}$
+\end_inset
+
+.
+ It can be rewritten as follows
+\begin_inset Formula 
+\[
+J_{K}=\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}+\frac{\tau}{x}\begin{bmatrix}-\beta_{1}\nu_{1}\\
+\vdots\\
+-\beta_{2}\nu_{2}
+\end{bmatrix}\begin{bmatrix}1 & 1 & 1\end{bmatrix}.
+\]
+
+\end_inset
+
+Now I will use the following formula for the determinants:
+\begin_inset Formula 
+\[
+\det(X+AB)=\det X\det(I+BX^{-1}A).
+\]
+
+\end_inset
+
+In case of matrix 
+\begin_inset Formula $J_{K}$
+\end_inset
+
+, we obtain:
+\begin_inset Formula 
+\[
+\det J_{K}=\det\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}\det(1+\begin{bmatrix}1 & 1 & 1\end{bmatrix}\begin{bmatrix}1+\frac{\tau}{x}\beta_{1} & ... & 0\\
+\vdots & \ddots\\
+0 &  & 1+\frac{\tau}{x}\beta_{K}
+\end{bmatrix}^{-1}\frac{\tau}{x}\begin{bmatrix}-\beta_{1}\nu_{1}\\
+\vdots\\
+-\beta_{2}\nu_{2}
+\end{bmatrix}).
+\]
+
+\end_inset
+
+We need to show that 
+\begin_inset Formula $\det J_{K}\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\bx$
+\end_inset
+
+.
+ It is sufficient to the second determinant on the right hand side of the
+ formula above.
+ We need to show
+\begin_inset Formula 
+\[
+1+\frac{\tau}{x}\sum_{i=1}^{K}\frac{-\beta_{i}\nu_{i}}{1+\frac{\tau}{x}\beta_{i}}\geq0.
+\]
+
+\end_inset
+
+First observe that 
+\begin_inset Formula $\frac{\beta_{i}\tau/x}{\beta_{i}\tau/x+1}\leq1$
+\end_inset
+
+, and then
+\begin_inset Formula 
+\[
+1+\frac{\tau}{x}\sum_{i=1}^{K}\frac{-\beta_{i}\nu_{i}}{1+\frac{\tau}{x}\beta_{i}}\geq1-\sum_{i=1}^{K}\nu_{i}\geq0,
+\]
+
+\end_inset
+
+because 
+\begin_inset Formula $\sum_{i=1}^{\dim Y}\nu_{i}=1$
+\end_inset
+
+.
+ This proves that all principal minors of 
+\begin_inset Formula $J$
+\end_inset
+
+ are non-negative, and by Gale-Nikaido (1965), 
+\begin_inset Formula $\bA(\bx)=\mathbf{g}$
+\end_inset
+
+ has a unique solutions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Assume the linear payoff environment with 
+\begin_inset Formula $\oy\geq1$
+\end_inset
+
+.
+ There is 
+\begin_inset Formula $\chi^{*}\in(0,1)$
+\end_inset
+
+ such that if 
+\begin_inset Formula $\beta\tau>\chi^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\betaa\tau>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:tau-betaa"
+
+\end_inset
+
+Suppose the linear payoff environment with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+.
+ For any (large) 
+\begin_inset Formula $L>0$
+\end_inset
+
+ there is 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ large enough and 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ (large enough) such that if 
+\begin_inset Formula $\oy\geq\breve{y}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\tau\beta_{A}\geq L$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\betaa=\beta/\bar{\nu}$
+\end_inset
+
+, rewrite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+\beta\tau=\int_{0}^{\oy}\frac{dy/\oy}{\frac{1}{\tau\betaa}+\alpha(y;\tau\betaa)},\label{eq:13}
+\end{equation}
+
+\end_inset
+
+where I made explicit that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ depends on 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ in equilibrium.
+ Treat the right hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:13"
+
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ and denote it by 
+\begin_inset Formula $\psi(\tau\betaa,\oy)$
+\end_inset
+
+.
+ First, 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is strictly increasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ because by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:alpha"
 
 \end_inset
 
  
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+.
+ Second, 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\oy$
+\end_inset
+
+ because by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:alpha"
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Third, using the second part of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:alpha"
+
+\end_inset
+
+ and uniformity of 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{\oy\to\infty}\psi=((\tau\betaa)^{-1}+1)^{-1}<1$
+\end_inset
+
+.
+ Pick 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi(L,\breve{y})<1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(\beta\tau)^{*}:=\psi(L,\breve{y})$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\betaa\tau>L$
+\end_inset
+
+ whenever 
+\begin_inset Formula $\beta\tau>(\beta\tau)^{*}$
+\end_inset
+
+ or 
+\begin_inset Formula $y>\breve{y}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+Suppose the linear payoff environment with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+.
+ For any (small) 
+\begin_inset Formula $\eps>0$
+\end_inset
+
+ there is 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ large enough and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough, such that 
+\begin_inset Formula $\nu(\oy)=\eps$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Note that 
+\begin_inset Formula $\nu(y)=\frac{1}{1+\tau\betaa\alpha(y)}$
+\end_inset
+
+.
+ Pick 
+\begin_inset Formula $L>\eps^{-1}-1$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:tau-betaa"
+
+\end_inset
+
+ for any 
+\begin_inset Formula $L>0$
+\end_inset
+
+, we can find 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ such that if 
+\begin_inset Formula $\oy\geq\breve{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau\betaa\geq L$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\supp F=[0,1]$
+\end_inset
+
+, we have from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\alpha(\oy)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough.
+ Therefore, 
+\begin_inset Formula $\nu(\oy)=\frac{1}{1+\tau\betaa\alpha(\oy)}<\frac{1}{1+L}<\eps.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proofs omitted from the main text
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists"
+
+\end_inset
+
+ We need to show that there is a unique solution 
+\begin_inset Formula $(\alpha(y),\beta_{A}(y))_{y\in Y}$
+\end_inset
+
+ to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1"
+
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Proof
+Use Kakutani theorem.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Take any Pareto optimal pair 
+\begin_inset Formula $O=(V,CS)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $O$
+\end_inset
+
+ is feasible, there is seller strategy profile 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ that induces 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ Since there is one seller type and two actions, it is sufficient to consider
+ only the binary signaling structures (Revelation principle).
+ A binary signaling structure has two signals, where a signal is 
+\begin_inset Quotes eld
+\end_inset
+
+action recommendation
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{a}$
+\end_inset
+
+ be the recommendation to accept, and 
+\begin_inset Formula $s_{r}$
+\end_inset
+
+ be the recommendation to reject.
+ Denote this signaling structure by 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ We need to check the incentive constraints, that is, to make sure that
+ the sellers would follow the recommendations of 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pi(c)"
+
+\end_inset
+
+ we have that 
+\begin_inset Formula $v(s_{a})=\pi(s_{a})-\tau V$
+\end_inset
+
+, 
+\begin_inset Formula $v(s_{r})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $V=\beta_{A}(\pi(s_{a})-\tau V)\hat{\lambda}(s_{a})$
+\end_inset
+
+.
+ The incentive constraints require that 
+\begin_inset Formula $\pi(s_{a})\geq\tau V$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi(s_{r})\leq0$
+\end_inset
+
+.
+ For the former,
+\begin_inset Formula 
+\[
+\tau V=\frac{\tau\beta_{A}\hat{\lambda}(s_{a})}{1+\tau\beta_{A}\hat{\lambda}(s_{a})}\pi(s_{a})<\pi(s_{a}).
+\]
+
+\end_inset
+
+For the latter, recall that 
+\begin_inset Formula $O$
+\end_inset
+
+ is Pareto optimal, hence 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ accepts all profitable jobs.
+ This implies that 
+\begin_inset Formula 
+\[
+\pi(s_{r})\leq0<\tau V.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:dM/dL"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof2"
+
+\end_inset
+
+Step 1.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are positively related.
+ Indeed, when the mass of available sellers is 
+\begin_inset Formula $X$
+\end_inset
+
+, the flow of matches is 
+\begin_inset Formula 
+\[
+M=\frac{1-X}{\tau}.
+\]
+
+\end_inset
+
+The buyer arrival rate on available sellers is 
+\begin_inset Formula $\beta_{A}=\beta/X$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+M=\frac{1-\beta/\beta_{A}}{\tau}.
+\]
+
+\end_inset
+
+We are interested in the sign of 
+\begin_inset Formula $\delta M/\delta\Lambda$
+\end_inset
+
+, therefore we will find 
+\begin_inset Formula $\delta\beta_{A}/\delta\Lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ The equilibrium values of 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are found from the system of equations 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:beta_A"
+
+\end_inset
+
+, which we reproduce here:
+\begin_inset Formula 
+\begin{align}
+y-\hat{z}(y) & =\tau\beta_{A}\Lambda(\hat{m}(y)),\quad\forall y\in Y;\label{eq:20}\\
+\int\frac{dG(y)}{\tau\alpha(y)+1/\beta_{A}} & =\beta.\label{eq:21}
+\end{align}
+
+\end_inset
+
+Take the differential of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:21"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\int\frac{dG(y)\left(\tau\delta\alpha(y)-\delta\beta_{A}/\beta_{A}^{2}\right)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\delta\beta_{A}=\frac{\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}{\frac{1}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}.\label{eq:delta-betaA}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now use the fact that
+\begin_inset Formula 
+\begin{equation}
+\alpha(y)=\Lambda'(\hat{m}(y)+)\label{eq:alpha=W'}
+\end{equation}
+
+\end_inset
+
+to find the differential
+\begin_inset Formula 
+\begin{equation}
+\delta\alpha(y)=\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y).\label{eq:delta-alpha}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Take the differential of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:20"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\delta\hat{m}(y)=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\Lambda'(\hat{m}(y))\delta\hat{m}(y)+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\nonumber \\
+-\delta\hat{m}(y)(1+\tau\beta_{A}\alpha(y))=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y)).\label{eq:delta-mhat}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Plug in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-mhat"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-alpha"
+
+\end_inset
+
+ and then into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-betaA"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y)\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\Lambda''(\hat{m}(y))\left(\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}\beta_{A}}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\delta\beta_{A}\left[\int\frac{dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\beta_{A}^{2}\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]=\\
+=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}}
+\end{multline*}
+
+\end_inset
+
+We have both 
+\begin_inset Formula $\delta\Lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $(\delta\Lambda)'$
+\end_inset
+
+ on the right hand side of the expression above, and we need to have only
+ 
+\begin_inset Formula $\delta\Lambda$
+\end_inset
+
+ .
+ To get it, we will use integration by parts.
+ Consider separately the first term in the previous line:
+\begin_inset Formula 
+\begin{gather*}
+Z_{1}:=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\beta_{A}^{2}\int\frac{\left(\delta\Lambda(\hat{m}(y))\right)'g(y)dy}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\tau\beta_{A}^{2}\int\frac{g(y)d\left(\delta\Lambda(\hat{m}(y))\right)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\\
+=\tau\beta_{A}^{2}\frac{g(y)\delta\Lambda(\hat{m}(y))}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}|_{\underline{y}}^{\overline{y}}-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\frac{g'(y)\left(\tau\alpha(y)\beta_{A}+1\right)^{2}-2g(y)\left(\tau\alpha(y)\beta_{A}+1\right)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{4}}dy=\\
+=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-\frac{g'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\frac{2g(y)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]dy
+\end{gather*}
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha=W'"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\alpha'(y)=\Lambda''(\hat{m}(y))\hat{m}'(y).
+\]
+
+\end_inset
+
+Differentiate 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:20"
+
+\end_inset
+
+ wrt 
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+1-\hat{m}'(y) & =\tau\beta_{A}\alpha(y)\hat{m}'(y)\\
+\hat{m}'(y) & =\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For brevity, adopt the notation 
+\begin_inset Formula 
+\[
+\nu(y):=\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+\]
+
+\end_inset
+
+The notation is not coincidental, 
+\begin_inset Formula $\nu(y)$
+\end_inset
+
+ is equal to the fraction of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers who are available in equilibrium.
+ Return to compute
+\begin_inset Formula 
+\[
+Z_{1}=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy.
+\]
+
+\end_inset
+
+Now we finish computing the differential 
+\begin_inset Formula $\delta\beta_{A}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy-\tau^{2}\int\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))\nu^{3}\beta_{A}^{3}dG(y)=\\
+=\tau\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}\beta_{A}^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''\beta_{A}^{2}-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}^{3}\right]dy.
+\end{multline*}
+
+\end_inset
+
+We are interested in the expression in the square brackets in the formula
+ above.
+ Therefore, for some 
+\begin_inset Formula $K>0$
+\end_inset
+
+ that is constant in 
+\begin_inset Formula $y$
+\end_inset
+
+ we have: 
+\begin_inset Formula 
+\begin{align*}
+\frac{\delta\beta_{A}}{\delta\Lambda} & =K\left(-g'(y)\nu(y)^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}\right)=\\
+ & =K\nu(y)^{2}\left(-g'(y)+g(y)\nu(y)\tau\beta_{A}\Lambda''(\hat{m}(y))(2\nu(y)-1)\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proofs omitted from the Extenstions
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Equilibrium-exists-and-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists-1"
+
+\end_inset
+
+ We need to show that there is a unique solution 
+\begin_inset Formula $(\alpha(y),\beta_{A}(y))_{y\in Y}$
+\end_inset
+
+ to {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1-1"
+
+\end_inset
+
+}, where we treat 
+\begin_inset Formula $x$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, as has been determined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:unique-x"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Use Kakutani theorem.
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Extensions"
+
+\end_inset
+
+Technical Extensions
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:No-Excess-Demand"
+
+\end_inset
+
+No Excess Demand Assumption relaxed
+\end_layout
+
+\begin_layout Standard
+Allow for the case when 
+\begin_inset Formula $\beta(1)\tau\geq1$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta(1)\tau>1$
+\end_inset
+
+, then sellers get overwhelmed by the buyer requests and can't respond to
+ all of them to the extent that they can't even reject them.
+ To cover this situation we assume that if there are no available sellers
+ to reject a pending buyer request, the platform rejects it automatically.
+ 
+\end_layout
+
+\begin_layout Standard
+Since some requests can be rejected by the platform, the acceptance rate
+ as perceived by buyers does not coincide with the acceptance rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ generated by sellers.
+ Denote by 
+\begin_inset Formula $\alpha^{e}$
+\end_inset
+
+ the effective acceptance rate that 
+\bar under
+buyers
+\bar default
+ face.
+ Let at some moment of time there is 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ mass of available sellers, and let buyers arrive to the platform at rate
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Then within the next time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+, there are 
+\begin_inset Formula $\beta dt$
+\end_inset
+
+ new request, and 
+\begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)$
+\end_inset
+
+ available sellers.
+ What is 
+\begin_inset Formula $\alpha^{e}$
+\end_inset
+
+ when sellers use acceptance rate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+? Consider three cases.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+ There is plenty of available sellers, 
+\begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)>\beta dt$
+\end_inset
+
+.
+ Fraction 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ of buyers are accepted, therefore 
+\begin_inset Formula $\alpha^{e}=\alpha$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\beta<\frac{1}{\tau}$
+\end_inset
+
+.
+ There are few sellers that just became available but in sufficient number
+ to process all buyers.
+ In the same fashion as in case 1, 
+\begin_inset Formula $\alpha^{e}=\alpha$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x=0$
+\end_inset
+
+ but 
+\begin_inset Formula $\alpha\beta\geq\frac{1}{\tau}$
+\end_inset
+
+.
+ Not sufficient sellers to process all buyers, some buyers are rejected
+ by the platform.
+ The number of accepted jobs is 
+\begin_inset Formula $\frac{1}{\tau}dt$
+\end_inset
+
+.
+ The acceptance rate is therefore 
+\begin_inset Formula $\alpha^{e}=\frac{1/\tau}{\beta}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Combining all there cases, we have that 
+\begin_inset Formula 
+\[
+\alpha^{e}=\min\{\alpha,\frac{1}{\tau\beta}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The adjusted definition of equilibrium is then the following.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\alpha\in[F(c^{*}(\beta_{A})-),F(c^{*}(\beta_{A})+)].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\beta_{A}=\frac{\beta(\alpha^{e})}{1-\beta(\alpha^{e})\alpha^{e}\tau}=\begin{cases}
+\frac{\beta(\alpha)}{1-\beta(\alpha)\alpha\tau}, & \alpha\beta(\alpha)\tau<1\\
++\infty, & \alpha\beta(\alpha)\tau\geq1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{A}=+\infty$
+\end_inset
+
+ reflects the fact that when the demand is overwhelming, buyers line up
+ for sellers so sellers start a new job immediately after they finish the
+ previous one.
+ The No Excess Demand assumption makes sure that this never happens, 
+\begin_inset Formula $\alpha\beta(\alpha)\tau<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The next result shows that in the equilibrium there are no lines.
+ By this reason for the clarity of exposition we decided to restrict the
+ analysis to the case of no lines to begin with.
+ 
+\end_layout
+
+\begin_layout Claim*
+In equilibrium, 
+\begin_inset Formula $\beta_{A}<\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "/Users/gleb/Dropbox/Projects/bib/Online Marketplaces,/Users/gleb/Dropbox/Projects/bib/Auctions,/Users/gleb/Dropbox/Projects/bib/Theory,/Users/gleb/Dropbox/Projects/bib/Mechanism Design,/Users/gleb/Dropbox/Projects/bib/Applied Theory"

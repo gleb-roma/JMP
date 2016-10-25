@@ -1,0 +1,335 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Potential questions
+\end_layout
+
+\begin_layout Enumerate
+In your model, why do buyers evaporate after the first request attempt?
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is an assumption which does not remove the main problem of excessive
+ selectivity
+\end_layout
+
+\begin_layout Enumerate
+Empirical evidence from Airbnb shows that Conditional on being rejected
+ from their first inquiry, searchers are 51% less likely to eventually book
+ a listing for a given market.
+ (Fradkin 2016)
+\end_layout
+
+\begin_layout Enumerate
+[Extenstion in the paper with returning buyers comfirms qualitative robustness
+ of findings.]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why are prices fixed?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+randomness is conditional on observed characteristics.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why do you do information design only, what about setting personalized prices?
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In many online marketplaces, personalized prices is a no-go because the
+ companies are afraid of customer backlash.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Users convenience.
+ For example, an auction on each uber ride will produce a more accurate
+ price but the hassle costs are prohibitevely high.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Platform development costs.
+ It can be easier to figure out what user attributes to collect and reveal
+ than trying to find the right vector of prices.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why doesn't the platform collect 
+\begin_inset Formula $y$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $y$
+\end_inset
+
+ is the part of seller characteristics not collected by the platform.
+ E.g., it is too costly to quantify or collect.
+ Airbnb host's desired personality of a guest.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do you allow complementarities between buyers and sellers? 
+\end_layout
+
+\begin_layout Enumerate
+Is your matching friction just a congestion problem? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A: Congestion may mean different things.
+ Al Roth uses 
+\begin_inset Quotes eld
+\end_inset
+
+congestion
+\begin_inset Quotes erd
+\end_inset
+
+ to describe a situation in which the participants do not have time to consider
+ multiple alternative options because they disappear from the market too
+ fast.
+ In my model, availability is not a problem, it is screening.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+overcome the congestion that thickness can bring, by providing enough time,
+ or by making transactions fast enough, so that market participants can
+ consider enough alternative possible transactions to arrive at satisfactory
+ ones.
+\begin_inset Quotes erd
+\end_inset
+
+ (Roth 08)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+key example of this phenomenon is congestion that arises as application
+ costs are lowered; informally, in congested markets, participants send
+ more applications than is desirable.
+\begin_inset Quotes erd
+\end_inset
+
+ (AJK14)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Typically congestion is studied in the context of its effect on the applicants:
+ as application costs are lowered, the increase in applications leads to
+ the situation that many applications that are sent are never even screened.
+ This welfare loss arises because each applicant imposes a negative externality
+ on other applicants, and (in most markets) this externality is not internalized.
+ Recent literature has studied variants of this phenomenon in a range of
+ marketplaces (Halaburda and Piskorski, 2010; ?; Lee et al., 2011).
+ By contrast, a key contribution of our paper is to study a novel source
+ of inefficiency due to a negative externality on employers in congested
+ matching markets.
+ Specifically, the phenomenon on which we focus is that an agent on one
+ side of the market (an “employer”) may identify a suitable match on the
+ opposite side (an “applicant”), only to later learn that this applicant
+ is already matched and therefore unavailable.
+\begin_inset Quotes erd
+\end_inset
+
+ (AJK14)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+On the slide explaining Bayesian presuasion with the picture: Why would
+ you do this to a seller? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+It is a two-sided platform that cares about both sides.
+ Increasing seller acceptance rate is beneficial to buyers.
+ As you will see, it is also beneficial to sellers when scheduling externality
+ is strong.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Can you do 
+\begin_inset Formula $\tau$
+\end_inset
+
+ heterogenous? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A: I think you are asking if 
+\begin_inset Formula $\tau$
+\end_inset
+
+ can depend on buyer job 
+\begin_inset Formula $x$
+\end_inset
+
+? The heterogeneity in cost gives the same economics and same insights.
+ Dealing with 
+\begin_inset Formula $\tau(x)$
+\end_inset
+
+ will make math more difficult because I will need to deal with stochastic
+ discounting.
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

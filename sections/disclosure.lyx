@@ -192,12 +192,12 @@ theorems-ams-extended-bytype
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\newcommand{\oW}{\overline{\Lambda}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\newcommand{\uW}{\underline{\Lambda}}
 \end_inset
 
 
@@ -222,13 +222,13 @@ Market outcome
 \begin_inset Formula $O=(\left\{ V(\theta)\right\} ,CS)$
 \end_inset
 
- is a combination of worker profits and consumer surplus that arises in
+ is a combination of seller profits and consumer surplus that arises in
  a steady-state equilibrium.
  I say that a market outcome is 
 \emph on
 feasible
 \emph default
- if there are acceptance strategies for workers that generate it, and 
+ if there are acceptance strategies for sellers that generate it, and 
 \begin_inset Formula $V(\theta)\geq0$
 \end_inset
 
@@ -280,16 +280,16 @@ implementable
 \end_layout
 
 \begin_layout Subsection
-Implementable outcomes with identical workers
+Implementable outcomes with identical sellers
 \end_layout
 
 \begin_layout Standard
-We start by considering the case of identical workers, that is when 
+We start by considering the case of identical sellers, that is when 
 \begin_inset Formula $\Theta$
 \end_inset
 
  is a singleton.
- My first main result characterizes the set of combinations (worker profits,
+ My first main result characterizes the set of combinations (seller profits,
  buyer surplus) implementable by some segmentation.
  
 \end_layout
@@ -301,7 +301,7 @@ name "prop:Pareto-frontier"
 
 \end_inset
 
-Let the workers be identical.
+Let the sellers be identical.
  Then for any point on a Pareto frontier there is a segmentation that implements
  it.
  
@@ -327,9 +327,9 @@ reference "fig:Outcomes-implementable-by"
 
 \end_inset
 
- shows the Pareto frontier in the axes of consumer surplus and joint worker
+ shows the Pareto frontier in the axes of consumer surplus and joint seller
  profits.
- Moving along the Pareto frontier, the acceptance rate varies from worker-optima
+ Moving along the Pareto frontier, the acceptance rate varies from seller-optima
 l acceptance 
 \begin_inset Formula $\alpha^{coord}$
 \end_inset
@@ -356,7 +356,7 @@ reference "eq:buyer-net-payoff"
 \begin_inset Formula $\alpha^{full-disc}$
 \end_inset
 
- — the acceptance rate when workers act independently under full disclosure
+ — the acceptance rate when sellers act independently under full disclosure
  — is not on the Pareto frontier.
  We will discuss this important observation in detail in the next section
  and show that it is a robust feature in dynamic matching environment.
@@ -374,20 +374,20 @@ reference "eq:buyer-net-payoff"
 \end_inset
 
  such that 
-\begin_inset Formula $F^{\mu}(p)=\alpha$
+\begin_inset Formula $F^{\lambda}(p)=\alpha$
 \end_inset
 
  for some coarsening 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
  of 
-\begin_inset Formula $\mu_{0}$
+\begin_inset Formula $\lambda_{0}$
 \end_inset
 
 .
  If 
-\begin_inset Formula $p<\int zdF^{\mu_{0}}(z)$
+\begin_inset Formula $p<\int zdF^{\lambda_{0}}(z)$
 \end_inset
 
 , then 
@@ -401,7 +401,7 @@ status open
 
 \begin_layout Plain Layout
 Normal for the applications I have in mind: 
-\begin_inset Formula $F^{\mu_{0}}$
+\begin_inset Formula $F^{\lambda_{0}}$
 \end_inset
 
  has full support on 
@@ -409,7 +409,7 @@ Normal for the applications I have in mind:
 \end_inset
 
  and 
-\begin_inset Formula $p<\int zdF^{\mu_{0}}(z)$
+\begin_inset Formula $p<\int zdF^{\lambda_{0}}(z)$
 \end_inset
 
 .
@@ -473,19 +473,19 @@ input{pictures/pareto_frontier.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Utility possibility set for aggregate buyers and aggregate workers.
+Utility possibility set for aggregate buyers and aggregate sellers.
  Segmentation can implement any point on the Pareto frontier (thick solid
  line).
  Acceptance rate 
 \begin_inset Formula $\alpha^{full-disc}$
 \end_inset
 
- is the acceptance rate when workers act independently under full disclosure;
+ is the acceptance rate when sellers act independently under full disclosure;
  
 \begin_inset Formula $\alpha^{coord}$
 \end_inset
 
- is the worker-optimal acceptance rate; 
+ is the seller-optimal acceptance rate; 
 \begin_inset Formula $\alpha^{max}$
 \end_inset
 
@@ -521,7 +521,7 @@ name "fig:Outcomes-implementable-by"
 
 \begin_layout Standard
 Segmentation 
-\begin_inset Formula $\hat{\mu}$
+\begin_inset Formula $\hat{\lambda}$
 \end_inset
 
  that implements acceptance rate 
@@ -550,7 +550,7 @@ Segmentation
 \end_layout
 
 \begin_layout Standard
-Coarse segmentation improves acceptance by decreasing the ability of workers
+Coarse segmentation improves acceptance by decreasing the ability of sellers
  to “cherry-pick” desirable tasks.
  However it degrades their match quality.
  As a total effect, the increase in acceptance may outweigh the quality
@@ -569,17 +569,17 @@ The optimal solution is non-trivial: in a typical case the optimal segmentation
 
 .
  The two-segment form of the optimal segmentation 
-\begin_inset Formula $\hat{\mu}$
+\begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- follows by the revelation principle from the fact that workers have two
+ follows by the revelation principle from the fact that sellers have two
  actions, accept or reject.
  
 \end_layout
 
 \begin_layout Standard
 What is interesting is that 
-\begin_inset Formula $\hat{\mu}$
+\begin_inset Formula $\hat{\lambda}$
 \end_inset
 
  does not depend on the intensity of buyer traffic 
@@ -588,7 +588,7 @@ What is interesting is that
 
 .
  This implies that 
-\begin_inset Formula $\hat{\mu}$
+\begin_inset Formula $\hat{\lambda}$
 \end_inset
 
  is the same segmentation as would be optimal in a static case, when 
@@ -596,18 +596,18 @@ What is interesting is that
 \end_inset
 
 .
- This happens because the arrival rate to available workers (
+ This happens because the arrival rate to available sellers (
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
 ) matters only to the extent that it creates option value of rejection for
- workers.
- When the workers have no private information, segmentation 
-\begin_inset Formula $\hat{\mu}$
+ sellers.
+ When the sellers have no private information, segmentation 
+\begin_inset Formula $\hat{\lambda}$
 \end_inset
 
  induces the posterior mean distribution 
-\begin_inset Formula $F^{\hat{\mu}}$
+\begin_inset Formula $F^{\hat{\lambda}}$
 \end_inset
 
  that has only one acceptable value.
@@ -616,7 +616,7 @@ What is interesting is that
 \end_inset
 
  does not matter.
- In the next section we solve for the optimal segmentation when workers
+ In the next section we solve for the optimal segmentation when sellers
  do have private information.
  
 \end_layout
@@ -654,7 +654,7 @@ key "BM13-Ecma"
 \end_layout
 
 \begin_layout Subsection
-Worker coordination problem and scheduling externality
+seller coordination problem and scheduling externality
 \end_layout
 
 \begin_layout Standard
@@ -663,7 +663,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Greg: I like result 1 – laissez-faire is suboptimal.
- I don’t think it’s right to say that workers don’t resolve the tradeoff
+ I don’t think it’s right to say that sellers don’t resolve the tradeoff
  optimally.
  They are individually optimal but collectively suboptimal.
  Is it a “prisoner’s dilemma” in some way; the analogy to prisoner’s dilemma’s
@@ -677,9 +677,9 @@ Greg: I like result 1 – laissez-faire is suboptimal.
 
 \begin_layout Standard
 The next proposition shows that in un-mediated dynamic peer-to-peer markets
- (all available information about buyer tasks is revealed to workers), the
+ (all available information about buyer tasks is revealed to sellers), the
  market outcome is removed from the Pareto frontier.
- Reason — workers' coordination problem; due to scheduling externality they
+ Reason — sellers' coordination problem; due to scheduling externality they
  resolve match rate/match quality tradeoff collectively sub-optimally.
  The inefficiency arises due to dynamic nature of the matching.
  
@@ -694,9 +694,9 @@ In this subsection we return to the most general setting to emphasize that
 
 \begin_layout Standard
 To show the result, I compare the market outcome under perfect segmentation
- with the coordination benchmark in which workers coordinate to maximize
+ with the coordination benchmark in which sellers coordinate to maximize
  the joint profits.
- Obviously, workers cannot do worse under coordination.
+ Obviously, sellers cannot do worse under coordination.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -719,14 +719,14 @@ ining tasks, the service providers accept too few tasks, and matching on
 
 \begin_layout Standard
 Given segmentation 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
 , denote by 
-\begin_inset Formula $F_{\theta}^{\mu}$
+\begin_inset Formula $F_{\theta}^{\lambda}$
 \end_inset
 
- the distribution of cost posterior means for worker of type 
+ the distribution of cost posterior means for seller of type 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -736,12 +736,12 @@ Given segmentation
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-F_{\theta}^{\mu}(y)=\int_{S}I\{\Exp[C(\theta,\omega)|s]\leq y\}\mu(ds),\label{eq:F_theta[mu]-2}
+F_{\theta}^{\lambda}(y)=\int_{S}I\{\Exp[C(\theta,\omega)|s]\leq y\}\lambda(ds),\label{eq:F_theta[mu]-2}
 \end{equation}
 
 \end_inset
 
-Denote the acceptance rates under worker coordination by 
+Denote the acceptance rates under seller coordination by 
 \begin_inset Formula $\alpha^{coord}(\theta)$
 \end_inset
 
@@ -765,7 +765,7 @@ name "prop:indep-vs-coord"
 \end_inset
 
 Suppose 
-\begin_inset Formula $F_{\theta}^{\mu}$
+\begin_inset Formula $F_{\theta}^{\lambda}$
 \end_inset
 
  has full support on 
@@ -787,16 +787,16 @@ CS^{coord} & \geq & CS.
 \end_layout
 
 \begin_layout Standard
-The result has three parts: worker profits, acceptance rates, and buyer
+The result has three parts: seller profits, acceptance rates, and buyer
  surplus.
- The first part shows that coordination strictly improves worker surplus.
- This happens because individual workers have positive option value of rejecting
- tasks while coordinated workers have zero option option value of rejecting.
+ The first part shows that coordination strictly improves seller surplus.
+ This happens because individual sellers have positive option value of rejecting
+ tasks while coordinated sellers have zero option option value of rejecting.
  Indeed, type-
 \begin_inset Formula $\theta$
 \end_inset
 
- worker has option value of rejecting equal to 
+ seller has option value of rejecting equal to 
 \begin_inset Formula $\tau V(\theta)$
 \end_inset
 
@@ -816,7 +816,7 @@ reference "eq:pi(c)"
 \begin_inset Formula $\theta$
 \end_inset
 
- worker rejects profitable tasks that have expected cost lying in the interval
+ seller rejects profitable tasks that have expected cost lying in the interval
  
 \begin_inset Formula $c\in(p_{\theta}-\tau V(\theta),p_{\theta}]$
 \end_inset
@@ -824,15 +824,15 @@ reference "eq:pi(c)"
 .
  However, the aggregate buyer arrival process is deterministic, and by the
  No Excess Demand assumption, all tasks can be accepted.
- Therefore, the coordinated workers have no option value from rejecting
+ Therefore, the coordinated sellers have no option value from rejecting
  a task, and they accept all tasks with 
 \begin_inset Formula $c\leqslant p_{\theta}$
 \end_inset
 
 .
  The fundamental reason behind this distinction in option values for individual
- and coordinated workers is that collectively, the workers are not capacity
- constrained (in time) while individually, the workers 
+ and coordinated sellers is that collectively, the sellers are not capacity
+ constrained (in time) while individually, the sellers 
 \emph on
 are
 \emph default
@@ -845,8 +845,8 @@ Perhaps more surprisingly, buyers
 \emph on
 also
 \emph default
- benefit from worker coordination.
- This happens because worker coordination results in higher acceptance rates,
+ benefit from seller coordination.
+ This happens because seller coordination results in higher acceptance rates,
  and due to 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -859,14 +859,14 @@ reference "eq:buyer-net-payoff"
 \end_layout
 
 \begin_layout Standard
-Worker profits in the equilibrium are lower because workers impose negative
+seller profits in the equilibrium are lower because sellers impose negative
  
 \emph on
 scheduling externality 
 \emph default
-on each other: by rejecting a task a worker decreases the other workers'
+on each other: by rejecting a task a seller decreases the other sellers'
  chances of getting consequent tasks.
- Coordination benefits workers because it makes them internalize the scheduling
+ Coordination benefits sellers because it makes them internalize the scheduling
  externality.
  
 \end_layout
@@ -927,15 +927,15 @@ reference "prop:Pareto-frontier"
 
 \end_inset
 
- shows that when workers are identical, the platform can improve the welfare
- of both buyers and workers by the right choice of segmentation.
- However, in the case when workers are not identical and have private informatio
+ shows that when sellers are identical, the platform can improve the welfare
+ of both buyers and sellers by the right choice of segmentation.
+ However, in the case when sellers are not identical and have private informatio
 n about their costs, things are getting more tricky.
  
 \end_layout
 
 \begin_layout Subsection
-Optimal information disclosure when workers are differentiated by skill
+Optimal information disclosure when sellers are differentiated by skill
 \end_layout
 
 \begin_layout Standard
@@ -947,10 +947,10 @@ Optimal information disclosure when workers are differentiated by skill
 \end_layout
 
 \begin_layout Standard
-Typically, the platform does not observe worker costs, and there is a private
- cost component that is only known to the worker (skill level, willingness
+Typically, the platform does not observe seller costs, and there is a private
+ cost component that is only known to the seller (skill level, willingness
  to do long-haul rides, etc).
- If there is privately known match value held by workers, the intermediary’s
+ If there is privately known match value held by sellers, the intermediary’s
  ability to segment effectively is limited.
  Depending on the heterogeneity of service provider costs, there may or
  may not exist a coarse segmentation that improves acceptance rates.
@@ -960,11 +960,11 @@ Typically, the platform does not observe worker costs, and there is a private
 
 \begin_layout Standard
 To see the intuition behind additional problems the platform faces when
- workers have private information, imagine there are two types of workers:
+ sellers have private information, imagine there are two types of sellers:
  professionals and amateurs.
  Professionals can profitably complete a larger set of tasks than amateurs.
  When the platform designs task segments it should take into consideration
- different effects the segmentation will have on the two groups of workers.
+ different effects the segmentation will have on the two groups of sellers.
  Amateurs can only do a small subset of tasks therefore the segmentation
  has to be fine to keep them on the platform.
  On the other hand, fine segmentation allows the professionals to be picky
@@ -981,7 +981,7 @@ To see the intuition behind additional problems the platform faces when
 
 \begin_layout Standard
 Formally, consider a type space where tasks are vertically differentiated,
- and workers differ in their cost efficiency.
+ and sellers differ in their cost efficiency.
  Namely, let the space of buyer types be 
 \begin_inset Formula $\Omega=[0,1]$
 \end_inset
@@ -995,7 +995,7 @@ Formally, consider a type space where tasks are vertically differentiated,
 \end_inset
 
 .
- Let the space of worker skill level be 
+ Let the space of seller skill level be 
 \begin_inset Formula $\Theta=[0,1]$
 \end_inset
 
@@ -1017,7 +1017,7 @@ Formally, consider a type space where tasks are vertically differentiated,
 \begin_inset Formula $p$
 \end_inset
 
- is used by all workers.
+ is used by all sellers.
  I call this 
 \emph on
 linear cost
@@ -1031,7 +1031,7 @@ professionals
 \begin_inset Quotes erd
 \end_inset
 
- are workers with high 
+ are sellers with high 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1043,7 +1043,7 @@ amateurs
 \begin_inset Quotes erd
 \end_inset
 
- are workers with low 
+ are sellers with low 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1051,7 +1051,7 @@ amateurs
 \end_layout
 
 \begin_layout Standard
-Since workers are risk-neutral, the sufficient statistic for a segment is
+Since sellers are risk-neutral, the sufficient statistic for a segment is
  the expected cost on it.
  Denote the expected value of 
 \begin_inset Formula $\omega$
@@ -1076,7 +1076,7 @@ Since workers are risk-neutral, the sufficient statistic for a segment is
 
 .
  Denote by 
-\begin_inset Formula $H^{\mu}$
+\begin_inset Formula $H^{\lambda}$
 \end_inset
 
  the distribution of posterior means of 
@@ -1084,7 +1084,7 @@ Since workers are risk-neutral, the sufficient statistic for a segment is
 \end_inset
 
  when the platform uses segmentation 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
 .
@@ -1093,13 +1093,13 @@ Since workers are risk-neutral, the sufficient statistic for a segment is
 option value function
 \emph default
  
-\begin_inset Formula $W^{\mu}\colon[0,1]\to\R_{+}$
+\begin_inset Formula $\Lambda\colon[0,1]\to\R_{+}$
 \end_inset
 
 : 
 \begin_inset Formula 
 \begin{equation}
-W^{\mu}(m):=\int_{0}^{m}(m-y)dH^{\mu}(y),\label{eq:Wmu}
+\Lambda(m;\lambda):=\int_{0}^{m}(m-y)dH^{\lambda}(y),\label{eq:Wmu}
 \end{equation}
 
 \end_inset
@@ -1111,7 +1111,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-W^{\mu}(s):=\int\limits _{s'\colon\Exp[\omega|s']\leq\Exp[\omega|s]}\left\{ \Exp[\omega|s]\leq\Exp[\omega|s']\right\} \mu(ds).
+\Lambda^{\lambda}(s):=\int\limits _{s'\colon\Exp[\omega|s']\leq\Exp[\omega|s]}\left\{ \Exp[\omega|s]\leq\Exp[\omega|s']\right\} \lambda(ds).
 \]
 
 \end_inset
@@ -1122,11 +1122,11 @@ W^{\mu}(s):=\int\limits _{s'\colon\Exp[\omega|s']\leq\Exp[\omega|s]}\left\{ \Exp
 \end_inset
 
 For any 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
 , 
-\begin_inset Formula $W^{\mu}(m)$
+\begin_inset Formula $\Lambda(m)$
 \end_inset
 
  is non-negative, weakly increasing from 0 to 
@@ -1144,7 +1144,7 @@ status open
 
 \begin_layout Plain Layout
 Technically, 
-\begin_inset Formula $W_{\mu}(c)$
+\begin_inset Formula $\Lambda_{\lambda}(c)$
 \end_inset
 
  is defined on all 
@@ -1152,7 +1152,7 @@ Technically,
 \end_inset
 
  but we want to maintain the intuition that 
-\begin_inset Formula $W_{\mu}$
+\begin_inset Formula $\Lambda_{\lambda}$
 \end_inset
 
  is the option value of rejection a task, so we don't let it be larger than
@@ -1173,7 +1173,7 @@ Technically,
 
 , and is convex.
  As we will see from the next lemma, 
-\begin_inset Formula $W^{\mu}(m)$
+\begin_inset Formula $\Lambda(m)$
 \end_inset
 
  is equal to the
@@ -1193,12 +1193,12 @@ task with expected cost
 \end_layout
 
 \begin_layout Standard
-The next lemma shows that a worker's optimization problem depends on 
-\begin_inset Formula $\mu$
+The next lemma shows that a seller's optimization problem depends on 
+\begin_inset Formula $\lambda$
 \end_inset
 
  only through 
-\begin_inset Formula $W^{\mu}$
+\begin_inset Formula $\Lambda^{\lambda}$
 \end_inset
 
 .
@@ -1213,10 +1213,10 @@ name "lem:Vmu"
 \end_inset
 
 For any segmentation 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
-, worker's optimal strategy has a cutoff form with cutoff 
+, seller's optimal strategy has a cutoff form with cutoff 
 \begin_inset Formula $\smuth$
 \end_inset
 
@@ -1224,7 +1224,7 @@ For any segmentation
 \begin_inset Formula $\theta$
 \end_inset
 
--worker accepts all tasks with expected cost 
+-seller accepts all tasks with expected cost 
 \begin_inset Formula $m<\smuth$
 \end_inset
 
@@ -1237,7 +1237,7 @@ For any segmentation
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
-, worker payoff 
+, seller payoff 
 \begin_inset Formula $V(\theta)$
 \end_inset
 
@@ -1248,7 +1248,7 @@ For any segmentation
  are solutions to the following system of equations:
 \begin_inset Formula 
 \begin{equation}
-V^{\mu}(\theta)=\frac{p+\theta-\smuth}{\tau}=\beta_{A}W^{\mu}(\smuth).\label{eq:V-shat-W}
+V^{\lambda}(\theta)=\frac{p+\theta-\smuth}{\tau}=\beta_{A}\Lambda^{\lambda}(\smuth).\label{eq:V-shat-W}
 \end{equation}
 
 \end_inset
@@ -1258,7 +1258,7 @@ V^{\mu}(\theta)=\frac{p+\theta-\smuth}{\tau}=\beta_{A}W^{\mu}(\smuth).\label{eq:
 
 \begin_layout Standard
 Let 
-\begin_inset Formula $\overline{W}$
+\begin_inset Formula $\overline{\Lambda}$
 \end_inset
 
  be the option value function under perfect segmentation (full disclosure
@@ -1267,32 +1267,32 @@ Let
 \end_inset
 
 ), 
-\begin_inset Formula $\overline{W}(z):=\int_{0}^{z}(z-y)dH^{\mu_{0}}(y).$
+\begin_inset Formula $\overline{\Lambda}(z):=\int_{0}^{z}(z-y)dH^{\lambda_{0}}(y).$
 \end_inset
 
  Similarly, let 
-\begin_inset Formula $\underline{W}$
+\begin_inset Formula $\underline{\Lambda}$
 \end_inset
 
  be the option value function under no information, 
-\begin_inset Formula $\underline{W}(z):=\max\{0,z-\Exp[\omega]\}.$
+\begin_inset Formula $\underline{\Lambda}(z):=\max\{0,z-\Exp[\omega]\}.$
 \end_inset
 
  Denote by 
-\begin_inset Formula $\mathcal{W}$
+\begin_inset Formula $\mathcal{\Lambda}$
 \end_inset
 
  the set of all option value functions 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
  implementable by some 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\lambda$
 \end_inset
 
 .
  The next lemma characterizes 
-\begin_inset Formula $\mathcal{W}$
+\begin_inset Formula $\mathcal{\Lambda}$
 \end_inset
 
 .
@@ -1306,11 +1306,11 @@ name "lem:space-of-W"
 \end_inset
 
 Option value function 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
  is implementable by some segmentation if and only if 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
  is a convex function point-wise between 
@@ -1344,18 +1344,18 @@ reference "lem:space-of-W"
 
  is that it shows that any segmentation can be represented as some non-negative,
  non-decreasing and convex function 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
 .
  Therefore, in any optimization problem that requires to find an optimal
  signaling structure, it is equivalent to find an optimal 
-\begin_inset Formula $W\in\mathcal{W}$
+\begin_inset Formula $\Lambda\in\mathcal{\Lambda}$
 \end_inset
 
 .
  It is easier to optimize with respect to 
-\begin_inset Formula $W\in\mathcal{W}$
+\begin_inset Formula $\Lambda\in\mathcal{\Lambda}$
 \end_inset
 
  because the platform's optimization problem is more tractable when the
@@ -1379,7 +1379,7 @@ Denote the flow of matches consummated on the platform by
 
  of matches is consummated.
  Consider the platform's problem of maximizing the utilization rate.
- Since we hold worker participation fixed, the problem is equivalent to
+ Since we hold seller participation fixed, the problem is equivalent to
  maximizing 
 \begin_inset Formula $M$
 \end_inset
@@ -1395,13 +1395,13 @@ reference "lem:space-of-W"
 , the platform's problem can be expressed as 
 \begin_inset Formula 
 \[
-\max_{W\in\mathcal{W}}M.
+\max_{\Lambda\in\mathcal{\Lambda}}M.
 \]
 
 \end_inset
 
-The problem is not trivial because: 1) workers are heterogenous; 2) besides
- the direct effect of segmentation on worker's dynamic optimization problem
+The problem is not trivial because: 1) sellers are heterogenous; 2) besides
+ the direct effect of segmentation on seller's dynamic optimization problem
  in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1413,7 +1413,7 @@ reference "eq:V-shat-W"
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
- changes in response to the workers' change in acceptance rate, as shown
+ changes in response to the sellers' change in acceptance rate, as shown
  in Eq.
  
 \begin_inset CommandInset ref
@@ -1432,11 +1432,11 @@ reference "eq:beta_A"
 \begin_inset Formula $\theta$
 \end_inset
 
- workers relative to all type-
+ sellers relative to all type-
 \begin_inset Formula $\theta$
 \end_inset
 
- workers.
+ sellers.
  
 \end_layout
 
@@ -1452,13 +1452,13 @@ The first variation of
 \end_inset
 
  with respect to 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
  exists and is proportional to:
 \begin_inset Formula 
 \begin{equation}
-\frac{\delta M}{\delta W}\propto-(g(\theta)\nu^{2}(\theta))'+g(\theta)\nu'(\theta).\label{eq:dM/dW}
+\frac{\delta M}{\delta\Lambda}\propto-(g(\theta)\nu^{2}(\theta))'+g(\theta)\nu'(\theta).\label{eq:dM/dW}
 \end{equation}
 
 \end_inset
@@ -1490,7 +1490,7 @@ reference "thm:dM/dW"
 
  is to compare it with the static case which has been studied in the prior
  literature.
- The worker's problem becomes static when 
+ The seller's problem becomes static when 
 \begin_inset Formula $\tau=0$
 \end_inset
 
@@ -1535,7 +1535,7 @@ Suppose
  Then 
 \begin_inset Formula 
 \begin{equation}
-\frac{\delta M}{\delta W}\propto-g'(\theta).\label{eq:dM/dW-static}
+\frac{\delta M}{\delta\Lambda}\propto-g'(\theta).\label{eq:dM/dW-static}
 \end{equation}
 
 \end_inset
@@ -1591,25 +1591,25 @@ reference "eq:dM/dW"
 
 \begin_layout Standard
 To better understand the additional effects, consider uniform distribution
- of worker types, 
+ of seller types, 
 \begin_inset Formula $G=U[0,1]$
 \end_inset
 
 .
  Under uniform distribution in the static case, the segmentation does not
  matter: 
-\begin_inset Formula $\frac{\delta M}{\delta W}=0$
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}=0$
 \end_inset
 
  for any 
-\begin_inset Formula $W$
+\begin_inset Formula $\Lambda$
 \end_inset
 
 .
  In my model, however, we have that
 \begin_inset Formula 
 \[
-\frac{\delta M}{\delta W}\propto-(\nu^{2}(\theta)-\nu(\theta))'.
+\frac{\delta M}{\delta\Lambda}\propto-(\nu^{2}(\theta)-\nu(\theta))'.
 \]
 
 \end_inset
@@ -1626,7 +1626,7 @@ and
 .
  The availability effect arises because in equilibrium, high types are less
  available than low types.
- This makes the effective distribution of workers concave, and creates a
+ This makes the effective distribution of sellers concave, and creates a
  motive for the intermediary to use finer segmentation.
  Term 
 \begin_inset Formula $\nu^{2}(\theta)$
@@ -1637,7 +1637,7 @@ and
 \end_layout
 
 \begin_layout Standard
-The patience effect arises because workers do not act myopically and may
+The patience effect arises because sellers do not act myopically and may
  reject tasks due to temporal optimization.
  High types have greater option value of rejecting a task, and so all held
  equal they are more picky than low types.
@@ -1731,7 +1731,7 @@ g'(\theta)\leq\frac{\tau\beta}{1-\tau\beta}g(\theta)\max_{s\in[0,1]}h(s).
 \end_layout
 
 \begin_layout Standard
-For example, if worker types are distributed uniformly, 
+For example, if seller types are distributed uniformly, 
 \begin_inset Formula $g\equiv const$
 \end_inset
 

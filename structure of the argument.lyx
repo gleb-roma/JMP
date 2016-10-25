@@ -1,0 +1,358 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usepackage{xcolor}
+ \usepackage{relsize}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Structure of the argument of the paper
+\end_layout
+
+\begin_layout Itemize
+Important observation-1: In peer-to-peer markets, from the perspective of
+ service providers, there is a tradeoff between match rate and match quality
+ (average cost of performing a task).
+ 
+\end_layout
+
+\begin_layout Itemize
+Important observation-2: service providers' capacity utilization affects
+ welfare on both sides of the market, and usually in the opposite directions.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Capacity utilization is higher -> match rate is higher.
+ Match rate is higher -> buyers are better off (I assume positive match
+ value for buyers).
+ 
+\end_layout
+
+\begin_layout Itemize
+Conditional on service providers efficiently resolving match rate/match
+ value tradeoff, if match rate is forced to be higher -> service providers
+ are worse off.
+ 
+\end_layout
+
+\begin_layout Itemize
+Formally: I characterize the set of feasible market outcomes and demonstrate
+ that points on the Pareto frontier (in the axis of consumer surplus and
+ provider profits) exhibit different rates of capacity utilization.
+\end_layout
+
+\begin_layout Itemize
+Therefore, from the platform's perspective, there is a tradeoff between
+ higher quality service for customers and participation of service providers,
+ which operates through capacity utilization.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A key insight is that segmentation of consumer tasks influences capacity
+ utilitzation, and therefore can be used to balance the two sides of the
+ market.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Result 1: In un-mediated dynamic peer-to-peer markets (all available information
+ about buyer tasks is revealed), the market outcome is removed from the
+ Pareto frontier.
+ Reason — workers' coordination problem; due to scheduling externality they
+ don't resolve match rate/match quality tradeoff optimally.
+ Inefficiency arises due to dynamic nature of the matching.
+ 
+\end_layout
+
+\begin_layout Itemize
+The platform can use segmentation to imporove welfare generated on the platform.
+ 
+\end_layout
+
+\begin_layout Itemize
+Result 2: there is coarse segmentation that Pareto improves market outcome
+ in equilibrium
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+2a: in case of identical workers, the Pareto frontier can be attained.
+ 2 segments is sufficient.
+ 
+\end_layout
+
+\begin_layout Itemize
+2b: in case of heterogenous workers, many segments may be necessary, and
+ the answer generally depends on the distribution of worker types.
+ Namely, in static linear environment, larger fraction of high-skill workers
+ implies the coarser segmentation is optimal.
+ In dynamic spot matching environment, there are additional availability
+ effect and patience effect.
+ Availability effect warps the distribution of workers and creates the motive
+ for the platform to make segmentation finer.
+ Patience effect makes high skill workers relatively picky and encourages
+ coarser segmentation of hard tasks.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Taking in consideration the network effects which arises due to the two-sided
+ nature of the peer-to-peer market, consider the platform's market design
+ problem of maximizing value generated on the platform.
+ Comparative statics on how the economic primitives affect the optimal policy:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consumer search friction is high -> increase utilitzation 
+\end_layout
+
+\begin_layout Itemize
+Workers are picky -> lower utilization
+\end_layout
+
+\begin_layout Itemize
+Workers are more capacity constrained (larger 
+\begin_inset Formula $\tau$
+\end_inset
+
+) -> ...
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/pareto_frontier.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Utility possibility set for aggregate buyers and aggregate workers.
+ Segmentation can implement any point on the Pareto frontier (thick solid
+ line).
+ Acceptance rate 
+\begin_inset Formula $\alpha^{full-disc}$
+\end_inset
+
+ is the acceptance rate when workers act independently under full disclosure;
+ 
+\begin_inset Formula $\alpha^{coord}$
+\end_inset
+
+ is the worker-optimal acceptance rate; 
+\begin_inset Formula $\alpha^{max}$
+\end_inset
+
+ is the maximal feasible acceptance rate (also buyer optimal).
+ The Pareto frontier is the set of border points between 
+\begin_inset Formula $\alpha^{coord}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha^{max}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Outcomes-implementable-by"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+This is what I want to present on the lunches in October.
+ 
+\end_layout
+
+\end_body
+\end_document

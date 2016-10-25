@@ -209,9 +209,9 @@ Dynamic Model of Peer-to-peer Market
 
 \begin_layout Standard
 In this section I lay out a dynamic model of peer-to-peer market, in which
- buyers arrive gradually over time and contact one worker to complete their
- task; workers have heterogenous costs across buyer tasks, worker capacities
- are limited, and workers have control over what matches to accept.
+ buyers arrive gradually over time and contact one seller to complete their
+ task; sellers have heterogenous costs across buyer tasks, seller capacities
+ are limited, and sellers have control over what matches to accept.
  The model will allow me to study the role of heterogeneous preferences
  and capacity utilization in two-sided markets.
  I make my first important observation, that in peer-to-peer markets, from
@@ -230,15 +230,15 @@ Dynamic matching.
 \end_layout
 
 \begin_layout Standard
-There are three parties involved in the search and matching process: workers,
+There are three parties involved in the search and matching process: sellers,
  buyers and the platform itself.
  
 \end_layout
 
 \begin_layout Standard
-There is mass 1 of workers, who always stay on the platform, never leave
+There is mass 1 of sellers, who always stay on the platform, never leave
  or arrive.
- The workers are passive searchers; they do not actively look for jobs,
+ The sellers are passive searchers; they do not actively look for jobs,
  but instead are presented with a sequence of job offers at Poisson rate,
  and decide whether to accept or reject them to maximize discounted profit
  flow.
@@ -246,10 +246,10 @@ There is mass 1 of workers, who always stay on the platform, never leave
 \begin_inset Formula $\tau$
 \end_inset
 
- to complete, during which time the worker cannot receive new jobs.
+ to complete, during which time the seller cannot receive new jobs.
  This is the search friction.
- At each moment in time, there are two pools of workers: available and busy.
- Available workers wait for jobs, busy workers work on their job.
+ At each moment in time, there are two pools of sellers: available and busy.
+ Available sellers wait for jobs, busy sellers work on their job.
  
 \end_layout
 
@@ -271,7 +271,7 @@ There is a continuum of potential buyers who gradually arrive over time
  of buyers arrive to the platform.
  Buyers are short lived.
  Buyer search is passive: they put up a job and the platform assigns them
- to an available worker.
+ to an available seller.
  If their job is accepted, they stay until the job is completed, otherwise
  they leave.
 \begin_inset Foot
@@ -319,14 +319,14 @@ name "assu:random-assignment"
 
 \end_inset
 
-Buyers are assigned uniformly at random to the available workers.
+Buyers are assigned uniformly at random to the available sellers.
  
 \end_layout
 
 \begin_layout Standard
 This assumption has two implications.
- First, worker of any type faces the same intensity of buyer traffic.
- Second, each worker faces the same distribution of buyer tasks.
+ First, seller of any type faces the same intensity of buyer traffic.
+ Second, each seller faces the same distribution of buyer tasks.
  This is a simplifying assumption that helps me to focus on the mechanics
  on the supply side of the market.
  In the extension 
@@ -337,7 +337,7 @@ reference "subsec:General-demand:-workers"
 \end_inset
 
  we show how to deal with a more general demand system where demand for
- each worker type can be different.
+ each seller type can be different.
  
 \end_layout
 
@@ -409,15 +409,15 @@ Matching dynamics.
 \begin_inset Formula $\beta$
 \end_inset
 
-, and make one attempt to match with available workers.
+, and make one attempt to match with available sellers.
  If rejected, a buyer leaves the platform.
  If accepted, the buyer forms a match which lasts for time 
 \begin_inset Formula $\tau$
 \end_inset
 
 .
- After the time elapses, the buyer leaves the platform, and the workers
- return to the pool of available workers.
+ After the time elapses, the buyer leaves the platform, and the sellers
+ return to the pool of available sellers.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -482,7 +482,7 @@ status open
 
 
 \backslash
-input{pictures/worker_problem.tex}
+input{pictures/seller_problem.tex}
 \end_layout
 
 \end_inset
@@ -494,13 +494,13 @@ input{pictures/worker_problem.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Worker dynamic optimization problem with repeated search and waiting.
- An available worker receives requests at Poisson rate 
+seller dynamic optimization problem with repeated search and waiting.
+ An available seller receives requests at Poisson rate 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
 .
- If a request is accepted, the worker becomes busy for time 
+ If a request is accepted, the seller becomes busy for time 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -546,11 +546,11 @@ Search and matching process.
 \begin_layout Standard
 There are two dimensions of heterogeneity in this matching market.
  First, buyer tasks are heterogenous.
- Second, workers are diverse.
- The former implies that the workers have heterogenous costs over tasks.
- The latter implies that different workers have different preferences over
+ Second, sellers are diverse.
+ The former implies that the sellers have heterogenous costs over tasks.
+ The latter implies that different sellers have different preferences over
  tasks.
- Worker type is 
+ seller type is 
 \begin_inset Formula $\theta\in\Theta$
 \end_inset
 
@@ -624,7 +624,7 @@ can be finite or
 \end_inset
 
 is a compact subset of a Euclidean space.
- Worker costs are heterogenous across tasks, namely, a worker of type 
+ seller costs are heterogenous across tasks, namely, a seller of type 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -650,9 +650,9 @@ For example,
 \begin_inset Formula $\theta$
 \end_inset
 
- can indicate a worker's skill level, location, type of preferred task,
+ can indicate a seller's skill level, location, type of preferred task,
  etc.
- In the base model, I assume fixed prices, worker 
+ In the base model, I assume fixed prices, seller 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -690,7 +690,7 @@ The platform observes buyer type
 \begin_inset Formula $\omega$
 \end_inset
 
- but not worker type 
+ but not seller type 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -729,8 +729,8 @@ public
 
  segmentation in the base model, i.e.
  I am not studying the mech.
- design problem where the platform tries to elicit or learn the worker’s
- information and tailor the segments to a worker type.
+ design problem where the platform tries to elicit or learn the seller’s
+ information and tailor the segments to a seller type.
  
 \end_layout
 
@@ -819,13 +819,13 @@ When a buyer arrives and puts up a task of type
 \begin_inset Formula $\mu$
 \end_inset
 
-, and then the corresponding worker only observes the segment the task belongs
+, and then the corresponding seller only observes the segment the task belongs
  to.
  The perfect segmentation is the one where type 
 \begin_inset Formula $\omega$
 \end_inset
 
- is perfectly revealed to the workers.
+ is perfectly revealed to the sellers.
  The perfect segmentation is denoted by 
 \begin_inset Formula $\mu_{0}$
 \end_inset
@@ -848,8 +848,8 @@ Steady state.
 
 \begin_layout Standard
 A state of the dynamic matching system described above is characterized
- by the mass of available workers of each type and the acceptance rates
- of each worker type.
+ by the mass of available sellers of each type and the acceptance rates
+ of each seller type.
  Formally, let 
 \begin_inset Formula $\alpha(\theta)\geq0$
 \end_inset
@@ -858,7 +858,7 @@ A state of the dynamic matching system described above is characterized
 \begin_inset Formula $\theta$
 \end_inset
 
- available workers, and let 
+ available sellers, and let 
 \begin_inset Formula $\rho(\theta)$
 \end_inset
 
@@ -874,8 +874,8 @@ capacity utilization rate
 \begin_inset Formula $\theta$
 \end_inset
 
- workers who are busy.
- Denote the total mass of available workers by 
+ sellers who are busy.
+ Denote the total mass of available sellers by 
 \begin_inset Formula $A:=\int_{\Theta}(1-\rho(\theta))dG(\theta)$
 \end_inset
 
@@ -884,12 +884,12 @@ capacity utilization rate
 \end_layout
 
 \begin_layout Standard
-To define steady state, I first need to define the worker inflow and outflow.
+To define steady state, I first need to define the seller inflow and outflow.
  The outflow of type-
 \begin_inset Formula $\theta$
 \end_inset
 
- workers is the mass of workers that flows from 
+ sellers is the mass of sellers that flows from 
 \begin_inset Quotes eld
 \end_inset
 
@@ -910,7 +910,7 @@ busy
 \begin_inset Formula $\theta$
 \end_inset
 
- workers is 
+ sellers is 
 \begin_inset Formula $\beta\frac{(1-\rho(\theta))g(\theta)}{A}$
 \end_inset
 
@@ -928,7 +928,7 @@ busy
 \begin_inset Formula $\theta$
 \end_inset
 
- workers is the mass of workers that flows from 
+ sellers is the mass of sellers that flows from 
 \begin_inset Quotes eld
 \end_inset
 
@@ -970,7 +970,7 @@ busy
 \end_layout
 
 \begin_layout Standard
-In a steady state, the inflow equals the outflow for each worker type:
+In a steady state, the inflow equals the outflow for each seller type:
 \begin_inset Formula 
 \begin{equation}
 \beta\frac{(1-\rho(\theta))g(\theta)}{A}\alpha(\theta)=\frac{g(\theta)\rho(\theta)}{\tau},\quad\forall\theta\in\Theta.\label{eq:SS}
@@ -982,7 +982,7 @@ In a steady state, the inflow equals the outflow for each worker type:
 \end_layout
 
 \begin_layout Paragraph
-Supply: worker repeated search problem.
+Supply: seller repeated search problem.
  
 \end_layout
 
@@ -992,8 +992,8 @@ Buyers arrive at flow rate
 \end_inset
 
 , and by the Random Assignment assumption, get distributed uniformly at
- random across all available workers.
- Therefore, each individual available worker experiences a Poisson arrival
+ random across all available sellers.
+ Therefore, each individual available seller experiences a Poisson arrival
  process of buyers, and the rate of the arrival is equal to the buyer-to-seller
  ratio:
 \begin_inset Formula 
@@ -1025,7 +1025,7 @@ cite the relevant theorem
  arrival process in that the individual arrival process is stochastic while
  the aggregate arrival process is deterministic (a consequence of law of
  large numbers).
- More concretely, an individual worker faces a stochastic arrival process,
+ More concretely, an individual seller faces a stochastic arrival process,
  such that over an infinitesimal time interval 
 \begin_inset Formula $dt$
 \end_inset
@@ -1035,7 +1035,7 @@ cite the relevant theorem
 \end_inset
 
 .
- Jointly, available workers face the deterministic buyer arrival process,
+ Jointly, available sellers face the deterministic buyer arrival process,
  such that over time interval 
 \begin_inset Formula $dt$
 \end_inset
@@ -1051,7 +1051,7 @@ cite the relevant theorem
 \end_layout
 
 \begin_layout Standard
-Worker 
+seller 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1064,8 +1064,8 @@ Worker
 status open
 
 \begin_layout Plain Layout
-This follows from the fact that there is a continuum of workers on the platform,
- and so any individual worker's actions does not affect 
+This follows from the fact that there is a continuum of sellers on the platform,
+ and so any individual seller's actions does not affect 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
@@ -1076,7 +1076,7 @@ This follows from the fact that there is a continuum of workers on the platform,
 \end_inset
 
  and solves the dynamic optimization problem where for each incoming task
- a worker has to decide to accept it or reject it.
+ a seller has to decide to accept it or reject it.
  See 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1084,7 +1084,7 @@ reference "fig:Sellers-repeated-search"
 
 \end_inset
 
- for the illustration of the worker dynamic optimization problem.
+ for the illustration of the seller dynamic optimization problem.
  
 \end_layout
 
@@ -1093,7 +1093,7 @@ If type-
 \begin_inset Formula $\theta$
 \end_inset
 
- worker accepts task of type 
+ seller accepts task of type 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -1105,7 +1105,7 @@ p_{\theta}-C(\theta,\omega).
 
 \end_inset
 
-Workers are risk neutral, and so for the decision-making, it is sufficient
+sellers are risk neutral, and so for the decision-making, it is sufficient
  to know only the distribution of posterior means.
  The expected cost on segment 
 \begin_inset Formula $s$
@@ -1115,7 +1115,7 @@ Workers are risk neutral, and so for the decision-making, it is sufficient
 \begin_inset Formula $\theta$
 \end_inset
 
- worker is 
+ seller is 
 \begin_inset Formula $\Exp[C(\theta,\omega)|s]=\int_{\Omega}C(\theta,\omega)s(d\omega)$
 \end_inset
 
@@ -1133,7 +1133,7 @@ Denote by
 \begin_inset Formula $\mu$
 \end_inset
 
- for worker of type 
+ for seller of type 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1176,13 +1176,13 @@ Note that by the Random Assignment,
 \end_layout
 
 \begin_layout Standard
-Workers solve a dynamic optimization problem with repeated search and waiting.
+sellers solve a dynamic optimization problem with repeated search and waiting.
  There is no discounting.
  Denote by 
 \begin_inset Formula $V(\theta)$
 \end_inset
 
- the average profit flow when worker of type 
+ the average profit flow when seller of type 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1191,7 +1191,7 @@ Workers solve a dynamic optimization problem with repeated search and waiting.
 status open
 
 \begin_layout Plain Layout
-For example, if a worker earns $1 on each task, and time interval between
+For example, if a seller earns $1 on each task, and time interval between
  starting consequent tasks is 2, then 
 \begin_inset Formula $V(\theta)=1/2$
 \end_inset
@@ -1212,7 +1212,7 @@ For example, if a worker earns $1 on each task, and time interval between
 \end_inset
 
 .
- Value of the task is zero if the worker rejects it, and 
+ Value of the task is zero if the seller rejects it, and 
 \begin_inset Formula $p_{\theta}-\Exp[C(\theta,\omega)|s]-\tau V(\theta)$
 \end_inset
 
@@ -1226,7 +1226,7 @@ For example, if a worker earns $1 on each task, and time interval between
 \end_inset
 
 .
- Worker optimization problem is then the system of the following two equations:
+ seller optimization problem is then the system of the following two equations:
 \begin_inset Note Comment
 status collapsed
 
@@ -1255,7 +1255,7 @@ For each
 \begin_inset Formula $\theta$
 \end_inset
 
-, worker strategy is function 
+, seller strategy is function 
 \begin_inset Formula $\sigma(\cdot,\theta)\colon S\to[0,1]$
 \end_inset
 
@@ -1264,7 +1264,7 @@ For each
 \begin_inset Formula $\theta$
 \end_inset
 
- the worker acceptance rate is the ex ante probability of accepting a task:
+ the seller acceptance rate is the ex ante probability of accepting a task:
 \begin_inset Formula 
 \begin{equation}
 \alpha(\theta)=\int\sigma(s,\theta)\mu(ds).\label{eq:alpha}
@@ -1289,7 +1289,7 @@ Denote the value of a new request with expected cost
 \end_inset
 
 .
- Value of a new task is zero if the worker rejects it, and 
+ Value of a new task is zero if the seller rejects it, and 
 \begin_inset Formula $p_{\theta}-c-\tau V(\theta)$
 \end_inset
 
@@ -1303,7 +1303,7 @@ Denote the value of a new request with expected cost
 \end_inset
 
 .
- Worker optimization problem is then the system of the following two equations:
+ seller optimization problem is then the system of the following two equations:
 \begin_inset Note Comment
 status collapsed
 
@@ -1332,7 +1332,7 @@ For each
 \begin_inset Formula $\theta$
 \end_inset
 
-, worker strategy is function 
+, seller strategy is function 
 \begin_inset Formula $\sigma(\cdot,\theta)\colon c\to[0,1]$
 \end_inset
 
@@ -1341,7 +1341,7 @@ For each
 \begin_inset Formula $\theta$
 \end_inset
 
- the worker acceptance rate is the ex ante probability of accepting a task:
+ the seller acceptance rate is the ex ante probability of accepting a task:
 \begin_inset Formula 
 \begin{equation}
 \alpha(\theta)=\int\sigma(c,\theta)dF_{\theta}^{\mu}(c).\label{eq:alpha-1}
@@ -1362,8 +1362,8 @@ Equilibrium
 \end_layout
 
 \begin_layout Standard
-We are interested in a steady state equilibrium of the market when workers
- act independently and take buyer arrival rate as given, and worker inflow
+We are interested in a steady state equilibrium of the market when sellers
+ act independently and take buyer arrival rate as given, and seller inflow
  and outflow balance out.
  
 \end_layout
@@ -1434,7 +1434,7 @@ Arrival rate
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
- arises in a steady state given workers' acceptance rates 
+ arises in a steady state given sellers' acceptance rates 
 \begin_inset Formula $\alpha(\cdot)$
 \end_inset
 
@@ -1477,7 +1477,7 @@ name "assu:no-excess-demand"
 
 \end_inset
 
-Collectively, it is physically possible for workers to complete every buyer
+Collectively, it is physically possible for sellers to complete every buyer
  task: 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
@@ -1500,7 +1500,7 @@ reference "sec:Extensions"
 \end_layout
 
 \begin_layout Standard
-The next lemma shows how to find arrival rate for available workers 
+The next lemma shows how to find arrival rate for available sellers 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
@@ -1609,7 +1609,7 @@ reference "eq:alpha"
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
- increases, workers become more picky and acceptance rate 
+ increases, sellers become more picky and acceptance rate 
 \begin_inset Formula $\alpha(\theta)$
 \end_inset
 
@@ -1625,7 +1625,7 @@ reference "eq:beta_A"
 \begin_inset Formula $\alpha(\theta)$
 \end_inset
 
- increases, buyers get directed to a smaller set of workers, hence 
+ increases, buyers get directed to a smaller set of sellers, hence 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
@@ -1649,7 +1649,7 @@ reference "prop:Equilibrium-exists-and"
 \end_inset
 
  demonstrates the role of capacity utilization in two-sided markets.
- Both buyers and workers are price-takers.
+ Both buyers and sellers are price-takers.
  The result shows that for any price 
 \begin_inset Formula $p>0$
 \end_inset
@@ -1709,8 +1709,8 @@ In this section I discuss how the model maps to the reality in the case
 \begin_inset Formula $\theta$
 \end_inset
 
- denotes worker type, i.e.
- the worker's private component of his costs; 
+ denotes seller type, i.e.
+ the seller's private component of his costs; 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -1742,7 +1742,7 @@ ons might be more relevant than the original phrasing.
 \begin_inset Formula $s$
 \end_inset
 
- is communicated to workers.
+ is communicated to sellers.
  Alternatively, I can phrase the model in a different way.
  Type 
 \begin_inset Formula $\omega$
@@ -1763,7 +1763,7 @@ ons might be more relevant than the original phrasing.
 \begin_inset Formula $s$
 \end_inset
 
- is communicated to workers.
+ is communicated to sellers.
  For example, the platform asks three questions about a buyer need, which
  imperfectly describes what the buyer wants.
  In this reinterpretation, the platform's information coarsening corresponds
@@ -1891,7 +1891,7 @@ The service providers are capacity constrained because they can do only
 \begin_inset Formula $\theta$
 \end_inset
 
- - worker skill, specialization.
+ - seller skill, specialization.
  
 \begin_inset Formula $\omega$
 \end_inset
@@ -1902,7 +1902,7 @@ The service providers are capacity constrained because they can do only
 \end_inset
 
  which applies to all tasks in the category.
- The worker may prefer to reject the tasks which he does not find to be
+ The seller may prefer to reject the tasks which he does not find to be
  a good fit, or too far, or bad timing of the lead.
  
 \begin_inset CommandInset ref

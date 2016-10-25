@@ -118,6 +118,70 @@ theorems-ams-extended-bytype
 
 \begin_body
 
+\begin_layout Subsection
+Script of the talk: Introduction
+\end_layout
+
+\begin_layout Standard
+In matching markets, such as housing market, labor market, transportation
+ market, it is important that buyers and sellers find and form the most
+ valuable matches.
+ But it is also important that these matches happen fast.
+ 
+\end_layout
+
+\begin_layout Standard
+Just to fix the ideas, let me use Airbnb as an example.
+ On Airbnb, guests request lodging services from hosts but about half of
+ requests are rejected.
+ Rejections are consequential.
+ Conditional on being rejected from their first request, searchers are 51%
+ less likely to eventually book a listing for a given market.
+ (Fradkin 2016) Where are rejections coming from?
+\end_layout
+
+\begin_layout Standard
+A distinguishing feature of a matching market relative to a consumer market
+ is that sellers have non-trivial preferences over buyers.
+ Sellers reject buyers because a buyer is not a good fit.
+ This creates the problem of 
+\emph on
+excessive screening
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+[slide with Airbnb, uber, taskrabbit]
+\end_layout
+
+\begin_layout Standard
+The goal of my work is to understand where the inefficiency is coming from
+ and how to fix it using information design.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{document}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Older version
+\end_layout
+
 \begin_layout Standard
 Hello, today I am presenting my 
 \series bold
@@ -161,7 +225,7 @@ findings
 \series bold
 generally
 \series default
-, to many 
+, to 
 \series bold
 other
 \series default
@@ -170,7 +234,7 @@ other
 \end_layout
 
 \begin_layout Standard
-Airbnb is a marketplace that's matching 
+Airbnb is a marketplace for lodging that's matching 
 \series bold
 guests
 \series default
@@ -207,7 +271,7 @@ likes
 
 \begin_layout Standard
 It sounds nice and efficient but there is a problem.
- If hosts reject too 
+ If hosts reject guests too 
 \series bold
 often
 \series default
@@ -300,11 +364,12 @@ search
 high
 \series default
 .
- 
+ How can Airbnb deal with excessive search problem? 
 \end_layout
 
 \begin_layout Standard
-Now, Airbnb is a digital marketplace and controls most aspects of the matching
+I approach this problem using information design.
+ Now, Airbnb is a digital marketplace and controls most aspects of the matching
  system.
  In particular, it controls the information guests and hosts see about each
  other on their profiles.
@@ -321,6 +386,15 @@ Question
 \end_layout
 
 \begin_layout Standard
+The effect of information disclosure is ambiguous in matching markets.
+ There are three competing effects.
+ First, the Individual Choice effect.
+ Workers want to be as informed as possible about guests characteristics
+ because they want to 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 The 
 \series bold
 standard
@@ -329,15 +403,20 @@ standard
 \series bold
 matching value
 \series default
-, the designer wants hosts and guests to disclose the 
+, the designer wants hosts and guests to 
 \series bold
-maximum
+disclose
 \series default
- of relevant 
+ the maximum of relevant 
 \series bold
 information
 \series default
- about themselves, so that the participants of the marketplace can 
+ about themselves, so that the participants of the marketplace can
+\end_layout
+
+\end_inset
+
+ 
 \series bold
 find
 \series default
@@ -354,7 +433,15 @@ most
 valuable
 \series default
  matches.
- However, abundance of information about match value can also have 
+ 
+\end_layout
+
+\begin_layout Standard
+========
+\end_layout
+
+\begin_layout Standard
+However, abundance of information about match value can also have 
 \series bold
 negative
 \series default

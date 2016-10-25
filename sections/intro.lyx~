@@ -405,7 +405,7 @@ key "CFwp"
  
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Horton2015"
+key "Hor15"
 
 \end_inset
 
@@ -1009,7 +1009,7 @@ key "ALG16"
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 add description
@@ -1020,7 +1020,7 @@ add description
 .
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 look into Pathak's syllabus for more.

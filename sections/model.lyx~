@@ -391,7 +391,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../matching dynamics.png
+	filename /Users/gleb/Google Drive/Projects/JMP/matching dynamics.png
 	lyxscale 20
 	width 70text%
 
@@ -1638,6 +1638,36 @@ reference "proof:eqm-exists"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+ demonstrates the role of capacity utilization in two-sided markets.
+ Both buyers and workers are price-takers.
+ The result shows that for any price 
+\begin_inset Formula $p>0$
+\end_inset
+
+ and any segmentation 
+\begin_inset Formula $\mu$
+\end_inset
+
+, there is a steady-state equilibrium characterized by the vector of acceptance
+ rates 
+\begin_inset Formula $\left(\alpha(\theta)\right)$
+\end_inset
+
+ where the market clears.
+ This happens because there are two mechanisms to clear the market: through
+ adjustments in price and through adjustments in capacity utilization.
+ The former is the most familiar mechanism, but in this paper I emphasize
+ the importance of the latter.
  
 \end_layout
 
