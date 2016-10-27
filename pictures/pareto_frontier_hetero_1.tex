@@ -1,0 +1,41 @@
+\begin{tikzpicture}[xscale=1,yscale=1] 
+
+		\draw [<->] (0,8) node (yaxis)[left] {$CS$} 
+		        |- (10,0) node (xaxis) [below] {$V$};
+	\def\mycoordinates{(0,0) (8,3.5) (0,7)}
+
+	\draw[step=1cm,gray,very thin] (0,0) grid (10,8);
+
+	\def\mycoordinates{(0,0) (8,3.5) (0,7)}
+
+	\draw[thick] plot [smooth,tension=1.3] coordinates {(8,2) (5.3,5.5) (0,7)};
+
+        \draw[line width=2.5] plot [smooth,tension=1.3] coordinates {(6.5,2.3) (4.3,4.8) (1,6)};
+	
+
+
+
+	\node at (7.2,6.2) [above] {PARETO FRONTIER};
+	\node at (5,4) [above,rotate=-45] {Implementability frontier};
+
+%	\node at (2,4.8) [above] {Higher $\bar\rho$};
+
+%	\node at (5,2.5) [above] {Lower $\bar\rho$};
+
+
+	\coordinate (A) at (4,3);
+        \fill[red] (A)  circle (2pt) ;
+	\node at (A) [below,red] {$FD$};
+
+
+\node (One) at (-3,0) [shape=circle,draw] {$One$}; 
+\node (Two) at (3,0) [shape=circle,draw] {$Two$};
+\def\myshift#1{\raisebox{-2.5ex}}
+\draw [->,thick,postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\myshift|Some more bent text}}}] (One) to [bend right=45]  (Two);
+\def\myshift#1{\raisebox{1ex}}
+\draw [->,thick,postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\myshift|Some bent text}}}]      (One) to [bend left=45] (Two);
+
+
+
+        
+\end{tikzpicture}

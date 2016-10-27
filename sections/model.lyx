@@ -204,20 +204,36 @@ theorems-ams-extended-bytype
 \end_layout
 
 \begin_layout Section
-Dynamic Model of Peer-to-peer Market
+Model of Decentralized Matching Market
 \end_layout
 
 \begin_layout Standard
-In this section I lay out a dynamic model of peer-to-peer market, in which
- buyers arrive gradually over time and contact one seller to complete their
- task; sellers have heterogenous costs across buyer tasks, seller capacities
- are limited, and sellers have control over what matches to accept.
- The model will allow me to study the role of heterogeneous preferences
- and capacity utilization in two-sided markets.
- I make my first important observation, that in peer-to-peer markets, from
- the perspective of service providers, there is a tradeoff between match
- rate and match quality (average cost of performing a task).
+In this section I lay out a model of a decentralized matching market, in
+ which buyers arrive gradually over time and pursue sellers by proposing
+ a job; sellers have heterogenous preferences over buyers, seller capacities
+ are limited, and sellers independently choose what matches to accept.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Why? The model will allow me...
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What do we learn from this section? 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -225,7 +241,7 @@ Setup
 \end_layout
 
 \begin_layout Paragraph
-Dynamic matching.
+Spot matching process.
  
 \end_layout
 
@@ -238,18 +254,27 @@ There are three parties involved in the search and matching process: sellers,
 \begin_layout Standard
 There is mass 1 of sellers, who always stay on the platform, never leave
  or arrive.
- The sellers are passive searchers; they do not actively look for jobs,
- but instead are presented with a sequence of job offers at Poisson rate,
- and decide whether to accept or reject them to maximize discounted profit
- flow.
+ The sellers do not actively look for jobs, but instead screen the buyer
+ requests: each worker is presented with a sequence of job offers at Poisson
+ rate, and he decides whether to accept or reject them to maximize discounted
+ profit flow.
  An accepted job takes time 
 \begin_inset Formula $\tau$
 \end_inset
 
  to complete, during which time the seller cannot receive new jobs.
- This is the search friction.
- At each moment in time, there are two pools of sellers: available and busy.
- Available sellers wait for jobs, busy sellers work on their job.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is the search friction.
+\end_layout
+
+\end_inset
+
+ At each moment a seller is either available and waits for new jobs, or
+ busy with working on a job.
  
 \end_layout
 
@@ -260,7 +285,7 @@ There is a continuum of potential buyers who gradually arrive over time
 \end_inset
 
 .
- Namely, within an time interval 
+ That is, within a time interval 
 \begin_inset Formula $dt$
 \end_inset
 
@@ -269,81 +294,37 @@ There is a continuum of potential buyers who gradually arrive over time
 \end_inset
 
  of buyers arrive to the platform.
- Buyers are short lived.
- Buyer search is passive: they put up a job and the platform assigns them
- to an available seller.
- If their job is accepted, they stay until the job is completed, otherwise
- they leave.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Rejection-intolerant buyers is a simplifying assumption that makes the model
- of agent flows tractable.
- It captures the real aspect of matching markets that rejections are costly
- to buyers, e.g.
- wasted time, wasted search effort, bidding costs, etc.
- Moreover, buyers often do take rejections badly.
- For example, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Fradkin2014"
-
-\end_inset
-
- reports that on Airbnb, an initial rejection decreases the probability
- that the guest eventually books any listing by 50%.
- 
-\end_layout
-
-\end_inset
-
- We make the following assumption on the matching process.
- 
-\end_layout
-
-\begin_layout Assumption
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Random Assignment
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "assu:random-assignment"
-
-\end_inset
-
-Buyers are assigned uniformly at random to the available sellers.
+ Each buyer has a single job he wants to be completed.
+ Upon arrival, the buyer proposes the job to one of the available sellers.
+ I assume that the target seller is drawn uniformly at random from the pool
+ of available workers.
+ If the buyer's job is accepted, the buyer stays until the job is completed,
+ otherwise he leaves the platform.
  
 \end_layout
 
 \begin_layout Standard
-This assumption has two implications.
- First, seller of any type faces the same intensity of buyer traffic.
- Second, each seller faces the same distribution of buyer tasks.
- This is a simplifying assumption that helps me to focus on the mechanics
- on the supply side of the market.
- In the extension 
+Assume 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ which implies that collectively, it is physically possible for sellers
+ to complete every buyer job.
+ The assumption makes the exposition easier and relaxing it requires more
+ notation to deal with either automatic rejections or queues.
+ I do this in  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:General-demand:-workers"
+reference "sec:Extensions"
 
 \end_inset
 
- we show how to deal with a more general demand system where demand for
- each seller type can be different.
- 
+ and show that qualitatively results do not change.
 \end_layout
 
 \begin_layout Standard
 The platform opts out of the centralized matching process, instead it makes
- segmentation of buyer tasks part of its design, as described below.
+ disclosure of buyer characteristics part of its design, as described below.
  See 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -391,9 +372,9 @@ centering
 
 
 \begin_inset Graphics
-	filename /Users/gleb/Google Drive/Projects/JMP/matching dynamics.png
+	filename ../pictures/matching_chart.eps
 	lyxscale 20
-	width 70text%
+	width 60text%
 
 \end_inset
 
@@ -404,20 +385,20 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Matching dynamics.
+Spot matching process.
  Buyers arrive at exogenous rate 
 \begin_inset Formula $\beta$
 \end_inset
 
-, and make one attempt to match with available sellers.
+, and contact available sellers.
  If rejected, a buyer leaves the platform.
  If accepted, the buyer forms a match which lasts for time 
 \begin_inset Formula $\tau$
 \end_inset
 
 .
- After the time elapses, the buyer leaves the platform, and the sellers
- return to the pool of available sellers.
+ After the time elapses, the buyer leaves the platform, and the seller returns
+ to waiting.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -494,7 +475,7 @@ input{pictures/seller_problem.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-seller dynamic optimization problem with repeated search and waiting.
+Seller dynamic optimization problem with repeated search and waiting.
  An available seller receives requests at Poisson rate 
 \begin_inset Formula $\beta_{A}$
 \end_inset
@@ -543,137 +524,162 @@ Search and matching process.
 
 \end_layout
 
+\begin_layout Paragraph
+Heterogeneity and payoffs.
+\end_layout
+
 \begin_layout Standard
-There are two dimensions of heterogeneity in this matching market.
- First, buyer tasks are heterogenous.
- Second, sellers are diverse.
- The former implies that the sellers have heterogenous costs over tasks.
- The latter implies that different sellers have different preferences over
- tasks.
- seller type is 
-\begin_inset Formula $\theta\in\Theta$
+There are two dimensions of heterogeneity in the matching market.
+ First, each seller has heterogeneous match payoff across buyers.
+ Second, different seller have different payoff functions over jobs.
+ Concerning the platform's information disclosure problem, I need the following
+ pieces of notation.
+ Let 
+\begin_inset Formula $x$
 \end_inset
 
-, where 
-\begin_inset Formula $\Theta$
+ be buyer type, with the interpretation that 
+\begin_inset Formula $x$
 \end_inset
 
- 
-\begin_inset Note Note
-status collapsed
+ is the buyer characteristics 
+\bar under
+observed
+\bar default
+ by the platform.
+\begin_inset Foot
+status open
 
 \begin_layout Plain Layout
-can be finite or
+Buyer type 
+\begin_inset Formula $x$
+\end_inset
+
+ captures the payoff-relevant information the platform elicits from the
+ buyer about the job, passively from the buyer's cookies and queries or
+ actively by asking questions.
+ For example, on Uber, 
+\begin_inset Formula $x$
+\end_inset
+
+ would include rider's destination; on Airbnb, 
+\begin_inset Formula $x$
+\end_inset
+
+ would include guest's race, age and gender.
 \end_layout
 
 \end_inset
 
-is a compact subset of a Euclidean space.
- The cdf of 
-\begin_inset Formula $\theta$
+ The space of buyer types 
+\begin_inset Formula $X$
+\end_inset
+
+ is a compact subset of Euclidean space.
+ Distribution of 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $F$
+\end_inset
+
+ with full support.
+ Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be seller type, with the interpretation that 
+\begin_inset Formula $y$
+\end_inset
+
+ is the seller characteristics 
+\bar under
+unobserved
+\bar default
+ by the platform.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Seller type 
+\begin_inset Formula $y$
+\end_inset
+
+ captures the payoff-relevant information the platform did not elicit from
+ sellers by whatever reason – costly, unethical, etc.
+ For example, on Uber, 
+\begin_inset Formula $y$
+\end_inset
+
+ would include the driver's preference for long rides and traffic; on Airbnb,
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ would include the host's preference for his guest's age, gender, socio-economic
+ status, race, etc.
+\end_layout
+
+\end_inset
+
+ The space of seller types 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a compact subset of Euclidean space.
+ Distribution of 
+\begin_inset Formula $y$
 \end_inset
 
  is 
 \begin_inset Formula $G$
 \end_inset
 
-, which
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
- If 
-\begin_inset Formula $\Theta$
-\end_inset
-
- is continuous, assume 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- admits probability density function 
+ with full support that admits density 
 \begin_inset Formula $g$
 \end_inset
 
-.
- Buyer task type is 
-\begin_inset Formula $\omega\in\Omega$
+, 
+\begin_inset Formula $g$
 \end_inset
 
-, distribution of task types is 
-\begin_inset Formula $H$
-\end_inset
-
-.
- 
-\begin_inset Formula $\Omega$
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-can be finite or
-\end_layout
-
-\end_inset
-
-is a compact subset of a Euclidean space.
- seller costs are heterogenous across tasks, namely, a seller of type 
-\begin_inset Formula $\theta$
-\end_inset
-
- has cost of completing task 
-\begin_inset Formula $\omega$
-\end_inset
-
- equal to 
-\begin_inset Formula 
-\[
-C(\theta,\omega)\geq0.
-\]
-
-\end_inset
-
-For example, 
-\begin_inset Formula $\omega$
-\end_inset
-
- can be the difficulty of the task, destination of a ride, number of boxes
- to carry, etc.
- 
-\begin_inset Formula $\theta$
-\end_inset
-
- can indicate a seller's skill level, location, type of preferred task,
- etc.
- In the base model, I assume fixed prices, seller 
-\begin_inset Formula $\theta$
-\end_inset
-
-'s price is 
-\begin_inset Formula $p_{\theta}\geq0$
+ is differentiable on 
+\begin_inset Formula $Y$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Buyer gross payoff from matching is 
-\begin_inset Formula $u(\omega,\theta)$
+ Seller profit for one match is 
+\begin_inset Formula $\pi(x,y)$
 \end_inset
 
 .
- Assume that all incoming buyers' net payoff from matching is positive:
+ Assume 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is continuous and for any 
+\begin_inset Formula $y$
+\end_inset
+
+ there is 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi(x,y)>0$
+\end_inset
+
+.
+ Buyer net match payoff is 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+.
+ Assume that all incoming buyers have non-negative match payoff:
 \begin_inset Formula 
 \begin{equation}
-u(\omega,\theta)-p_{\theta}\geq0,\quad\forall\theta,\omega.\label{eq:buyer-net-payoff}
+u(x,y)\geq0.\label{eq:buyer-net-payoff}
 \end{equation}
 
 \end_inset
@@ -682,39 +688,75 @@ u(\omega,\theta)-p_{\theta}\geq0,\quad\forall\theta,\omega.\label{eq:buyer-net-p
 \end_layout
 
 \begin_layout Paragraph
-Segmentation.
+Information Disclosure.
 \end_layout
 
 \begin_layout Standard
-The platform observes buyer type 
-\begin_inset Formula $\omega$
+The platform plays a signaling game with sellers.
+ The platform observes buyer type 
+\begin_inset Formula $x$
 \end_inset
 
- but not seller type 
-\begin_inset Formula $\theta$
+ and chooses how to reveal it to sellers.
+ Sellers do not receive any additional information about 
+\begin_inset Formula $x$
+\end_inset
+
+ outside of what the platform tells them.
+ Let 
+\begin_inset Formula $S=\Delta(X)$
+\end_inset
+
+ be the set of all posterior distributions over 
+\begin_inset Formula $X$
 \end_inset
 
 .
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\omega$
+ 
+\emph on
+Information disclosure policy
+\emph default
+ 
+\begin_inset Formula $\lambda\in\Delta(S)$
 \end_inset
 
- captures all information the platform elicits from the buyer about the
- task, passively from the buyer's cookies and queries or actively by asking
- questions.
+ is a probability distribution of posteriors.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $X$
+\end_inset
+
+ is a compact subset of a Euclidean space, 
+\begin_inset Formula $\Delta(S)$
+\end_inset
+
+ is the set of Borel-measurable probability distributions with the weak-*
+ topology on 
+\begin_inset Formula $\Delta(X)$
+\end_inset
+
+.
  
 \end_layout
 
 \end_inset
 
- A 
-\emph on
-segmentation
-\emph default
- is a devision of tasks into different segments.
+ The interpretation is 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ is the platform's signal to the seller, and so 
+\begin_inset Formula $\lambda(S')$
+\end_inset
+
+ is the fraction of buyers with signals 
+\begin_inset Formula $S'\subset S$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -727,16 +769,45 @@ public
 \begin_inset Quotes erd
 \end_inset
 
- segmentation in the base model, i.e.
- I am not studying the mech.
- design problem where the platform tries to elicit or learn the seller’s
- information and tailor the segments to a seller type.
+ signaling when the same 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ applies to all seller.
+ I am not studying the mechanism design problem where the platform tries
+ to elicit or learn the seller’s type 
+\begin_inset Formula $y$
+\end_inset
+
+ and tailor the disclosure policy to seller type.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+ find in the one-shot signaling game with linear payoffs that public signaling
+ is equivalent to private signaling.
  
 \end_layout
 
 \end_inset
 
- The segmentation framework I use below is adopted from 
+ Note that a disclosure policy can be seen as a two-stage lottery on 
+\begin_inset Formula $X$
+\end_inset
+
+ whose reduced lottery is prior 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The two-stage lottery framework for disclosure is adopted from 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "BBM15"
@@ -744,101 +815,85 @@ key "BBM15"
 \end_inset
 
 .
- Let 
-\begin_inset Formula $S=\Delta(\Omega)$
-\end_inset
-
- be the set of all possible segments.
- Thus, a segmentation 
-\begin_inset Formula $\mu\in\Delta(S)$
-\end_inset
-
- is a probability distribution on 
-\begin_inset Formula $S$
-\end_inset
-
-,
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-When 
-\begin_inset Formula $\Omega$
-\end_inset
-
- is a compact subset of a Euclidean space, 
-\begin_inset Formula $\Delta(S)$
-\end_inset
-
- is the set of Borel-measurable probability distributions with the weak-*
- topology on 
-\begin_inset Formula $\Delta(\Omega)$
-\end_inset
-
-.
- 
 \end_layout
 
 \end_inset
 
- with the interpretation that 
-\begin_inset Formula $\mu(S')$
-\end_inset
-
- is the proportion of tasks in segments 
-\begin_inset Formula $S'\subset S$
-\end_inset
-
-.
- A segmentation can be seen as a two-stage lottery on 
-\begin_inset Formula $\Omega$
-\end_inset
-
- whose reduced lottery is prior 
-\begin_inset Formula $h(\omega)$
-\end_inset
-
-.
- The set of possible segmentations is then:
+ The set of possible disclosure policies is then:
 \begin_inset Formula 
 \[
-\left\{ \mu\in\Delta(S)\colon\int s\mu(ds)=h\right\} .
+\left\{ \lambda\in\Delta(S)\colon\int s\lambda(ds)\sim F\right\} .
 \]
 
 \end_inset
 
-
-\emph on
- 
-\emph default
-When a buyer arrives and puts up a task of type 
-\begin_inset Formula $\omega$
+ Full disclosure policy, denoted by 
+\begin_inset Formula $\lambda^{FD}$
 \end_inset
 
-, the platform assigns it to one of the segments according to 
-\begin_inset Formula $\mu$
+, perfectly reveals buyer type 
+\begin_inset Formula $x$
 \end_inset
 
-, and then the corresponding seller only observes the segment the task belongs
- to.
- The perfect segmentation is the one where type 
-\begin_inset Formula $\omega$
-\end_inset
-
- is perfectly revealed to the sellers.
- The perfect segmentation is denoted by 
-\begin_inset Formula $\mu_{0}$
-\end_inset
-
-; we have 
-\begin_inset Formula $\mu_{0}(\delta_{\omega})=h(\omega)$
-\end_inset
-
- for all 
-\begin_inset Formula $\omega\in\Omega$
+ to the sellers.
+ No disclosure policy fully conceals 
+\begin_inset Formula $x$
 \end_inset
 
 .
+ Disclosure policy 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ is 
+\emph on
+coarser
+\emph default
+ than 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ if 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ is a Blackwell garbling of 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+.
+ That is, the platform can obtain 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+ from 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ by taking 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ and partially concealing some 
+\begin_inset Formula $x$
+\end_inset
+
+'s.
+ When a buyer of type 
+\begin_inset Formula $x$
+\end_inset
+
+ arrives, the platform draws a signal according to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and shows it to the seller.
+ The seller knows the platform's choice of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, and so his interpretation of a signal as a posterior is correct.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -847,36 +902,35 @@ Steady state.
 \end_layout
 
 \begin_layout Standard
-A state of the dynamic matching system described above is characterized
- by the mass of available sellers of each type and the acceptance rates
- of each seller type.
+A steady state of the matching process is characterized by the fraction
+ of available sellers of every type and their acceptance rates.
  Formally, let 
-\begin_inset Formula $\alpha(\theta)\geq0$
+\begin_inset Formula $\alpha(y)\geq0$
 \end_inset
 
  be the acceptance rate of type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  available sellers, and let 
-\begin_inset Formula $\rho(\theta)$
+\begin_inset Formula $\rho(y)$
 \end_inset
 
  be the type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- 
+
 \emph on
-capacity utilization rate
+ utilization rate
 \emph default
  – the fraction of type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  sellers who are busy.
- Denote the total mass of available sellers by 
-\begin_inset Formula $A:=\int_{\Theta}(1-\rho(\theta))dG(\theta)$
+ Denote the total fraction of busy sellers by 
+\begin_inset Formula $\bar{\rho}:=\int_{Y}\rho(y)dG(y)$
 \end_inset
 
 .
@@ -884,97 +938,131 @@ capacity utilization rate
 \end_layout
 
 \begin_layout Standard
-To define steady state, I first need to define the seller inflow and outflow.
- The outflow of type-
-\begin_inset Formula $\theta$
+In a steady state, the flow of sellers who become busy is equal to the flow
+ of workers who become available.
+ The available-to-busy flow is equal to the buyer flow type-
+\begin_inset Formula $y$
 \end_inset
 
- sellers is the mass of sellers that flows from 
-\begin_inset Quotes eld
-\end_inset
-
-available
-\begin_inset Quotes erd
-\end_inset
-
- pool to 
-\begin_inset Quotes eld
-\end_inset
-
-busy
-\begin_inset Quotes erd
-\end_inset
-
- pool in a unit of time.
- By the Random Assignment assumption, the buyer flow to type-
-\begin_inset Formula $\theta$
+ sellers receive times their acceptance rate.
+ Since buyer get distributed uniformly across the available sellers, the
+ buyer flow to type-
+\begin_inset Formula $y$
 \end_inset
 
  sellers is 
-\begin_inset Formula $\beta\frac{(1-\rho(\theta))g(\theta)}{A}$
+\begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}$
 \end_inset
 
 .
- The outflow is thus equal to buyer flow 
-\begin_inset Formula $\beta\frac{(1-\rho(\theta))g(\theta)}{A}$
+ The acceptance rate is 
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
- times the acceptance rate 
-\begin_inset Formula $\alpha(\theta)$
+.
+ Thus, the available-to-busy flow is 
+\begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)$
 \end_inset
 
- .
- The inflow of type-
-\begin_inset Formula $\theta$
+.
+ The busy-to-available flow is 
+\begin_inset Formula $g(y)\rho(y)/\tau$
 \end_inset
 
- sellers is the mass of sellers that flows from 
-\begin_inset Quotes eld
+ because the mass of busy 
+\begin_inset Formula $y$
 \end_inset
 
-busy
-\begin_inset Quotes erd
+-sellers is 
+\begin_inset Formula $g(y)\rho(y)$
 \end_inset
 
- pool to 
-\begin_inset Quotes eld
-\end_inset
-
-available
-\begin_inset Quotes erd
-\end_inset
-
- pool in unit of time.
- The size of the 
-\begin_inset Quotes eld
-\end_inset
-
-busy
-\begin_inset Quotes erd
-\end_inset
-
- pool is 
-\begin_inset Formula $g(\theta)\rho(\theta)$
-\end_inset
-
-, the tasks are completed in time 
+, and jobs are completed in time 
 \begin_inset Formula $\tau$
 \end_inset
 
-, therefore the inflow is equal to 
-\begin_inset Formula $g(\theta)\rho(\theta)/\tau$
-\end_inset
-
 .
- 
-\end_layout
-
-\begin_layout Standard
-In a steady state, the inflow equals the outflow for each seller type:
+ Hence, in a steady state, we have:
 \begin_inset Formula 
 \begin{equation}
-\beta\frac{(1-\rho(\theta))g(\theta)}{A}\alpha(\theta)=\frac{g(\theta)\rho(\theta)}{\tau},\quad\forall\theta\in\Theta.\label{eq:SS}
+\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
 \end{equation}
+
+\end_inset
+
+See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Matching-process-in"
+
+\end_inset
+
+ for the illustration.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../pictures/match_dynamics_pics/match_steady_state_complete.eps
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Matching process in a steady state.
+ 
+\begin_inset Formula $g(y)$
+\end_inset
+
+ is the mass of 
+\begin_inset Formula $y$
+\end_inset
+
+-sellers, 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ is utilization rate, 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is the average utilization rate.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Matching-process-in"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -982,7 +1070,7 @@ In a steady state, the inflow equals the outflow for each seller type:
 \end_layout
 
 \begin_layout Paragraph
-Supply: seller repeated search problem.
+Seller repeated search problem.
  
 \end_layout
 
@@ -991,14 +1079,13 @@ Buyers arrive at flow rate
 \begin_inset Formula $\beta$
 \end_inset
 
-, and by the Random Assignment assumption, get distributed uniformly at
- random across all available sellers.
+ and get distributed uniformly at random across all available sellers.
  Therefore, each individual available seller experiences a Poisson arrival
- process of buyers, and the rate of the arrival is equal to the buyer-to-seller
- ratio:
+ process of buyers, where the rate of the arrival is equal to the buyer-to-selle
+r ratio:
 \begin_inset Formula 
 \begin{equation}
-\beta_{A}:=\frac{\beta}{A}\label{eq:beta_A-1}
+\beta_{A}:=\frac{\beta}{1-\bar{\rho}}\label{eq:beta_A-1}
 \end{equation}
 
 \end_inset
@@ -1046,22 +1133,19 @@ cite the relevant theorem
 
  of buyers arrive.
  As we show in the rest of this section, stochasticity of individual arrival
- process combined with independent decision-making creates matching inefficiency.
+ process combined with independent decision-making creates seller coordination
+ problem which results in matching inefficiency.
  
 \end_layout
 
 \begin_layout Standard
-seller 
-\begin_inset Formula $\theta$
-\end_inset
-
- takes 
+Each seller takes 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
  as given
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 This follows from the fact that there is a continuum of sellers on the platform,
@@ -1075,8 +1159,17 @@ This follows from the fact that there is a continuum of sellers on the platform,
 
 \end_inset
 
- and solves the dynamic optimization problem where for each incoming task
- a seller has to decide to accept it or reject it.
+ and solves the dynamic optimization problem where for each incoming job
+ he observes the platform's signal 
+\begin_inset Formula $s$
+\end_inset
+
+, and based on 
+\begin_inset Formula $s$
+\end_inset
+
+, chooses to accept or reject the job in order to maximize his average profit
+ flow.
  See 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1085,225 +1178,117 @@ reference "fig:Sellers-repeated-search"
 \end_inset
 
  for the illustration of the seller dynamic optimization problem.
- 
-\end_layout
-
-\begin_layout Standard
-If type-
-\begin_inset Formula $\theta$
+ The expected profit for seller 
+\begin_inset Formula $y$
 \end_inset
 
- seller accepts task of type 
-\begin_inset Formula $\omega$
-\end_inset
-
-, he immediately earns
-\begin_inset Formula 
-\[
-p_{\theta}-C(\theta,\omega).
-\]
-
-\end_inset
-
-sellers are risk neutral, and so for the decision-making, it is sufficient
- to know only the distribution of posterior means.
- The expected cost on segment 
+ of a job with signal 
 \begin_inset Formula $s$
 \end_inset
 
- for type-
-\begin_inset Formula $\theta$
-\end_inset
-
- seller is 
-\begin_inset Formula $\Exp[C(\theta,\omega)|s]=\int_{\Omega}C(\theta,\omega)s(d\omega)$
+ is 
+\begin_inset Formula $\pi(s,y)=\int_{X}\pi(x,y)s(dx)$
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Denote by 
-\begin_inset Formula $F_{\theta}^{\mu}$
-\end_inset
-
- the distribution of posterior means induced by disclosure policy 
-\begin_inset Formula $\mu$
-\end_inset
-
- for seller of type 
-\begin_inset Formula $\theta$
-\end_inset
-
-.
- We have: 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-F_{\theta}^{\mu}(y)=\int_{S}I\{\Exp[C(\theta,\omega)|s]\leq y\}\mu(ds),\label{eq:F_theta[mu]-1}
-\end{equation}
-
-\end_inset
-
-Note that by the Random Assignment, 
-\begin_inset Formula $H$
-\end_inset
-
- is a function of 
-\begin_inset Formula $\omega$
-\end_inset
-
- only.
- Dependign on the platform's disclosure policy 
-\begin_inset Formula $\mu$
-\end_inset
-
-, 
-\begin_inset Formula $F_{\theta}^{\mu}$
-\end_inset
-
- can be absolutely continuous or discrete.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-sellers solve a dynamic optimization problem with repeated search and waiting.
- There is no discounting.
  Denote by 
-\begin_inset Formula $V(\theta)$
+\begin_inset Formula $V(y)$
 \end_inset
 
  the average profit flow when seller of type 
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  acts optimally (value function)
 \begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-For example, if a seller earns $1 on each task, and time interval between
- starting consequent tasks is 2, then 
-\begin_inset Formula $V(\theta)=1/2$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-.
- Denote the value of a new request from segment 
-\begin_inset Formula $s$
-\end_inset
-
- by 
-\begin_inset Formula $\pi(s,\theta)$
-\end_inset
-
-.
- Value of the task is zero if the seller rejects it, and 
-\begin_inset Formula $p_{\theta}-\Exp[C(\theta,\omega)|s]-\tau V(\theta)$
-\end_inset
-
- if he accepts it, where 
-\begin_inset Formula $\tau V(\theta)$
-\end_inset
-
- is the opportunity cost of lost value for working on the task for time
- 
-\begin_inset Formula $\tau$
-\end_inset
-
-.
- seller optimization problem is then the system of the following two equations:
-\begin_inset Note Comment
 status collapsed
 
 \begin_layout Plain Layout
-I still use this formulation because in the alternative I have to differentiate
- 
-\begin_inset Formula $F(c)$
+For example, if a seller earns $1 on each job, and time interval between
+ starting consequent jobs is 2, then 
+\begin_inset Formula $V(y)=1/2$
 \end_inset
 
- which is not differentiable in the general case.
+.
  
 \end_layout
 
 \end_inset
 
+.
  
-\begin_inset Formula 
-\begin{eqnarray}
-V(\theta) & = & \beta_{A}\int\pi(s,\theta)\mu(ds)\label{eq:V-via-pi}\\
-\pi(s,\theta) & = & \max\{0,p_{\theta}-\Exp[C(\theta,\omega)|s]-\tau V(\theta)\}\label{eq:pi(c)}
-\end{eqnarray}
-
-\end_inset
-
-For each 
-\begin_inset Formula $\theta$
-\end_inset
-
-, seller strategy is function 
-\begin_inset Formula $\sigma(\cdot,\theta)\colon S\to[0,1]$
-\end_inset
-
- that maps a task's segment to the probability of accepting it.
- For each 
-\begin_inset Formula $\theta$
-\end_inset
-
- the seller acceptance rate is the ex ante probability of accepting a task:
-\begin_inset Formula 
-\begin{equation}
-\alpha(\theta)=\int\sigma(s,\theta)\mu(ds).\label{eq:alpha}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Denote the value of a new request with expected cost 
-\begin_inset Formula $c$
+Sellers are risk neutral.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+and so for the decision-making, it is sufficient to know only the distribution
+ of posterior means.
+ 
+\end_layout
+
 \end_inset
 
- by 
-\begin_inset Formula $\pi(c,\theta)$
+Denote by 
+\begin_inset Formula $v(s,y)$
 \end_inset
 
-.
- Value of a new task is zero if the seller rejects it, and 
-\begin_inset Formula $p_{\theta}-c-\tau V(\theta)$
+ the value of one new job with signal 
+\begin_inset Formula $s$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ includes the option value of rejecting the job and the opportunity cost
+ of being unavailable.
+ Value of a new job is zero if the seller rejects it, and 
+\begin_inset Formula $\pi(s,y)-\tau V(y)$
 \end_inset
 
  if he accepts it, where 
-\begin_inset Formula $\tau V(\theta)$
+\begin_inset Formula $\tau V(y)$
 \end_inset
 
- is the opportunity cost of lost value for working on the task for time
+ is the opportunity cost of accepting due to being unavailable for time
  
 \begin_inset Formula $\tau$
 \end_inset
 
 .
- seller optimization problem is then the system of the following two equations:
+ There is no discounting.
+ Seller optimization problem is then the system of the following two equations:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I consider time average payoff rather than discounted sum because discount
+ rate is not essential for my argument.
+ However, the results immediately generalize to the case when the seller
+ has discount rate 
+\begin_inset Formula $r$
+\end_inset
+
+ by replacing 
+\begin_inset Formula $\tau$
+\end_inset
+
+ with 
+\begin_inset Formula $\tau_{r}=\frac{1-e^{-r\tau}}{r}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Comment
 status collapsed
 
@@ -1322,35 +1307,23 @@ I still use this formulation because in the alternative I have to differentiate
  
 \begin_inset Formula 
 \begin{eqnarray}
-V(\theta) & = & \beta_{A}\int\pi(c,\theta)dF_{\theta}^{\mu}(c)\label{eq:V-via-pi-1}\\
-\pi(c,\theta) & = & \max\{0,p_{\theta}-c-\tau V(\theta)\}\label{eq:pi(c)-1}
+V(y) & = & \beta_{A}\int v(s,y)\lambda(ds)\label{eq:V-via-pi}\\
+v(s,y) & = & \max\{0,\pi(s,y)-\tau V(y)\}\label{eq:pi(c)}
 \end{eqnarray}
 
 \end_inset
 
-For each 
-\begin_inset Formula $\theta$
+Seller strategy is function 
+\begin_inset Formula $\sigma(\cdot,y)\colon S\to[0,1]$
 \end_inset
 
-, seller strategy is function 
-\begin_inset Formula $\sigma(\cdot,\theta)\colon c\to[0,1]$
-\end_inset
-
- that maps the expected cost of a task to the probability of accepting it.
- For each 
-\begin_inset Formula $\theta$
-\end_inset
-
- the seller acceptance rate is the ex ante probability of accepting a task:
+ that for every seller type maps a signal to the probability of accepting
+ it.
+ The seller acceptance rate is the ex ante probability of accepting a job:
 \begin_inset Formula 
 \begin{equation}
-\alpha(\theta)=\int\sigma(c,\theta)dF_{\theta}^{\mu}(c).\label{eq:alpha-1}
+\alpha(y)=\int\sigma(s,y)\lambda(ds).\label{eq:alpha}
 \end{equation}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -1362,32 +1335,27 @@ Equilibrium
 \end_layout
 
 \begin_layout Standard
-We are interested in a steady state equilibrium of the market when sellers
- act independently and take buyer arrival rate as given, and seller inflow
- and outflow balance out.
- 
-\end_layout
+I am interested in a steady state equilibrium of the market in which the
+ sellers take buyer arrival rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
 
-\begin_layout Standard
-Before stating the definition of the equilibrium, recall that the exogenous
- objects in my model are the following: buyer flow rate 
+ as given and optimize independently, and the seller busy-available flows
+ balance out.
+ Recall that the exogenous objects in my model are: buyer flow rate 
 \begin_inset Formula $\beta$
 \end_inset
 
-, prices 
-\begin_inset Formula $p_{\theta}$
-\end_inset
-
-, cost function 
-\begin_inset Formula $C(\omega,\theta)$
+, profit function 
+\begin_inset Formula $\pi(x,y)$
 \end_inset
 
 , distribution of types 
-\begin_inset Formula $G(\theta)$
+\begin_inset Formula $G(y)$
 \end_inset
 
  and 
-\begin_inset Formula $H(\omega)$
+\begin_inset Formula $F(x)$
 \end_inset
 
 , and completion time 
@@ -1395,12 +1363,8 @@ Before stating the definition of the equilibrium, recall that the exogenous
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Based on the exogenous objects, a tuple of endogenous objects 
-\begin_inset Formula $(\alpha(\theta),\beta_{A})_{\theta\in\Theta}$
+ Based on the exogenous objects, a tuple 
+\begin_inset Formula $(\sigma,\bar{\rho})$
 \end_inset
 
  constitute a 
@@ -1411,31 +1375,33 @@ steady-state equilibrium
 \end_layout
 
 \begin_layout Enumerate
-Acceptance rates 
-\begin_inset Formula $\alpha(\cdot)$
+[Optimality] For every type-
+\begin_inset Formula $y$
 \end_inset
 
- are optimal given buyer arrival rate 
-\begin_inset Formula $\beta_{A}$
+ seller for all 
+\begin_inset Formula $y$
 \end_inset
 
-, as shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
+, 
+\begin_inset Formula $\sigma(\cdot,y)$
+\end_inset
 
+ is an optimal strategy given buyer Poisson arrival rate 
+\begin_inset Formula $\beta_{A}=\beta/(1-\bar{\rho})$
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Enumerate
-Arrival rate 
-\begin_inset Formula $\beta_{A}$
+[Steady state] Average utilization rate 
+\begin_inset Formula $\bar{\rho}$
 \end_inset
 
- arises in a steady state given sellers' acceptance rates 
-\begin_inset Formula $\alpha(\cdot)$
+ arises in a steady state when sellers play 
+\begin_inset Formula $\sigma$
 \end_inset
 
 , as shown in {
@@ -1448,127 +1414,11 @@ reference "eq:SS"
 , 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:beta_A-1"
+reference "eq:alpha"
 
 \end_inset
 
 }.
- 
-\end_layout
-
-\begin_layout Standard
-We make the following assumption to make the exposition easier.
-\end_layout
-
-\begin_layout Assumption
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-No Excess Demand
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "assu:no-excess-demand"
-
-\end_inset
-
-Collectively, it is physically possible for sellers to complete every buyer
- task: 
-\begin_inset Formula $\beta\tau<1$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Relaxing it will require dealing with demand overload and queues, which
- does not add more intuition.
- I relax the assumption in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Extensions"
-
-\end_inset
-
- and show that qualitatively results do not change.
-\end_layout
-
-\begin_layout Standard
-The next lemma shows how to find arrival rate for available sellers 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- as a function of acceptance rates.
- 
-\end_layout
-
-\begin_layout Lemma
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:D_A"
-
-\end_inset
-
-For an arbitrary vector of acceptance rates 
-\begin_inset Formula $\alpha(\theta)$
-\end_inset
-
-, 
-\begin_inset Formula $\alpha(\theta)\in[0,1]$
-\end_inset
-
-, 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- is the unique solution to 
-\begin_inset Formula 
-\begin{equation}
-\int\frac{G(d\theta)}{\tau\alpha(\theta)+1/\beta_{A}}=\beta.\label{eq:beta_A}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the proof I show that the steady state utilization rate is 
-\begin_inset Formula $\rho(\theta)=1-\frac{1}{\tau\alpha(\theta)\beta_{A}+1}$
-\end_inset
-
-, which yields 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
-
-\end_inset
-
-.
- Then, the left hand side of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
-
-\end_inset
-
- is non-decreasing in 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-, growing from zero to some value greater than 
-\begin_inset Formula $\beta$
-\end_inset
-
-.
- This gives the existence and uniqueness.
- 
 \end_layout
 
 \begin_layout Proposition
@@ -1578,23 +1428,90 @@ name "prop:Equilibrium-exists-and"
 
 \end_inset
 
-Steady-state equilibrium exists and is unique.
- 
-\end_layout
+Steady-state equilibrium exists.
+ It is unique up to the acceptance of marginal jobs in the follwing sense.
+ If 
+\begin_inset Formula $(\sigma^{i},\brho^{i})$
+\end_inset
 
-\begin_layout Standard
-The uniqueness obtains by monotonicity of reaction curves in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
+, 
+\begin_inset Formula $i=1,2$
+\end_inset
 
+ are two steady-state equilibria, then (1) 
+\begin_inset Formula $\brho^{1}=\brho^{2}$
+\end_inset
+
+, and (2) for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma^{1}(\cdot,y)$
 \end_inset
 
  and 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
+\begin_inset Formula $\sigma^{2}(\cdot,y)$
+\end_inset
 
+ coincide except on 
+\begin_inset Formula $\{s\colon\pi(s,y)=\tau V(y)\}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: uniqueness up to cutoffs.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the proof in the Appendix, first, I show that for an arbitrary vector
+ of acceptance rates 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+, there is a unique steady state value of 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ Then, average utilization 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is increasing and continuous in 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ The uniqueness of equilibrium obtains by monotonicity of reaction curves
+ of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
 \end_inset
 
 .
@@ -1610,19 +1527,12 @@ reference "eq:alpha"
 \end_inset
 
  increases, sellers become more picky and acceptance rate 
-\begin_inset Formula $\alpha(\theta)$
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
  decreases.
- In 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
-
-\end_inset
-
-, as 
-\begin_inset Formula $\alpha(\theta)$
+ As 
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
  increases, buyers get directed to a smaller set of sellers, hence 
@@ -1638,36 +1548,6 @@ reference "proof:eqm-exists"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "prop:Equilibrium-exists-and"
-
-\end_inset
-
- demonstrates the role of capacity utilization in two-sided markets.
- Both buyers and sellers are price-takers.
- The result shows that for any price 
-\begin_inset Formula $p>0$
-\end_inset
-
- and any segmentation 
-\begin_inset Formula $\mu$
-\end_inset
-
-, there is a steady-state equilibrium characterized by the vector of acceptance
- rates 
-\begin_inset Formula $\left(\alpha(\theta)\right)$
-\end_inset
-
- where the market clears.
- This happens because there are two mechanisms to clear the market: through
- adjustments in price and through adjustments in capacity utilization.
- The former is the most familiar mechanism, but in this paper I emphasize
- the importance of the latter.
  
 \end_layout
 
@@ -1706,12 +1586,12 @@ BTW Uber has a version of this where drivers game the system to ride up
 In this section I discuss how the model maps to the reality in the case
  of Uber, Airbnb and labor platform such as TaskRabbit.
  Recall that 
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  denotes seller type, i.e.
- the seller's private component of his costs; 
-\begin_inset Formula $\omega$
+ the seller's unobserved heterogeneity; 
+\begin_inset Formula $x$
 \end_inset
 
  denotes buyer type, i.e.
@@ -1727,15 +1607,15 @@ status open
 There is an equivalent phrasing of the model which for some real world applicati
 ons might be more relevant than the original phrasing.
  In the original phrasing, a buyer first reveals his information 
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  to the platform, then the platform coarsely matches 
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  to signal 
-\begin_inset Formula $s=\mu(\omega)$
+\begin_inset Formula $s=\lambda(x)$
 \end_inset
 
 , and finally 
@@ -1745,18 +1625,18 @@ ons might be more relevant than the original phrasing.
  is communicated to sellers.
  Alternatively, I can phrase the model in a different way.
  Type 
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  captures all cost-relevant information the buyer possesses.
  The platform's disclosure policy is then a mechanism that partially elicits
  
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  from a buyer.
  That is, the platform gets to observe only 
-\begin_inset Formula $s=\mu(\omega)$
+\begin_inset Formula $s=\lambda(x)$
 \end_inset
 
 , and then 
@@ -1797,19 +1677,15 @@ Uber.
 \begin_layout Standard
 Drivers receive requests from passenger when they are idle.
  
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  is driver's location, 
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  is passenger's destination and star rating.
- Price per mile and minute is fixed at 
-\begin_inset Formula $p$
-\end_inset
-
- (ignore surge pricing).
+ Price per mile and minute is fixed (abstract away from surge pricing).
  Drivers do not like short rides or rides to the neighborhoods far removed
  from busy areas.
  
@@ -1847,23 +1723,19 @@ Hosts are capacity constrained in rooms.
  Once a room is booked for a specific date, the host cannot accept a better
  guest.
  
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  - room quality, location.
  
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
  - guest quality, e.g.
  college student vs.
  elderly couple.
- Every host sets his own price 
-\begin_inset Formula $p_{\theta}$
-\end_inset
-
- that applies to all guests but he may prefer to reject certain guests who
- he expects can be a pain in the neck.
+ Every host sets his own price that applies to all guests but he may prefer
+ to reject certain guests who he expects can be a pain in the neck.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1885,23 +1757,19 @@ TaskRabbit.
 \begin_layout Standard
 The service providers are capacity constrained because they can do only
  that many tasks per week.
- Once a service provider agreed to do some task, he is constrained in picking
+ Once a service provider agreed to do some job, he is constrained in picking
  new tasks.
  
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
  - seller skill, specialization.
  
-\begin_inset Formula $\omega$
+\begin_inset Formula $x$
 \end_inset
 
- - task category, task difficulty, professional/annoying client.
- Service provider sets hourly rate 
-\begin_inset Formula $p_{\theta}$
-\end_inset
-
- which applies to all tasks in the category.
+ - job category, job difficulty, professional/annoying client.
+ Service provider sets hourly rate  which applies to all tasks in the category.
  The seller may prefer to reject the tasks which he does not find to be
  a good fit, or too far, or bad timing of the lead.
  
@@ -1915,6 +1783,171 @@ reference "prop:indep-vs-coord"
  rejecting client leads, the utilization of participating labor is inefficiently
  low, and the matching efficiency is suboptimal.
  
+\end_layout
+
+\begin_layout Subsection
+Discussion of the Modeling Assumptions
+\end_layout
+
+\begin_layout Standard
+In this subsection I discuss in detail the important assumptions of my model.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:single-search-attempt"
+
+\end_inset
+
+Buyers make a single search attempt.
+ 
+\end_layout
+
+\begin_layout Standard
+Rejection-intolerant buyers is a simplifying assumption that help to avoid
+ endogenous distribution of buyer types.
+ It captures the real aspect of matching markets that rejections are costly
+ to buyers, e.g.
+ wasted time, wasted search effort, bidding costs, etc.
+ Moreover, buyers often do take rejections badly.
+ For example, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
+
+\end_inset
+
+ reports that on Airbnb, an initial rejection decreases the probability
+ that the guest eventually books any listing by 50%.
+ 
+\end_layout
+
+\begin_layout Assumption
+Buyers contact available sellers only.
+ 
+\end_layout
+
+\begin_layout Standard
+The goal of the paper is to explore the matching frictions that pertain
+ to preference heterogeneity and screening.
+ Therefore, I assume away the coordination frictions owing to several buyers
+ requesting the same seller and the coordination frictions owing to buyer
+ requesting unavailable sellers.
+ All three types of matching frictions are present in the matching marketplaces
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The coordination frictions in matching markets have been extensively studied
+ in the theoretical literature (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BSW01,Kir09,Halaburda2013,AJK14"
+
+\end_inset
+
+), and I assume away this channel of matching inefficiency to focus on screening.
+ 
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Homogeneous Buyer Preferences
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:uniform-assignment"
+
+\end_inset
+
+Buyers contact an available seller chosen uniformly at random
+\end_layout
+
+\begin_layout Standard
+This assumption has two implications.
+ First, seller of any type faces the same intensity of buyer traffic.
+ Second, each seller faces the same distribution of buyer jobs.
+ This is a simplifying assumption that helps me to focus sellers excessive
+ screening problem.
+ In the extension 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:General-demand:-workers"
+
+\end_inset
+
+ I show how to deal with a more general demand system where demand for each
+ seller type can be different.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Also, Buyer surplus is independent of distribution of available sellers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+No Excess Demand
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "assu:no-excess-demand"
+
+\end_inset
+
+Collectively, it is physically possible for sellers to complete every buyer
+ job: 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The assumption makes the exposition easier and relaxing it requires more
+ notation to deal with either automatic rejections or queues.
+ I do this in  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Extensions"
+
+\end_inset
+
+ and show that qualitatively results do not change.
 \end_layout
 
 \end_body

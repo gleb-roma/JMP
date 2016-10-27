@@ -192,18 +192,59 @@ theorems-ams-extended-bytype
 
 
 \begin_inset FormulaMacro
-\renewcommand{\oW}{\overline{W}}
+\renewcommand{\oW}{\overline{\Lambda}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\uW}{\underline{W}}
+\renewcommand{\uW}{\underline{\Lambda}}
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\betaa}{\beta_{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\oy}{\overline{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uy}{\underline{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\zhaty}{\hat{z}(y)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\oL}{\overline{\Lambda}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\uL}{\underline{\Lambda}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\J}{\mathcal{J}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Appendix
 \end_layout
 
@@ -212,101 +253,593 @@ Appendix
 Lemmas
 \end_layout
 
-\begin_layout Standard
-The next lemma solves for optimal cutoff in worker problem 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:V-via-pi"
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:nubar"
 
 \end_inset
 
--
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:pi(c)"
 
-\end_inset
+\begin_inset Note Note
+status open
 
- and 
-\begin_inset Formula $V$
-\end_inset
-
-, which we call worker
-\emph on
+\begin_layout Plain Layout
+Needs proof.
  
+\end_layout
+
+\end_inset
+
+Fix the arbitrary increasing 
+\begin_inset Formula $\alpha(y)\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Average utilization rate 
+\begin_inset Formula $\bar{\rho}\in[0,1]$
+\end_inset
+
+ is a solution to 
+\begin_inset Formula 
+\begin{equation}
+1=\int\frac{dG(y)}{1-\bar{\rho}+\beta\tau\alpha(y)}.\label{eq:nubar}
+\end{equation}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The solution 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ exists, is unique, 
+\family default
+\series default
+\shape default
+\size default
 \emph default
-profit.
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+increases in 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+, in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and in 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "lem:c*"
+name "lem:betaa-bounds"
 
 \end_inset
 
-The optimal cutoff 
-\begin_inset Formula $c^{*}$
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+needs proof.
+ 
+\end_layout
+
 \end_inset
 
- is found from
+
+\begin_inset Formula 
+\[
+\beta\leq\betaa\leq\frac{\beta}{1-\tau\beta}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:alpha"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Needs proof.
+ 
+\end_layout
+
+\end_inset
+
+Suppose the linear payoff environment
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ In the steady state equilibrium with disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(y)=\Lambda'(\zhaty+)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $\Lambda\in\mathcal{L}$
+\end_inset
+
+, there is 
+\begin_inset Formula $y'>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha(y)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $y\geq y'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Considering exogenous variations of 
+\begin_inset Formula $\betaa\tau$
+\end_inset
+
+ in the seller optimization problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:tau-betaa"
+
+\end_inset
+
+Suppose the linear payoff environment with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+.
+ For any (large) 
+\begin_inset Formula $L>0$
+\end_inset
+
+ there is 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ large enough and 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ (large enough) such that if 
+\begin_inset Formula $\oy\geq\breve{y}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\tau\beta_{A}\geq L$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done.
+ 
+\end_layout
+
+\end_inset
+
+Since 
+\begin_inset Formula $\betaa=\beta/\bar{\nu}$
+\end_inset
+
+, rewrite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+ as
 \begin_inset Formula 
 \begin{equation}
-p-c^{*}=\tau\beta_{A}\int\limits _{0}^{c^{*}}(c^{*}-c)dF(c).\label{eq:c*}
+\beta\tau=\int_{0}^{\oy}\frac{dy/\oy}{\frac{1}{\tau\betaa}+\alpha(y;\tau\betaa)},\label{eq:13}
 \end{equation}
 
 \end_inset
 
-worker accepts all 
-\begin_inset Formula $c\leq c^{*}$
+where I made explicit that 
+\begin_inset Formula $\alpha$
 \end_inset
 
- and rejects all 
-\begin_inset Formula $c>c^{*}$
+ depends on 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ in equilibrium.
+ Treat the right hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:13"
+
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ and denote it by 
+\begin_inset Formula $\psi(\tau\betaa,\oy)$
 \end_inset
 
 .
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-When 
-\begin_inset Formula $F$
+ First, 
+\begin_inset Formula $\psi$
 \end_inset
 
- is discrete and takes values 
-\begin_inset Formula $c_{1}<c_{2}<...<c_{n}$
+ is strictly increasing in 
+\begin_inset Formula $\tau\betaa$
 \end_inset
 
- with probabilities 
-\begin_inset Formula $f(c_{i})$
-\end_inset
-
-, you should read formula 
+ because by 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:c*"
+LatexCommand ref
+reference "lem:alpha"
 
 \end_inset
 
- as 
-\begin_inset Formula $p-c^{*}=\tau\beta_{A}\sum_{c_{j}\leq c^{*}}(c^{*}-c_{j})f(c_{j})$
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+.
+ Second, 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\oy$
+\end_inset
+
+ because by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:alpha"
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Third, using the second part of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:alpha"
+
+\end_inset
+
+ and uniformity of 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{\oy\to\infty}\psi=((\tau\betaa)^{-1}+1)^{-1}<1$
+\end_inset
+
+.
+ Pick 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi(L,\breve{y})<1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(\beta\tau)^{*}:=\psi(L,\breve{y})$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\betaa\tau>L$
+\end_inset
+
+ whenever 
+\begin_inset Formula $\beta\tau>(\beta\tau)^{*}$
+\end_inset
+
+ or 
+\begin_inset Formula $y>\breve{y}$
 \end_inset
 
 .
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Lemma
-worker profit is
+Suppose the linear payoff environment with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+.
+ For any (small) 
+\begin_inset Formula $\eps>0$
+\end_inset
+
+ there is 
+\begin_inset Formula $\beta\tau<1$
+\end_inset
+
+ large enough and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough, such that 
+\begin_inset Formula $\nu(\oy)=\eps$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done.
+ 
+\end_layout
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\nu(y)=\frac{1}{1+\tau\betaa\alpha(y)}$
+\end_inset
+
+.
+ Pick 
+\begin_inset Formula $L>\eps^{-1}-1$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:tau-betaa"
+
+\end_inset
+
+ for any 
+\begin_inset Formula $L>0$
+\end_inset
+
+, we can find 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\breve{y}$
+\end_inset
+
+ such that if 
+\begin_inset Formula $\oy\geq\breve{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau\betaa\geq L$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\supp F=[0,1]$
+\end_inset
+
+, we have from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\alpha(\oy)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough.
+ Therefore, 
+\begin_inset Formula $\nu(\oy)=\frac{1}{1+\tau\betaa\alpha(\oy)}<\frac{1}{1+L}<\eps.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:upper-coarsening-function"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+needs proof.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ is 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-coarsening if and only if the corresponding 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ has the following form:
 \begin_inset Formula 
 \begin{equation}
-V=\frac{p-c^{*}}{\tau}.\label{eq:V}
+\Lambda(z)=\begin{cases}
+\oL(z), & z\in[0,x^{*}]\\
+\oL(x^{*})+F(x^{*})(z-x^{*}), & z\in(x^{*},\Exp[x|x>x^{*}])\\
+\uL(z), & z\in[\Exp[x|x>x^{*}],1]
+\end{cases}\label{eq:Lambda-upper-coarsening}
 \end{equation}
 
 \end_inset
@@ -315,249 +848,1658 @@ V=\frac{p-c^{*}}{\tau}.\label{eq:V}
 \end_layout
 
 \begin_layout Standard
-Before going into formal proof, let me give intuition behind 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:c*"
+LatexCommand ref
+reference "lem:optimality-of-up-cen"
 
 \end_inset
 
-: When faced with a task with cost 
-\begin_inset Formula $c^{*}$
+
+\end_layout
+
 \end_inset
 
-, over the next time interval 
-\begin_inset Formula $\tau$
+Suppose the contrary, 
+\begin_inset Formula $\lambda_{0}$
 \end_inset
 
-, the worker can: either accept the task and earn 
-\begin_inset Formula $p-c^{*}$
+ is not upper-coarsening.
+ I will show that there is a deviation from 
+\begin_inset Formula $\lambda_{0}$
 \end_inset
 
-; or skip the task and receive on average 
-\begin_inset Formula $\beta_{A}\tau$
-\end_inset
-
- new requests, each of them having option value 
-\begin_inset Formula $\int_{0}^{c^{*}}(c^{*}-c)dF(c)$
+ that increases 
+\begin_inset Formula $\J$
 \end_inset
 
 .
- At 
-\begin_inset Formula $c^{*}$
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Lambda_{0}\in\mathcal{L}$
 \end_inset
 
-, the worker is indifferent between taking and skipping.
+ which corresponds to 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ be the zero of 
+\begin_inset Formula $\delta\J/\delta\Lambda$
+\end_inset
+
+, and the corresponding cutoff in the seller optimization problem be 
+\begin_inset Formula $z^{*}=\hat{z}(y^{*};\Lambda_{0})$
+\end_inset
+
+.
+ I am now going to construct a feasible variation 
+\begin_inset Formula $\Lambda^{\eps}$
+\end_inset
+
+ from 
+\begin_inset Formula $\Lambda_{0}$
+\end_inset
+
+ that increases 
+\begin_inset Formula $\J$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\tilde{\Lambda}$
+\end_inset
+
+ be the upper-coarsening (of the form 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda-upper-coarsening"
+
+\end_inset
+
+) that passes through point 
+\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
+\end_inset
+
+.
+ There is only one such function because there is only one line passing
+ through 
+\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
+\end_inset
+
+ and is tangential to 
+\begin_inset Formula $\oL$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\Lambda_{0}(z)\geq\tilde{\Lambda}(z)$
+\end_inset
+
+ on 
+\begin_inset Formula $z>z^{*}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Lambda_{0}(z)\leq\tilde{\Lambda}(z)$
+\end_inset
+
+ on 
+\begin_inset Formula $z<z^{*}$
+\end_inset
+
+.
+ Moreover, since 
+\begin_inset Formula $\Lambda_{0}$
+\end_inset
+
+ is not upper-coarsening, for some 
+\begin_inset Formula $z\in[0,1]$
+\end_inset
+
+ one of these inequalities is strict.
+ Consider variation 
+\begin_inset Formula 
+\[
+\Lambda^{\eps}(z)=(\tilde{\Lambda}(z)-\Lambda_{0}(z))\eps.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a bit hand-wavy.
+ Is there a rigorous way of doing it without epsilon? 
+\end_layout
+
+\end_inset
+
+Since 
+\begin_inset Formula $\delta\J/\delta\Lambda<0$
+\end_inset
+
+ on 
+\begin_inset Formula $z>z^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\J/\delta\Lambda>0$
+\end_inset
+
+ on 
+\begin_inset Formula $z<z^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda^{\eps}$
+\end_inset
+
+ increases 
+\begin_inset Formula $\J.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proofs omitted from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Market-Design:-Information"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists"
+
+\end_inset
+
+ Step 1.
+ Restricting set of strategies to cutoff strategies.
+ Fix 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pi(c)"
+
+\end_inset
+
+ the optimal seller strategy is such that all 
+\begin_inset Formula $S_{a}(y)=\{s\colon\pi(s,y)>\tau V(y)\}$
+\end_inset
+
+ are accepted, all 
+\begin_inset Formula $S_{r}(y)=\{s\colon\pi(s,y)<\tau V(y)\}$
+\end_inset
+
+ are rejected, and the seller is indifferent between accepting and rejecting
+ signals from 
+\begin_inset Formula $S_{m}(y):=\{s\colon\pi(s,y)=\tau V(y)\}$
+\end_inset
+
+.
+ Therefore any optimal strategy has the cutoff form:
+\begin_inset Formula 
+\[
+\sigma(s,y)=\begin{cases}
+1, & s\in S_{a}(y)\\
+\in[0,1], & S_{m}(y)\\
+0, & s\in S_{r}(y)
+\end{cases}
+\]
+
+\end_inset
+
+Denote the cutoff for type-
+\begin_inset Formula $y$
+\end_inset
+
+ seller by 
+\begin_inset Formula $\hat{\pi}(y):=\tau V(y)$
+\end_inset
+
+.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+V(y) & =\betaa\int(\pi(s,y)-\tau V(y))\sigma(s,y)\lambda(ds)\nonumber \\
+\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))\sigma(s,y)\lambda(ds)\nonumber \\
+\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))I\{\pi(s,y)>\hatpi(y))\}\lambda(ds)\label{eq:17}
+\end{align}
+
+\end_inset
+
+Given 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\betaa$
+\end_inset
+
+, the cutoff of the optimal strategy is a solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+.
+ The solution is unique because the left-hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ is strictly increasing in 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+ while the left hand side is decreasing in 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ Existence.
+ Consider a correspondence 
+\begin_inset Formula $\psi\colon[0,1]\rightrightarrows[0,1]$
+\end_inset
+
+, which maps 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ to a set of 
+\begin_inset Quotes eld
+\end_inset
+
+reaction
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+'s by the following procedure.
+ To find 
+\begin_inset Formula $\psi(\bar{\rho})$
+\end_inset
+
+, first find the unique cutoff function 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ using 
+\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ Cutoff 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ does not pin down the acceptance rates 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ uniquely because marginal signals from 
+\begin_inset Formula $S_{m}$
+\end_inset
+
+ can have positive probability under 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ The acceptance rates congruent with 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+ are integrable 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\lambda(S_{a}(y))\leq\alpha(y)\leq\lambda(S_{a}(y))+\lambda(S_{m}(y)),\quad\forall y\in Y.
+\]
+
+\end_inset
+
+Take all 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ that are congruent with 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+, call this set 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $\alpha\in\mathcal{A}$
+\end_inset
+
+, find 
+\begin_inset Formula $\brho$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:nubar"
+
+\end_inset
+
+.
+ Going over all 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ will produce the set of 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ This will be 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Clearly, 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is convex.
+ Thus, 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is also convex.
+ Since 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is an interval subset of 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+, it is easy to see that 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is also closed.
+ 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is upper hemi-continuous because 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ is continuous in 
+\begin_inset Formula $\betaa$
+\end_inset
+
+ accroding to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NTS psi is uhc.
+ 
+\end_layout
+
+\end_inset
+
+ Therefore, by Kakutani's theorem, 
+\begin_inset Formula $\psi$
+\end_inset
+
+ has a fixed point.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Proof
+Step 2.
+ Existence.
+ I will show existence in the space of cutoff acceptance strategies.
+ Let 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ be the space of cutoff functions 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ is convex and metric space with 
+\begin_inset Formula $L_{1}[Y]$
+\end_inset
+
+ metric (where, as a reminder, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is compact subset of Euclidean space).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Positivity follows from 
+\begin_inset Formula $\pi(x,y)>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ is compact by Lemma 2 in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FMS07"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NOT SURE IT'S TRUE.
+ work more on this
+\end_layout
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{S}=\text{\mathcal{S}}_{\pi}\times[0,1]$
+\end_inset
+
+.
+ It is clear that 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ is compact, convex subset of the product Banach space with the obvious
+ extension of the 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ metric from 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Consider a correspondence 
+\begin_inset Formula $T:\mathcal{S}_{\pi}\rightrightarrows\mathcal{S}_{\pi}$
+\end_inset
+
+, defined by the conditions of optimality and steady-state.
+ Given 
+\begin_inset Formula $(\hatpi,\bar{\rho})\in\mathcal{S}_{\pi}$
+\end_inset
+
+, the image value of 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ is uniquely determined by 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+, where 
+\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ The image value of 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is the set of all 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ that can arise in steady state for all possible acceptance strategies with
+ cutoffs 
+\begin_inset Formula $\hat{\pi}$
+\end_inset
+
+.
+ More concretely, consider all possible 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ that can arise with cutoffs 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+, and find all 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ using these 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:nubar"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is upper hemi-continuous with 
+\begin_inset Formula $T(s)$
+\end_inset
+
+ compact and convex.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+show this!
+\end_layout
+
+\end_inset
+
+ By Kakutani-Glicksberg-Fan theorem (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GD03"
+
+\end_inset
+
+, Theorem 8.6), 
+\begin_inset Formula $T$
+\end_inset
+
+ has a fixed point.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Step 3.
+ Uniqueness.
+ Suppose 
+\begin_inset Formula $\bar{\rho}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\rho}^{2}$
+\end_inset
+
+ are two distinct fixed points of 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $\bar{\rho}^{1}>\bar{\rho}^{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\betaa^{1}>\betaa^{2}$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ 
+\begin_inset Formula $\hatpi^{1}(y)>\hatpi^{2}(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+follows from 
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+>0 for some 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+If so, then whenever 
+\begin_inset Formula $\pi(s,y)\geq\hatpi^{1}(y)$
+\end_inset
+
+ we also have 
+\begin_inset Formula $\pi(s,y)>\hatpi^{2}(y)$
+\end_inset
+
+.
+ But this means that 
+\begin_inset Formula $S_{a}^{2}(y)\supseteq S_{a}^{1}(y)\cup S_{m}^{1}(y)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\alpha^{2}(y)\geq\lambda(S_{a}^{2})\geq\lambda(S_{a}^{1}\cup S_{m}^{1})\geq\alpha^{1}(y)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:nubar"
+
+\end_inset
+
+, this implies 
+\begin_inset Formula $\bar{\rho}^{2}\geq\bar{\rho}^{1}$
+\end_inset
+
+.
+ A contradiction.
+ 
+\end_layout
+
+\begin_layout Proof
+We showed that there is a unique 
+\begin_inset Formula $\brho$
+\end_inset
+
+ that can arise in a steady-state equilibrium.
+ By the argument below 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+, the strategy cutoffs 
+\begin_inset Formula $\hatpi(\cdot)$
+\end_inset
+
+ are also pinned down uniquely in the steady-state equilibrium.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ There can still be distinct acceptance rate functions 
+\begin_inset Formula $\alpha^{1}\neq\alpha^{2}$
+\end_inset
+
+ that both are congruent with 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ and both yield 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Can I rule out distinct alpha by appealing to continuity of pi?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:FD-suboptimal"
+
+\end_inset
+
+Consider 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done.
+\end_layout
+
+\end_inset
+
+Take any Pareto optimal pair 
+\begin_inset Formula $O=(V,CS)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $O$
+\end_inset
+
+ is feasible, there is seller strategy profile 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ that induces 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ Since there is one seller type and two actions, it is sufficient to consider
+ only the binary signaling structures (Revelation principle).
+ A binary signaling structure has two signals, where a signal is 
+\begin_inset Quotes eld
+\end_inset
+
+action recommendation
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{a}$
+\end_inset
+
+ be the recommendation to accept, and 
+\begin_inset Formula $s_{r}$
+\end_inset
+
+ be the recommendation to reject.
+ Denote this signaling structure by 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ We need to check the incentive constraints, that is, to make sure that
+ the sellers would follow the recommendations of 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Proof
 From 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:pi(c)"
 
 \end_inset
 
-, there is cutoff 
-\begin_inset Formula $c^{*}$
+ we have that 
+\begin_inset Formula $v(s_{a})=\pi(s_{a})-\tau V$
 \end_inset
 
- such that 
-\begin_inset Formula $V_{1}(c)=p-c-\tau V$
+, 
+\begin_inset Formula $v(s_{r})=0$
 \end_inset
 
- if 
-\begin_inset Formula $c<c^{*}$
-\end_inset
-
- and 
-\begin_inset Formula $V_{1}(c)=0$
-\end_inset
-
- if 
-\begin_inset Formula $c>c^{*}$
+, and 
+\begin_inset Formula $V=\beta_{A}(\pi(s_{a})-\tau V)\hat{\lambda}(s_{a})$
 \end_inset
 
 .
- Note that 
-\begin_inset Formula $c^{*}$
+ The incentive constraints require that 
+\begin_inset Formula $\pi(s_{a})\geq\tau V$
 \end_inset
 
-need not be in the support of 
-\begin_inset Formula $F$
+ and 
+\begin_inset Formula $\pi(s_{r})\leq0$
 \end_inset
 
-, this is just a cutoff value.
- Therefore, 
-\begin_inset Formula 
-\begin{equation}
-p-c^{*}=V\tau.\label{eq:p-c}
-\end{equation}
-
-\end_inset
-
-We find
-\end_layout
-
-\begin_layout Proof
+.
+ For the former,
 \begin_inset Formula 
 \[
-\Exp[V_{1}(c)]=\int_{0}^{c^{*}}(c^{*}-c)dF(c).
+\tau V=\frac{\tau\beta_{A}\hat{\lambda}(s_{a})}{1+\tau\beta_{A}\hat{\lambda}(s_{a})}\pi(s_{a})<\pi(s_{a}).
 \]
 
 \end_inset
 
-Plug in into 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:V-via-pi"
+For the latter, recall that 
+\begin_inset Formula $O$
+\end_inset
+
+ is Pareto optimal, hence 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ accepts all profitable jobs.
+ This implies that 
+\begin_inset Formula 
+\[
+\pi(s_{r})\leq0<\tau V.
+\]
 
 \end_inset
 
- to obtain:
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:main-lemma"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof2"
+
+\end_inset
+
+Step 1.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are positively related.
+ Indeed, when the mass of available sellers is 
+\begin_inset Formula $X$
+\end_inset
+
+, the flow of matches is 
+\begin_inset Formula 
+\[
+M=\frac{1-X}{\tau}.
+\]
+
+\end_inset
+
+The buyer arrival rate on available sellers is 
+\begin_inset Formula $\beta_{A}=\beta/X$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+M=\frac{1-\beta/\beta_{A}}{\tau}.
+\]
+
+\end_inset
+
+We are interested in the sign of 
+\begin_inset Formula $\delta M/\delta\Lambda$
+\end_inset
+
+, therefore we will find 
+\begin_inset Formula $\delta\beta_{A}/\delta\Lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ The equilibrium values of 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ are found from the system of equations 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:beta_A"
+
+\end_inset
+
+, which we reproduce here:
+\begin_inset Formula 
+\begin{align}
+y-\hat{z}(y) & =\tau\beta_{A}\Lambda(\hat{m}(y)),\quad\forall y\in Y;\label{eq:20}\\
+\int\frac{dG(y)}{\tau\alpha(y)+1/\beta_{A}} & =\beta.\label{eq:21}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Proof
+Take the differential of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:21"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\int\frac{dG(y)\left(\tau\delta\alpha(y)-\delta\beta_{A}/\beta_{A}^{2}\right)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
+\delta\beta_{A}=\frac{\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}{\frac{1}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}.\label{eq:delta-betaA}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now use the fact that
 \begin_inset Formula 
 \begin{equation}
-V=\beta_{A}\int_{0}^{c^{*}}(c^{*}-c)dF(c).\label{eq:Vint}
+\alpha(y)=\Lambda'(\hat{m}(y)+)\label{eq:alpha=W'}
 \end{equation}
 
 \end_inset
 
-Combine 
+to find the differential
+\begin_inset Formula 
+\begin{equation}
+\delta\alpha(y)=\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y).\label{eq:delta-alpha}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Take the differential of 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:p-c"
+reference "eq:20"
 
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{gather}
+-\delta\hat{m}(y)=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\Lambda'(\hat{m}(y))\delta\hat{m}(y)+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\nonumber \\
+-\delta\hat{m}(y)(1+\tau\beta_{A}\alpha(y))=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y)).\label{eq:delta-mhat}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Plug in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-mhat"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-alpha"
+
+\end_inset
+
+ and then into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:delta-betaA"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y)\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\Lambda''(\hat{m}(y))\left(\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}\beta_{A}}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\delta\beta_{A}\left[\int\frac{dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\beta_{A}^{2}\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]=\\
+=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}}
+\end{multline*}
+
+\end_inset
+
+We have both 
+\begin_inset Formula $\delta\Lambda$
 \end_inset
 
  and 
+\begin_inset Formula $(\delta\Lambda)'$
+\end_inset
+
+ on the right hand side of the expression above, and we need to have only
+ 
+\begin_inset Formula $\delta\Lambda$
+\end_inset
+
+ .
+ To get it, we will use integration by parts.
+ Consider separately the first term in the previous line:
+\begin_inset Formula 
+\begin{gather*}
+Z_{1}:=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\beta_{A}^{2}\int\frac{\left(\delta\Lambda(\hat{m}(y))\right)'g(y)dy}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\tau\beta_{A}^{2}\int\frac{g(y)d\left(\delta\Lambda(\hat{m}(y))\right)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\\
+=\tau\beta_{A}^{2}\frac{g(y)\delta\Lambda(\hat{m}(y))}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}|_{\underline{y}}^{\overline{y}}-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
+=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\frac{g'(y)\left(\tau\alpha(y)\beta_{A}+1\right)^{2}-2g(y)\left(\tau\alpha(y)\beta_{A}+1\right)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{4}}dy=\\
+=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-\frac{g'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\frac{2g(y)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]dy
+\end{gather*}
+
+\end_inset
+
+Using 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:Vint"
+reference "eq:alpha=W'"
 
 \end_inset
 
- to obtain the desired results.
- 
+,
+\begin_inset Formula 
+\[
+\alpha'(y)=\Lambda''(\hat{m}(y))\hat{m}'(y).
+\]
+
+\end_inset
+
+Differentiate 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:20"
+
+\end_inset
+
+ wrt 
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+1-\hat{m}'(y) & =\tau\beta_{A}\alpha(y)\hat{m}'(y)\\
+\hat{m}'(y) & =\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Note*
-I consider time average payoff rather than discounted sum because discount
- rate is not essential for my tradeoffs.
- However, the results generalize to the case when the worker has discount
- rate 
-\begin_inset Formula $\rho$
+\begin_layout Proof
+For brevity, adopt the notation 
+\begin_inset Formula 
+\[
+\nu(y):=\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+\]
+
 \end_inset
 
- by changing 
-\begin_inset Formula $\tau$
+The notation is not coincidental, 
+\begin_inset Formula $\nu(y)$
 \end_inset
 
- to 
-\begin_inset Formula $\tau_{\rho}=\frac{1-e^{-\rho\tau}}{\rho}$
+ is equal to the fraction of type-
+\begin_inset Formula $y$
 \end_inset
 
-.
- 
+ sellers who are available in equilibrium.
+ Return to compute
+\begin_inset Formula 
+\[
+Z_{1}=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy.
+\]
+
+\end_inset
+
+Now we finish computing the differential 
+\begin_inset Formula $\delta\beta_{A}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
+=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy-\tau^{2}\int\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))\nu^{3}\beta_{A}^{3}dG(y)=\\
+=\tau\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}\beta_{A}^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''\beta_{A}^{2}-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}^{3}\right]dy.
+\end{multline*}
+
+\end_inset
+
+We are interested in the expression in the square brackets in the formula
+ above.
+ Therefore, for some 
+\begin_inset Formula $K>0$
+\end_inset
+
+ that is constant in 
+\begin_inset Formula $y$
+\end_inset
+
+ we have: 
+\begin_inset Formula 
+\begin{align*}
+\frac{\delta\beta_{A}}{\delta\Lambda} & =K\left(-g'(y)\nu(y)^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}\right)=\\
+ & =K\nu(y)^{2}\left(-g'(y)+g(y)\nu(y)\tau\beta_{A}\Lambda''(\hat{m}(y))(2\nu(y)-1)\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The next two results provide comparative statics on parameters.
- We find that the worker's utilization rate 
-\begin_inset Formula $\alpha$
+\begin_inset Separator plain
 \end_inset
 
- is higher when each job is more profitable (higher price 
-\begin_inset Formula $p$
-\end_inset
 
-) and takes less time to complete (smaller 
-\begin_inset Formula $\tau$
-\end_inset
+\end_layout
 
-).
- Importantly, the utilization rate is lower when buyer arrival rate is higher
- (high 
-\begin_inset Formula $\beta_{A}$
-\end_inset
+\begin_layout Proof
+\begin_inset Argument 1
+status open
 
-).
- The result also shows that as the platform conflates more, the workers
- become worse off.
- However, the effect of information coarsening on 
-\begin_inset Formula $\alpha$
-\end_inset
-
- is ambiguous (see 
+\begin_layout Plain Layout
+Proof of 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "exa:Acceptance-rate-not-monotone"
+LatexCommand ref
+reference "prop:max-J"
 
 \end_inset
 
-).
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:prop-5"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Incomplete.
  
 \end_layout
 
-\begin_layout Lemma
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:comp-stat-in-sellers-problem"
-
 \end_inset
 
+Here I provide the entire complete proof.
+ Step 1.
  
-\begin_inset Formula $c^{*}$
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+done.
+ 
+\end_layout
+
 \end_inset
 
- is increasing in 
-\begin_inset Formula $p$
+By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:main-lemma"
+
 \end_inset
 
-, and is decreasing in 
-\begin_inset Formula $\beta_{A}$
+, 
+\begin_inset Formula 
+\begin{align}
+\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)\betaa\right)=\nonumber \\
+ & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y),\label{eq:12-1}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $K_{2}>0$
+\end_inset
+
+.
+ Evaluating with 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\frac{\delta M}{\delta\Lambda}=K_{1}\oy^{-1}(\nu(y)-\nu^{2}(y))'=K_{1}\oy^{-1}(1-2\nu(y))\nu'(y),\label{eq:13-1-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $K_{1}>0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\nu(0)=1$
 \end_inset
 
  and 
-\begin_inset Formula $\tau$
+\begin_inset Formula $\nu(y)$
+\end_inset
+
+ is non-negative and decreasing, 
+\begin_inset Formula $\d\J/\d\Lambda$
+\end_inset
+
+ is either positive for all 
+\begin_inset Formula $y\in[0,\oy]$
+\end_inset
+
+ or crosses zero from above once.
+ Let 
+\begin_inset Formula $\lambda_{\gamma}^{*}$
+\end_inset
+
+ denote the disclosure policy that maximizes 
+\begin_inset Formula $\J(\gamma)$
 \end_inset
 
 .
- Worker's payoff is increasing in 
-\begin_inset Formula $p$
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:optimality-of-up-cen"
+
 \end_inset
 
- and 
-\begin_inset Formula $\beta_{A}$
+, 
+\begin_inset Formula $\lambda_{\gamma}^{*}$
 \end_inset
 
-, and is decreasing in 
-\begin_inset Formula $\tau$
-\end_inset
-
-.
- Furthermore, let 
-\begin_inset Formula $F_{1}$
-\end_inset
-
- be a mean-preserving spread of 
-\begin_inset Formula $F_{2}$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $c^{*}(F_{1})\leq c^{*}(F_{2})$
-\end_inset
-
-, and worker's payoff is weakly greater under 
-\begin_inset Formula $F_{1}$
-\end_inset
-
- than under 
-\begin_inset Formula $F_{2}$
-\end_inset
-
-.
+ is upper-coarsening.
  
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+incomplete.
+ 
+\end_layout
+
+\end_inset
+
+To see that the cutoff 
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, note that larger 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ puts more weight on the positive term in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12-1"
+
+\end_inset
+
+.
+ Therefore the region of 
+\begin_inset Formula $Y$
+\end_inset
+
+ with negative 
+\begin_inset Formula $\d\J/\d\Lambda$
+\end_inset
+
+ is smaller.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 3.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done.
+ 
+\end_layout
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\beta\tau<1/2.$
+\end_inset
+
+ Using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:betaa-bounds"
+
+\end_inset
+
+, 
+\begin_inset Formula $\betaa\tau\leq\beta\tau/(1-\beta\tau)<1$
+\end_inset
+
+.
+ Next, 
+\begin_inset Formula $\nu(y)=(1+\betaa\tau\alpha(y))^{-1}>(1+1\cdot1)^{-1}=1/2$
+\end_inset
+
+ for any 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:13-1-1"
+
+\end_inset
+
+, 
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}\geq0$
+\end_inset
+
+ for any 
+\begin_inset Formula $y$
+\end_inset
+
+, and so it 
+\begin_inset Formula $\d\J/\d\Lambda$
+\end_inset
+
+.
+ Therefore, full disclosure is optimal for any 
+\begin_inset Formula $\gamma.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proofs omitted from the Extensions
 \end_layout
 
 \begin_layout Proof
@@ -568,7 +2510,7 @@ status open
 Proof of 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "lem:comp-stat-in-sellers-problem"
+reference "prop:Equilibrium-exists-and-1"
 
 \end_inset
 
@@ -580,359 +2522,54 @@ reference "lem:comp-stat-in-sellers-problem"
 
 \begin_inset CommandInset label
 LatexCommand label
-name "proof:lem-comp-static"
+name "proof:eqm-exists-1"
 
 \end_inset
 
-Comparative statics with respect to 
-\begin_inset Formula $p,\beta_{A}$
+ We need to show that there is a unique solution 
+\begin_inset Formula $(\alpha(y),\beta_{A}(y))_{y\in Y}$
 \end_inset
 
- and 
-\begin_inset Formula $\tau$
-\end_inset
-
- is straightforward.
- 
-\end_layout
-
-\begin_layout Proof
-Denote 
-\begin_inset Formula $c_{1}:=c^{*}(F_{1})$
-\end_inset
-
- and 
-\begin_inset Formula $c_{2}:=c^{*}(F_{2})$
-\end_inset
-
-.
- Suppose towards contradiction that 
-\begin_inset Formula $c_{1}>c_{2}$
-\end_inset
-
-.
- We have that 
-\begin_inset Formula 
-\begin{gather*}
-p-c_{2}>p-c_{1}=\tau\beta_{A}\int_{0}^{\infty}(c_{1}-c)^{+}dF_{1}(c)\geq\tau\beta_{A}\int_{0}^{\infty}(c_{2}-c)^{+}dF_{1}(c)\geq\\
-\geq\tau\beta_{A}\int_{0}^{\infty}(c_{2}-c)^{+}dF_{2}(c)=p-c_{2}.
-\end{gather*}
-
-\end_inset
-
-A contradiction.
- The last inequality follows from the fact that 
-\begin_inset Formula $(c_{2}-c)^{+}\equiv\max\{c_{2}-c,0\}$
-\end_inset
-
- is a convex function of 
-\begin_inset Formula $c$
-\end_inset
-
- and 
-\begin_inset Formula $F_{2}$
-\end_inset
-
- second-order stochastically dominates 
-\begin_inset Formula $F_{1}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Denote by 
-\begin_inset Formula $n_{j}$
-\end_inset
-
- the average number of matches worker 
-\begin_inset Formula $j$
-\end_inset
-
- completes per unit of time.
- Denote by 
-\begin_inset Formula $N$
-\end_inset
-
- the measure of matches all workers complete per unit of time.
- 
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Formula $N$
-\end_inset
-
- is increasing in 
-\begin_inset Formula $\beta$
-\end_inset
-
- if 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\tau\beta\frac{f_{j}(c')}{F_{j}(c')}W_{j}(c')\leq1\quad\forall c',
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula 
-\[
-\tau\frac{n_{j}}{F_{j}(c')}\frac{f_{j}(c')}{F_{j}(c')}W_{j}(c')\leq1\quad\forall c',\forall j,
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $W_{j}(c')=\int_{0}^{c'}F_{j}(c)dc$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $G$
-\end_inset
-
- is not too dispersed, namely 
-\begin_inset Formula $var_{G}\left\{ \frac{dn_{j}}{d\beta}\right\} var_{G}\left\{ \lambda_{j}\right\} \leq1.$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Lemma
-Moreover, if all workers are identical, 
-\begin_inset Formula $N$
-\end_inset
-
- is increasing in 
-\begin_inset Formula $\beta$
-\end_inset
-
- if and only if 
-\begin_inset Formula $\tau\beta\frac{f(c^{*})}{F(c^{*})}W(c^{*})\leq1$
-\end_inset
-
-, where 
-\begin_inset Formula $c^{*}$
-\end_inset
-
- is the optimal cutoff from 
+ to {
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:c*"
+reference "eq:alpha"
 
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-An interesting case comes out from the case of identical workers when the
- condition is violated.
- If the condition is violated, then the platform can increase the flow of
- matches by 
-\bar under
-contracting
-\bar default
- the demand.
- 
-\end_layout
-
-\begin_layout Proof
-First, worker 
-\begin_inset Formula $j$
-\end_inset
-
-'s profit flow 
-\begin_inset Formula $V_{j}$
-\end_inset
-
- can be expressed as 
-\begin_inset Formula 
-\[
-V_{j}=(p_{j}-AC_{j}(\alpha_{j}))n_{j},
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $n_{j}$
-\end_inset
-
- is the average number of matches, and 
-\begin_inset Formula $p_{j}-AC_{j}(\alpha_{j})$
-\end_inset
-
- is the average markup.
- Using 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:p-c"
-
-\end_inset
-
-, find that
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{p_{j}-c_{j}^{*}}{\tau} & = & (p_{j}-AC_{j}(\alpha_{j}))n_{j},\\
-\frac{p-c^{*}}{\tau(p-\Exp[c|c<c^{*}])} & = & n_{j}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Second, I find the derivative of 
-\begin_inset Formula $n_{j}$
-\end_inset
-
- with respect to 
-\begin_inset Formula $\alpha_{j}$
-\end_inset
-
-.
- Start by finding the following derivative:
-\begin_inset Formula 
-\[
-\frac{d}{dc_{j}^{*}}\left(\Exp[c|c<c_{j}^{*}]\right)=\frac{d}{dc_{j}^{*}}\left(\frac{\int_{0}^{c_{j}^{*}}cdF_{j}(c)}{F_{j}(c_{j}^{*})}\right)=\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c).
-\]
-
-\end_inset
-
-Now differentiate 
-\begin_inset Formula $n_{j}$
-\end_inset
-
- wrt 
-\begin_inset Formula $c_{j}^{*}$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{dn_{j}}{dc_{j}^{*}} & \propto & -1(p-\Exp[c|c<c_{j}^{*}])+(p-c_{j}^{*})\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c)\\
- & \propto & -1+\tau n_{j}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})^{2}}\int_{0}^{c_{j}^{*}}(c_{j}^{*}-c)dF_{j}(c)=-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*}).
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\frac{dn_{j}}{dc^{*}}=\frac{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}{\tau(p-\Exp[c|c<c^{*}])}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\frac{dn_{j}}{d\alpha_{j}}=\frac{dn_{j}}{f(c_{j}^{*})dc_{j}^{*}}=\frac{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}{f(c^{*})\tau(p-\Exp[c|c<c^{*}])}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Third, the flow balance condition 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
-
-\end_inset
-
- can be rewritten as
-\begin_inset Formula 
-\[
-\int\frac{n_{j}}{\alpha_{j}}dG(j)=\beta.
-\]
-
-\end_inset
-
-Differentiate wrt 
-\begin_inset Formula $\beta$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\int\left[\frac{dn_{j}}{d\beta}\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{d\beta}\frac{n_{j}}{\alpha_{j}}\right]dG(j) & = & 1\\
-\int\frac{dn_{j}}{d\beta}\left[\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{dn_{j}}\frac{n_{j}}{\alpha_{j}}\right]dG(j) & = & 1
-\end{eqnarray*}
-
-\end_inset
-
-I will show now that for any 
-\begin_inset Formula $j$
 \end_inset
 
 , 
-\begin_inset Formula 
-\[
-\frac{1}{\alpha_{j}}-\frac{d\alpha_{j}}{dn_{j}}\frac{n_{j}}{\alpha_{j}}\geq0
-\]
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:D_A-1-1"
 
 \end_inset
 
+}, where we treat 
+\begin_inset Formula $x$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, as has been determined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:unique-x"
+
+\end_inset
+
+.
  
-\begin_inset Formula 
-\[
-\frac{1}{\alpha_{j}}-\frac{n_{j}}{\alpha_{j}^{2}}\frac{f(c^{*})\tau(p-\Exp[c|c<c^{*}])}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
-\]
+\end_layout
 
-\end_inset
+\begin_layout Proof
+Use Kakutani theorem.
+ 
+\end_layout
 
-
-\begin_inset Formula 
-\[
-\frac{-\alpha_{j}+\tau n_{j}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})-n_{j}f(c^{*})\tau(p-\Exp[c|c<c^{*}])}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\frac{-\alpha_{j}-n_{j}f(c_{j}^{*})\tau(p-c_{j}^{*})}{-1+\frac{\tau n_{j}}{F_{j}(c_{j}^{*})}\frac{f_{j}(c_{j}^{*})}{F_{j}(c_{j}^{*})}W_{j}(c_{j}^{*})}\geq0
-\]
-
-\end_inset
-
-The numerator is non-positive because price is above the marginal cost.
- The denominator is negative by the assumption.
- Therefore, the inequality holds.
- Finally, this implies that
-\begin_inset Formula 
-\[
-\frac{dN}{d\beta}=\int\frac{dn_{j}}{d\beta}dG(j)\geq0.
-\]
-
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -946,17 +2583,17 @@ name "lem:unique-x"
 \end_inset
 
 For any vector 
-\begin_inset Formula $\alpha(\theta)$
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
 , there exists a unique vector solution 
-\begin_inset Formula $x(\theta)$
+\begin_inset Formula $x(y)$
 \end_inset
 
  to 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:SS"
+reference "eq:SS-1"
 
 \end_inset
 
@@ -975,21 +2612,21 @@ reference "eq:SS"
 \end_inset
 
 Denote 
-\begin_inset Formula $x=\sum_{\theta'}x(\theta')$
+\begin_inset Formula $x=\sum_{y'}x(y')$
 \end_inset
 
- the mass of all available workers.
+ the mass of all available sellers.
  Rewrite 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:SS"
+reference "eq:SS-1"
 
 \end_inset
 
  as 
 \begin_inset Formula 
 \begin{equation}
-\tau\beta(\theta,\alpha(\theta),p_{\theta},x(\theta)/x)\alpha(\theta)+x(\theta)=g(\theta).\label{eq:Ax=g}
+\tau\beta(y,\alpha(y),p_{y},x(y)/x)\alpha(y)+x(y)=g(y).\label{eq:Ax=g}
 \end{equation}
 
 \end_inset
@@ -999,7 +2636,7 @@ Denote the left-hand side of the equation by
 \end_inset
 
 , where 
-\begin_inset Formula $\bx=(x(\theta))_{\theta\in\Theta}$
+\begin_inset Formula $\bx=(x(y))_{y\in Y}$
 \end_inset
 
  and 
@@ -1011,7 +2648,7 @@ Denote the left-hand side of the equation by
 \end_inset
 
  into 
-\begin_inset Formula $\R^{dim\Theta}$
+\begin_inset Formula $\R^{dimY}$
 \end_inset
 
 .
@@ -1031,13 +2668,13 @@ For existence, consider a mapping
  defined as 
 \begin_inset Formula 
 \[
-T_{i}(\bx)=g_{i}-\tau\beta(\theta_{i},\alpha(\theta_{i}),p_{\theta_{i}},x(\theta_{i})/x)\alpha(\theta_{i}).
+T_{i}(\bx)=g_{i}-\tau\beta(y_{i},\alpha(y_{i}),p_{y_{i}},x(y_{i})/x)\alpha(y_{i}).
 \]
 
 \end_inset
 
 Define 
-\begin_inset Formula $X=\{(x_{1},...x_{\dim\Theta})\colon0\leq x_{i}\leq g_{i}\}$
+\begin_inset Formula $X=\{(x_{1},...x_{\dim Y})\colon0\leq x_{i}\leq g_{i}\}$
 \end_inset
 
 .
@@ -1063,7 +2700,7 @@ Define
  But also
 \begin_inset Formula 
 \[
-T_{i}(\bx)\geq g_{i}-\tau\beta(\theta_{i},1,p_{\theta_{i}},1)>0.
+T_{i}(\bx)\geq g_{i}-\tau\beta(y_{i},1,p_{y_{i}},1)>0.
 \]
 
 \end_inset
@@ -1134,7 +2771,7 @@ J=\begin{bmatrix}\frac{\partial A_{1}}{\partial x_{1}} & \frac{\partial A_{1}}{\
 \end_inset
 
 where we use a simplified notation 
-\begin_inset Formula $x_{1}:=x(\theta_{1})$
+\begin_inset Formula $x_{1}:=x(y_{1})$
 \end_inset
 
 .
@@ -1149,14 +2786,14 @@ where we use a simplified notation
 \begin_layout Proof
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial A_{1}}{\partial x_{1}} & = & \tau\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}\frac{d(x(\theta_{1})/x)}{dx_{1}}+1=\\
- & = & \tau\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}\frac{x-x_{1}}{x^{2}}+1.
+\frac{\partial A_{1}}{\partial x_{1}} & = & \tau\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}\frac{d(x(y_{1})/x)}{dx_{1}}+1=\\
+ & = & \tau\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}\frac{x-x_{1}}{x^{2}}+1.
 \end{eqnarray*}
 
 \end_inset
 
 Denote for brevity 
-\begin_inset Formula $\beta_{1}=\frac{d\beta(\theta_{1},\alpha(\theta_{1}),p_{\theta_{1}},x(\theta_{1})/x)\alpha(\theta_{1})}{d\nu_{1}}$
+\begin_inset Formula $\beta_{1}=\frac{d\beta(y_{1},\alpha(y_{1}),p_{y_{1}},x(y_{1})/x)\alpha(y_{1})}{d\nu_{1}}$
 \end_inset
 
 .
@@ -1168,7 +2805,7 @@ Denote for brevity
 
 \end_inset
 
-Similary find
+Similarly find
 \begin_inset Formula 
 \[
 \frac{\partial A_{1}}{\partial x_{2}}=-\frac{\tau}{x}\beta_{1}\nu_{1}.
@@ -1187,7 +2824,7 @@ We need to show that all principle minors of matrix
  are non-negative.
  Without loss of generality, consider the leading principal minor of size
  
-\begin_inset Formula $K=1,...,\dim\Theta$
+\begin_inset Formula $K=1,...,\dim Y$
 \end_inset
 
 , denote it by 
@@ -1270,7 +2907,7 @@ First observe that
 \end_inset
 
 because 
-\begin_inset Formula $\sum_{i=1}^{\dim\Theta}\nu_{i}=1$
+\begin_inset Formula $\sum_{i=1}^{\dim Y}\nu_{i}=1$
 \end_inset
 
 .
@@ -1283,497 +2920,7 @@ because
 \end_inset
 
  has a unique solutions.
-\end_layout
-
-\begin_layout Section
-Proofs omitted from the main text
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "prop:Equilibrium-exists-and"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "proof:eqm-exists"
-
-\end_inset
-
- We need to show that there is a unique solution 
-\begin_inset Formula $(\alpha(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
-\end_inset
-
- to {
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:D_A-1"
-
-\end_inset
-
-}
-\end_layout
-
-\begin_layout Proof
-Use Kakutani theorem.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "prop:Equilibrium-exists-and-1"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "proof:eqm-exists-1"
-
-\end_inset
-
- We need to show that there is a unique solution 
-\begin_inset Formula $(\alpha(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
-\end_inset
-
- to {
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:D_A-1-1"
-
-\end_inset
-
-}, where we treat 
-\begin_inset Formula $x$
-\end_inset
-
- as a function of 
-\begin_inset Formula $\alpha$
-\end_inset
-
-, as has been determined in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "lem:unique-x"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Use Kakutani theorem.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "thm:dM/dW"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "proof2"
-
-\end_inset
-
-Step 1.
- 
-\begin_inset Formula $M$
-\end_inset
-
- and 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- are positively related.
- Indeed, when the mass of available workers is 
-\begin_inset Formula $X$
-\end_inset
-
-, the flow of matches is 
-\begin_inset Formula 
-\[
-M=\frac{1-X}{\tau}.
-\]
-
-\end_inset
-
-The buyer arrival rate on available workers is 
-\begin_inset Formula $\beta_{A}=\beta/X$
-\end_inset
-
-.
- Therefore,
-\begin_inset Formula 
-\[
-M=\frac{1-\beta/\beta_{A}}{\tau}.
-\]
-
-\end_inset
-
-We are interested in the sign of 
-\begin_inset Formula $\delta M/\delta W$
-\end_inset
-
-, therefore we will find 
-\begin_inset Formula $\delta\beta_{A}/\delta W$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Step 2.
- The equilibrium values of 
-\begin_inset Formula $\alpha(\theta)$
-\end_inset
-
- and 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- are found from the system of equations 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:V-shat-W"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
-
-\end_inset
-
-, which we reproduce here:
-\begin_inset Formula 
-\begin{align}
-p+\theta-\hat{m}(\theta) & =\tau\beta_{A}W(\hat{m}(\theta)),\quad\forall\theta\in\Theta;\label{eq:20}\\
-\int\frac{dG(\theta)}{\tau\alpha(\theta)+1/\beta_{A}} & =\beta.\label{eq:21}
-\end{align}
-
-\end_inset
-
-Take the differential of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:21"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{gather}
--\int\frac{dG(\theta)\left(\tau\delta\alpha(\theta)-\delta\beta_{A}/\beta_{A}^{2}\right)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
-\delta\beta_{A}=\frac{\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}}{\frac{1}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}}.\label{eq:delta-betaA}
-\end{gather}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Now use the fact that
-\begin_inset Formula 
-\begin{equation}
-\alpha(\theta)=W'(\hat{m}(\theta)+)\label{eq:alpha=W'}
-\end{equation}
-
-\end_inset
-
-to find the differential
-\begin_inset Formula 
-\begin{equation}
-\delta\alpha(\theta)=\delta W'(\hat{m}(\theta))+W''(\hat{m}(\theta))\delta\hat{m}(\theta).\label{eq:delta-alpha}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Take the differential of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:20"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{gather}
--\delta\hat{m}(\theta)=\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}W'(\hat{m}(\theta))\delta\hat{m}(\theta)+\tau\beta_{A}\delta W(\hat{m}(\theta))\nonumber \\
--\delta\hat{m}(\theta)(1+\tau\beta_{A}\alpha(\theta))=\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}\delta W(\hat{m}(\theta)).\label{eq:delta-mhat}
-\end{gather}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Plug in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-mhat"
-
-\end_inset
-
- into 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-alpha"
-
-\end_inset
-
- and then into 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-betaA"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{multline*}
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\tau\int\frac{\delta\alpha(\theta)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
-=\tau\int\frac{\left(\delta W'(\hat{m}(\theta))+W''(\hat{m}(\theta))\delta\hat{m}(\theta)\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
-=\tau\int\frac{\left(\delta W'(\hat{m}(\theta))\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau\int\frac{W''(\hat{m}(\theta))\left(\tau\delta\beta_{A}W(\hat{m}(\theta))+\tau\beta_{A}\delta W(\hat{m}(\theta))\right)dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{3}\beta_{A}}
-\end{multline*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{multline*}
-\delta\beta_{A}\left[\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}+\tau^{2}\int\frac{W''(\hat{m}(\theta))\beta_{A}^{2}W(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{3}}\right]=\\
-=\tau\int\frac{\delta W'(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}-\tau^{2}\int\frac{W''(\hat{m}(\theta))\delta W(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{3}}
-\end{multline*}
-
-\end_inset
-
-We have both 
-\begin_inset Formula $\delta W$
-\end_inset
-
- and 
-\begin_inset Formula $(\delta W)'$
-\end_inset
-
- on the right hand side of the expression above, and we need to have only
- 
-\begin_inset Formula $\delta W$
-\end_inset
-
- .
- To get it, we will use integration by parts.
- Consider separately the first term in the previous line:
-\begin_inset Formula 
-\begin{gather*}
-Z_{1}:=\tau\int\frac{\delta W'(\hat{m}(\theta))dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\tau\beta_{A}^{2}\int\frac{\left(\delta W(\hat{m}(\theta))\right)'g(\theta)d\theta}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}=\tau\beta_{A}^{2}\int\frac{g(\theta)d\left(\delta W(\hat{m}(\theta))\right)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}=\\
-=\tau\beta_{A}^{2}\frac{g(\theta)\delta W(\hat{m}(\theta))}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}|_{\underline{\theta}}^{\overline{\theta}}-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))d\left(\frac{g(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}\right)=\\
-=-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))d\left(\frac{g(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}\right)=\\
-=-\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\frac{g'(\theta)\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}-2g(\theta)\left(\tau\alpha(\theta)\beta_{A}+1\right)\tau\beta_{A}\alpha'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{4}}d\theta=\\
-=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-\frac{g'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{2}}+\frac{2g(\theta)\tau\beta_{A}\alpha'(\theta)}{\left(\tau\alpha(\theta)\beta_{A}+1\right)^{3}}\right]d\theta
-\end{gather*}
-
-\end_inset
-
-Using 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha=W'"
-
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-\alpha'(\theta)=W''(\hat{m}(\theta))\hat{m}'(\theta).
-\]
-
-\end_inset
-
-Differentiate 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:20"
-
-\end_inset
-
- wrt 
-\begin_inset Formula $\theta$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{align*}
-1-\hat{m}'(\theta) & =\tau\beta_{A}\alpha(\theta)\hat{m}'(\theta)\\
-\hat{m}'(\theta) & =\frac{1}{1+\tau\beta_{A}\alpha(\theta)}.
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-For brevity, adopt the notation 
-\begin_inset Formula 
-\[
-\nu(\theta):=\frac{1}{1+\tau\beta_{A}\alpha(\theta)}.
-\]
-
-\end_inset
-
-The notation is not coincidental, 
-\begin_inset Formula $\nu(\theta)$
-\end_inset
-
- is equal to the fraction of type-
-\begin_inset Formula $\theta$
-\end_inset
-
- workers who are available in equilibrium.
- Return to compute
-\begin_inset Formula 
-\[
-Z_{1}=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{3}2g(\theta)\tau\beta_{A}W''\nu\right]d\theta.
-\]
-
-\end_inset
-
-Now we finish computing the differential 
-\begin_inset Formula $\delta\beta_{A}$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{multline*}
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(\theta)}{\left(\tau\alpha(\theta)+1/\beta_{A}\right)^{2}}=\\
-=\tau\beta_{A}^{2}\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{3}2g(\theta)\tau\beta_{A}W''\nu\right]d\theta-\tau^{2}\int W''(\hat{m}(\theta))\delta W(\hat{m}(\theta))\nu^{3}\beta_{A}^{3}dG(\theta)=\\
-=\tau\int\delta W(\hat{m}(\theta))\left[-g'(\theta)\nu(\theta)^{2}\beta_{A}^{2}+\nu(\theta)^{4}2g(\theta)\tau\beta_{A}W''\beta_{A}^{2}-\tau W''(\hat{m}(\theta))\nu^{3}g(\theta)\beta_{A}^{3}\right]d\theta.
-\end{multline*}
-
-\end_inset
-
-We are interested in the expression in the square brackets in the formula
- above.
- Therefore, for some 
-\begin_inset Formula $K>0$
-\end_inset
-
- that is constant in 
-\begin_inset Formula $\theta$
-\end_inset
-
- we have: 
-\begin_inset Formula 
-\begin{align*}
-\frac{\delta\beta_{A}}{\delta W} & =K\left(-g'(\theta)\nu(\theta)^{2}+\nu(\theta)^{4}2g(\theta)\tau\beta_{A}W''-\tau W''(\hat{m}(\theta))\nu^{3}g(\theta)\beta_{A}\right)=\\
- & =K\nu(\theta)^{2}\left(-g'(\theta)+g(\theta)\nu(\theta)\tau\beta_{A}W''(\hat{m}(\theta))(2\nu(\theta)-1)\right).
-\end{align*}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -1806,9 +2953,9 @@ Allow for the case when
 \begin_inset Formula $\beta(1)\tau>1$
 \end_inset
 
-, then workers get overwhelmed by the buyer requests and can't respond to
+, then sellers get overwhelmed by the buyer requests and can't respond to
  all of them to the extent that they can't even reject them.
- To cover this situation we assume that if there are no available workers
+ To cover this situation we assume that if there are no available sellers
  to reject a pending buyer request, the platform rejects it automatically.
  
 \end_layout
@@ -1819,7 +2966,7 @@ Since some requests can be rejected by the platform, the acceptance rate
 \begin_inset Formula $\alpha$
 \end_inset
 
- generated by workers.
+ generated by sellers.
  Denote by 
 \begin_inset Formula $\alpha^{e}$
 \end_inset
@@ -1833,7 +2980,7 @@ buyers
 \begin_inset Formula $x\in[0,1]$
 \end_inset
 
- mass of available workers, and let buyers arrive to the platform at rate
+ mass of available sellers, and let buyers arrive to the platform at rate
  
 \begin_inset Formula $\beta$
 \end_inset
@@ -1851,12 +2998,12 @@ buyers
 \begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)$
 \end_inset
 
- available workers.
+ available sellers.
  What is 
 \begin_inset Formula $\alpha^{e}$
 \end_inset
 
- when workers use acceptance rate 
+ when sellers use acceptance rate 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -1869,7 +3016,7 @@ buyers
 \end_inset
 
 .
- There is plenty of available workers, 
+ There is plenty of available sellers, 
 \begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)>\beta dt$
 \end_inset
 
@@ -1895,7 +3042,7 @@ buyers
 \end_inset
 
 .
- There are few workers that just became available but in sufficient number
+ There are few sellers that just became available but in sufficient number
  to process all buyers.
  In the same fashion as in case 1, 
 \begin_inset Formula $\alpha^{e}=\alpha$
@@ -1914,9 +3061,9 @@ buyers
 \end_inset
 
 .
- Not sufficient workers to process all buyers, some buyers are rejected
+ Not sufficient sellers to process all buyers, some buyers are rejected
  by the platform.
- The number of accepted tasks is 
+ The number of accepted jobs is 
 \begin_inset Formula $\frac{1}{\tau}dt$
 \end_inset
 
@@ -1976,7 +3123,7 @@ The adjusted definition of equilibrium is then the following.
 \end_inset
 
  reflects the fact that when the demand is overwhelming, buyers line up
- for workers so workers start a new task immediately after they finish the
+ for sellers so sellers start a new job immediately after they finish the
  previous one.
  The No Excess Demand assumption makes sure that this never happens, 
 \begin_inset Formula $\alpha\beta(\alpha)\tau<1$

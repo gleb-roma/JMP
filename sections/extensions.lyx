@@ -130,27 +130,27 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eps}{\varepsilon}
+\renewcommand{\eps}{\varepsilon}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Exp}{\mathbb{E}}
+\renewcommand{\Exp}{\mathbb{E}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\R}{\mathbb{R}}
+\renewcommand{\R}{\mathbb{R}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Norm}{\mathcal{N}}
+\renewcommand{\Norm}{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\sigmasq}{\sigma^{2}}
+\renewcommand{\sigmasq}{\sigma^{2}}
 \end_inset
 
 
@@ -158,7 +158,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmin}{\operatorname*{argmin}}
+\renewcommand{\argmin}{\operatorname*{argmin}}
 {\mathrm{argmin}}
 \end_inset
 
@@ -167,7 +167,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmax}{\operatorname*{argmax}}
+\renewcommand{\argmax}{\operatorname*{argmax}}
 {\mathrm{argmax}}
 \end_inset
 
@@ -176,28 +176,36 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\supp}{\operatorname{supp}}
 {\mathrm{supp}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oV}{\overline{V}}
+\renewcommand{\oV}{\overline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uV}{\underline{V}}
+\renewcommand{\uV}{\underline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\renewcommand{\oW}{\overline{W}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\renewcommand{\uW}{\underline{W}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\betaa}{\beta_{A}}
 \end_inset
 
 
@@ -207,8 +215,12 @@ theorems-ams-extended-bytype
 Extensions
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Subsection
-General demand: workers are imperfect substitutes
+General demand: sellers are imperfect substitutes
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:General-demand:-workers"
@@ -218,37 +230,37 @@ name "subsec:General-demand:-workers"
 
 \end_layout
 
-\begin_layout Standard
-Worker type space 
-\begin_inset Formula $\Theta$
+\begin_layout Plain Layout
+seller type space 
+\begin_inset Formula $Y$
 \end_inset
 
  is finite.
  There is a continuum of potential buyers who arrive continuously over time.
  Let 
-\begin_inset Formula $\beta(\theta)$
+\begin_inset Formula $\beta(y)$
 \end_inset
 
  be the flow rate of buyers who arrive to request services of type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers.
+ sellers.
  In other words, within an infinitesimal time interval 
 \begin_inset Formula $dt$
 \end_inset
 
 , a continuum mass 
-\begin_inset Formula $\beta(\theta)dt$
+\begin_inset Formula $\beta(y)dt$
 \end_inset
 
  of buyers arrive to the platform and requests one of type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers.
+ sellers.
  I refer to the collection of functions 
-\begin_inset Formula $\left\{ \beta(\theta)\right\} _{\theta\in\Theta}$
+\begin_inset Formula $\left\{ \beta(y)\right\} _{y\in Y}$
 \end_inset
 
  as 
@@ -283,26 +295,26 @@ name "assu:Frictional-consumer-search"
 \end_inset
 
 Let the fraction of available type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers relative to the mass of all available workers be 
-\begin_inset Formula $\nu(\theta)$
+ sellers relative to the mass of all available sellers be 
+\begin_inset Formula $\nu(y)$
 \end_inset
 
 
-\begin_inset Formula $=x(\theta)/\sum x(\theta')$
+\begin_inset Formula $=x(y)/\sum x(y')$
 \end_inset
 
 .
  Demand for type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers is 
+ sellers is 
 \begin_inset Formula 
 \[
-\beta(\theta)=\beta(\theta,\alpha(\theta),p_{\theta},\nu(\theta)).
+\beta(y)=\beta(y,\alpha(y),p_{y},\nu(y)).
 \]
 
 \end_inset
@@ -335,29 +347,29 @@ Let the fraction of available type-
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The assumption posits that the demand for type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers depends not only on the characteristics of type-
-\begin_inset Formula $\theta$
+ sellers depends not only on the characteristics of type-
+\begin_inset Formula $y$
 \end_inset
 
- workers but also on their number.
+ sellers but also on their number.
  Critically, the larger the fraction of available type-
-\begin_inset Formula $\theta$
+\begin_inset Formula $y$
 \end_inset
 
- workers, the more demand they receive.
+ sellers, the more demand they receive.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The steady state condition becomes:
 \begin_inset Formula 
 \begin{equation}
-\beta(\theta)\alpha(\theta)=\frac{g(\theta)-x(\theta)}{\tau},\quad\forall\theta\in\Theta.\label{eq:SS-1}
+\beta(y)\alpha(y)=\frac{g(y)-x(y)}{\tau},\quad\forall y\in Y.\label{eq:SS-1}
 \end{equation}
 
 \end_inset
@@ -365,11 +377,11 @@ The steady state condition becomes:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Each buyer type now had individual buyer arrival rate:
 \begin_inset Formula 
 \begin{equation}
-\beta_{A}(\theta):=\frac{\beta(\theta)}{x(\theta)}\label{eq:D_A-1-1}
+\beta_{A}(y):=\frac{\beta(y)}{x(y)}\label{eq:D_A-1-1}
 \end{equation}
 
 \end_inset
@@ -377,9 +389,9 @@ Each buyer type now had individual buyer arrival rate:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 A tuple of endogenous objects 
-\begin_inset Formula $(\alpha(\theta),x(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
+\begin_inset Formula $(\alpha(y),x(y),\beta_{A}(y))_{y\in Y}$
 \end_inset
 
  constitute a 
@@ -390,12 +402,12 @@ steady-state equilibrium
 \end_layout
 
 \begin_layout Enumerate
-Workers act optimally taking buyer arrival rate 
-\begin_inset Formula $\beta_{A}(\theta)$
+sellers act optimally taking buyer arrival rate 
+\begin_inset Formula $\beta_{A}(y)$
 \end_inset
 
  as given, so that the acceptance rates 
-\begin_inset Formula $\alpha(\theta)$
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
  are determined by 
@@ -413,7 +425,7 @@ Given
 \begin_inset Formula $\alpha(\cdot)$
 \end_inset
 
-, worker flows balance out, as shown in 
+, seller flows balance out, as shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:SS-1"
@@ -422,7 +434,7 @@ reference "eq:SS-1"
 
 .
  Steady state flows determine 
-\begin_inset Formula $\beta_{A}(\theta)$
+\begin_inset Formula $\beta_{A}(y)$
 \end_inset
 
  according to 
@@ -453,13 +465,13 @@ name "assu:no-excess-demand-1"
 
 \end_inset
 
-Collectively, it is physically possible for workers to complete every buyer
- task: 
-\begin_inset Formula $\beta(\theta,1,p(\theta),1)\tau<g(\theta)$
+Collectively, it is physically possible for sellers to complete every buyer
+ job: 
+\begin_inset Formula $\beta(y,1,p(y),1)\tau<g(y)$
 \end_inset
 
  for all 
-\begin_inset Formula $\theta\in\Theta$
+\begin_inset Formula $y\in Y$
 \end_inset
 
 .
@@ -477,13 +489,13 @@ Steady-state equilibrium exists and is unique.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 First I establish that for any vector of acceptance rates 
-\begin_inset Formula $\alpha(\theta)$
+\begin_inset Formula $\alpha(y)$
 \end_inset
 
-, there exists a unique steady state masses of available workers 
-\begin_inset Formula $x(\theta)$
+, there exists a unique steady state masses of available sellers 
+\begin_inset Formula $x(y)$
 \end_inset
 
 , as a solution to 
@@ -502,20 +514,20 @@ reference "lem:unique-x"
 
 ).
  The existence of 
-\begin_inset Formula $\left\{ x(\theta)\right\} $
+\begin_inset Formula $\left\{ x(y)\right\} $
 \end_inset
 
  crucially relies on the No Excess Demand assumption, and the uniquess follows
  from the fact that demand depends on 
-\begin_inset Formula $\left\{ x(\theta)\right\} $
+\begin_inset Formula $\left\{ x(y)\right\} $
 \end_inset
 
  through the share 
-\begin_inset Formula $\nu(\theta)$
+\begin_inset Formula $\nu(y)$
 \end_inset
 
 
-\begin_inset Formula $=x(\theta)/\sum x(\theta')$
+\begin_inset Formula $=x(y)/\sum x(y')$
 \end_inset
 
 .
@@ -528,7 +540,7 @@ reference "lem:unique-x"
 \end_inset
 
 , I show that there is a unique solution 
-\begin_inset Formula $(\alpha(\theta),\beta_{A}(\theta))_{\theta\in\Theta}$
+\begin_inset Formula $(\alpha(y),\beta_{A}(y))_{y\in Y}$
 \end_inset
 
  to {
@@ -564,26 +576,21 @@ name "prop:C-M-MM-1"
 
 \end_inset
 
-Assume 
-\begin_inset Formula $F_{\theta}^{\mu}$
+Let 
+\begin_inset Formula $\sigma^{FD}$
 \end_inset
 
- are absolutely continuous on 
-\begin_inset Formula $\R_{+}$
+ be the equilibrium strategy profile under full disclosure.
+ Then there exists 
+\begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
-, and 
-\begin_inset Formula $F_{\theta}^{\mu}(p_{\theta})>0$
-\end_inset
-
-.
- Assume buyers are delay-sensitive.
- Then 
+ such that for all y: 
 \begin_inset Formula 
 \begin{eqnarray*}
-V^{coord}(\theta) & > & V(\theta),\quad\theta\in\Theta\\
-\alpha_{\theta}^{coord} & > & \alpha_{\theta}\\
-CS^{coord} & \geq & CS.
+\tilde{V}(y) & > & V^{FD}(y),\\
+\tilde{\rho}(y) & > & \rho^{FD}(y),\\
+\widetilde{CS} & \geq & CS^{FD}.
 \end{eqnarray*}
 
 \end_inset
@@ -595,7 +602,7 @@ CS^{coord} & \geq & CS.
 Endogenous price
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In our base model we assumed that the price is set by the larger outside
  market.
  In this section we consider other scenarios of price setting: competitive
@@ -605,7 +612,7 @@ In our base model we assumed that the price is set by the larger outside
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We adjust our notation a little bit to account for the fact that demand
  depends on price.
  Namely, buyer arrival rate is given by
@@ -648,7 +655,7 @@ Let buyer
 \begin_inset Formula $i$
 \end_inset
 
-'s expected acceptance rate for his task be 
+'s expected acceptance rate for his job be 
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
@@ -662,13 +669,13 @@ Let buyer
 \end_inset
 
  has hassle cost 
-\begin_inset Formula $h_{i}$
+\begin_inset Formula $f_{i}$
 \end_inset
 
  from using the platform.
  If the buyer does not use the platform he gets payoff of zero.
  If he uses the platform he experiences a disutility of 
-\begin_inset Formula $h_{i}$
+\begin_inset Formula $f_{i}$
 \end_inset
 
 .
@@ -688,7 +695,7 @@ Let buyer
  joins iff 
 \begin_inset Formula 
 \[
-\alpha_{i}(v_{i}-p)-h_{i}\geqslant0.
+\alpha_{i}(v_{i}-p)-f_{i}\geqslant0.
 \]
 
 \end_inset
@@ -699,7 +706,7 @@ As defined above, the average acceptance rate across buyers is
 
 .
  The assumption is that 
-\begin_inset Formula $[\mbox{\#potential buyers}]\cdot\Pr(\alpha_{i}(v_{i}-p)-h_{i}\geq0)=\beta(\alpha,p)$
+\begin_inset Formula $[\mbox{\#potential buyers}]\cdot\Pr(\alpha_{i}(v_{i}-p)-f_{i}\geq0)=\beta(\alpha,p)$
 \end_inset
 
 .
@@ -732,7 +739,7 @@ Denote demand elasticities wrt
 Price set by the intermediary
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In this section we study a situation when the platform controls the price
  on the platform (e.g.
  in case of Uber and Instacart).
@@ -746,7 +753,7 @@ key "RT06,Wey10"
 
 ).
  However, unlike these papers, we are more specific about where the network
- effect is coming from and also workers have a decision margin not related
+ effect is coming from and also sellers have a decision margin not related
  to participation – acceptance rate.
  
 \end_layout
@@ -756,7 +763,7 @@ Match-maximizing platform.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 From the previous section we know that whatever price a Walrasian auctioneer
  picks, it can be sustained in a competitive equilibrium.
  We thus pose a question: if the platform can set the price, what price
@@ -764,7 +771,7 @@ From the previous section we know that whatever price a Walrasian auctioneer
  The platform solves 
 \begin_inset Formula 
 \[
-\max_{\mu,p}\alpha\beta(\alpha,p),
+\max_{\lambda,p}\alpha\beta(\alpha,p),
 \]
 
 \end_inset
@@ -787,7 +794,7 @@ reference "eq:pi(c)"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We know from 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -798,7 +805,7 @@ reference "prop:Pareto-frontier"
  the form of the optimal disclosure policy for given price.
  How should the price be set? To induce more demand, the platform would
  like to choose lower price.
- But the lower the price, the lower worker utilization rate can be implemented.
+ But the lower the price, the lower seller utilization rate can be implemented.
  The next result quantifies this tradeoff.
  
 \end_layout
@@ -810,13 +817,13 @@ name "prop:opt-price-and-conflation-max-m"
 
 \end_inset
 
-Assume workers have no private information.
+Assume sellers have no private information.
  The #matches-maximizing disclosure policy has the form 
 \begin_inset Formula 
 \[
-\hat{\mu}(\omega)=\begin{cases}
-\Exp[\omega|\omega\leq mc], & \alpha\\
-\Exp[\omega|\omega>mc], & 1-\alpha
+\hat{\lambda}(x)=\begin{cases}
+\Exp[x|x\leq mc], & \alpha\\
+\Exp[x|x>mc], & 1-\alpha
 \end{cases}
 \]
 
@@ -837,8 +844,8 @@ and
  solve the system of equations
 \begin_inset Formula 
 \begin{eqnarray}
-\Exp[\omega|\omega\leq mc] & = & p\nonumber \\
-F_{0}(mc) & = & \alpha\nonumber \\
+\Exp[x|x\leq mc] & = & p\nonumber \\
+F(mc) & = & \alpha\nonumber \\
 \frac{\eps_{\alpha}+1}{\eps_{p}} & = & \frac{mc-p}{p}\label{eq:opt-price-via-elasticities}
 \end{eqnarray}
 
@@ -847,7 +854,7 @@ F_{0}(mc) & = & \alpha\nonumber \\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The proof is the Appendix 
 \begin_inset CommandInset ref
 LatexCommand vpageref
@@ -892,15 +899,15 @@ Revenue-maximizing platform.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 When the platform in the stage of growth, it wants to be bigger.
  Later on, the platform turn to monetization.
  We are interested in answering the following question: How does the platform
  policies change when it is profit-maximizing? 
 \end_layout
 
-\begin_layout Standard
-To get a cut from workers revenue, the platform uses two prices: price 
+\begin_layout Plain Layout
+To get a cut from sellers revenue, the platform uses two prices: price 
 \begin_inset Formula $p$
 \end_inset
 
@@ -908,12 +915,12 @@ To get a cut from workers revenue, the platform uses two prices: price
 \begin_inset Formula $w$
 \end_inset
 
- for workers.
+ for sellers.
  Additionally, it has disclosure policy as an instrument.
  The platform's objective is
 \begin_inset Formula 
 \begin{eqnarray*}
- &  & \max_{\mu,p,w}\beta(\alpha,p)\alpha(p-w)\\
+ &  & \max_{\lambda,p,w}\beta(\alpha,p)\alpha(p-w)\\
  & \mbox{s.t.} & AC(\alpha)\leq w
 \end{eqnarray*}
 
@@ -944,13 +951,13 @@ name "prop:opt-price-and-conflation-max-rent"
 
 \end_inset
 
-Assume workers have no private information.
+Assume sellers have no private information.
  The profit-maximizing disclosure policy has the form 
 \begin_inset Formula 
 \[
-\hat{\mu}(\omega)=\begin{cases}
-\Exp[\omega|\omega\leq mc], & \alpha\\
-\Exp[\omega|\omega>mc], & 1-\alpha
+\hat{\lambda}(x)=\begin{cases}
+\Exp[x|x\leq mc], & \alpha\\
+\Exp[x|x>mc], & 1-\alpha
 \end{cases}
 \]
 
@@ -975,8 +982,8 @@ and
  solve the system of equations
 \begin_inset Formula 
 \begin{eqnarray*}
-\Exp[\omega|\omega\leq mc] & = & w\\
-F_{0}(mc) & = & \alpha\\
+\Exp[x|x\leq mc] & = & w\\
+F(mc) & = & \alpha\\
 \frac{1}{\eps_{p}} & = & \frac{p-w}{p}\\
 \frac{\eps_{\alpha}+1}{\eps_{p}} & = & \frac{mc-w}{p}
 \end{eqnarray*}
@@ -986,7 +993,7 @@ F_{0}(mc) & = & \alpha\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The next results states how the marketplace variables change after the platform
  transitions from the match-maximizing mode to the revenue-maximizing mode.
  Imagine the platform starts with match-maximizing as in 
@@ -1084,6 +1091,11 @@ If
 
 .
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
