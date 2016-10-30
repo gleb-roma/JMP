@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage{tikz}
-\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing,decorations.text}
 \usepackage{xcolor}
  \usepackage{relsize}
 \usepackage{graphicx}
@@ -242,34 +242,29 @@ Job Market Paper
 \end_layout
 
 \begin_layout Abstract
-\begin_inset Note Note
-status open
-
-\begin_layout Abstract
 I develop a model of a decentralized matching market in which buyers pursue
  sellers by proposing jobs.
  No coordination friction.
- sellers have non-trivial preferences over jobs and independently choose
+ Sellers have non-trivial preferences over jobs and independently choose
  what jobs to accept.
- Preference heterogeneity induces same-side and cross-side search externalities
- that generate inefficiently high levels of search activities.
- Platform's policy of coarse revelation of buyer information to sellers
- improves acceptance rates by decreasing the ability of sellers to “cherry-pick”
- desirable buyers.
+ Preference heterogeneity induces same-side and cross-side externalities
+ that generate sellers' excessive screening.
+ Platform's policy of coarse revelation of buyer information improves acceptance
+ rates by decreasing the ability of sellers to “cherry-pick” desirable buyers.
  Implication for welfare-maximizing platform is to limit information to
- the side that is more patient and more substitutable.
- However, if this side has unobserved heterogeneity, coarsening is effective
- only if buyer-to-seller ration is large.
+ the sellers when they more patient and more substitutable than buyers.
+ However, if sellers has unobserved heterogeneity, coarsening is effective
+ only if sellers are tightly capacity constrained or buyer-to-seller ratio
+ is large.
  
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Abstract
-I develop a model of a decentralized matching market in which buyers arrive
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ I develop a model of a decentralized matching market in which buyers arrive
  over time and pursue sellers by proposing jobs.
  sellers have heterogeneous preferences over jobs and independently decide
  what jobs to accept.
@@ -288,6 +283,11 @@ I develop a model of a decentralized matching market in which buyers arrive
  the s tatic case, there are additional availability and patience effects
  that qualitatively change the form of the optimal disclosure policy.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -343,9 +343,18 @@ filename "sections/market_design.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "sections/extensions.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

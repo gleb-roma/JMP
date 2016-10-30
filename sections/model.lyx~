@@ -204,7 +204,13 @@ theorems-ams-extended-bytype
 \end_layout
 
 \begin_layout Section
-Model of Decentralized Matching Market
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Model-of"
+
+\end_inset
+
+The Model of Decentralized Matching Market
 \end_layout
 
 \begin_layout Standard
@@ -371,10 +377,31 @@ centering
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../pictures/matching_chart.eps
-	lyxscale 20
 	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/matching_chart.tex}
+\end_layout
 
 \end_inset
 
@@ -525,7 +552,7 @@ Search and matching process.
 \end_layout
 
 \begin_layout Paragraph
-Heterogeneity and payoffs.
+Buyer and seller preference heterogeneity.
 \end_layout
 
 \begin_layout Standard
@@ -688,7 +715,7 @@ u(x,y)\geq0.\label{eq:buyer-net-payoff}
 \end_layout
 
 \begin_layout Paragraph
-Information Disclosure.
+Platform: Information intermediation.
 \end_layout
 
 \begin_layout Standard
@@ -897,7 +924,7 @@ coarser
 \end_layout
 
 \begin_layout Paragraph
-Steady state.
+Steady state distribution of sellers.
  
 \end_layout
 
@@ -1070,7 +1097,7 @@ name "fig:Matching-process-in"
 \end_layout
 
 \begin_layout Paragraph
-Seller repeated search problem.
+Seller dynamic screening problem.
  
 \end_layout
 
@@ -1331,7 +1358,7 @@ Seller strategy is function
 \end_layout
 
 \begin_layout Subsection
-Equilibrium
+Equilibrium definition and existence
 \end_layout
 
 \begin_layout Standard
@@ -1396,7 +1423,7 @@ steady-state equilibrium
 \end_layout
 
 \begin_layout Enumerate
-[SS] Average utilization rate 
+[Steady state] Average utilization rate 
 \begin_inset Formula $\bar{\rho}$
 \end_inset
 
@@ -1460,17 +1487,6 @@ Steady-state equilibrium exists.
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: uniqueness up to cutoffs.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1552,7 +1568,21 @@ reference "proof:eqm-exists"
 \end_layout
 
 \begin_layout Subsection
-Examples of Marketplaces
+Examples of Marketplaces [not finished]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+should be in the introducitno as motivational examples.
+ Then get back to them in the conclusion? 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1865,16 +1895,6 @@ key "BSW01,Kir09,Halaburda2013,AJK14"
 \end_layout
 
 \begin_layout Assumption
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Homogeneous Buyer Preferences
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset label
 LatexCommand label
 name "assu:uniform-assignment"

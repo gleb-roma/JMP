@@ -265,8 +265,7 @@ name "lem:nubar"
 status open
 
 \begin_layout Plain Layout
-Needs proof.
- 
+Done.
 \end_layout
 
 \end_inset
@@ -340,6 +339,78 @@ increases in
  
 \end_layout
 
+\begin_layout Proof
+Find from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SS"
+
+\end_inset
+
+ that 
+\begin_inset Formula $1-\rho(y)=1/(1+\tau\beta\alpha(y)/(1-\brho))$
+\end_inset
+
+.
+ Take the integral using cdf 
+\begin_inset Formula $G(y)$
+\end_inset
+
+ to obtain 
+\begin_inset Formula $1-\brho=\int dG(y)/(1+\tau\beta\alpha(y)/(1-\brho))$
+\end_inset
+
+.
+ Rearrange and get 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+.
+ The right-hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ Evaluated with 
+\begin_inset Formula $\brho=0$
+\end_inset
+
+, it equals 
+\begin_inset Formula $\int\frac{dG(y)}{1+\beta\tau\alpha(y)}\leq1$
+\end_inset
+
+.
+ Evaluated with 
+\begin_inset Formula $\brho=1$
+\end_inset
+
+, it equals 
+\begin_inset Formula $\int\frac{dG(y)}{\beta\tau\alpha(y)}\geq1$
+\end_inset
+
+, using Assumption 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "assu:no-excess-demand"
+
+\end_inset
+
+.
+ Therefore, the solutions exists and is unique.
+ Monotonicity is straightforward.
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -359,18 +430,68 @@ name "lem:betaa-bounds"
 status open
 
 \begin_layout Plain Layout
-needs proof.
+Done.
  
 \end_layout
 
 \end_inset
 
-
+In the steady state,
 \begin_inset Formula 
 \[
 \beta\leq\betaa\leq\frac{\beta}{1-\tau\beta}.
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:beta_A-1"
+
+\end_inset
+
+, 
+\begin_inset Formula $\betaa=\beta/(1-\brho)$
+\end_inset
+
+ .
+ Therefore, 
+\begin_inset Formula $\betaa\geq\beta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Find from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SS"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\tau\beta\frac{1-\rho(y)}{1-\brho}\alpha(y)=\rho(y)$
+\end_inset
+
+.
+ Take expectaton wrt 
+\begin_inset Formula $y$
+\end_inset
+
+ and obtain 
+\begin_inset Formula $\brho=\tau\beta\int\frac{1-\rho(y)}{1-\brho}\alpha(y)dG(y)\leq\tau\beta\int\frac{1-\rho(y)}{1-\brho}dG(y)=\tau\beta$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\betaa\leq\frac{\beta}{1-\tau\beta}.$
 \end_inset
 
 
@@ -395,13 +516,13 @@ name "lem:alpha"
 status open
 
 \begin_layout Plain Layout
-Needs proof.
+Done.
  
 \end_layout
 
 \end_inset
 
-Suppose the linear payoff environment
+Assume the linear payoff environment
 \begin_inset Note Note
 status collapsed
 
@@ -421,11 +542,11 @@ status collapsed
 \end_inset
 
 , 
-\begin_inset Formula $\alpha(y)=\Lambda'(\zhaty+)$
+\begin_inset Formula $\alpha(y)=\Lambda'(\zhaty)$
 \end_inset
 
-.
- 
+ for sellers of mass 1.
+ Furthermore,
 \end_layout
 
 \begin_deeper
@@ -446,7 +567,7 @@ For any
 \end_inset
 
 , there is 
-\begin_inset Formula $y'>0$
+\begin_inset Formula $\breve{y}>0$
 \end_inset
 
  such that 
@@ -454,7 +575,7 @@ For any
 \end_inset
 
  for 
-\begin_inset Formula $y\geq y'$
+\begin_inset Formula $y\geq\breve{y}$
 \end_inset
 
 .
@@ -490,6 +611,153 @@ reference "eq:V-zhat-Lambda"
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Vmu"
+
+\end_inset
+
+, the the accepted jobs are those with 
+\begin_inset Formula $z<\zhaty$
+\end_inset
+
+.
+ Using definition of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda"
+
+\end_inset
+
+, probability of accepting is
+\begin_inset Formula 
+\begin{align*}
+\lambda\{z(s)<\zhaty\} & \leq\alpha(y)\leq\lambda\{z(s)\leq\zhaty\}\\
+F^{\lambda}(\zhaty-) & \leq\alpha(y)\leq F^{\lambda}(\zhaty+)\\
+\Lambda'(\zhaty) & \leq\alpha(y)\leq\Lambda'(\zhaty)
+\end{align*}
+
+\end_inset
+
+Points of discontinuity of 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ make a set of measure zero.
+ Since seller types have full support on 
+\begin_inset Formula $[0,\oy]$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha(y)=\Lambda'(\zhaty)$
+\end_inset
+
+ for sellers of mass 1.
+ 
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+, 
+\begin_inset Formula $\zhaty$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is convex, 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $X=[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda'(z)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $z\geq1$
+\end_inset
+
+.
+ And for 
+\begin_inset Formula $y$
+\end_inset
+
+ large enough, 
+\begin_inset Formula $\zhaty>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-zhat-Lambda"
+
+\end_inset
+
+, 
+\begin_inset Formula $\zhaty$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ .
+ Since 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is convex, 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\tau\betaa$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -814,7 +1082,7 @@ name "lem:upper-coarsening-function"
 status open
 
 \begin_layout Plain Layout
-needs proof.
+Proof is not rigorous enough.
  
 \end_layout
 
@@ -1050,6 +1318,16 @@ reference "prop:Equilibrium-exists-and"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+missing details in the proof
 \end_layout
 
 \end_inset
@@ -1936,6 +2214,17 @@ name "proof2"
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+needs proof.
+ 
+\end_layout
+
+\end_inset
+
 Step 1.
  
 \begin_inset Formula $M$
@@ -2498,6 +2787,10 @@ reference "eq:13-1-1"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Section
 Proofs omitted from the Extensions
 \end_layout
@@ -2568,7 +2861,7 @@ Use Kakutani theorem.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Separator plain
 \end_inset
 
@@ -2921,6 +3214,11 @@ because
 
  has a unique solutions.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
