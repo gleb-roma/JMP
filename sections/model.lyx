@@ -1551,7 +1551,17 @@ reference "proof:eqm-exists"
 \end_layout
 
 \begin_layout Subsection
-Examples of Marketplaces [not finished]
+Examples of Marketplaces
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ [not finished]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1573,8 +1583,7 @@ should be in the introducitno as motivational examples.
 status open
 
 \begin_layout Plain Layout
-Add Convoy, CoachUp.
- 
+Add Convoy, CoachUp? 
 \end_layout
 
 \end_inset
@@ -1602,13 +1611,12 @@ In this section I discuss how the model maps to the reality in the case
 \begin_inset Formula $y$
 \end_inset
 
- denotes seller type, i.e.
- the seller's unobserved heterogeneity; 
+ captures the seller's unobserved heterogeneity; and 
 \begin_inset Formula $x$
 \end_inset
 
- denotes buyer type, i.e.
- the information about buyer available to the platform.
+ captures buyer characteristics observed by the platform but not directly
+ observed by the sellers.
  
 \end_layout
 
@@ -1689,28 +1697,30 @@ Uber.
 
 \begin_layout Standard
 Drivers receive requests from passenger when they are idle.
- 
+ Type 
 \begin_inset Formula $y$
 \end_inset
 
- is driver's location, 
+ includes driver home location, preference for long rides, tolerance to
+ congestion; 
 \begin_inset Formula $x$
 \end_inset
 
- is passenger's destination and star rating.
- Price per mile and minute is fixed (abstract away from surge pricing).
- Drivers do not like short rides or rides to the neighborhoods far removed
- from busy areas.
+ includes passenger's destination and his ride history.
+ Price per mile and minute is fixed (conditional on aggregate multiplies,
+ such as surge pricing).
+ Drivers do not like very short rides or the rides to the neighborhoods
+ far removed from busy areas.
+ Passengers do not like waiting.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "prop:indep-vs-coord"
+reference "prop:FD-suboptimal"
 
 \end_inset
 
- shows that if drivers have full discretion over accepting or rejecting,
- the driver utilization rates are inefficiently low, and the demand-supply
- fit is suboptimal.
+ shows that if drivers have full discretion over accepting, they screen
+ excessively: acceptance rates are low, and the demand-supply fit is suboptimal.
  
 \begin_inset Note Note
 status open
@@ -1735,30 +1745,29 @@ Airbnb.
 Hosts are capacity constrained in rooms.
  Once a room is booked for a specific date, the host cannot accept a better
  guest.
- 
+ Type 
 \begin_inset Formula $y$
 \end_inset
 
- - room quality, location.
- 
+ includes host's preference for age, race, personality, daily schdule.
+ Type 
 \begin_inset Formula $x$
 \end_inset
 
- - guest quality, e.g.
- college student vs.
- elderly couple.
+ includes guests' gender, age, socio-economic status, life style.
  Every host sets his own price that applies to all guests but he may prefer
- to reject certain guests who he expects can be a pain in the neck.
+ to reject certain guests who he expects can be a bad fit.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "prop:indep-vs-coord"
+reference "prop:FD-suboptimal"
 
 \end_inset
 
  shows that if hosts have full discretion over accepting or rejecting guest
- requests, the apartment utilization rates are inefficiently low, and the
- marketplace is removed from its full potential.
+ requests, hosts screen excessively: acceptance rates are too low to satisfy
+ guest demand for hassle-free service, and the marketplace is removed from
+ its full potential.
  
 \end_layout
 
@@ -1772,29 +1781,31 @@ The service providers are capacity constrained because they can do only
  that many tasks per week.
  Once a service provider agreed to do some job, he is constrained in picking
  new tasks.
- 
+ Type 
 \begin_inset Formula $y$
 \end_inset
 
- - seller skill, specialization.
- 
+ includes seller skill and work ethics.
+ Type 
 \begin_inset Formula $x$
 \end_inset
 
- - job category, job difficulty, professional/annoying client.
- Service provider sets hourly rate  which applies to all tasks in the category.
- The seller may prefer to reject the tasks which he does not find to be
- a good fit, or too far, or bad timing of the lead.
+ includes job category, job difficulty, client's professionality.
+ Service providers set hourly rate that apply to all tasks in the same category.
+ The service provider may prefer to reject the tasks which he does not find
+ to be a good fit to his skill, or those that are too far, or those with
+ bad timing.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "prop:indep-vs-coord"
+reference "prop:FD-suboptimal"
 
 \end_inset
 
  shows that if service providers have full discretion over accepting or
- rejecting client leads, the utilization of participating labor is inefficiently
- low, and the matching efficiency is suboptimal.
+ rejecting client leads, they screen excessively: acceptance rates a low,
+ the utilization of labor force on the platform is inefficiently low, and
+ the matching efficiency is suboptimal.
  
 \end_layout
 

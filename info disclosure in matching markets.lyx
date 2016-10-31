@@ -12,7 +12,7 @@
  \usepackage{relsize}
 \usepackage{graphicx}
 
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \usepackage{cleveref}
 
 \AtBeginDocument{%
@@ -24,6 +24,8 @@
 %\providecommand{\conjautorefname}{Conjecture}
 \providecommand{\exaautorefname}{Example}
 \providecommand{\lemautorefname}{Lemma}
+\providecommand{\sectionautorefname}{Section}
+\providecommand{\subsecautorefname}{Subection}
 \providecommand{\figureautorefname}{Figure}
 }
 
@@ -33,6 +35,7 @@
 
 %\newref{claim}{refcmd={Claim~\ref{#1}}}
 \newref{lem}{refcmd={Lemma~\ref{#1}}}
+\newref{section}{refcmd={Section~\ref{#1}}}
 %\newref{prop}{refcmd={Proposition~\ref{#1}}}
 %\newref{thm}{refcmd={Theorem~\ref{#1}}}
 %\newref{conj}{refcmd={Conjecture~\ref{#1}}}
@@ -242,20 +245,23 @@ Job Market Paper
 \end_layout
 
 \begin_layout Abstract
-I develop a model of a decentralized matching market in which buyers pursue
- sellers by proposing jobs.
- No coordination friction.
- Sellers have non-trivial preferences over jobs and independently choose
- what jobs to accept.
+I develop a model of a decentralized matching market in which heterogeneous
+ buyers pursue sellers by proposing jobs.
+ Buyer requests are perfectly coordinated.
+ Sellers have preferences over jobs and independently choose what jobs to
+ accept.
  Preference heterogeneity induces same-side and cross-side externalities
- that generate sellers' excessive screening.
- Platform's policy of coarse revelation of buyer information improves acceptance
- rates by decreasing the ability of sellers to “cherry-pick” desirable buyers.
+ leading to sellers' excessive screening and welfare loss.
+ Platform's policy of coarse revelation of buyer information improves welfare
+ by decreasing the ability of sellers to “cherry-pick” desirable buyers.
  Implication for welfare-maximizing platform is to limit information to
- the sellers when they more patient and more substitutable than buyers.
+ the sellers when they are the more patient and more substitutable side
+ of the market.
  However, if sellers has unobserved heterogeneity, coarsening is effective
  only if sellers are tightly capacity constrained or buyer-to-seller ratio
  is large.
+ The approach to the disclosure optimization with heterogeneous forward-looking
+ agents with general type distribution is developed.
  
 \end_layout
 
