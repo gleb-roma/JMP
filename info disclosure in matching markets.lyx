@@ -21,29 +21,29 @@
 \providecommand{\propautorefname}{Proposition}
 \providecommand{\thmautorefname}{Theorem}
 \providecommand{\claimautorefname}{Claim}
+\providecommand{\corautorefname}{Corollary}
 %\providecommand{\conjautorefname}{Conjecture}
 \providecommand{\exaautorefname}{Example}
 \providecommand{\lemautorefname}{Lemma}
-\providecommand{\sectionautorefname}{Section}
-\providecommand{\subsecautorefname}{Subection}
 \providecommand{\figureautorefname}{Figure}
 }
-
-%\newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
-%\newref{prop}{name=proposition~,Name=Proposition~,names=propositions~,Names=Propositions~}
 
 
 %\newref{claim}{refcmd={Claim~\ref{#1}}}
 \newref{lem}{refcmd={Lemma~\ref{#1}}}
-\newref{section}{refcmd={Section~\ref{#1}}}
 %\newref{prop}{refcmd={Proposition~\ref{#1}}}
 %\newref{thm}{refcmd={Theorem~\ref{#1}}}
 %\newref{conj}{refcmd={Conjecture~\ref{#1}}}
 %\newref{exa}{refcmd={Example~\ref{#1}}}
 \newref{eq}{refcmd={(\ref{#1})}}
 \newref{fig}{refcmd={Figure~\ref{#1}}}
+\newref{cor}{refcmd={Corollary~\ref{#1}}}
 %\newref{assu}{refcmd={Assumption~\ref{#1}}}
 
+\addto\extrasenglish{%
+\renewcommand{\sectionautorefname}{Section}%
+\renewcommand{\subsectionautorefname}{Section}%
+}
 
 
 \renewcommand{\leq}{\leqslant}
@@ -53,7 +53,6 @@
 \begin_modules
 theorems-ams-bytype
 theorems-ams-extended-bytype
-todonotes
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -87,7 +86,7 @@ todonotes
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}, urlcolor=[rgb]{0,0.2,0.5}"
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -109,6 +108,31 @@ todonotes
 \suppress_date false
 \justification true
 \use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -227,13 +251,82 @@ todonotes
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newif
+\backslash
+ifdraft 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draftfalse
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 Ignorance is Strength: Improving Performance of Decentralized Matching Markets
  by Limiting Information
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I am indebted my advisors Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz
+ Strzalecki for their guidance and support.
+ For additional guidance, I thank Chiara Farronato and Andrei Hagiu.
+ For helpful discussions I thank Andrey Fradkin, Ben Golub, Jeff Picel,
+ Alex Smolin, Divya Kirti, Beyonce and seminar participants at Harvard Universit
+y and MIT.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Author
 Gleb Romanyuk
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Harvard University, Department of Economics.
+ Email: 
+\begin_inset CommandInset href
+LatexCommand href
+name "glebromanyuk@g.harvard.edu"
+target "glebromanyuk@g.harvard.edu"
+type "mailto:"
+
+\end_inset
+
+.
+ Website: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://scholar.harvard.edu/gromanyuk"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -244,12 +337,24 @@ Gleb Romanyuk
 Job Market Paper
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "Please click here for the most recent version"
+target "http://scholar.harvard.edu/files/gromanyuk/files/info_disclosure_in_matching_markets.pdf"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Abstract
 I develop a model of a decentralized matching market in which heterogeneous
- buyers pursue sellers by proposing jobs.
+ buyers pursue sellers by requesting services.
  Buyer requests are perfectly coordinated.
- Sellers have preferences over jobs and independently choose what jobs to
- accept.
+ Sellers have preferences over buyers and independently choose what buyers
+ to accept.
  Preference heterogeneity induces same-side and cross-side externalities
  leading to sellers' excessive screening and welfare loss.
  Platform's policy of coarse revelation of buyer information improves welfare
@@ -257,11 +362,11 @@ I develop a model of a decentralized matching market in which heterogeneous
  Implication for welfare-maximizing platform is to limit information to
  the sellers when they are the more patient and more substitutable side
  of the market.
- However, if sellers has unobserved heterogeneity, coarsening is effective
+ However, if sellers have unobserved heterogeneity, coarsening is effective
  only if sellers are tightly capacity constrained or buyer-to-seller ratio
  is large.
- The approach to the disclosure optimization with heterogeneous forward-looking
- agents with general type distribution is developed.
+ An approach for the problem of optimal disclosure with heterogeneous forward-lo
+oking agents with general type distribution is developed.
  
 \end_layout
 
@@ -297,24 +402,34 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Acknowledgements: Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz Strzalecki,
- Chiara Farronato, Andrei Hagiu, Fradkin, Jeff Picel, Alex Smolin, Divya
- Kirti, Beyonce and the participants of Harvard and MIT lunch seminars.
- 
+
+
+\backslash
+ifdraft
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
+\end_layout
 
 \end_inset
 
@@ -365,10 +480,6 @@ filename "sections/extensions.lyx"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Conclusion
 \end_layout
 
 \begin_layout Standard

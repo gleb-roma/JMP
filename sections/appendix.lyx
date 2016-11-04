@@ -256,7 +256,7 @@ Lemmas
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "lem:nubar"
+name "lem:rho-and-monotonicities"
 
 \end_inset
 
@@ -279,7 +279,12 @@ Fix the arbitrary increasing
 \end_inset
 
 .
- Average utilization rate 
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Average utilization rate 
 \begin_inset Formula $\bar{\rho}\in[0,1]$
 \end_inset
 
@@ -291,6 +296,10 @@ Fix the arbitrary increasing
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Itemize
 
 \family roman
 \series medium
@@ -339,6 +348,28 @@ increases in
  
 \end_layout
 
+\begin_layout Itemize
+Utilization rate of type 
+\begin_inset Formula $y$
+\end_inset
+
+ 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ increases in 
+\begin_inset Formula $\alpha(y')$
+\end_inset
+
+ for any 
+\begin_inset Formula $y'\in Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Proof
 Find from 
 \begin_inset CommandInset ref
@@ -348,11 +379,14 @@ reference "eq:SS"
 \end_inset
 
  that 
-\begin_inset Formula $1-\rho(y)=1/(1+\tau\beta\alpha(y)/(1-\brho))$
+\begin_inset Formula 
+\begin{equation}
+1-\rho(y)=\frac{1}{1+\tau\beta\alpha(y)/(1-\brho)}.\label{eq:14}
+\end{equation}
+
 \end_inset
 
-.
- Take the integral using cdf 
+Take the integral using cdf 
 \begin_inset Formula $G(y)$
 \end_inset
 
@@ -407,7 +441,41 @@ reference "assu:no-excess-demand"
 
 .
  Therefore, the solutions exists and is unique.
- Monotonicity is straightforward.
+ Monotonicity of 
+\begin_inset Formula $\brho$
+\end_inset
+
+ is straightforward.
+ 
+\end_layout
+
+\begin_layout Proof
+Finally, if 
+\begin_inset Formula $\alpha(y')$
+\end_inset
+
+ increases (at the neighborhood of 
+\begin_inset Formula $y'$
+\end_inset
+
+), 
+\begin_inset Formula $\brho$
+\end_inset
+
+ increases.
+ Therefore, the right hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:14"
+
+\end_inset
+
+ decreases.
+ Therefore, 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ increases.
  
 \end_layout
 
@@ -451,7 +519,7 @@ In the steady state,
 From 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:beta_A-1"
+reference "eq:beta_A-definition"
 
 \end_inset
 
@@ -481,7 +549,7 @@ reference "eq:SS"
 \end_inset
 
 .
- Take expectaton wrt 
+ Take expectation wrt 
 \begin_inset Formula $y$
 \end_inset
 
@@ -758,11 +826,1042 @@ reference "eq:V-zhat-Lambda"
  
 \end_layout
 
+\begin_layout Section
+Proofs of Propositions 1-3
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+missing details in the proof
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:eqm-exists"
+
+\end_inset
+
+ Step 1.
+ Restricting set of strategies to cutoff strategies.
+ Fix 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+ the optimal seller strategy is such that all 
+\begin_inset Formula $S_{a}(y)=\{s\colon\pi(s,y)>\tau V(y)\}$
+\end_inset
+
+ are accepted, all 
+\begin_inset Formula $S_{r}(y)=\{s\colon\pi(s,y)<\tau V(y)\}$
+\end_inset
+
+ are rejected, and the seller is indifferent between accepting and rejecting
+ signals from 
+\begin_inset Formula $S_{m}(y):=\{s\colon\pi(s,y)=\tau V(y)\}$
+\end_inset
+
+.
+ Therefore any optimal strategy has the cutoff form:
+\begin_inset Formula 
+\[
+\sigma(s,y)=\begin{cases}
+1, & s\in S_{a}(y)\\
+\in[0,1], & S_{m}(y)\\
+0, & s\in S_{r}(y)
+\end{cases}
+\]
+
+\end_inset
+
+Denote the cutoff for type-
+\begin_inset Formula $y$
+\end_inset
+
+ seller by 
+\begin_inset Formula $\hat{\pi}(y):=\tau V(y)$
+\end_inset
+
+.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+V(y) & =\betaa\int(\pi(s,y)-\tau V(y))\sigma(s,y)\lambda(ds)\nonumber \\
+\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))\sigma(s,y)\lambda(ds)\nonumber \\
+\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))I\{\pi(s,y)>\hatpi(y))\}\lambda(ds)\label{eq:17}
+\end{align}
+
+\end_inset
+
+Given 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\betaa$
+\end_inset
+
+, the cutoff of the optimal strategy is a solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+.
+ The solution is unique because the left-hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ is strictly increasing in 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+ while the left hand side is decreasing in 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 2.
+ Existence.
+ Consider a correspondence 
+\begin_inset Formula $\psi\colon[0,1]\rightrightarrows[0,1]$
+\end_inset
+
+, which maps 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ to a set of 
+\begin_inset Quotes eld
+\end_inset
+
+reaction
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+'s by the following procedure.
+ To find 
+\begin_inset Formula $\psi(\bar{\rho})$
+\end_inset
+
+, first find the unique cutoff function 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ using 
+\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ Cutoff 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ does not pin down the acceptance rates 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ uniquely because marginal signals from 
+\begin_inset Formula $S_{m}$
+\end_inset
+
+ can have positive probability under 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ The acceptance rates congruent with 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+ are integrable 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\lambda(S_{a}(y))\leq\alpha(y)\leq\lambda(S_{a}(y))+\lambda(S_{m}(y)),\quad\forall y\in Y.
+\]
+
+\end_inset
+
+Take all 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ that are congruent with 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+, call this set 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $\alpha\in\mathcal{A}$
+\end_inset
+
+, find 
+\begin_inset Formula $\brho$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:rho-and-monotonicities"
+
+\end_inset
+
+.
+ Going over all 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ will produce the set of 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ This will be 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Clearly, 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is convex.
+ Thus, 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is also convex.
+ Since 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is an interval subset of 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+, it is easy to see that 
+\begin_inset Formula $\psi(\brho)$
+\end_inset
+
+ is also closed.
+ 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is upper hemi-continuous because 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ is continuous in 
+\begin_inset Formula $\betaa$
+\end_inset
+
+ according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NTS psi is uhc.
+ 
+\end_layout
+
+\end_inset
+
+ Therefore, by Kakutani's theorem, 
+\begin_inset Formula $\psi$
+\end_inset
+
+ has a fixed point.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Proof
+Step 2.
+ Existence.
+ I will show existence in the space of cutoff acceptance strategies.
+ Let 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ be the space of cutoff functions 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ is convex and metric space with 
+\begin_inset Formula $L_{1}[Y]$
+\end_inset
+
+ metric (where, as a reminder, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is compact subset of Euclidean space).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Positivity follows from 
+\begin_inset Formula $\pi(x,y)>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ is compact by Lemma 2 in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FMS07"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NOT SURE IT'S TRUE.
+ work more on this
+\end_layout
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{S}=\text{\mathcal{S}}_{\pi}\times[0,1]$
+\end_inset
+
+.
+ It is clear that 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ is compact, convex subset of the product Banach space with the obvious
+ extension of the 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ metric from 
+\begin_inset Formula $\mathcal{S}_{\pi}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Consider a correspondence 
+\begin_inset Formula $T:\mathcal{S}_{\pi}\rightrightarrows\mathcal{S}_{\pi}$
+\end_inset
+
+, defined by the conditions of optimality and steady-state.
+ Given 
+\begin_inset Formula $(\hatpi,\bar{\rho})\in\mathcal{S}_{\pi}$
+\end_inset
+
+, the image value of 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ is uniquely determined by 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+, where 
+\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ The image value of 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is the set of all 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ that can arise in steady state for all possible acceptance strategies with
+ cutoffs 
+\begin_inset Formula $\hat{\pi}$
+\end_inset
+
+.
+ More concretely, consider all possible 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ that can arise with cutoffs 
+\begin_inset Formula $\hatpi(y)$
+\end_inset
+
+, and find all 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ using these 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:rho-and-monotonicities"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is upper hemi-continuous with 
+\begin_inset Formula $T(s)$
+\end_inset
+
+ compact and convex.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+show this!
+\end_layout
+
+\end_inset
+
+ By Kakutani-Glicksberg-Fan theorem (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GD03"
+
+\end_inset
+
+, Theorem 8.6), 
+\begin_inset Formula $T$
+\end_inset
+
+ has a fixed point.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Step 3.
+ Uniqueness.
+ Suppose 
+\begin_inset Formula $\bar{\rho}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\rho}^{2}$
+\end_inset
+
+ are two distinct fixed points of 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $\bar{\rho}^{1}>\bar{\rho}^{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\betaa^{1}>\betaa^{2}$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+ 
+\begin_inset Formula $\hatpi^{1}(y)>\hatpi^{2}(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+follows from 
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+>0 for some 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+If so, then whenever 
+\begin_inset Formula $\pi(s,y)\geq\hatpi^{1}(y)$
+\end_inset
+
+ we also have 
+\begin_inset Formula $\pi(s,y)>\hatpi^{2}(y)$
+\end_inset
+
+.
+ But this means that 
+\begin_inset Formula $S_{a}^{2}(y)\supseteq S_{a}^{1}(y)\cup S_{m}^{1}(y)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\alpha^{2}(y)\geq\lambda(S_{a}^{2})\geq\lambda(S_{a}^{1}\cup S_{m}^{1})\geq\alpha^{1}(y)$
+\end_inset
+
+ for all 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:rho-and-monotonicities"
+
+\end_inset
+
+, this implies 
+\begin_inset Formula $\bar{\rho}^{2}\geq\bar{\rho}^{1}$
+\end_inset
+
+.
+ A contradiction.
+ 
+\end_layout
+
+\begin_layout Proof
+We showed that there is a unique 
+\begin_inset Formula $\brho$
+\end_inset
+
+ that can arise in a steady-state equilibrium.
+ By the argument below 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+, the strategy cutoffs 
+\begin_inset Formula $\hatpi(\cdot)$
+\end_inset
+
+ are also pinned down uniquely in the steady-state equilibrium.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ There can still be distinct acceptance rate functions 
+\begin_inset Formula $\alpha^{1}\neq\alpha^{2}$
+\end_inset
+
+ that both are congruent with 
+\begin_inset Formula $\hatpi$
+\end_inset
+
+ and both yield 
+\begin_inset Formula $\brho$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Can I rule out distinct alpha by appealing to continuity of pi?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:FD-suboptimal"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done
+\end_layout
+
+\end_inset
+
+By 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+V(y) & = & \beta_{A}\int(\pi(s,y)-\tau V(y))\sigma(s,y)d\lambda(s)\\
+V(y) & = & \beta_{A}\nu(y)\int\pi(s,y)\sigma(s,y)d\lambda(s),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu(y)=(1+\tau\betaa\alpha(y))^{-1}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The joint surplus is then
+\begin_inset Formula 
+\[
+\bar{V}=\int V(y)dG(y)=\int\beta_{A}\nu(y)\int\pi(s,y)\sigma(s,y)d\lambda(s)dG(y).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+In a steady state, by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SS"
+
+\end_inset
+
+, 
+\begin_inset Formula $\betaa\nu(y)=\rho(y)/(\tau\alpha(y))$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{align*}
+V(y) & =\frac{\int\pi(s,y)\sigma(s,y)d\lambda(s)}{\alpha(y)}\frac{\rho(y)}{\tau}=\\
+ & =\Exp[\pi(s,y)\mid\text{acc.}]\frac{\rho(y)}{\tau}.
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\bar{V} & =\int\frac{\int\pi(s,y)\sigma(s,y)d\lambda(s)}{\alpha(y)}\frac{\rho(y)}{\tau}dG(y)=\\
+ & =\int\Exp[\pi(s,y)\mid\text{acc.}]\frac{\rho(y)}{\tau}dG(y).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now 
+\begin_inset Formula $\sigma^{FD}$
+\end_inset
+
+ prescribes that jobs 
+\begin_inset Formula $\{x\colon\pi(x,y)>\tau V(y)\}$
+\end_inset
+
+ are accepted with probability 1.
+ Consider an alternative strategy profile
+\begin_inset Formula 
+\begin{align*}
+\tilde{\sigma}(x,y) & =\begin{cases}
+1, & \pi(x,y)>0\\
+0, & \pi(x,y)\leq0
+\end{cases}
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $V(y)>0$
+\end_inset
+
+, we have 
+\begin_inset Formula $\Exp[\pi(s,y)\mid\text{acc. with }\sigma^{FD}]<\Exp[\pi(s,y)\mid\text{acc. with }\tilde{\sigma}]$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $\alpha^{FD}(y)<\tilde{\alpha}(y)$
+\end_inset
+
+.
+ Finally, by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:rho-and-monotonicities"
+
+\end_inset
+
+, 
+\begin_inset Formula $\rho^{FD}(y)<\tilde{\rho}(y)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $V^{FD}(y)<\tilde{V}(y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Done.
+\end_layout
+
+\end_inset
+
+Take any Pareto optimal pair 
+\begin_inset Formula $O=(V,CS)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $O$
+\end_inset
+
+ is feasible, there is seller strategy profile 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ that induces 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ Since there is one seller type and two actions, it is sufficient to consider
+ only the binary signaling structures (Revelation principle).
+ A binary signaling structure has two signals, where a signal is 
+\begin_inset Quotes eld
+\end_inset
+
+action recommendation
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{a}$
+\end_inset
+
+ be the recommendation to accept, and 
+\begin_inset Formula $s_{r}$
+\end_inset
+
+ be the recommendation to reject.
+ Denote this signaling structure by 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ We need to check the incentive constraints, that is, to make sure that
+ the sellers would follow the recommendations of 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V-via-pi"
+
+\end_inset
+
+ we have that 
+\begin_inset Formula $v(s_{a})=\pi(s_{a})-\tau V$
+\end_inset
+
+, 
+\begin_inset Formula $v(s_{r})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $V=\beta_{A}(\pi(s_{a})-\tau V)\hat{\lambda}(s_{a})$
+\end_inset
+
+.
+ The incentive constraints require that 
+\begin_inset Formula $\pi(s_{a})\geq\tau V$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi(s_{r})\leq0$
+\end_inset
+
+.
+ For the former,
+\begin_inset Formula 
+\[
+\tau V=\frac{\tau\beta_{A}\hat{\lambda}(s_{a})}{1+\tau\beta_{A}\hat{\lambda}(s_{a})}\pi(s_{a})<\pi(s_{a}).
+\]
+
+\end_inset
+
+For the latter, recall that 
+\begin_inset Formula $O$
+\end_inset
+
+ is Pareto optimal, hence 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ accepts all profitable jobs.
+ This implies that 
+\begin_inset Formula 
+\[
+\pi(s_{r})\leq0<\tau V.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ relies on a sequence of lemmas.
+ 
 \end_layout
 
 \begin_layout Lemma
@@ -1122,188 +2221,9 @@ Proof is not rigorous enough.
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:optimality-of-up-cen"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Suppose the contrary, 
-\begin_inset Formula $\lambda_{0}$
-\end_inset
-
- is not upper-coarsening.
- I will show that there is a deviation from 
-\begin_inset Formula $\lambda_{0}$
-\end_inset
-
- that increases 
-\begin_inset Formula $\J$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Let 
-\begin_inset Formula $\Lambda_{0}\in\mathcal{L}$
-\end_inset
-
- which corresponds to 
-\begin_inset Formula $\lambda_{0}$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $y^{*}$
-\end_inset
-
- be the zero of 
-\begin_inset Formula $\delta\J/\delta\Lambda$
-\end_inset
-
-, and the corresponding cutoff in the seller optimization problem be 
-\begin_inset Formula $z^{*}=\hat{z}(y^{*};\Lambda_{0})$
-\end_inset
-
-.
- I am now going to construct a feasible variation 
-\begin_inset Formula $\Lambda^{\eps}$
-\end_inset
-
- from 
-\begin_inset Formula $\Lambda_{0}$
-\end_inset
-
- that increases 
-\begin_inset Formula $\J$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Let 
-\begin_inset Formula $\tilde{\Lambda}$
-\end_inset
-
- be the upper-coarsening (of the form 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Lambda-upper-coarsening"
-
-\end_inset
-
-) that passes through point 
-\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
-\end_inset
-
-.
- There is only one such function because there is only one line passing
- through 
-\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
-\end_inset
-
- and is tangential to 
-\begin_inset Formula $\oL$
-\end_inset
-
-.
- We have that 
-\begin_inset Formula $\Lambda_{0}(z)\geq\tilde{\Lambda}(z)$
-\end_inset
-
- on 
-\begin_inset Formula $z>z^{*}$
-\end_inset
-
-, and 
-\begin_inset Formula $\Lambda_{0}(z)\leq\tilde{\Lambda}(z)$
-\end_inset
-
- on 
-\begin_inset Formula $z<z^{*}$
-\end_inset
-
-.
- Moreover, since 
-\begin_inset Formula $\Lambda_{0}$
-\end_inset
-
- is not upper-coarsening, for some 
-\begin_inset Formula $z\in[0,1]$
-\end_inset
-
- one of these inequalities is strict.
- Consider variation 
-\begin_inset Formula 
-\[
-\Lambda^{\eps}(z)=(\tilde{\Lambda}(z)-\Lambda_{0}(z))\eps.
-\]
-
-\end_inset
-
-
+\begin_layout Standard
 \begin_inset Note Note
 status open
-
-\begin_layout Plain Layout
-a bit hand-wavy.
- Is there a rigorous way of doing it without epsilon? 
-\end_layout
-
-\end_inset
-
-Since 
-\begin_inset Formula $\delta\J/\delta\Lambda<0$
-\end_inset
-
- on 
-\begin_inset Formula $z>z^{*}$
-\end_inset
-
- and 
-\begin_inset Formula $\delta\J/\delta\Lambda>0$
-\end_inset
-
- on 
-\begin_inset Formula $z<z^{*}$
-\end_inset
-
-, 
-\begin_inset Formula $\Lambda^{\eps}$
-\end_inset
-
- increases 
-\begin_inset Formula $\J.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Proofs omitted from 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Market-Design:-Information"
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Proof
 \begin_inset Argument 1
@@ -1313,7 +2233,7 @@ status open
 Proof of 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prop:Equilibrium-exists-and"
+reference "lem:representaion-of-lambda"
 
 \end_inset
 
@@ -1322,659 +2242,25 @@ reference "prop:Equilibrium-exists-and"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-missing details in the proof
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "proof:eqm-exists"
-
-\end_inset
-
- Step 1.
- Restricting set of strategies to cutoff strategies.
- Fix 
-\begin_inset Formula $y\in Y$
-\end_inset
-
-.
- By 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pi(c)"
-
-\end_inset
-
- the optimal seller strategy is such that all 
-\begin_inset Formula $S_{a}(y)=\{s\colon\pi(s,y)>\tau V(y)\}$
-\end_inset
-
- are accepted, all 
-\begin_inset Formula $S_{r}(y)=\{s\colon\pi(s,y)<\tau V(y)\}$
-\end_inset
-
- are rejected, and the seller is indifferent between accepting and rejecting
- signals from 
-\begin_inset Formula $S_{m}(y):=\{s\colon\pi(s,y)=\tau V(y)\}$
-\end_inset
-
-.
- Therefore any optimal strategy has the cutoff form:
-\begin_inset Formula 
-\[
-\sigma(s,y)=\begin{cases}
-1, & s\in S_{a}(y)\\
-\in[0,1], & S_{m}(y)\\
-0, & s\in S_{r}(y)
-\end{cases}
-\]
-
-\end_inset
-
-Denote the cutoff for type-
-\begin_inset Formula $y$
-\end_inset
-
- seller by 
-\begin_inset Formula $\hat{\pi}(y):=\tau V(y)$
-\end_inset
-
-.
- Using 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:V-via-pi"
-
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{align}
-V(y) & =\betaa\int(\pi(s,y)-\tau V(y))\sigma(s,y)\lambda(ds)\nonumber \\
-\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))\sigma(s,y)\lambda(ds)\nonumber \\
-\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))I\{\pi(s,y)>\hatpi(y))\}\lambda(ds)\label{eq:17}
-\end{align}
-
-\end_inset
-
-Given 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $\betaa$
-\end_inset
-
-, the cutoff of the optimal strategy is a solution to 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
-.
- The solution is unique because the left-hand side of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
- is strictly increasing in 
-\begin_inset Formula $\hatpi(y)$
-\end_inset
-
- while the left hand side is decreasing in 
-\begin_inset Formula $\hatpi(y)$
-\end_inset
-
-.
+The result is shown in e.g.
  
-\end_layout
-
-\begin_layout Proof
-Step 2.
- Existence.
- Consider a correspondence 
-\begin_inset Formula $\psi\colon[0,1]\rightrightarrows[0,1]$
-\end_inset
-
-, which maps 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- to a set of 
-\begin_inset Quotes eld
-\end_inset
-
-reaction
-\begin_inset Quotes erd
-\end_inset
-
- 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
-'s by the following procedure.
- To find 
-\begin_inset Formula $\psi(\bar{\rho})$
-\end_inset
-
-, first find the unique cutoff function 
-\begin_inset Formula $\hatpi$
-\end_inset
-
- from 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
- using 
-\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
-\end_inset
-
-.
- Cutoff 
-\begin_inset Formula $\hatpi$
-\end_inset
-
- does not pin down the acceptance rates 
-\begin_inset Formula $\alpha$
-\end_inset
-
- uniquely because marginal signals from 
-\begin_inset Formula $S_{m}$
-\end_inset
-
- can have positive probability under 
-\begin_inset Formula $\lambda$
-\end_inset
-
-.
- The acceptance rates congruent with 
-\begin_inset Formula $\hatpi(y)$
-\end_inset
-
- are integrable 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- such that
-\begin_inset Formula 
-\[
-\lambda(S_{a}(y))\leq\alpha(y)\leq\lambda(S_{a}(y))+\lambda(S_{m}(y)),\quad\forall y\in Y.
-\]
-
-\end_inset
-
-Take all 
-\begin_inset Formula $\alpha$
-\end_inset
-
- that are congruent with 
-\begin_inset Formula $\hatpi$
-\end_inset
-
-, call this set 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
-.
- For any 
-\begin_inset Formula $\alpha\in\mathcal{A}$
-\end_inset
-
-, find 
-\begin_inset Formula $\brho$
-\end_inset
-
- as shown in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:nubar"
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG16"
 
 \end_inset
 
 .
- Going over all 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
- will produce the set of 
-\begin_inset Formula $\brho$
-\end_inset
-
-.
- This will be 
-\begin_inset Formula $\psi(\brho)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Clearly, 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
- is convex.
- Thus, 
-\begin_inset Formula $\psi(\brho)$
-\end_inset
-
- is also convex.
- Since 
-\begin_inset Formula $\psi(\brho)$
-\end_inset
-
- is an interval subset of 
-\begin_inset Formula $[0,1]$
-\end_inset
-
-, it is easy to see that 
-\begin_inset Formula $\psi(\brho)$
-\end_inset
-
- is also closed.
- 
-\begin_inset Formula $\psi$
-\end_inset
-
- is upper hemi-continuous because 
-\begin_inset Formula $\hatpi$
-\end_inset
-
- is continuous in 
-\begin_inset Formula $\betaa$
-\end_inset
-
- accroding to 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-NTS psi is uhc.
- 
-\end_layout
-
-\end_inset
-
- Therefore, by Kakutani's theorem, 
-\begin_inset Formula $\psi$
-\end_inset
-
- has a fixed point.
- 
-\end_layout
-
-\begin_layout Proof
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Proof
-Step 2.
- Existence.
- I will show existence in the space of cutoff acceptance strategies.
- Let 
-\begin_inset Formula $\mathcal{S}_{\pi}$
-\end_inset
-
- be the space of cutoff functions 
-\begin_inset Formula $\hatpi(y)$
-\end_inset
-
-.
- 
-\begin_inset Formula $\mathcal{S}_{\pi}$
-\end_inset
-
- is convex and metric space with 
-\begin_inset Formula $L_{1}[Y]$
-\end_inset
-
- metric (where, as a reminder, 
-\begin_inset Formula $Y$
-\end_inset
-
- is compact subset of Euclidean space).
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Positivity follows from 
-\begin_inset Formula $\pi(x,y)>0$
-\end_inset
-
- for some 
+ The proof uses the fact that distribution of 
 \begin_inset Formula $x$
 \end_inset
 
+ is the mean preserving spread of the distribution of posterior means of
  
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\mathcal{S}_{\pi}$
-\end_inset
-
- is compact by Lemma 2 in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "FMS07"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-NOT SURE IT'S TRUE.
- work more on this
-\end_layout
-
-\end_inset
-
-.
- Let 
-\begin_inset Formula $\mathcal{S}=\text{\mathcal{S}}_{\pi}\times[0,1]$
-\end_inset
-
-.
- It is clear that 
-\begin_inset Formula $\mathcal{S}$
-\end_inset
-
- is compact, convex subset of the product Banach space with the obvious
- extension of the 
-\begin_inset Formula $L_{1}$
-\end_inset
-
- metric from 
-\begin_inset Formula $\mathcal{S}_{\pi}$
-\end_inset
-
- to 
-\begin_inset Formula $\mathcal{S}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Consider a correspondence 
-\begin_inset Formula $T:\mathcal{S}_{\pi}\rightrightarrows\mathcal{S}_{\pi}$
-\end_inset
-
-, defined by the conditions of optimality and steady-state.
- Given 
-\begin_inset Formula $(\hatpi,\bar{\rho})\in\mathcal{S}_{\pi}$
-\end_inset
-
-, the image value of 
-\begin_inset Formula $\hatpi$
-\end_inset
-
- is uniquely determined by 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- using Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
-, where 
-\begin_inset Formula $\betaa=\beta/(1-\bar{\rho})$
-\end_inset
-
-.
- The image value of 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- is the set of all 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- that can arise in steady state for all possible acceptance strategies with
- cutoffs 
-\begin_inset Formula $\hat{\pi}$
-\end_inset
-
-.
- More concretely, consider all possible 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- that can arise with cutoffs 
-\begin_inset Formula $\hatpi(y)$
-\end_inset
-
-, and find all 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- using these 
-\begin_inset Formula $\alpha$
-\end_inset
-
- as shown in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:nubar"
-
-\end_inset
-
-.
- 
-\begin_inset Formula $T$
-\end_inset
-
- is upper hemi-continuous with 
-\begin_inset Formula $T(s)$
-\end_inset
-
- compact and convex.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-show this!
-\end_layout
-
-\end_inset
-
- By Kakutani-Glicksberg-Fan theorem (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "GD03"
-
-\end_inset
-
-, Theorem 8.6), 
-\begin_inset Formula $T$
-\end_inset
-
- has a fixed point.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Step 3.
- Uniqueness.
- Suppose 
-\begin_inset Formula $\bar{\rho}^{1}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{\rho}^{2}$
-\end_inset
-
- are two distinct fixed points of 
-\begin_inset Formula $\psi$
-\end_inset
-
-.
- Suppose 
-\begin_inset Formula $\bar{\rho}^{1}>\bar{\rho}^{2}$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $\betaa^{1}>\betaa^{2}$
-\end_inset
-
-.
- By 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
- 
-\begin_inset Formula $\hatpi^{1}(y)>\hatpi^{2}(y)$
-\end_inset
-
- for any 
-\begin_inset Formula $y\in Y$
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-follows from 
-\begin_inset Formula $\pi(x,y)$
-\end_inset
-
->0 for some 
 \begin_inset Formula $x$
 \end_inset
 
- 
-\end_layout
-
-\end_inset
-
-If so, then whenever 
-\begin_inset Formula $\pi(s,y)\geq\hatpi^{1}(y)$
-\end_inset
-
- we also have 
-\begin_inset Formula $\pi(s,y)>\hatpi^{2}(y)$
-\end_inset
-
 .
- But this means that 
-\begin_inset Formula $S_{a}^{2}(y)\supseteq S_{a}^{1}(y)\cup S_{m}^{1}(y)$
-\end_inset
-
-.
- Therefore 
-\begin_inset Formula $\alpha^{2}(y)\geq\lambda(S_{a}^{2})\geq\lambda(S_{a}^{1}\cup S_{m}^{1})\geq\alpha^{1}(y)$
-\end_inset
-
- for all 
-\begin_inset Formula $y$
-\end_inset
-
-.
- By 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:nubar"
-
-\end_inset
-
-, this implies 
-\begin_inset Formula $\bar{\rho}^{2}\geq\bar{\rho}^{1}$
-\end_inset
-
-.
- A contradiction.
- 
-\end_layout
-
-\begin_layout Proof
-We showed that there is a unique 
-\begin_inset Formula $\brho$
-\end_inset
-
- that can arise in a steady-state equilibrium.
- By the argument below 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:17"
-
-\end_inset
-
-, the strategy cutoffs 
-\begin_inset Formula $\hatpi(\cdot)$
-\end_inset
-
- are also pinned down uniquely in the steady-state equilibrium.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- There can still be distinct acceptance rate functions 
-\begin_inset Formula $\alpha^{1}\neq\alpha^{2}$
-\end_inset
-
- that both are congruent with 
-\begin_inset Formula $\hatpi$
-\end_inset
-
- and both yield 
-\begin_inset Formula $\brho$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Can I rule out distinct alpha by appealing to continuity of pi?
 \end_layout
 
 \end_inset
@@ -1983,205 +2269,17 @@ Can I rule out distinct alpha by appealing to continuity of pi?
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Argument 1
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 Proof of 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prop:FD-suboptimal"
+reference "lem:Vmu"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "proof:FD-suboptimal"
-
-\end_inset
-
-Consider 
-\begin_inset Formula $\tilde{\sigma}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "prop:Pareto-frontier"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Done.
-\end_layout
-
-\end_inset
-
-Take any Pareto optimal pair 
-\begin_inset Formula $O=(V,CS)$
-\end_inset
-
-.
- Since 
-\begin_inset Formula $O$
-\end_inset
-
- is feasible, there is seller strategy profile 
-\begin_inset Formula $\sigma$
-\end_inset
-
- that induces 
-\begin_inset Formula $O$
-\end_inset
-
-.
- Since there is one seller type and two actions, it is sufficient to consider
- only the binary signaling structures (Revelation principle).
- A binary signaling structure has two signals, where a signal is 
-\begin_inset Quotes eld
-\end_inset
-
-action recommendation
-\begin_inset Quotes erd
-\end_inset
-
-.
- Let 
-\begin_inset Formula $s_{a}$
-\end_inset
-
- be the recommendation to accept, and 
-\begin_inset Formula $s_{r}$
-\end_inset
-
- be the recommendation to reject.
- Denote this signaling structure by 
-\begin_inset Formula $\hat{\lambda}$
-\end_inset
-
-.
- We need to check the incentive constraints, that is, to make sure that
- the sellers would follow the recommendations of 
-\begin_inset Formula $\hat{\lambda}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-From 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pi(c)"
-
-\end_inset
-
- we have that 
-\begin_inset Formula $v(s_{a})=\pi(s_{a})-\tau V$
-\end_inset
-
-, 
-\begin_inset Formula $v(s_{r})=0$
-\end_inset
-
-, and 
-\begin_inset Formula $V=\beta_{A}(\pi(s_{a})-\tau V)\hat{\lambda}(s_{a})$
-\end_inset
-
-.
- The incentive constraints require that 
-\begin_inset Formula $\pi(s_{a})\geq\tau V$
-\end_inset
-
- and 
-\begin_inset Formula $\pi(s_{r})\leq0$
-\end_inset
-
-.
- For the former,
-\begin_inset Formula 
-\[
-\tau V=\frac{\tau\beta_{A}\hat{\lambda}(s_{a})}{1+\tau\beta_{A}\hat{\lambda}(s_{a})}\pi(s_{a})<\pi(s_{a}).
-\]
-
-\end_inset
-
-For the latter, recall that 
-\begin_inset Formula $O$
-\end_inset
-
- is Pareto optimal, hence 
-\begin_inset Formula $\sigma$
-\end_inset
-
- accepts all profitable jobs.
- This implies that 
-\begin_inset Formula 
-\[
-\pi(s_{r})\leq0<\tau V.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2286,13 +2384,6 @@ Step 2.
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:V-zhat-Lambda"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:beta_A"
 
 \end_inset
 
@@ -2558,6 +2649,185 @@ status open
 Proof of 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "lem:optimality-of-up-cen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Suppose the contrary, 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ is not upper-coarsening.
+ I will show that there is a deviation from 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ that increases 
+\begin_inset Formula $\J$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Lambda_{0}\in\mathcal{L}$
+\end_inset
+
+ which corresponds to 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ be the zero of 
+\begin_inset Formula $\delta\J/\delta\Lambda$
+\end_inset
+
+, and the corresponding cutoff in the seller optimization problem be 
+\begin_inset Formula $z^{*}=\hat{z}(y^{*};\Lambda_{0})$
+\end_inset
+
+.
+ I am now going to construct a feasible variation 
+\begin_inset Formula $\Lambda^{\eps}$
+\end_inset
+
+ from 
+\begin_inset Formula $\Lambda_{0}$
+\end_inset
+
+ that increases 
+\begin_inset Formula $\J$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\tilde{\Lambda}$
+\end_inset
+
+ be the upper-coarsening (of the form 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda-upper-coarsening"
+
+\end_inset
+
+) that passes through point 
+\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
+\end_inset
+
+.
+ There is only one such function because there is only one line passing
+ through 
+\begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
+\end_inset
+
+ and is tangential to 
+\begin_inset Formula $\oL$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\Lambda_{0}(z)\geq\tilde{\Lambda}(z)$
+\end_inset
+
+ on 
+\begin_inset Formula $z>z^{*}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Lambda_{0}(z)\leq\tilde{\Lambda}(z)$
+\end_inset
+
+ on 
+\begin_inset Formula $z<z^{*}$
+\end_inset
+
+.
+ Moreover, since 
+\begin_inset Formula $\Lambda_{0}$
+\end_inset
+
+ is not upper-coarsening, for some 
+\begin_inset Formula $z\in[0,1]$
+\end_inset
+
+ one of these inequalities is strict.
+ Consider variation 
+\begin_inset Formula 
+\[
+\Lambda^{\eps}(z)=(\tilde{\Lambda}(z)-\Lambda_{0}(z))\eps.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a bit hand-wavy.
+ Is there a rigorous way of doing it without epsilon? 
+\end_layout
+
+\end_inset
+
+Since 
+\begin_inset Formula $\delta\J/\delta\Lambda<0$
+\end_inset
+
+ on 
+\begin_inset Formula $z>z^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\J/\delta\Lambda>0$
+\end_inset
+
+ on 
+\begin_inset Formula $z<z^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda^{\eps}$
+\end_inset
+
+ increases 
+\begin_inset Formula $\J.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "prop:max-J"
 
 \end_inset
@@ -2729,8 +2999,7 @@ Step 3.
 status open
 
 \begin_layout Plain Layout
-Done.
- 
+done
 \end_layout
 
 \end_inset
@@ -2782,6 +3051,24 @@ reference "eq:13-1-1"
 .
  Therefore, full disclosure is optimal for any 
 \begin_inset Formula $\gamma.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+suppose 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is large.
+ Incomplete!
+\end_layout
+
 \end_inset
 
 

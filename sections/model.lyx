@@ -214,32 +214,15 @@ The Model of Decentralized Matching Market
 \end_layout
 
 \begin_layout Standard
-In this section I lay out a model of a decentralized matching market, in
- which buyers arrive gradually over time and pursue sellers by proposing
- a job; sellers have heterogenous preferences over buyers, seller capacities
- are limited, and sellers independently choose what matches to accept.
+In this section I lay out a model of a decentralized matching market that
+ will allow me to evaluate how information disclosure policy affects the
+ equilibrium market outcome.
+ The model has two main components: the matching process between buyers
+ and sellers, and the seller optimization problem.
+ In the end of this section I define the steady state equilibrium, in which
+ seller actions are individually optimal, and the dynamic matching system
+ is in steady state.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Why? The model will allow me...
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-What do we learn from this section? 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -254,6 +237,7 @@ Spot matching process.
 \begin_layout Standard
 There are three parties involved in the search and matching process: sellers,
  buyers and the platform itself.
+ Time is continuous.
  
 \end_layout
 
@@ -262,25 +246,25 @@ There is mass 1 of sellers, who always stay on the platform, never leave
  or arrive.
  The sellers do not actively look for jobs, but instead screen the buyer
  requests: each worker is presented with a sequence of job offers at Poisson
- rate, and he decides whether to accept or reject them to maximize discounted
+ rate, and decides whether to accept or reject them to maximize discounted
  profit flow.
+ At each moment of time a seller is either available and waits for new jobs,
+ or busy working on a job.
  An accepted job takes time 
 \begin_inset Formula $\tau$
 \end_inset
 
  to complete, during which time the seller cannot receive new jobs.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-This is the search friction.
-\end_layout
-
+ This is the main source of matching friction.
+ In what follows, I also refer to 
+\begin_inset Formula $\tau$
 \end_inset
 
- At each moment a seller is either available and waits for new jobs, or
- busy with working on a job.
+ as the seller capacity constraint because higher 
+\begin_inset Formula $\tau$
+\end_inset
+
+ implies the seller can complete fewer jobs over the same period of time.
  
 \end_layout
 
@@ -290,8 +274,7 @@ There is a continuum of potential buyers who gradually arrive over time
 \begin_inset Formula $\beta$
 \end_inset
 
-.
- That is, within a time interval 
+: within time interval 
 \begin_inset Formula $dt$
 \end_inset
 
@@ -300,36 +283,31 @@ There is a continuum of potential buyers who gradually arrive over time
 \end_inset
 
  of buyers arrive to the platform.
- Each buyer has a single job he wants to be completed.
- Upon arrival, the buyer proposes the job to one of the available sellers.
- I assume that the target seller is drawn uniformly at random from the pool
- of available workers.
- If the buyer's job is accepted, the buyer stays until the job is completed,
+ Each new buyer arrives with a single job that he proposes to one of the
+ available sellers.
+ The seller is chosen uniformly at random from the pool of available workers.
+ If the buyer's job is accepted, the buyer stays until his job is completed,
  otherwise he leaves the platform.
- 
-\end_layout
-
-\begin_layout Standard
-Assume 
+ Assume 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
  which implies that collectively, it is physically possible for sellers
  to complete every buyer job.
- The assumption makes the exposition easier and relaxing it requires more
- notation to deal with either automatic rejections or queues.
- I do this in  
+ See the detailed discussion of this and other assumptions on the matching
+ process in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Extensions"
+reference "subsec:Discussion-of-the-assumptions"
 
 \end_inset
 
- and show that qualitatively results do not change.
+ below.
+ 
 \end_layout
 
 \begin_layout Standard
-The platform opts out of the centralized matching process, instead it makes
+The platform does not use the centralized matching process, instead it makes
  disclosure of buyer characteristics part of its design, as described below.
  See 
 \begin_inset CommandInset ref
@@ -372,22 +350,6 @@ status collapsed
 
 \backslash
 centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../pictures/matching_chart.eps
-	width 60text%
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -485,7 +447,7 @@ input{pictures/seller_problem.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Seller dynamic optimization problem with repeated search and waiting.
+Seller dynamic optimization problem with screening and waiting.
  An available seller receives requests at Poisson rate 
 \begin_inset Formula $\beta_{A}$
 \end_inset
@@ -495,7 +457,7 @@ Seller dynamic optimization problem with repeated search and waiting.
 \begin_inset Formula $\tau$
 \end_inset
 
- when he does not receive new requests.
+ during which he does not receive new requests.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -520,7 +482,8 @@ name "fig:Sellers-repeated-search"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Search and matching process.
+The model of decentralized matching market has two main components: the
+ spot matching process, and the seller dynamic optimization problem.
  
 \end_layout
 
@@ -539,9 +502,9 @@ Buyer and seller preference heterogeneity.
 \end_layout
 
 \begin_layout Standard
-There are two dimensions of heterogeneity in the matching market.
+There are two dimensions of heterogeneity in the market.
  First, each seller has heterogeneous match payoff across buyers.
- Second, different seller have different payoff functions over jobs.
+ Second, different sellers have different payoff functions over jobs.
  Concerning the platform's information disclosure problem, I need the following
  pieces of notation.
  Let 
@@ -552,7 +515,7 @@ There are two dimensions of heterogeneity in the matching market.
 \begin_inset Formula $x$
 \end_inset
 
- is the buyer characteristics 
+ is buyer characteristics 
 \bar under
 observed
 \bar default
@@ -585,8 +548,8 @@ Buyer type
 \begin_inset Formula $X$
 \end_inset
 
- is a compact subset of Euclidean space.
- Distribution of 
+ is a compact subset of a Euclidean space.
+ The distribution of 
 \begin_inset Formula $x$
 \end_inset
 
@@ -603,7 +566,7 @@ Buyer type
 \begin_inset Formula $y$
 \end_inset
 
- is the seller characteristics 
+ is seller characteristics 
 \bar under
 unobserved
 \bar default
@@ -637,8 +600,8 @@ Seller type
 \begin_inset Formula $Y$
 \end_inset
 
- is a compact subset of Euclidean space.
- Distribution of 
+ is a compact subset of a Euclidean space.
+ The distribution of 
 \begin_inset Formula $y$
 \end_inset
 
@@ -702,17 +665,23 @@ Platform: Information intermediation.
 \end_layout
 
 \begin_layout Standard
-The platform plays a signaling game with sellers.
+Before the matching process starts running, the platform designs and commits
+ to a disclosure policy that governs how buyer characteristics are disclosed
+ to sellers.
  The platform observes buyer type 
 \begin_inset Formula $x$
 \end_inset
 
- and chooses how to reveal it to sellers.
- Sellers do not receive any additional information about 
+ and sends a signal about 
 \begin_inset Formula $x$
 \end_inset
 
- outside of what the platform tells them.
+ to the seller.
+ The seller does not receive any additional information about 
+\begin_inset Formula $x$
+\end_inset
+
+ besides the platform's signal.
  Let 
 \begin_inset Formula $S=\Delta(X)$
 \end_inset
@@ -732,7 +701,7 @@ Information disclosure policy
 
  is a probability distribution of posteriors.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 When 
@@ -743,8 +712,8 @@ When
 \begin_inset Formula $\Delta(S)$
 \end_inset
 
- is the set of Borel-measurable probability distributions with the weak-*
- topology on 
+ is the set of Borel probability distributions with the weak-* topology
+ on 
 \begin_inset Formula $\Delta(X)$
 \end_inset
 
@@ -754,7 +723,7 @@ When
 
 \end_inset
 
- The interpretation is 
+ The interpretation is that 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -768,7 +737,7 @@ When
 
 .
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 I focus on the 
@@ -808,27 +777,11 @@ key "KLMZ-wp"
 \begin_inset Formula $X$
 \end_inset
 
- whose reduced lottery is prior 
+ whose reduced lottery is the prior 
 \begin_inset Formula $F$
 \end_inset
 
 .
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-The two-stage lottery framework for disclosure is adopted from 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "BBM15"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
  The set of possible disclosure policies is then:
 \begin_inset Formula 
 \[
@@ -837,7 +790,21 @@ key "BBM15"
 
 \end_inset
 
- Full disclosure policy, denoted by 
+When a buyer of type 
+\begin_inset Formula $x$
+\end_inset
+
+ arrives, the platform draws a signal according to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and shows it to the seller.
+ The seller knows the platform's choice of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, and so his interpretation of a signal as a posterior is correct.
+ The full disclosure policy, denoted by 
 \begin_inset Formula $\lambda^{FD}$
 \end_inset
 
@@ -884,25 +851,11 @@ coarser
 \begin_inset Formula $\lambda''$
 \end_inset
 
- and partially concealing some 
+ and pooling some 
 \begin_inset Formula $x$
 \end_inset
 
 's.
- When a buyer of type 
-\begin_inset Formula $x$
-\end_inset
-
- arrives, the platform draws a signal according to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and shows it to the seller.
- The seller knows the platform's choice of 
-\begin_inset Formula $\lambda$
-\end_inset
-
-, and so his interpretation of a signal as a posterior is correct.
  
 \end_layout
 
@@ -912,25 +865,28 @@ Steady state distribution of sellers.
 \end_layout
 
 \begin_layout Standard
-A steady state of the matching process is characterized by the fraction
+The matching process is the dynamic system in which sellers become repeatedly
+ busy and available.
+ A steady state of the matching process is characterized by the fraction
  of available sellers of every type and their acceptance rates.
  Formally, let 
 \begin_inset Formula $\alpha(y)\geq0$
 \end_inset
 
- be the acceptance rate of type-
+ be the 
+\emph on
+acceptance rate
+\emph default
+ – a fraction of buyers accepted by type-
 \begin_inset Formula $y$
 \end_inset
 
- available sellers, and let 
+ sellers.
+ Let 
 \begin_inset Formula $\rho(y)$
 \end_inset
 
- be the type-
-\begin_inset Formula $y$
-\end_inset
-
-
+ be the
 \emph on
  utilization rate
 \emph default
@@ -939,24 +895,29 @@ A steady state of the matching process is characterized by the fraction
 \end_inset
 
  sellers who are busy.
- Denote the total fraction of busy sellers by 
+ Denote the average utilization rate by 
 \begin_inset Formula $\bar{\rho}:=\int_{Y}\rho(y)dG(y)$
 \end_inset
 
 .
+ Since the total mass of sellers is 1, 
+\begin_inset Formula $\brho$
+\end_inset
+
+ is also the mass of busy sellers.
  
 \end_layout
 
 \begin_layout Standard
 In a steady state, the flow of sellers who become busy is equal to the flow
- of workers who become available.
+ of sellers who become available.
  The available-to-busy flow is equal to the buyer flow type-
 \begin_inset Formula $y$
 \end_inset
 
  sellers receive times their acceptance rate.
- Since buyer get distributed uniformly across the available sellers, the
- buyer flow to type-
+ Since buyers distribute uniformly across the available sellers, the buyer
+ flow to type-
 \begin_inset Formula $y$
 \end_inset
 
@@ -992,15 +953,7 @@ In a steady state, the flow of sellers who become busy is equal to the flow
 \end_inset
 
 .
- Hence, in a steady state, we have:
-\begin_inset Formula 
-\begin{equation}
-\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
-\end{equation}
-
-\end_inset
-
-See 
+ See 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Matching-process-in"
@@ -1008,11 +961,20 @@ reference "fig:Matching-process-in"
 \end_inset
 
  for the illustration.
- 
+ In a steady state, available-to-busy flow of sellers is equal to the busy-to-av
+ailable flow:
+\begin_inset Formula 
+\begin{equation}
+\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
+\end{equation}
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1085,21 +1047,80 @@ Seller dynamic screening problem.
 \end_layout
 
 \begin_layout Standard
-Buyers arrive at flow rate 
-\begin_inset Formula $\beta$
+Denote by 
+\begin_inset Formula $\betaa$
 \end_inset
 
- and get distributed uniformly at random across all available sellers.
- Therefore, each individual available seller experiences a Poisson arrival
- process of buyers, where the rate of the arrival is equal to the buyer-to-selle
-r ratio:
+ the Poisson rate at which buyer arrive to an available seller.
+ Since buyers contact only available sellers, 
+\begin_inset Formula $\betaa$
+\end_inset
+
+ depends on the mass of available sellers.
+ In a steady state, the mass of available sellers is 
+\begin_inset Formula $1-\brho$
+\end_inset
+
+, and so,
 \begin_inset Formula 
 \begin{equation}
-\beta_{A}:=\frac{\beta}{1-\bar{\rho}}\label{eq:beta_A-1}
+\beta_{A}:=\frac{\beta}{1-\bar{\rho}}.\label{eq:beta_A-definition}
 \end{equation}
 
 \end_inset
 
+Note that 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the flow rate at which buyers arrive to the platform, while 
+\begin_inset Formula $\betaa$
+\end_inset
+
+ is the Poisson rate at which buyers arrive to available sellers.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In more detail, on the one hand, an individual available seller faces a
+ stochastic arrival process, such that the probability of arrival of a new
+ buyer over time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+ is 
+\begin_inset Formula $\beta_{A}dt+o(dt)$
+\end_inset
+
+.
+ On the other hand, available sellers jointly face the deterministic arrival
+ process of buyers, such that over time interval 
+\begin_inset Formula $dt$
+\end_inset
+
+ the mass 
+\begin_inset Formula $\beta_{A}dt$
+\end_inset
+
+ of buyers arrive.
+\end_layout
+
+\end_inset
+
+ The particularly simple form of the relation between the two in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:beta_A-definition"
+
+\end_inset
+
+ follows from the uniform distribution of buyers across available sellers.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 (
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1118,10 +1139,30 @@ cite the relevant theorem
 \end_inset
 
 ).
- There is thus a contrast between individual arrival process and aggregate
- arrival process in that the individual arrival process is stochastic while
- the aggregate arrival process is deterministic (a consequence of law of
- large numbers).
+ 
+\end_layout
+
+\end_inset
+
+ Sellers take 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ as given because there is a continuum of sellers on the platform, and any
+ individual seller's actions do not affect 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[move it somewhere below ] There is thus a contrast between individual arrival
+ process and aggregate arrival process in that the individual arrival process
+ is stochastic while the aggregate arrival process is deterministic (a consequen
+ce of law of large numbers).
  More concretely, an individual seller faces a stochastic arrival process,
  such that over an infinitesimal time interval 
 \begin_inset Formula $dt$
@@ -1142,44 +1183,29 @@ cite the relevant theorem
 \end_inset
 
  of buyers arrive.
- As we show in the rest of this section, stochasticity of individual arrival
- process combined with independent decision-making creates seller coordination
- problem which results in matching inefficiency.
+ As we show in the rest of this section, the stochasticity of individual
+ arrival process combined with independent decision-making creates a seller
+ coordination problem which results in matching inefficiency.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Each seller takes 
-\begin_inset Formula $\beta_{A}$
+A risk-neutral seller solves the dynamic optimization problem to maximize
+ the average profit flow.
+ The seller faces the sequence of jobs arriving at Poisson rate 
+\begin_inset Formula $\betaa$
 \end_inset
 
- as given
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-This follows from the fact that there is a continuum of sellers on the platform,
- and so any individual seller's actions does not affect 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
- and solves the dynamic optimization problem where for each incoming job
- he observes the platform's signal 
+, for each job observes the platform's signal 
 \begin_inset Formula $s$
 \end_inset
 
-, and based on 
-\begin_inset Formula $s$
-\end_inset
-
-, chooses to accept or reject the job in order to maximize his average profit
- flow.
+ and chooses to accept or reject it.
  See 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1187,17 +1213,17 @@ reference "fig:Sellers-repeated-search"
 
 \end_inset
 
- for the illustration of the seller dynamic optimization problem.
- The expected profit for seller 
+ for the illustration.
+ Denote by 
+\begin_inset Formula $\pi(s,y)=\int_{X}\pi(x,y)ds(x)$
+\end_inset
+
+ the seller 
 \begin_inset Formula $y$
 \end_inset
 
- of a job with signal 
+'s expected profit if he accepts a job with signal 
 \begin_inset Formula $s$
-\end_inset
-
- is 
-\begin_inset Formula $\pi(s,y)=\int_{X}\pi(x,y)s(dx)$
 \end_inset
 
 .
@@ -1205,11 +1231,11 @@ reference "fig:Sellers-repeated-search"
 \begin_inset Formula $V(y)$
 \end_inset
 
- the average profit flow when seller of type 
+ be the average profit flow when seller of type 
 \begin_inset Formula $y$
 \end_inset
 
- acts optimally (value function)
+ acts optimally (the value function)
 \begin_inset Foot
 status collapsed
 
@@ -1226,28 +1252,11 @@ For example, if a seller earns $1 on each job, and time interval between
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Sellers are risk neutral.
- 
-\end_layout
-
-\begin_layout Plain Layout
-and so for the decision-making, it is sufficient to know only the distribution
- of posterior means.
- 
-\end_layout
-
-\end_inset
-
-Denote by 
+ Let 
 \begin_inset Formula $v(s,y)$
 \end_inset
 
- the value of one new job with signal 
+ be the value of a new job with signal 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1256,8 +1265,8 @@ Denote by
 \end_inset
 
  includes the option value of rejecting the job and the opportunity cost
- of being unavailable.
- Value of a new job is zero if the seller rejects it, and 
+ of accepting.
+ The value of a new job is zero if the seller rejects it, and 
 \begin_inset Formula $\pi(s,y)-\tau V(y)$
 \end_inset
 
@@ -1271,8 +1280,17 @@ Denote by
 \end_inset
 
 .
- There is no discounting.
- Seller optimization problem is then the system of the following two equations:
+ Therefore, 
+\begin_inset Formula $v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}$
+\end_inset
+
+.
+ The average profit per unit of time equals the expected value from one
+ job times the expected number of new jobs: 
+\begin_inset Formula $V(y)=\beta_{A}\Exp\left[v(s,y)\right]$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -1298,7 +1316,7 @@ I consider time average payoff rather than discounted sum because discount
 
 \end_inset
 
-
+ Put together, the seller optimization problem is given by:
 \begin_inset Note Comment
 status collapsed
 
@@ -1317,22 +1335,42 @@ I still use this formulation because in the alternative I have to differentiate
  
 \begin_inset Formula 
 \begin{eqnarray}
-V(y) & = & \beta_{A}\int v(s,y)\lambda(ds)\label{eq:V-via-pi}\\
-v(s,y) & = & \max\{0,\pi(s,y)-\tau V(y)\}\label{eq:pi(c)}
+V(y) & = & \beta_{A}\int\max\{0,\pi(s,y)-\tau V(y)\}d\lambda(s).\label{eq:V-via-pi}
 \end{eqnarray}
 
 \end_inset
 
-Seller strategy is function 
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+V(y) & = & \beta_{A}\int v(s,y)\lambda(ds)\label{eq:V-via-pi-1}\\
+v(s,y) & = & \max\{0,\pi(s,y)-\tau V(y)\}\label{eq:pi(c)-1}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The seller strategy is function 
 \begin_inset Formula $\sigma(\cdot,y)\colon S\to[0,1]$
 \end_inset
 
- that for every seller type maps a signal to the probability of accepting
- it.
+ that for every seller type 
+\begin_inset Formula $y$
+\end_inset
+
+ maps signal to the probability of accepting it.
  The seller acceptance rate is the ex ante probability of accepting a job:
 \begin_inset Formula 
 \begin{equation}
-\alpha(y)=\int\sigma(s,y)\lambda(ds).\label{eq:alpha}
+\alpha(y)=\int\sigma(s,y)d\lambda(s).\label{eq:alpha}
 \end{equation}
 
 \end_inset
@@ -1341,227 +1379,7 @@ Seller strategy is function
 \end_layout
 
 \begin_layout Subsection
-Equilibrium definition and existence
-\end_layout
-
-\begin_layout Standard
-I am interested in a steady state equilibrium of the market in which the
- sellers take buyer arrival rate 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- as given and optimize independently, and the seller busy-available flows
- balance out.
- Recall that the exogenous objects in my model are: buyer flow rate 
-\begin_inset Formula $\beta$
-\end_inset
-
-, profit function 
-\begin_inset Formula $\pi(x,y)$
-\end_inset
-
-, distribution of types 
-\begin_inset Formula $G(y)$
-\end_inset
-
- and 
-\begin_inset Formula $F(x)$
-\end_inset
-
-, and completion time 
-\begin_inset Formula $\tau$
-\end_inset
-
-.
- Based on the exogenous objects, a tuple 
-\begin_inset Formula $(\sigma,\bar{\rho})$
-\end_inset
-
- constitute a 
-\emph on
-steady-state equilibrium
-\emph default
- if
-\end_layout
-
-\begin_layout Enumerate
-[Optimality] For every type-
-\begin_inset Formula $y$
-\end_inset
-
- seller for all 
-\begin_inset Formula $y$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma(\cdot,y)$
-\end_inset
-
- is an optimal strategy given buyer Poisson arrival rate 
-\begin_inset Formula $\beta_{A}=\beta/(1-\bar{\rho})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-[Steady state] Average utilization rate 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- arises in a steady state when sellers play 
-\begin_inset Formula $\sigma$
-\end_inset
-
-, as shown in {
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:SS"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
-
-\end_inset
-
-}.
-\end_layout
-
-\begin_layout Proposition
-\begin_inset CommandInset label
-LatexCommand label
-name "prop:Equilibrium-exists-and"
-
-\end_inset
-
-Steady-state equilibrium exists.
- It is unique up to the acceptance of marginal jobs in the follwing sense.
- If 
-\begin_inset Formula $(\sigma^{i},\brho^{i})$
-\end_inset
-
-, 
-\begin_inset Formula $i=1,2$
-\end_inset
-
- are two steady-state equilibria, then (1) 
-\begin_inset Formula $\brho^{1}=\brho^{2}$
-\end_inset
-
-, and (2) for any 
-\begin_inset Formula $y\in Y$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma^{1}(\cdot,y)$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma^{2}(\cdot,y)$
-\end_inset
-
- coincide except on 
-\begin_inset Formula $\{s\colon\pi(s,y)=\tau V(y)\}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-In the proof in the Appendix, first, I show that for an arbitrary vector
- of acceptance rates 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
-, there is a unique steady state value of 
-\begin_inset Formula $\brho$
-\end_inset
-
-.
- Then, average utilization 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- is increasing and continuous in 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- for any 
-\begin_inset Formula $y\in Y$
-\end_inset
-
-.
- The uniqueness of equilibrium obtains by monotonicity of reaction curves
- of 
-\begin_inset Formula $\alpha$
-\end_inset
-
- in 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{\rho}$
-\end_inset
-
- in 
-\begin_inset Formula $\alpha$
-\end_inset
-
-.
- Namely, in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha"
-
-\end_inset
-
-, as buyer traffic intensity 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- increases, sellers become more picky and acceptance rate 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- decreases.
- As 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- increases, buyers get directed to a smaller set of sellers, hence 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- increases.
- For details see the proof in the Appendix 
-\begin_inset CommandInset ref
-LatexCommand vpageref
-reference "proof:eqm-exists"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Subsection
-Examples of Marketplaces
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- [not finished]
-\end_layout
-
-\end_inset
-
-
+Examples of marketplaces
 \end_layout
 
 \begin_layout Standard
@@ -1569,7 +1387,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-should be in the introducitno as motivational examples.
+should be in the introducitno as motivational examples [done].
  Then get back to them in the conclusion? 
 \end_layout
 
@@ -1605,18 +1423,35 @@ BTW Uber has a version of this where drivers game the system to ride up
 \end_layout
 
 \begin_layout Standard
-In this section I discuss how the model maps to the reality in the case
- of Uber, Airbnb and labor platform such as TaskRabbit.
+In this section I explain how the model fits the marketplaces of Uber, Airbnb
+ and labor platforms, such as TaskRabbit.
+ I will return to these applications after I state my main results in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Market-Design:-Information"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DO IT!!
+\end_layout
+
+\end_inset
+
+.
  Recall that 
 \begin_inset Formula $y$
 \end_inset
 
- captures the seller's unobserved heterogeneity; and 
+ captures the seller heterogeneity unobserved by the platform, and 
 \begin_inset Formula $x$
 \end_inset
 
- captures buyer characteristics observed by the platform but not directly
- observed by the sellers.
+ captures buyer heterogeneity observed by the platform.
  
 \end_layout
 
@@ -1688,40 +1523,6 @@ What is the platform's choice for the examples below?
 \end_inset
 
 
-\end_layout
-
-\begin_layout Paragraph
-Uber.
- 
-\end_layout
-
-\begin_layout Standard
-Drivers receive requests from passenger when they are idle.
- Type 
-\begin_inset Formula $y$
-\end_inset
-
- includes driver home location, preference for long rides, tolerance to
- congestion; 
-\begin_inset Formula $x$
-\end_inset
-
- includes passenger's destination and his ride history.
- Price per mile and minute is fixed (conditional on aggregate multiplies,
- such as surge pricing).
- Drivers do not like very short rides or the rides to the neighborhoods
- far removed from busy areas.
- Passengers do not like waiting.
- 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "prop:FD-suboptimal"
-
-\end_inset
-
- shows that if drivers have full discretion over accepting, they screen
- excessively: acceptance rates are low, and the demand-supply fit is suboptimal.
- 
 \begin_inset Note Note
 status open
 
@@ -1738,25 +1539,96 @@ Greg: It's a bit weird to talk about Proposition 2 before introducing it.
 \end_layout
 
 \begin_layout Paragraph
-Airbnb.
+Uber.
+ 
 \end_layout
 
 \begin_layout Standard
-Hosts are capacity constrained in rooms.
- Once a room is booked for a specific date, the host cannot accept a better
- guest.
+When idle, drivers receive requests from passengers.
  Type 
 \begin_inset Formula $y$
 \end_inset
 
- includes host's preference for age, race, personality, daily schdule.
+ includes driver home location, preference for long rides, tolerance to
+ congestion; 
+\begin_inset Formula $x$
+\end_inset
+
+ includes passenger's destination and his ride history.
+ Price per mile and minute is fixed (conditional on aggregate multiplies,
+ such as surge pricing).
+ Drivers do not like very short rides or the rides to the remote neighborhoods.
+ Passengers do not like waiting.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The policy of not showing a passenger destination to drivers avoids drivers'
+ cream-skimming behavior and improves quality of the service for passengers.
+\end_layout
+
+\end_inset
+
+ Concealing passenger destination from drivers is information coarsening.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+ shows that if drivers have full discretion over accepting, they screen
+ excessively: acceptance rates are low, and the demand-supply fit is suboptimal.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+Airbnb.
+\end_layout
+
+\begin_layout Standard
+Hosts are capacity constrained in rooms: once a room is booked for a specific
+ date, the host cannot accept a better guest.
+ Type 
+\begin_inset Formula $y$
+\end_inset
+
+ includes host's preference for age, race, personality, daily schedule.
  Type 
 \begin_inset Formula $x$
 \end_inset
 
- includes guests' gender, age, socio-economic status, life style.
+ includes guests' gender, age, socio-economic status, lifestyle.
  Every host sets his own price that applies to all guests but he may prefer
- to reject certain guests who he expects can be a bad fit.
+ to reject certain guests who he expects will be a bad fit.
+ The InstantBook feature, if adopted by a host, is effectively the no disclosure
+ policy because the host commits to accepting all guests.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This improves guest experience since it simplifies their search.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
  
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1771,30 +1643,63 @@ reference "prop:FD-suboptimal"
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 TaskRabbit.
  
 \end_layout
 
 \begin_layout Standard
-The service providers are capacity constrained because they can do only
- that many tasks per week.
- Once a service provider agreed to do some job, he is constrained in picking
+The service providers are capacity constrained in the number of tasks they
+ can do per week.
+ Once a service provider agrees to do one task, he is constrained in picking
  new tasks.
  Type 
 \begin_inset Formula $y$
 \end_inset
 
- includes seller skill and work ethics.
+ includes service provider's skill and work ethics.
  Type 
 \begin_inset Formula $x$
 \end_inset
 
- includes job category, job difficulty, client's professionality.
+ includes job category, job difficulty, client's professionality and location.
  Service providers set hourly rate that apply to all tasks in the same category.
- The service provider may prefer to reject the tasks which he does not find
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The service provider may prefer to reject the tasks which he does not find
  to be a good fit to his skill, or those that are too far, or those with
  bad timing.
+ 
+\end_layout
+
+\end_inset
+
+Making service providers to commit and price to broad categories is a form
+ of information coarsening.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Buyers benefit from the on-demand experience on the labor platform.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
  
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1809,13 +1714,257 @@ reference "prop:FD-suboptimal"
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Discussion of the Modeling Assumptions
+Equilibrium definition and existence
+\end_layout
+
+\begin_layout Standard
+A steady state equilibrium is a market outcome in which the sellers take
+ buyer arrival rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+ as given and optimize independently, and the seller busy-available flows
+ balance out.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Recall that the exogenous objects in my model are: buyer flow rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, profit function 
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+, distribution of types 
+\begin_inset Formula $G(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $F(x)$
+\end_inset
+
+, and completion time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+Formally, a tuple 
+\begin_inset Formula $(\sigma,\bar{\rho})$
+\end_inset
+
+ constitutes a 
+\emph on
+steady-state equilibrium
+\emph default
+ if
+\end_layout
+
+\begin_layout Enumerate
+[Optimality] For every type-
+\begin_inset Formula $y$
+\end_inset
+
+ seller for all 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma(\cdot,y)$
+\end_inset
+
+ is an optimal strategy given buyer Poisson arrival rate 
+\begin_inset Formula $\beta_{A}=\beta/(1-\bar{\rho})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+[Steady state] Average utilization rate 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ arises in a steady state when sellers play 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, as shown in {
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:SS"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:alpha"
+
+\end_inset
+
+}.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:Equilibrium-exists-and"
+
+\end_inset
+
+A steady-state equilibrium exists.
+ It is unique up to the acceptance of marginal jobs in the following sense.
+ If 
+\begin_inset Formula $(\sigma^{i},\brho^{i})$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ are two steady-state equilibria, then (1) 
+\begin_inset Formula $\brho^{1}=\brho^{2}$
+\end_inset
+
+, and (2) for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma^{1}(\cdot,y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}(\cdot,y)$
+\end_inset
+
+ coincide except on 
+\begin_inset Formula $\{s\colon\pi(s,y)=\tau V(y)\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To prove the result, first, show that for an arbitrary vector of acceptance
+ rates 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+, there is a unique steady state value of 
+\begin_inset Formula $\brho$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:rho-and-monotonicities"
+
+\end_inset
+
+).
+ Then, average utilization 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ is increasing and continuous in 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ for any 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ The uniqueness of equilibrium follows from monotonicity of reaction curves
+ of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\rho}$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Namely, if average utilization 
+\begin_inset Formula $\brho$
+\end_inset
+
+ is higher, then buyer traffic to each available worker is higher; sellers
+ become more picky and acceptance rate 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ decreases.
+ As 
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ increases, sellers become less available, that is 
+\begin_inset Formula $\brho$
+\end_inset
+
+ is lower.
+ For details see the proof in the Appendix 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "proof:eqm-exists"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Discussion-of-the-assumptions"
+
+\end_inset
+
+Discussion of the modeling assumptions
 \end_layout
 
 \begin_layout Standard
 In this subsection I discuss in detail the important assumptions of my model.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The assumptions are motivated by the stylized facts from the digital platforms
+ discussed above.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Assumption
@@ -1830,9 +1979,9 @@ Buyers make a single search attempt.
 \end_layout
 
 \begin_layout Standard
-Rejection-intolerant buyers is a simplifying assumption that help to avoid
- endogenous distribution of buyer types.
- It captures the real aspect of matching markets that rejections are costly
+Rejection-intolerant buyers is a simplifying assumption that helps me avoid
+ having an endogenous distribution of buyer types.
+ It captures a real aspect of matching markets that rejections are costly
  to buyers, e.g.
  wasted time, wasted search effort, bidding costs, etc.
  Moreover, buyers often do take rejections badly.
@@ -1844,7 +1993,7 @@ key "Fra15"
 \end_inset
 
  reports that on Airbnb, an initial rejection decreases the probability
- that the guest eventually books any listing by 50%.
+ that the guest eventually books any listing by 51%.
  
 \end_layout
 
@@ -1854,28 +2003,13 @@ Buyers contact available sellers only.
 \end_layout
 
 \begin_layout Standard
-The goal of the paper is to explore the matching frictions that pertain
+The goal of the paper is to explore the matching friction that pertains
  to preference heterogeneity and screening.
- Therefore, I assume away the coordination frictions owing to several buyers
- requesting the same seller and the coordination frictions owing to buyer
- requesting unavailable sellers.
- All three types of matching frictions are present in the matching marketplaces
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Fra15"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
+ Therefore, I assume away the coordination friction owing to simultaneity,
+ when several buyers request the same seller at the same time.
+ Also, I assume away the coordination friction owing to unavailability,
+ which arises when buyers request unavailable sellers who did not update
+ their status or do not have the means to do so.
  The coordination frictions in matching markets have been extensively studied
  in the theoretical literature (
 \begin_inset CommandInset citation
@@ -1884,8 +2018,17 @@ key "BSW01,Kir09,Halaburda2013,AJK14"
 
 \end_inset
 
-), and I assume away this channel of matching inefficiency to focus on screening.
- 
+), and digital platforms usually have good technological means of resolving
+ the simultaneity driven friction (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fn:Fradkin-miscoordination-6percent"
+
+\end_inset
+
+).
+ I assume away the simultaneity and unavailability driven frictions to focus
+ on screening.
 \end_layout
 
 \begin_layout Assumption
@@ -1895,16 +2038,30 @@ name "assu:uniform-assignment"
 
 \end_inset
 
-Buyers contact an available seller chosen uniformly at random
+Buyers contact an available seller chosen uniformly at random.
 \end_layout
 
 \begin_layout Standard
-This assumption has two implications.
- First, seller of any type faces the same intensity of buyer traffic.
- Second, each seller faces the same distribution of buyer jobs.
- This is a simplifying assumption that helps me to focus sellers excessive
- screening problem.
- In the extension 
+This is a simplifying assumption that lets me focus on the supply side of
+ the market and keeps the base model clean.
+ The assumption has two implications.
+ First, the seller of any type faces the same intensity of buyer traffic
+ 
+\begin_inset Formula $\betaa$
+\end_inset
+
+.
+ Second, each seller faces the same distribution of buyer jobs 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In the extension 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:General-demand:-workers"
@@ -1914,6 +2071,11 @@ reference "subsec:General-demand:-workers"
  I show how to deal with a more general demand system where demand for each
  seller type can be different.
  
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -1952,8 +2114,9 @@ Collectively, it is physically possible for sellers to complete every buyer
 \end_layout
 
 \begin_layout Standard
-The assumption makes the exposition easier and relaxing it requires more
- notation to deal with either automatic rejections or queues.
+The assumption makes the exposition cleaner and does not add more insights.
+ Relaxing it requires more notation to deal with either automatic rejections
+ or queues.
  I do this in  
 \begin_inset CommandInset ref
 LatexCommand ref

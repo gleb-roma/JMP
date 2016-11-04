@@ -1,6 +1,6 @@
-\begin{tikzpicture}[xscale=.8,yscale=.8] 
+\begin{tikzpicture}[xscale=.7,yscale=.7] 
 
-		\draw [<->] (0,8) node (yaxis)[left] {$CS$} 
+		\draw [<->] (0,8) node (yaxis)[left] {$BS$} 
 		        |- (10,0) node (xaxis) [below] {$V$};
 	\def\mycoordinates{(0,0) (8,3.5) (0,7)}
 
@@ -9,7 +9,7 @@
 	\def\mycoordinates{(0,0) (8,3.5) (0,7)}
 
 \def\myshift#1{\raisebox{1ex}}
-	\draw[thick,postaction={decorate,decoration={text along path,text align=center,text={|\myshift|PARETO FRONTIER}}}] plot [smooth,tension=1.3] coordinates {(0,7) (5.3,5.5) (8,2)  };
+	\draw[thick,postaction={decorate,decoration={text along path,text align=center,text={|\myshift|PARETO FRONTIER}}} ] (0,7) to [out=0,in=100] (8,2);
 	\draw[dashed] (8,2)--(8,0);
 
 	\coordinate (A) at (4,4);
