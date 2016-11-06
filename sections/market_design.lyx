@@ -274,6 +274,12 @@ s.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:seller-coordination-failure"
+
+\end_inset
+
 Full disclosure: Seller coordination failure 
 \end_layout
 
@@ -293,7 +299,7 @@ mality in my setting.
 \begin_inset Formula $O=(V(\cdot),BS)$
 \end_inset
 
- is a combination of seller profits and consumer surplus.
+ is a combination of seller profits and buyer surplus.
  I say that a market outcome is 
 \emph on
 feasible
@@ -790,6 +796,12 @@ key "BBM15"
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Three-effects-of"
+
+\end_inset
+
 Three effects of information disclosure
 \end_layout
 
@@ -2025,8 +2037,8 @@ For general
 \begin_inset Formula $G$
 \end_inset
 
-, the shape of the optimal disclosure can be quite arbitrary even in the
- static case.
+, the shape of the optimal disclosure can be quite complex even in the static
+ case.
  The heuristic is to pool 
 \begin_inset Formula $x$
 \end_inset
@@ -3061,7 +3073,7 @@ where
  exists and equals:
 \begin_inset Formula 
 \[
-\frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\delta\Lambda}\cdot K_{2}+\nu(y)\betaa,
+\frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\delta\Lambda}\cdot K_{2}+\betaa\nu(y)g(y),
 \]
 
 \end_inset
@@ -3375,7 +3387,7 @@ reference "lem:main-lemma"
 , 
 \begin_inset Formula 
 \begin{align}
-\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)\betaa\right)=\nonumber \\
+\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)=\nonumber \\
  & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y),\label{eq:12}
 \end{align}
 
@@ -3528,6 +3540,27 @@ reference "proof:prop-5"
 
 .
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+Decomposition of effects of information disclosure.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
