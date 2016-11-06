@@ -1,0 +1,215 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection
+version
+\end_layout
+
+\begin_layout Standard
+However, giving more information to users increases their return to search
+ and waiting and leads to 
+\emph on
+cream-skimming
+\emph default
+.
+ In fast-moving marketplaces, cream-skimming degrades marketplace performance.
+ For example, on Uber, if drivers often reject passenger requests, passengers
+ will have long wait times.
+ On Airbnb, if hosts often reject guest inquiries, guests have to spend
+ more time and effort searching.
+ What is the right information intermediation policy for the platform that
+ cares about both sides of the market? What does it depend on?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Model overview
+\end_layout
+
+\end_inset
+
+I study the information intermediation problem in the context of the following
+ model.
+ In the base setting, buyers are short-lived and care about rejection rates
+ but do not care about who they match with.
+ Sellers are long-lived, care less about matching rate but care about who
+ they match with.
+ Buyers contact sellers with a request of service.
+ Sellers have limited capacity for serving buyers: if a seller accepts a
+ job, he becomes busy for a period of time and cannot accept new jobs.
+ The platform designs an information disclosure policy that governs what
+ buyer information is available to sellers before they decide to accept
+ or reject the buyer request.
+ I consider the general platform's objective of maximizing the weighted
+ average of buyer surplus and seller profits but for concreteness take welfare-m
+aximization.
+ 
+\end_layout
+
+\begin_layout Subsection
+version
+\end_layout
+
+\begin_layout Standard
+In decentralized matching markets, such as market for lodging, labor market,
+ dating market and others, feature a high degree of heterogneity in buyer
+ and seller preferences.
+ The platform's goal is to enable value-creating matches.
+ On the other hand, in fast-moving marketplaces, the speed at which matches
+ form is also important.
+ Match quality and match speed are often in conflict.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, on Uber, if drivers often reject passenger requests, passengers
+ will have long wait times.
+ On Airbnb, if hosts often reject guest inquiries, guests have to spend
+ more time and effort searching.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+if I start this way, I then ask: how can information design improve? But
+ then it's unclear why I am interested in disclosure policy as an intervention
+ tool.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+It is better to motivate my paper by talking about information right from
+ the getgo.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
