@@ -2317,236 +2317,60 @@ name "proof2"
 status open
 
 \begin_layout Plain Layout
-needs proof.
- 
+Done.
+  
 \end_layout
 
 \end_inset
 
 Step 1.
- 
-\begin_inset Formula $M$
-\end_inset
-
- and 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
- are positively related.
- Indeed, when the mass of available sellers is 
-\begin_inset Formula $X$
-\end_inset
-
-, the flow of matches is 
-\begin_inset Formula 
-\[
-M=\frac{1-X}{\tau}.
-\]
-
-\end_inset
-
-The buyer arrival rate on available sellers is 
-\begin_inset Formula $\beta_{A}=\beta/X$
-\end_inset
-
-.
- Therefore,
-\begin_inset Formula 
-\[
-M=\frac{1-\beta/\beta_{A}}{\tau}.
-\]
-
-\end_inset
-
-We are interested in the sign of 
-\begin_inset Formula $\delta M/\delta\Lambda$
-\end_inset
-
-, therefore we will find 
-\begin_inset Formula $\delta\beta_{A}/\delta\Lambda$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Step 2.
  The equilibrium values of 
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
  and 
-\begin_inset Formula $\beta_{A}$
+\begin_inset Formula $\brho$
 \end_inset
 
- are found from the system of equations 
+ are found using the system of equations 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:V-zhat-Lambda"
 
 \end_inset
 
-, which we reproduce here:
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\betaa=\beta/(1-\brho)$
+\end_inset
+
+, rewrite them as:
 \begin_inset Formula 
 \begin{align}
-y-\hat{z}(y) & =\tau\beta_{A}\Lambda(\hat{m}(y)),\quad\forall y\in Y;\label{eq:20}\\
-\int\frac{dG(y)}{\tau\alpha(y)+1/\beta_{A}} & =\beta.\label{eq:21}
+y-\hat{z}(y) & =\tau\beta_{A}\Lambda(\zhaty),\quad\forall y\in Y;\label{eq:20}\\
+\betaa\int\frac{dG(y)}{\tau\betaa\alpha(y)+1} & =\beta.\label{eq:21}
 \end{align}
 
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Proof
-Take the differential of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:21"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{gather}
--\int\frac{dG(y)\left(\tau\delta\alpha(y)-\delta\beta_{A}/\beta_{A}^{2}\right)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=0.\nonumber \\
-\delta\beta_{A}=\frac{\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}{\frac{1}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}}.\label{eq:delta-betaA}
-\end{gather}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Now use the fact that
-\begin_inset Formula 
-\begin{equation}
-\alpha(y)=\Lambda'(\hat{m}(y)+)\label{eq:alpha=W'}
-\end{equation}
-
-\end_inset
-
-to find the differential
-\begin_inset Formula 
-\begin{equation}
-\delta\alpha(y)=\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y).\label{eq:delta-alpha}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Take the differential of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:20"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{gather}
--\delta\hat{m}(y)=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\Lambda'(\hat{m}(y))\delta\hat{m}(y)+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\nonumber \\
--\delta\hat{m}(y)(1+\tau\beta_{A}\alpha(y))=\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y)).\label{eq:delta-mhat}
-\end{gather}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Plug in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-mhat"
-
-\end_inset
-
- into 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-alpha"
-
-\end_inset
-
- and then into 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:delta-betaA"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{multline*}
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\int\frac{\delta\alpha(y)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
-=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))+\Lambda''(\hat{m}(y))\delta\hat{m}(y)\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
-=\tau\int\frac{\left(\delta\Lambda'(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau\int\frac{\Lambda''(\hat{m}(y))\left(\tau\delta\beta_{A}\Lambda(\hat{m}(y))+\tau\beta_{A}\delta\Lambda(\hat{m}(y))\right)dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}\beta_{A}}
-\end{multline*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{multline*}
-\delta\beta_{A}\left[\int\frac{dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\beta_{A}^{2}\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]=\\
-=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}-\tau^{2}\int\frac{\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{3}}
-\end{multline*}
-
-\end_inset
-
-We have both 
-\begin_inset Formula $\delta\Lambda$
-\end_inset
-
- and 
-\begin_inset Formula $(\delta\Lambda)'$
-\end_inset
-
- on the right hand side of the expression above, and we need to have only
- 
-\begin_inset Formula $\delta\Lambda$
-\end_inset
-
- .
- To get it, we will use integration by parts.
- Consider separately the first term in the previous line:
-\begin_inset Formula 
-\begin{gather*}
-Z_{1}:=\tau\int\frac{\delta\Lambda'(\hat{m}(y))dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\tau\beta_{A}^{2}\int\frac{\left(\delta\Lambda(\hat{m}(y))\right)'g(y)dy}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\tau\beta_{A}^{2}\int\frac{g(y)d\left(\delta\Lambda(\hat{m}(y))\right)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}=\\
-=\tau\beta_{A}^{2}\frac{g(y)\delta\Lambda(\hat{m}(y))}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}|_{\underline{y}}^{\overline{y}}-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
-=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))d\left(\frac{g(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}\right)=\\
-=-\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\frac{g'(y)\left(\tau\alpha(y)\beta_{A}+1\right)^{2}-2g(y)\left(\tau\alpha(y)\beta_{A}+1\right)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{4}}dy=\\
-=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-\frac{g'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{2}}+\frac{2g(y)\tau\beta_{A}\alpha'(y)}{\left(\tau\alpha(y)\beta_{A}+1\right)^{3}}\right]dy
-\end{gather*}
-
-\end_inset
-
-Using 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:alpha=W'"
-
-\end_inset
-
-,
+Denote the fraction of available sellers by
 \begin_inset Formula 
 \[
-\alpha'(y)=\Lambda''(\hat{m}(y))\hat{m}'(y).
+\nu(y):=\frac{1}{\tau\betaa\alpha(y)+1}=1-\rho(y).
 \]
 
 \end_inset
 
-Differentiate 
+Differentiating 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:20"
 
 \end_inset
@@ -2555,11 +2379,233 @@ reference "eq:20"
 \begin_inset Formula $y$
 \end_inset
 
-,
+, find that
+\begin_inset Formula 
+\[
+\hat{z}'(y)=\nu(y).
+\]
+
+\end_inset
+
+Step 2.
+ Consider a feasible variation 
+\begin_inset Formula $\delta\Lambda(y)$
+\end_inset
+
+, that is the one such that 
+\begin_inset Formula $\Lambda+\delta\Lambda\in\mathcal{L}$
+\end_inset
+
+.
+ We are going to track variation in all endogeneous variables to eventually
+ solve for 
+\begin_inset Formula $\delta M$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta V$
+\end_inset
+
+.
+ Differentiate 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:20"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+-\delta\zhaty=\tau\delta\betaa\Lambda(\zhaty)+\tau\betaa\delta\Lambda(\zhaty)+\tau\betaa\alpha(y)\delta\zhaty,
+\]
+
+\end_inset
+
+from where
+\begin_inset Formula 
+\begin{equation}
+\delta\zhaty=-\nu(y)\left[\tau\delta\betaa\Lambda(\zhaty)+\tau\betaa\delta\Lambda(\zhaty)\right].\label{eq:delta-zhaty}
+\end{equation}
+
+\end_inset
+
+Differentiate with respect to 
+\begin_inset Formula $y$
+\end_inset
+
+:
 \begin_inset Formula 
 \begin{align*}
-1-\hat{m}'(y) & =\tau\beta_{A}\alpha(y)\hat{m}'(y)\\
-\hat{m}'(y) & =\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+\delta\hat{z}'(y)= & -\nu'(y)\left[\tau\delta\betaa\Lambda(\zhaty)+\tau\betaa\delta\Lambda(\zhaty)\right]\\
+ & -\nu(y)\left[\tau\delta\betaa\alpha(y)\hat{z}'(y)+\tau\betaa\delta\Lambda'(\zhaty)\hat{z}'(y)\right]\\
+\delta\hat{z}'(y)= & -\tau\nu'(y)\left[\delta\betaa\Lambda(\zhaty)+\betaa\delta\Lambda(\zhaty)\right]\\
+ & -\tau\nu^{2}(y)\left[\delta\betaa\alpha(y)+\betaa\delta\Lambda'(\zhaty)\right]
+\end{align*}
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:20-1"
+
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align}
+\delta\betaa\bar{\nu} & =-\betaa\delta\bar{\nu}=-\betaa\int\delta\nu(y)dG(y)=-\betaa\int\delta\hat{z}'(y)dG(y)\nonumber \\
+ & =\tau\betaa\int\delta\betaa\left[\Lambda(\zhaty)\nu'(y)+\alpha(y)\nu^{2}(y)\right]dG(y)\nonumber \\
+ & +\tau\betaa\int\left[\nu'(y)\betaa\delta\Lambda(\zhaty)+\nu^{2}(y)\betaa\delta\Lambda'(\zhaty)\right]dG(y).\label{eq:21-1}
+\end{align}
+
+\end_inset
+
+Manipulate separately the integral
+\begin_inset Formula 
+\begin{multline*}
+\int\nu^{2}(y)\delta\Lambda'(\zhaty)dG(y)=\\
+=\int\nu^{2}(y)g(y)d\left(\delta\Lambda(\zhaty)\right)=\\
+=\nu^{2}(y)g(y)\delta\Lambda(\zhaty)|_{0}^{\infty}-\int\delta\Lambda(\zhaty)\left(\nu^{2}(y)g(y)\right)'dy,
+\end{multline*}
+
+\end_inset
+
+where we used the integration by parts in the third line.
+ Since feasible variations have 
+\begin_inset Formula $\delta\Lambda|_{0}^{\infty}=0$
+\end_inset
+
+, the first term in the expression above is zero, and so,
+\begin_inset Formula 
+\[
+\int\nu^{2}(y)\delta\Lambda'(\zhaty)dG(y)=-\int\delta\Lambda(\zhaty)\left(\nu^{2}(y)g(y)\right)'dy.
+\]
+
+\end_inset
+
+Put it back into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:21-1"
+
+\end_inset
+
+, collect terms with 
+\begin_inset Formula $\delta\betaa$
+\end_inset
+
+ in the left hand side, and obtain the equality
+\begin_inset Formula 
+\begin{multline*}
+\delta\betaa\int\left[\nu(y)-\tau\betaa\Lambda(\zhaty)\nu'(y)+\tau\betaa\alpha(y)\nu^{2}(y)\right]dG(y)=\\
+\tau\betaa^{2}\int\delta\Lambda(\zhaty)\left[\nu'(y)g(y)-\left(\nu^{2}(y)g(y)\right)'\right]dy.
+\end{multline*}
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $\tau\betaa\alpha(y)=1/\nu(y)-1$
+\end_inset
+
+ to simplify the expression.
+ 
+\begin_inset Formula 
+\begin{multline*}
+\delta\betaa\int\left[\nu^{2}(y)-\tau\betaa\Lambda(\zhaty)\nu'(y)\right]dG(y)=\\
+\tau\betaa^{2}\int\delta\Lambda(\zhaty)\left[\nu'(y)g(y)-\left(\nu^{2}(y)g(y)\right)'\right]dy.
+\end{multline*}
+
+\end_inset
+
+By the definition of variational derivative,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+but remember that that integration is up to the infinity, so g' is -infinity
+ at 
+\begin_inset Formula $\oy$
+\end_inset
+
+...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\delta\betaa}{\delta\Lambda}=\frac{\tau\betaa^{2}}{\int\left[\nu^{2}(y)-\tau V(y)\nu'(y)\right]}\left[\nu'(y)g(y)-\left(\nu^{2}(y)g(y)\right)'\right].\label{eq:21-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Step 3.
+ The flow of type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers who become available has rate 
+\begin_inset Formula $\rho(y)g(y)/\tau$
+\end_inset
+
+.
+ In a steady state, each vacancing seller is equivalent to one completed
+ match.
+ Hence the number of matches per unit of time is
+\begin_inset Formula 
+\[
+M=\int\frac{\rho(y)g(y)}{\tau}dy=\int\frac{1-\nu(y)}{\tau}dG(y)=\frac{1-\bar{\nu}}{\tau}.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\betaa=\beta/(1-\brho)=\beta/\bar{\nu}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\betaa\bar{\nu} & =\beta.
+\end{align*}
+
+\end_inset
+
+Take the differential, 
+\begin_inset Formula 
+\begin{equation}
+\delta\betaa\bar{\nu}+\betaa\delta\bar{\nu}=0.\label{eq:20-1}
+\end{equation}
+
+\end_inset
+
+Combine 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:21-2"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:20-1"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\frac{\delta M}{\delta\Lambda} & =\frac{\bar{\nu}}{\tau\betaa}\frac{\delta\betaa}{\delta\Lambda}=\\
+ & =\frac{\bar{\nu}\betaa}{\int\left[\nu^{2}(y)-\tau V(y)\nu'(y)\right]}\left[\nu'(y)g(y)-\left(\nu^{2}(y)g(y)\right)'\right]=\\
+ & =\frac{\beta}{\int\left[\nu^{2}(y)-\tau V(y)\nu'(y)\right]}\left[\nu'(y)g(y)-\left(\nu^{2}(y)g(y)\right)'\right].
 \end{align*}
 
 \end_inset
@@ -2568,66 +2614,53 @@ reference "eq:20"
 \end_layout
 
 \begin_layout Proof
-For brevity, adopt the notation 
+Step 4.
+ By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Vmu"
+
+\end_inset
+
+, 
 \begin_inset Formula 
 \[
-\nu(y):=\frac{1}{1+\tau\beta_{A}\alpha(y)}.
+V(y)=\frac{y-\zhaty}{\tau},
 \]
 
 \end_inset
 
-The notation is not coincidental, 
-\begin_inset Formula $\nu(y)$
-\end_inset
-
- is equal to the fraction of type-
-\begin_inset Formula $y$
-\end_inset
-
- sellers who are available in equilibrium.
- Return to compute
+the differential of joint profits is 
 \begin_inset Formula 
 \[
-Z_{1}=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy.
+\delta V=\frac{1}{\tau}\int(-\delta\zhaty)dG(y).
 \]
 
 \end_inset
 
-Now we finish computing the differential 
-\begin_inset Formula $\delta\beta_{A}$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{multline*}
-\frac{\delta\beta_{A}}{\beta_{A}^{2}}\int\frac{dG(y)}{\left(\tau\alpha(y)+1/\beta_{A}\right)^{2}}=\\
-=\tau\beta_{A}^{2}\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}+\nu(y)^{3}2g(y)\tau\beta_{A}\Lambda''\nu\right]dy-\tau^{2}\int\Lambda''(\hat{m}(y))\delta\Lambda(\hat{m}(y))\nu^{3}\beta_{A}^{3}dG(y)=\\
-=\tau\int\delta\Lambda(\hat{m}(y))\left[-g'(y)\nu(y)^{2}\beta_{A}^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''\beta_{A}^{2}-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}^{3}\right]dy.
-\end{multline*}
+Use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:delta-zhaty"
 
 \end_inset
 
-We are interested in the expression in the square brackets in the formula
- above.
- Therefore, for some 
-\begin_inset Formula $K>0$
-\end_inset
-
- that is constant in 
-\begin_inset Formula $y$
-\end_inset
-
- we have: 
+ to find:
 \begin_inset Formula 
 \begin{align*}
-\frac{\delta\beta_{A}}{\delta\Lambda} & =K\left(-g'(y)\nu(y)^{2}+\nu(y)^{4}2g(y)\tau\beta_{A}\Lambda''-\tau\Lambda''(\hat{m}(y))\nu^{3}g(y)\beta_{A}\right)=\\
- & =K\nu(y)^{2}\left(-g'(y)+g(y)\nu(y)\tau\beta_{A}\Lambda''(\hat{m}(y))(2\nu(y)-1)\right).
+\delta V & =\frac{1}{\tau}\int\nu(y)\left[\tau\delta\betaa\Lambda(\zhaty)+\tau\betaa\delta\Lambda(\zhaty)\right]dG(y)=\\
+ & =\int\nu(y)\left[\frac{\tau\betaa}{\bar{\nu}}\delta M\Lambda(\zhaty)+\betaa\delta\Lambda(\zhaty)\right]dG(y)=\\
+ & =\delta M\frac{\tau\betaa}{\bar{\nu}}\int\nu(y)\Lambda(\zhaty)dG(y)+\int\nu(y)\betaa\delta\Lambda(\zhaty)dG(y)=\\
+ & =\delta M\frac{\tau}{\bar{\nu}}\int\nu(y)V(y)dG(y)+\int\nu(y)\betaa\delta\Lambda(\zhaty)dG(y)
 \end{align*}
 
 \end_inset
 
-
-\end_layout
+By the definition of variational derivative,
+\begin_inset Formula 
+\[
+\frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\d\Lambda}\cdot\frac{\tau}{\bar{\nu}}\int\nu(y)V(y)dG(y)+\nu(y)\betaa g(y).
+\]
 
 \end_inset
 
@@ -2878,7 +2911,7 @@ reference "lem:main-lemma"
 , 
 \begin_inset Formula 
 \begin{align}
-\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)\betaa\right)=\nonumber \\
+\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)=\nonumber \\
  & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y),\label{eq:12-1}
 \end{align}
 

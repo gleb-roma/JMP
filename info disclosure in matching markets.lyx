@@ -9,7 +9,7 @@
 \usepackage{tikz}
 \usetikzlibrary{patterns,arrows,decorations.pathreplacing,decorations.text}
 \usepackage{xcolor}
- \usepackage{relsize}
+\usepackage{relsize}
 \usepackage{graphicx}
 
 %\usepackage{showkeys}
@@ -28,17 +28,8 @@
 \providecommand{\figureautorefname}{Figure}
 }
 
-
-%\newref{claim}{refcmd={Claim~\ref{#1}}}
-\newref{lem}{refcmd={Lemma~\ref{#1}}}
-%\newref{prop}{refcmd={Proposition~\ref{#1}}}
-%\newref{thm}{refcmd={Theorem~\ref{#1}}}
-%\newref{conj}{refcmd={Conjecture~\ref{#1}}}
-%\newref{exa}{refcmd={Example~\ref{#1}}}
 \newref{eq}{refcmd={(\ref{#1})}}
-\newref{fig}{refcmd={Figure~\ref{#1}}}
-\newref{cor}{refcmd={Corollary~\ref{#1}}}
-%\newref{assu}{refcmd={Assumption~\ref{#1}}}
+
 
 \addto\extrasenglish{%
 \renewcommand{\sectionautorefname}{Section}%
@@ -54,7 +45,7 @@
 theorems-ams-bytype
 theorems-ams-extended-bytype
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children true
 \language english
 \language_package default
 \inputencoding auto
@@ -75,7 +66,7 @@ theorems-ams-extended-bytype
 \bibtex_command bibtex
 \index_command default
 \paperfontsize 12
-\spacing single
+\spacing double
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -283,10 +274,10 @@ Ignorance is Strength: Improving Performance of Decentralized Matching Markets
 status open
 
 \begin_layout Plain Layout
-I am indebted my advisors Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz
+I am indebted to my advisors Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz
  Strzalecki for their guidance and support.
  For additional guidance, I thank Chiara Farronato and Andrei Hagiu.
- For helpful discussions I thank Andrey Fradkin, Ben Golub, Jeff Picel,
+ For helpful discussions I thank Andrey Fradkin, Ben Golub, Jeffrey Picel,
  Alex Smolin, Divya Kirti, Beyonce and seminar participants at Harvard Universit
 y and MIT.
  
@@ -353,7 +344,7 @@ target "http://scholar.harvard.edu/files/gromanyuk/files/info_disclosure_in_matc
 I develop a model of a decentralized matching market in which heterogeneous
  buyers pursue sellers by requesting services.
  Buyer requests are perfectly coordinated.
- Sellers have preferences over buyers and independently choose what buyers
+ Sellers have preferences over buyers and independently choose which buyers
  to accept.
  Preference heterogeneity induces same-side and cross-side externalities
  leading to sellers' excessive screening and welfare loss.
@@ -368,6 +359,24 @@ I develop a model of a decentralized matching market in which heterogeneous
  An approach for the problem of optimal disclosure with heterogeneous forward-lo
 oking agents with general type distribution is developed.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1 senetence.
+ High level economics.
+ 2.
+ Explain cream-skimming.
+ 3.
+ What I do.
+ 4.
+ What I find.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Abstract
@@ -375,24 +384,19 @@ oking agents with general type distribution is developed.
 status open
 
 \begin_layout Plain Layout
- I develop a model of a decentralized matching market in which buyers arrive
- over time and pursue sellers by proposing jobs.
- sellers have heterogeneous preferences over jobs and independently decide
- what jobs to accept.
- First, I establish that the equilibrium outcome is inefficient because
- of scheduling externality: by rejecting a job a seller makes himself available
- and decreases the other sellers’ chances of getting subsequent jobs.
- Additionally, sellers fail to internalize buyers' search efforts.
- Second, I show that the platform's policy of coarse revelation of buyer
- information to sellers improves acceptance rates by decreasing the ability
- of sellers to “cherry-pick” desirable buyers.
- This degrades seller match quality but improves buyer welfare.
- Notably, this information coarsening can be Pareto improving because it
- offsets the scheduling externality.
- Finally, I characterize the disclosure policy that maximizes the number
- of matches in the linear payoff environment and show that, compared to
- the s tatic case, there are additional availability and patience effects
- that qualitatively change the form of the optimal disclosure policy.
+I study the problem of information disclosure in decentralized matching
+ markets.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In decentralized matching markets with asymmetric sides the full disclosure
+ of user characteristics leads to the inefficient resolution of the match
+ quality - match speed tradeoff.
+ Complete information disclosure can lead to cream-skimming, when match
+ rates are inefficiently low.
+ I develop a model of information disclosure with forward-looking receivers
+ who have limited capacity.
  
 \end_layout
 
@@ -476,6 +480,16 @@ filename "sections/extensions.lyx"
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "sections/conclusion.lyx"
 
 \end_inset
 

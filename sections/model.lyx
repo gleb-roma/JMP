@@ -214,12 +214,12 @@ The Model of Decentralized Matching Market
 \end_layout
 
 \begin_layout Standard
-In this section I lay out a model of a decentralized matching market that
+In this section, I lay out a model of a decentralized matching market that
  will allow me to evaluate how information disclosure policy affects the
  equilibrium market outcome.
  The model has two main components: the matching process between buyers
  and sellers, and the seller optimization problem.
- In the end of this section I define the steady state equilibrium, in which
+ At the end of this section, I define the steady state equilibrium, in which
  seller actions are individually optimal, and the dynamic matching system
  is in steady state.
  
@@ -264,7 +264,7 @@ There is mass 1 of sellers, who always stay on the platform, never leave
 \begin_inset Formula $\tau$
 \end_inset
 
- implies the seller can complete fewer jobs over the same period of time.
+ implies the seller can complete fewer jobs over the same time interval.
  
 \end_layout
 
@@ -282,20 +282,20 @@ There is a continuum of potential buyers who gradually arrive over time
 \begin_inset Formula $\beta dt$
 \end_inset
 
- of buyers arrive to the platform.
+ of buyers arrive at the platform.
  Each new buyer arrives with a single job that he proposes to one of the
  available sellers.
  The seller is chosen uniformly at random from the pool of available workers.
- If the buyer's job is accepted, the buyer stays until his job is completed,
- otherwise he leaves the platform.
+ If the buyer's job is accepted, the buyer stays until his job is completed;
+ otherwise, he leaves the platform.
  Assume 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
  which implies that collectively, it is physically possible for sellers
  to complete every buyer job.
- See the detailed discussion of this and other assumptions on the matching
- process in 
+ See the detailed discussion of the assumptions on buyer search and buyer
+ arrival rate in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Discussion-of-the-assumptions"
@@ -307,8 +307,9 @@ reference "subsec:Discussion-of-the-assumptions"
 \end_layout
 
 \begin_layout Standard
-The platform does not use the centralized matching process, instead it makes
- disclosure of buyer characteristics part of its design, as described below.
+The platform does not use the centralized matching process; instead, it
+ makes disclosure of buyer characteristics part of its design, as described
+ below.
  See 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -681,7 +682,7 @@ Before the matching process starts running, the platform designs and commits
 \begin_inset Formula $x$
 \end_inset
 
- besides the platform's signal.
+ beside the platform's signal.
  Let 
 \begin_inset Formula $S=\Delta(X)$
 \end_inset
@@ -785,7 +786,7 @@ key "KLMZ-wp"
  The set of possible disclosure policies is then:
 \begin_inset Formula 
 \[
-\left\{ \lambda\in\Delta(S)\colon\int s\lambda(ds)\sim F\right\} .
+\left\{ \lambda\in\Delta(S)\colon\int s\,d\lambda(s)\sim F\right\} .
 \]
 
 \end_inset
@@ -909,13 +910,17 @@ acceptance rate
 \end_layout
 
 \begin_layout Standard
-In a steady state, the flow of sellers who become busy is equal to the flow
- of sellers who become available.
- The available-to-busy flow is equal to the buyer flow type-
+In a steady state, the flow of sellers who begin working is equal to the
+ flow of sellers who finished the job and return to waiting.
+ The flow of beginning sellers is equal to the buyer flow to type-
 \begin_inset Formula $y$
 \end_inset
 
- sellers receive times their acceptance rate.
+ sellers times type-
+\begin_inset Formula $y$
+\end_inset
+
+ sellers' acceptance rate.
  Since buyers distribute uniformly across the available sellers, the buyer
  flow to type-
 \begin_inset Formula $y$
@@ -931,12 +936,12 @@ In a steady state, the flow of sellers who become busy is equal to the flow
 \end_inset
 
 .
- Thus, the available-to-busy flow is 
+ Thus, the beginning flow is 
 \begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)$
 \end_inset
 
 .
- The busy-to-available flow is 
+ The flow of returning sellers is 
 \begin_inset Formula $g(y)\rho(y)/\tau$
 \end_inset
 
@@ -953,7 +958,12 @@ In a steady state, the flow of sellers who become busy is equal to the flow
 \end_inset
 
 .
- See 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+See 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Matching-process-in"
@@ -961,8 +971,12 @@ reference "fig:Matching-process-in"
 \end_inset
 
  for the illustration.
- In a steady state, available-to-busy flow of sellers is equal to the busy-to-av
-ailable flow:
+\end_layout
+
+\end_inset
+
+ In a steady state, the flow of beginning sellers is equal to the flow of
+ returning sellers:
 \begin_inset Formula 
 \begin{equation}
 \beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
@@ -971,6 +985,10 @@ ailable flow:
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1041,6 +1059,11 @@ name "fig:Matching-process-in"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Seller dynamic screening problem.
  
@@ -1051,7 +1074,7 @@ Denote by
 \begin_inset Formula $\betaa$
 \end_inset
 
- the Poisson rate at which buyer arrive to an available seller.
+ the Poisson rate at which buyers request an available seller.
  Since buyers contact only available sellers, 
 \begin_inset Formula $\betaa$
 \end_inset
@@ -1073,7 +1096,7 @@ Note that
 \begin_inset Formula $\beta$
 \end_inset
 
- is the flow rate at which buyers arrive to the platform, while 
+ is the flow rate at which buyers arrive at the platform, while 
 \begin_inset Formula $\betaa$
 \end_inset
 
@@ -1231,16 +1254,16 @@ reference "fig:Sellers-repeated-search"
 \begin_inset Formula $V(y)$
 \end_inset
 
- be the average profit flow when seller of type 
+ be the average profit flow when the seller of type 
 \begin_inset Formula $y$
 \end_inset
 
  acts optimally (the value function)
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-For example, if a seller earns $1 on each job, and time interval between
+For example, if a seller earns $1 on each job, and the time interval between
  starting consequent jobs is 2, then 
 \begin_inset Formula $V(y)=1/2$
 \end_inset
@@ -1423,8 +1446,8 @@ BTW Uber has a version of this where drivers game the system to ride up
 \end_layout
 
 \begin_layout Standard
-In this section I explain how the model fits the marketplaces of Uber, Airbnb
- and labor platforms, such as TaskRabbit.
+In this section, I explain how the model fits the marketplaces of Uber,
+ Airbnb and labor platforms, such as TaskRabbit.
  I will return to these applications after I state my main results in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1555,7 +1578,7 @@ When idle, drivers receive requests from passengers.
 \end_inset
 
  includes passenger's destination and his ride history.
- Price per mile and minute is fixed (conditional on aggregate multiplies,
+ Price per mile and minute is fixed (conditional on aggregate multipliers,
  such as surge pricing).
  Drivers do not like very short rides or the rides to the remote neighborhoods.
  Passengers do not like waiting.
@@ -1597,7 +1620,7 @@ Airbnb.
 \end_layout
 
 \begin_layout Standard
-Hosts are capacity constrained in rooms: once a room is booked for a specific
+Hosts are capacity constrained in rooms: once a room is booked for a given
  date, the host cannot accept a better guest.
  Type 
 \begin_inset Formula $y$
@@ -1609,8 +1632,8 @@ Hosts are capacity constrained in rooms: once a room is booked for a specific
 \end_inset
 
  includes guests' gender, age, socio-economic status, lifestyle.
- Every host sets his own price that applies to all guests but he may prefer
- to reject certain guests who he expects will be a bad fit.
+ Every host sets a price that applies to all guests, but he may prefer to
+ reject guests who he expects will be a bad fit.
  The InstantBook feature, if adopted by a host, is effectively the no disclosure
  policy because the host commits to accepting all guests.
  
@@ -1656,7 +1679,7 @@ TaskRabbit.
 \begin_layout Standard
 The service providers are capacity constrained in the number of tasks they
  can do per week.
- Once a service provider agrees to do one task, he is constrained in picking
+ Once a service provider agrees to do one task, he is limited in picking
  new tasks.
  Type 
 \begin_inset Formula $y$
@@ -1805,14 +1828,14 @@ steady-state equilibrium
 
 , as shown in {
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:SS"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:alpha"
 
 \end_inset
@@ -1914,8 +1937,8 @@ reference "lem:rho-and-monotonicities"
 \begin_inset Formula $\brho$
 \end_inset
 
- is higher, then buyer traffic to each available worker is higher; sellers
- become more picky and acceptance rate 
+ increases, then buyer traffic to each available worker increases, too;
+ sellers become pickier and acceptance rate 
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
@@ -1924,11 +1947,11 @@ reference "lem:rho-and-monotonicities"
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
- increases, sellers become less available, that is 
+ increases, sellers become less available, and
 \begin_inset Formula $\brho$
 \end_inset
 
- is lower.
+ goes down.
  For details see the proof in the Appendix 
 \begin_inset CommandInset ref
 LatexCommand vpageref
@@ -1951,20 +1974,9 @@ Discussion of the modeling assumptions
 \end_layout
 
 \begin_layout Standard
-In this subsection I discuss in detail the important assumptions of my model.
+In this subsection, I discuss in detail the critical assumptions of my model.
+ The assumptions are motivated by the stylized facts about the online platforms.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The assumptions are motivated by the stylized facts from the digital platforms
- discussed above.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Assumption
@@ -1994,7 +2006,32 @@ key "Fra15"
 
  reports that on Airbnb, an initial rejection decreases the probability
  that the guest eventually books any listing by 51%.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The results will generalize if buyers return for consequent search attempts.
+ If buyer makes several search attempts, then buyer arrival rate is effectively
+ increased.
+ Sellers still cream-skim but information coarsening is even more effective
+ because higher buyer arrival rate means higher seller option value of rejection.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+That is good place to have an extension.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Assumption
@@ -2007,9 +2044,9 @@ The goal of the paper is to explore the matching friction that pertains
  to preference heterogeneity and screening.
  Therefore, I assume away the coordination friction owing to simultaneity,
  when several buyers request the same seller at the same time.
- Also, I assume away the coordination friction owing to unavailability,
- which arises when buyers request unavailable sellers who did not update
- their status or do not have the means to do so.
+ Also, I assume away the coordination friction due to unavailability, which
+ arises when buyers request unavailable sellers who did not update their
+ status or do not have the means to do so.
  The coordination frictions in matching markets have been extensively studied
  in the theoretical literature (
 \begin_inset CommandInset citation
@@ -2019,14 +2056,26 @@ key "BSW01,Kir09,Halaburda2013,AJK14"
 \end_inset
 
 ), and digital platforms usually have good technological means of resolving
- the simultaneity driven friction (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fn:Fradkin-miscoordination-6percent"
+ the simultaneity driven friction
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+E.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
 
 \end_inset
 
-).
+ finds that on Airbnb the coordination friction explains only 6% of failed
+ matches.
+\end_layout
+
+\end_inset
+
+ .
  I assume away the simultaneity and unavailability driven frictions to focus
  on screening.
 \end_layout

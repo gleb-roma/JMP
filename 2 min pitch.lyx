@@ -1,0 +1,168 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+2 minute pitch
+\end_layout
+
+\begin_layout Standard
+I'm doing information design in decentralized matching markets, with application
+ to online marketplaces, such as Airbnb.
+ 
+\end_layout
+
+\begin_layout Standard
+In decentralized matching markets it is important that buyers and sellers
+ find and form the most valuable matches.
+ But it is also important that the matches happen fast.
+ 
+\end_layout
+
+\begin_layout Standard
+Let me give you an example.
+ On Uber, a driver wants to know the passenger's star rating, where the
+ passenger is going and maybe the passenger's gender.
+ At first sight, it makes perfect sense for the platform designer to show
+ to the driver all information it has about the passenger.
+ However, more information increases the return to search and screening.
+ The driver will reject low-value rides, such as short rides or rides to
+ remote neighborhoods, because he knows there will be more requests coming.
+ As a result, the passenger will wait long to get a ride, which decreases
+ user experince for passengers.
+ Uber is a two-sided market so it cares about both sided, drivers and passengers.
+ 
+\end_layout
+
+\begin_layout Standard
+I study how a two-sided platform should design an information disclosure
+ policy to alleviate sellers cream-skimming behavior and improve efficiency.
+ E.g.
+ what passenger attributes on Uber, or guest attributes on Airbnb should
+ be made visible to sellers? 
+\end_layout
+
+\begin_layout Standard
+I develop a model of market with search and matching, where sellers have
+ limited capacities.
+ I show that 
+\end_layout
+
+\end_body
+\end_document
