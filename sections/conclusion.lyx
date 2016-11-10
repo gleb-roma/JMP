@@ -141,7 +141,229 @@ name "sec:Conclusion"
 
 \end_inset
 
-Conclusion
+Discussion and Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ifdraft{
+\backslash
+color{blue}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Online platforms elicit a lot of information from the users.
+ The platform uses this information to match users more efficiently, by
+ either making recommendations or structuring their interfaces to facilitate
+ search.
+ However, providing more information to users to help them search may backfire.
+ The search imposes cross-side and same-side externalities, which if unchecked,
+ hamper the performance of the marketplace.
+ The platform's goal is to make sure that both sides of the market receive
+ high benefit from participation.
+ Even revenue-maximizing platform at the early stage cares a lot about user
+ welfare because it is in the growth stage and is solving a chicken-and-egg
+ problem.
+ 
+\end_layout
+
+\begin_layout Standard
+To offset the search externalities, the platform need to take more control
+ over the matching process.
+ This paper provides a case for doing so using information design.
+ Strategic information disclosure is less intrusive than direct control
+ and often more feasible than sophisticated transfer schemes.
+ For example, a way to make sellers internalize externalities they impose
+ by rejecting buyers is to charge them a fee for every rejection.
+ However, such a policy creates an unsafe environment for sellers, with
+ too large downside risks.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Uber and other TNC
+\end_layout
+
+\end_inset
+
+Using the marketplaces I touched on earlier, on Uber, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+ shows that if drivers have full discretion over accepting, they cream-skim:
+ acceptance rates are low, and the demand-supply fit is suboptimal.
+ hiding passenger destination is used to nudge drivers accept more rides
+ and avoid cream-skimming along the destination attribute.
+ Therefore coarsening improves quality of the service for passengers.
+ It the current version of UberX, the passenger destination it is fully
+ concealed.
+ Partial coarsening can be more efficient in achieving the platform's goal.
+ For example, my results show that drivers with higher outside option (low
+ type sellers) require finer disclosure to stay profitable while drivers
+ with low outside option (high type sellers) can be squeezed.
+ In such situation, partial coarsening can work better.
+ For example, the destination of a passenger can be split into three categories:
+ close, medium-range, far.
+\end_layout
+
+\begin_layout Standard
+Uber has a version of cream-skimming due to option value of waiting, where
+ drivers game the system to ride up surge pricing.
+ They cancel jobs as prices surge so they make more money.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+but how would coarsening work here?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Airbnb and other short-term rental companies
+\end_layout
+
+\end_inset
+
+On Airbnb, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+ shows that if hosts have full discretion over accepting or rejecting guest
+ requests, hosts screen excessively: acceptance rates are too low to satisfy
+ guest demand for hassle-free service, and the marketplace is removed from
+ its full potential.
+ Airbnb introduced InstantBook feature to satisfy the guests’ demand for
+ faster and hassle-free search.
+ In my model, it corresponds to the no disclosure policy.
+ However, one could imagine a finer tool that allowed a host to specify
+ guest types that were permitted to use the InstantBook.
+ Very fine customer segmentation would bring us back to the problem of cream-ski
+mming.
+ The optimal guest segmentation should be designed to balance the hosts'
+ demand for transparency and guest demand for convenience.
+ The problem of optimal guest segments is equivalent to the problem of the
+ optimal information disclosure, and can be analyzed using the framework
+ presented in this paper.
+ Specifically, markets with higher buyer-to-seller ratio require coarser
+ guest segmentation than the markets with low buyer-to-seller ratio.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Taskrabbit and other online temp agencies
+\end_layout
+
+\end_inset
+
+On TaskRabbit, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The service provider may prefer to reject the tasks which he does not find
+ to be a good fit to his skill, or those that are too far, or those with
+ bad timing.
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+ shows that if service providers have full discretion over accepting or
+ rejecting client leads, they screen excessively: acceptance rates a low,
+ the utilization of labor force on the platform is inefficiently low, and
+ the matching efficiency is suboptimal.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Buyers benefit from the on-demand experience on the labor platform.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper, I formally studied the tradeoff between the discouragement
+ and the individual’s need for feedback.
+ 
+\end_layout
+
+\begin_layout Standard
+I showed...
+\end_layout
+
+\begin_layout Standard
+I abstracted away many aspects of feedback that are relevant in practice
+ and can be found in the organization behavior and education literature.
+\end_layout
+
+\begin_layout Standard
+The systematic studies of existing feedback practices and their effects
+ on performance are essential to inform further research in this area.
+ The integral approach that includes both theoretical and empirical studies
+ would help bolster understanding of feedback provision and guide feedback
+ practices in organizations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+fi
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

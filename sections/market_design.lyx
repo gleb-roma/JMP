@@ -149,11 +149,12 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -261,7 +262,7 @@ This section studies how the platform's information disclosure policy affects
  the equilibrium market outcome.
  I consider the general platform's objective of maximizing the weighted
  average of buyer and seller surplus, which includes as special cases the
- welfare maximization, profit maximization and match rate maximization.
+ welfare maximization, seller profits maximization and match rate maximization.
  I show the full disclosure produces the sub-optimal market outcome because
  information disclosure aggravates sellers' cream-skimming behavior.
  I start with the benchmark case of identical sellers, and then move on
@@ -295,7 +296,7 @@ al market outcome.
 To state the results of this and the next sections, I need to define Pareto-opti
 mality in my setting.
  The market outcome 
-\begin_inset Formula $O=(V(\cdot),BS)$
+\begin_inset Formula $O=(V(\cdot),U)$
 \end_inset
 
  is a combination of seller profits and buyer surplus.
@@ -329,7 +330,7 @@ feasible
 \end_inset
 
 , and 
-\begin_inset Formula $BS'\geq BS$
+\begin_inset Formula $U'\geq U$
 \end_inset
 
 , and at least one seller type or buyers are strictly better off.
@@ -366,11 +367,14 @@ Write
 \end_inset
 
 , 
-\begin_inset Formula $BS^{\sigma}$
+\begin_inset Formula $U^{\sigma}$
 \end_inset
 
- for steady-state profits, acceptance rates, and consumer surplus when strategy
- profile 
+ for steady-state 
+\change_inserted -484307115 1478534876
+seller 
+\change_unchanged
+profits, acceptance rates, and consumer surplus when strategy profile 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -380,8 +384,11 @@ Write
  The next proposition shows that there is a strategy profile under which
  sellers are strictly better off than in the full disclosure equilibrium,
  they complete more jobs, and additionally, the buyers are also better off.
- The result implies that in decentralized matching markets, sellers face
- a coordination problem.
+ The result implies that in 
+\change_deleted -484307115 1478636769
+decentralized
+\change_unchanged
+ matching markets, sellers face a coordination problem.
 \end_layout
 
 \begin_layout Proposition
@@ -408,7 +415,7 @@ Let
 \begin_inset Formula 
 \begin{eqnarray*}
 \tilde{V}(y) & > & V^{FD}(y),\\
-\widetilde{BS} & > & BS^{FD},\\
+\widetilde{U} & > & U^{FD},\\
 \tilde{\alpha}(y) & > & \alpha^{FD}(y).
 \end{eqnarray*}
 
@@ -612,8 +619,19 @@ I start by considering the case of identical sellers, i.e.
 \end_inset
 
  is a singleton.
- The next proposition establishes that any Pareto optimal outcome (in profit-sur
-plus space) is implementable by a disclosure policy.
+ The next proposition establishes that any Pareto optimal outcome (in 
+\change_inserted -484307115 1478534912
+seller 
+\change_unchanged
+profit
+\change_inserted -484307115 1478534920
+s
+\change_unchanged
+-
+\change_inserted -484307115 1478534915
+buyer 
+\change_unchanged
+surplus space) is implementable by a disclosure policy.
  
 \end_layout
 
@@ -626,7 +644,7 @@ name "prop:Pareto-frontier"
 
 Suppose the sellers are identical.
  Then for any Pareto optimal outcome 
-\begin_inset Formula $(V,BS)$
+\begin_inset Formula $(V,U)$
 \end_inset
 
  there is a disclosure policy that implements it.
@@ -670,7 +688,7 @@ reference "prop:Pareto-frontier"
 
  characterizes at once the range of possible objective functions.
  Indeed, any point on the Pareto frontier maximizes 
-\begin_inset Formula $\gamma BS+(1-\gamma)V$
+\begin_inset Formula $\gamma U+(1-\gamma)V$
 \end_inset
 
  for some 
@@ -741,7 +759,7 @@ input{pictures/pareto_frontier.tex}
 Graphical illustration of the set of feasible and implementable market outcomes
  in the case of identical workers.
  
-\begin_inset Formula $BS$
+\begin_inset Formula $U$
 \end_inset
 
  stands for buyer surplus, 
@@ -816,7 +834,7 @@ e.
 The welfare is the sum of buyer surplus and seller profits,
 \begin_inset Formula 
 \[
-W=BS+V.
+W=U+V.
 \]
 
 \end_inset
@@ -843,7 +861,7 @@ Denote the match rate by
 
  implies that more buyers are served, and so the buyer surplus is the increasing
  function of the match rate, 
-\begin_inset Formula $BS=BS(M)$
+\begin_inset Formula $U=U(M)$
 \end_inset
 
 .
@@ -867,7 +885,7 @@ V=Mv.
 The welfare can be represented as 
 \begin_inset Formula 
 \[
-W=BS(M)+Mv.
+W=U(M)+Mv.
 \]
 
 \end_inset
@@ -1018,7 +1036,7 @@ Suppose
 
 \begin_layout Standard
 Third, more information available to sellers increases their return to search.
- Therefore, the  opportunity cost of accepting is higher, because acceptance
+ Therefore, the opportunity cost of accepting is higher, because acceptance
  precludes further search.
  As a result, sellers reject more often, and the match rate goes down.
  In equilibrium, it hurts seller profits because it is not collectively
@@ -1236,32 +1254,7 @@ The next result gives comparative statics of the efficient disclosure policy
 \end_inset
 
  and buyer cost of rejection.
- Interestingly, 
-\begin_inset Formula $\hat{\lambda}$
-\end_inset
-
- does not depend on 
-\begin_inset Formula $\beta$
-\end_inset
-
- or 
-\begin_inset Formula $\tau$
-\end_inset
-
- (optimal disclosure for other 
-\begin_inset Formula $\gamma$
-\end_inset
-
- have this property, too).
- This implies that the same 
-\begin_inset Formula $\hat{\lambda}$
-\end_inset
-
- would be optimal if seller were unconstrained (
-\begin_inset Formula $\tau=0$
-\end_inset
-
-).
+ 
 \end_layout
 
 \begin_layout Corollary
@@ -1289,7 +1282,44 @@ Suppose the sellers are identical.
 \end_layout
 
 \begin_layout Standard
-Independence of 
+Interestingly, 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $\beta$
+\end_inset
+
+ or 
+\begin_inset Formula $\tau$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(optimal disclosure for other 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ have this property, too)
+\end_layout
+
+\end_inset
+
+.
+ This implies that the same 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ would be optimal if sellers were able to complete jobs instantaneously
+ (
+\begin_inset Formula $\tau=0$
+\end_inset
+
+).
+ Independence of 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
@@ -1385,8 +1415,8 @@ Optimal information disclosure with heterogeneous sellers
 \end_layout
 
 \begin_layout Standard
-This section studies the information disclosure problem with heterogeneous
- sellers in the linear payoff environment.
+This section studies the information disclosure problem in the linear payoff
+ environment when sellers have payoff heterogeneity unobserved by the platform.
  It is a leading case of my analysis because in most marketplaces, the intermedi
 ary observes seller preferences imperfectly.
  I characterize the optimal disclosure policy and show that it is qualitatively
@@ -1458,6 +1488,25 @@ linear payoff
 \end_inset
 
 .
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The linear payoff environment was used in the prior literature on disclosure,
+ e.g.
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
  High-
 \begin_inset Formula $y$
 \end_inset
@@ -1501,9 +1550,9 @@ The platform's objective is maximizing the weighted average of buyer surplus
  and joint seller profits.
  
 \begin_inset Formula 
-\[
-\J(\gamma)=\gamma BS+(1-\gamma)V,
-\]
+\begin{equation}
+\J(\gamma)=\gamma U+(1-\gamma)V,\label{eq:J-hetero}
+\end{equation}
 
 \end_inset
 
@@ -1512,7 +1561,7 @@ where
 \end_inset
 
  is the joint seller profits, and 
-\begin_inset Formula $BS=u\cdot M$
+\begin_inset Formula $U=u\cdot M$
 \end_inset
 
  is buyer surplus, where 
@@ -1715,9 +1764,23 @@ I reserve notation
 \begin_inset Formula $x_{1/2}^{*}$
 \end_inset
 
- are the highest truthfully revealed buyer types under profits-maximizing
- disclosure, match-maximizing disclosure and the efficient disclosure, respectiv
-ely.
+ are the highest truthfully revealed buyer types under 
+\change_inserted -484307115 1478534989
+seller 
+\change_unchanged
+profits
+\change_deleted -484307115 1478534991
+-
+\change_inserted -484307115 1478534992
+ 
+\change_unchanged
+maximizing disclosure, match
+\change_inserted -484307115 1478535000
+ rate 
+\change_deleted -484307115 1478535000
+-
+\change_unchanged
+maximizing disclosure and the efficient disclosure, respectively.
  
 \end_layout
 
@@ -1740,8 +1803,17 @@ reference "prop:max-J"
 Second, when the platform puts more weight on buyer surplus, the optimal
  disclosure policy is coarser.
  In particular the match-maximizing disclosure is coarser than the efficient
- disclosure that in turn, is coarser than the profits-maximizing disclosure
- (
+ disclosure that in turn, is coarser than the 
+\change_inserted -484307115 1478535014
+seller 
+\change_unchanged
+profits
+\change_deleted -484307115 1478535016
+-
+\change_inserted -484307115 1478535016
+ 
+\change_unchanged
+maximizing disclosure (
 \begin_inset Formula $x_{0}^{*}\geq x_{1/2}^{*}\geq x_{1}^{*}$
 \end_inset
 
@@ -1804,41 +1876,14 @@ static disclosure problem
 \begin_inset Formula $\tau=0$
 \end_inset
 
-, sellers are always available and act myopically.
- The static disclosure problem has been extensively studied in the prior
- literature
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
- (e.g.
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "KG11"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "KLMZ-wp"
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-
-.
+, sellers are always available, has zero opportunity cost of accepting,
+ and so act myopically.
  
 \end_layout
 
 \begin_layout Standard
 The upper-coarsening form of the optimal policy is qualitatively different
  from the solution to the static disclosure policy in the same environment.
- The relevant result from the prior literature is as follows.
  
 \end_layout
 
@@ -1889,15 +1934,17 @@ If
 
 \end_deeper
 \begin_layout Standard
-The result appears e.g.
- in 
+The static disclosure problem has been extensively studied in the prior
+ literature, and the above result appears in e.g.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "KLMZ-wp"
 
 \end_inset
 
-, and the implied concavification reasoning goes back to 
+.
+ The implied concavification reasoning goes back to 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "AMS95"
@@ -2109,7 +2156,7 @@ reference "fact:tau=0"
 ) suggest that in this case the full disclosure must be optimal.
  
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "cor:myopic-sellers"
 
 \end_inset
@@ -2191,7 +2238,13 @@ reference "lem:main-lemma"
 \end_layout
 
 \begin_layout Standard
-Profit maximization may also require coarse disclosure policy.
+
+\change_deleted -484307115 1478535031
+Profit maximization
+\change_inserted -484307115 1478535037
+Maximizing seller profit
+\change_unchanged
+ may also require coarse disclosure policy.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2231,7 +2284,11 @@ reference "prop:max-J"
 
  decreases the professionals' return to rejecting and increases the fraction
  of accepted profitable jobs.
- This improves profits.
+ This improves 
+\change_inserted -484307115 1478535046
+seller 
+\change_unchanged
+profits.
  
 \end_layout
 
@@ -2310,7 +2367,11 @@ reference "prop:max-J"
  is small, the implementability frontier consists of only the full disclosure
  outcome.
  That is, the full disclosure is optimal for welfare maximization, match-rate
- maximization or joint profits maximization.
+ maximization or joint 
+\change_inserted -484307115 1478535063
+seller 
+\change_unchanged
+profits maximization.
  
 \begin_inset Float figure
 wide false
@@ -2351,7 +2412,22 @@ input{pictures/pareto_frontier_hetero_1.tex}
 \end_inset
 
  is large enough.
- The full disclosure is neither efficient, nor profits-maximizing, nor #matches-
+ The full disclosure is neither efficient, nor 
+\change_inserted -484307115 1478535072
+seller 
+\change_unchanged
+profits
+\change_deleted -484307115 1478535074
+-
+\change_inserted -484307115 1478535074
+ 
+\change_unchanged
+maximizing, nor 
+\change_deleted -484307115 1478535084
+#matches-
+\change_inserted -484307115 1478535086
+match rate 
+\change_unchanged
 maximizing.
  
 \end_layout
@@ -2402,7 +2478,17 @@ input{pictures/pareto_frontier_hetero_2.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The full disclosure is profits-maximizing but not efficient.
+The full disclosure is 
+\change_inserted -484307115 1478535094
+seller 
+\change_unchanged
+profits
+\change_deleted -484307115 1478535095
+-
+\change_inserted -484307115 1478535096
+ 
+\change_unchanged
+maximizing but not efficient.
  
 \end_layout
 
@@ -2470,7 +2556,7 @@ Graphical illustration of the set of feasible market outcomes and the limits
  workers in the linear payoff environment with the uniform seller type distribut
 ion.
  
-\begin_inset Formula $BS$
+\begin_inset Formula $U$
 \end_inset
 
  stands for buyer surplus, 
@@ -3157,7 +3243,11 @@ where
 \end_inset
 
 .
- Similarly, the variational derivative of the joint profits 
+ Similarly, the variational derivative of the joint 
+\change_inserted -484307115 1478535103
+seller 
+\change_unchanged
+profits 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3626,7 +3716,7 @@ reference "eq:13-1"
 \end_inset
 
 .
- For the  details, refer to the proof in the Appendix 
+ For the details, refer to the proof in the Appendix 
 \begin_inset CommandInset ref
 LatexCommand vpageref
 reference "proof:prop-5"
@@ -3655,10 +3745,6 @@ Decomposition of effects of information disclosure.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 

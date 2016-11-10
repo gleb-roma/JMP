@@ -66,7 +66,7 @@ theorems-ams-extended-bytype
 \bibtex_command bibtex
 \index_command default
 \paperfontsize 12
-\spacing double
+\spacing single
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -268,14 +268,24 @@ draftfalse
 \end_layout
 
 \begin_layout Title
-Ignorance is Strength: Improving Performance of Decentralized Matching Markets
- by Limiting Information
+Ignorance is Strength: Improving Performance of Matching Markets by Limiting
+ Information
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ignorance is Strength: When Should Matching Platforms Limit Information?
+\end_layout
+
+\end_inset
+
+
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-I am indebted to my advisors Susan Athey, Drew Fudenberg, Greg Lewis, Tomasz
- Strzalecki for their guidance and support.
+I am indebted to my advisors Susan Athey, Drew Fudenberg, Greg Lewis and
+ Tomasz Strzalecki for their guidance and support.
  For additional guidance, I thank Chiara Farronato and Andrei Hagiu.
  For helpful discussions I thank Andrey Fradkin, Ben Golub, Jeffrey Picel,
  Alex Smolin, Divya Kirti, Beyonce and seminar participants at Harvard Universit
@@ -341,7 +351,16 @@ target "http://scholar.harvard.edu/files/gromanyuk/files/info_disclosure_in_matc
 \end_layout
 
 \begin_layout Abstract
-I develop a model of a decentralized matching market in which heterogeneous
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+A variant.
+
+\series default
+ I develop a model of a decentralized matching market in which heterogeneous
  buyers pursue sellers by requesting services.
  Buyer requests are perfectly coordinated.
  Sellers have preferences over buyers and independently choose which buyers
@@ -358,12 +377,68 @@ I develop a model of a decentralized matching market in which heterogeneous
  is large.
  An approach for the problem of optimal disclosure with heterogeneous forward-lo
 oking agents with general type distribution is developed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+This paper develops a model for studying the problem of information disclosure
+ faced by a platform matching buyers and sellers.
+ Buyers search for sellers and are time-sensitive, while sellers have limited
+ capacity for serving buyers and derive heterogeneous payoffs from being
+ matched with different buyers.
  
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I develop a model in which time-sensitive buyers seek seller services, the
+ sellers have variable match payoffs across buyers and limited capacity
+ for serving them.
+\end_layout
+
+\end_inset
+
+ The platform controls the information the sellers observe about the buyers
+ before forming a match.
+ I show that full information disclosure is inefficient because of excessive
+ rejections by the sellers.
+ When the platform observes the sellers' payoff function, it can restore
+ the full efficiency using a coarse disclosure policy, which recommends
+ to each seller an action.
+ When seller preferences are unknown to the platform, I characterize the
+ disclosure policy that maximizes the total welfare.
+ Tighter capacity constraints or higher buyer-to-seller ratio require coarser
+ disclosure.
+ In a linear payoff environment with uniform distribution of seller attributes,
+ the efficient disclosure is 
+\emph on
+upper-coarsening
+\emph default
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+what's upper coarsening?
+\end_layout
+
+\end_inset
+
+ For general distribution of seller attributes, I develop an approach to
+ solving the disclosure problem with heterogeneous and forward-looking sellers.
+ 
+\end_layout
+
+\begin_layout Abstract
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-1 senetence.
+1 sentence.
  High level economics.
  2.
  Explain cream-skimming.
@@ -384,20 +459,36 @@ status open
 status open
 
 \begin_layout Plain Layout
-I study the problem of information disclosure in decentralized matching
- markets.
+======
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Possibly helpful phrases to include
+\series default
+:
+\end_layout
+
+\begin_layout Plain Layout
+such that the seller expected marginal match payoff increases.
  
 \end_layout
 
 \begin_layout Plain Layout
-In decentralized matching markets with asymmetric sides the full disclosure
- of user characteristics leads to the inefficient resolution of the match
- quality - match speed tradeoff.
- Complete information disclosure can lead to cream-skimming, when match
- rates are inefficiently low.
- I develop a model of information disclosure with forward-looking receivers
- who have limited capacity.
+I characterize the optimal disclosure as a function of seller heterogeneity,
+ buyer-to-seller ratio and the strength of seller capacity constraints.
  
+\end_layout
+
+\begin_layout Plain Layout
+I provide conditions when the full disclosure is efficient.
+ I develop an approach for the problem of optimal disclosure with heterogeneous
+ forward-looking agents with general type distribution.
+\end_layout
+
+\begin_layout Plain Layout
+Suppose the platform controls the information 
 \end_layout
 
 \end_inset
@@ -487,9 +578,18 @@ filename "sections/extensions.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "sections/conclusion.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
