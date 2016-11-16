@@ -149,7 +149,7 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -260,16 +260,17 @@ Market Design: Information Disclosure Policy
 \begin_layout Standard
 This section studies how the platform's information disclosure policy affects
  the equilibrium market outcome.
- I consider the general platform's objective of maximizing the weighted
- average of buyer and seller surplus, which includes as special cases the
- welfare maximization, seller profits maximization and match rate maximization.
- I show the full disclosure produces the sub-optimal market outcome because
- information disclosure aggravates sellers' cream-skimming behavior.
+ I consider the general platform's objective of maximizing a weighted average
+ of the buyer and seller surpluses, which includes as special cases maximization
+ of welfare, maximization of the join seller profits and maximization of
+ the match rate.
+ I show full disclosure produces a suboptimal market outcome, because informatio
+n disclosure aggravates sellers' cream-skimming behavior.
  I start with the benchmark case of identical sellers, and then move on
  to a more general case of vertically differentiated sellers.
- In the latter, the optimal disclosure policy depends non-trivially on the
- shape of seller distribution, buyer arrival rate, and seller capacity constrain
-ts.
+ In the latter, the optimal disclosure policy depends nontrivially on the
+ shape of the seller distribution, the buyer arrival rate, and the seller
+ capacity constraint.
  
 \end_layout
 
@@ -284,17 +285,17 @@ Full disclosure: Seller coordination failure
 \end_layout
 
 \begin_layout Standard
-This subsection establishes that the full disclosure leads to a Pareto sub-optim
-al market outcome.
- The reason behind it is the sellers' coordination failure.
- The inefficiency arises due to sellers' decentralized decision-making and
- capacity constraints.
+This subsection establishes that full disclosure leads to a Pareto suboptimal
+ market outcome.
+ The reason behind this is the sellers' coordination failure.
+ The inefficiency arises from the sellers' decentralized decision-making
+ and their capacity constraint.
  
 \end_layout
 
 \begin_layout Standard
-To state the results of this and the next sections, I need to define Pareto-opti
-mality in my setting.
+To present the results of this and the next sections, I need to define Pareto
+ optimality in my setting.
  The market outcome 
 \begin_inset Formula $O=(V(\cdot),U)$
 \end_inset
@@ -304,7 +305,7 @@ mality in my setting.
 \emph on
 feasible
 \emph default
- if there is a seller strategy profile that generates it, and 
+ if there is a seller strategy profile that generates it and 
 \begin_inset Formula $V(y)\geq0$
 \end_inset
 
@@ -317,7 +318,7 @@ feasible
 \begin_inset Formula $O$
 \end_inset
 
- is Pareto-optimal if there is no other feasible 
+ is Pareto optimal if there is no other feasible 
 \begin_inset Formula $O'$
 \end_inset
 
@@ -329,11 +330,12 @@ feasible
 \begin_inset Formula $y$
 \end_inset
 
-, and 
+ and 
 \begin_inset Formula $U'\geq U$
 \end_inset
 
-, and at least one seller type or buyers are strictly better off.
+, and either there is at least one seller type or buyers who are strictly
+ better off.
  The Pareto frontier is the set of all Pareto-optimal outcomes.
  Market outcome 
 \begin_inset Formula $O$
@@ -348,7 +350,7 @@ implementable
 \end_inset
 
 .
- The welfare is the sum of consumer surplus and joint seller profits.
+ The welfare is the sum of the buyer surplus and joint seller profits.
  A market outcome is 
 \emph on
 efficient
@@ -370,25 +372,19 @@ Write
 \begin_inset Formula $U^{\sigma}$
 \end_inset
 
- for steady-state 
-\change_inserted -484307115 1478534876
-seller 
-\change_unchanged
-profits, acceptance rates, and consumer surplus when strategy profile 
+ for the steady-state seller profits, acceptance rates, and consumer surplus
+ when strategy profile 
 \begin_inset Formula $\sigma$
 \end_inset
 
  is played.
- Imagine the platform starts with the full disclosure as its default disclosure
+ Imagine that the platform starts with full disclosure as its default disclosure
  policy.
  The next proposition shows that there is a strategy profile under which
- sellers are strictly better off than in the full disclosure equilibrium,
- they complete more jobs, and additionally, the buyers are also better off.
- The result implies that in 
-\change_deleted -484307115 1478636769
-decentralized
-\change_unchanged
- matching markets, sellers face a coordination problem.
+ sellers are strictly better off than in the full-disclosure equilibrium,
+ they complete more jobs, and the buyers are also better off.
+ The result implies that in matching markets, sellers face a coordination
+ problem.
 \end_layout
 
 \begin_layout Proposition
@@ -411,7 +407,7 @@ Let
 \begin_inset Formula $y$
 \end_inset
 
-: 
+ the following hold 
 \begin_inset Formula 
 \begin{eqnarray*}
 \tilde{V}(y) & > & V^{FD}(y),\\
@@ -425,21 +421,21 @@ Let
 \end_layout
 
 \begin_layout Standard
-The full proof is in the Appendix 
+A full proof of this is given in Appendix 
 \begin_inset CommandInset ref
-LatexCommand vpageref
+LatexCommand ref
 reference "proof:FD-suboptimal"
 
 \end_inset
 
 .
- A very high-level intuition for the coordination problem is the following.
- A seller keeps his schedule open by rejecting low-value jobs to increase
- his own chances of getting high-value jobs.
- As a result, in equilibrium, sellers spend a lot of time waiting for the
- high-value jobs.
- Collectively, this behavior is suboptimal because all profitable jobs have
- to be completed.
+ A very high-level intuition for the coordination problem is the following:
+ A seller keeps his schedule open by rejecting low-value jobs in order to
+ increase his own chances of getting high-value jobs.
+ As a result, in equilibrium, sellers spend a lot of time waiting for high-value
+ jobs.
+ Collectively, this behavior is suboptimal, because all profitable jobs
+ have to be completed.
  I call this behavior 
 \emph on
 cream-skimming
@@ -449,19 +445,19 @@ cream-skimming
 \end_layout
 
 \begin_layout Standard
-Here I give the proof sketch for the case of identical sellers, which gives
- further insights into the nature of the seller coordination problem.
- Under the full disclosure, seller profit 
+Here I give a proof sketch for the case of identical sellers, which gives
+ further insight into the nature of the seller coordination problem.
+ Under full disclosure, a seller's profit 
 \begin_inset Formula $V^{FD}$
 \end_inset
 
- is strictly positive because sellers accept only profitable jobs.
+ is strictly positive, because sellers accept only profitable jobs.
  The opportunity cost of accepting equals 
 \begin_inset Formula $\tau V^{FD}$
 \end_inset
 
-, and so it is also strictly positive.
- In equilibrium, the jobs that are accepted have profits 
+, and so it, too, is strictly positive.
+ In equilibrium, the profit on every job that is accepted is 
 \begin_inset Formula $\pi(x)\geq\tau V^{FD}$
 \end_inset
 
@@ -483,12 +479,12 @@ reference "eq:V-via-pi"
 
 .
  Hence, some profitable jobs are rejected.
- Consider strategy 
+ Consider a strategy 
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
  that maximizes the joint seller profits.
- It prescribes every seller to accept jobs with 
+ Such a strategy requires every seller to accept all jobs with 
 \begin_inset Formula $\pi(x)\geq0$
 \end_inset
 
@@ -513,13 +509,13 @@ status open
 \end_inset
 
 .
- Acceptance rate is also higher, 
+ The acceptance rate is also higher: 
 \begin_inset Formula $\tilde{\alpha}>\alpha^{FD}$
 \end_inset
 
 .
- Consumers are better off because consumer surplus is increasing in the
- acceptance rate.
+ Consumers are better off, because the consumer surplus is increasing in
+ the acceptance rate.
  
 \end_layout
 
@@ -533,19 +529,19 @@ Interestingly, unlike price competition that benefits buyers and improves
 cream-skimming externality
 \emph default
 .
- By rejecting a job, a seller remains available on the marketplace and attracts
- a fraction of subsequent buyers, who otherwise would go the other sellers.
- As a result, the other sellers face fewer profitable jobs and obtain lower
+ By rejecting a job, a seller remains available in the marketplace and attracts
+ a fraction of subsequent buyers who otherwise would go to other sellers.
+ As a result, the other sellers face fewer profitable jobs and realize lower
  profits.
- The necessary conditions for the cream-skimming externality to arise is
- forward-looking and capacity constrained sellers.
+ The necessary condition for the cream-skimming externality to arise is
+ that sellers be forward-looking and capacity constrained.
  
 \end_layout
 
 \begin_layout Standard
-The fundamental reason behind the coordination failure is that collectively,
- the sellers are not capacity constrained (in time) while individually,
- the sellers 
+The fundamental reason behind coordination failure is that collectively,
+ the sellers are not capacity constrained (in time), while individually
+ they 
 \emph on
 are
 \emph default
@@ -556,7 +552,7 @@ are
 \end_inset
 
  and cannot accept new jobs.
- Therefore, when he is available, he is afraid to miss high-value future
+ Therefore, when he is available, he is afraid of missing high-value future
  jobs and therefore rejects low-value jobs.
  However, there are always 
 \bar under
@@ -578,8 +574,8 @@ reference "prop:FD-suboptimal"
 
 \end_inset
 
- shows that the full disclosure equilibrium is Pareto dominated by some
- strategy profile 
+ shows that full-disclosure equilibrium is Pareto dominated by some strategy
+ profile 
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
@@ -588,9 +584,9 @@ reference "prop:FD-suboptimal"
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
-? In the next section, I give the affirmative answer to this question in
+? In the next section, I give an affirmative answer to this question for
  the case of identical workers.
- The situation with heterogeneous sellers is more tricky, and I study it
+ The situation with heterogeneous sellers is trickier, and I study that
  in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -613,25 +609,13 @@ Benchmark: Optimal information disclosure with identical sellers
 \end_layout
 
 \begin_layout Standard
-I start by considering the case of identical sellers, i.e.
- 
+I start by considering the case of identical sellers, that is where 
 \begin_inset Formula $Y$
 \end_inset
 
  is a singleton.
- The next proposition establishes that any Pareto optimal outcome (in 
-\change_inserted -484307115 1478534912
-seller 
-\change_unchanged
-profit
-\change_inserted -484307115 1478534920
-s
-\change_unchanged
--
-\change_inserted -484307115 1478534915
-buyer 
-\change_unchanged
-surplus space) is implementable by a disclosure policy.
+ The next proposition establishes that any Pareto-optimal outcome (in seller
+ profits-buyer surplus space) is implementable by a disclosure policy.
  
 \end_layout
 
@@ -643,19 +627,19 @@ name "prop:Pareto-frontier"
 \end_inset
 
 Suppose the sellers are identical.
- Then for any Pareto optimal outcome 
+ Then for any Pareto-optimal outcome 
 \begin_inset Formula $(V,U)$
 \end_inset
 
- there is a disclosure policy that implements it.
- Furthermore, an optimal disclosure policy has binary structure.
+, there is a disclosure policy that implements it.
+ Furthermore, an optimal disclosure policy has a binary structure.
  
 \end_layout
 
 \begin_layout Standard
 The proof relies on the Revelation Principle.
- Since there is one seller type and two actions, it is sufficient to consider
- only disclosure policies that send two signals, where a signal is 
+ Since there is one seller type and two actions, it suffices to consider
+ only disclosure policies that send two signals, where a signal is an 
 \begin_inset Quotes eld
 \end_inset
 
@@ -663,19 +647,47 @@ action recommendation
 \begin_inset Quotes erd
 \end_inset
 
-.
+ (in this case, either 
+\begin_inset Quotes eld
+\end_inset
+
+accept
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+reject
+\begin_inset Quotes erd
+\end_inset
+
+) .
  With such a binary signaling structure, the seller dynamic optimization
- problem reduces to the static optimization problem.
- Indeed, since there is only one signal with the recommendation to accept,
- there is only one type of acceptable jobs.
- All profitable jobs are the same, and there is no return to cream-skimming
- them.
- Since a Pareto optimal outcome is feasible with 
+ problem reduces to a static optimization problem.
+ Indeed, since there is only one signal with a recommendation to accept,
+ there is only one type of acceptable job.
+ All profitable jobs are the same, and there is no return to cream-skimming.
+ Since a Pareto-optimal outcome is feasible (i.e.
+ 
 \begin_inset Formula $V\geq0$
 \end_inset
 
-, sellers have incentives to follow the platform's recommendations to accept.
- For the details of the proof, see the Appendix.
+), sellers have an incentive to follow the platform's recommendation to
+ accept.
+ For the details of the proof, see Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "proof:id-sellers-Pareto-frontier"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -696,7 +708,7 @@ reference "prop:Pareto-frontier"
 \end_inset
 
 .
- The welfare maximization policy corresponds to 
+ The welfare-maximization policy corresponds to 
 \begin_inset Formula $\gamma=1/2$
 \end_inset
 
@@ -717,7 +729,7 @@ reference "prop:FD-suboptimal"
 
 \end_inset
 
- the full disclosure equilibrium outcome lies below the Pareto frontier.
+ the full-disclosure equilibrium outcome lies below the Pareto frontier.
 \begin_inset Float figure
 wide false
 sideways false
@@ -767,9 +779,9 @@ Graphical illustration of the set of feasible and implementable market outcomes
 \end_inset
 
  stands for seller surplus.
- Disclosure policy can implement any point on the Pareto frontier (thick
+ A disclosure policy can implement any point on the Pareto frontier (thick
  solid line).
- The full disclosure outcome is suboptimal.
+ The full-disclosure outcome is suboptimal.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -804,11 +816,11 @@ key "BBM15"
 
 \end_inset
 
- who show that segmentation of a monopolistic market can achieve every feasible
- combination of consumer and producer surplus.
+, who show that segmentation of a monopolistic market can achieve every
+ feasible combination of consumer and producer surplus.
  Their segmentation problem is a static signaling game with a single receiver
- (monopolist), who also sets a price, while my model is a signaling game
- with dynamically optimizing receivers, whose prices are fixed.
+ (monopolist), who also sets the price, while my model is a signaling game
+ with dynamically optimizing receivers whose prices are fixed.
  
 \end_layout
 
@@ -825,8 +837,8 @@ Three effects of information disclosure
 \begin_layout Standard
 Disclosure of buyer characteristics to sellers has three competing effects
  on welfare.
- The stronger effect determines the form and coarseness of the optimal disclosur
-e.
+ The strongest of these effects determines the form and coarseness of the
+ optimal disclosure policy.
  
 \end_layout
 
@@ -882,7 +894,7 @@ V=Mv.
 
 \end_inset
 
-The welfare can be represented as 
+Thus, the welfare can be represented as 
 \begin_inset Formula 
 \[
 W=U(M)+Mv.
@@ -911,7 +923,7 @@ First, information disclosure has the positive effect on the seller match
  quality.
  From a seller’s point of view, more information increases his set of attainable
  payoffs.
- Therefore, holding fixed the match rate, he individually benefits from
+ Therefore, holding the match rate fixed, he individually benefits from
  more information about buyers.
  Formally,
 \end_layout
@@ -934,11 +946,11 @@ name "claim:match-quality-effect"
 \end_inset
 
 Let 
-\begin_inset Formula $\lambda'$
+\begin_inset Formula $\lambda''$
 \end_inset
 
- be coarser than 
-\begin_inset Formula $\lambda''$
+ be finer than 
+\begin_inset Formula $\lambda'$
 \end_inset
 
 .
@@ -947,11 +959,11 @@ Let
 \end_inset
 
  fixed, the match quality under 
-\begin_inset Formula $\lambda'$
+\begin_inset Formula $\lambda''$
 \end_inset
 
- is lower than under 
-\begin_inset Formula $\lambda''$
+ is greater than under 
+\begin_inset Formula $\lambda'$
 \end_inset
 
 , or 
@@ -976,8 +988,8 @@ TODO: give a proof in the appendix.
 \begin_layout Standard
 Second, information disclosure reduces the platform’s ability to induce
  sellers to accept more jobs.
- Namely, the platform can coarsen information to increase the seller expected
- marginal profit.
+ Namely, a key observation is that the platform can coarsen information
+ to increase the seller expected marginal profit.
  Ignoring dynamic effects, higher marginal profit induces sellers to accept
  more jobs, which leads to higher match rates.
  Formally, 
@@ -1026,7 +1038,7 @@ Suppose
 \begin_inset Formula $\lambda''$
 \end_inset
 
- such that 
+ such that in equilibrium, 
 \begin_inset Formula $M'>M''$
 \end_inset
 
@@ -1039,9 +1051,30 @@ Third, more information available to sellers increases their return to search.
  Therefore, the opportunity cost of accepting is higher, because acceptance
  precludes further search.
  As a result, sellers reject more often, and the match rate goes down.
- In equilibrium, it hurts seller profits because it is not collectively
+ In equilibrium, it hurts seller profits, because it is not collectively
  optimal for sellers to reject profitable jobs.
- Formally,
+ Formally, consider two (non-interacting) sellers: One has unlimited capacity
+ (
+\begin_inset Formula $\tau=0$
+\end_inset
+
+), and the other one has limited capacity (
+\begin_inset Formula $\tau>0$
+\end_inset
+
+).
+ Use notation 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{\tau}$
+\end_inset
+
+ to denote the acceptance rates of these two sellers.
+ The next result contrasts the reactions of the two sellers to information
+ disclosure.
+ 
 \end_layout
 
 \begin_layout Claim
@@ -1061,6 +1094,11 @@ name "claim:dynamic-match-effect"
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Let 
 \begin_inset Formula $\lambda'$
 \end_inset
@@ -1084,20 +1122,34 @@ Let
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Proof? 
-\begin_inset Formula $\tau V'\leq\tau V''$
-\end_inset
-
-.
 \end_layout
 
 \end_inset
 
+Suppose that under some 
+\begin_inset Formula $\lambda'$
+\end_inset
 
+, 
+\begin_inset Formula $\alpha_{0}'=\alpha_{\tau}'$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\lambda''$
+\end_inset
+
+ be finer than 
+\begin_inset Formula $\lambda'$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\alpha_{0}''\geq\alpha_{\tau}''$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1152,21 +1204,22 @@ M''-M'=\underbrace{\left[\lambda''\left\{ \pi(s)>\hat{\pi}''\right\} -\lambda'\l
 \end_layout
 
 \begin_layout Standard
-The match quality effect gives a motive for the platform to disclose information
-, while the effects on match rate give the motive to coarsen information.
- What effect is stronger depends on the primitives of the economic environment.
+The match quality effect provides a motive for the platform to disclose
+ information, while the effects on match rate provide a motive to coarsen
+ information.
+ Which effect is stronger depends on the primitives of the economic environment.
  
 \end_layout
 
 \begin_layout Standard
-With identical sellers, too many efficient jobs are rejected under the full
+With identical sellers, too many efficient jobs are rejected under full
  disclosure.
  Denote the efficient disclosure policy by 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- and the set of efficient matches by 
-\begin_inset Formula $\hat{X}_{a}:=\{x\in X\colon\pi(x)+u(x)\geq0\}$
+ and the set of buyers that are efficient to accept by 
+\begin_inset Formula $\hat{X}_{a}=\{x\in X\colon\pi(x)+u(x)\geq0\}$
 \end_inset
 
 .
@@ -1182,11 +1235,11 @@ accept
 \begin_inset Quotes erd
 \end_inset
 
- for any jobs in 
+ for all jobs in 
 \begin_inset Formula $\hat{X}_{a}$
 \end_inset
 
- and recommendation 
+ and the recommendation 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1194,12 +1247,12 @@ reject
 \begin_inset Quotes erd
 \end_inset
 
- for jobs in 
+ for all jobs in 
 \begin_inset Formula $X\backslash\hat{X}_{a}$
 \end_inset
 
 .
- Under the full disclosure, the accepted jobs are 
+ Under full disclosure, the accepted jobs are 
 \begin_inset Formula $X_{a}^{FD}:=\{x\in X\colon\pi(x)\geq\tau V^{FD}\}$
 \end_inset
 
@@ -1219,22 +1272,22 @@ reject
 \begin_layout Standard
 When sellers are identical, the match rate effects win over the match quality
  effect.
- Indeed, jobs 
+ Indeed, the jobs in 
 \begin_inset Formula $\{x\colon-u(x)\leq\pi(x)\leq0\}$
 \end_inset
 
- are rejected because sellers fail to internalize the effect of their acceptance
- decisions on buyers.
+ are rejected, because sellers fail to internalize the effect of their acceptanc
+e decisions on buyers.
  This is the static match rate effect.
- Jobs 
-\begin_inset Formula $\{x\colon0\leq\pi(x)\leq\tau V\}$
+ The jobs in 
+\begin_inset Formula $\{x\colon0\leq\pi(x)\leq\tau V^{FD}\}$
 \end_inset
 
- are rejected because sellers fail to internalize the cream-skimming externality
- they impose on each other.
+ are rejected, because sellers fail to internalize the cream-skimming externalit
+y they impose on each other.
  This is the dynamic match rate effect.
- The match quality effect is weak because the platform observes seller preferenc
-es and can finely control their surplus.
+ The match quality effect is weak, because the platform observes seller
+ preferences and can finely control their surplus.
  Therefore, 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
@@ -1253,13 +1306,19 @@ The next result gives comparative statics of the efficient disclosure policy
 \begin_inset Formula $\tau$
 \end_inset
 
- and buyer cost of rejection.
+, and the buyer cost of rejection.
  
 \end_layout
 
 \begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:id-sellers-CS"
+
+\end_inset
+
 Suppose the sellers are identical.
- Efficient information disclosure policy 
+ The efficient information disclosure policy 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
@@ -1267,17 +1326,17 @@ Suppose the sellers are identical.
 \begin_inset Formula $\beta$
 \end_inset
 
- and seller capacity constraints 
+ and the seller capacity constraint 
 \begin_inset Formula $\tau$
 \end_inset
 
 .
- When buyer cost of rejection is higher, 
+ When the buyer cost of rejection is higher, 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- prescribes pooling more of marginal unprofitable jobs with inframarginal
- profitable jobs.
+ prescribes pooling more of the marginally profitable jobs with the inframargina
+l jobs.
  
 \end_layout
 
@@ -1319,11 +1378,11 @@ status open
 \end_inset
 
 ).
- Independence of 
+ The reason why 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- from 
+ is independent of 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -1331,23 +1390,23 @@ status open
 \begin_inset Formula $\tau$
 \end_inset
 
- obtains due to the binary structure of 
+ is the binary structure of 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
 .
- Arrival rate to available sellers 
+ The rate of arrival to the available sellers, 
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
- matters to sellers only to the extent that higher arrival rate magnifies
+, matters to sellers only to the extent that a higher arrival rate magnifies
  the opportunity cost of accepting.
- With binary 
+ With a binary 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
-, the opportunity cost of accepting a profitable job is zero because all
- profitable jobs are the same.
+, the opportunity cost of accepting a profitable job is 0 because all profitable
+ jobs are the same.
  
 \end_layout
 
@@ -1417,40 +1476,41 @@ Optimal information disclosure with heterogeneous sellers
 \begin_layout Standard
 This section studies the information disclosure problem in the linear payoff
  environment when sellers have payoff heterogeneity unobserved by the platform.
- It is a leading case of my analysis because in most marketplaces, the intermedi
-ary observes seller preferences imperfectly.
+ This is a leading case of my analysis, because in most marketplaces, the
+ intermediary observes seller preferences imperfectly.
  I characterize the optimal disclosure policy and show that it is qualitatively
  different from the statically optimal disclosure found in the prior literature.
- Moreover, unlike with identical sellers, the Pareto frontier is generally
- not attainable.
- Finally, under certain conditions, which I provide, the full disclosure
- is the only optimal policy.
+ Moreover, unlike the case of identical sellers, the Pareto frontier is
+ generally not attainable.
+ Finally, under certain conditions, which I provide, full disclosure is
+ the only optimal policy.
  
 \end_layout
 
 \begin_layout Standard
 With heterogeneous sellers, the match quality effect is stronger.
- To see why, imagine there are two types of sellers: professionals and amateurs.
+ To see why, imagine that there are two types of sellers: professionals
+ and amateurs.
  Professionals can profitably complete a larger set of jobs than amateurs.
- The platform does not observe seller type.
+ The platform does not observe the seller type.
  When the platform designs the disclosure policy, it should take into account
  that the same disclosure policy has different impacts on professionals
- and on amateurs.
- Amateurs can profitably complete only a small subset of jobs, and so they
- need finer disclosure to tell apart profitable jobs from unprofitable ones.
+ than on amateurs.
+ On the one hand, amateurs can profitably complete only a small subset of
+ jobs, and so they need finer disclosure to distinguish profitable jobs
+ from unprofitable ones.
  If the disclosure is too coarse, amateurs reject all jobs.
- Professionals have a large set of profitable jobs, and so their average
- profit per job is high.
- Pooling more unprofitable marginal jobs with profitable inframarginal jobs
- keeps professionals' average profits positive but induces higher acceptance
- rate.
- Whether it is optimal to coarsen the information disclosure or not thus
+ On the other hand, professionals have a large set of profitable jobs, and
+ so their average profit per job is higher.
+ Pooling of more marginally profitable jobs with profitable jobs keeps professio
+nals' average profits positive but induces a higher acceptance rate.
+ Thus whether it is optimal to coarsen the information disclosure or not
  depends on the relative population sizes of amateurs and professionals.
  If there are more professionals than amateurs, then coarser disclosure
- is optimal: it increases the total acceptance rates even though amateurs
+ is optimal, as it increases the total acceptance rate even though the amateurs
  stop working.
  If there are more amateurs, finer disclosure is optimal.
- In the rest of this section I rigorously study this problem for the general
+ In the rest of this section, I rigorously study this problem for the general
  continuous distribution of seller types.
  
 \end_layout
@@ -1469,7 +1529,7 @@ linear payoff
 \begin_inset Formula $x$
 \end_inset
 
- is the difficulty of the job.
+ is the level of difficulty of the job.
  The space of seller types is 
 \begin_inset Formula $Y=[0,\oy]$
 \end_inset
@@ -1482,7 +1542,7 @@ linear payoff
 \begin_inset Formula $y$
 \end_inset
 
- is the seller skill level.
+ is the seller's skill level.
  The seller profit function is 
 \begin_inset Formula $\pi(x,y)=y-x$
 \end_inset
@@ -1492,8 +1552,8 @@ linear payoff
 status open
 
 \begin_layout Plain Layout
-The linear payoff environment was used in the prior literature on disclosure,
- e.g.
+The linear payoff environment was used in the prior literature on disclosure
+ with heterogeneous audience, e.g.
  in 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1507,7 +1567,7 @@ key "KLMZ-wp"
 
 \end_inset
 
- High-
+ The high-
 \begin_inset Formula $y$
 \end_inset
 
@@ -1515,11 +1575,11 @@ key "KLMZ-wp"
 \begin_inset Quotes eld
 \end_inset
 
-professionals
+professionals,
 \begin_inset Quotes erd
 \end_inset
 
-, and the low-
+ and the low-
 \begin_inset Formula $y$
 \end_inset
 
@@ -1527,27 +1587,25 @@ professionals
 \begin_inset Quotes eld
 \end_inset
 
-amateurs
+amateurs.
 \begin_inset Quotes erd
 \end_inset
 
-.
- Buyer match value is 
+ The buyer match value is 
 \begin_inset Formula $u(x,y)=u$
 \end_inset
 
 .
- Impose the regularity condition necessary for the results below: 
-\begin_inset Formula $f(0)>0$
+ I impose the regularity condition 
+\begin_inset Formula $f(1)>0$
 \end_inset
 
-.
- 
+, which is necessary for the results presented in what follows.
 \end_layout
 
 \begin_layout Standard
-The platform's objective is maximizing the weighted average of buyer surplus
- and joint seller profits.
+The platform's objective is to maximize a weighted average of the buyer
+ surplus and the joint seller profits.
  
 \begin_inset Formula 
 \begin{equation}
@@ -1564,7 +1622,7 @@ where
 \begin_inset Formula $U=u\cdot M$
 \end_inset
 
- is buyer surplus, where 
+ is the buyer surplus; 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1573,11 +1631,11 @@ where
 \begin_inset Formula $\J(\gamma)$
 \end_inset
 
- includes as special cases welfare maximization (
+ includes as special cases maximization of welfare (
 \begin_inset Formula $\gamma=1/2$
 \end_inset
 
-), seller profits maximization (
+), maximization of the joint seller profits (
 \begin_inset Formula $\gamma=0$
 \end_inset
 
@@ -1595,12 +1653,11 @@ The next proposition is the second main result of the paper.
 \begin_inset Formula $\mathcal{J}(\gamma)$
 \end_inset
 
- for the case of uniform seller type distribution.
- 
+ for the case of uniform distribution of seller types.
 \end_layout
 
 \begin_layout Definition*
-Disclosure 
+The disclosure policy 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -1633,7 +1690,7 @@ Disclosure
 status open
 
 \begin_layout Plain Layout
-The terminology is borrowed from 
+This terminology is borrowed from 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "KLMZ-wp"
@@ -1696,6 +1753,8 @@ Suppose
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -484307115 1479163722
 For any 
 \begin_inset Formula $\gamma\in[0,1]$
 \end_inset
@@ -1708,12 +1767,66 @@ For any
 \begin_inset Formula $\oy$
 \end_inset
 
- large enough such that 
+ that are large enough so that 
 \begin_inset Formula $x_{\gamma}^{*}<1$
 \end_inset
 
  (some coarsening is strictly optimal).
  
+\change_inserted -484307115 1479163728
+There is 
+\begin_inset Formula $\gamma^{*}\in[0,1]$
+\end_inset
+
+ and there exist 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ that are large enough so that 
+\begin_inset Formula $x_{\gamma}^{*}<1$
+\end_inset
+
+ for 
+\begin_inset Formula $\gamma>\gamma^{*}$
+\end_inset
+
+ (some coarsening is strictly optimal).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479163728
+For any 
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+, there exist 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ that are large enough so that 
+\begin_inset Formula $x_{\gamma}^{*}<1$
+\end_inset
+
+ (some coarsening is strictly optimal).
+ 
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -1742,17 +1855,17 @@ If
 \end_layout
 
 \begin_layout Standard
-I reserve notation 
+I reserve use of the notation 
 \begin_inset Formula $x_{\gamma}^{*}$
 \end_inset
 
- to denote the cutoff in the upper-coarsening disclosure policy that maximizes
+ for the cutoff in the upper-coarsening disclosure policy that maximizes
  
 \begin_inset Formula $\mathcal{J}(\gamma)$
 \end_inset
 
 .
- This way, 
+ As such, 
 \begin_inset Formula $x_{0}^{*}$
 \end_inset
 
@@ -1764,23 +1877,9 @@ I reserve notation
 \begin_inset Formula $x_{1/2}^{*}$
 \end_inset
 
- are the highest truthfully revealed buyer types under 
-\change_inserted -484307115 1478534989
-seller 
-\change_unchanged
-profits
-\change_deleted -484307115 1478534991
--
-\change_inserted -484307115 1478534992
- 
-\change_unchanged
-maximizing disclosure, match
-\change_inserted -484307115 1478535000
- rate 
-\change_deleted -484307115 1478535000
--
-\change_unchanged
-maximizing disclosure and the efficient disclosure, respectively.
+ are the highest truthfully revealed buyer types under the seller profits
+ maximizing disclosure, the match rate maximizing disclosure and the efficient
+ disclosure, respectively.
  
 \end_layout
 
@@ -1792,28 +1891,20 @@ reference "prop:max-J"
 
 \end_inset
 
- shows that the optimal disclosure involves pooling hard tasks and truthfully
+ shows that the optimal disclosure involves pooling of hard tasks and truthfully
  revealing easy tasks.
  As we will see in the discussion below, the reason behind this form of
- disclosure is to reduce of the professionals' opportunity cost of accepting.
+ disclosure is to reduce the professionals' opportunity cost of accepting.
  
 \end_layout
 
 \begin_layout Standard
-Second, when the platform puts more weight on buyer surplus, the optimal
+Second, when the platform puts more weight on the buyer surplus, the optimal
  disclosure policy is coarser.
- In particular the match-maximizing disclosure is coarser than the efficient
- disclosure that in turn, is coarser than the 
-\change_inserted -484307115 1478535014
-seller 
-\change_unchanged
-profits
-\change_deleted -484307115 1478535016
--
-\change_inserted -484307115 1478535016
+ In particular, the match-maximizing disclosure is coarser than the efficient
+ disclosure, which is in turn coarser than the seller profits maximizing
+ disclosure (i.e.
  
-\change_unchanged
-maximizing disclosure (
 \begin_inset Formula $x_{0}^{*}\geq x_{1/2}^{*}\geq x_{1}^{*}$
 \end_inset
 
@@ -1828,16 +1919,16 @@ reference "prop:max-J"
 
 \end_inset
 
- shows that the optimal disclosure policy in the case of the uniform distributio
-n of seller types depends on the intensity of buyer traffic 
+ shows that the optimal disclosure policy in the case of uniform distribution
+ of seller types depends on the intensity of buyer traffic 
 \begin_inset Formula $\beta$
 \end_inset
 
-, tightness of seller capacity constraints 
+, the tightness of the seller capacity constraints 
 \begin_inset Formula $\tau$
 \end_inset
 
- and the spread of seller types 
+, and the spread of seller types 
 \begin_inset Formula $\oy$
 \end_inset
 
@@ -1848,8 +1939,8 @@ n of seller types depends on the intensity of buyer traffic
 
  is large enough and there are sufficiently high seller types, then upper-coarse
 ning is optimal.
- Conversely, if buyer traffic is low or capacity constraints are loose,
- full disclosure is strictly optimal.
+ If, on the other hand, buyer traffic is low or capacity constraints are
+ loose, the full disclosure is strictly optimal.
  
 \end_layout
 
@@ -1861,12 +1952,12 @@ reference "prop:max-J"
 
 \end_inset
 
- to the solution of the static disclosure problem.
+ with the solution of the static disclosure problem.
  The 
 \emph on
 static disclosure problem
 \emph default
- is the one shot interaction between the platform and the sellers.
+ admits only a one-shot interaction between the platform and the sellers.
  My model reduces to the static disclosure problem when 
 \begin_inset Formula $\tau=0$
 \end_inset
@@ -1883,7 +1974,7 @@ static disclosure problem
 
 \begin_layout Standard
 The upper-coarsening form of the optimal policy is qualitatively different
- from the solution to the static disclosure policy in the same environment.
+ from the solution to the static disclosure problem in the same environment.
  
 \end_layout
 
@@ -1913,7 +2004,7 @@ If
 \begin_inset Formula $g$
 \end_inset
 
- is decreasing, then the full disclosure is optimal;
+ is decreasing, then the full disclosure policy is optimal;
 \end_layout
 
 \begin_layout Itemize
@@ -1921,7 +2012,7 @@ If
 \begin_inset Formula $g$
 \end_inset
 
- is increasing, then the no disclosure is optimal;
+ is increasing, then the no disclosure policy is optimal;
 \end_layout
 
 \begin_layout Itemize
@@ -1929,14 +2020,13 @@ If
 \begin_inset Formula $g$
 \end_inset
 
- is constant, then any disclosure is optimal.
+ is constant, then any disclosure policy is optimal.
 \end_layout
 
 \end_deeper
 \begin_layout Standard
 The static disclosure problem has been extensively studied in the prior
- literature, and the above result appears in e.g.
- 
+ literature, and the above result appears, for example in 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "KLMZ-wp"
@@ -1979,15 +2069,16 @@ reference "cor:tau=0"
 
 \begin_layout Standard
 In the static disclosure problem, if the distribution of seller types is
- uniform, the information disclosure does not affect the number of matches.
+ uniform, the the disclosure policy does not affect the number of matches.
  Any coarsening of the full disclosure policy decreases the acceptance rate
- of lower-type sellers and increases the acceptance rate of high-type sellers.
- When distribution of seller types is uniform, these two forces cancel out
- and the total number of matches is unchanged.
+ of lower-type sellers and increases the acceptance rate of higher-type
+ sellers.
+ When the distribution of seller types is uniform, these two forces cancel
+ out and the total number of matches is unchanged.
 \end_layout
 
 \begin_layout Standard
-In contrast, in dynamic setting, 
+In dynamic setting, in contrast, 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:max-J"
@@ -2005,19 +2096,19 @@ reference "prop:max-J"
 \end_layout
 
 \begin_layout Standard
-To better see what forces make the upper-coarsening optimal, consider the
- following two simplifications of the model.
- Each simplification alters a part of the original model.
- Recall that the model has two main components: the matching system, call
+To get a sense of the forces that make the upper-coarsening optimal, consider
+ two simplifications of the model, each of which alters a part of the original
+ model.
+ Recall that the model has two main components: the matching system (call
  it 
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
-, and the seller optimization problem, call it 
+) and the seller optimization problem (call it 
 \begin_inset Formula $\mathcal{O}$
 \end_inset
 
-.
+).
  The first simplification keeps 
 \begin_inset Formula $\mathcal{O}$
 \end_inset
@@ -2058,7 +2149,7 @@ reference "eq:V-via-pi"
 \begin_inset Formula $(\mathcal{O}',\mathcal{M})$
 \end_inset
 
-, the seller accept all profitable jobs but it sill takes time 
+, the sellers accept all profitable jobs, but it still takes time 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -2073,7 +2164,8 @@ name "cor:replenished"
 
 \end_inset
 
-Suppose the distribution of available seller types is exogenous 
+Suppose the distribution of available seller types is exogenous, that is,
+ 
 \begin_inset Formula $G=U[0,1]$
 \end_inset
 
@@ -2087,7 +2179,7 @@ Suppose the distribution of available seller types is exogenous
 \end_layout
 
 \begin_layout Standard
-The result demonstrates the workings of the dynamic match quality effect
+This result demonstrates the workings of the dynamic match quality effect
  in the case of heterogeneous sellers.
  Under the premises of 
 \begin_inset CommandInset ref
@@ -2098,8 +2190,8 @@ reference "cor:replenished"
 
 , the dynamic match quality effect completely dominates the match quality
  effect.
- Compare the no disclosure to the full disclosure.
- If seller were myopic, then by 
+ Now compare the no disclosure to the full disclosure.
+ If seller are myopic, then by 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fact:tau=0"
@@ -2107,17 +2199,21 @@ reference "fact:tau=0"
 \end_inset
 
  coarsening does not affect the number of matches.
- However, with forward-looking sellers, there is a difference.
+ However, with forward-looking sellers there is a difference.
  The coarsening of information increases the acceptance rate of professionals
- unproportionally because it decreases their option value of rejection.
- As a result, the no disclosure is optimal.
+ disproportionally, because it decreases their option value of rejection.
+ As a result, the no disclosure policy is optimal.
  
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -484307115 1479163808
 \begin_inset Separator plain
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -2137,23 +2233,24 @@ Suppose
 \begin_inset Formula $(\mathcal{O}',\mathcal{M})$
 \end_inset
 
-), then full disclosure is strictly optimal to maximize the matching rate.
+), then full disclosure is strictly optimal in maximization of the matching
+ rate.
  
 \end_layout
 
 \begin_layout Standard
 In this result, I shut down the dynamic match quality effect and instead
  focus on the effect of endogenous distribution of seller types.
- In the equilibrium, the pdf of available seller types is decreasing because
- high seller types have higher acceptance rates and so are less available.
- Results from the static disclosure (
+ In the equilibrium, the pdf of available seller types is decreasing, because
+ higher-seller types have higher acceptance rates and so are less available.
+ Results from the static disclosure problem (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fact:tau=0"
 
 \end_inset
 
-) suggest that in this case the full disclosure must be optimal.
+) suggest that in this case the full disclosure policy must be optimal.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2166,11 +2263,11 @@ reference "cor:myopic-sellers"
 \end_layout
 
 \begin_layout Standard
-In the original model 
+In the original model, 
 \begin_inset Formula $(\mathcal{O},\mathcal{M})$
 \end_inset
 
- both effects from 
+, effects of both 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor:replenished"
@@ -2206,13 +2303,13 @@ For general
 \begin_inset Formula $G$
 \end_inset
 
-, the shape of the optimal disclosure can be quite complex even in the static
- case.
+, the shape of the optimal disclosure can be quite complex, even in the
+ static case.
  The heuristic is to pool 
 \begin_inset Formula $x$
 \end_inset
 
- on the increasing part of pdf 
+ on the increasing part of the pdf 
 \begin_inset Formula $g$
 \end_inset
 
@@ -2225,8 +2322,8 @@ For general
 \end_inset
 
 .
- With forward-looking agents, it gets even less tractable.
- Nevertheless, I give the first order condition in 
+ With forward-looking agents, it is even less tractable.
+ Nevertheless, I give a first-order condition in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:main-lemma"
@@ -2239,12 +2336,8 @@ reference "lem:main-lemma"
 
 \begin_layout Standard
 
-\change_deleted -484307115 1478535031
-Profit maximization
-\change_inserted -484307115 1478535037
-Maximizing seller profit
-\change_unchanged
- may also require coarse disclosure policy.
+\change_deleted -484307115 1479163839
+Maximizing seller profit may also require a coarse disclosure policy.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2271,25 +2364,80 @@ reference "prop:max-J"
 \begin_inset Formula $\beta\tau$
 \end_inset
 
- implies large option value of rejecting, and the option value is the largest
- for professionals.
- Large 
+ implies a large option value of rejection, and this option value is the
+ largest for the professionals.
+ The buyers with large 
 \begin_inset Formula $x$
 \end_inset
 
  are the professionals' marginal buyers.
- Therefore coarsening at the right end of 
+ Therefore, coarsening at the right endpoint of 
 \begin_inset Formula $X$
 \end_inset
 
- decreases the professionals' return to rejecting and increases the fraction
+ decreases the professionals' return on rejection and increases the fraction
  of accepted profitable jobs.
- This improves 
-\change_inserted -484307115 1478535046
-seller 
-\change_unchanged
-profits.
+ This improves seller profits.
  
+\change_inserted -484307115 1479163839
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479163839
+Maximizing seller profit may also require a coarse disclosure policy.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:max-J"
+
+\end_inset
+
+ shows that when 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+, the non-trivial upper-coarsening can be optimal (
+\begin_inset Formula $x_{0}^{*}<1$
+\end_inset
+
+).
+ The coarsening is necessary to alleviate the seller coordination problem
+ when 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ is large.
+ Large 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ implies a large option value of rejection, and this option value is the
+ largest for the professionals.
+ The buyers with large 
+\begin_inset Formula $x$
+\end_inset
+
+ are the professionals' marginal buyers.
+ Therefore, coarsening at the right endpoint of 
+\begin_inset Formula $X$
+\end_inset
+
+ decreases the professionals' return on rejection and increases the fraction
+ of accepted profitable jobs.
+ This improves seller profits.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2307,14 +2455,14 @@ reference "prop:max-J"
 \end_inset
 
  and contrasts it with the case of identical sellers.
- From 
+ By 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:FD-suboptimal"
 
 \end_inset
 
- we know that the full disclosure outcome is suboptimal.
+, we know that the full disclosure outcome is suboptimal.
  In the case of identical sellers, it was possible to implement any point
  on the Pareto frontier by information disclosure (
 \begin_inset CommandInset ref
@@ -2325,7 +2473,7 @@ reference "prop:Pareto-frontier"
 
 ), and therefore coarsening was necessary for optimality.
  In the case of heterogeneous sellers, the Pareto frontier is not implementable
- in the generic case because sellers have private information.
+ in the generic case, because sellers have private information.
  Therefore, the 
 \begin_inset Quotes eld
 \end_inset
@@ -2342,7 +2490,7 @@ reference "fig:Utility-possibility-set-heterog-sellers"
 \end_inset
 
  is below the Pareto frontier.
- Further, if 
+ Furthermore, if 
 \begin_inset Formula $\beta\tau$
 \end_inset
 
@@ -2350,8 +2498,8 @@ reference "fig:Utility-possibility-set-heterog-sellers"
 \begin_inset Formula $\oy$
 \end_inset
 
- are large enough then the full disclosure outcome is below the implementability
- frontier, and efficiency requires some coarsening.
+ are large enough, then the full disclosure outcome is below the implementabilit
+y frontier, and efficiency requires some coarsening.
  The optimal disclosures in this case are described in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2364,14 +2512,10 @@ reference "prop:max-J"
 \begin_inset Formula $\beta\tau$
 \end_inset
 
- is small, the implementability frontier consists of only the full disclosure
- outcome.
- That is, the full disclosure is optimal for welfare maximization, match-rate
- maximization or joint 
-\change_inserted -484307115 1478535063
-seller 
-\change_unchanged
-profits maximization.
+ is sufficiently small, the implementability frontier consists of only the
+ full disclosure outcome.
+ That is, the full disclosure policy is optimal for welfare maximization,
+ match-rate maximization, or joint seller profits maximization.
  
 \begin_inset Float figure
 wide false
@@ -2412,23 +2556,8 @@ input{pictures/pareto_frontier_hetero_1.tex}
 \end_inset
 
  is large enough.
- The full disclosure is neither efficient, nor 
-\change_inserted -484307115 1478535072
-seller 
-\change_unchanged
-profits
-\change_deleted -484307115 1478535074
--
-\change_inserted -484307115 1478535074
- 
-\change_unchanged
-maximizing, nor 
-\change_deleted -484307115 1478535084
-#matches-
-\change_inserted -484307115 1478535086
-match rate 
-\change_unchanged
-maximizing.
+ Full disclosure is not efficient, and it maximizes neither the joint seller
+ profits nor the match rate.
  
 \end_layout
 
@@ -2478,18 +2607,7 @@ input{pictures/pareto_frontier_hetero_2.tex}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The full disclosure is 
-\change_inserted -484307115 1478535094
-seller 
-\change_unchanged
-profits
-\change_deleted -484307115 1478535095
--
-\change_inserted -484307115 1478535096
- 
-\change_unchanged
-maximizing but not efficient.
- 
+The full disclosure policy maximizes seller profits, but it is not efficient.
 \end_layout
 
 \end_inset
@@ -2589,7 +2707,7 @@ name "fig:Utility-possibility-set-heterog-sellers"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Main-Lemma-and-proof"
@@ -2615,7 +2733,7 @@ reference "prop:max-J"
 \end_layout
 
 \begin_layout Standard
-In this subsection I sketch the proof of 
+In this section I sketch the proof of 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:max-J"
@@ -2663,7 +2781,7 @@ reference "lem:representaion-of-lambda"
 
 \end_inset
 
- establishes the one-to-one correspondence between information disclosure
+ establishes a one-to-one correspondence between information disclosure
  policies and convex functions from some set.
  
 \begin_inset CommandInset ref
@@ -2672,8 +2790,7 @@ reference "lem:Vmu"
 
 \end_inset
 
- finds the convenient representation of the seller dynamic optimization
- problem.
+ finds a convenient representation of the seller dynamic optimization problem.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2711,7 +2828,7 @@ Denote the posterior mean of
 \end_inset
 
 .
- I reserve notation 
+ I reserve use of the notation 
 \begin_inset Formula $z$
 \end_inset
 
@@ -2746,7 +2863,7 @@ option value function
 \begin_inset Formula $\Lambda\colon[0,\infty)\to\R_{+}$
 \end_inset
 
-: 
+ as follows: 
 \begin_inset Formula 
 \begin{equation}
 \Lambda(z;\lambda):=\int_{0}^{z}F^{\lambda}(\zeta)\,d\zeta.\label{eq:Lambda}
@@ -2756,7 +2873,7 @@ option value function
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2771,25 +2888,7 @@ status collapsed
 
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-For any 
-\begin_inset Formula $\lambda$
-\end_inset
-
-, 
-\begin_inset Formula $\Lambda(z)$
-\end_inset
-
- is non-negative, weakly increasing and convex.
-\end_layout
-
-\end_inset
-
- As we will see from the 
+ As we will see from 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:Vmu"
@@ -2827,7 +2926,7 @@ Let
 \begin_inset Formula $\overline{\Lambda}$
 \end_inset
 
- be the option value function under full disclosure, 
+ be the option value function under full disclosure, that is 
 \begin_inset Formula $\overline{\Lambda}(z):=\int_{0}^{z}F(\zeta)\,d\zeta.$
 \end_inset
 
@@ -2835,24 +2934,24 @@ Let
 \begin_inset Formula $\underline{\Lambda}$
 \end_inset
 
- be the option value function under no disclosure, 
+ be the option value function under no disclosure, that is 
 \begin_inset Formula $\underline{\Lambda}(z):=\max\{0,z-\Exp[x]\}.$
 \end_inset
 
  Let 
 \begin_inset Formula 
 \[
-\mathcal{L}:=\left\{ \Lambda(z)\colon\Lambda(z)\text{ is increasing, convex and pointwise between }\oL(z)\text{ and }\uL(z)\right\} .
+\mathcal{L}:=\left\{ \Lambda(z)\colon\Lambda(z)\text{ is increasing, convex, and pointwise between }\oL(z)\text{ and }\uL(z)\right\} .
 \]
 
 \end_inset
 
-The next lemma establishes a one-to-one correspondence between functions
- from 
+The next lemma establishes a one-to-one correspondence between the functions
+ in 
 \begin_inset Formula $\mathcal{L}$
 \end_inset
 
- and option value functions defined in 
+ and the option value functions defined in 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:Lambda"
@@ -2921,7 +3020,7 @@ reference "lem:representaion-of-lambda"
 \end_inset
 
  is that it shows that any disclosure policy can be represented as some
- non-negative, non-decreasing and convex function from 
+ nonnegative, nondecreasing and convex function from 
 \begin_inset Formula $\mathcal{L}$
 \end_inset
 
@@ -2933,17 +3032,17 @@ reference "fig:sochi2014"
 
 \end_inset
 
- for illustration.
- I am going to use notation 
+ for an illustration.
+ I am going to use 
 \begin_inset Formula $\Lambda$
 \end_inset
 
- for a typical element of 
+ to denote a typical element of 
 \begin_inset Formula $\mathcal{L}$
 \end_inset
 
 .
- The optimization of 
+ Optimization of 
 \begin_inset Formula $\mathcal{J}$
 \end_inset
 
@@ -2951,7 +3050,7 @@ reference "fig:sochi2014"
 \begin_inset Formula $\lambda\in\Delta(S)$
 \end_inset
 
- is equivalent to the optimization with respect to 
+ is equivalent to optimization with respect to 
 \begin_inset Formula $\Lambda\in\mathcal{L}$
 \end_inset
 
@@ -3001,7 +3100,7 @@ Any disclosure policy
 \begin_inset Formula $\lambda$
 \end_inset
 
- can be represented as an increasing, convex function 
+ can be represented as an nondecreasing, convex function 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -3059,15 +3158,15 @@ For any disclosure policy
 \begin_inset Formula $\lambda$
 \end_inset
 
-, seller's optimal strategy has a cutoff form with cutoff 
+, the seller's optimal strategy has a cutoff form with cutoff 
 \begin_inset Formula $\smuth$
 \end_inset
 
- such that 
+ such that a type-
 \begin_inset Formula $y$
 \end_inset
 
--seller accepts all jobs with expected difficulty 
+ seller accepts all jobs with expected difficulty 
 \begin_inset Formula $z<\smuth$
 \end_inset
 
@@ -3080,11 +3179,11 @@ For any disclosure policy
 \begin_inset Formula $\beta_{A}$
 \end_inset
 
-, seller payoff 
+, the seller payoff 
 \begin_inset Formula $V(y)$
 \end_inset
 
- and cutoff 
+ and the cutoff 
 \begin_inset Formula $\smuth$
 \end_inset
 
@@ -3111,7 +3210,7 @@ picture to this equation would be very useful.
 \end_layout
 
 \begin_layout Standard
-The lemma implies that the platform's objective 
+This lemma implies that the platform's objective 
 \begin_inset Formula $\mathcal{J}$
 \end_inset
 
@@ -3124,8 +3223,8 @@ The lemma implies that the platform's objective
 \end_inset
 
 .
- It is used in the next lemma, which is the main technical result of the
- paper.
+ This result is used in the next lemma, which is the main technical result
+ of the paper.
  
 \end_layout
 
@@ -3141,11 +3240,11 @@ the definition of the variational derivatives is hand-wavy.
 
 \end_inset
 
-Consider functional 
+Consider a functional 
 \begin_inset Formula $\mathcal{I}(\Lambda)\colon\mathcal{L}\to\R$
 \end_inset
 
- and consider variation 
+ and variation 
 \begin_inset Formula $\delta\Lambda(y)$
 \end_inset
 
@@ -3167,7 +3266,7 @@ Consider functional
 \begin_inset Formula $\Lambda$
 \end_inset
 
- is function 
+ is a function 
 \begin_inset Formula $\phi(y)$
 \end_inset
 
@@ -3190,14 +3289,19 @@ Consider functional
 
 \begin_layout Standard
 Denote by 
-\begin_inset Formula $\nu(y):=1-\rho(y)$
+\begin_inset Formula $\nu(y)$
 \end_inset
 
  the fraction of type-
 \begin_inset Formula $y$
 \end_inset
 
- sellers who are available.
+ sellers who are available (i.e.
+ 
+\begin_inset Formula $\nu(y)=1-\rho(y)$
+\end_inset
+
+).
  
 \end_layout
 
@@ -3230,7 +3334,7 @@ For any initial
 \begin_inset Formula $\Lambda$
 \end_inset
 
- exists and equals:
+ exists and equals
 \begin_inset Formula 
 \begin{equation}
 \frac{\delta M}{\delta\Lambda}=K_{1}\cdot\left[g(y)\nu'(y)-(g(y)\nu^{2}(y))'\right],\label{eq:dM/dW}
@@ -3243,11 +3347,7 @@ where
 \end_inset
 
 .
- Similarly, the variational derivative of the joint 
-\change_inserted -484307115 1478535103
-seller 
-\change_unchanged
-profits 
+ Similarly, the variational derivative of the joint seller profits 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3255,7 +3355,7 @@ profits
 \begin_inset Formula $\Lambda$
 \end_inset
 
- exists and equals:
+ exists and equals
 \begin_inset Formula 
 \[
 \frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\delta\Lambda}\cdot K_{2}+\betaa\nu(y)g(y),
@@ -3306,24 +3406,24 @@ If
 \begin_inset Formula $g$
 \end_inset
 
- is decreasing, then the full disclosure is optimal.
+ is decreasing, then full disclosure is optimal.
  If 
 \begin_inset Formula $g$
 \end_inset
 
- is increasing, then the no disclosure is optimal.
+ is increasing, then no disclosure is optimal.
  
 \end_layout
 
 \begin_layout Standard
-The result easily follows from 
+This result follows easily from 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:main-lemma"
 
 \end_inset
 
- using the fact that when 
+, using the fact that when 
 \begin_inset Formula $\tau=0$
 \end_inset
 
@@ -3332,7 +3432,7 @@ reference "lem:main-lemma"
 \end_inset
 
 .
- When sellers are capacity constrained (
+ When sellers are not capacity constrained (
 \begin_inset Formula $\tau=0$
 \end_inset
 
@@ -3363,7 +3463,7 @@ reference "eq:dM/dW"
 \end_inset
 
  in more detail.
- Consider uniform distribution of seller types, 
+ Consider the case of uniform distribution of seller types, 
 \begin_inset Formula $G=U[0,1]$
 \end_inset
 
@@ -3387,7 +3487,7 @@ When
 \begin_inset Formula $\tau=0$
 \end_inset
 
-, it reduces to 
+, this reduces to 
 \begin_inset Formula 
 \[
 \frac{\delta M}{\delta\Lambda}=0.
@@ -3395,13 +3495,13 @@ When
 
 \end_inset
 
-Therefore, the disclosure has no effect on the number of matches in the
- static case but does have effect in the dynamic case.
+Therefore, the disclosure policy has no effect on the number of matches
+ in the static case, but does have an effect in the dynamic case.
  
 \end_layout
 
 \begin_layout Standard
-Term 
+The term 
 \begin_inset Formula $-\nu(y)$
 \end_inset
 
@@ -3412,19 +3512,12 @@ reference "eq:dM/dL-uniform-G"
 
 \end_inset
 
- corresponds to the match quality effect.
- The match quality effect arises because sellers do not act myopically and
- reject low-value jobs due to dynamic optimization.
- High types have greater option value of rejecting a job (see Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:V-via-pi"
-
-\end_inset
-
-), and so coarsening information has additional effect on acceptance by
- decreasing the sellers' option value of rejection.
+ corresponds to the match quality effect of information disclosure.
+ As discussed above, it arises because disclosure policy affects the capacity-co
+nstrained seller's option value of rejection.
+ Unlike the case of unconstrained sellers, limiting of information has an
+ additional effect on acceptance rate by decreasing the sellers' option
+ value of rejection.
  By 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3440,12 +3533,12 @@ reference "cor:tau=0"
 \begin_inset Formula $\nu(y)$
 \end_inset
 
- is decreasing, this creates a motive for the intermediary to use coarser
+ is decreasing, this creates a motive for the intermediary to use a coarser
  disclosure policy.
 \end_layout
 
 \begin_layout Standard
-Term 
+The term 
 \begin_inset Formula $\nu^{2}(y)$
 \end_inset
 
@@ -3457,9 +3550,9 @@ reference "eq:dM/dL-uniform-G"
 \end_inset
 
  corresponds to the availability effect.
- The availability effect arises because in equilibrium, high types are less
- available than low types.
- Therefore, the pdf of available seller types is decreasing.
+ The availability effect arises because in equilibrium, higher seller types
+ are less available than lower types.
+ Therefore, the pdf of the available seller types is decreasing.
  By 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3475,7 +3568,7 @@ reference "cor:tau=0"
 \begin_inset Formula $\nu(y)$
 \end_inset
 
- is decreasing, this creates a motive for the intermediary to use finer
+ is decreasing, this creates a motive for the intermediary to use a finer
  disclosure policy.
 \end_layout
 
@@ -3508,7 +3601,7 @@ If
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
- crosses zero from above at most once, then 
+ crosses 0 from above at most once, then 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
@@ -3524,8 +3617,7 @@ If
 \end_layout
 
 \begin_layout Standard
-Now I sketch the key steps of the proof of the main result for the case
- of heterogeneous seller 
+Now I sketch the key steps of the proof of 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:max-J"
@@ -3533,10 +3625,10 @@ reference "prop:max-J"
 \end_inset
 
 .
- The complete proof relies on more technical lemmas and is deferred to the
- Appendix 
+ The complete proof relies on more technical lemmas and is deferred to Appendix
+ 
 \begin_inset CommandInset ref
-LatexCommand vpageref
+LatexCommand ref
 reference "proof:prop-5"
 
 \end_inset
@@ -3572,8 +3664,8 @@ reference "lem:main-lemma"
 , 
 \begin_inset Formula 
 \begin{align}
-\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)=\nonumber \\
- & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y),\label{eq:12}
+\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)\nonumber \\
+ & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y)g(y),\label{eq:12}
 \end{align}
 
 \end_inset
@@ -3608,15 +3700,15 @@ where
 \begin_inset Formula $\nu(y)$
 \end_inset
 
- is non-negative and decreasing, 
+ is nonnegative and decreasing, 
 \begin_inset Formula $\d\J/\d\Lambda$
 \end_inset
 
- is either positive for all 
+ either is positive for all 
 \begin_inset Formula $y\in[0,\oy]$
 \end_inset
 
- or crosses zero once from above.
+ or crosses 0 once from above.
  Denote by 
 \begin_inset Formula $\lambda_{\gamma}^{*}$
 \end_inset
@@ -3650,7 +3742,7 @@ To see that the cutoff
 \begin_inset Formula $\gamma$
 \end_inset
 
-, note that larger 
+, note that a larger 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -3666,7 +3758,7 @@ reference "eq:12"
 \end_inset
 
 .
- Therefore the region of 
+ Therefore, the region of 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -3716,9 +3808,9 @@ reference "eq:13-1"
 \end_inset
 
 .
- For the details, refer to the proof in the Appendix 
+ For the details, refer to the proof in Appendix 
 \begin_inset CommandInset ref
-LatexCommand vpageref
+LatexCommand ref
 reference "proof:prop-5"
 
 \end_inset
@@ -3729,20 +3821,6 @@ reference "proof:prop-5"
 
 \begin_layout Standard
 \begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Subsection
-Decomposition of effects of information disclosure.
- 
-\end_layout
-
 \end_inset
 
 

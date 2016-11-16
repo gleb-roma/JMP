@@ -137,27 +137,27 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eps}{\varepsilon}
+\renewcommand{\eps}{\varepsilon}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Exp}{\mathbb{E}}
+\renewcommand{\Exp}{\mathbb{E}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\R}{\mathbb{R}}
+\renewcommand{\R}{\mathbb{R}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Norm}{\mathcal{N}}
+\renewcommand{\Norm}{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\sigmasq}{\sigma^{2}}
+\renewcommand{\sigmasq}{\sigma^{2}}
 \end_inset
 
 
@@ -165,7 +165,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmin}{\operatorname*{argmin}}
+\renewcommand{\argmin}{\operatorname*{argmin}}
 {\mathrm{argmin}}
 \end_inset
 
@@ -174,7 +174,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmax}{\operatorname*{argmax}}
+\renewcommand{\argmax}{\operatorname*{argmax}}
 {\mathrm{argmax}}
 \end_inset
 
@@ -183,28 +183,45 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\supp}{\operatorname{supp}}
 {\mathrm{supp}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oV}{\overline{V}}
+\renewcommand{\oV}{\overline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uV}{\underline{V}}
+\renewcommand{\uV}{\underline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\renewcommand{\oW}{\overline{W}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\renewcommand{\uW}{\underline{W}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+One topic that's come up: Platform strategy and market design in business.
+ Lots of exciting new companies are platforms.
+ How should these markets be designed? `What advice would you give CEOs,
+ venture capitalists or entrepreneurs about businesses whose core economics
+ are platforms and/or market design?
+\end_layout
+
 \end_inset
 
 
@@ -244,68 +261,59 @@ fi
 
 \end_inset
 
- Information provision about goods or trading partners is important for
- 
-\change_inserted -484307115 1478749642
-the 
+ Provision of information about goods or trading partners is a main challenge
+ for the efficiency of platforms that match heterogeneous buyers and sellers
+\change_deleted -484307115 1479230048
+ of products or services
 \change_unchanged
-efficiency of platforms that match buyers and sellers of products or services,
- such as platforms for house rental, labor contracting and transportation.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-well-functioning market
+, such as platforms for housing rental, labor contracting, and transportation.
+ Providing more information allows participants to identify and pursue the
+ most valuable matches
+\change_deleted -484307115 1479230057
+, avoids adverse selection and moral hazard
+\change_unchanged
+, and matching platforms spend significant resources eliciting match-relevant
+ information from users
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Roth 08, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "EFL16"
 
 \end_inset
 
-
-\end_layout
+ name eliciting and aggregating the dispersed user information a key objective
+ of peer-to-peer platforms.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Lew11"
 
 \end_inset
 
+ studies auto sales on eBay and finds that buyers are skeptical of the sellers
+ who post few pictures of the car they are selling.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "TZ15"
+
+\end_inset
+
+ show that in wholesale automobile auctions information disclosure helps
+ match heterogeneous buyers to cars of varying quality.
  
 \end_layout
 
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Increased observability
-\end_layout
-
-\end_inset
-
-Providing more information allows participants to identify and pursue the
- most valuable matches
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-, avoid adverse selection, something else?
-\end_layout
-
-\end_inset
-
-, and online platforms spend significant resources eliciting match-relevant
- information from users.
  However, sometimes this information is not fully revealed to the users.
  For example, Uber currently does not show drivers the passenger's destination
- until after the driver has accepted the ride, even once the passenger entered
- it into the application.
+ until after the driver has accepted the ride, even if the passenger has
+ entered it into the application.
  Airbnb hosts who turn on the 
 \begin_inset Quotes eld
 \end_inset
@@ -314,177 +322,11 @@ Instant Book
 \begin_inset Quotes erd
 \end_inset
 
- feature commit to accept
-\change_inserted -484307115 1478749652
-ing
-\change_unchanged
- all requests without knowing the details of prospective guests.
- Why do such platforms choose not to 
-\change_deleted -484307115 1478749698
-fully
-\change_unchanged
- disclose all the relevant information
-\change_inserted -484307115 1478749702
- fully
-\change_unchanged
-? What is the optimal information intermediation policy for platforms that
- care about both sides of the market? What does it depend on?
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Piquing reader's curiosity
-\end_layout
-
-\end_inset
-
- In decentralized matching markets, such as market for lodging, labor market,
- dating market and others, information availability about goods or trading
- partners is the key to the well-functioning market.
- Complete and symmetric information facilitates trade by letting the market
- participants identify valuable opportunities, and preventing adverse selection
- effects (Akerlof (1970), 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Rot08"
-
-\end_inset
-
-).
- However, availability of information increases returns to search and screening,
- and they need not accrue symmetrically to the sides of the market.
- In fast-moving markets, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-where search and matching happen together
-\end_layout
-
-\end_inset
-
- 
-\emph on
-excessive screening
-\emph default
- is an important source of market failure.
- As a stark example, on Airbnb, guests are 51% less likely to eventually
- book conditional on being rejected from their first request; still, 20%
- of guest inquiries are screened by hosts (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Fra15"
-
-\end_inset
-
-).
- On Uber, passengers are highly sensitive to wait times (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "HKN"
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Peter Frazier but no work in public domain
-\end_layout
-
-\end_inset
-
-).
- Rejections and long delays reduce buyer surplus and decrease buyer participatio
-n on the marketplace, and the effect is amplified in two-sided markets due
- to network effects.
- Can the platform design an information disclosure policy to alleviate the
- excessive screening problem and improve welfare (revenue, matching rates)?
- What does the optimal disclosure policy depend on?
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Decentralized matching markets, such as market for lodging, labor market,
- dating market and others, feature diversity of options on both sides of
- the market.
- In such environment information availability is the key to the well-functioning
- market because it allows the participants to identify the most valuable
- matches and avoid adverse selection (Akerlof 70, Roth 08).
- The distinguishing feature of a matching market relative to a consumer
- market is that buyers not only choose but must also be chosen by sellers
- (Roth 08).
- A seller rejects a buyer if the buyer is not a good fit.
- In fast-moving marketplaces seller rejections are consequential.
- As a stark example, on Airbnb, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-guests send on average 2.5 requests, and 
-\end_layout
-
-\end_inset
-
- conditional on being rejected from their first request, guests are 51%
- less likely to eventually book; however 20% of inquiries are screened by
- hosts (Fradkin 2016).
- On Uber, passengers are highly sensitive to wait times (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "HKN"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Peter Frazier but not work in public domain
-\end_layout
-
-\end_inset
-
-).
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Evidence from TaskRabbit and Upwork? Uber and Airbnb is enough for the first
- paragraph.
- Get to the additional evidence later.
- 
-\end_layout
-
-\end_inset
-
-Buyer disutility from delays or longer search undermines the performance
- of the marketplace by decreasing welfare and participation.
- Therefore, 
-\emph on
-excessive screening
-\emph default
- is an important source of market failure.
- Can the platform design an information intermediation policy to alleviate
- the excessive screening problem and improve efficiency (revenue, number
- of matches)? What does the optimal disclosure policy depend on?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+ feature commit to accepting all requests without knowing the details of
+ prospective guests.
+ Why do such platforms choose not to disclose all the relevant information
+ fully? What is the optimal information intermediation policy for platforms
+ that care about both sides of the market? What does it depend on?
 \end_layout
 
 \begin_layout Standard
@@ -534,16 +376,17 @@ which incorporates some asymmetries between buyers and sellers that are
  Buyers seek sellers' services to complete their jobs.
  Buyers contact sellers, who then review buyer attributes and choose whether
  to accept or reject the buyer job.
- Buyers are short-lived, must match quickly, but are indifferent about which
- seller completes their task.
- Sellers are long-lived, are indifferent about the match speed, but have
- heterogeneous preferences over buyers.
+ Buyers are short-lived and must match quickly, but they are indifferent
+ as to which seller completes their task.
+ Sellers are long-lived and are indifferent to the match speed, but they
+ have heterogeneous preferences over buyers.
  In particular, not all jobs are profitable.
  Sellers have limited capacity for serving buyers.
  If a seller accepts a job, he becomes unavailable for a fixed period of
  time and cannot accept new jobs.
  The platform designs an information disclosure policy that governs which
- buyer attributes are disclosed to sellers before deciding on buyer requests.
+ buyer attributes are disclosed to sellers before they decide whether to
+ accept buyer requests.
  I consider the general platform’s 
 \begin_inset Note Note
 status open
@@ -557,165 +400,19 @@ status open
 
 \end_inset
 
-objective of maximizing the weighted average of buyer surplus and seller
- profits.
- Note that in this model, buyers are sellers are asymmetric, which focuses
+objective of maximizing a weighted average of buyer surplus and seller profits.
+ Note that in this model, buyers and sellers are asymmetric, which focuses
  the information disclosure problem on the seller side of the market.
- If buyers have preferences about a match, the disclosure problem would
- be two-sided.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- 
+ If buyers had preferences about a match, the disclosure problem would be
+ two-sided; see 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Discussion-of-the-assumptions"
 
 \end_inset
 
- discusses this extension.
-\end_layout
-
-\end_inset
-
+ for a discussion of this.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Not polished yet.
- 
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Overview of the model
-\end_layout
-
-\end_inset
-
-In this paper I develop a model of information intermediation in decentralized
- matching markets to formalize the information disclosure tradeoffs and
- to characterize the optimal disclosure policy for a class of decentralized
- matching environments.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:The-Model-of"
-
-\end_inset
-
- sets up a model in which short-lived buyers gradually arrive over time
- and pursue long-lived sellers by proposing jobs.
- Sellers have heterogeneous preferences over jobs and independently decide
- what jobs to accept.
- Sellers have limited capacity: if a seller accepts a job, he becomes busy
- for a period of time and cannot accept new jobs.
- Buyer and seller preferences over matches are not aligned: some matches
- are unprofitable for sellers but are valuable to buyers.
- In contrast to many search-and-matching models that have a coordination
- friction as the main matching friction (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "BSW01,Kir09,AJK14"
-
-\end_inset
-
-), I assume no coordination friction: only available sellers receive buyer
- requests.
- The assumption is motivated by the observation that most digital platforms
- have good technological means of solving the coordination problem.
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-E.g.
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Fra15"
-
-\end_inset
-
- finds that on Airbnb the coordination friction explains only 6% of failed
- matches.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fn:Fradkin-miscoordination-6percent"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- The key matching friction of the model thus pertains to preference heterogeneit
-y.
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Design tool: disclosure policy
-\end_layout
-
-\end_inset
-
-The platform uses information disclosure policy as a design tool.
- Before the matching process starts running, the platform commits to a disclosur
-e policy that governs what buyer information sellers observe prior to the
- acceptance decision.
- The policy is modeled as a signaling game between the platform and the
- sellers, building on 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "KLMZ-wp"
-
-\end_inset
-
-.
- The new element is the seller dynamic optimization
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-as in Mortensen 82 and Pissarides 90?
-\end_layout
-
-\end_inset
-
- and endogenous availability.
- I consider the general platform's problem of maximizing a weighted average
- of expected buyer surplus and expected seller profits, which embeds the
- problems of maximizing welfare, seller joint revenue and the number of
- matches.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -749,20 +446,20 @@ fi
 \end_inset
 
  In this model, a key tradeoff arises between match quality and match rate.
- Full information disclosure need not be optimal because information disclosure
- can negatively affect the match rate overpassing the positive effect on
- the match quality.
+ Full disclosure of information need not be optimal, because information
+ disclosure can negatively affect the match rate and partially or wholly
+ offset the positive effect on the match quality.
  Seller profit is a product of match quality and match rate, and buyer surplus
  is an increasing function of the match rate.
- Seller profit function does not align with the platform objective.
+ So, the seller profit function does not align with the platform's objective.
  Specifically, profit-maximizing sellers will 
 \emph on
 cream-skim
 \emph default
  and reject inefficiently many jobs.
- The platform, unlike sellers, cares about welfare on both sides of the
- market, and so efficient disclosure is coarse if the negative effects of
- information disclosure on the match rate are strong.
+ Unlike sellers, the platform cares about welfare on both sides of the market,
+ and so efficient disclosure is coarse if the negative effects of information
+ disclosure on the match rate are strong.
  This paper considers how the optimal disclosure policy depends on the details
  of the seller side of the market.
  
@@ -815,11 +512,11 @@ fi
  Efficiency requires that both match quality and match rate be high.
  Seller profit is larger when both are high, whereas buyer surplus is large
  when the match rate is high.
- Yet, match quality and match rate are in conflict.
- Enforcing higher match rates compromises quality because sellers are forced
- to accept more inferior jobs.
+ However, match quality and match rate are in conflict.
+ Enforcing higher match rates compromises quality, because sellers are forced
+ to accept inferior jobs.
  Similarly, allowing sellers to cherrypick the most valuable buyers leads
- to higher rejection and lower match rates.
+ to higher rejection rates and lower match rates.
  For example, if Uber drivers reject passenger requests more often, passengers
  will have longer wait times.
  On Airbnb, if hosts reject guest inquiries more frequently, guests must
@@ -856,10 +553,10 @@ fi
 
 \end_inset
 
-Optimal disclosure policy must balance three effects: the positive effect
- on the seller match quality and the negative static and dynamic effects
- on the match rate.
- First, the effect of disclosure on the seller match quality is straightforward.
+The optimal disclosure policy must balance three effects: the positive effect
+ on the seller quality of the match and the negative static and dynamic
+ effects on the match rate.
+ First, the effect of disclosure on the match quality is straightforward.
  From a seller’s point of view, more information increases his set of attainable
  payoffs.
  Holding the match rate fixed, he benefits from more information about buyers.
@@ -867,26 +564,26 @@ Optimal disclosure policy must balance three effects: the positive effect
  sellers to accept jobs.
  A key observation is that the platform can increase a seller's expected
  marginal profit by limiting the information revealed to him.
- To see why, note that pooling marginally rejected jobs (rejected because
- the seller would prefer to wait for a better job) with inframarginal (accepted)
- jobs alters a seller's expected marginal profit..
+ To see why, note that pooling marginally profitable jobs (which are rejected
+ because the seller would prefer to wait for a better job) with inframarginal
+ jobs (which are accepted) alters the seller's expected marginal profit.
  Ignoring dynamic effects, higher marginal profit induces sellers to accept
  more jobs, which leads to higher match rates.
  Third, making more information available to a seller increases returns
- to his search.
+ on his search.
  Indeed, since acceptance precludes further search, the opportunity cost
- of accepting any offer is higher.
- As a result, sellers reject more often, and the match rate goes down.
- This dynamic effect on match rate exists only when sellers have limited
- capacity and are forward-looking.
- The match quality effect gives a motive for the platform to disclose informatio
-n, while the match rate effects give the motive to limit information.
+ of accepting a given offer is higher.
+ As a result, sellers reject jobs more often, and the match rate goes down.
+ This dynamic effect on the match rate exists only when sellers have limited
+ capacity and are forward looking.
+ The match-quality effect provides a motive for the platform to disclose
+ information, while the match-rate effects provide a motive to limit information.
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-[I THINK THAT THIS LAST SENTENCE IS REPETIIVE] Not sure what you mean.
+[I THINK THAT THIS LAST SENTENCE IS REPETITIVE] Not sure what you mean.
  
 \end_layout
 
@@ -926,8 +623,9 @@ fi
 \end_inset
 
  If sellers are identical, then some information coarsening is always optimal.
- In fact, such coarsening is necessary whether the platform maximizes total
- welfare, buyer surplus, or the joint seller surplus (see 
+ In fact, such coarsening is necessary, regardless of whether the platform
+ maximizes total welfare, buyer surplus, or the joint seller profits (see
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Outcomes-implementable-by"
@@ -935,8 +633,8 @@ reference "fig:Outcomes-implementable-by"
 \end_inset
 
 ).
- The total welfare maximizing disclosure policy is coarse but has a simple
- form.
+ The disclosure policy that maximizes total welfare is coarse but has a
+ simple form.
  It sends one of two recommendations to sellers, 
 \begin_inset Quotes eld
 \end_inset
@@ -949,17 +647,18 @@ accept
 \begin_inset Quotes eld
 \end_inset
 
-reject
+reject,
 \begin_inset Quotes erd
 \end_inset
 
-, which are chosen such that the sellers have incentives to follow them.
- The welfare maximizing policy is the intermediate case between the buyer-optima
-l disclosure and seller-optimal disclosure.
- To maximize the buyer surplus, coarsening is necessary because sellers
+ which are chosen in such a way that the sellers have incentives to follow
+ them.
+ The welfare-maximizing policy is the intermediate case between the buyer-optima
+l disclosure policy and the seller-optimal disclosure policy.
+ To maximize the buyer surplus, coarsening is necessary, because sellers
  underweight the match rate relative to buyers in their payoff functions.
- The higher are buyer search costs (and thus the costlier are rejections),
- the coarser is optimal disclosure.
+ The higher the buyer search costs (and thus the costlier the rejections),
+ the coarser the optimal disclosure policy.
  Perhaps more surprisingly, when maximizing the joint seller profits, the
  optimal disclosure is also coarse.
 \end_layout
@@ -1001,22 +700,22 @@ The adverse effect of disclosure on joint seller profits is a form of seller
  getting high-value jobs.
  As a result, sellers spend significant time waiting for high-value jobs.
  Collectively, this behavior is suboptimal because all profitable jobs have
- to be completed to maximize the joint profits.
+ to be completed in order to maximize the joint profits.
  I attribute the source of the coordination failure to what I call the 
 \emph on
 cream-skimming externality
 \emph default
 : By rejecting a job, a seller remains available on the marketplace and
- attracts a fraction of subsequent buyers, who otherwise would move to other
+ attracts a fraction of subsequent buyers who otherwise would move to other
  sellers.
- As a result, the other sellers face fewer profitable jobs and obtain lower
+ As a result, the other sellers face fewer profitable jobs and realize lower
  profits.
  The cream-skimming externality arises only when sellers have limited capacity
- and are forward-looking.
+ and are forward looking.
  When this externality is present, sellers underestimate the effect of their
  own acceptance rate on the platform-wide match rate and collectively resolve
- the match quality-match rate tradeoff sub-optimally.
- Coarsening information decreases opportunity cost of rejecting and can
+ the tradeoff between match quality and match rate suboptimally.
+ Limiting information decreases the opportunity cost of rejection and can
  increase the match rate to the seller-optimal level.
 \end_layout
 
@@ -1050,17 +749,18 @@ fi
 
 \end_inset
 
-When sellers are unobservably heterogeneous, the optimal disclosure is finer
- than in the case of identical sellers.
- With heterogeneous sellers, the match quality effect of information disclosure
- is stronger, but there are important subtleties.
+When sellers are unobservably heterogeneous, the optimal disclosure policy
+ is finer than in the case of identical sellers.
+ With heterogeneous sellers, the effect of information disclosure on match
+ quality is stronger, but there are important subtleties.
  Coarse disclosure tailored to increase one seller’s acceptance rate can
  drive another seller’s average profit below zero and violate his individual
  rationality constraint.
- If any coarsening is optimal, the degree is now not obvious.
+ If any coarsening is optimal in this case, the degree of coarsening is
+ now not obvious.
  The optimal policy should accommodate the possibly opposite reactions of
- sellers to disclosure and will depend on the shape of the seller type distribut
-ion.
+ different sellers to disclosure and will depend on the shape of the seller
+ type distribution.
 \end_layout
 
 \begin_layout Standard
@@ -1093,23 +793,23 @@ fi
 
 \end_inset
 
-To understand how seller heterogeneity affects optimal disclosure policy,
- I study a linear payoff environment, with vertically differentiated buyers
+To understand how seller heterogeneity affects the optimal disclosure policy,
+ I study a linear payoff environment with vertically differentiated buyers
  and sellers.
- In this case, the optimal disclosure policy depends on the shape of seller
- type distribution, the intensity of buyer traffic, and the tightness of
- seller capacity constraints.
- In this case, the seller match payoff is linear in buyer and seller characteris
-tics, and buyer match payoff is constant.
+ In this case, the optimal disclosure policy depends on the shape of the
+ seller type distribution, the intensity of buyer traffic, and the tightness
+ of seller capacity constraints.
+ In this case, the seller match payoff is linear in the buyer and seller
+ characteristics, and buyer match payoff is constant.
  I first consider the case of uniform distribution of seller types, where
  I can fully characterize the optimal disclosure policy.
- A key result with a uniform distribution of sellers, is that the match-rate
- maximizing disclosure policy is 
+ A key result in this case, is that the disclosure policy that maximizes
+ the match rate is 
 \emph on
 upper-coarsening
 \emph default
-: high buyer types are pooled and low buyer types are revealed truthfully.
- This is in stark contrast with the case of unconstrained sellers, in which
+: High buyer types are pooled, and low buyer types are revealed truthfully.
+ This is in stark contrast to the case of unconstrained sellers, in which
  information disclosure does not affect the match rate (cf.
  
 \begin_inset CommandInset citation
@@ -1119,37 +819,61 @@ key "KLMZ-wp"
 \end_inset
 
 ).
- When buyer-to-seller ratio is high or when the sellers are more capacity
- constrained, the efficient disclosure is also upper-coarsening.
- In the converse case, the full disclosure is efficient.
+ If the buyer-to-seller ratio is high or the sellers are more capacity constrain
+ed, then the efficient disclosure is also upper-coarsening.
+ And conversely, if the buyer-to-seller ratio is low and the sellers are
+ loosely constrained, the full disclosure is efficient.
  
 \end_layout
 
 \begin_layout Standard
 Turning to a general (non-uniform) distribution of sellers, I find that
- optimal disclosures can have a variety of qualitatively different shapes
+ the optimal disclosures can have a variety of qualitatively different shapes,
  depending on the distribution.
- The heuristic in the case of unconstrained sellers is to pool buyer type
- on the increasing part of buyer probability density function 
+ The heuristic in the case of unconstrained sellers is to pool buyer types
+ on the increasing part of the buyer probability density function 
 \begin_inset Formula $g$
 \end_inset
 
-, and reveal buyer type on the decreasing part of 
+, and reveal buyer types on the decreasing part of 
 \begin_inset Formula $g$
 \end_inset
 
 .
- With capacity constrained sellers, this heuristic should be further qualified
- with seller utilization rates.
- Despite the complexity I find the first-order condition for the general
- case in 
+ In the case of capacity-constrained sellers, this heuristic should be further
+ qualified to reflect seller utilization rates.
+ In this case, the design of the optimal information disclosure is a nontrivial
+ problem.
+ To see why, note that with forward-looking sellers, the information disclosure
+ policy determines not only the seller’s stage payoff but also the distribution
+ of his potential future payoffs.
+ As a result, a seller’s decision to accept depends not only on the posterior
+ mean of the state but also on the entire signaling structure.
+ This makes the concavification approach of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+, as well as the linear programming approach of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kol15"
+
+\end_inset
+
+, unsuitable for analysis of my model.
+ I approach this problem by representing signaling structures as a particular
+ class of convex functions and then using the calculus of variations to
+ find the first-order necessary conditions (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:main-lemma"
 
 \end_inset
 
-.
+).
  
 \end_layout
 
@@ -1183,181 +907,74 @@ fi
 
 \end_inset
 
-The model is mainly motivated by the matching problems of digital marketplaces.
- To use Airbnb as an example again, guests (buyers) are differentiated by
+The model is motivated mainly by the matching problems of digital marketplaces.
+ To again use Airbnb as an example, guests (buyers) are differentiated by
  age, gender, race, personality, etc.
- Hosts (sellers) have preferences over the number of guests, their gender,
- race, lifestyle, etc.
- While guests prefer to minimize time spent searching and book a listing
- instantly, hosts want to avoid offensive or inconvenient guests.
- Airbnb introduced InstantBook feature to satisfy the guests’ demand for
- convenience.
- In my model, it corresponds to the no disclosure policy.
- However, one could imagine a finer tool that allowed a host to specify
- guest types that were permitted to use the InstantBook.
- The problem of optimal guest segments is equivalent to the problem of the
- optimal information disclosure, and, as argued above, has important tradeoffs.
- Uber’s matching system is another notable example.
- Uber directs passenger (buyer) requests to drivers (sellers), and the requests
- include information about the passenger.
- In the current version of UberX, the passenger’s destination, though relevant
- to the driver payoff, is not shown.
- One final example is on-demand labor platforms, such as TaskRabbit.
- On this platform, freelancers (sellers) commit to an hourly rate over a
- broad category of tasks, such as Moving.
- The problem of the optimal category breadth is equivalent to the problem
- of the optimal disclosure policy of client task characteristics, and can
- also be analyzed with the framework outlined.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
+ Hosts (sellers) have preferences regarding the number of guests, their
+ gender, race, lifestyle, etc.
+ While guests prefer to minimize the time spent searching and book a listing
+ instantly,
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-implications for the platform design.
- 1.
- 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fra15"
+
+\end_inset
+
+ reports that on Airbnb, an initial rejection decreases by 51% the probability
+ that the guest eventually books any listing.
+\end_layout
+
+\end_inset
+
+ hosts want to avoid offensive or inconvenient guests.
+ Airbnb introduced the 
 \begin_inset Quotes eld
 \end_inset
 
-First, it alerts to potentially adverse effects
-\end_layout
-
-\begin_layout Plain Layout
-of increasing performance transparency in organizations.
+Instant Book
 \begin_inset Quotes erd
 \end_inset
 
- 2.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
+ feature to satisfy the guests’ demand for convenience.
+ In my model, this corresponds to a coarse disclosure policy.
+ In the current version, a host can specify the types of guests can book
+ his listing instantly but the set of restrictions is limited (includes
+ pets and smoking controls but does not include gender control).
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-!put the outline here after the lit review is ready!
+For more details on the Instant Book, see 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.airbnb.com/host/instant"
+target "https://www.airbnb.com/host/instant"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Paragraph*
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Related Literature.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ifdraft
-\end_layout
-
-\end_inset
-
-
-\series bold
-[contributions]
-\series default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fi 
-\end_layout
-
-\end_inset
-
-There are two primary contributions of this paper relative to the existing
- literature.
- First, the paper considers the role of information intermediation in matching
- markets.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-is this the first one? If yes, say this is the first.
- If not, fn what they are.
- 
-\end_layout
-
-\end_inset
-
- It shows that strategic information disclosure can be an effective tool
- to balance the match quality and the match speed.
- When the sides of the market are not symmetric in their preference for
- match quality and match rate, the more patient and more selective side
- of the market (sellers in my model) tends to cream-skim.
- Strategically limiting information can be used to decrease cream-skimming
- and improve total welfare.
- Additionally, limiting information can alleviate the seller coordination
- failure by offsetting the cream-skimming externality.
-\end_layout
-
-\begin_layout Standard
-The paper also contributes to the literature on information design.
- The paper extends the model of signaling game with heterogeneous audience
- to the case with endogenously available and dynamically optimizing receivers.
- In this case, the design of the optimal information disclosure is a non-trivial
- problem.
- With forward-looking receivers, information disclosure policy determines
- not only the receiver’s stage payoff but also the distribution of his potential
- future payoffs.
- As a result, receiver’s decision to accept depends not only on the posterior
- mean of the state but also on the entire signaling structure.
- This makes the concavification approach of 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "KG11"
-
-\end_inset
-
-, as well as the linear programming approach of 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Kol15"
-
-\end_inset
-
- unsuitable for the analysis of my model.
- I approach it by representing signaling structures as a particular class
- of convex functions and then using the calculus of variations to find the
- first-order necessary conditions.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Main-Lemma-and-proof"
-
-\end_inset
-
- sketches the main steps of the approach.
+ The problem of designing optimal guest segmentation is equivalent to the
+ problem of the optimal information disclosure policy, and, as argued above,
+ has important tradeoffs.
+ Uber’s matching system is another notable example.
+ Uber directs passenger (buyer) requests to drivers (sellers), and the requests
+ include information about the passenger.
+ In the current version of UberX, the passenger’s destination is not disclosed,
+ even though it is relevant to the drivers' payoff.
+ One final example is TaskRabbit, an on-demand labor platform.
+ On this platform, freelancers (sellers) commit to an hourly rate over a
+ broad category of tasks, such as moving.
+ The problem of the optimal category breadth is equivalent to the problem
+ of the optimal disclosure policy of client task characteristics, and it
+ can be analyzed within the same framework.
 \end_layout
 
 \begin_layout Standard
@@ -1371,7 +988,7 @@ reference "sec:The-Model-of"
 
 \end_inset
 
- introduces the model of matching market, and establishes the existence
+ introduces the model of the matching market, and establishes the existence
  and uniqueness of equilibrium.
  
 \begin_inset CommandInset ref
@@ -1380,7 +997,7 @@ reference "subsec:Discussion-of-the-assumptions"
 
 \end_inset
 
- contains the discussion of the key assumptions of the model.
+ contains a discussion of the key assumptions of the model.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1388,31 +1005,30 @@ reference "sec:Market-Design:-Information"
 
 \end_inset
 
- sets up the platform's information disclosure problem, solves and explains
+ sets up the platform's information disclosure problem, and solves and explains
  it in different settings.
- First, 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:seller-coordination-failure"
 
 \end_inset
 
- explains the seller coordination failure.
- Then, 
+ explains the seller coordination failure, 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Identical-sellers"
 
 \end_inset
 
- studies the setting with identical sellers, and 
+ studies the setting in which the sellers are identical, and 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Three-effects-of"
 
 \end_inset
 
- discusses the competing effects of information disclosure .
+ discusses the competing effects of information disclosure.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1429,7 +1045,7 @@ reference "subsec:Main-Lemma-and-proof"
 
 \end_inset
 
- describes the technique for proving the main theoretical result.
+ describes the technique used in proving the main theoretical result.
  In 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1441,42 +1057,524 @@ reference "sec:Conclusion"
  
 \end_layout
 
+\begin_layout Paragraph
+Related literature.
+ 
+\end_layout
+
 \begin_layout Standard
-\begin_inset ERT
-status open
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
-
-
-\backslash
-ifdraft
+There are two primary contributions of this paper relative to the existing
+ literature.
+ 
 \end_layout
 
 \end_inset
 
+The paper primarily contributes to the literatures on search-and-matching
+ in markets and information design.
+ Matching markets have been extensively studied in 
+\change_deleted -484307115 1479231455
+the literatures of
+\change_unchanged
+ economics and operations research
+\change_inserted -484307115 1479231466
+, but
+\change_deleted -484307115 1479231468
+.
+ T
+\change_inserted -484307115 1479231470
+ t
+\change_unchanged
+o the best of my knowledge, no prior work has explored in detail the design
+ of information intermediation for matching platforms.
+ 
+\end_layout
 
-\series bold
-[other related papers and strands]
-\series default
+\begin_layout Standard
 
-\begin_inset ERT
+\change_deleted -484307115 1479231606
+The role of information in matching and peer-to-peer markets is an active
+ area of economic research.
+ A closely related paper is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HMS09"
+
+\end_inset
+
+ that shows that the option of disclosing information leads to wasteful
+ signaling, that in certain cases can offset the benefits of improved matching.
+ They consider a black-box matching function and only two information structures
+, full and no disclosure, while my paper allows for any possible information
+ structure and microfounds the matching function with search.
+\change_inserted -484307115 1479231610
+The role of information in matching and peer-to-peer markets is an active
+ area of economic research.
+ A closely related paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HMS09"
+
+\end_inset
+
+ shows that the option to disclose information leads to wasteful signaling,
+ which in certain cases offsets the benefits of improved matching.
+ The authors consider a black-box matching function and only two information
+ structures—full and no disclosure—while my paper allows for a general informati
+on structure, in addition to microfounding the matching function.
+
+\change_unchanged
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "SS01"
+
+\end_inset
+
+ also study search and matching in heterogeneous environment
+\change_inserted -484307115 1479231590
+s
+\change_unchanged
+.
+ 
+\change_deleted -484307115 1479231637
+Similarly to my model
+\change_inserted -484307115 1479231640
+As in my framework
+\change_unchanged
+, the
+\change_inserted -484307115 1479230102
+ main
+\change_unchanged
+ matching friction 
+\change_inserted -484307115 1479230114
+in their paper is due to the 
+\change_deleted -484307115 1479231606
+arises because a 
+\change_unchanged
+seller
+\change_inserted -484307115 1479230120
+'s
+\change_unchanged
+ 
+\change_deleted -484307115 1479231606
+has a 
+\change_unchanged
+private benefit of waiting
+\change_inserted -484307115 1479231679
+ but
+\change_deleted -484307115 1479231681
+.
+ 
+\change_inserted -484307115 1479233122
+ unlike my paper, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "SS01"
+
+\end_inset
+
+ do not consider information disclosure policy and focus instead on 
+\change_deleted -484307115 1479231606
+However, they study
+\change_inserted -484307115 1479231687
+corrective
+\change_unchanged
+ taxes
+\change_deleted -484307115 1479231606
+ as the intermediary's intervention policy
+\change_unchanged
+.
+ In contrast to 
+\change_deleted -484307115 1479231821
+many search-and-matching models where the main source of inefficiency is
+ mis-coordination due to simultaneity and unavailability (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BSW01,Kir09,AJK14"
+
+\end_inset
+
+), I assume away the simultaneity and unavailability driven frictions to
+ focus on cream-skimming.
+\change_inserted -484307115 1479231843
+many search-and-matching models that have inefficiency result from  simultaneity
+ of requests and uncertain unavailability of sellers (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BSW01,Kir09,AJK14"
+
+\end_inset
+
+), I assume away these frictions in order to highlight cream-skimming.
+
+\change_unchanged
+ 
+\change_deleted -484307115 1479231937
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LM10"
+
+\end_inset
+
+ show that in online advertising markets, standardization, or “conflation,”
+ helps to address at least two problems associated with excessive targeting—adve
+rse selection and reduced competition.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "EFL16"
+
+\end_inset
+
+ point out that in peer-to-peer markets there is an important tradeoff between
+ eliciting dispersed information and minimizing various transactions costs
+ to keep the user experience convenient.
+ My paper studies a related question of what buyer information, even if
+ elicited, should be reported to sellers.
+ Taking into account that elicitation may be costly, my paper can inform
+ the designers on how detailed data should be collected from the users.
+\change_inserted -484307115 1479231937
+Further, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LM10"
+
+\end_inset
+
+ show that in online advertising markets, standardization, or “conflation,”
+ helps to address at least two problems associated with excessive targeting—adve
+rse selection and reduced competition.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "EFL16"
+
+\end_inset
+
+ point out the  important tradeoff in peer-to-peer markets between eliciting
+ dispersed information and minimizing  transactions costs to keep the user
+ experience convenient.
+ My paper studies the related question of what buyer information should
+ be reported to sellers.
+ Taking into account that information elicitation may be costly, my paper
+ can inform the designers on what data should be collected from the users.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -484307115 1479232066
+The paper also contributes to the literature on information design (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AMS95"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GH80"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mil81"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RS10"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM16-TE"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kol15"
+
+\end_inset
+
+), as it extends the model of the disclosure problem with a heterogeneous
+ audience to the case with endogenously available and forward-looking receivers
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-fi 
+as in Mortensen 82 and Pissarides 90?
 \end_layout
 
 \end_inset
 
+.
+ Although forward-looking, the receivers receive one signal per job, which
+ differs my work from the gradual learning settings of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ely15"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Smo15"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RS10"
+
+\end_inset
+
+ study the setting with arbitrary complementarities between the sender's
+ and receiver's payoffs and show that the sender-optimal disclosure policy
+ pools 
+\begin_inset Quotes eld
+\end_inset
+
+non-ordered prospects
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Compared to them, I have a simpler sender's payoff function, all prospects
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+ordered,
+\begin_inset Quotes erd
+\end_inset
+
+ but the receivers have strategic interactions and optimize dynamically.
+ 
+\change_inserted -484307115 1479233176
+The paper also contributes to the literature on information design (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AMS95"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GH80"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Mil81"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KG11"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RS10"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kol15"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BM16-TE"
+
+\end_inset
+
+) by extending  the disclosure problem with a heterogeneous audience to
+ the case with endogenously available and forward-looking receivers
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479232066
+as in Mortensen 82 and Pissarides 90?
+\end_layout
+
+\end_inset
+
+.
+ Although forward-looking, the receivers receive one signal per job, which
+ distinguishes my work from the gradual learning settings of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ely15"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Smo15"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RS10"
+
+\end_inset
+
+ study the setting with arbitrary complementarities between the sender's
+ and receiver's payoffs and show that the sender-optimal disclosure policy
+ pools 
+\begin_inset Quotes eld
+\end_inset
+
+non-ordered prospects.
+\begin_inset Quotes erd
+\end_inset
+
+ By contrast, I use a simpler sender payoff function, all prospects are
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ordered,
+\begin_inset Quotes erd
+\end_inset
+
+ but the receivers have strategic interactions and optimize dynamically.
+ 
+\change_unchanged
 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+The role of information is matching and peer-to-peer markets is an active
+ area of economic research.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -484307115 1479232782
+My work differs from the theory of centralized matching (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rot08"
+
+\end_inset
+
+) in that I do not assume that agents know their true preferences over potential
+ partners prior to engaging in a match.
+ Critically, the participants of matching platforms have to inspect potential
+ matches to identify the valuable ones.
+ Papers that study the role of uncertainty in centralized dynamic matching
+ include 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AJM13,ALG16"
+
+\end_inset
+
+.
+ They show that waiting to thicken improves matching in kidney exchange
+ because individual agents do not fully incorporate the benefits of waiting.
+ I emphasize the opposite effect: individual sellers wait too long because
+ they do not fully incorporate the buyer loss form rejections (or buyer
+ costs of waiting).
+ 
+\change_inserted -484307115 1479233208
+My work differs from the theory of centralized matching (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rot08"
+
+\end_inset
+
+) since I do not assume that the agents submit their full ranking of the
+ options available on the marketplace.
+ Critically, the participants of matching platforms have to inspect potential
+ matches to identify the valuable ones.
+ Papers that study the role of uncertainty in centralized dynamic matching
+ include 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AJM13"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ALG16"
+
+\end_inset
+
+.
+ They show that waiting for the market to thicken improves matching in kidney
+ exchange because individual agents do not fully incorporate the benefits
+ of waiting.
+ I emphasize the opposite effect:  Individual sellers wait too long because
+ they do not fully incorporate the buyer loss from rejections (or buyer
+ costs of waiting).
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Paragraph*
 Related Literature.
@@ -1954,7 +2052,7 @@ status open
  design choices.
  Other mechanisms also play an important role in these markets.
  Reputation systems reveal seller quality in ways that reduce both adverse
- selection and moral hazard on the part of sell- ers (Resnick et al.
+ selection and moral hazard on the part of sellers (Resnick et al.
  (2000), Klein, Lambertz and Stahl (Forthcoming), Fradkin et al.
  (2015)).
  Innovative pricing and matching mechanisms such as auctions (Einav et al.
@@ -2062,52 +2160,6 @@ key "HW15"
  My explanation focuses on the matching mechanics and underscores the importance
  of buyer delays and supply heterogeneity in supply-demand fit.
  
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand citet
-key "BM13-Ecma"
-
-\end_inset
-
- focus on linear-quadratic setting with Gaussian beliefs.
- My model is non-linear where non-linearity intrinsically arises due to
- redistribution of buyers across endogenous masses of available workers.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-This result illustrates the more general connection between Bayes correlated
- equilibrium and Bayes Nash equilibrium for all information structures studied
- in Bergemann and Morris (2016 TE), where we showed that a joint distribution
- over actions and states is Bayes correlated equilibrium if and only if
- it forms a Bayes Nash equilibrium distribution under some information structure.
-\begin_inset Quotes erd
-\end_inset
-
-
 \end_layout
 
 \end_inset

@@ -145,16 +145,40 @@ Discussion and Conclusion
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
+This paper studies the role of information intermediation in matching markets
+ and shows that strategic information disclosure can be an effective tool
+ for balancing the tradeoff between match quality and match rate.
+ When the two sides of the market are not symmetric in their preferences
+ for match quality and match rate, the more patient and selective side of
+ the market (sellers in my setting) tends to cream-skim.
+ As a platform's policy, strategic limiting of information can be used to
+ decrease cream-skimming and improve total welfare.
+ In addition, limiting information can alleviate seller coordination failure
+ by offsetting the cream-skimming externality.
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
-
-
-\backslash
-ifdraft{
-\backslash
-color{blue}
+In this paper, I formally studied how inforamtion disclosure in matching
+ markets affects the tradeoff between match quality and match rate.
+ Matching platforms spend significant resources eliciting match-relevant
+ information from the users.
+ The platform uses these data to match users more efficiently, either by
+ developing a centralized assignment mechanism or by enabling effective
+ search.
+ Making detailed use information observable to other users ensures the most
+ valuable matches are formed.
+ However, increased observability can backfire.
+ The search imposes cross-side and same-side externalities, which if unchecked,
+ decrease the match rate and hamper the performance of the marketplace.
+ The platform's goal is to make sure that both sides of the market receive
+ high benefits from participation.
+ First, because users must derive value on the platform comopared to transacting
+ outside of the platform.
+ Second, platform growth depends on the users' positive experiences.
+ To offset the search externalities, the platform need to take more control
+ over the matching process.
+ 
 \end_layout
 
 \end_inset
@@ -163,31 +187,178 @@ color{blue}
 \end_layout
 
 \begin_layout Standard
-Online platforms elicit a lot of information from the users.
- The platform uses this information to match users more efficiently, by
- either making recommendations or structuring their interfaces to facilitate
- search.
- However, providing more information to users to help them search may backfire.
- The search imposes cross-side and same-side externalities, which if unchecked,
- hamper the performance of the marketplace.
- The platform's goal is to make sure that both sides of the market receive
- high benefit from participation.
- Even revenue-maximizing platform at the early stage cares a lot about user
- welfare because it is in the growth stage and is solving a chicken-and-egg
- problem.
+This paper provides a case for a platform's control over the matching process
+ through information design.
+ Strategic information disclosure is less intrusive than direct control
+ and often more accessible than sophisticated pricing schemes.
+ For example, one way to insure that sellers internalize the costs of rejection
+ imposed on buyers is to charge sellers a fee for every rejection.
+ However, such a policy makes transactions too information-sensitive, and
+ makes it unsafe for sellers to participate on the platform.
+
+\series bold
+ 
+\series default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rot08"
+
+\end_inset
+
+ names safety as one of three key requirements for a well-functioning market.
+\end_layout
+
+\end_inset
+
+ Strategic information limitation is relevant in practice and can be found
+ in the design of many platforms.
  
 \end_layout
 
 \begin_layout Standard
-To offset the search externalities, the platform need to take more control
- over the matching process.
- This paper provides a case for doing so using information design.
- Strategic information disclosure is less intrusive than direct control
- and often more feasible than sophisticated transfer schemes.
- For example, a way to make sellers internalize externalities they impose
- by rejecting buyers is to charge them a fee for every rejection.
- However, such a policy creates an unsafe environment for sellers, with
- too large downside risks.
+Next I will consider the information design choices on the successful digital
+ marketplaces.
+ Uber explicitly limits information to improve the efficiency.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:FD-suboptimal"
+
+\end_inset
+
+ shows that if drivers have full information about passenger rides and full
+ discretion over accepting, they cream-skim: acceptance rates are low, and
+ the demand-supply fit is suboptimal.
+ The platform's policy of hiding passenger destination from drivers is used
+ to nudge drivers to accept more rides and avoid the cream-skimming on destinati
+on.
+ 
+\end_layout
+
+\begin_layout Standard
+Hiding destination works in this market because the increase in the driver's
+ expected marginal profit is large enough to induce drivers to accept rides
+ with unknown destination, but the decline in the expected average profit
+ is small enough to keep drivers participating on the platform.
+ Buyers significantly and unambiguously benefit from the resulting shorter
+ wait times, and, in this way, information coarsening improves the quality
+ of service for passengers.
+ 
+\end_layout
+
+\begin_layout Standard
+It the current version of UberX, the passenger destination is fully concealed
+ and is not used in pricing.
+ This paper shows that partial coarsening would be more efficient.
+ For example, my results show that the drivers with higher outside option
+ (low type sellers) require finer disclosure to stay profitable on the platform
+ while drivers with low outside option (high type sellers) can be squeezed.
+ In such situation, the following partial coarsening can work better.
+ The destination of a passenger is discretized into three categories, close,
+ medium-range, and far, where the medium-range is wide enough to include
+ most rides.
+ 
+\end_layout
+
+\begin_layout Standard
+UberX currently uses a simple pricing rule combined with information disclosure
+ coarsening and other requirements for drivers, such as minimal acceptance
+ rates.
+ A natural question is why Uber does not adopt a flexible pricing scheme
+ that would condition price on ride destination.
+ There are several reasons for this.
+ First, consumers appreciate transparent and simple pricing, both because
+ it is easier to assess the cost of a ride before looking it up in the app
+ and because complex pricing can feel like price gauging.
+ Second, flexible pricing that conditions on destination is a non-trivial
+ development task that requires significant development resources.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+UberPool already conditions prices on many variables, and as far as I am
+ aware from private conversations, Uber is testing similarly flexible pricing
+ scheme on its UberX product.
+ Currently, the upfront UberX price is calculated using the expected time
+ and distance of the trip and local traffic, as well as how many riders
+ and nearby drivers have their Uber app open at that moment.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://newsroom.uber.com/upfront-fares-no-math-and-no-surprises/"
+target "https://newsroom.uber.com/upfront-fares-no-math-and-no-surprises/"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Third, and relatedly, it is not feasible to condition on every possible
+ relevant variable in the transportation market.
+ There is some complexity threshold for the designer beyond which increasing
+ the price complexity is not justified on practicality grounds.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Seg07"
+
+\end_inset
+
+ for the study of communication requirements of social choice rules.
+ It demonstrates that in some social choice problems, the space of prices
+ that must be discovered is prohibitively large.
+ 
+\end_layout
+
+\end_inset
+
+ In particular, 
+\series bold
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[
+\series bold
+FIND A BETTER WAY TO TRANSITION TO THIS POINT FROM YOUR PREVIOUS PARAGRAPH]
+\end_layout
+
+\end_inset
+
+
+\series default
+ the destination variable should be discretized to be practically useful
+ for pricing.
+ Finally, Uber has sufficient data on its users to introduce personalized
+ pricing for each passenger independent of just individual destination.
+ Because of a risk of price-discrimination litigation, personalized pricing
+ has not been implemented.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[
+\series bold
+FIND A BETTER WAY TO TRANSITION TO THIS closing thought]
+\end_layout
+
+\end_inset
+
+ Understanding the benefits of information disclosure over flexible transfer
+ schemes is an important venue for the future research.
  
 \end_layout
 
@@ -196,35 +367,6 @@ To offset the search externalities, the platform need to take more control
 status open
 
 \begin_layout Plain Layout
-Uber and other TNC
-\end_layout
-
-\end_inset
-
-Using the marketplaces I touched on earlier, on Uber, 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "prop:FD-suboptimal"
-
-\end_inset
-
- shows that if drivers have full discretion over accepting, they cream-skim:
- acceptance rates are low, and the demand-supply fit is suboptimal.
- hiding passenger destination is used to nudge drivers accept more rides
- and avoid cream-skimming along the destination attribute.
- Therefore coarsening improves quality of the service for passengers.
- It the current version of UberX, the passenger destination it is fully
- concealed.
- Partial coarsening can be more efficient in achieving the platform's goal.
- For example, my results show that drivers with higher outside option (low
- type sellers) require finer disclosure to stay profitable while drivers
- with low outside option (high type sellers) can be squeezed.
- In such situation, partial coarsening can work better.
- For example, the destination of a passenger can be split into three categories:
- close, medium-range, far.
-\end_layout
-
-\begin_layout Standard
 Uber has a version of cream-skimming due to option value of waiting, where
  drivers game the system to ride up surge pricing.
  They cancel jobs as prices surge so they make more money.
@@ -241,85 +383,116 @@ but how would coarsening work here?
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Airbnb and other short-term rental companies
-\end_layout
-
 \end_inset
 
-On Airbnb, 
+
+\end_layout
+
+\begin_layout Standard
+For Airbnb, 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "prop:FD-suboptimal"
 
 \end_inset
 
- shows that if hosts have full discretion over accepting or rejecting guest
- requests, hosts screen excessively: acceptance rates are too low to satisfy
- guest demand for hassle-free service, and the marketplace is removed from
- its full potential.
- Airbnb introduced InstantBook feature to satisfy the guests’ demand for
- faster and hassle-free search.
- In my model, it corresponds to the no disclosure policy.
- However, one could imagine a finer tool that allowed a host to specify
- guest types that were permitted to use the InstantBook.
- Very fine customer segmentation would bring us back to the problem of cream-ski
-mming.
- The optimal guest segmentation should be designed to balance the hosts'
- demand for transparency and guest demand for convenience.
+ shows that hosts cream-skim if they have detailed information about guests.
+ This results in low acceptance rates that fail to satisfy guest demand
+ for convenient booking service, thereby compromising marketplace performance.
+ The Instant Book feature in its current version acts as an information
+ coarsening policy, incentivizing hosts to accept more guest requests.
+ As a first order effect, guests benefit because booking is fast.
+ As a second order effect, sellers also benefit, because better user experience
+ attracts more guests to the platform.
+ As a result, total welfare increases, in addition to platform participation.
+ 
+\end_layout
+
+\begin_layout Standard
+Optimal guest segmentation in the Instant Book feature should remain coarse.
+ Too fine segmentation of guests brings back the problem of cream-skimming.
  The problem of optimal guest segments is equivalent to the problem of the
- optimal information disclosure, and can be analyzed using the framework
- presented in this paper.
- Specifically, markets with higher buyer-to-seller ratio require coarser
- guest segmentation than the markets with low buyer-to-seller ratio.
+ optimal information disclosure and can be analyzed within the framework
+ of this paper.
+ Specifically, the optimal guest segmentation balances host demand for transpare
+ncy and guest demand for convenience.
+ Furthermore, markets with a higher buyer-to-seller ratio require coarser
+ guest segmentation than the markets with a low buyer-to-seller ratio.
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Taskrabbit and other online temp agencies
-\end_layout
-
-\end_inset
-
-On TaskRabbit, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The service provider may prefer to reject the tasks which he does not find
- to be a good fit to his skill, or those that are too far, or those with
- bad timing.
- 
-\end_layout
-
-\end_inset
-
- 
+For TaskRabbit and other temp agencies, 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "prop:FD-suboptimal"
 
 \end_inset
 
- shows that if service providers have full discretion over accepting or
- rejecting client leads, they screen excessively: acceptance rates a low,
- the utilization of labor force on the platform is inefficiently low, and
- the matching efficiency is suboptimal.
+ shows that if service providers understand well their payoffs from the
+ offered tasks, they cream-skim.
+ A service provider may prefer to reject the tasks that are too far in terms
+ of traveling distance, inconvenient in timing, or uninteresting.
+ This cream-skimming yields low labor force utilization, which is inefficient
+ from the platform's perspective.
+ Buyers prefer to be able to hire workers on demand.
+ TaskRabbit's solution was to redesign the matching system so that service
+ providers commit to an hourly rate over a broad category of tasks.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://blog.taskrabbit.com/2014/06/17/unveiling-the-new-taskrabbit/"
+target "https://blog.taskrabbit.com/2014/06/17/unveiling-the-new-taskrabbit/"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ The benefit of this coarsening is two-fold.
+ First, as in the above examples, it nudges the service providers to accept
+ more tasks by increasing their expected marginal profit.
+ Second, since the platform uses only task type (e.g.
+ Home Cleaning) to match clients and workers, the platform need to elicit
+ from clients only the type of the requested task.
+ This further improves the clients' experience on the platform, because
+ answering multiple questions is burdensome for the clients.
  
+\end_layout
+
+\begin_layout Standard
+This paper focuses on the limited set of the platform's design choices.
+ Other mechanisms also critically impact these markets.
+ Flexible pricing and such matching mechanisms as real-time auctions, surge
+ pricing, recommender systems
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Buyers benefit from the on-demand experience on the labor platform.
+anyting else?
+\end_layout
+
+\end_inset
+
+, may also help to ensure a good supply-demand fit.
+ The relative effectiveness of different design choices is an exciting area
+ for further work.
  
+\series bold
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+[THIS LAST PARAGRAPH SEEMS TO BE DIFFERENT FROM THE REST OF THE DISCUSSION
+ IN YOUR CONCLUSION...DO YOU WANT TO END WITH THIS?]
 \end_layout
 
 \end_inset
@@ -328,37 +501,26 @@ Buyers benefit from the on-demand experience on the labor platform.
 \end_layout
 
 \begin_layout Standard
-In this paper, I formally studied the tradeoff between the discouragement
- and the individual’s need for feedback.
- 
-\end_layout
-
-\begin_layout Standard
-I showed...
-\end_layout
-
-\begin_layout Standard
-I abstracted away many aspects of feedback that are relevant in practice
- and can be found in the organization behavior and education literature.
-\end_layout
-
-\begin_layout Standard
-The systematic studies of existing feedback practices and their effects
- on performance are essential to inform further research in this area.
- The integral approach that includes both theoretical and empirical studies
- would help bolster understanding of feedback provision and guide feedback
- practices in organizations.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
+implications for the platform design.
+ 1.
+ 
+\begin_inset Quotes eld
+\end_inset
 
-}
-\backslash
-fi
+First, it alerts to potentially adverse effects
+\end_layout
+
+\begin_layout Plain Layout
+of increasing performance transparency in organizations.
+\begin_inset Quotes erd
+\end_inset
+
+ 2.
+ 
 \end_layout
 
 \end_inset

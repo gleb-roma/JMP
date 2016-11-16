@@ -12,6 +12,7 @@
 \usepackage{relsize}
 \usepackage{graphicx}
 
+
 %\usepackage{showkeys}
 \usepackage{cleveref}
 
@@ -268,13 +269,29 @@ draftfalse
 \end_layout
 
 \begin_layout Title
-Ignorance is Strength: Improving Performance of Matching Markets by Limiting
+Ignorance Is Strength: Improving Performance of Matching Markets by Limiting
  Information
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Ignorance is Strength: When Should Matching Platforms Limit Information?
+
+
+\backslash
+ifdraft
+\end_layout
+
+\end_inset
+
+[Alternatively: When Should Matching Platforms Limit Information?]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
 \end_layout
 
 \end_inset
@@ -284,12 +301,21 @@ Ignorance is Strength: When Should Matching Platforms Limit Information?
 status open
 
 \begin_layout Plain Layout
-I am indebted to my advisors Susan Athey, Drew Fudenberg, Greg Lewis and
+I am indebted to my advisors Susan Athey, Drew Fudenberg, Greg Lewis, and
  Tomasz Strzalecki for their guidance and support.
  For additional guidance, I thank Chiara Farronato and Andrei Hagiu.
- For helpful discussions I thank Andrey Fradkin, Ben Golub, Jeffrey Picel,
- Alex Smolin, Divya Kirti, Beyonce and seminar participants at Harvard Universit
-y and MIT.
+ For helpful discussions, I thank Andrey Fradkin, Ben Golub, Jeffrey Picel,
+ Alex Smolin, Divya Kirti, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Beyonce,
+\end_layout
+
+\end_inset
+
+ and seminar participants at Harvard University and MIT.
  
 \end_layout
 
@@ -386,7 +412,7 @@ oking agents with general type distribution is developed.
 
 \begin_layout Abstract
 This paper develops a model for studying the problem of information disclosure
- faced by a platform matching buyers and sellers.
+ faced by a platform that matches buyers and sellers.
  Buyers search for sellers and are time-sensitive, while sellers have limited
  capacity for serving buyers and derive heterogeneous payoffs from being
  matched with different buyers.
@@ -407,14 +433,14 @@ I develop a model in which time-sensitive buyers seek seller services, the
  I show that full information disclosure is inefficient because of excessive
  rejections by the sellers.
  When the platform observes the sellers' payoff function, it can restore
- the full efficiency using a coarse disclosure policy, which recommends
- to each seller an action.
- When seller preferences are unknown to the platform, I characterize the
- disclosure policy that maximizes the total welfare.
- Tighter capacity constraints or higher buyer-to-seller ratio require coarser
- disclosure.
- In a linear payoff environment with uniform distribution of seller attributes,
- the efficient disclosure is 
+ the full efficiency by using a coarse disclosure policy, which recommends
+ an action to each seller.
+ For the case where seller preferences are unknown to the platform, I characteri
+ze the disclosure policy that maximizes total welfare.
+ Tighter capacity constraints or a higher buyer-to-seller ratio requires
+ coarser disclosure.
+ In a linear payoff environment with a uniform distribution of seller attributes
+, the efficient disclosure policy is 
 \emph on
 upper-coarsening
 \emph default
@@ -428,8 +454,9 @@ what's upper coarsening?
 
 \end_inset
 
- For general distribution of seller attributes, I develop an approach to
- solving the disclosure problem with heterogeneous and forward-looking sellers.
+ For a general distribution of seller attributes, I develop an approach
+ to solving the disclosure problem with heterogeneous and forward-looking
+ sellers.
  
 \end_layout
 
@@ -559,18 +586,9 @@ filename "sections/market_design.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
-filename "sections/extensions.lyx"
-
-\end_inset
-
-
-\end_layout
+filename "sections/conclusion.lyx"
 
 \end_inset
 
@@ -584,7 +602,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
-filename "sections/conclusion.lyx"
+filename "sections/extensions.lyx"
 
 \end_inset
 

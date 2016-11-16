@@ -119,7 +119,7 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -244,7 +244,7 @@ theorems-ams-extended-bytype
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Section*
 Appendix
 \end_layout
 
@@ -270,7 +270,7 @@ Done.
 
 \end_inset
 
-Fix the arbitrary increasing 
+Fix an arbitrary increasing 
 \begin_inset Formula $\alpha(y)\in[0,1]$
 \end_inset
 
@@ -284,7 +284,7 @@ Fix the arbitrary increasing
 
 \begin_deeper
 \begin_layout Itemize
-Average utilization rate 
+The average utilization rate 
 \begin_inset Formula $\bar{\rho}\in[0,1]$
 \end_inset
 
@@ -301,34 +301,16 @@ Average utilization rate
 
 \begin_layout Itemize
 
-\family roman
-\series medium
 \shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-The solution 
+\emph on
+A solution 
 \begin_inset Formula $\bar{\rho}$
 \end_inset
 
  exists, is unique, 
-\family default
-\series default
 \shape default
-\size default
 \emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-increases in 
+and is increasing in 
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
@@ -349,15 +331,15 @@ increases in
 \end_layout
 
 \begin_layout Itemize
-Utilization rate of type 
+The utilization rate of type 
 \begin_inset Formula $y$
 \end_inset
 
- 
+, 
 \begin_inset Formula $\rho(y)$
 \end_inset
 
- increases in 
+, is increasing in 
 \begin_inset Formula $\alpha(y')$
 \end_inset
 
@@ -386,7 +368,7 @@ reference "eq:SS"
 
 \end_inset
 
-Take the integral using cdf 
+Take the integral using the cdf 
 \begin_inset Formula $G(y)$
 \end_inset
 
@@ -432,7 +414,7 @@ reference "eq:nubar"
 \begin_inset Formula $\int\frac{dG(y)}{\beta\tau\alpha(y)}\geq1$
 \end_inset
 
-, using Assumption 
+, using 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "assu:no-excess-demand"
@@ -440,8 +422,8 @@ reference "assu:no-excess-demand"
 \end_inset
 
 .
- Therefore, the solutions exists and is unique.
- Monotonicity of 
+ Therefore, a solutions exists and is unique.
+ The monotonicity of 
 \begin_inset Formula $\brho$
 \end_inset
 
@@ -450,15 +432,23 @@ reference "assu:no-excess-demand"
 \end_layout
 
 \begin_layout Proof
-Finally, if 
-\begin_inset Formula $\alpha(y')$
+Finally, consider a perturbation: 
+\begin_inset Formula $\alpha$
 \end_inset
 
- increases (at the neighborhood of 
+ increases in some neighborhood of 
 \begin_inset Formula $y'$
 \end_inset
 
-), 
+.
+ It is easy to see from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nubar"
+
+\end_inset
+
+ that 
 \begin_inset Formula $\brho$
 \end_inset
 
@@ -475,7 +465,11 @@ reference "eq:14"
 \begin_inset Formula $\rho(y)$
 \end_inset
 
- increases.
+ is increasing in 
+\begin_inset Formula $\alpha(y')$
+\end_inset
+
+.
  
 \end_layout
 
@@ -549,7 +543,7 @@ reference "eq:SS"
 \end_inset
 
 .
- Take expectation wrt 
+ Take the expectation wrt 
 \begin_inset Formula $y$
 \end_inset
 
@@ -605,7 +599,7 @@ status collapsed
 \end_inset
 
 .
- In the steady state equilibrium with disclosure policy 
+ In the steady-state equilibrium with disclosure policy 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -655,7 +649,7 @@ Considering exogenous variations of
 \begin_inset Formula $\betaa\tau$
 \end_inset
 
- in the seller optimization problem 
+ in the seller optimization problem, 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:V-zhat-Lambda"
@@ -687,12 +681,12 @@ reference "lem:Vmu"
 
 \end_inset
 
-, the the accepted jobs are those with 
+, the accepted jobs are those with 
 \begin_inset Formula $z<\zhaty$
 \end_inset
 
 .
- Using definition of 
+ Using the definition of 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -703,7 +697,7 @@ reference "eq:Lambda"
 
 \end_inset
 
-, probability of accepting is
+, the probability of accepting is
 \begin_inset Formula 
 \begin{align*}
 \lambda\{z(s)<\zhaty\} & \leq\alpha(y)\leq\lambda\{z(s)\leq\zhaty\}\\
@@ -713,11 +707,11 @@ F^{\lambda}(\zhaty-) & \leq\alpha(y)\leq F^{\lambda}(\zhaty+)\\
 
 \end_inset
 
-Points of discontinuity of 
+The points of discontinuity of 
 \begin_inset Formula $F^{\lambda}$
 \end_inset
 
- make a set of measure zero.
+ constitute a set of measure zero.
  Since seller types have full support on 
 \begin_inset Formula $[0,\oy]$
 \end_inset
@@ -777,11 +771,11 @@ Since
 \end_inset
 
 .
- And for 
+ And for sufficiently large 
 \begin_inset Formula $y$
 \end_inset
 
- large enough, 
+, 
 \begin_inset Formula $\zhaty>1$
 \end_inset
 
@@ -827,7 +821,7 @@ reference "eq:V-zhat-Lambda"
 \end_layout
 
 \begin_layout Section
-Proofs of Propositions 1-3
+Proofs of Propositions 1–3
 \end_layout
 
 \begin_layout Proof
@@ -865,7 +859,7 @@ name "proof:eqm-exists"
 \end_inset
 
  Step 1.
- Restricting set of strategies to cutoff strategies.
+ Restricting the set of strategies to cutoff strategies.
  Fix 
 \begin_inset Formula $y\in Y$
 \end_inset
@@ -878,11 +872,11 @@ reference "eq:V-via-pi"
 
 \end_inset
 
- the optimal seller strategy is such that all 
+, the optimal seller strategy is such that all signals from 
 \begin_inset Formula $S_{a}(y)=\{s\colon\pi(s,y)>\tau V(y)\}$
 \end_inset
 
- are accepted, all 
+ are accepted, all signals from 
 \begin_inset Formula $S_{r}(y)=\{s\colon\pi(s,y)<\tau V(y)\}$
 \end_inset
 
@@ -892,19 +886,19 @@ reference "eq:V-via-pi"
 \end_inset
 
 .
- Therefore any optimal strategy has the cutoff form:
+ Therefore any optimal strategy has the cutoff form
 \begin_inset Formula 
 \[
 \sigma(s,y)=\begin{cases}
 1, & s\in S_{a}(y)\\
-\in[0,1], & S_{m}(y)\\
+\in[0,1], & s\in S_{m}(y)\\
 0, & s\in S_{r}(y)
 \end{cases}
 \]
 
 \end_inset
 
-Denote the cutoff for type-
+Denote the cutoff for a type-
 \begin_inset Formula $y$
 \end_inset
 
@@ -957,7 +951,7 @@ reference "eq:17"
 \begin_inset Formula $\hatpi(y)$
 \end_inset
 
- while the left hand side is decreasing in 
+ while the right-hand side is decreasing in 
 \begin_inset Formula $\hatpi(y)$
 \end_inset
 
@@ -968,11 +962,11 @@ reference "eq:17"
 \begin_layout Proof
 Step 2.
  Existence.
- Consider a correspondence 
+ Consider the correspondence 
 \begin_inset Formula $\psi\colon[0,1]\rightrightarrows[0,1]$
 \end_inset
 
-, which maps 
+ which maps 
 \begin_inset Formula $\bar{\rho}$
 \end_inset
 
@@ -988,8 +982,7 @@ reaction
 \begin_inset Formula $\bar{\rho}$
 \end_inset
 
-'s by the following procedure.
- To find 
+'s by the following procedure: To find 
 \begin_inset Formula $\psi(\bar{\rho})$
 \end_inset
 
@@ -1009,7 +1002,7 @@ reference "eq:17"
 \end_inset
 
 .
- Cutoff 
+ The cutoff 
 \begin_inset Formula $\hatpi$
 \end_inset
 
@@ -1017,7 +1010,7 @@ reference "eq:17"
 \begin_inset Formula $\alpha$
 \end_inset
 
- uniquely because marginal signals from 
+ uniquely, because marginal signals from 
 \begin_inset Formula $S_{m}$
 \end_inset
 
@@ -1030,7 +1023,7 @@ reference "eq:17"
 \begin_inset Formula $\hatpi(y)$
 \end_inset
 
- are integrable 
+ are integrable functions
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
@@ -1042,16 +1035,16 @@ reference "eq:17"
 
 \end_inset
 
-Take all 
+Denote by 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ the set of 
 \begin_inset Formula $\alpha$
 \end_inset
 
  that are congruent with 
 \begin_inset Formula $\hatpi$
-\end_inset
-
-, call this set 
-\begin_inset Formula $\mathcal{A}$
 \end_inset
 
 .
@@ -1371,7 +1364,7 @@ Step 3.
 \end_inset
 
 .
- Suppose 
+ Suppose, furthermore, that 
 \begin_inset Formula $\bar{\rho}^{1}>\bar{\rho}^{2}$
 \end_inset
 
@@ -1388,7 +1381,7 @@ reference "eq:17"
 
 \end_inset
 
- 
+, 
 \begin_inset Formula $\hatpi^{1}(y)>\hatpi^{2}(y)$
 \end_inset
 
@@ -1415,7 +1408,7 @@ follows from
 
 \end_inset
 
-If so, then whenever 
+Thus, whenever 
 \begin_inset Formula $\pi(s,y)\geq\hatpi^{1}(y)$
 \end_inset
 
@@ -1429,7 +1422,7 @@ If so, then whenever
 \end_inset
 
 .
- Therefore 
+ Therefore, 
 \begin_inset Formula $\alpha^{2}(y)\geq\lambda(S_{a}^{2})\geq\lambda(S_{a}^{1}\cup S_{m}^{1})\geq\alpha^{1}(y)$
 \end_inset
 
@@ -1449,8 +1442,7 @@ reference "lem:rho-and-monotonicities"
 \begin_inset Formula $\bar{\rho}^{2}\geq\bar{\rho}^{1}$
 \end_inset
 
-.
- A contradiction.
+, a contradiction.
  
 \end_layout
 
@@ -1602,7 +1594,7 @@ reference "eq:SS"
  Therefore,
 \begin_inset Formula 
 \begin{align*}
-V(y) & =\frac{\int\pi(s,y)\sigma(s,y)d\lambda(s)}{\alpha(y)}\frac{\rho(y)}{\tau}=\\
+V(y) & =\frac{\int\pi(s,y)\sigma(s,y)d\lambda(s)}{\alpha(y)}\frac{\rho(y)}{\tau}\\
  & =\Exp[\pi(s,y)\mid\text{acc.}]\frac{\rho(y)}{\tau}.
 \end{align*}
 
@@ -1634,12 +1626,12 @@ Now
 \begin_inset Formula $\sigma^{FD}$
 \end_inset
 
- prescribes that jobs 
+ prescribes that jobs in 
 \begin_inset Formula $\{x\colon\pi(x,y)>\tau V(y)\}$
 \end_inset
 
  are accepted with probability 1.
- Consider an alternative strategy profile
+ Consider an alternative strategy profile:
 \begin_inset Formula 
 \begin{align*}
 \tilde{\sigma}(x,y) & =\begin{cases}
@@ -1715,6 +1707,13 @@ reference "prop:Pareto-frontier"
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "proof:id-sellers-Pareto-frontier"
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -1724,7 +1723,7 @@ Done.
 
 \end_inset
 
-Take any Pareto optimal pair 
+Take any Pareto-optimal pair 
 \begin_inset Formula $O=(V,CS)$
 \end_inset
 
@@ -1733,7 +1732,7 @@ Take any Pareto optimal pair
 \begin_inset Formula $O$
 \end_inset
 
- is feasible, there is seller strategy profile 
+ is feasible, there is a seller strategy profile 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -1742,9 +1741,9 @@ Take any Pareto optimal pair
 \end_inset
 
 .
- Since there is one seller type and two actions, it is sufficient to consider
- only the binary signaling structures (Revelation principle).
- A binary signaling structure has two signals, where a signal is 
+ Since there is one seller type and two actions, it suffices to consider
+ only binary signaling structures (Revelation principle).
+ A binary signaling structure has two signals, where a signal is an 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1761,7 +1760,7 @@ action recommendation
 \begin_inset Formula $s_{r}$
 \end_inset
 
- be the recommendation to reject.
+ the recommendation to reject.
  Denote this signaling structure by 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
@@ -1792,7 +1791,7 @@ reference "eq:V-via-pi"
 \begin_inset Formula $v(s_{r})=0$
 \end_inset
 
-, and 
+ and 
 \begin_inset Formula $V=\beta_{A}(\pi(s_{a})-\tau V)\hat{\lambda}(s_{a})$
 \end_inset
 
@@ -1841,6 +1840,111 @@ For the latter, recall that
 
 \end_layout
 
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:id-sellers-CS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The set of efficient matches is 
+\begin_inset Formula $\hat{X}_{a}:=\{x\in X\colon\pi(x)+u(x)\geq0\}$
+\end_inset
+
+.
+ The efficient disclosure policy 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ sends signal 
+\begin_inset Quotes eld
+\end_inset
+
+accept
+\begin_inset Quotes erd
+\end_inset
+
+ for 
+\begin_inset Formula $x\in\hat{X}_{a}$
+\end_inset
+
+ and signal 
+\begin_inset Quotes eld
+\end_inset
+
+reject
+\begin_inset Quotes erd
+\end_inset
+
+ for 
+\begin_inset Formula $x\notin\hat{X}_{a}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ does not depend on either 
+\begin_inset Formula $\beta$
+\end_inset
+
+ or 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ increases for some 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{X}_{a}$
+\end_inset
+
+ (weakly) expands.
+ Since the set of the buyers accepted in equilibrium, 
+\begin_inset Formula $X_{a}^{FD}:=\{x\in X\colon\pi(x)\geq\tau V^{FD}\}$
+\end_inset
+
+, does not change in response to changes in 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ has to pool more buyer types into the 
+\begin_inset Quotes eld
+\end_inset
+
+accept
+\begin_inset Quotes erd
+\end_inset
+
+ signal.
+ 
+\end_layout
+
 \begin_layout Section
 Proof of 
 \begin_inset CommandInset ref
@@ -1860,7 +1964,7 @@ reference "prop:max-J"
 
 \end_inset
 
- relies on a sequence of lemmas.
+ depends on a sequence of lemmas.
  
 \end_layout
 
@@ -1871,7 +1975,7 @@ name "lem:tau-betaa"
 
 \end_inset
 
-Suppose the linear payoff environment with 
+Consider the linear payoff environment with 
 \begin_inset Formula $G=U[0,\oy]$
 \end_inset
 
@@ -1880,15 +1984,15 @@ Suppose the linear payoff environment with
 \begin_inset Formula $L>0$
 \end_inset
 
- there is 
+, there exist 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
- large enough and 
+ and 
 \begin_inset Formula $\breve{y}$
 \end_inset
 
- (large enough) such that if 
+ that are large enough so that if 
 \begin_inset Formula $\oy\geq\breve{y}$
 \end_inset
 
@@ -1930,7 +2034,7 @@ reference "eq:nubar"
 
 \end_inset
 
-where I made explicit that 
+where I made it explicit that 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -1939,7 +2043,7 @@ where I made explicit that
 \end_inset
 
  in equilibrium.
- Treat the right hand side of 
+ Treat the right-hand side of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:13"
@@ -1954,7 +2058,7 @@ reference "eq:13"
 \begin_inset Formula $\oy$
 \end_inset
 
- and denote it by 
+, and denote it by 
 \begin_inset Formula $\psi(\tau\betaa,\oy)$
 \end_inset
 
@@ -1967,14 +2071,14 @@ reference "eq:13"
 \begin_inset Formula $\tau\betaa$
 \end_inset
 
- because by 
+, because by 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:alpha"
 
 \end_inset
 
- 
+, 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -1991,14 +2095,14 @@ reference "lem:alpha"
 \begin_inset Formula $\oy$
 \end_inset
 
- because by 
+, because by 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:alpha"
 
 \end_inset
 
- 
+, 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -2014,7 +2118,7 @@ reference "lem:alpha"
 
 \end_inset
 
- and uniformity of 
+ and the uniformity of 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2023,11 +2127,11 @@ reference "lem:alpha"
 \end_inset
 
 .
- Pick 
+ Choose 
 \begin_inset Formula $\breve{y}$
 \end_inset
 
- such that 
+ so that 
 \begin_inset Formula $\psi(L,\breve{y})<1$
 \end_inset
 
@@ -2061,7 +2165,13 @@ reference "lem:alpha"
 \end_layout
 
 \begin_layout Lemma
-Suppose the linear payoff environment with 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:nu(ybar)=eps"
+
+\end_inset
+
+Consider the linear payoff environment with 
 \begin_inset Formula $G=U[0,\oy]$
 \end_inset
 
@@ -2070,15 +2180,15 @@ Suppose the linear payoff environment with
 \begin_inset Formula $\eps>0$
 \end_inset
 
- there is 
+, there exist 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
- large enough and 
+ and 
 \begin_inset Formula $\oy$
 \end_inset
 
- large enough, such that 
+ that are large enough so that 
 \begin_inset Formula $\nu(\oy)=\eps$
 \end_inset
 
@@ -2102,7 +2212,7 @@ Note that
 \end_inset
 
 .
- Pick 
+ Choose 
 \begin_inset Formula $L>\eps^{-1}-1$
 \end_inset
 
@@ -2114,7 +2224,7 @@ reference "lem:tau-betaa"
 
 \end_inset
 
- for any 
+, for any 
 \begin_inset Formula $L>0$
 \end_inset
 
@@ -2130,7 +2240,7 @@ reference "lem:tau-betaa"
 \begin_inset Formula $\oy\geq\breve{y}$
 \end_inset
 
-, 
+, then 
 \begin_inset Formula $\tau\betaa\geq L$
 \end_inset
 
@@ -2150,11 +2260,11 @@ reference "eq:V-zhat-Lambda"
 \begin_inset Formula $\alpha(\oy)=1$
 \end_inset
 
- for 
+ for sufficiently large 
 \begin_inset Formula $\oy$
 \end_inset
 
- large enough.
+.
  Therefore, 
 \begin_inset Formula $\nu(\oy)=\frac{1}{1+\tau\betaa\alpha(\oy)}<\frac{1}{1+L}<\eps.$
 \end_inset
@@ -2181,7 +2291,7 @@ name "lem:upper-coarsening-function"
 status open
 
 \begin_layout Plain Layout
-Proof is not rigorous enough.
+no proof.
  
 \end_layout
 
@@ -2214,16 +2324,120 @@ Proof is not rigorous enough.
 
 \end_layout
 
+\begin_layout Proof
+Denote by 
+\begin_inset Formula $z^{*}$
+\end_inset
+
+ the expected value of 
+\begin_inset Formula $x$
+\end_inset
+
+ on the pooled part of 
+\begin_inset Formula $X$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $z=\Exp[x|x>x^{*}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-coarsening, then 
+\begin_inset Formula 
+\begin{equation}
+F^{\lambda}(z)=\begin{cases}
+F(z), & z<x^{*}\\
+F(x^{*}), & z<z^{*}\\
+1, & z\geq z^{*}
+\end{cases}\label{eq:19-1}
+\end{equation}
+
+\end_inset
+
+The integral of 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ gives 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda-upper-coarsening"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Conversely, suppose 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ has a form given in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda-upper-coarsening"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $H(z)=\Lambda'(z)$
+\end_inset
+
+, where 
+\begin_inset Formula $\Lambda'$
+\end_inset
+
+ is the right-derivative.
+ Function 
+\begin_inset Formula $H$
+\end_inset
+
+ has a form given in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:19-1"
+
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ that corresponds to 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is the 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-coarsening.
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
 \end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
 
 \begin_layout Proof
 \begin_inset Argument 1
@@ -2242,8 +2456,26 @@ reference "lem:representaion-of-lambda"
 
 \end_inset
 
-The result is shown in e.g.
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+done.
  
+\end_layout
+
+\end_inset
+
+The result is shown in e.g.
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KLMZ-wp"
+
+\end_inset
+
+ and 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "KG16"
@@ -2251,25 +2483,193 @@ key "KG16"
 \end_inset
 
 .
- The proof uses the fact that distribution of 
-\begin_inset Formula $x$
-\end_inset
-
- is the mean preserving spread of the distribution of posterior means of
+ Here I provide a complete proof using the primitives of my model.
  
-\begin_inset Formula $x$
+\end_layout
+
+\begin_layout Proof
+Sufficiency.
+ Take any 
+\begin_inset Formula $\lambda\in\Delta(S)$
 \end_inset
 
 .
+ According to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lambda"
+
+\end_inset
+
+, the corresponding function is 
+\begin_inset Formula $\Lambda(z;\lambda):=\int_{0}^{z}F^{\lambda}(\zeta)\,d\zeta.$
+\end_inset
+
+ Since 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ is a cdf, 
+\begin_inset Formula $\Lambda(z;\lambda)$
+\end_inset
+
+ is increasing and convex.
+ Since 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ is the distribution of posterior means of 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+ is a mean-preserving spread of 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $F$
+\end_inset
+
+ second-order stochastically dominates 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ .
+ That is, for any 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $\int_{0}^{z}F(\zeta)\,d\zeta\geq\int_{0}^{z}F^{\lambda}(\zeta)\,d\zeta.$
+\end_inset
+
+ Similarly, 
+\begin_inset Formula $F^{\lambda}$
+\end_inset
+
+ is a mean-preserving spread of 
+\begin_inset Formula $\delta_{\Exp[x]}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\underline{\Lambda}(z)\leq\Lambda(z;\lambda)\leq\overline{\Lambda}(z)$
+\end_inset
+
+ for any 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Summarizing, we have that 
+\begin_inset Formula $\Lambda(z;\lambda)\in\mathcal{L}$
+\end_inset
+
+.
+ 
 \end_layout
 
+\begin_layout Proof
+Necessity.
+ Take any 
+\begin_inset Formula $\ell\in\mathcal{L}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $H(z)=\ell'(z)$
+\end_inset
+
+, where 
+\begin_inset Formula $\ell'$
+\end_inset
+
+ denotes the right-derivative.
+ Observe that 
+\begin_inset Formula $\overline{\Lambda}'(0)=\underline{\Lambda}'(0)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{\Lambda}'(1)=\underline{\Lambda}'(1)=1$
+\end_inset
+
+, hence 
+\begin_inset Formula $H(0)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $H(1)=1$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $H$
+\end_inset
+
+ is increasing because 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is convex.
+ Therefore, 
+\begin_inset Formula $H$
+\end_inset
+
+ is a cdf.
+ Furthermore, 
+\begin_inset Formula 
+\[
+\int_{0}^{z}H(\zeta)\,d\zeta=\ell(z)\leq\overline{\Lambda}(z)=\int_{0}^{z}F(\zeta)\,d\zeta\quad\forall z\in[0,1].
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $F$
+\end_inset
+
+ is the mean-preserving spread of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ It follows that there is a garbling of 
+\begin_inset Formula $\lambda^{FD}$
+\end_inset
+
+, call it 
+\begin_inset Formula $\lambda'\in\Delta(S)$
+\end_inset
+
+, such that 
+\begin_inset Formula $F^{\lambda'}=H$
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Bla53"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
+\begin_layout Proof
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -2283,6 +2683,93 @@ reference "lem:Vmu"
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+done.
+\end_layout
+
+\end_inset
+
+The first steps of the proof of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Equilibrium-exists-and"
+
+\end_inset
+
+ show in the case of arbitrary 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ that the seller optimal strategy has a cutoff form.
+ They also show that the cutoff profit value is 
+\begin_inset Formula $\hat{\pi}(y)=\tau V(y)$
+\end_inset
+
+, and moreover (see Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+
+\end_inset
+
+), 
+\begin_inset Formula 
+\begin{align}
+\hatpi(y) & =\tau\betaa\int(\pi(s,y)-\hatpi(y))I\{\pi(s,y)>\hatpi(y))\}\lambda(ds)\label{eq:19}
+\end{align}
+
+\end_inset
+
+It the linear payoff environment, 
+\begin_inset Formula $\pi(s,y)=y-z(s)$
+\end_inset
+
+ and 
+\begin_inset Formula $\hatpi(y)=y-\zhaty$
+\end_inset
+
+ for some 
+\begin_inset Formula $\hat{z}$
+\end_inset
+
+.
+ Plug it back into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:19"
+
+\end_inset
+
+ and obtain
+\begin_inset Formula 
+\begin{align*}
+y-\zhaty & =\tau\betaa\int(\zhaty-z(s))I\{z(s)<\zhaty\}d\lambda(s)\\
+ & =\tau\betaa\int(\zhaty-z)I\{z<\zhaty\}dF^{\lambda}(z)\\
+ & =\tau\betaa\int_{0}^{\zhaty}(\zhaty-z)dF^{\lambda}(z)=\tau\betaa\int_{0}^{\zhaty}F^{\lambda}(z)dz\\
+ & =\tau\betaa\Lambda(\zhaty).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -2318,7 +2805,7 @@ status open
 
 \begin_layout Plain Layout
 Done.
-  
+ 
 \end_layout
 
 \end_inset
@@ -2397,7 +2884,7 @@ Step 2.
 \end_inset
 
 .
- We are going to track variation in all endogeneous variables to eventually
+ We are going to track variation in all endogenous variables to eventually
  solve for 
 \begin_inset Formula $\delta M$
 \end_inset
@@ -2556,7 +3043,7 @@ Step 3.
 \end_inset
 
 .
- In a steady state, each vacancing seller is equivalent to one completed
+ In a steady state, each returning seller is equivalent to one completed
  match.
  Hence the number of matches per unit of time is
 \begin_inset Formula 
@@ -2691,7 +3178,18 @@ reference "lem:optimality-of-up-cen"
 
 \end_inset
 
-Suppose the contrary, 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+complete but hand-wavy.
+ 
+\end_layout
+
+\end_inset
+
+Suppose the contrary, that is, that
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
@@ -2710,15 +3208,19 @@ Suppose the contrary,
 
 \begin_layout Proof
 Let 
-\begin_inset Formula $\Lambda_{0}\in\mathcal{L}$
+\begin_inset Formula $\Lambda_{0}$
 \end_inset
 
- which corresponds to 
+ be the element of 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ that corresponds to 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
 .
- Let 
+ Also, let 
 \begin_inset Formula $y^{*}$
 \end_inset
 
@@ -2726,7 +3228,8 @@ Let
 \begin_inset Formula $\delta\J/\delta\Lambda$
 \end_inset
 
-, and the corresponding cutoff in the seller optimization problem be 
+, and let the corresponding cutoff in the seller optimization problem be
+ 
 \begin_inset Formula $z^{*}=\hat{z}(y^{*};\Lambda_{0})$
 \end_inset
 
@@ -2759,17 +3262,17 @@ reference "eq:Lambda-upper-coarsening"
 
 \end_inset
 
-) that passes through point 
+) that passes through the point 
 \begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
 \end_inset
 
 .
- There is only one such function because there is only one line passing
+ There is only one such function, because there is only one line that passes
  through 
 \begin_inset Formula $(z^{*},\Lambda_{0}(z^{*}))$
 \end_inset
 
- and is tangential to 
+ and is tangent to 
 \begin_inset Formula $\oL$
 \end_inset
 
@@ -2800,7 +3303,7 @@ reference "eq:Lambda-upper-coarsening"
 \end_inset
 
  one of these inequalities is strict.
- Consider variation 
+ Consider the variation 
 \begin_inset Formula 
 \[
 \Lambda^{\eps}(z)=(\tilde{\Lambda}(z)-\Lambda_{0}(z))\eps.
@@ -2882,14 +3385,18 @@ name "proof:prop-5"
 status open
 
 \begin_layout Plain Layout
-Incomplete.
+complete but not polished.
  
 \end_layout
 
 \end_inset
 
-Here I provide the entire complete proof.
- Step 1.
+Here I provide a complete proof.
+ 
+\end_layout
+
+\begin_layout Proof
+Step 1.
  
 \begin_inset Note Note
 status open
@@ -2911,8 +3418,9 @@ reference "lem:main-lemma"
 , 
 \begin_inset Formula 
 \begin{align}
-\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)=\nonumber \\
- & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y),\label{eq:12-1}
+\frac{\delta\J}{\delta\Lambda} & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\frac{\d V}{\d\Lambda}\nonumber \\
+ & =\gamma u\frac{\delta M}{\delta\Lambda}+(1-\gamma)\left(\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)g(y)\betaa\right)\nonumber \\
+ & =(\gamma u+K_{2}(1-\gamma))\frac{\delta M}{\delta\Lambda}+(1-\gamma)\betaa\nu(y)g(y),\label{eq:26}
 \end{align}
 
 \end_inset
@@ -2929,7 +3437,7 @@ where
 ,
 \begin_inset Formula 
 \begin{equation}
-\frac{\delta M}{\delta\Lambda}=K_{1}\oy^{-1}(\nu(y)-\nu^{2}(y))'=K_{1}\oy^{-1}(1-2\nu(y))\nu'(y),\label{eq:13-1-1}
+\frac{\delta M}{\delta\Lambda}=K_{1}\oy^{-1}(\nu(y)-\nu^{2}(y))'=K_{1}\oy^{-1}(1-2\nu(y))\nu'(y),\label{eq:27}
 \end{equation}
 
 \end_inset
@@ -2947,7 +3455,35 @@ where
 \begin_inset Formula $\nu(y)$
 \end_inset
 
- is non-negative and decreasing, 
+ is nonnegative and decreasing, 
+\begin_inset Formula $\d M/\d\Lambda$
+\end_inset
+
+ either is positive for all 
+\begin_inset Formula $y\in[0,\oy]$
+\end_inset
+
+ or crosses 0 from above once.
+ Since 
+\begin_inset Formula $\d\J/\d\Lambda$
+\end_inset
+
+ is a convex combination of 
+\begin_inset Formula $\d M/\d\Lambda$
+\end_inset
+
+ and positive terms
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+yeah but the terms are not constants.
+ A PROBLEM HERE
+\end_layout
+
+\end_inset
+
+, then, similarly, 
 \begin_inset Formula $\d\J/\d\Lambda$
 \end_inset
 
@@ -2987,13 +3523,64 @@ Step 2.
 status open
 
 \begin_layout Plain Layout
-incomplete.
+done.
  
 \end_layout
 
 \end_inset
 
-To see that the cutoff 
+We have that 
+\begin_inset Formula $\frac{\d V}{\d\Lambda}=\frac{\delta M}{\delta\Lambda}K_{2}+\nu(y)\betaa/\oy$
+\end_inset
+
+.
+ Therefore, whenever 
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}\geq0$
+\end_inset
+
+, it is true that 
+\begin_inset Formula $\frac{\d V}{\d\Lambda}>0$
+\end_inset
+
+.
+ Therefore, the disclosure policy that maximizes the seller profits is finer
+ than the disclosure policy that maximizes the match rate.
+ By step 1, the optimal policy is upper-coarsening, and so 
+\begin_inset Formula $x_{1}^{*}\leq x_{0}^{*}$
+\end_inset
+
+.
+ For arbitrary 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{\delta\J}{\delta\Lambda}$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\d V}{\d\Lambda}$
+\end_inset
+
+.
+ Therefore, for any 
+\begin_inset Formula $\gamma<1$
+\end_inset
+
+, whenever 
+\begin_inset Formula $\frac{\delta M}{\delta\Lambda}\geq0$
+\end_inset
+
+, it is true that 
+\begin_inset Formula $\frac{\delta\J}{\delta\Lambda}>0$
+\end_inset
+
+.
+ Therefore, 
 \begin_inset Formula $x_{\gamma}^{*}$
 \end_inset
 
@@ -3001,27 +3588,7 @@ To see that the cutoff
 \begin_inset Formula $\gamma$
 \end_inset
 
-, note that larger 
-\begin_inset Formula $\gamma$
-\end_inset
-
- puts more weight on the positive term in 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:12-1"
-
-\end_inset
-
 .
- Therefore the region of 
-\begin_inset Formula $Y$
-\end_inset
-
- with negative 
-\begin_inset Formula $\d\J/\d\Lambda$
-\end_inset
-
- is smaller.
  
 \end_layout
 
@@ -3065,7 +3632,7 @@ reference "lem:betaa-bounds"
  Using 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:13-1-1"
+reference "eq:27"
 
 \end_inset
 
@@ -3077,7 +3644,7 @@ reference "eq:13-1-1"
 \begin_inset Formula $y$
 \end_inset
 
-, and so it 
+, and so is 
 \begin_inset Formula $\d\J/\d\Lambda$
 \end_inset
 
@@ -3090,21 +3657,142 @@ reference "eq:13-1-1"
 \end_layout
 
 \begin_layout Proof
+Step 4.
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-suppose 
-\begin_inset Formula $\beta\tau$
-\end_inset
-
- is large.
- Incomplete!
+complete but not polished.
+ 
 \end_layout
 
 \end_inset
 
+For any 
+\begin_inset Formula $\gamma$
+\end_inset
 
+, expand Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:26"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\delta\J}{\delta\Lambda}=(\gamma u+K_{2}(1-\gamma))K_{1}\oy^{-1}(1-2\nu(y))\nu'(y)+(1-\gamma)\betaa\nu(y)/\oy.
+\]
+
+\end_inset
+
+We need to show that 
+\begin_inset Formula 
+\[
+\frac{\delta\J}{\delta\Lambda}<0
+\]
+
+\end_inset
+
+ for some 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Use the equality 
+\begin_inset Formula 
+\[
+\nu'(y)=-W''(\zhaty)\nu^{3}(y)\tau\betaa
+\]
+
+\end_inset
+
+to simplify the target inequality into
+\begin_inset Formula 
+\[
+(1-2\nu(y))\nu^{2}(y)\tau W''(\zhaty)K_{1}(\gamma u+(1-\gamma)K_{2})>1-\gamma.
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+, all we need to show is
+\begin_inset Formula 
+\begin{equation}
+(1-2\nu(y))\nu^{2}(y)\tau W''(\zhaty)K_{1}u>0.\label{eq:28-1}
+\end{equation}
+
+\end_inset
+
+By 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:nu(ybar)=eps"
+
+\end_inset
+
+, for any small 
+\begin_inset Formula $\eps>0$
+\end_inset
+
+ I can find 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ large enough so that 
+\begin_inset Formula $\nu(\oy)=\eps$
+\end_inset
+
+.
+ If so, then the inequality in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:26"
+
+\end_inset
+
+ holds.
+ By continuity, there is a range 
+\begin_inset Formula $[\gamma^{*},1]$
+\end_inset
+
+ with some 
+\begin_inset Formula $\gamma^{*}\in[0,1)$
+\end_inset
+
+ such that if 
+\begin_inset Formula $\gamma>\gamma^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\delta\J}{\delta\Lambda}<0$
+\end_inset
+
+ at 
+\begin_inset Formula $y=\oy$
+\end_inset
+
+.
+ By Step 1, the optimal disclosure policy is the upper-coarsening, and some
+ coarsening is necessary because 
+\begin_inset Formula $\frac{\delta\J}{\delta\Lambda}<0$
+\end_inset
+
+ at 
+\begin_inset Formula $y=\oy$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3562,18 +4250,18 @@ No Excess Demand Assumption relaxed
 \end_layout
 
 \begin_layout Standard
-Allow for the case when 
-\begin_inset Formula $\beta(1)\tau\geq1$
+If we allow for the case when 
+\begin_inset Formula $\beta\tau\geq1$
 \end_inset
 
 .
  If 
-\begin_inset Formula $\beta(1)\tau>1$
+\begin_inset Formula $\beta\tau>1$
 \end_inset
 
 , then sellers get overwhelmed by the buyer requests and can't respond to
- all of them to the extent that they can't even reject them.
- To cover this situation we assume that if there are no available sellers
+ all of them, to the extent that they can't even reject them.
+ To cover this situation, we assume that if there are no available sellers
  to reject a pending buyer request, the platform rejects it automatically.
  
 \end_layout
@@ -3594,11 +4282,11 @@ Since some requests can be rejected by the platform, the acceptance rate
 buyers
 \bar default
  face.
- Let at some moment of time there is 
+ Suppose that at some moment in time there is 
 \begin_inset Formula $x\in[0,1]$
 \end_inset
 
- mass of available sellers, and let buyers arrive to the platform at rate
+ mass of available sellers, and let buyers arrive at the platform at rate
  
 \begin_inset Formula $\beta$
 \end_inset
@@ -3612,7 +4300,7 @@ buyers
 \begin_inset Formula $\beta dt$
 \end_inset
 
- new request, and 
+ new requests, and 
 \begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)$
 \end_inset
 
@@ -3634,16 +4322,16 @@ buyers
 \end_inset
 
 .
- There is plenty of available sellers, 
+ There are plenty of available sellers, because 
 \begin_inset Formula $x+\left(\frac{1-x}{\tau}dt\right)>\beta dt$
 \end_inset
 
 .
- Fraction 
+ The entire fraction 
 \begin_inset Formula $\alpha$
 \end_inset
 
- of buyers are accepted, therefore 
+ of requests are accepted; therefore 
 \begin_inset Formula $\alpha^{e}=\alpha$
 \end_inset
 
@@ -3660,9 +4348,9 @@ buyers
 \end_inset
 
 .
- There are few sellers that just became available but in sufficient number
- to process all buyers.
- In the same fashion as in case 1, 
+ Although only a few sellers have just become available, there is a sufficient
+ number of them to receive and process all buyers.
+ Just as in case 1, 
 \begin_inset Formula $\alpha^{e}=\alpha$
 \end_inset
 
@@ -3679,14 +4367,14 @@ buyers
 \end_inset
 
 .
- Not sufficient sellers to process all buyers, some buyers are rejected
- by the platform.
+ There are not enough sellers to process all buyers, so some requests are
+ rejected by the platform.
  The number of accepted jobs is 
 \begin_inset Formula $\frac{1}{\tau}dt$
 \end_inset
 
 .
- The acceptance rate is therefore 
+ The effective acceptance rate is therefore 
 \begin_inset Formula $\alpha^{e}=\frac{1/\tau}{\beta}$
 \end_inset
 
@@ -3695,7 +4383,7 @@ buyers
 \end_layout
 
 \begin_layout Standard
-Combining all there cases, we have that 
+Combining all three cases, we have that 
 \begin_inset Formula 
 \[
 \alpha^{e}=\min\{\alpha,\frac{1}{\tau\beta}\}.
@@ -3707,8 +4395,7 @@ Combining all there cases, we have that
 \end_layout
 
 \begin_layout Standard
-The adjusted definition of equilibrium is then the following.
- 
+The adjusted definition of equilibrium is then the following:
 \end_layout
 
 \begin_layout Enumerate
@@ -3726,8 +4413,8 @@ The adjusted definition of equilibrium is then the following.
 \begin_inset Formula 
 \[
 \beta_{A}=\frac{\beta(\alpha^{e})}{1-\beta(\alpha^{e})\alpha^{e}\tau}=\begin{cases}
-\frac{\beta(\alpha)}{1-\beta(\alpha)\alpha\tau}, & \alpha\beta(\alpha)\tau<1\\
-+\infty, & \alpha\beta(\alpha)\tau\geq1
+\frac{\beta}{1-\beta\alpha\tau}, & \alpha\beta\tau<1\\
++\infty, & \alpha\beta\tau\geq1
 \end{cases}
 \]
 
@@ -3741,10 +4428,10 @@ The adjusted definition of equilibrium is then the following.
 \end_inset
 
  reflects the fact that when the demand is overwhelming, buyers line up
- for sellers so sellers start a new job immediately after they finish the
+ for sellers, so sellers start a new job immediately after they finish the
  previous one.
- The No Excess Demand assumption makes sure that this never happens, 
-\begin_inset Formula $\alpha\beta(\alpha)\tau<1$
+ The No Excess Demand assumption ensures that this never happens, so 
+\begin_inset Formula $\alpha\beta\tau<1$
 \end_inset
 
  for all 
@@ -3756,13 +4443,13 @@ The adjusted definition of equilibrium is then the following.
 \end_layout
 
 \begin_layout Standard
-The next result shows that in the equilibrium there are no lines.
- By this reason for the clarity of exposition we decided to restrict the
+The next result shows that in equilibrium there are no lines.
+ For this reason we improve the clarity of exposition by restricting the
  analysis to the case of no lines to begin with.
  
 \end_layout
 
-\begin_layout Claim*
+\begin_layout Claim
 In equilibrium, 
 \begin_inset Formula $\beta_{A}<\infty$
 \end_inset

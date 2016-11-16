@@ -46,7 +46,7 @@ theorems-ams-extended-bytype
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}, urlcolor=[rgb]{0,0.2,0.5}"
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -150,8 +150,8 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="3">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="15text%">
-<column alignment="left" valignment="top" width="35text%">
+<column alignment="left" valignment="top" width="20text%">
+<column alignment="left" valignment="top" width="30text%">
 <column alignment="left" valignment="top" width="45text%">
 <row>
 <cell alignment="left" valignment="top" usebox="none">
@@ -207,7 +207,7 @@ target "http://www.scholar.harvard.edu/gromanyuk"
 
 \end_layout
 
-\begin_layout Phone
+\begin_layout Plain Layout
 Phone: (617) 308-8394
 \end_layout
 
@@ -228,7 +228,7 @@ Phone: (617) 308-8394
 
 \begin_layout Standard
 My primary research interests lie in the area of microeconomic theory, market
- design, game theory and industrial organization.
+ design, game theory, and industrial organization.
  
 \end_layout
 
@@ -237,25 +237,25 @@ My job marker paper “Ignorance is Strength: Improving Performance of Matching
  Markets by Limiting Information” develops a framework for analyzing information
  disclosure problem in matching markets.
  The model is a persuasion problem on the seller side of the market where
- sellers have limited capacity and dynamic availability.
- I show that increased availability does not necessarily lead to market
+ sellers have preferences over buyers and limited capacity.
+ I show that increased observability does not necessarily lead to market
  improvement.
  Specifically, full disclosure is Pareto-suboptimal for buyer and seller
  surpluses.
  Increased observability of buyer characteristic induces sellers to cream-skim,
  that is to reject inefficiently often.
- Therefore, coarse information disclosure restores efficiency.
- The particular form of necessary coarsening depends on the details of the
- seller payoff function and private information.
+ As a result, coarse information disclosure restores efficiency.
+ The particular form of coarsening necessary to improve the efficiency depends
+ on the details of the seller payoff function and private information.
  I characterize the optimal disclosure mechanism.
  
 \end_layout
 
 \begin_layout Standard
-I also have a coauthored research project “A Price Theoretic Model of Search
- Intermediation by Online Platforms” with Greg Lewis and Albert Wang.
- We analyze the incentives of online search intermediaries in environments
- where buyers must compete for limited supply (e.g.
+In a working paper “A Price Theoretic Model of Search Intermediation by
+ Online Platforms” coauthored with Greg Lewis and Albert Wang, we analyze
+ the incentives of online search intermediaries in environments where buyers
+ must compete for limited supply (e.g.
  airlines, hotels).
  We find conditions on the primitives when an intermediary who maximizes
  seller revenue will optimally maintain positive search costs in order to
@@ -264,7 +264,11 @@ I also have a coauthored research project “A Price Theoretic Model of Search
 \end_layout
 
 \begin_layout Standard
-Next, in a working paper (resubmitted to Theoretical Economics) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I also have a coauthored paper (accepted to Theoretical Economics) 
 \begin_inset Quotes eld
 \end_inset
 
@@ -272,11 +276,11 @@ Active Learning with a Misspecified Prior
 \begin_inset Quotes erd
 \end_inset
 
- coauthored with Drew Fudenberg and Philipp Strack, we study learning and
- information acquisition by a Bayesian agent whose prior belief is misspecified
- in the sense that it assigns probability zero to the true state of the
- world.
- We setup a learning model in continuous time, and using results from the
+ with Drew Fudenberg and Philipp Strack.
+ We study learning and information acquisition by a Bayesian agent whose
+ prior belief is misspecified in the sense that it assigns probability zero
+ to the true state of the world.
+ We set up a learning model in continuous time, and using results from the
  theory of stochastic diffusion processes, provide a complete characterization
  of asymptotic actions and beliefs when the agent’s subjective state space
  is a doubleton.
@@ -284,12 +288,113 @@ Active Learning with a Misspecified Prior
  rate.
 \end_layout
 
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-I look forward to doing research in market design, especially in online
- marketplaces and platforms.
- With the growing abundance and accessibility of data from the digital economy,
- I am open to doing empirical work on these subjects.
+Research agenda.
+ In the recent years, a number of innovative new companies appeared whose
+ business model relies on some type of platform or market design.
+ How should these markets be designed? Research questions on topics of marketpla
+ce design and platform strategy are fascinating and increasingly relevant
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+E.g., 19% of the total US adult population has engaged in a sharing economy
+ transaction (2015, PWC); by 2025, online talent platforms could boost global
+ GDP by $2.7 trillion (McKinsey, 2015).
  
+\end_layout
+
+\end_inset
+
+.
+ Concrete questions I want to explore include
+\end_layout
+
+\begin_layout Itemize
+product company vs.
+ a platform, endogenous network effects (e.g.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HW15-ManSc"
+
+\end_inset
+
+); 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+revenue maximizing matching
+\begin_inset Quotes erd
+\end_inset
+
+, design of matching markets with endogenous participation; 
+\end_layout
+
+\begin_layout Itemize
+the tradeoff between information elicitation and transaction costs (informally
+ introduced in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "EFL16"
+
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Itemize
+centralized vs.
+ decentralized marketplaces;
+\end_layout
+
+\begin_layout Itemize
+the role of coarse information disclosure/standards/conflation in financial
+ markets;
+\end_layout
+
+\begin_layout Itemize
+universal marketplace vs.
+ niche verticals.
+\end_layout
+
+\begin_layout Standard
+Given the abundance of data available on the digital economy, as well as
+ other sectors affected by digitization, I am open to doing empirical work
+ on these subjects.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/gleb/Dropbox/Projects/bib/Online Marketplaces,/Users/gleb/Dropbox/Projects/bib/Auctions,/Users/gleb/Dropbox/Projects/bib/Theory,/Users/gleb/Dropbox/Projects/bib/Mechanism Design,/Users/gleb/Dropbox/Projects/bib/Applied Theory,/Users/gleb/Dropbox/Projects/bib/Math"
+options "apecon"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
