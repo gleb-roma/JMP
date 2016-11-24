@@ -149,7 +149,7 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -382,7 +382,13 @@ Write
  policy.
  The next proposition shows that there is a strategy profile under which
  sellers are strictly better off than in the full-disclosure equilibrium,
- they complete more jobs, and the buyers are also better off.
+ they 
+\change_deleted -484307115 1479681335
+complete more jobs
+\change_inserted -484307115 1479681338
+accept more buyers
+\change_unchanged
+, and the buyers are also better off.
  The result implies that in matching markets, sellers face a coordination
  problem.
 \end_layout
@@ -430,12 +436,40 @@ reference "proof:FD-suboptimal"
 
 .
  A very high-level intuition for the coordination problem is the following:
- A seller keeps his schedule open by rejecting low-value jobs in order to
- increase his own chances of getting high-value jobs.
+ A seller keeps his schedule open by rejecting low-value 
+\change_deleted -484307115 1479681347
+jobs
+\change_inserted -484307115 1479681353
+matches
+\change_unchanged
+ in order to increase his own chances of getting high-value 
+\change_deleted -484307115 1479681357
+jobs
+\change_inserted -484307115 1479681359
+matches
+\change_unchanged
+.
  As a result, in equilibrium, sellers spend a lot of time waiting for high-value
- jobs.
- Collectively, this behavior is suboptimal, because all profitable jobs
- have to be completed.
+ 
+\change_inserted -484307115 1479681366
+matches
+\change_deleted -484307115 1479681364
+jobs
+\change_unchanged
+.
+ Collectively, this behavior is suboptimal, because 
+\change_deleted -484307115 1479681370
+all profitable jobs
+\change_inserted -484307115 1479681378
+both high- and low-value matches
+\change_unchanged
+ have to be 
+\change_inserted -484307115 1479681391
+accepted to maximize the joint seller profits
+\change_deleted -484307115 1479681383
+completed
+\change_unchanged
+.
  I call this behavior 
 \emph on
 cream-skimming
@@ -451,13 +485,25 @@ Here I give a proof sketch for the case of identical sellers, which gives
 \begin_inset Formula $V^{FD}$
 \end_inset
 
- is strictly positive, because sellers accept only profitable jobs.
+ is strictly positive, because sellers accept only profitable 
+\change_deleted -484307115 1479681401
+jobs
+\change_inserted -484307115 1479681403
+buyers
+\change_unchanged
+.
  The opportunity cost of accepting equals 
 \begin_inset Formula $\tau V^{FD}$
 \end_inset
 
 , and so it, too, is strictly positive.
- In equilibrium, the profit on every job that is accepted is 
+ In equilibrium, the profit on every 
+\change_deleted -484307115 1479681429
+job
+\change_inserted -484307115 1479681430
+buyer
+\change_unchanged
+ that is accepted is 
 \begin_inset Formula $\pi(x)\geq\tau V^{FD}$
 \end_inset
 
@@ -473,18 +519,36 @@ reference "eq:V-via-pi"
 \end_inset
 
 ).
- However, the profitable jobs are those with 
+ However, the profitable 
+\change_deleted -484307115 1479681439
+jobs
+\change_inserted -484307115 1479681439
+buyers
+\change_unchanged
+ are those with 
 \begin_inset Formula $\pi(x)\geq0$
 \end_inset
 
 .
- Hence, some profitable jobs are rejected.
+ Hence, some profitable 
+\change_deleted -484307115 1479681445
+jobs
+\change_inserted -484307115 1479681446
+buyers
+\change_unchanged
+ are rejected.
  Consider a strategy 
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
  that maximizes the joint seller profits.
- Such a strategy requires every seller to accept all jobs with 
+ Such a strategy requires every seller to accept all 
+\change_deleted -484307115 1479681453
+jobs
+\change_inserted -484307115 1479681454
+buyers
+\change_unchanged
+ with 
 \begin_inset Formula $\pi(x)\geq0$
 \end_inset
 
@@ -529,10 +593,21 @@ Interestingly, unlike price competition that benefits buyers and improves
 cream-skimming externality
 \emph default
 .
- By rejecting a job, a seller remains available in the marketplace and attracts
- a fraction of subsequent buyers who otherwise would go to other sellers.
- As a result, the other sellers face fewer profitable jobs and realize lower
- profits.
+ By rejecting a 
+\change_deleted -484307115 1479681466
+job
+\change_inserted -484307115 1479681466
+buyer
+\change_unchanged
+, a seller remains available in the marketplace and attracts a fraction
+ of subsequent buyers who otherwise would go to other sellers.
+ As a result, the other sellers face fewer profitable 
+\change_deleted -484307115 1479681471
+job
+\change_inserted -484307115 1479681471
+buyer
+\change_unchanged
+s and realize lower profits.
  The necessary condition for the cream-skimming externality to arise is
  that sellers be forward-looking and capacity constrained.
  
@@ -546,20 +621,52 @@ The fundamental reason behind coordination failure is that collectively,
 are
 \emph default
  capacity constrained.
- When an individual seller accepts a job, he is off the market for time
- 
+ When an individual seller accepts a 
+\change_deleted -484307115 1479681495
+job
+\change_inserted -484307115 1479681495
+buyer
+\change_unchanged
+, he is off the market for time 
 \begin_inset Formula $\tau$
 \end_inset
 
- and cannot accept new jobs.
+ and cannot 
+\change_deleted -484307115 1479681513
+accept new jobs
+\change_inserted -484307115 1479681515
+accept other buyers
+\change_unchanged
+.
  Therefore, when he is available, he is afraid of missing high-value future
- jobs and therefore rejects low-value jobs.
+ 
+\change_deleted -484307115 1479681529
+job
+\change_inserted -484307115 1479681529
+buyer
+\change_unchanged
+s and therefore rejects low-value 
+\change_deleted -484307115 1479681533
+job
+\change_inserted -484307115 1479681533
+buyer
+\change_unchanged
+s.
  However, there are always 
-\bar under
+\emph on
 some
-\bar default
- available sellers in the market, and it is feasible to accept all profitable
- jobs.
+\emph default
+ available sellers in the market, and 
+\change_inserted -484307115 1479681548
+so 
+\change_unchanged
+it is feasible to accept all profitable 
+\change_deleted -484307115 1479681551
+job
+\change_inserted -484307115 1479681551
+buyer
+\change_unchanged
+s.
  Mathematically, the distinction between individual and collective capacity
  constraints is captured by having a continuum of sellers, so that while
  buyer traffic to each individual seller is stochastic, the aggregate buyer
@@ -585,7 +692,13 @@ reference "prop:FD-suboptimal"
 \end_inset
 
 ? In the next section, I give an affirmative answer to this question for
- the case of identical workers.
+ the case of identical 
+\change_deleted -484307115 1479682524
+workers
+\change_inserted -484307115 1479682525
+sellers
+\change_unchanged
+.
  The situation with heterogeneous sellers is trickier, and I study that
  in 
 \begin_inset CommandInset ref
@@ -667,8 +780,20 @@ reject
  With such a binary signaling structure, the seller dynamic optimization
  problem reduces to a static optimization problem.
  Indeed, since there is only one signal with a recommendation to accept,
- there is only one type of acceptable job.
- All profitable jobs are the same, and there is no return to cream-skimming.
+ there is only one type of acceptable 
+\change_deleted -484307115 1479681565
+job
+\change_inserted -484307115 1479681574
+buyers
+\change_unchanged
+.
+ All profitable 
+\change_deleted -484307115 1479681578
+jobs
+\change_inserted -484307115 1479681579
+buyers
+\change_unchanged
+ are the same, and there is no return to cream-skimming.
  Since a Pareto-optimal outcome is feasible (i.e.
  
 \begin_inset Formula $V\geq0$
@@ -769,7 +894,13 @@ input{pictures/pareto_frontier.tex}
 
 \begin_layout Plain Layout
 Graphical illustration of the set of feasible and implementable market outcomes
- in the case of identical workers.
+ in the case of identical 
+\change_deleted -484307115 1479682534
+workers
+\change_inserted -484307115 1479682535
+sellers
+\change_unchanged
+.
  
 \begin_inset Formula $U$
 \end_inset
@@ -822,6 +953,30 @@ key "BBM15"
  (monopolist), who also sets the price, while my model is a signaling game
  with dynamically optimizing receivers whose prices are fixed.
  
+\change_inserted -484307115 1479683359
+The proof of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:Pareto-frontier"
+
+\end_inset
+
+ uses an approach similar to the one used in the proof of the main result
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Smo15"
+
+\end_inset
+
+, who also finds that a binary signaling structure is sufficient to implement
+ a Pareto-efficient outcome.
+ A subtlety of my result is that it is not a priory obvious that the action
+ recommendations of the binary signaling structure are incentive-compatible
+ for dynamically optimizing sellers.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -987,11 +1142,23 @@ TODO: give a proof in the appendix.
 
 \begin_layout Standard
 Second, information disclosure reduces the platform’s ability to induce
- sellers to accept more jobs.
+ sellers to accept more 
+\change_deleted -484307115 1479681588
+jobs
+\change_inserted -484307115 1479681588
+buyers
+\change_unchanged
+.
  Namely, a key observation is that the platform can coarsen information
  to increase the seller expected marginal profit.
  Ignoring dynamic effects, higher marginal profit induces sellers to accept
- more jobs, which leads to higher match rates.
+ more 
+\change_deleted -484307115 1479681600
+job
+\change_inserted -484307115 1479681600
+buyer
+\change_unchanged
+s, which leads to higher match rates.
  Formally, 
 \end_layout
 
@@ -1052,7 +1219,13 @@ Third, more information available to sellers increases their return to search.
  precludes further search.
  As a result, sellers reject more often, and the match rate goes down.
  In equilibrium, it hurts seller profits, because it is not collectively
- optimal for sellers to reject profitable jobs.
+ optimal for sellers to reject profitable 
+\change_deleted -484307115 1479681603
+job
+\change_inserted -484307115 1479681603
+buyer
+\change_unchanged
+s.
  Formally, consider two (non-interacting) sellers: One has unlimited capacity
  (
 \begin_inset Formula $\tau=0$
@@ -1112,7 +1285,13 @@ Let
 \begin_inset Formula $M$
 \end_inset
 
- fixed, the option value of rejecting a marginal job under 
+ fixed, the option value of rejecting a marginal 
+\change_deleted -484307115 1479681610
+job
+\change_inserted -484307115 1479681610
+buyer
+\change_unchanged
+ under 
 \begin_inset Formula $\lambda'$
 \end_inset
 
@@ -1212,8 +1391,13 @@ The match quality effect provides a motive for the platform to disclose
 \end_layout
 
 \begin_layout Standard
-With identical sellers, too many efficient jobs are rejected under full
- disclosure.
+With identical sellers, too many efficient 
+\change_deleted -484307115 1479681616
+jobs
+\change_inserted -484307115 1479681619
+matches
+\change_unchanged
+ are rejected under full disclosure.
  Denote the efficient disclosure policy by 
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
@@ -1235,7 +1419,13 @@ accept
 \begin_inset Quotes erd
 \end_inset
 
- for all jobs in 
+ for all 
+\change_deleted -484307115 1479681639
+jobs
+\change_inserted -484307115 1479681656
+buyers with type
+\change_unchanged
+ in 
 \begin_inset Formula $\hat{X}_{a}$
 \end_inset
 
@@ -1247,12 +1437,28 @@ reject
 \begin_inset Quotes erd
 \end_inset
 
- for all jobs in 
+ for all 
+\change_deleted -484307115 1479681645
+jobs
+\change_inserted -484307115 1479681646
+buyers
+\change_unchanged
+ 
+\change_inserted -484307115 1479681660
+with type 
+\change_unchanged
+in 
 \begin_inset Formula $X\backslash\hat{X}_{a}$
 \end_inset
 
 .
- Under full disclosure, the accepted jobs are 
+ Under full disclosure, the accepted 
+\change_deleted -484307115 1479681666
+job
+\change_inserted -484307115 1479681666
+buyer
+\change_unchanged
+s are 
 \begin_inset Formula $X_{a}^{FD}:=\{x\in X\colon\pi(x)\geq\tau V^{FD}\}$
 \end_inset
 
@@ -1272,14 +1478,26 @@ reject
 \begin_layout Standard
 When sellers are identical, the match rate effects win over the match quality
  effect.
- Indeed, the jobs in 
+ Indeed, the 
+\change_deleted -484307115 1479681674
+job
+\change_inserted -484307115 1479681674
+buyer
+\change_unchanged
+s in 
 \begin_inset Formula $\{x\colon-u(x)\leq\pi(x)\leq0\}$
 \end_inset
 
  are rejected, because sellers fail to internalize the effect of their acceptanc
 e decisions on buyers.
  This is the static match rate effect.
- The jobs in 
+ The 
+\change_deleted -484307115 1479681678
+job
+\change_inserted -484307115 1479681678
+buyer
+\change_unchanged
+s in 
 \begin_inset Formula $\{x\colon0\leq\pi(x)\leq\tau V^{FD}\}$
 \end_inset
 
@@ -1335,8 +1553,19 @@ Suppose the sellers are identical.
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- prescribes pooling more of the marginally profitable jobs with the inframargina
-l jobs.
+ prescribes pooling more of the marginally profitable 
+\change_deleted -484307115 1479681686
+job
+\change_inserted -484307115 1479681686
+buyer
+\change_unchanged
+s with the inframarginal 
+\change_deleted -484307115 1479681687
+job
+\change_inserted -484307115 1479681687
+buyer
+\change_unchanged
+s.
  
 \end_layout
 
@@ -1372,7 +1601,12 @@ status open
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
- would be optimal if sellers were able to complete jobs instantaneously
+ would be optimal if
+\change_inserted -484307115 1479681834
+ sellers became available immediately after accepting a buyer
+\change_deleted -484307115 1479681839
+ sellers were able to complete jobs instantaneously
+\change_unchanged
  (
 \begin_inset Formula $\tau=0$
 \end_inset
@@ -1405,8 +1639,19 @@ status open
 \begin_inset Formula $\hat{\lambda}$
 \end_inset
 
-, the opportunity cost of accepting a profitable job is 0 because all profitable
- jobs are the same.
+, the opportunity cost of accepting a profitable 
+\change_deleted -484307115 1479681872
+job
+\change_inserted -484307115 1479681872
+buyer
+\change_unchanged
+ is 0 because all profitable 
+\change_deleted -484307115 1479681876
+job
+\change_inserted -484307115 1479681876
+buyer
+\change_unchanged
+s are the same.
  
 \end_layout
 
@@ -1491,24 +1736,87 @@ This section studies the information disclosure problem in the linear payoff
 With heterogeneous sellers, the match quality effect is stronger.
  To see why, imagine that there are two types of sellers: professionals
  and amateurs.
- Professionals can profitably complete a larger set of jobs than amateurs.
+ Professionals can profitably 
+\change_deleted -484307115 1479681943
+complete
+\change_inserted -484307115 1479681945
+accept
+\change_unchanged
+ a larger set of 
+\change_deleted -484307115 1479681948
+jobs
+\change_inserted -484307115 1479681949
+buyers
+\change_unchanged
+ than amateurs.
  The platform does not observe the seller type.
  When the platform designs the disclosure policy, it should take into account
  that the same disclosure policy has different impacts on professionals
  than on amateurs.
- On the one hand, amateurs can profitably complete only a small subset of
- jobs, and so they need finer disclosure to distinguish profitable jobs
- from unprofitable ones.
- If the disclosure is too coarse, amateurs reject all jobs.
- On the other hand, professionals have a large set of profitable jobs, and
- so their average profit per job is higher.
- Pooling of more marginally profitable jobs with profitable jobs keeps professio
-nals' average profits positive but induces a higher acceptance rate.
+ On the one hand, amateurs can profitably 
+\change_deleted -484307115 1479681959
+complete
+\change_inserted -484307115 1479681960
+accept
+\change_unchanged
+ only a small subset of 
+\change_deleted -484307115 1479681963
+jobs
+\change_inserted -484307115 1479681966
+buyers
+\change_unchanged
+, and so they need finer disclosure to distinguish profitable 
+\change_deleted -484307115 1479681972
+job
+\change_inserted -484307115 1479681972
+buyer
+\change_unchanged
+s from unprofitable ones.
+ If the disclosure is too coarse, amateurs reject all 
+\change_deleted -484307115 1479681976
+job
+\change_inserted -484307115 1479681976
+buyer
+\change_unchanged
+s.
+ On the other hand, professionals have a large set of profitable 
+\change_deleted -484307115 1479681983
+job
+\change_inserted -484307115 1479681983
+buyer
+\change_unchanged
+s, and so their average profit per 
+\change_deleted -484307115 1479681988
+job
+\change_inserted -484307115 1479681988
+buyer
+\change_unchanged
+ is higher.
+ Pooling of more marginally profitable 
+\change_deleted -484307115 1479681991
+job
+\change_inserted -484307115 1479681991
+buyer
+\change_unchanged
+s with profitable 
+\change_deleted -484307115 1479681993
+job
+\change_inserted -484307115 1479681993
+buyer
+\change_unchanged
+s keeps professionals' average profits positive but induces a higher acceptance
+ rate.
  Thus whether it is optimal to coarsen the information disclosure or not
  depends on the relative population sizes of amateurs and professionals.
  If there are more professionals than amateurs, then coarser disclosure
  is optimal, as it increases the total acceptance rate even though the amateurs
- stop working.
+ stop 
+\change_deleted -484307115 1479682561
+working
+\change_inserted -484307115 1479682562
+matching
+\change_unchanged
+.
  If there are more amateurs, finer disclosure is optimal.
  In the rest of this section, I rigorously study this problem for the general
  continuous distribution of seller types.
@@ -1529,7 +1837,17 @@ linear payoff
 \begin_inset Formula $x$
 \end_inset
 
- is the level of difficulty of the job.
+ is the level of difficulty of the
+\change_inserted -484307115 1479682010
+ buyer's
+\change_unchanged
+ 
+\change_deleted -484307115 1479682012
+job
+\change_inserted -484307115 1479682012
+task
+\change_unchanged
+.
  The space of seller types is 
 \begin_inset Formula $Y=[0,\oy]$
 \end_inset
@@ -1891,8 +2209,27 @@ reference "prop:max-J"
 
 \end_inset
 
- shows that the optimal disclosure involves pooling of hard tasks and truthfully
- revealing easy tasks.
+ shows that the optimal disclosure involves pooling of 
+\change_deleted -484307115 1479682423
+hard
+\change_unchanged
+ 
+\change_deleted -484307115 1479682141
+tasks
+\change_inserted -484307115 1479682427
+buyers with hard tasks
+\change_unchanged
+ and truthfully revealing 
+\change_deleted -484307115 1479682432
+easy
+\change_unchanged
+ 
+\change_deleted -484307115 1479682145
+tasks
+\change_inserted -484307115 1479682435
+buyers with easy tasks
+\change_unchanged
+.
  As we will see in the discussion below, the reason behind this form of
  disclosure is to reduce the professionals' opportunity cost of accepting.
  
@@ -2149,12 +2486,29 @@ reference "eq:V-via-pi"
 \begin_inset Formula $(\mathcal{O}',\mathcal{M})$
 \end_inset
 
-, the sellers accept all profitable jobs, but it still takes time 
+, the sellers accept all profitable 
+\change_deleted -484307115 1479682037
+job
+\change_inserted -484307115 1479682037
+buyer
+\change_unchanged
+s, but 
+\change_deleted -484307115 1479682489
+it still takes time 
 \begin_inset Formula $\tau$
 \end_inset
 
  to complete them.
  
+\change_inserted -484307115 1479682495
+the matches still last 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Corollary
@@ -2386,7 +2740,7 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -484307115 1479163839
+\change_inserted -484307115 1479682040
 Maximizing seller profit may also require a coarse disclosure policy.
  
 \begin_inset CommandInset ref
@@ -2426,7 +2780,7 @@ reference "prop:max-J"
 \end_inset
 
  decreases the professionals' return on rejection and increases the fraction
- of accepted profitable jobs.
+ of accepted profitable buyers.
  This improves seller profits.
  
 \change_unchanged
@@ -2671,8 +3025,13 @@ osure outcome.
 \begin_layout Plain Layout
 Graphical illustration of the set of feasible market outcomes and the limits
  of implementability using information design in the case of heterogeneous
- workers in the linear payoff environment with the uniform seller type distribut
-ion.
+ 
+\change_deleted -484307115 1479682575
+work
+\change_inserted -484307115 1479682575
+sell
+\change_unchanged
+ers in the linear payoff environment with the uniform seller type distribution.
  
 \begin_inset Formula $U$
 \end_inset
@@ -2906,8 +3265,14 @@ reference "lem:Vmu"
 option value of rejecting a
 \emph on
  
+\change_deleted -484307115 1479682050
+
 \emph default
-job with expected difficulty 
+job
+\change_inserted -484307115 1479682051
+buyer
+\change_unchanged
+ with expected difficulty 
 \begin_inset Formula $z$
 \end_inset
 
@@ -3166,11 +3531,23 @@ For any disclosure policy
 \begin_inset Formula $y$
 \end_inset
 
- seller accepts all jobs with expected difficulty 
+ seller accepts all 
+\change_deleted -484307115 1479682093
+job
+\change_inserted -484307115 1479682093
+buyer
+\change_unchanged
+s with expected difficulty 
 \begin_inset Formula $z<\smuth$
 \end_inset
 
- and rejects all jobs with 
+ and rejects all 
+\change_deleted -484307115 1479682104
+job
+\change_inserted -484307115 1479682104
+buyer
+\change_unchanged
+s with 
 \begin_inset Formula $z>\smuth$
 \end_inset
 

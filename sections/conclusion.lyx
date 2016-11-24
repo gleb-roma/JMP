@@ -125,11 +125,12 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -141,7 +142,7 @@ name "sec:Conclusion"
 
 \end_inset
 
-Discussion and Conclusion
+Discussion
 \end_layout
 
 \begin_layout Standard
@@ -152,9 +153,33 @@ This paper studies the role of information intermediation in matching markets
  for match quality and match rate, the more patient and selective side of
  the market (sellers in my setting) tends to cream-skim.
  As a platform's policy, strategic limiting of information can be used to
- decrease cream-skimming and improve total welfare.
- In addition, limiting information can alleviate seller coordination failure
- by offsetting the cream-skimming externality.
+ 
+\change_inserted -484307115 1479777672
+reduce
+\change_deleted -484307115 1479777671
+inhibit
+\change_unchanged
+ cream-skimming and improve total 
+\change_deleted -484307115 1479769985
+welfare
+\change_inserted -484307115 1479769987
+surplus
+\change_unchanged
+.
+ In addition, limiting information 
+\change_deleted -484307115 1479777612
+can
+\change_inserted -484307115 1479777901
+ benefits sellers by offsetting the externality the sellers impose on each
+ other when cream-skimming independently.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -484307115 1479777929
+ alleviate seller coordination failure by offsetting the cream-skimming
+ externality.
 \begin_inset Note Note
 status collapsed
 
@@ -184,6 +209,8 @@ In this paper, I formally studied how inforamtion disclosure in matching
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -196,8 +223,12 @@ This paper provides a case for a platform's control over the matching process
  However, such a policy makes transactions too information-sensitive, and
  makes it unsafe for sellers to participate on the platform.
 
+\change_deleted -484307115 1479778136
+
 \series bold
  
+\change_unchanged
+
 \series default
 
 \begin_inset Foot
@@ -238,26 +269,90 @@ reference "prop:FD-suboptimal"
  to nudge drivers to accept more rides and avoid the cream-skimming on destinati
 on.
  
+\change_inserted -484307115 1479831222
+
 \end_layout
 
 \begin_layout Standard
-Hiding destination works in this market because the increase in the driver's
- expected marginal profit is large enough to induce drivers to accept rides
- with unknown destination, but the decline in the expected average profit
- is small enough to keep drivers participating on the platform.
- Buyers significantly and unambiguously benefit from the resulting shorter
- wait times, and, in this way, information coarsening improves the quality
- of service for passengers.
+Hiding destination 
+\change_inserted -484307115 1479831272
+improves efficiency if 
+\change_deleted -484307115 1479831277
+works in this market because
+\change_inserted -484307115 1479831434
+ the resulting
+\change_unchanged
+ 
+\change_deleted -484307115 1479832034
+the
+\change_unchanged
+ increase in the driver's expected marginal profit is large enough to induce
+ drivers to accept rides with unknown destination, but the decline in the
+ expected average profit is small enough to keep drivers 
+\change_deleted -484307115 1479833628
+participating
+\change_unchanged
+ on the platform.
+ Buyers 
+\change_inserted -484307115 1479833647
+would 
+\change_unchanged
+significantly and unambiguously benefit from the resulting shorter wait
+ times, and, in this way, information coarsening improves the quality of
+ service for passengers.
  
 \end_layout
 
 \begin_layout Standard
 It the current version of UberX, the passenger destination is fully concealed
  and is not used in pricing.
+\change_inserted -484307115 1479833058
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479833389
+Uber drivers can use the destination filter twice a day.
+ If used, the platform filters passenger requests and offers only those
+ that are aligned with the driver's preferred destination.
+ For more details, see 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.ridesharingdriver.com/uber-destination-filter-get-passengers-heading-your-direction/"
+target "http://www.ridesharingdriver.com/uber-destination-filter-get-passengers-heading-your-direction/"
+
+\end_inset
+
+.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  This paper shows that partial coarsening would be more efficient.
- For example, my results show that the drivers with higher outside option
- (low type sellers) require finer disclosure to stay profitable on the platform
- while drivers with low outside option (high type sellers) can be squeezed.
+ For example, my results show that the drivers with 
+\change_deleted -484307115 1479832136
+higher
+\change_inserted -484307115 1479832158
+better
+\change_unchanged
+ outside option (low type sellers) require finer disclosure to stay profitable
+ on the platform while drivers with 
+\change_deleted -484307115 1479832144
+low
+\change_inserted -484307115 1479832146
+worse
+\change_unchanged
+ outside option (high type sellers) can be squeezed
+\change_inserted -484307115 1479830411
+ out
+\change_unchanged
+.
  In such situation, the following partial coarsening can work better.
  The destination of a passenger is discretized into three categories, close,
  medium-range, and far, where the medium-range is wide enough to include
@@ -402,8 +497,23 @@ reference "prop:FD-suboptimal"
  The Instant Book feature in its current version acts as an information
  coarsening policy, incentivizing hosts to accept more guest requests.
  As a first order effect, guests benefit because booking is fast.
- As a second order effect, sellers also benefit, because better user experience
- attracts more guests to the platform.
+ 
+\change_inserted -484307115 1479833773
+Hosts are squeezed out because they have less control over their guests.
+ However, 
+\change_deleted -484307115 1479833773
+A
+\change_inserted -484307115 1479833773
+a
+\change_unchanged
+s a second order effect, 
+\change_inserted -484307115 1479833783
+hosts
+\change_deleted -484307115 1479833782
+sellers
+\change_unchanged
+ also benefit, because better user experience attracts more guests to the
+ platform.
  As a result, total welfare increases, in addition to platform participation.
  
 \end_layout
@@ -463,6 +573,83 @@ target "https://blog.taskrabbit.com/2014/06/17/unveiling-the-new-taskrabbit/"
  This further improves the clients' experience on the platform, because
  answering multiple questions is burdensome for the clients.
  
+\change_inserted -484307115 1479933288
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1479933325
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479933308
+
+
+\backslash
+ifdraft{
+\backslash
+color{blue} 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1479933944
+This paper has two implications for the platform designers.
+ First, it alerts for potentially adverse effects of increased observability.
+ If the buyer and seller side of a given market are not symmetric in their
+ preferences for match rate and match quality, then revealing rich information
+ to the pickier side of the market hampers match rate.
+ The side of the market that values high match rate as opposed to high match
+ quality suffers.
+ This may create the unbalanced market that won't scale up.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1479934245
+Second, if a given market is fast-moving and match rate enters into the
+ participants utility functions, limiting information can achieve better
+ matching efficiency.
+ Strategic information withholding may come at various forms.
+ One is literal information withholding as the one we observe in the case
+ of Uber.
+ Another one is creating standards.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1479933300
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479933305
+
+}
+\backslash
+fi
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -515,7 +702,13 @@ First, it alerts to potentially adverse effects
 \end_layout
 
 \begin_layout Plain Layout
-of increasing performance transparency in organizations.
+of increasing 
+\change_inserted -484307115 1479830726
+observability of buyer characteristics
+\change_deleted -484307115 1479830698
+performance transparency in organizations
+\change_unchanged
+.
 \begin_inset Quotes erd
 \end_inset
 

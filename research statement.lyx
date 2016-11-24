@@ -109,11 +109,12 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -174,7 +175,10 @@ Littauer Center,
 \end_inset
 
 1805 Cambridge St.
- Cambridge, MA 02138 
+\end_layout
+
+\begin_layout Plain Layout
+Cambridge, MA 02138 
 \end_layout
 
 \end_inset
@@ -184,6 +188,8 @@ Littauer Center,
 
 \begin_layout Plain Layout
 Email: 
+\family typewriter
+
 \begin_inset CommandInset href
 LatexCommand href
 name "glebromanyuk@g.harvard.edu"
@@ -197,6 +203,8 @@ type "mailto:"
 
 \begin_layout Plain Layout
 Web: 
+\family typewriter
+
 \begin_inset CommandInset href
 LatexCommand href
 name "scholar.harvard.edu/gromanyuk"
@@ -229,25 +237,98 @@ Phone: (617) 308-8394
 \begin_layout Standard
 My primary research interests lie in the area of microeconomic theory, market
  design, the economics of digitization, and industrial organization.
+ My research is motivated by the observation that in order for 
+\change_deleted -484307115 1479865329
+the
+\change_inserted -484307115 1479865329
+a
+\change_unchanged
+ market
+\change_deleted -484307115 1479865330
+s
+\change_unchanged
+ to work well, it is necessary to have clear rules of game that foster value
+ creation and inhibit perverse behavior, such as deception, rent-seeking
+\change_inserted -484307115 1479866338
+,
+\change_unchanged
+ and others.
+ 
+\change_deleted -484307115 1479865393
+Recently, t
+\change_inserted -484307115 1479865393
+T
+\change_unchanged
+he advances in IT technology and the spread of communication devices led
+ to the rise of companies whose business model relies on 
+\change_deleted -484307115 1479866398
+some sort of
+\change_unchanged
+ platform or market design.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+E.g., 19% of the total US adult population has engaged in a sharing economy
+ transaction (2015, PWC); by 2025, online talent platforms could boost global
+ GDP by $2.7 trillion (McKinsey, 2015).
+ 
+\end_layout
+
+\end_inset
+
+ How should these markets be designed? An attractive feature of digital
+ marketplaces is that the designer has 
+\change_deleted -484307115 1479866535
+a lot of
+\change_inserted -484307115 1479866535
+much
+\change_unchanged
+ control over the marketplace
+\change_inserted -484307115 1479866465
+ operations
+\change_unchanged
+ and potentially accumulates detailed transactions data.
+ This presents an opportunity for conducting research and for creating new
+ operations and business strategies.
  
 \end_layout
 
 \begin_layout Standard
-My job marker paper “Ignorance is Strength: Improving Performance of Matching
- Markets by Limiting Information” develops a framework for analyzing information
- disclosure problem in matching markets.
+
+\change_deleted -484307115 1479865499
+My
+\change_inserted -484307115 1479865501
+Most of my
+\change_unchanged
+ research up to date has focused on the market design in online platforms,
+ matching markets and auction design.
+ 
+\end_layout
+
+\begin_layout Standard
+In my job marker paper “Ignorance is Strength: Improving the Performance
+ of Matching Markets by Limiting Information” I study the role of information
+ intermediation in matching markets.
+ Although in markets with pronounced heterogeneity the provision of information
+ is generally perceived to be critical for efficiency, I show that increased
+ observability at the search stage does not necessarily lead to market improveme
+nt.
+ The paper develops a framework for analyzing the platform's design decisions
+ on 
+\change_inserted -484307115 1479866578
+the 
+\change_unchanged
+disclosure of the participants' characteristics to each other.
  The model is a persuasion problem on the seller side of the market where
  sellers have preferences over buyers and limited capacity.
- I show that increased observability does not necessarily lead to market
- improvement.
- Specifically, full disclosure is Pareto-suboptimal for buyer and seller
- surpluses.
+ I show that full disclosure is Pareto-suboptimal for buyer and seller surpluses.
  Increased observability of buyer characteristic induces sellers to cream-skim,
- that is to reject inefficiently often.
- As a result, coarse information disclosure restores efficiency.
- The particular form of coarsening necessary to improve the efficiency depends
- on the details of the seller payoff function and private information.
- I characterize the optimal disclosure mechanism.
+ that is to reject inefficiently many buyers.
+ As a result, limiting information improves efficiency.
+ The particular form of the optimal disclosure policy depends on the details
+ of the seller payoff function and the structure of the private information,
+ which I characterize in the paper.
  
 \end_layout
 
@@ -261,6 +342,28 @@ In a working paper “A Price Theoretic Model of Search Intermediation by
  seller revenue will optimally maintain positive search costs in order to
  steer searchers to the market where they generate the most revenue.
  
+\end_layout
+
+\begin_layout Standard
+Another working paper 
+\begin_inset Quotes eld
+\end_inset
+
+Position auctions with endogenous supply
+\begin_inset Quotes erd
+\end_inset
+
+ coauthored with Sergei Izmalkov and Dilya Khakimova, studies the auction
+ design for online advertising market.
+ We consider a multi-object private values setting with quantity externalities.
+ For example, the likelihood a customer will respond to an advertisement
+ is higher the fewer other advertisements are shown; a spectrum license
+ is more valuable the fewer licenses are being allocated.
+ We solve the problem of finding revenue maximizing and efficiently allocating
+ auctions in such a setting.
+ We demonstrate that auctions currently used for allocating advertising
+ positions are suboptimal and offer simple designs that can implement (or
+ approximate) optimal and efficient auctions under quantity externalities.
 \end_layout
 
 \begin_layout Standard
@@ -307,37 +410,166 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-Research agenda.
- In the recent years, a number of innovative new companies appeared whose
- business model relies on some type of platform or market design.
- How should these markets be designed? Research questions on topics of marketpla
-ce design and platform strategy are fascinating and increasingly relevant
-\begin_inset Foot
+Going forward, I plan to continue working on questions of marketplace design
+ and platform strategy.
+ One important marketplace design question I am interested in is the degree
+ of market centralization.
+ Being an old question in the history of economic thought (going back to
+ Hayek and Lerner), it has recently become relevant again after the rise
+ of 
+\change_deleted -484307115 1479865578
+new
+\change_unchanged
+ digital marketplaces, such as Uber and Airbnb.
+ One
+\change_inserted -484307115 1479865624
+ interesting
+\change_unchanged
+ way to approach the question of centralization is to consider the tradeoff
+ between information elicitation and transaction costs, which was informally
+ introduced 
+\change_inserted -484307115 1479865642
+in
+\change_deleted -484307115 1479865639
+in
+\change_unchanged
+ Einav, L., Farronato, C.
+ and Levin, J.
+ (2016) Peer-to-Peer Markets, 
+\emph on
+The Annual Review of Economics.
+ 
+\emph default
+
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-E.g., 19% of the total US adult population has engaged in a sharing economy
- transaction (2015, PWC); by 2025, online talent platforms could boost global
- GDP by $2.7 trillion (McKinsey, 2015).
- 
+A lot of design decisions for the existing platform can be explained in
+ terms of this tradeoff.
 \end_layout
 
 \end_inset
 
+ For example, eliciting Uber passengers' preferences over cars ha
+\change_inserted -484307115 1479866635
+ve
+\change_deleted -484307115 1479866634
+s
+\change_unchanged
+ little marginal benefit relative to the hassle costs associated with asking
+ questions and 
+\change_inserted -484307115 1479865680
+making passengers 
+\change_unchanged
+search
+\change_deleted -484307115 1479865687
+ing
+\change_unchanged
 .
- Concrete questions I want to explore include
+ The resolution of this tradeoff determines the degree of platform centralizatio
+n and is a key design decision that drives the success of the platform.
+ Despite its significance, there are important subtleties that have to be
+ understood before we are ready to give practical advice.
+ What side of the market should do the work to provide information for the
+ match? Unlike price, information is multi-dimensional, and in particular,
+ a platform participant possess
+\change_inserted -484307115 1479866674
+es
+\change_unchanged
+ information both about his match payoff and the counter-party's payoff.
+ How does it affect the elicitation policies? 
 \end_layout
+
+\begin_layout Standard
+Another interesting 
+\change_deleted -484307115 1479864137
+question
+\change_inserted -484307115 1479864139
+research topic
+\change_unchanged
+ is endogenous network effects.
+ In many cases, a 
+\change_deleted -484307115 1479845988
+platform
+\change_inserted -484307115 1479845990
+company
+\change_unchanged
+ has a strategic decision to choose 
+\change_inserted -484307115 1479865741
+the extent 
+\change_unchanged
+to 
+\change_deleted -484307115 1479865747
+what extent 
+\change_inserted -484307115 1479865748
+which the affiliated entities (customers, suppliers) 
+\change_deleted -484307115 1479846025
+the sides of the market
+\change_unchanged
+ are insulated from each other (Hagiu, A.
+ and Wright, J.
+ (2015) Marketplace or reseller?, 
+\emph on
+Management Science
+\emph default
+).
+ For example, Walmart can choose 
+\change_inserted -484307115 1479864669
+the fraction of the inventory risk borne by its suppliers
+\change_deleted -484307115 1479864682
+the degree at which its suppliers are responsible for the leftover inventories
+\change_unchanged
+, and this determines the extent to which the suppliers care about the Walmart
+ customer base.
+
+\change_inserted -484307115 1479866226
+ That is, the company can choose the strength of the network effects, and
+ so can choose whether to be a reseller or a two-sided market.
+ Similar logic applies to Uber drivers who can be more or less insulated
+ from the variations in demand, and this determines the composition of the
+ driver base.
+ The strength of network effects is an important strategic decision, and
+ an increasing number of companies shift their business model into some
+ sort of platform.
+ It is critical to understand what market condition are fruitful for the
+ platform business model and what mechanisms determine the strength of network
+ effects.
+ 
+\change_deleted -484307115 1479846049
+ 
+\change_inserted -484307115 1479865846
+ 
+\change_unchanged
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I would probably only list a couple and (in one paragraph per question)
+ and 
+\end_layout
+
+\begin_layout Plain Layout
+highlight why it is an interesting/relevant question and what you would
+ likely do/find.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Itemize
 product company vs.
  a platform, endogenous network effects (e.g.
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "HW15-ManSc"
-
-\end_inset
-
+ Hagiu, A.
+ and Wright, J.
+ (2015) Marketplace or reseller?, 
+\emph on
+Management Science
+\emph default
 ); 
 \end_layout
 
@@ -354,19 +586,18 @@ revenue maximizing matching
 
 \begin_layout Itemize
 the tradeoff between information elicitation and transaction costs (informally
- introduced in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "EFL16"
-
-\end_inset
-
+ introduced in Einav, L., Farronato, C.
+ and Levin, J.
+ (2016) Peer-to-Peer Markets, 
+\emph on
+The Annual Review of Economics
+\emph default
 );
 \end_layout
 
 \begin_layout Itemize
 centralized vs.
- decentralized marketplaces;
+ decentralized marketplace;
 \end_layout
 
 \begin_layout Itemize
@@ -379,18 +610,32 @@ universal marketplace vs.
  niche verticals.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Given the abundance of data available on the digital economy, as well as
- other sectors affected by digitization, I am open to doing empirical work
- on these subjects.
+Given the abundance of data available in the digital economy, as well as
+ other sectors affected by the digitization, I am open to doing empirical
+ work on these subjects.
  
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "/Users/gleb/Dropbox/Projects/bib/Online Marketplaces,/Users/gleb/Dropbox/Projects/bib/Auctions,/Users/gleb/Dropbox/Projects/bib/Theory,/Users/gleb/Dropbox/Projects/bib/Mechanism Design,/Users/gleb/Dropbox/Projects/bib/Applied Theory,/Users/gleb/Dropbox/Projects/bib/Math"
 options "apecon"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

@@ -118,8 +118,8 @@ theorems-ams-extended-bytype
 
 \begin_body
 
-\begin_layout Section
-Potential questions
+\begin_layout Section*
+Potential questions and my answers
 \end_layout
 
 \begin_layout Enumerate
@@ -141,7 +141,7 @@ Empirical evidence from Airbnb shows that Conditional on being rejected
 \end_layout
 
 \begin_layout Enumerate
-[Extenstion in the paper with returning buyers comfirms qualitative robustness
+[Extension in the paper with returning buyers confirms qualitative robustness
  of findings.]
 \end_layout
 
@@ -170,8 +170,8 @@ In many online marketplaces, personalized prices is a no-go because the
 
 \begin_layout Enumerate
 Users convenience.
- For example, an auction on each uber ride will produce a more accurate
- price but the hassle costs are prohibitevely high.
+ For example, an auction on each Uber ride will produce a more accurate
+ price but the hassle costs are prohibitively high.
  
 \end_layout
 
@@ -183,6 +183,44 @@ Platform development costs.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Can the platform screen 
+\begin_inset Formula $y$
+\end_inset
+
+'s with information a la in Kolotilin et al.
+ 2015? 
+\end_layout
+
+\begin_layout Enumerate
+Why is disclosure not history-dependent? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+With 1 seller type it is not necessary.
+ 
+\end_layout
+
+\begin_layout Enumerate
+With multiple types, if the platform observes the acceptance rates, it can
+ infer the seller type.
+ Then we are effectively back to the single-type case.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why do buyers request seller uniformly at random even if buyers have no
+ preference over sellers? The platform can use buyer diversion as a part
+ of its design.
+ 
+\end_layout
+
+\begin_layout Enumerate
+How is your steady-state equilibrium related to BCE of Bergemann and Morris?
+ 
+\end_layout
+
 \begin_layout Enumerate
 Why doesn't the platform collect 
 \begin_inset Formula $y$
@@ -288,7 +326,7 @@ Typically congestion is studied in the context of its effect on the applicants:
 
 \end_deeper
 \begin_layout Enumerate
-On the slide explaining Bayesian presuasion with the picture: Why would
+On the slide explaining Bayesian persuasion with the picture: Why would
  you do this to a seller? 
 \end_layout
 

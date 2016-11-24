@@ -137,9 +137,11 @@ bigskip
 
 \begin_layout Standard
 Please consider my application to the position of the Assistant Professor.
+ I am a PhD candidate in economics at Harvard University with expected graduatio
+n date May 2017.
  My primary research interests lie in the area of microeconomic theory,
- market design, game theory, and industrial organization.
- My job market paper, CV, the research and the teaching statements are attached
+ market design, the economics of digitization, and industrial organization.
+ My job market paper, CV, the research and teaching statements are attached
  as separate files.
  
 \begin_inset ERT
@@ -198,7 +200,10 @@ Littauer Center,
 \end_inset
 
 1805 Cambridge St.
- Cambridge, MA 02138 
+\begin_inset Newline newline
+\end_inset
+
+Cambridge, MA 02138 
 \end_layout
 
 \end_inset
@@ -208,6 +213,8 @@ Littauer Center,
 
 \begin_layout Plain Layout
 Email: 
+\family typewriter
+
 \begin_inset CommandInset href
 LatexCommand href
 name "glebromanyuk@g.harvard.edu"
@@ -221,6 +228,8 @@ type "mailto:"
 
 \begin_layout Plain Layout
 Web: 
+\family typewriter
+
 \begin_inset CommandInset href
 LatexCommand href
 name "scholar.harvard.edu/gromanyuk"

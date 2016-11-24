@@ -119,11 +119,12 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -235,8 +236,11 @@ Spot matching process.
 \end_layout
 
 \begin_layout Standard
-There are three parties involved in the search and matching process: sellers,
- buyers, and the platform itself.
+There are three parties involved in the 
+\change_deleted -484307115 1479673554
+search and
+\change_unchanged
+ matching process: sellers, buyers, and the platform itself.
  Time is continuous.
  
 \end_layout
@@ -244,6 +248,21 @@ There are three parties involved in the search and matching process: sellers,
 \begin_layout Standard
 There is mass 1 of sellers, who always stay on the platform; they never
  leave or arrive.
+
+\change_inserted -484307115 1479682671
+ At each moment it time, a seller is either available or busy.
+ An available seller is presented with a sequence of buyers at a Poisson
+ rate, and decides whether to accept or reject them in order to maximize
+ his average profit flow.
+ Busy sellers do not receive requests from buyers.
+ When an available seller accepts a buyer, he becomes busy for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ When this time elapses, the seller becomes available again.
+ 
+\change_deleted -484307115 1479674039
  The sellers do not actively look for jobs, but instead screen buyer requests:
  Each worker is presented with a sequence of job offers at a Poisson rate,
  and decides whether to accept or reject them in order to maximize his discounte
@@ -255,7 +274,11 @@ d profit flow.
 \end_inset
 
  to complete, during which time the seller cannot receive new jobs.
- This is the main source of matching friction.
+ This
+\change_inserted -484307115 1479675709
+The fact that sellers become unavailable after each match
+\change_unchanged
+ is the main source of matching friction.
  In what follows, I also refer to 
 \begin_inset Formula $\tau$
 \end_inset
@@ -264,12 +287,27 @@ d profit flow.
 \begin_inset Formula $\tau$
 \end_inset
 
-, the fewer jobs the seller can complete during the same period of time.
+, the fewer 
+\change_deleted -484307115 1479674059
+jobs
+\change_inserted -484307115 1479674060
+buyers
+\change_unchanged
+ the seller can 
+\change_deleted -484307115 1479674067
+complete
+\change_inserted -484307115 1479674068
+match with
+\change_unchanged
+ during the same period of time.
  
 \end_layout
 
 \begin_layout Standard
-There is a continuum of potential buyers, who gradually arrive over time
+There is a continuum of potential buyers, who gradually arrive 
+\change_deleted -484307115 1479675723
+over time
+\change_unchanged
  at flow rate 
 \begin_inset Formula $\beta$
 \end_inset
@@ -283,17 +321,61 @@ There is a continuum of potential buyers, who gradually arrive over time
 \end_inset
 
  of buyers arrive at the platform.
- Each new buyer arrives with a single job that he proposes to one of the
- available sellers.
- The seller is chosen uniformly at random from the pool of available workers.
- If the buyer's job is accepted, the buyer stays until his job is completed;
- otherwise, he leaves the platform.
+ Each new buyer 
+\change_deleted -484307115 1479674336
+arrives with a single job that he proposes
+\change_inserted -484307115 1479674357
+contacts
+\change_unchanged
+ 
+\change_deleted -484307115 1479674342
+to
+\change_unchanged
+ one of the available sellers.
+ The seller is chosen uniformly at random from the pool of available 
+\change_deleted -484307115 1479681276
+workers
+\change_inserted -484307115 1479681277
+sellers
+\change_unchanged
+.
+ If the buyer
+\change_deleted -484307115 1479674392
+'s job
+\change_unchanged
+ is accepted, 
+\change_deleted -484307115 1479675758
+the buyer
+\change_inserted -484307115 1479675758
+he
+\change_unchanged
+ stays 
+\change_deleted -484307115 1479675765
+until
+\change_inserted -484307115 1479675766
+while
+\change_unchanged
+ 
+\change_deleted -484307115 1479674457
+his job is
+\change_inserted -484307115 1479674461
+the match lasts
+\change_deleted -484307115 1479674463
+ completed
+\change_unchanged
+; otherwise, he leaves the platform.
  Assume 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
 , which implies that collectively, it is physically possible for sellers
- to complete every buyer's job.
+ to 
+\change_deleted -484307115 1479674481
+complete every buyer's job
+\change_inserted -484307115 1479674483
+accept all buyers
+\change_unchanged
+.
  See the detailed discussion of the assumptions on buyer search and buyer
  arrival rate in 
 \begin_inset CommandInset ref
@@ -324,25 +406,6 @@ reference "fig:Search-and-matching"
 \end_inset
 
  for the illustration of the matching process.
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -415,95 +478,6 @@ name "fig:Search-and-matching"
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-input{pictures/seller_problem.tex}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Seller dynamic optimization problem with screening and waiting.
- An available seller receives buyer requests at Poisson rate 
-\begin_inset Formula $\beta_{A}$
-\end_inset
-
-.
- If a request is accepted, the seller becomes busy for time 
-\begin_inset Formula $\tau$
-\end_inset
-
-, during which he does not receive new requests.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Sellers-repeated-search"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The model of the matching market has two main components: the spot matching
- process and the seller dynamic optimization problem.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Paragraph
 Buyer and seller preference heterogeneity.
 \end_layout
@@ -522,9 +496,9 @@ There are two dimensions of heterogeneity in the market.
 \end_inset
 
  is comprised of buyer characteristics 
-\bar under
+\emph on
 observed
-\bar default
+\emph default
  by the platform.
 \begin_inset Foot
 status open
@@ -535,8 +509,12 @@ Buyer type
 \end_inset
 
  captures the payoff-relevant information the platform elicits from the
- buyer about the job, whether passively from the buyer's cookies and queries
- or actively by asking questions.
+ buyer
+\change_deleted -484307115 1479674510
+ about the job
+\change_unchanged
+, whether passively from the buyer's cookies and queries or actively by
+ asking questions.
  For example, on Uber, 
 \begin_inset Formula $x$
 \end_inset
@@ -573,9 +551,9 @@ Buyer type
 \end_inset
 
  is comprised of seller characteristics 
-\bar under
+\emph on
 unobserved
-\bar default
+\emph default
  by the platform.
 \begin_inset Foot
 status open
@@ -915,10 +893,32 @@ acceptance rate
 \end_layout
 
 \begin_layout Standard
-In a steady state, the flow of sellers who begin working is equal to the
- flow of sellers who finished the job and return to waiting.
- The flow of beginning sellers is equal to the product of the buyer flow
- that type-
+In a steady state, the flow of sellers who 
+\change_deleted -484307115 1479674616
+begin
+\change_inserted -484307115 1479674616
+form
+\change_unchanged
+ 
+\change_deleted -484307115 1479674597
+working
+\change_inserted -484307115 1479674620
+new matches
+\change_unchanged
+ is equal to the flow of sellers who 
+\change_deleted -484307115 1479674534
+finished the job and
+\change_unchanged
+ return to waiting.
+ The flow of 
+\change_deleted -484307115 1479674637
+beginning
+\change_inserted -484307115 1479674638
+new matches
+\change_deleted -484307115 1479674642
+ sellers
+\change_unchanged
+ is equal to the product of the buyer flow that type-
 \begin_inset Formula $y$
 \end_inset
 
@@ -937,7 +937,15 @@ In a steady state, the flow of sellers who begin working is equal to the
 \end_inset
 
 .
- Thus, the beginning flow is 
+ Thus, the 
+\change_deleted -484307115 1479674661
+beginning
+\change_unchanged
+ flow
+\change_inserted -484307115 1479674665
+ of new matches
+\change_unchanged
+ is 
 \begin_inset Formula $\beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)$
 \end_inset
 
@@ -954,7 +962,7 @@ In a steady state, the flow of sellers who begin working is equal to the
 \begin_inset Formula $g(y)\rho(y)$
 \end_inset
 
- and jobs are completed in time 
+ and matches last time 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -976,8 +984,15 @@ reference "fig:Matching-process-in"
 
 \end_inset
 
- In a steady state, the flow of beginning sellers is equal to the flow of
- returning sellers:
+ In a steady state, the flow of 
+\change_deleted -484307115 1479674678
+beginning
+\change_unchanged
+ sellers
+\change_inserted -484307115 1479674686
+ who form new matches
+\change_unchanged
+ is equal to the flow of returning sellers:
 \begin_inset Formula 
 \begin{equation}
 \beta\frac{(1-\rho(y))g(y)}{1-\bar{\rho}}\alpha(y)=\frac{g(y)\rho(y)}{\tau},\quad\forall y\in Y.\label{eq:SS}
@@ -1225,15 +1240,33 @@ ce of law of large numbers).
 \begin_layout Standard
 A risk-neutral seller solves the dynamic optimization problem of maximizing
  the average profit flow.
- The seller faces the sequence of jobs arriving at Poisson rate 
+ The seller faces the sequence of 
+\change_deleted -484307115 1479674699
+jobs
+\change_inserted -484307115 1479674700
+buyers
+\change_unchanged
+ arriving at Poisson rate 
 \begin_inset Formula $\betaa$
 \end_inset
 
-, and for each job observes the platform's signal 
+, and for each 
+\change_deleted -484307115 1479674705
+job
+\change_inserted -484307115 1479674706
+buyers
+\change_unchanged
+ observes the platform's signal 
 \begin_inset Formula $s$
 \end_inset
 
- and chooses to accept or reject it.
+ and chooses to accept or reject 
+\change_inserted -484307115 1479674712
+him
+\change_deleted -484307115 1479674711
+it
+\change_unchanged
+.
  See 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1250,7 +1283,13 @@ reference "fig:Sellers-repeated-search"
 \begin_inset Formula $y$
 \end_inset
 
-'s expected profit if he accepts a job with signal 
+'s expected profit if he accepts a 
+\change_deleted -484307115 1479674726
+job
+\change_inserted -484307115 1479674726
+buyer
+\change_unchanged
+ with signal 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1267,8 +1306,25 @@ reference "fig:Sellers-repeated-search"
 status open
 
 \begin_layout Plain Layout
-For example, if a seller earns $1 on each job, and the time interval between
- starting a pair of consequent jobs is 2, then 
+For example, if a seller earns $1 on each 
+\change_deleted -484307115 1479674736
+job
+\change_inserted -484307115 1479674737
+buyer
+\change_unchanged
+, and the time interval between 
+\change_inserted -484307115 1479674747
+accepting 
+\change_deleted -484307115 1479674751
+starting
+\change_unchanged
+ a pair of consequent 
+\change_inserted -484307115 1479674755
+buyers
+\change_deleted -484307115 1479674754
+jobs
+\change_unchanged
+ is 2, then 
 \begin_inset Formula $V(y)=1/2$
 \end_inset
 
@@ -1283,7 +1339,17 @@ For example, if a seller earns $1 on each job, and the time interval between
 \begin_inset Formula $v(s,y)$
 \end_inset
 
- be the value of a new job with signal 
+ be the value of a 
+\change_deleted -484307115 1479674778
+new
+\change_unchanged
+ 
+\change_deleted -484307115 1479674760
+job
+\change_inserted -484307115 1479674761
+buyer
+\change_unchanged
+ with signal 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1291,13 +1357,46 @@ For example, if a seller earns $1 on each job, and the time interval between
 \begin_inset Formula $v$
 \end_inset
 
- includes the option value of rejecting the job and the opportunity cost
- of accepting it.
- The value of a new job is 0 if the seller rejects it, and 
+ includes the option value of rejecting the 
+\change_deleted -484307115 1479674765
+job
+\change_inserted -484307115 1479674766
+buyer
+\change_unchanged
+ and the opportunity cost of accepting 
+\change_deleted -484307115 1479674797
+it
+\change_inserted -484307115 1479674798
+him
+\change_unchanged
+.
+ The value of a 
+\change_deleted -484307115 1479674802
+new
+\change_unchanged
+ 
+\change_deleted -484307115 1479674770
+job
+\change_inserted -484307115 1479674771
+buyer
+\change_unchanged
+ is 0 if the seller rejects 
+\change_deleted -484307115 1479674811
+it
+\change_inserted -484307115 1479674812
+him
+\change_unchanged
+, and 
 \begin_inset Formula $\pi(s,y)-\tau V(y)$
 \end_inset
 
- if he accepts it, where 
+ if he accepts 
+\change_deleted -484307115 1479674809
+it
+\change_inserted -484307115 1479674809
+him
+\change_unchanged
+, where 
 \begin_inset Formula $\tau V(y)$
 \end_inset
 
@@ -1313,7 +1412,19 @@ For example, if a seller earns $1 on each job, and the time interval between
 
 .
  The average profit per unit time equals the product of the expected value
- from one job and the expected number of new jobs: 
+ from one 
+\change_deleted -484307115 1479674828
+job
+\change_inserted -484307115 1479674829
+buyer
+\change_unchanged
+ and the expected number of new 
+\change_inserted -484307115 1479674834
+buyers
+\change_deleted -484307115 1479674833
+jobs
+\change_unchanged
+: 
 \begin_inset Formula $V(y)=\beta_{A}\Exp\left[v(s,y)\right]$
 \end_inset
 
@@ -1395,11 +1506,84 @@ The seller's strategy is a function
 
  maps a signal to the probability of accepting it.
  The seller's acceptance rate is the ex ante probability of accepting a
- job:
+ 
+\change_deleted -484307115 1479674845
+job
+\change_inserted -484307115 1479674846
+buyer
+\change_unchanged
+:
 \begin_inset Formula 
 \begin{equation}
 \alpha(y)=\int\sigma(s,y)d\lambda(s).\label{eq:alpha}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{pictures/seller_problem.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Seller dynamic optimization problem with screening and waiting.
+ An available seller receives buyer requests at Poisson rate 
+\begin_inset Formula $\beta_{A}$
+\end_inset
+
+.
+ If a request is accepted, the seller becomes busy for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+, during which he does not receive new requests.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sellers-repeated-search"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1544,6 +1728,30 @@ When idle, drivers receive requests from passengers.
  The prices per mile and per minute are fixed (conditional on aggregate
  multipliers, such as surge pricing).
  Drivers do not like very short rides or rides to remote neighborhoods.
+\change_inserted -484307115 1479832651
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479832732
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.forbes.com/sites/harrycampbell/2015/03/24/just-how-far-is-your-uber-driver-willing-to-take-you"
+target "http://www.forbes.com/sites/harrycampbell/2015/03/24/just-how-far-is-your-uber-driver-willing-to-take-you/"
+
+\end_inset
+
+.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  Passengers do not like waiting.
 \begin_inset Foot
 status open
@@ -1639,8 +1847,21 @@ The service providers are capacity constrained in the number of tasks they
 \begin_inset Formula $x$
 \end_inset
 
- includes the job category, job difficulty, the client's professionality
- and the location.
+ includes the
+\change_inserted -484307115 1479675539
+ 
+\change_deleted -484307115 1479675552
+ job
+\change_inserted -484307115 1479675553
+task
+\change_unchanged
+ category, 
+\change_inserted -484307115 1479675556
+task
+\change_deleted -484307115 1479675555
+job
+\change_unchanged
+ difficulty, the client's professionality and the location.
  Service providers set an hourly rate that applies to all tasks in the same
  category.
  Getting service providers to commit to an hourly rate that applies to a
@@ -1688,8 +1909,19 @@ steady-state equilibrium
 \begin_inset Formula $\beta_{A}=\beta/(1-\bar{\rho})$
 \end_inset
 
+
+\change_inserted -484307115 1479675880
+ and disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
 .
  
+\change_deleted -484307115 1479675871
+.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1726,7 +1958,13 @@ name "prop:Equilibrium-exists-and"
 \end_inset
 
 A steady-state equilibrium exists, and it is unique up to the acceptance
- of marginal jobs in the following sense: If 
+ of marginal 
+\change_deleted -484307115 1479675565
+jobs
+\change_inserted -484307115 1479675566
+buyers
+\change_unchanged
+ in the following sense: If 
 \begin_inset Formula $(\sigma^{i},\brho^{i})$
 \end_inset
 
@@ -1811,8 +2049,13 @@ reference "lem:rho-and-monotonicities"
 \begin_inset Formula $\brho$
 \end_inset
 
- increases, then buyer traffic to each available worker increases; as a
- result sellers become pickier and the acceptance rate 
+ increases, then buyer traffic to each available 
+\change_deleted -484307115 1479681293
+worker
+\change_inserted -484307115 1479681294
+seller
+\change_unchanged
+ increases; as a result sellers become pickier and the acceptance rate 
 \begin_inset Formula $\alpha(y)$
 \end_inset
 
@@ -1822,6 +2065,10 @@ reference "lem:rho-and-monotonicities"
 \end_inset
 
  increases, sellers become less available, and
+\change_inserted -484307115 1479675895
+ 
+\change_unchanged
+
 \begin_inset Formula $\brho$
 \end_inset
 
@@ -1909,30 +2156,76 @@ Buyers contact an available seller chosen uniformly at random.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -484307115 1479677639
 This assumption implies that buyers do not search for better sellers and
  holds, for instance, in the situation when buyers are indifferent between
  what seller completes their job.
- The assumptions allows me to analyze the match quality - match rate tradeoff
- in a cleaner model, in which one side of the market (buyers) has homogenous
- match quality.
+ 
+\change_unchanged
+The assumptions allows me to analyze the match quality
+\change_inserted -484307115 1479677656
+-
+\change_deleted -484307115 1479677646
+ - 
+\change_unchanged
+match rate tradeoff in a cleaner model
+\change_deleted -484307115 1479677693
+, in which one side of the market (buyers) has homogenous match quality.
  The assumption has two implications to the seller optimization problem.
- First, any seller type faces the same buyer arrival rate, 
+ First,
+\change_inserted -484307115 1479677707
+, in which
+\change_unchanged
+ any seller 
+\change_deleted -484307115 1479677712
+type
+\change_unchanged
+ faces the same buyer arrival rate, 
 \begin_inset Formula $\betaa$
 \end_inset
 
+
+\change_inserted -484307115 1479677725
+, and the same 
+\change_deleted -484307115 1479677729
 .
- And second, each seller faces the same distribution of buyer types, 
+ And second, each seller faces the same
+\change_unchanged
+ distribution of buyer types, 
 \begin_inset Formula $F$
 \end_inset
 
 .
+\change_inserted -484307115 1479677439
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1479678897
+One situation in which the assumption holds is when the buyers are indifferent
+ as to which seller they match with and the platform does not direct buyers
+ to any specific sellers.
+ Another situation is when buyers do have preferences over sellers, the
+ preferences are unobserved to the platform, and the buyers do not search
+ (due to platform design restrictions or prohibitively high search costs).
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 If buyers have heterogeneous match quality and search for better matches,
  then the platform faces the disclosure problem on both sides of the market.
  In this case, in addition to the disclosure policy on the seller side,
- the platform designs the disclosure policy on the buyer side.
+ the platform designs 
+\change_inserted -484307115 1479678988
+a
+\change_deleted -484307115 1479678988
+the
+\change_unchanged
+ disclosure policy on the buyer side.
  
 \end_layout
 
@@ -2098,8 +2391,13 @@ name "assu:no-excess-demand"
 
 \end_inset
 
-Collectively, it is physically possible for sellers to complete every buyer
- job: 
+Collectively, it is physically possible for sellers to 
+\change_deleted -484307115 1479675598
+complete every buyer job
+\change_inserted -484307115 1479675602
+accept all buyers
+\change_unchanged
+: 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 

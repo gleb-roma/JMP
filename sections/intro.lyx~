@@ -262,18 +262,11 @@ fi
 \end_inset
 
  Provision of information about goods or trading partners is a main challenge
- for the efficiency of platforms that match heterogeneous buyers and sellers
-\change_deleted -484307115 1479230048
- of products or services
-\change_unchanged
-, such as platforms for housing rental, labor contracting, and transportation.
+ for the efficiency of platforms that match heterogeneous buyers and sellers,
+ such as platforms for housing rental, labor contracting, and transportation.
  Providing more information allows participants to identify and pursue the
- most valuable matches
-\change_deleted -484307115 1479230057
-, avoids adverse selection and moral hazard
-\change_unchanged
-, and matching platforms spend significant resources eliciting match-relevant
- information from users
+ most valuable matches, and matching platforms spend significant resources
+ eliciting match-relevant information from users
 \begin_inset Foot
 status open
 
@@ -362,6 +355,13 @@ fi
 
  I study the information intermediation problem in the context of the following
  model.
+
+\change_inserted -484307115 1479680578
+ Buyers and sellers try to match on the platform but the match value is
+ uncertain.
+ 
+\change_deleted -484307115 1479679374
+
 \begin_inset Note Note
 status collapsed
 
@@ -374,16 +374,73 @@ which incorporates some asymmetries between buyers and sellers that are
 \end_inset
 
  Buyers seek sellers' services to complete their jobs.
+
+\change_unchanged
  Buyers contact sellers, who then review buyer attributes and choose whether
- to accept or reject the buyer job.
+ to accept or reject 
+\change_deleted -484307115 1479679437
+the buyer job
+\change_inserted -484307115 1479679438
+them
+\change_unchanged
+.
  Buyers are short-lived and must match quickly, but they are indifferent
- as to which seller completes their task.
- Sellers are long-lived and are indifferent to the match speed, but they
- have heterogeneous preferences over buyers.
- In particular, not all jobs are profitable.
+ as to which seller 
+\change_deleted -484307115 1479680610
+completes their task
+\change_inserted -484307115 1479680612
+they match with
+\change_unchanged
+.
+ Sellers are long-lived
+\change_inserted -484307115 1479679576
+, have limited capacity for serving buyers and derive heterogeneous payoffs
+ from being matched with different buyers.
+ 
+\change_deleted -484307115 1479679587
+ and are indifferent to the match speed, but they have heterogeneous preferences
+ over buyers.
+
+\change_unchanged
+ In particular, not all 
+\change_deleted -484307115 1479679913
+jobs
+\change_inserted -484307115 1479679921
+matches
+\change_unchanged
+ are profitable.
+
+\change_deleted -484307115 1479679593
  Sellers have limited capacity for serving buyers.
- If a seller accepts a job, he becomes unavailable for a fixed period of
- time and cannot accept new jobs.
+
+\change_unchanged
+ If a seller accepts a 
+\change_inserted -484307115 1479679877
+buyer
+\change_deleted -484307115 1479679875
+job
+\change_unchanged
+, 
+\change_inserted -484307115 1479680660
+t
+\change_unchanged
+he
+\change_inserted -484307115 1479680662
+ seller
+\change_unchanged
+ becomes unavailable for a fixed period of time and cannot 
+\change_deleted -484307115 1479680678
+accept
+\change_inserted -484307115 1479680681
+consider
+\change_unchanged
+ new 
+\change_inserted -484307115 1479679883
+buyers
+\change_deleted -484307115 1479679882
+jobs
+\change_unchanged
+.
  The platform designs an information disclosure policy that governs which
  buyer attributes are disclosed to sellers before they decide whether to
  accept buyer requests.
@@ -445,7 +502,13 @@ fi
 
 \end_inset
 
- In this model, a key tradeoff arises between match quality and match rate.
+ In this model, a key tradeoff 
+\change_deleted -484307115 1479759386
+arises
+\change_inserted -484307115 1479759387
+emerges
+\change_unchanged
+ between match quality and match rate.
  Full disclosure of information need not be optimal, because information
  disclosure can negatively affect the match rate and partially or wholly
  offset the positive effect on the match quality.
@@ -456,7 +519,13 @@ fi
 \emph on
 cream-skim
 \emph default
- and reject inefficiently many jobs.
+ and reject inefficiently many 
+\change_deleted -484307115 1479679937
+jobs
+\change_inserted -484307115 1479679937
+buyers
+\change_unchanged
+.
  Unlike sellers, the platform cares about welfare on both sides of the market,
  and so efficient disclosure is coarse if the negative effects of information
  disclosure on the match rate are strong.
@@ -514,7 +583,13 @@ fi
  when the match rate is high.
  However, match quality and match rate are in conflict.
  Enforcing higher match rates compromises quality, because sellers are forced
- to accept inferior jobs.
+ to accept inferior 
+\change_deleted -484307115 1479679949
+jobs
+\change_inserted -484307115 1479679950
+matches
+\change_unchanged
+.
  Similarly, allowing sellers to cherrypick the most valuable buyers leads
  to higher rejection rates and lower match rates.
  For example, if Uber drivers reject passenger requests more often, passengers
@@ -561,19 +636,60 @@ The optimal disclosure policy must balance three effects: the positive effect
  payoffs.
  Holding the match rate fixed, he benefits from more information about buyers.
  Second, information disclosure reduces the platform’s ability to induce
- sellers to accept jobs.
+ sellers to accept 
+\change_deleted -484307115 1479679963
+jobs
+\change_inserted -484307115 1479679965
+buyers
+\change_unchanged
+.
  A key observation is that the platform can increase a seller's expected
  marginal profit by limiting the information revealed to him.
- To see why, note that pooling marginally profitable jobs (which are rejected
- because the seller would prefer to wait for a better job) with inframarginal
- jobs (which are accepted) alters the seller's expected marginal profit.
+ To see why, note that pooling marginally profitable 
+\change_deleted -484307115 1479679973
+jobs
+\change_inserted -484307115 1479679978
+buyers
+\change_unchanged
+ (which are rejected because the seller would prefer to wait for a better
+ 
+\change_deleted -484307115 1479679984
+job
+\change_inserted -484307115 1479679985
+buyer
+\change_unchanged
+) with inframarginal 
+\change_inserted -484307115 1479679989
+buyers
+\change_deleted -484307115 1479679988
+jobs
+\change_unchanged
+ (which are accepted) alters the seller's expected marginal profit.
  Ignoring dynamic effects, higher marginal profit induces sellers to accept
- more jobs, which leads to higher match rates.
+ more 
+\change_deleted -484307115 1479679997
+jobs
+\change_inserted -484307115 1479679998
+buyers
+\change_unchanged
+, which leads to higher match rates.
  Third, making more information available to a seller increases returns
  on his search.
  Indeed, since acceptance precludes further search, the opportunity cost
- of accepting a given offer is higher.
- As a result, sellers reject jobs more often, and the match rate goes down.
+ of accepting a given 
+\change_deleted -484307115 1479681151
+offer
+\change_inserted -484307115 1479681152
+buyer
+\change_unchanged
+ is higher.
+ As a result, sellers reject 
+\change_deleted -484307115 1479680004
+jobs
+\change_inserted -484307115 1479680005
+buyers
+\change_unchanged
+ more often, and the match rate goes down.
  This dynamic effect on the match rate exists only when sellers have limited
  capacity and are forward looking.
  The match-quality effect provides a motive for the platform to disclose
@@ -696,27 +812,84 @@ fi
 The adverse effect of disclosure on joint seller profits is a form of seller
  coordination failure.
  In a marketplace where sellers act independently, each seller keeps his
- schedule open by rejecting low-value jobs to increase his own chances of
- getting high-value jobs.
- As a result, sellers spend significant time waiting for high-value jobs.
- Collectively, this behavior is suboptimal because all profitable jobs have
- to be completed in order to maximize the joint profits.
+ schedule open by rejecting low-value 
+\change_deleted -484307115 1479680012
+jobs
+\change_inserted -484307115 1479680027
+matches
+\change_unchanged
+ to increase his own chances of getting high-value 
+\change_deleted -484307115 1479680032
+jobs
+\change_inserted -484307115 1479680037
+matches
+\change_unchanged
+.
+ As a result, sellers spend significant time waiting for high-value 
+\change_deleted -484307115 1479680043
+jobs
+\change_inserted -484307115 1479680044
+matches
+\change_unchanged
+.
+ Collectively, this behavior is suboptimal because 
+\change_deleted -484307115 1479680926
+all profitable jobs
+\change_inserted -484307115 1479680936
+both low- and high-value matches
+\change_unchanged
+ have to be 
+\change_inserted -484307115 1479680951
+accepted
+\change_deleted -484307115 1479680950
+completed
+\change_unchanged
+ in order to maximize the joint profits.
  I attribute the source of the coordination failure to what I call the 
 \emph on
 cream-skimming externality
 \emph default
-: By rejecting a job, a seller remains available on the marketplace and
- attracts a fraction of subsequent buyers who otherwise would move to other
- sellers.
- As a result, the other sellers face fewer profitable jobs and realize lower
- profits.
+: By rejecting a 
+\change_deleted -484307115 1479680079
+job
+\change_inserted -484307115 1479680079
+buyer
+\change_unchanged
+, a seller remains available on the marketplace and attracts a fraction
+ of subsequent buyers who otherwise would move to other sellers.
+ As a result, the other sellers face fewer 
+\change_deleted -484307115 1479681023
+profitable
+\change_inserted -484307115 1479681026
+valuable
+\change_unchanged
+ 
+\change_deleted -484307115 1479680088
+jobs
+\change_inserted -484307115 1479680089
+buyers
+\change_unchanged
+ and realize lower profits.
  The cream-skimming externality arises only when sellers have limited capacity
  and are forward looking.
  When this externality is present, sellers underestimate the effect of their
  own acceptance rate on the platform-wide match rate and collectively resolve
  the tradeoff between match quality and match rate suboptimally.
- Limiting information decreases the opportunity cost of rejection and can
- increase the match rate to the seller-optimal level.
+ 
+\change_inserted -484307115 1479681058
+The platform's policy of 
+\change_deleted -484307115 1479681059
+L
+\change_inserted -484307115 1479681059
+l
+\change_unchanged
+imiting information decreases the 
+\change_inserted -484307115 1479681075
+option value
+\change_deleted -484307115 1479681071
+opportunity cost
+\change_unchanged
+ of rejection and can increase the match rate to the seller-optimal level.
 \end_layout
 
 \begin_layout Standard
@@ -1076,42 +1249,13 @@ There are two primary contributions of this paper relative to the existing
 
 The paper primarily contributes to the literatures on search-and-matching
  in markets and information design.
- Matching markets have been extensively studied in 
-\change_deleted -484307115 1479231455
-the literatures of
-\change_unchanged
- economics and operations research
-\change_inserted -484307115 1479231466
-, but
-\change_deleted -484307115 1479231468
-.
- T
-\change_inserted -484307115 1479231470
- t
-\change_unchanged
-o the best of my knowledge, no prior work has explored in detail the design
- of information intermediation for matching platforms.
+ Matching markets have been extensively studied in economics and operations
+ research, but to the best of my knowledge, no prior work has explored in
+ detail the design of information intermediation for matching platforms.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1479231606
-The role of information in matching and peer-to-peer markets is an active
- area of economic research.
- A closely related paper is 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "HMS09"
-
-\end_inset
-
- that shows that the option of disclosing information leads to wasteful
- signaling, that in certain cases can offset the benefits of improved matching.
- They consider a black-box matching function and only two information structures
-, full and no disclosure, while my paper allows for any possible information
- structure and microfounds the matching function with search.
-\change_inserted -484307115 1479231610
 The role of information in matching and peer-to-peer markets is an active
  area of economic research.
  A closely related paper 
@@ -1126,8 +1270,6 @@ key "HMS09"
  The authors consider a black-box matching function and only two information
  structures—full and no disclosure—while my paper allows for a general informati
 on structure, in addition to microfounding the matching function.
-
-\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1135,75 +1277,19 @@ key "SS01"
 
 \end_inset
 
- also study search and matching in heterogeneous environment
-\change_inserted -484307115 1479231590
-s
-\change_unchanged
-.
- 
-\change_deleted -484307115 1479231637
-Similarly to my model
-\change_inserted -484307115 1479231640
-As in my framework
-\change_unchanged
-, the
-\change_inserted -484307115 1479230102
- main
-\change_unchanged
- matching friction 
-\change_inserted -484307115 1479230114
-in their paper is due to the 
-\change_deleted -484307115 1479231606
-arises because a 
-\change_unchanged
-seller
-\change_inserted -484307115 1479230120
-'s
-\change_unchanged
- 
-\change_deleted -484307115 1479231606
-has a 
-\change_unchanged
-private benefit of waiting
-\change_inserted -484307115 1479231679
- but
-\change_deleted -484307115 1479231681
-.
- 
-\change_inserted -484307115 1479233122
- unlike my paper, 
+ also study search and matching in heterogeneous environments.
+ As in my framework, the main matching friction in their paper is due to
+ the seller's private benefit of waiting but unlike my paper, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "SS01"
 
 \end_inset
 
- do not consider information disclosure policy and focus instead on 
-\change_deleted -484307115 1479231606
-However, they study
-\change_inserted -484307115 1479231687
-corrective
-\change_unchanged
- taxes
-\change_deleted -484307115 1479231606
- as the intermediary's intervention policy
-\change_unchanged
-.
- In contrast to 
-\change_deleted -484307115 1479231821
-many search-and-matching models where the main source of inefficiency is
- mis-coordination due to simultaneity and unavailability (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "BSW01,Kir09,AJK14"
-
-\end_inset
-
-), I assume away the simultaneity and unavailability driven frictions to
- focus on cream-skimming.
-\change_inserted -484307115 1479231843
-many search-and-matching models that have inefficiency result from  simultaneity
- of requests and uncertain unavailability of sellers (
+ do not consider information disclosure policy and focus instead on corrective
+ taxes.
+ In contrast to many search-and-matching models that have inefficiency result
+ from simultaneity of requests and uncertain unavailability of sellers (
 \begin_inset CommandInset citation
 LatexCommand citet
 key "BSW01,Kir09,AJK14"
@@ -1211,11 +1297,7 @@ key "BSW01,Kir09,AJK14"
 \end_inset
 
 ), I assume away these frictions in order to highlight cream-skimming.
-
-\change_unchanged
- 
-\change_deleted -484307115 1479231937
-
+ Further, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "LM10"
@@ -1232,152 +1314,16 @@ key "EFL16"
 
 \end_inset
 
- point out that in peer-to-peer markets there is an important tradeoff between
- eliciting dispersed information and minimizing various transactions costs
- to keep the user experience convenient.
- My paper studies a related question of what buyer information, even if
- elicited, should be reported to sellers.
- Taking into account that elicitation may be costly, my paper can inform
- the designers on how detailed data should be collected from the users.
-\change_inserted -484307115 1479231937
-Further, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "LM10"
-
-\end_inset
-
- show that in online advertising markets, standardization, or “conflation,”
- helps to address at least two problems associated with excessive targeting—adve
-rse selection and reduced competition.
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "EFL16"
-
-\end_inset
-
- point out the  important tradeoff in peer-to-peer markets between eliciting
- dispersed information and minimizing  transactions costs to keep the user
+ point out the important tradeoff in peer-to-peer markets between eliciting
+ dispersed information and minimizing transactions costs to keep the user
  experience convenient.
  My paper studies the related question of what buyer information should
  be reported to sellers.
  Taking into account that information elicitation may be costly, my paper
  can inform the designers on what data should be collected from the users.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1479232066
-The paper also contributes to the literature on information design (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "AMS95"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "GH80"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Mil81"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "KG11"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RS10"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "BM16-TE"
-
-\end_inset
-
-; 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Kol15"
-
-\end_inset
-
-), as it extends the model of the disclosure problem with a heterogeneous
- audience to the case with endogenously available and forward-looking receivers
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-as in Mortensen 82 and Pissarides 90?
-\end_layout
-
-\end_inset
-
-.
- Although forward-looking, the receivers receive one signal per job, which
- differs my work from the gradual learning settings of 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Ely15"
-
-\end_inset
-
- and 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Smo15"
-
-\end_inset
-
-.
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RS10"
-
-\end_inset
-
- study the setting with arbitrary complementarities between the sender's
- and receiver's payoffs and show that the sender-optimal disclosure policy
- pools 
-\begin_inset Quotes eld
-\end_inset
-
-non-ordered prospects
-\begin_inset Quotes erd
-\end_inset
-
-.
- Compared to them, I have a simpler sender's payoff function, all prospects
- are 
-\begin_inset Quotes eld
-\end_inset
-
-ordered,
-\begin_inset Quotes erd
-\end_inset
-
- but the receivers have strategic interactions and optimize dynamically.
- 
-\change_inserted -484307115 1479233176
 The paper also contributes to the literature on information design (
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1427,22 +1373,25 @@ key "BM16-TE"
 
 \end_inset
 
-) by extending  the disclosure problem with a heterogeneous audience to
- the case with endogenously available and forward-looking receivers
+) by extending the disclosure problem with a heterogeneous audience to the
+ case with endogenously available and forward-looking receivers
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1479232066
 as in Mortensen 82 and Pissarides 90?
 \end_layout
 
 \end_inset
 
 .
- Although forward-looking, the receivers receive one signal per job, which
- distinguishes my work from the gradual learning settings of 
+ Although forward-looking, the receivers receive one signal per 
+\change_deleted -484307115 1479680098
+job
+\change_inserted -484307115 1479680099
+buyer
+\change_unchanged
+, which distinguishes my work from the gradual learning settings of 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Ely15"
@@ -1485,8 +1434,6 @@ ordered,
 
  but the receivers have strategic interactions and optimize dynamically.
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1505,35 +1452,6 @@ The role of information is matching and peer-to-peer markets is an active
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1479232782
-My work differs from the theory of centralized matching (
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Rot08"
-
-\end_inset
-
-) in that I do not assume that agents know their true preferences over potential
- partners prior to engaging in a match.
- Critically, the participants of matching platforms have to inspect potential
- matches to identify the valuable ones.
- Papers that study the role of uncertainty in centralized dynamic matching
- include 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "AJM13,ALG16"
-
-\end_inset
-
-.
- They show that waiting to thicken improves matching in kidney exchange
- because individual agents do not fully incorporate the benefits of waiting.
- I emphasize the opposite effect: individual sellers wait too long because
- they do not fully incorporate the buyer loss form rejections (or buyer
- costs of waiting).
- 
-\change_inserted -484307115 1479233208
 My work differs from the theory of centralized matching (
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1564,12 +1482,10 @@ key "ALG16"
  They show that waiting for the market to thicken improves matching in kidney
  exchange because individual agents do not fully incorporate the benefits
  of waiting.
- I emphasize the opposite effect:  Individual sellers wait too long because
+ I emphasize the opposite effect: Individual sellers wait too long because
  they do not fully incorporate the buyer loss from rejections (or buyer
  costs of waiting).
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
