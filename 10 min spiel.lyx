@@ -19,7 +19,7 @@ theorems-ams-extended-bytype
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "palatino" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -118,6 +118,64 @@ theorems-ams-extended-bytype
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In my job market paper I study the information disclosure problem in two-sided
+ matching platforms.
+ I show that although information availability benefits participants of
+ the markets 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+with pronounced heterogeneity
+\end_layout
+
+\end_inset
+
+, the downside is that rich information intensifies search and lowers match
+ rate.
+ As a result, the platform's policy of limiting information can increase
+ the total surplus generated on the platform.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+I study a model in which time-sensitive buyers contact sellers...
+ [explain model quickly].
+ 
+\end_layout
+
+\begin_layout Plain Layout
+My first result is that the full disclosure brings about an inefficient
+ outcome.
+ The are two main reasons for that: cross-side effect and the same-side
+ effect.
+ First, revealing buyer information to sellers stimulates sellers to cream-skim.
+ Specifically, more information increases sellers' return on search that
+ leads to sellers rejecting the matches that are valuable to the buyers.
+ Based on the stylized facts from online marketplaces, this I think is the
+ strongest force that determines the optimal information design.
+ Second, information availability promotes the coordination failure among
+ sellers.
+ Intuitively, each seller keeps his schedule open by rejecting low-value
+ buyers in order to increase his individual chances of getting the high-value
+ buyers.
+ As a result, the seller spend a lot of time waiting for the most valuable
+ buyers.
+ Collectively, this behavior is suboptimal because all valuable jobs have
+ to be accepted to maximize the joint profits.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 10-minute spiel for the interview
 \end_layout
@@ -134,57 +192,205 @@ Tell us about your job market paper.
 \end_layout
 
 \begin_layout Standard
-In my job market paper I am doing information design in matching markets
- with applications to digital platforms for housing rental, labor contracting
- and transportation.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Problems with this spiel: 
+\end_layout
+
+\begin_layout Enumerate
+I never mention the seller coordination failure.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The first two minutes do not consitute a 2-min spiel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In my job market paper I study how withholding of information can improve
+ efficiency of two-sided matching platforms.
+ We know that when buyers and sellers are heterogeneous, providing information
+ about the trading partners is key because it lets the market participants
+ form the most 
+\series bold
+valuable
+\series default
+ matches.
+ However, more information also makes the participants pickier, and this
+ decreases the 
+\series bold
+rate
+\series default
+ at which the matches are formed.
+ As a result, in the fast-moving marketplaces where speed matters, information
+ availability may decrease the total surplus.
+ In this situation, the platform's strategic decision to limit information
+ the participants observe about each other improves welfare.
  
 \end_layout
 
 \begin_layout Standard
-Let me start by using Uber as an example, and then I'll tell you how my
- setting applies to other markets.
- An Uber driver receives requests from passengers, which he can accept or
- reject.
- Uber shows to the drivers the passenger's rating, name and location but
- does 
+Let me give you an example.
+ In Uber marketplace, a driver receives requests from passengers and has
+ an option to accept or reject each request.
+ The current version of UberX shows to drivers the passenger's rating, name
+ and location but does 
 \series bold
 not
 \series default
- show the destination until after the request is accepted even if it was
- entered into the app.
- Well, but the drivers 
+ show the passenger's destination until after the driver accepts the request.
+ Well, the drivers 
 \series bold
 care
 \series default
  about where the passenger is going.
  Typically, the drivers don't like doing short trips or traveling to remote
  neighborhoods.
- So why does Uber not let the drivers' choose what's in their best interest?
+ So why does Uber not let the drivers choose what's in their best interest?
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+last sentence—you are overselling.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In my paper, I study this question in a general framework that applies also
+ to matching platforms for rental housing and labor contracting, such as
+ Airbnb and TaskRabbit.
+ I show that it is efficient, in terms of the total surplus, for the platform
+ to withhold information the sellers can observe about the buyers.
+ Then in the second part of the paper, I characterize the optimal disclosure
+ policy in several environments.
+ [2:00]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What's exactly the problem with disclosing buyer information to the sellers?
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+My first main result is that information withholding can be a Pareto improvement
+ for both buyer and seller surpluses.
+ Let me tell you why.
+
+\bar default
+ First, for the buyers.
+ Revealing buyer information to sellers stimulates sellers to cream-skim.
+ Specifically, sellers will single out the matches valuable to them but
+ reject the matches that are valuable to the buyers.
+ Now, information availability also makes sellers worse off as a whole.
+ Intuitively, each seller keeps his schedule open by rejecting low-value
+ matches in order to increase his individual chances of getting the high-value
+ matches.
+ As a result, the sellers spend a lot of time waiting for the most valuable
+ buyers.
+ Collectively, this behavior is suboptimal because all valuable matches
+ have to be accepted in order to maximize the joint seller surplus.
  
 \end_layout
 
 \begin_layout Standard
-In my paper, I study the general question of when a matching platform should
- limit information that its users see about each other.
- What is the optimal information disclosure policy and what does it depend
- on? 
+The platform's policy of withholding the buyer information reduces sellers'
+ cream-skimming behavior, and improves the efficiency of the marketplace.
+ 
 \end_layout
 
 \begin_layout Standard
-The key tradeoff a matching platform faces is between match quality and
- match rate.
- Continuing with the Uber example, on the one hand, disclosing more information
- to an Uber driver increases his ex ante match quality because he can choose
- what's better for him.
- On the other hand, it may decrease the match rate.
- Passengers do not like waiting, and low match rate hurts passenger surplus.
+In the Uber example, the policy of information disclosure governs what passenger
+ characteristics are revealed to the driver and how coarse.
+ For concreteness, full disclosure is when Uber shows the exact passenger
+ destination.
+ Coarse disclosure would be to create three categories, say, close ride,
+ medium ride, far ride, and show to the driver only the category.
  
 \end_layout
 
 \begin_layout Standard
 
 \bar under
-I study these questions in the context of the following model.
+How should information be withheld?
+\bar default
+ It depends on the details of the seller side of the market.
+ There are 4 sources of heterogeneity: both buyer and seller characteristics
+ potenially affect both buyer and seller payoff.
+ For my second main result I leave only the seller preference over buyers—the
+ one that we care the most about—and shut down the other three.
+ For my third main result, I allow seller preferences to vary.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+the general question of when a matching platform should limit information
+ that its users see about each other, and I show that to improve total surplus
+ the platform should limit information.
+ I also characterize the optimal disclosure policy in several environments.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Why is limiting information welfare improving? The key tradeoff for a matching
+ platform is between match quality and match rate.
+ Let me return to my Uber example.
+ The base effect goes as follows.
+ On the one hand, disclosing more information to an Uber driver increases
+ his ex ante match quality because he can choose what's better for him.
+ On the other hand, it may decrease the match rate.
+ Lower match rate means longer wait times.
+ Passengers do not like waiting, and so low match rate hurts passenger surplus.
+ Therefore, limiting information can increase match rate and increase buyer
+ suprlus more than it hurts the seller surplus.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+[Let me tell you the exact model I am working in.
 
 \bar default
  There are three groups of players: buyers, sellers, and the platform itself.
@@ -194,38 +400,54 @@ I study these questions in the context of the following model.
  to reject.
  The sellers have limited capacity for serving buyers, derive heterogeneous
  payoffs from being matched with different buyers, maximize their average
- profit flow, and don't care about match speed per se.
+ profit flow, and don't care about match rate per se.
  The platform is information intermediary between buyers and sellers.
  It designs an information disclosure policy that governs what buyer characteris
 tics sellers see before accepting a match.
- 
+ ]
 \end_layout
 
 \begin_layout Standard
-First, I show that the full information disclosure is inefficient.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I have three main results.
+ First, I show that the full information disclosure is inefficient.
  Second, I show that when the platform knows seller preferences, then there
  is a disclosure policy that restores the full efficiency, and this policy
  is very coarse.
  Finally, as my main technical contribution, I characterize the optimal
- disclosure policy in the case when sellers have distinct preferences which
- are unknown to the platform.
+ disclosure policy in the case when sellers have distinct preferences over
+ buyers which are unknown to the platform.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \bar under
-Now let me tell you in more detail why full disclosure is inefficient.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\bar under
+Now let me tell you in more detail why the full disclosure is not efficient.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Disclosing more buyer information to sellers increases sellers' 
 \series bold
 return on search
 \series default
 .
- As a result, sellers 
+ As a result, sellers will 
 \series bold
 cream-skim
 \series default
@@ -255,6 +477,11 @@ down
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \bar under
@@ -265,17 +492,27 @@ n coarsening restores the full efficiency.
 
 \begin_layout Standard
 As I just told you, full disclosure brings about an inefficient market outcome.
- The efficient disclosure policy is very coarse and its design relies on
- the revelation principle.
+ The disclosure policy that restores efficiency is very coarse
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ and its design relies on the revelation principle
+\end_layout
+
+\end_inset
+
+.
  The optimal policy signals to sellers an 
 \series bold
 action recommendation: 
 \series default
-whether the seller is supposed to accept or reject a given buyer.
+that is says whether the seller is supposed to accept or reject a given
+ buyer.
  The recommendations are designed so that only efficient matches are accepted,
  and the sellers obey the recommendations because the platform knows seller
- preferences and can make sure sellers stay profitable when following the
- recommendation to accept.
+ preferences and can make sure sellers stay profitable when they follow
+ the recommendations to accept or reject.
  
 \end_layout
 
@@ -375,5 +612,42 @@ I develop a model of market with search and matching, where sellers have
 
 \end_layout
 
+\begin_layout Subsection*
+Potential questions
+\end_layout
+
+\begin_layout Itemize
+What a disclosure policy? How does the platform disclose information? How
+ do you model it?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Buyers have types, which are relevant for sellers (destination on Uber).
+ The platform maps buyer types into signals, and shows to sellers only the
+ signals.
+ If all possible desitnation locations are broken down into three groups,
+ then there are just three signals.
+ Such a disclosure policy is quite coarse.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Why do we care about online marketplaces?
+\end_layout
+
+\begin_layout Itemize
+Is it a Hirshleifer effect?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No, the Hirshleifer effect is about risk-sharing, while my framework is
+ about search frictions.
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
