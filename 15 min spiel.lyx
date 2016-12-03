@@ -1,0 +1,993 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -484307115 "Gleb Romanyuk"
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add: discirimination is one reason to withhold information but I study an
+ economic reason.
+ 
+\end_layout
+
+\begin_layout Itemize
+sound more enthusiastic
+\end_layout
+
+\begin_layout Itemize
+do you have any other papers you'd like to tell us about? 
+\end_layout
+
+\begin_layout Itemize
+What kind of work are you gonna be doing in the next five years?
+\end_layout
+
+\begin_layout Itemize
+What classes can you teach? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+15-minute spiel for the interview
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Tell us about your job market paper.
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_inserted -484307115 1480784552
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1480784571
+In my job market paper, I study information intermediation in two-sided
+ matching platforms.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+In my job market paper I study how 
+\change_inserted -484307115 1480784443
+a matching platform can strategically 
+\change_unchanged
+withhol
+\change_inserted -484307115 1480784446
+d
+\change_deleted -484307115 1480784445
+ding
+\change_unchanged
+ 
+\change_deleted -484307115 1480784448
+of
+\change_unchanged
+ information 
+\change_inserted -484307115 1480784540
+and
+\change_deleted -484307115 1480784451
+can
+\change_unchanged
+ improve 
+\change_inserted -484307115 1480784455
+the 
+\change_unchanged
+efficiency of 
+\change_deleted -484307115 1480784484
+two-sided matching platforms
+\change_inserted -484307115 1480784487
+the marketplace
+\change_unchanged
+.
+ We know that when buyers and sellers are heterogeneous, providing information
+ about the trading partners is key because it lets the market participants
+ form the most 
+\series bold
+valuable
+\series default
+ matches.
+ However, more information also makes the participants pickier, and this
+ decreases the 
+\series bold
+rate
+\series default
+ at which the matches are formed.
+ As a result, information availability slows down the matching that leads
+ to lower surplus in the markets where speed matters.
+ In this situation, the platform's strategic decision to limit information
+ the participants observe about each other will be welfare-improving.
+ 
+\end_layout
+
+\begin_layout Standard
+Let me give you an example.
+ In Uber marketplace, a driver receives requests from passengers and has
+ an option to accept or reject each request.
+ In the current version of UberX the drivers see the passenger's rating,
+ name and location but do 
+\series bold
+not
+\series default
+ see the passenger's destination until after the driver picks up the passenger.
+ Well, the drivers 
+\series bold
+care
+\series default
+ about where the passenger is going.
+ Typically, the drivers don't like doing short trips or traveling to remote
+ neighborhoods where it's hard to get another passenger.
+ The quesion is: Is there a case for such information withholding to improve
+ the 
+\series bold
+efficiency
+\series default
+ of the marketplace? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+So why does Uber not let the drivers choose what's in their best interest?
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+last sentence—you are overselling.
+ But am I? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In my paper, I study this question in 
+\bar under
+a general framework 
+\bar default
+that applies also to matching platforms for housing rental and labor contracting
+, such as Airbnb and TaskRabbit.
+ In my model, buyers contact sellers and want to match quickly.
+ Sellers recieve buyer requests and choose what buyers to accept and whom
+ to reject.
+ The sellers have limited capacity for serving buyers and most importantly,
+ seller have preferences over buyers.
+ The platform chooses a disclosure policy on the seller side of the market,
+ namely it chooses how to reveal buyer characteristics to the sellers.
+ I allow for arbitrary disclosure policies, that is, for an aribtrary mapping
+ from buyer types to signals.
+ 
+\end_layout
+
+\begin_layout Standard
+I have three main results.
+ First, I show that full disclosure of buyer characteristics is Pareto-inefficie
+nt.
+ In the second and the third, I characterize the optimal disclosure policy
+ in different environments.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+For example,
+\bar default
+ Back to the Uber example, a disclosure policy governs what passenger characteri
+stics are revealed to the driver and how coarsely.
+ Full disclosure is the one when Uber shows the exact passenger destination.
+ A coarse disclosure would be, for example, to partition all destination
+ into three categories, close ride, medium-range ride, far ride, and show
+ to the driver only the category the destination belongs to.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+My first main result is that under the full disclosure, a combination of
+ buyer and seller surpluses is Pareto-inefficient.
+ 
+\bar default
+Let me tell you why, first, for the buyers, then, for the sellers.
+ Revealing buyer information to sellers stimulates sellers to cream-skim.
+ Specifically, sellers will single out the matches valuable to them but
+ reject other matches that are valuable to the buyers.
+ Therefore, disclosing to sellers may hurt buyer surplus.
+ 
+\end_layout
+
+\begin_layout Standard
+Disclosing less information makes sellers less picky, they settle for less
+ and tend to accept more matches.
+ 
+\end_layout
+
+\begin_layout Standard
+[A key observation is that the platform can increase a seller's expected
+ marginal profit by limiting the information revealed to him.
+ To do so, it should pool the attractive jobs with marginally unattractive
+ jobs putting more weight on attractive jobs.
+ Marginally unattractive are the jobs that are marginally profitable and
+ are rejected because a seller prefers to wait for a better job.
+ Attractive jobs are the profitable jobs that are accepted.
+ ]
+\end_layout
+
+\begin_layout Standard
+Now, what is more interesting is that information availability also makes
+ sellers worse off as a whole.
+ Intuitively, each seller keeps his schedule open by rejecting the low-value
+ matches in order to increase his individual chances of getting the high-value
+ matches.
+ As a result, the sellers spend a lot of time waiting for the most valuable
+ buyers.
+ Collectively, this behavior is suboptimal because all seller-valuable matches
+ have to be accepted in order to maximize the joint seller surplus.
+ The platform's policy of withholding the buyer information reduces sellers'
+ cream-skimming behavior, and improves the efficiency of the marketplace.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\bar under
+[Let me tell you the exact model I am working in.
+
+\bar default
+ There are three groups of players: buyers, sellers, and the platform itself.
+ Buyer search for sellers, they don't care who they match with but want
+ to match quickly.
+ Sellers receive buyer requests and choose what buyers to accept and whom
+ to reject.
+ The sellers have limited capacity for serving buyers, derive heterogeneous
+ payoffs from being matched with different buyers, maximize their average
+ profit flow, and don't care about match rate per se.
+ The platform is information intermediary between buyers and sellers.
+ It designs an information disclosure policy that governs what buyer characteris
+tics sellers see before accepting a match.
+ ]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Now let me move on to the next part of the paper where I study the optimal
+ disclosure policy.
+
+\bar default
+ The optimal disclosure policy depends on the details of the seller side
+ of the market, and I study this question in two environments.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In the whole generality, the matching payoffs have a complex structure because
+ there are 4 sources of heterogeneity in matching payoffs: both buyer and
+ seller characteristics potenially affect both buyer and seller payoffs,
+ and the platform only partially observes each source of heterogeneity.
+ 
+\end_layout
+
+\end_inset
+
+The first environment is where the platform knows the sellers' preferences;
+ and the second environment is where the seller preferences are unknown
+ to the platform.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I leave only the seller preference over buyers—the one that we care the
+ most about—and shut down the other three.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+the general question of when a matching platform should limit information
+ that its users see about each other, and I show that to improve total surplus
+ the platform should limit information.
+ I also characterize the optimal disclosure policy in several environments.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Why is limiting information welfare improving? The key tradeoff for a matching
+ platform is between match quality and match rate.
+ Let me return to my Uber example.
+ The base effect goes as follows.
+ On the one hand, disclosing more information to an Uber driver increases
+ his ex ante match quality because he can choose what's better for him.
+ On the other hand, it may decrease the match rate.
+ Lower match rate means longer wait times.
+ Passengers do not like waiting, and so low match rate hurts passenger surplus.
+ Therefore, limiting information can increase match rate and increase buyer
+ suprlus more than it hurts the seller surplus.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I have three main results.
+ First, I show that the full information disclosure is inefficient.
+ Second, I show that when the platform knows seller preferences, then there
+ is a disclosure policy that restores the full efficiency, and this policy
+ is very coarse.
+ Finally, as my main technical contribution, I characterize the optimal
+ disclosure policy in the case when sellers have distinct preferences over
+ buyers which are unknown to the platform.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\bar under
+Now let me tell you in more detail why the full disclosure is not efficient.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Disclosing more buyer information to sellers increases sellers' 
+\series bold
+return on search
+\series default
+.
+ As a result, sellers will 
+\series bold
+cream-skim
+\series default
+: They reject low-value buyers to chase the high-value buyers.
+ Even though seller match 
+\series bold
+quality
+\series default
+ 
+\series bold
+increases
+\series default
+, the match 
+\series bold
+rate
+\series default
+ can go 
+\series bold
+down
+\series default
+.
+ For sellers it's fine.
+ But for the platform it is not fine, because it also cares about the buyers
+ who disproportionately value high match rate.
+ In other words, in the full-disclosure equilibrium sellers resolve the
+ match quality–match rate tradeoff inefficiently.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Let me start with the case of known seller preferences.
+
+\bar default
+ I show that there is a very coarse disclosure policy that implements an
+ economic outcome with both higher buyer and seller surpluses.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+limiting information restores the full efficiency, where the full efficiency
+ is when all efficient matches and only them are formed.
+ This is gonna be my second main result.
+ As I just told you, full disclosure is not efficient.
+ It turns out that the disclosure policy that restores efficiency is very
+ coarse.
+\end_layout
+
+\end_inset
+
+ For any given buyer, this disclosure policy sends to the seller one of
+ two signals: either a
+\series bold
+ 
+\series default
+recommendation to accept or a recommendation to reject.
+ In fact, with the right choice of signals, the implemented outcome is Pareto-ef
+ficient in the sense that is no other seller strategy profile that generates
+ higher buyer and seller surplus.
+ How to choose the signals? Take a Pareto-efficient outcome that dominates
+ the full disclosure outcome.
+ By the Revelation Principle, it is sufficient to recommend seller to accept
+ the matches that lead to this Pareto-efficient outcome, and recommned to
+ reject the others.
+ The sellers follow the recommendations because the platform knows seller
+ preferences.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Now let me tell you about my main technical contribution, which is the case
+ of unobservable seller preferences.
+ 
+\bar default
+In the whole generality, the matching payoffs have a complex structure because
+ there are 4 sources of heterogeneity in matching payoffs: both buyer and
+ seller characteristics potenially affect both buyer and seller payoffs.
+ Therefore I restrict my attention to the setting where seller payoff is
+ a linear function of seller and buyer type, and buyers have no preference
+ over sellers.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+check: 
+\begin_inset Formula $v(x,y)=y-x$
+\end_inset
+
+, 
+\begin_inset Formula $u(x,y)=u$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ High seller types—call them professionals—can profitably complete a larger
+ set of buyer tasks than low seller types—call them amateurs.
+ The platform does not know if a given seller is a professional or an amateur,
+ and this creates an additional tradeoff into the platform's disclosure
+ problem.
+ Specifically, if the platform was to withhold information in a way I described
+ earlier to stimulate the 
+\series bold
+professionals
+\series default
+ accept more buyers, the 
+\series bold
+amateurs
+\series default
+ would stop working at all.
+ To see why, note that the pool of buyers supposed to be accepted by professiona
+ls contains a lot of buyers who has negative value for the amateurs.
+ Therefore, the amateurs would reject the professional's recommendation
+ to accept.
+ This logic suggests that the platform should release more information so
+ that sellers have information needed to stay profitable on the platform.
+ 
+\end_layout
+
+\begin_layout Standard
+And indeed, welare-maximizing disclosure policy in this case is more revealing
+ than when seller preferences are known.
+ In partiular, I show that the optimal disclosure policy has the form of
+ upper-coarsening, in which high buyer types are pooled, and low buyer types
+ are perfectly revealed.
+ And this is my third main result.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Now let me tell you how I solve this disclosure problem.
+
+\bar default
+ Building on the information communication literature (Kamenica-Gentzkow
+ 2011), the platform's problem is a disclosure problem of buyer type to
+ an unobservably heterogeneous audience of sellers, who are also forward-looking.
+ 
+\end_layout
+
+\begin_layout Standard
+I approach this problem by representing signaling structures as a particular
+ class of convex functions and then using the calculus of variations to
+ find the first-order necessary conditions.
+ The best way to see that the optimal disclosure policy is qualitatively
+ different when sellers are forward-looking, consider the uniform distribution
+ of seller types and the platform's objective to maximize the average acceptance
+ rate.
+ In this case, when the sellers are unconstrained, the disclosure policy
+ does not affect the matching rate.
+ However, when sellers are constrained, the strict optimal disclosure policy
+ is upper-coarsening.
+ 
+\end_layout
+
+\begin_layout Standard
+In this case, the design of the optimal information disclosure is a nontrivial
+ problem.
+ To see why, note that with forward-looking sellers, the information disclosure
+ policy determines not only the seller’s stage payoff but also the distribution
+ of his potential future payoffs.
+ As a result, a seller’s decision to accept depends not only on the posterior
+ mean of the buyer type–which is standard in this literature—but also on
+ the entire signaling structure.
+ This makes a typical approaches in the literature, such as concavification
+ as in the recent bayesian persuasion literature, is unsuitable for the
+ analysis of my model.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+pure speaking time is 15 minutes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I'm doing information design in decentralized matching markets, with application
+ to online marketplaces, such as Airbnb.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In decentralized matching markets it is important that buyers and sellers
+ find and form the most valuable matches.
+ But it is also important that the matches happen fast.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Let me give you an example.
+ On Uber, a driver wants to know the passenger's star rating, where the
+ passenger is going and maybe the passenger's gender.
+ At first sight, it makes perfect sense for the platform designer to show
+ to the driver all information it has about the passenger.
+ However, more information increases the return to search and screening.
+ The driver will reject low-value rides, such as short rides or rides to
+ remote neighborhoods, because he knows there will be more requests coming.
+ As a result, the passenger will wait long to get a ride, which decreases
+ user experience for passengers.
+ Uber is a two-sided market so it cares about both sided, drivers and passengers.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+I study how a two-sided platform should design an information disclosure
+ policy to alleviate sellers cream-skimming behavior and improve efficiency.
+ E.g.
+ what passenger attributes on Uber, or guest attributes on Airbnb should
+ be made visible to sellers? 
+\end_layout
+
+\begin_layout Plain Layout
+I develop a model of market with search and matching, where sellers have
+ limited capacities.
+ I show that 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{document}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Potential questions
+\end_layout
+
+\begin_layout Enumerate
+Do you think Uber cares about efficiency? Do you study the case when it
+ is profit-maximizer? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes.
+ Literally, a hiring ad I received from Lyft had a line: 
+\begin_inset Quotes eld
+\end_inset
+
+We are looking for an economist to help us efficiently match supply and
+ demand.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How broadly does it apply? What's different from a regulator in a normal
+ market with buyers and sellers? 
+\end_layout
+
+\begin_layout Enumerate
+If full disclosure always inefficient?? I can see a mechanism but I am surprised
+ it is always the case.
+ Can you tell me more about that? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I said 
+\begin_inset Quotes eld
+\end_inset
+
+The sellers accept the set of matches that are valuable to them, and this
+ set does not coincide with the set of efficient matches.
+\begin_inset Quotes erd
+\end_inset
+
+ Why? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+I study a setting with pronounced heterogeneity, so that buyer and seller
+ preferences over matches are not aligned.
+\begin_inset Quotes erd
+\end_inset
+
+ Isn't there a price mechanism to take care of it? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Prices are fixed.
+ I am intereseted in the following question.
+ Fix prices; what can the platform do just by manipulating the information
+ the sellers observe about the buyers?
+\begin_inset Quotes erd
+\end_inset
+
+ Do you have a story why Uber is doing it using information and not prices?
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In practice it may be easier to implement information withholding than a
+ fine pricing.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Can you say in one sentence what externality a seller imposes by accepting
+ or rejecting a match? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes.
+ The externality has to do with the constrained capacity.
+ When a seller rejects a buyer request, he stays available on the marketplace,
+ and attracts a fraction of buyers that otherwise would go to his competitiors.
+ As a result, the other sellers face a weaker demand, and are worse off.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+But isn't the case that rejected buyers go to the other sellers? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In the base model the buyers make a single request attempt.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Is there a differential sense to your first result? If I decrease information
+ a little bit, does it necessarily increase the surplus? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes, I can tell you the differential result.
+ The short answer is that the effect on surplus depends on how exactly you
+ restrict the information.
+ In a generic case, there is always a perturbation to full disclosure that
+ increases the surplus and a perturbation that decreases the surplus.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What's a disclosure policy? How does the platform disclose information?
+ How do you model it?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Buyers have types, which are relevant for sellers (destination on Uber).
+ The platform maps buyer types into signals, and shows to sellers only the
+ signals.
+ If all possible desitnation locations are broken down into three groups,
+ then there are just three signals.
+ Such a disclosure policy is quite coarse.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do you think this technical approach (representation+calculus of variations)
+ is applicable to other problem and will be valuable to other people? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes.
+ The approach is quite general and can be applied to other disclosure problems.
+ Especially it will be useful in the situations where the receivers optimal
+ actions depend not only on the posterior mean of the signal but on the
+ entire signaling structure.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do you allow for the sellers to reveal their types? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+No, sellers do not reveal their types, and neither the platform tries to
+ elicit them.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If you allow for communication between sellers and the platform, will the
+ results change? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I do not know in my setting, but a paper by Kolotilin et al.
+ showed that communication does not matter in the special case of my model,
+ when the matching is static and seller are not limited in capacity.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Why do we care about online marketplaces?
+\end_layout
+
+\begin_layout Enumerate
+Is it a Hirshleifer effect?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No, the Hirshleifer effect is about risk-sharing, while my framework is
+ about search frictions.
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
