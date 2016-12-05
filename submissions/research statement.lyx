@@ -114,7 +114,6 @@ theorems-ams-extended-bytype
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -237,34 +236,13 @@ Phone: (617) 308-8394
 \begin_layout Standard
 My primary research interests lie in the area of microeconomic theory, market
  design, the economics of digitization, and industrial organization.
- My research is motivated by the observation that in order for 
-\change_deleted -484307115 1479865329
-the
-\change_inserted -484307115 1479865329
-a
-\change_unchanged
- market
-\change_deleted -484307115 1479865330
-s
-\change_unchanged
+ My research is motivated by the observation that in order for a market
  to work well, it is necessary to have clear rules of game that foster value
- creation and inhibit perverse behavior, such as deception, rent-seeking
-\change_inserted -484307115 1479866338
-,
-\change_unchanged
+ creation and inhibit perverse behavior, such as deception, rent-seeking,
  and others.
- 
-\change_deleted -484307115 1479865393
-Recently, t
-\change_inserted -484307115 1479865393
-T
-\change_unchanged
-he advances in IT technology and the spread of communication devices led
- to the rise of companies whose business model relies on 
-\change_deleted -484307115 1479866398
-some sort of
-\change_unchanged
- platform or market design.
+ The advances in IT technology and the spread of communication devices led
+ to the rise of companies whose business model relies on platform or market
+ design.
 \begin_inset Foot
 status open
 
@@ -278,31 +256,16 @@ E.g., 19% of the total US adult population has engaged in a sharing economy
 \end_inset
 
  How should these markets be designed? An attractive feature of digital
- marketplaces is that the designer has 
-\change_deleted -484307115 1479866535
-a lot of
-\change_inserted -484307115 1479866535
-much
-\change_unchanged
- control over the marketplace
-\change_inserted -484307115 1479866465
- operations
-\change_unchanged
- and potentially accumulates detailed transactions data.
+ marketplaces is that the designer has much control over the marketplace
+ operations and potentially accumulates detailed transactions data.
  This presents an opportunity for conducting research and for creating new
  operations and business strategies.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1479865499
-My
-\change_inserted -484307115 1479865501
-Most of my
-\change_unchanged
- research up to date has focused on the market design in online platforms,
- matching markets and auction design.
+Most of my research up to date has focused on the market design in online
+ platforms, matching markets and auction design.
  
 \end_layout
 
@@ -315,11 +278,7 @@ In my job marker paper “Ignorance is Strength: Improving the Performance
  observability at the search stage does not necessarily lead to market improveme
 nt.
  The paper develops a framework for analyzing the platform's design decisions
- on 
-\change_inserted -484307115 1479866578
-the 
-\change_unchanged
-disclosure of the participants' characteristics to each other.
+ on the disclosure of the participants' characteristics to each other.
  The model is a persuasion problem on the seller side of the market where
  sellers have preferences over buyers and limited capacity.
  I show that full disclosure is Pareto-suboptimal for buyer and seller surpluses.
@@ -416,24 +375,10 @@ Going forward, I plan to continue working on questions of marketplace design
  of market centralization.
  Being an old question in the history of economic thought (going back to
  Hayek and Lerner), it has recently become relevant again after the rise
- of 
-\change_deleted -484307115 1479865578
-new
-\change_unchanged
- digital marketplaces, such as Uber and Airbnb.
- One
-\change_inserted -484307115 1479865624
- interesting
-\change_unchanged
- way to approach the question of centralization is to consider the tradeoff
- between information elicitation and transaction costs, which was informally
- introduced 
-\change_inserted -484307115 1479865642
-in
-\change_deleted -484307115 1479865639
-in
-\change_unchanged
- Einav, L., Farronato, C.
+ of digital marketplaces, such as Uber and Airbnb.
+ One interesting way to approach the question of centralization is to consider
+ the tradeoff between information elicitation and transaction costs, which
+ was informally introduced in Einav, L., Farronato, C.
  and Levin, J.
  (2016) Peer-to-Peer Markets, 
 \emph on
@@ -451,79 +396,34 @@ A lot of design decisions for the existing platform can be explained in
 
 \end_inset
 
- For example, eliciting Uber passengers' preferences over cars ha
-\change_inserted -484307115 1479866635
-ve
-\change_deleted -484307115 1479866634
-s
-\change_unchanged
- little marginal benefit relative to the hassle costs associated with asking
- questions and 
-\change_inserted -484307115 1479865680
-making passengers 
-\change_unchanged
-search
-\change_deleted -484307115 1479865687
-ing
-\change_unchanged
-.
+ For example, eliciting Uber passengers' preferences over cars have little
+ marginal benefit relative to the hassle costs associated with asking questions
+ and making passengers search.
  The resolution of this tradeoff determines the degree of platform centralizatio
 n and is a key design decision that drives the success of the platform.
  Despite its significance, there are important subtleties that have to be
  understood before we are ready to give practical advice.
  What side of the market should do the work to provide information for the
  match? Unlike price, information is multi-dimensional, and in particular,
- a platform participant possess
-\change_inserted -484307115 1479866674
-es
-\change_unchanged
- information both about his match payoff and the counter-party's payoff.
+ a platform participant possesses information both about his match payoff
+ and the counter-party's payoff.
  How does it affect the elicitation policies? 
 \end_layout
 
 \begin_layout Standard
-Another interesting 
-\change_deleted -484307115 1479864137
-question
-\change_inserted -484307115 1479864139
-research topic
-\change_unchanged
- is endogenous network effects.
- In many cases, a 
-\change_deleted -484307115 1479845988
-platform
-\change_inserted -484307115 1479845990
-company
-\change_unchanged
- has a strategic decision to choose 
-\change_inserted -484307115 1479865741
-the extent 
-\change_unchanged
-to 
-\change_deleted -484307115 1479865747
-what extent 
-\change_inserted -484307115 1479865748
-which the affiliated entities (customers, suppliers) 
-\change_deleted -484307115 1479846025
-the sides of the market
-\change_unchanged
- are insulated from each other (Hagiu, A.
+Another interesting research topic is endogenous network effects.
+ In many cases, a company has a strategic decision to choose the extent
+ to which the affiliated entities (customers, suppliers) are insulated from
+ each other (Hagiu, A.
  and Wright, J.
  (2015) Marketplace or reseller?, 
 \emph on
 Management Science
 \emph default
 ).
- For example, Walmart can choose 
-\change_inserted -484307115 1479864669
-the fraction of the inventory risk borne by its suppliers
-\change_deleted -484307115 1479864682
-the degree at which its suppliers are responsible for the leftover inventories
-\change_unchanged
-, and this determines the extent to which the suppliers care about the Walmart
- customer base.
-
-\change_inserted -484307115 1479866226
+ For example, Walmart can choose the fraction of the inventory risk borne
+ by its suppliers, and this determines the extent to which the suppliers
+ care about the Walmart customer base.
  That is, the company can choose the strength of the network effects, and
  so can choose whether to be a reseller or a two-sided market.
  Similar logic applies to Uber drivers who can be more or less insulated
@@ -536,12 +436,6 @@ the degree at which its suppliers are responsible for the leftover inventories
  platform business model and what mechanisms determine the strength of network
  effects.
  
-\change_deleted -484307115 1479846049
- 
-\change_inserted -484307115 1479865846
- 
-\change_unchanged
-
 \begin_inset Note Note
 status collapsed
 
