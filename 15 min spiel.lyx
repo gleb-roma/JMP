@@ -109,12 +109,11 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -134,18 +133,14 @@ status open
 \end_layout
 
 \begin_layout Itemize
-[] Start with an example, and use it as a glimpse of the model to overview
+[X] Start with an example, and use it as a glimpse of the model to overview
  the main three results.
  Then go into the details.
  
-\change_inserted -484307115 1480953186
-
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
-\change_inserted -484307115 1480963310
 To get to the hotel from the airport, I took an Uber, but the Uber driver
  didn't know where he was going before picking me up.
  ...
@@ -153,28 +148,18 @@ To get to the hotel from the airport, I took an Uber, but the Uber driver
 
 \end_deeper
 \begin_layout Itemize
-
-\change_inserted -484307115 1480963318
 [] say what platform can and cannot do.
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
 Add: discrimination is one reason to withhold information but I study an
  economic reason.
  
-\change_inserted -484307115 1480963974
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -484307115 1480963991
 [] for empiricists, ...
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
@@ -185,21 +170,98 @@ sound more enthusiastic.
 
 \begin_layout Itemize
 do you have any other papers you'd like to tell us about? 
-\change_inserted -484307115 1480953248
-
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
-\change_inserted -484307115 1480953274
 [] Prepare 3-5 min spiel for each paper on my CV (before Mon Dec 12).
  
-\change_unchanged
-
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+THE NEW STRUCTURE
+\end_layout
+
+\begin_layout Itemize
+Start with an example.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Uber example
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+State the question.
+ It's an important question, applies to other marketplaces
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What are the benefits of limiting information? How to disclose information
+ to maximize the total surplus generated on the platform? 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Basic intuition (one shot tradeoff between buyer and seller surplus).
+ Then say why it's not enough.
+ Adding relevant elements makes it a difficult problem.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+receivers of signals have unobserved heterogeneity, capacity constrained
+ and are forward-looking.
+ 
+\end_layout
+
+\begin_layout Itemize
+the key is that disclosure policy affects the matching function.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The model 
+\end_layout
+
+\begin_layout Itemize
+Results
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+sellers are worse off as a whole due to externalities and cream-skimming.
+ 
+\end_layout
+
+\begin_layout Itemize
+optimal disclosure with known seller prefs?
+\end_layout
+
+\begin_layout Itemize
+optimal disclosure with unknown seller prefs.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Discussion
+\end_layout
+
 \end_inset
 
 
@@ -221,6 +283,198 @@ TELL US ABOUT YOUR JOB MARKET PAPER.
 \end_layout
 
 \begin_layout Standard
+In my job market paper, I study how to efficiently match heterogeneous supply
+ and demand using information disclosure.
+ Let me start by giving you an example.
+ 
+\end_layout
+
+\begin_layout Standard
+To get to the hotel from the airport, I took an Uber.
+ When my driver received my request he saw my name and location but he didn't
+ see where I was going until after he picked me up.
+ Well, it is an interesting design decision because the drivers care about
+ the passenger destination.
+ Typically, they don't like doing short trips or traveling to the remote
+ neighborhoods where it's hard to get another passenger.
+ 
+\end_layout
+
+\begin_layout Standard
+Primary problem of matching platforms, such as Uber, is to efficiently match
+ demand and supply.
+ 
+\end_layout
+
+\begin_layout Standard
+So you might think that it would be more efficient to let the drivers choose
+ the rides that are the most valuable to them.
+ 
+\end_layout
+
+\begin_layout Standard
+The question is then: Can a matching platform improve the efficiency of
+ the marketplace by limiting information buyer and sellers observe about
+ each other before engaging in a match? This is an important question because
+ there are potentially large economic gains by find the right way to match
+ heterogeneous demand and supply.
+ And my paper is looking exactly into this.
+ 
+\end_layout
+
+\begin_layout Standard
+I develop a general framework, which is not limited to Uber but also applies
+ to markets for housing rental and on-damand labor contracting, such as
+ Airbnb and TaskRabbit.
+ 
+\end_layout
+
+\begin_layout Standard
+I have two main results.
+ Let me preview them before going into more details.
+ 
+\end_layout
+
+\begin_layout Standard
+In my first result I show that under the full disclosure the economic outcome
+ is Pareto-inefficient.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The key tradeoff there the platform faces is between match rate and match
+ quality.
+ 
+\end_layout
+
+\end_inset
+
+The key intuition there is gonna be that information availability stimulates
+ search that leads to cream-skimming and low match rates.
+ I'll tell you more about it in a minute.
+  
+\end_layout
+
+\begin_layout Standard
+In the second result I characterize the platform's optimal disclosure policy.
+ In resolving this result I also make a technical contribution, which is
+ the approach to solving information disclosure problems with heterogeneous
+ and forward-looking receivers.
+ 
+\end_layout
+
+\begin_layout Standard
+=====
+\end_layout
+
+\begin_layout Standard
+The question is: Is there a case for this information withholding to improve
+ the 
+\series bold
+efficiency
+\series default
+ of the marketplace? 
+\end_layout
+
+\begin_layout Standard
+In my paper, I study this question in a general framework that also applies
+ to matching platforms for housing rental and labor contracting, such as
+ Airbnb and TaskRabbit.
+ The questions I will be able to answer are: When are there efficiency gains
+ from withhold information? How to disclose information to maximize the
+ total surplus generated on the platform? These are important questions
+ for design of markets because there are potentially large economic benefits
+ to matching supply and demand efficiently.
+ The technical contribution of the paper is the approach to information
+ disclosure problems with heterogeneous and forward-looking audience.
+ 
+\end_layout
+
+\begin_layout Standard
+Let me tell you why these questions do not have trivial answers.
+ You might think that for higher matching efficiency, the platform should
+ release to every seller all payoff-relevant information about buyers so
+ that he could choose the best one.
+ However, this single-agent logic misses the secondary effects.
+ One of them is that information disclosure makes sellers pickier and increases
+ the seller search time.
+ This decreases the match rate, and this hurts the time-sensitive buyers.
+ The other one is that information disclosure changes the nature of competition
+ between sellers.
+ Before going deeper into this, let me tell you how the platform can use
+ disclosure policy to improve the economic outcome.
+ 
+\end_layout
+
+\begin_layout Standard
+Imagine that the platform 
+\series bold
+knows
+\series default
+ the market participants' preferences, it can implement any IR outcome with
+ a simple and very coarse disclosure policy.
+ Such a policy just gives a recommendation to accept without providing any
+ additional information.
+ The recommendations are designed such that on 
+\series bold
+average
+\series default
+ they have positive value for the recipient, and are thus followed.
+ That is an easy case.
+ In practice, there is 
+\series bold
+unobserved heterogeneity
+\series default
+ in buyers' and sellers' preferences, and it is impossible to implement
+ an efficient outcome by just using simple recommendations.
+ 
+\end_layout
+
+\begin_layout Standard
+For that reason, I develop a model of a marketplace with search and matching.
+ 
+\bar under
+In this model
+\bar default
+, buyers contact sellers in continuous time and want to match quickly.
+ Sellers receive buyer requests and choose which to accept and which to
+ reject.
+ The sellers have limited capacity for serving buyers and most importantly,
+ seller have preferences over buyers.
+ The platform is the information intermediary.
+ I restrict my attention to the platform's disclosure problem on the 
+\series bold
+seller
+\series default
+ side of the market: The platform chooses how heterogeneous the buyers appear
+ to the sellers before sellers accept a match.
+ I allow for arbitrary disclosure policies, that is, for an arbitrary mapping
+ from buyer types to signals.
+ The platform does not set prices.
+ The platform's objective is the weighted average of the buyer and seller
+ surpluses.
+ 
+\end_layout
+
+\begin_layout Standard
+Back to the Uber example, a disclosure policy governs what passenger characteris
+tics are revealed to the driver and how coarsely.
+ Full disclosure is the one when Uber shows the exact passenger destination.
+ A coarse disclosure would be, for example, to partition all destination
+ into three categories, close ride, medium-range ride, far ride, and show
+ to the driver only the category the destination belongs to.
+\end_layout
+
+\begin_layout Standard
+========
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In my job market paper, I study how a matching platform can strategically
  limit information exchange between buyers and sellers and improve the efficienc
 y of the marketplace.
@@ -246,7 +500,7 @@ rate
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Let me give you an example.
  In Uber marketplace, a driver receives requests from passengers and has
  an option to accept or reject each request.
@@ -271,9 +525,9 @@ efficiency
  of the marketplace? 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 So why does Uber not let the drivers choose what's in their best interest?
@@ -296,7 +550,7 @@ last sentence—you are overselling.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In my paper, I study this question in 
 \bar under
 a general framework 
@@ -315,6 +569,11 @@ that applies also to matching platforms for housing rental and labor contracting
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 I have three main results.
  First, I show that full disclosure of buyer characteristics is Pareto-inefficie
@@ -325,6 +584,10 @@ nt.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \bar under
 For example,
@@ -335,6 +598,11 @@ stics are revealed to the driver and how coarsely.
  A coarse disclosure would be, for example, to partition all destination
  into three categories, close ride, medium-range ride, far ride, and show
  to the driver only the category the destination belongs to.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -481,7 +749,7 @@ Let me start with the case of known seller preferences.
  that implements an economic outcome with both higher buyer and seller surpluses.
  Let me walk you through the logic of the result.
  Take an economic outcome that Pareto dominates the full disclosure outcome
- and is achiavable with 
+ and is achievable with 
 \series bold
 some
 \series default
@@ -651,18 +919,12 @@ WHAT KIND OF WORK ARE YOU GONNA BE DOING IN THE NEXT FIVE YEARS?
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_inserted -484307115 1480953303
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 My primary research interests lie in the area of microeconomic theory, market
  design, the economics of digitization, and industrial organization.
-\change_inserted -484307115 1480953636
-
 \end_layout
 
 \begin_layout Standard
@@ -687,19 +949,13 @@ Another question I am interested in is the breadth of the marketplace.
  multiple of tasks, or specialize to a narrow group of tasks.
  Where do complementarities are coming from, demand side or supply side?
  Which are more important? 
-\change_inserted -484307115 1480953662
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1480953678
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1480953672
 
 
 \backslash
@@ -720,8 +976,6 @@ WHAT'S YOUR NEXT QUESTION?
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1480954344
 We do not completely understand how information design interacts mechanism
  design and pricing schemes.
  In my job market paper I study an information design question of information
@@ -738,8 +992,8 @@ We do not completely understand how information design interacts mechanism
  markets work, the existing markets can be too thin under pronounced heterogenei
 ty.
  Withholding information thickens the markets and makes them work.
- The latter line of logic was used in Milgrom's work on conflation in advertisin
-g markets.
+ The latter line of logic was used in Milgrom's work on conflation in online
+ advertising.
  
 \end_layout
 
@@ -757,11 +1011,6 @@ bigskip
 \end_inset
 
 
-\change_deleted -484307115 1480953674
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Quotes eld
 \end_inset
 
@@ -816,16 +1065,10 @@ We are looking for an economist to help us efficiently match supply and
 \begin_layout Enumerate
 How broadly does it apply? What's different from a regulator in a normal
  market with buyers and sellers? 
-\change_inserted -484307115 1480963267
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted -484307115 1480963281
 What would you hide in the other examples, labor platforms and Airbnb? 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Enumerate
