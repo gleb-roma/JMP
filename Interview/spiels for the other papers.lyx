@@ -1,0 +1,193 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\newref{claim}{refcmd={Claim \ref{#1}}}
+%\newref{eq}{refcmd={(\ref{#1})}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Evidence for discontinuity
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch V-is-str-convex
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma3
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch proof-lemma1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+The spiels for the the other papers
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset Quotes eld
+\end_inset
+
+TELL US ABOUT YOUR PAPER WITH FUDENBERG AND STRACK.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper is about learning with experimentation when the agent model of
+ the world is incorrect.
+ We look at the agent who is Bayesian but whose prior is misspecified, in
+ the sense that he puts probability zero to the true state of the world.
+ We completely characterize the asymptotic behavior of the agent when his
+ subjective state assumes two states of the world, and find a novel interaction
+ between misspecification and active learning.
+ 
+\end_layout
+
+\begin_layout Standard
+Let me tell you why it is a hard problem to analyze.
+ We know how to analyze learning problems when the agent is either correctly
+ specified or is myopic.
+ One the one hand, if the agent is correctly specified then we know that
+ the agent's beliefs converge.
+ These kind of results use the fact that the beliefs form a martingale wrt
+ the subjective model, and since beliefs are limited between 0 and 1, the
+ beliefs converge a.s.
+ within the subjective model.
+ Now, if the subjective model is wrong, the 
+\begin_inset Quotes eld
+\end_inset
+
+a.s.
+\begin_inset Quotes erd
+\end_inset
+
+ result tell us nothing about the true convergence.
+ On the other hand, if the agent is misspecified but myopic, we know how
+ to characterize the asymptotic beliefs using the literature that goes back
+ to Berk.
+ The agent's beliefs asymptotically concentrate on the set of the states
+ of the world closest to the true state in the sense of KL divergence.
+ When the actions are endogenous, this approach cannot be applied because
+ KLD depends on the action being played.
+ 
+\end_layout
+
+\begin_layout Standard
+We develop a model in where the agent's observed payoff evolves as a diffusion
+ process with drift dependent on his actions and the state.
+ 
+\end_layout
+
+\begin_layout Standard
+We show that if the agent is forward-looking and is misspecified, then his
+ beliefs or actions need not converge.
+ What's more interesting, the fact of convergence depends on the agent's
+ discount rate.
+ We provide a simple example with 3 actions in which a myopic agents beliefs
+ converge while a sufficiently patient agent's beliefs do not.
+ [3 mins]
+\end_layout
+
+\end_body
+\end_document
