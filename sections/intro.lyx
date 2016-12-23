@@ -130,34 +130,33 @@ theorems-ams-extended-bytype
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eps}{\varepsilon}
+\renewcommand{\eps}{\varepsilon}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Exp}{\mathbb{E}}
+\renewcommand{\Exp}{\mathbb{E}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\R}{\mathbb{R}}
+\renewcommand{\R}{\mathbb{R}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Norm}{\mathcal{N}}
+\renewcommand{\Norm}{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\sigmasq}{\sigma^{2}}
+\renewcommand{\sigmasq}{\sigma^{2}}
 \end_inset
 
 
@@ -165,7 +164,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmin}{\operatorname*{argmin}}
+\renewcommand{\argmin}{\operatorname*{argmin}}
 {\mathrm{argmin}}
 \end_inset
 
@@ -174,7 +173,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\argmax}{\operatorname*{argmax}}
+\renewcommand{\argmax}{\operatorname*{argmax}}
 {\mathrm{argmax}}
 \end_inset
 
@@ -183,28 +182,28 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\supp}{\operatorname{supp}}
 {\mathrm{supp}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oV}{\overline{V}}
+\renewcommand{\oV}{\overline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uV}{\underline{V}}
+\renewcommand{\uV}{\underline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\oW}{\overline{W}}
+\renewcommand{\oW}{\overline{W}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\uW}{\underline{W}}
+\renewcommand{\uW}{\underline{W}}
 \end_inset
 
 
@@ -355,92 +354,17 @@ fi
 
  I study the information intermediation problem in the context of the following
  model.
-
-\change_inserted -484307115 1479680578
  Buyers and sellers try to match on the platform but the match value is
  uncertain.
- 
-\change_deleted -484307115 1479679374
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-which incorporates some asymmetries between buyers and sellers that are
- common to a number of real world applications.
- 
-\end_layout
-
-\end_inset
-
- Buyers seek sellers' services to complete their jobs.
-
-\change_unchanged
  Buyers contact sellers, who then review buyer attributes and choose whether
- to accept or reject 
-\change_deleted -484307115 1479679437
-the buyer job
-\change_inserted -484307115 1479679438
-them
-\change_unchanged
-.
+ to accept or reject them.
  Buyers are short-lived and must match quickly, but they are indifferent
- as to which seller 
-\change_deleted -484307115 1479680610
-completes their task
-\change_inserted -484307115 1479680612
-they match with
-\change_unchanged
-.
- Sellers are long-lived
-\change_inserted -484307115 1479679576
-, have limited capacity for serving buyers and derive heterogeneous payoffs
- from being matched with different buyers.
- 
-\change_deleted -484307115 1479679587
- and are indifferent to the match speed, but they have heterogeneous preferences
- over buyers.
-
-\change_unchanged
- In particular, not all 
-\change_deleted -484307115 1479679913
-jobs
-\change_inserted -484307115 1479679921
-matches
-\change_unchanged
- are profitable.
-
-\change_deleted -484307115 1479679593
- Sellers have limited capacity for serving buyers.
-
-\change_unchanged
- If a seller accepts a 
-\change_inserted -484307115 1479679877
-buyer
-\change_deleted -484307115 1479679875
-job
-\change_unchanged
-, 
-\change_inserted -484307115 1479680660
-t
-\change_unchanged
-he
-\change_inserted -484307115 1479680662
- seller
-\change_unchanged
- becomes unavailable for a fixed period of time and cannot 
-\change_deleted -484307115 1479680678
-accept
-\change_inserted -484307115 1479680681
-consider
-\change_unchanged
- new 
-\change_inserted -484307115 1479679883
-buyers
-\change_deleted -484307115 1479679882
-jobs
-\change_unchanged
-.
+ as to which seller they match with.
+ Sellers are long-lived, have limited capacity for serving buyers and derive
+ heterogeneous payoffs from being matched with different buyers.
+ In particular, not all matches are profitable.
+ If a seller accepts a buyer, the seller becomes unavailable for a fixed
+ period of time and cannot consider new buyers.
  The platform designs an information disclosure policy that governs which
  buyer attributes are disclosed to sellers before they decide whether to
  accept buyer requests.
@@ -502,13 +426,7 @@ fi
 
 \end_inset
 
- In this model, a key tradeoff 
-\change_deleted -484307115 1479759386
-arises
-\change_inserted -484307115 1479759387
-emerges
-\change_unchanged
- between match quality and match rate.
+ In this model, a key tradeoff emerges between match quality and match rate.
  Full disclosure of information need not be optimal, because information
  disclosure can negatively affect the match rate and partially or wholly
  offset the positive effect on the match quality.
@@ -519,13 +437,7 @@ emerges
 \emph on
 cream-skim
 \emph default
- and reject inefficiently many 
-\change_deleted -484307115 1479679937
-jobs
-\change_inserted -484307115 1479679937
-buyers
-\change_unchanged
-.
+ and reject inefficiently many buyers.
  Unlike sellers, the platform cares about welfare on both sides of the market,
  and so efficient disclosure is coarse if the negative effects of information
  disclosure on the match rate are strong.
@@ -583,13 +495,7 @@ fi
  when the match rate is high.
  However, match quality and match rate are in conflict.
  Enforcing higher match rates compromises quality, because sellers are forced
- to accept inferior 
-\change_deleted -484307115 1479679949
-jobs
-\change_inserted -484307115 1479679950
-matches
-\change_unchanged
-.
+ to accept inferior matches.
  Similarly, allowing sellers to cherrypick the most valuable buyers leads
  to higher rejection rates and lower match rates.
  For example, if Uber drivers reject passenger requests more often, passengers
@@ -636,60 +542,20 @@ The optimal disclosure policy must balance three effects: the positive effect
  payoffs.
  Holding the match rate fixed, he benefits from more information about buyers.
  Second, information disclosure reduces the platform’s ability to induce
- sellers to accept 
-\change_deleted -484307115 1479679963
-jobs
-\change_inserted -484307115 1479679965
-buyers
-\change_unchanged
-.
+ sellers to accept buyers.
  A key observation is that the platform can increase a seller's expected
  marginal profit by limiting the information revealed to him.
- To see why, note that pooling marginally profitable 
-\change_deleted -484307115 1479679973
-jobs
-\change_inserted -484307115 1479679978
-buyers
-\change_unchanged
- (which are rejected because the seller would prefer to wait for a better
- 
-\change_deleted -484307115 1479679984
-job
-\change_inserted -484307115 1479679985
-buyer
-\change_unchanged
-) with inframarginal 
-\change_inserted -484307115 1479679989
-buyers
-\change_deleted -484307115 1479679988
-jobs
-\change_unchanged
- (which are accepted) alters the seller's expected marginal profit.
+ To see why, note that pooling marginally profitable buyers (which are rejected
+ because the seller would prefer to wait for a better buyer) with inframarginal
+ buyers (which are accepted) alters the seller's expected marginal profit.
  Ignoring dynamic effects, higher marginal profit induces sellers to accept
- more 
-\change_deleted -484307115 1479679997
-jobs
-\change_inserted -484307115 1479679998
-buyers
-\change_unchanged
-, which leads to higher match rates.
+ more buyers, which leads to higher match rates.
  Third, making more information available to a seller increases returns
  on his search.
  Indeed, since acceptance precludes further search, the opportunity cost
- of accepting a given 
-\change_deleted -484307115 1479681151
-offer
-\change_inserted -484307115 1479681152
-buyer
-\change_unchanged
- is higher.
- As a result, sellers reject 
-\change_deleted -484307115 1479680004
-jobs
-\change_inserted -484307115 1479680005
-buyers
-\change_unchanged
- more often, and the match rate goes down.
+ of accepting a given buyer is higher.
+ As a result, sellers reject buyers more often, and the match rate goes
+ down.
  This dynamic effect on the match rate exists only when sellers have limited
  capacity and are forward looking.
  The match-quality effect provides a motive for the platform to disclose
@@ -812,103 +678,38 @@ fi
 The adverse effect of disclosure on joint seller profits is a form of seller
  coordination failure.
  In a marketplace where sellers act independently, each seller keeps his
- schedule open by rejecting low-value 
-\change_deleted -484307115 1479680012
-jobs
-\change_inserted -484307115 1479680027
-matches
-\change_unchanged
- to increase his own chances of getting high-value 
-\change_deleted -484307115 1479680032
-jobs
-\change_inserted -484307115 1479680037
-matches
-\change_unchanged
-.
- As a result, sellers spend significant time waiting for high-value 
-\change_deleted -484307115 1479680043
-jobs
-\change_inserted -484307115 1479680044
-matches
-\change_unchanged
-.
- Collectively, this behavior is suboptimal because 
-\change_deleted -484307115 1479680926
-all profitable jobs
-\change_inserted -484307115 1479680936
-both low- and high-value matches
-\change_unchanged
- have to be 
-\change_inserted -484307115 1479680951
-accepted
-\change_deleted -484307115 1479680950
-completed
-\change_unchanged
- in order to maximize the joint profits.
+ schedule open by rejecting low-value matches to increase his own chances
+ of getting high-value matches.
+ As a result, sellers spend significant time waiting for high-value matches.
+ Collectively, this behavior is suboptimal because both low- and high-value
+ matches have to be accepted in order to maximize the joint profits.
  I attribute the source of the coordination failure to what I call the 
 \emph on
 cream-skimming externality
 \emph default
-: By rejecting a 
-\change_deleted -484307115 1479680079
-job
-\change_inserted -484307115 1479680079
-buyer
-\change_unchanged
-, a seller remains available on the marketplace and attracts a fraction
- of subsequent buyers who otherwise would move to other sellers.
- As a result, the other sellers face fewer 
-\change_deleted -484307115 1479681023
-profitable
-\change_inserted -484307115 1479681026
-valuable
-\change_unchanged
- 
-\change_deleted -484307115 1479680088
-jobs
-\change_inserted -484307115 1479680089
-buyers
-\change_unchanged
- and realize lower profits.
+: By rejecting a buyer, a seller remains available on the marketplace and
+ attracts a fraction of subsequent buyers who otherwise would move to other
+ sellers.
+ As a result, the other sellers face fewer valuable buyers and realize lower
+ profits.
  The cream-skimming externality arises only when sellers have limited capacity
  and are forward looking.
  When this externality is present, sellers underestimate the effect of their
  own acceptance rate on the platform-wide match rate
-\change_inserted -484307115 1479993284
-
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1479993295
 you say that sellers underestimate their externality.
  They do not underestimate anything—they just have incentives that differ
  from the welfare of the collection of sellers.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
  and collectively resolve the tradeoff between match quality and match rate
  suboptimally.
- 
-\change_inserted -484307115 1479681058
-The platform's policy of 
-\change_deleted -484307115 1479681059
-L
-\change_inserted -484307115 1479681059
-l
-\change_unchanged
-imiting information decreases the 
-\change_inserted -484307115 1479681075
-option value
-\change_deleted -484307115 1479681071
-opportunity cost
-\change_unchanged
+ The platform's policy of limiting information decreases the option value
  of rejection and can increase the match rate to the seller-optimal level.
 \end_layout
 
@@ -1405,13 +1206,8 @@ as in Mortensen 82 and Pissarides 90?
 \end_inset
 
 .
- Although forward-looking, the receivers receive one signal per 
-\change_deleted -484307115 1479680098
-job
-\change_inserted -484307115 1479680099
-buyer
-\change_unchanged
-, which distinguishes my work from the gradual learning settings of 
+ Although forward-looking, the receivers receive one signal per buyer, which
+ distinguishes my work from the gradual learning settings of 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Ely15"

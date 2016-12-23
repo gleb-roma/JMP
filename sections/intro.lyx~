@@ -137,27 +137,27 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\eps}{\varepsilon}
+\newcommand{\eps}{\varepsilon}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\Exp}{\mathbb{E}}
+\newcommand{\Exp}{\mathbb{E}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\R}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\Norm}{\mathcal{N}}
+\newcommand{\Norm}{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\sigmasq}{\sigma^{2}}
+\newcommand{\sigmasq}{\sigma^{2}}
 \end_inset
 
 
@@ -165,7 +165,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\argmin}{\operatorname*{argmin}}
+\newcommand{\argmin}{\operatorname*{argmin}}
 {\mathrm{argmin}}
 \end_inset
 
@@ -174,7 +174,7 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\argmax}{\operatorname*{argmax}}
+\newcommand{\argmax}{\operatorname*{argmax}}
 {\mathrm{argmax}}
 \end_inset
 
@@ -183,28 +183,28 @@ theorems-ams-extended-bytype
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\supp}{\operatorname{supp}}
+\newcommand{\supp}{\operatorname{supp}}
 {\mathrm{supp}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\oV}{\overline{V}}
+\newcommand{\oV}{\overline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\uV}{\underline{V}}
+\newcommand{\uV}{\underline{V}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\oW}{\overline{W}}
+\newcommand{\oW}{\overline{W}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\renewcommand{\uW}{\underline{W}}
+\newcommand{\uW}{\underline{W}}
 \end_inset
 
 
@@ -873,8 +873,28 @@ buyers
  The cream-skimming externality arises only when sellers have limited capacity
  and are forward looking.
  When this externality is present, sellers underestimate the effect of their
- own acceptance rate on the platform-wide match rate and collectively resolve
- the tradeoff between match quality and match rate suboptimally.
+ own acceptance rate on the platform-wide match rate
+\change_inserted -484307115 1479993284
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1479993295
+you say that sellers underestimate their externality.
+ They do not underestimate anything—they just have incentives that differ
+ from the welfare of the collection of sellers.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ and collectively resolve the tradeoff between match quality and match rate
+ suboptimally.
  
 \change_inserted -484307115 1479681058
 The platform's policy of 

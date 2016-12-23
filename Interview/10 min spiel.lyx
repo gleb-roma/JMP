@@ -109,18 +109,19 @@ theorems-ams-extended-bytype
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 [] Simple intuition for why the results hold? 
@@ -301,8 +302,8 @@ To get to the hotel from the airport, I took an Uber.
 \end_layout
 
 \begin_layout Standard
-A primary problem for many matching platforms, including Uber, is to efficiently
- match supply and demand.
+A primary problem for many matching platforms, including Uber, is to facilitate
+ value-creating transactions.
  So in this situation you might think that any matching platform would disclose
  the buyers' and sellers' characteristics
 \begin_inset Note Note
@@ -315,7 +316,7 @@ maximize the information provision to both sides
 \end_inset
 
 , so that they could find the matches with the most value.
- However, we do not observe full transparency.
+ However, we do not observe full transparency in practice.
  
 \end_layout
 
@@ -326,10 +327,10 @@ question
 \bar default
 : Can a matching platform improve the efficiency of the marketplace by limiting
  information the buyers and sellers observe about each other before engaging
- in a match? This is an important question because there are potentially
- large economic gains from finding the right supply-demand fit, and many
- companies with platform business model spend a lot of resources trying
- to get it right.
+ in a match? This is an important question for companies with platform business
+ model because there are potentially large economic gains from finding the
+ right supply-demand fit, and they spend a lot of resources trying to get
+ it right.
  And my paper is looking exactly into this.
  
 \begin_inset Note Note
@@ -371,9 +372,22 @@ I have two main results.
 \bar under
 preview them
 \bar default
- before going into more details.
- In my first result I show that the economic outcome is Pareto-inefficient
- under the full disclosure.
+ before going into 
+\change_deleted -484307115 1482205273
+more
+\change_inserted -484307115 1482205273
+further
+\change_unchanged
+ details.
+ In my first result I show that the economic outcome
+\change_inserted -484307115 1482432883
+ of heterogeneous matching market
+\change_unchanged
+ is 
+\change_deleted -484307115 1482432204
+Pareto-
+\change_unchanged
+inefficient under the full disclosure.
  
 \begin_inset Note Note
 status collapsed
@@ -387,7 +401,23 @@ The key tradeoff there the platform faces is between match rate and match
 \end_inset
 
 The key intuition there is that providing information to agents stimulates
- them to cream-skim, that leads to inefficiently low match rates.
+ 
+\change_deleted -484307115 1482432832
+them to
+\change_unchanged
+ 
+\change_inserted -484307115 1482432961
+them to 
+\change_unchanged
+cream-skim
+\change_inserted -484307115 1482432834
+ 
+\change_deleted -484307115 1482432839
+, that leads
+\change_inserted -484307115 1482432841
+and leads
+\change_unchanged
+ to inefficiently low match rates.
  I'll tell you more about it in a minute.
  In the second main result I look at how the platform can improve efficiency,
  and I characterize the disclosure policy that maximizes the total surplus.
@@ -399,12 +429,36 @@ The key intuition there is that providing information to agents stimulates
 \end_layout
 
 \begin_layout Standard
-Now let me describe you
+
+\change_deleted -484307115 1482205388
+Now let me
+\change_inserted -484307115 1482205390
+Next, I'll
+\change_unchanged
+ describe 
+\change_deleted -484307115 1482205392
+you
+\change_unchanged
+
 \bar under
- the model
+ the 
+\change_deleted -484307115 1482205393
+model
+\change_inserted -484307115 1482205396
+framework
+\change_unchanged
+
 \bar default
  I am working in.
- There are three groups of players: buyers, sellers and the platform.
+ 
+\change_inserted -484307115 1482205402
+In the model, 
+\change_deleted -484307115 1482205403
+T
+\change_inserted -484307115 1482205403
+t
+\change_unchanged
+here are three groups of players: buyers, sellers and the platform.
  Buyers contact sellers in continuous time and want to match quickly.
 \begin_inset Note Note
 status open
@@ -422,14 +476,35 @@ This is like on Uber or Airbnb where customers send requests for a ride
  The sellers have limited capacity for serving buyers and, critically, sellers
  have preferences over what buyers they get matched with.
  The platform is the information intermediary.
- I restrict my attention to the platform's disclosure problem on the 
+
+\change_inserted -484307115 1482432989
+ It takes prices as given and designs a policy that governs what buyer character
+istics are disclosed to the sellers before sellers accept a match and how
+ coarsely.
+
+\change_unchanged
+ 
+\change_inserted -484307115 1482205688
+This way, 
+\change_unchanged
+I restrict my attention to the platform's disclosure problem on the 
 \series bold
 seller
 \series default
- side of the market: The platform designs a policy that governs what buyer
- characteristics are disclosed to the sellers before sellers accept a match
- and how coarsely.
+ side of the market
+\change_inserted -484307115 1482205668
+.
  
+\change_deleted -484307115 1482205667
+:
+\change_unchanged
+ 
+\change_deleted -484307115 1482205637
+The platform designs a policy that governs what buyer characteristics are
+ disclosed to the sellers before sellers accept a match and how coarsely.
+ 
+\change_unchanged
+
 \begin_inset Note Note
 status collapsed
 
@@ -443,8 +518,29 @@ I allow for arbitrary disclosure policies, that is, for an arbitrary mapping
 
 The platform's objective is to maximize the weighted average of the buyer
  and seller surpluses.
- I hold prices fixed, because I want to focus on the search aspect of matching.
  
+\change_deleted -484307115 1482433059
+I hold prices fixed, because I want to focus on the search aspect of matching.
+ 
+\change_inserted -484307115 1482433059
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1482433059
+I hold prices fixed, because I want to focus on the search aspect of matching.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -470,50 +566,90 @@ a disclosure policy governs what passenger characteristics are revealed
 \end_layout
 
 \begin_layout Standard
-Let me tell you more about my 
+
+\change_deleted -484307115 1482205437
+Let me tell you more
+\change_inserted -484307115 1482205439
+Next, I'll talk
+\change_unchanged
+ about my 
 \bar under
 first main result
 \bar default
 .
- I show that a policy of full disclosure is Pareto inefficient—that is it
- does not maximize the sum of buyer and seller surpluses.
+ I show that a policy of full disclosure is Pareto inefficient—that is 
+\change_deleted -484307115 1482433134
+it does not maximize the sum of buyer and seller surpluses
+\change_inserted -484307115 1482433164
+there is an outcome with both higher buyer and seller surpluses
+\change_unchanged
+.
  It is inefficient for two reasons: full disclosure reduces buyer match
- probability, and it also reduces seller payoffs.
- Let me describe the reduction in buyer surplus.
- The key here is that the set of matches that create positive 
+ probability, 
+\series bold
+and
+\series default
+ it 
+\change_deleted -484307115 1482433199
+also
+\change_unchanged
+ reduces seller payoffs.
+ 
+\change_deleted -484307115 1482205477
+Let me
+\change_inserted -484307115 1482205480
+I will first
+\change_unchanged
+ describe the reduction in buyer surplus.
+ The 
+\change_inserted -484307115 1482436253
+driver of the result
+\change_deleted -484307115 1482436185
+key condition
+\change_unchanged
+ here is that the set of matches that create positive 
 \series bold
 seller
 \series default
- profits is smaller than the set of matches with positive 
+ surplus is different from the set of matches 
+\change_deleted -484307115 1482433235
+with
+\change_inserted -484307115 1482433236
+that create
+\change_unchanged
+ positive 
 \series bold
 buyer
 \series default
  surplus.
- If the platform shows more information to the sellers, they will single
- out the matches that are valuable to them and reject other matches that
- are valuable to the buyers.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-releases more information to the sellers, they do.
- Revealing information about match valuations stimulates sellers to cream-skim:
- Sellers will single out the matches valuable to them but reject other matches
- that are valuable to the buyers.
-\end_layout
-
-\end_inset
-
- Disclosing more information reduces the platform's ability to induce sellers
- to accept the efficient matches.
+ When sellers make decisions whether or not to accept, they don't internalize
+ buyer surplus.
+ Disclosing more information to the sellers reduces the platform's ability
+ to induce them to accept the efficient matches.
+ The sellers will single out the matches that are valuable to them and reject
+ other matches that 
+\change_deleted -484307115 1482433288
+are
+\change_inserted -484307115 1482433289
+can be
+\change_unchanged
+ valuable to the buyers.
  
 \end_layout
 
 \begin_layout Standard
-Now let me describe what is perhaps more surprising finding, that is that
- under the full disclosure to sellers, the sellers as are also worse off
- as a whole.
+
+\change_deleted -484307115 1482205486
+Now let me
+\change_inserted -484307115 1482205488
+Now I will
+\change_unchanged
+ describe what is perhaps more surprising
+\change_deleted -484307115 1482205494
+ finding
+\change_unchanged
+, that is that under the full disclosure to sellers, the sellers as are
+ also worse off as a whole.
  It happens due to a Prisoners' Dilemma problem among sellers.
  Intuitively, each seller keeps his schedule open by rejecting the low-value
  matches in order to increase his individual chances of getting the high-value
@@ -531,8 +667,14 @@ the implicit assumption is that seller preferences are positively correlated
 
  Collectively, this behavior is suboptimal because all seller-valuable matches
  have to be accepted in order to maximize the joint seller surplus.
- The platform's policy of withholding of information makes sellers less
- picky, they settle for less, and can be directed towards accepting the
+ 
+\change_inserted -484307115 1482433499
+The two reasons the inefficiency arises on the seller side are that the
+ sellers have similar preferences over buyers and they are time-constrained.
+ 
+\change_unchanged
+The platform's policy of withholding of information makes sellers less picky,
+ they settle for less, and therefore can be directed towards accepting the
  efficient matches.
  
 \end_layout
@@ -540,7 +682,7 @@ the implicit assumption is that seller preferences are positively correlated
 \begin_layout Standard
 Back to the Uber example, if drivers could see full details of the trips,
  they would pick out the rides that remain in the busy areas.
- It hurts buyers because rides to far areas are not served or require very
+ It hurts buyers because rides to far areas are not served or have very
  long wait times.
  
 \begin_inset Note Note
@@ -590,23 +732,142 @@ status open
 \end_layout
 
 \begin_layout Standard
-Now let me move on to my 
+Okay, full disclosure is bad for the efficiency.
+ On the other hand, no information disclosure is usually also bad.
+ In a realistic setting of a matching market, most matches are not profitable
+ to the sellers.
+ If the platform conceals all information, then any given match has negative
+ expected value, and is never accepted.
+ Therefore, the optimum is somewhere between no disclosure and full disclosure.
+ This brings me to the 
 \bar under
-second main result.
-
+second part of my paper
 \bar default
- There I characterize the disclosure policy that maximizes the total surplus.
- I do it for the cases of known seller prefs, with two private seller types,
- and with continuum of seller types.
- The most intuition is concentrated in the two-type case but let me start
- with known preferences to explain the basic principle.
-  
+, where I characterize the disclosure policy that maximizes the total surplus.
+ As a preview, I show in a setting with linear seller payoffs, which I'll
+ describe you in a couple of minutes, that the optimal disclosure policy
+ has a particular form of partial disclosure: it pools high buyer types
+ and perfectly reveals low buyer types.
+ 
 \end_layout
 
 \begin_layout Standard
-First off, if the platform knows seller preferences, then it can implement
- any desirable outcome subject to participation constraints by centrally
- matching buyers to sellers.
+There are three challenges in analyzing this problem.
+ First off, I don't restrict the class of disclosure policies in any way,
+ that is I allow for arbitrary mappings from buyer characteristics to signals
+ sent to sellers.
+ And so, the problem is multi-dimensional.
+ Second, the seller preferences might have unobserved heterogeneity.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the optimal policy depends on the details of seller preferences and the
+ distribution of their private information.
+ 
+\end_layout
+
+\end_inset
+
+Finally, the sellers are forward-looking, which as it turns out, this prevents
+ me from using the standard approaches from the literature on information
+ disclosure.
+ 
+\end_layout
+
+\begin_layout Standard
+In the third point lies lies the main technical contribution of my paper,
+ so let me tell you more about it.
+ When sellers are forward-looking, the information disclosure policy determines
+ not only the seller’s stage payoff but also his continuation value.
+ Continuation value depends on the distribution of expected payoffs in the
+ future.
+ As a result, a seller’s decision to accept depends not only on the posterior
+ mean of the current buyer type—which is a standard feature in this literature—b
+ut 
+\change_deleted -484307115 1482205581
+also
+\change_unchanged
+ on the entire signaling structure.
+ Therefore, I can't use standard approaches in the literature, such as concavifi
+cation as in the recent bayesian persuasion literature, for the analysis
+ of my model.
+ 
+\end_layout
+
+\begin_layout Standard
+Alright, this was a short summary of my paper.
+ Now 
+\bar under
+I am going to go into the further detail
+\bar default
+ about my approach and the intuition.
+ 
+\end_layout
+
+\begin_layout Standard
+My approach consists of 3 steps.
+ First, I represent signaling structures as a particular class of convex
+ functions.
+ Second, I use calculus of variations to find the first-order conditions
+ of optimality.
+ Third, I use this first order necessary condition on convex functions to
+ back out the optimal information policy.
+ 
+\end_layout
+
+\begin_layout Standard
+I apply this approach to a setting where buyers and sellers have one-dimensional
+ continuous types, seller match payoff is a linear function of buyer and
+ seller types while buyers are indifferent to what sellers they get matched
+ with.
+ The efficient policy has the form of what I call 
+\series bold
+upper-coarsening
+\series default
+: the high buyer types are pooled and the low buyer types are perfectly
+ revealed.
+ Depending on the shape of distribution of seller private types, it may
+ happen that the full disclosure is possible—when the upper pooling part
+ is degenerate.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+============ 10 MINUTE MARK ============
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let me tell you why unobserved heterogeneity makes the problem harder.
+ Contrast with the case when the platform knows seller preferences.
+ Then it can implement any desirable outcome subject to participation constraint
+s by centrally matching buyers to sellers.
  Now, the observation here is that by the Revelation Principle, such centrally-c
 ontrolled matching can be implemented by a simple and very coarse disclosure
  policy.
@@ -617,48 +878,20 @@ ontrolled matching can be implemented by a simple and very coarse disclosure
 average
 \series default
  they have positive value.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A policy that recommends to accept more requests.
- 
-\end_layout
-
-\begin_layout Plain Layout
-With two seller types, one cutoff is not sufficient.
- Now you need two cutoffs, and in this respect, the disclosure policy is
- more revealing than with one cutoff.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In practice, there is 
+ If the platform does 
 \series bold
-unobserved heterogeneity
+not know
 \series default
- in preferences.
- In this situation, a simple mechanism with just one recommendation to accept
- will no longer be efficient, because it is impossible to tailor one incentive
- compatible recommendation to different sellers.
+ seller preferences, a simple mechanism with just one recommendation to
+ accept will no longer be efficient, because it is impossible to tailor
+ one incentive compatible recommendation to different sellers.
  
 \end_layout
 
 \begin_layout Standard
-Imagine that there are 
-\series bold
-two
-\series default
- private seller types, call them professionals and amateurs.
+For intuition behind the additional constraints the unobserved heterogeneity
+ adds to the designer, consider the case with two private seller types.
+ call them professionals and amateurs.
  An interesting case is when sellers are vertically differentiated, that
  is when seller agree on buyer ranking but amateurs can profitably complete
  only a subset of tasks that professionals can.
@@ -688,7 +921,7 @@ Using such a policy, the best implementable outcome in terms of total surplus
  This is because private vertically differentiated types introduce an additional
  constraint into the platform's optimization problem.
  Namely, a professional may want to act as an amateur.
- Let me tell you why because it is not exactly the same as in the second-degree
+ Let me tell you why, because it is not exactly the same as in the second-degree
  price discrimination.
  When a professional receives a recommendation to accept, he 
 \series bold
@@ -710,20 +943,8 @@ amateurs should reject
 \end_layout
 
 \begin_layout Standard
-============ 10 MINUTE MARK ============
-\end_layout
-
-\begin_layout Standard
-Then, I also find the optimal disclosure policy in a setting with 1-dimensional
- continuous buyer and seller types and linear seller payoffs.
- The efficient policy has the form of upper-coarsening: the high buyer types
- are pooled and the low buyer types are perfectly revealed.
- 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 I consider a setting where sellers have preferences over buyers, and these
@@ -759,41 +980,10 @@ In the whole generality, the preference heterogeneity has a complex structure
 \end_layout
 
 \begin_layout Standard
-
-\bar under
-Let me tell you now how I solve this disclosure problem.
-
-\bar default
- Here I build on the information communication literature (Kamenica-Gentzkow
- 2011), where the platform faces a disclosure problem to reveal a buyer
- type to an unobservably heterogeneous audience of sellers who are also
- forward looking.
- 
-\end_layout
-
-\begin_layout Standard
-In this case, the design of the optimal information disclosure is a nontrivial
- problem.
- To see why, note that with forward-looking sellers, the information disclosure
- policy determines not only the seller’s stage payoff but also his continuation
- value.
- As a result, a seller’s decision to accept depends not only on the posterior
- mean of the buyer type–which is standard in this literature—but also on
- the entire signaling structure.
- This makes a typical approaches in the literature, such as concavification
- as in the recent bayesian persuasion literature, is unsuitable for the
- analysis of my model.
- 
-\end_layout
-
-\begin_layout Standard
-I approach this problem by representing signaling structures as a particular
- class of convex functions and then using the calculus of variations to
- find the first-order necessary conditions.
- The best way to see that the optimal disclosure policy is qualitatively
- different when sellers are forward-looking compared to when they are myopic
- is to  consider the case when seller types have uniform distribution and
- the platform maximizes just the buyer surplus.
+The best way to see that the optimal disclosure policy (upper-coarsening)
+ is qualitatively different when sellers are forward-looking compared to
+ when they are myopic is to consider the case when seller types have uniform
+ distribution and the platform maximizes just the buyer surplus.
  In this case, when the sellers are myopic, the disclosure policy is irrelevant.
  However, when sellers are forward-looking, the strict optimal disclosure
  policy is upper-coarsening.
@@ -942,17 +1132,75 @@ We do not completely understand how information design interacts mechanism
  schemes? What is the benefit of using transfers over strategic information
  manipulation? My intuition is that mechanism and information design are
  complimentary.
- One reason information design can be preferred, for the designer it can
+\end_layout
+
+\begin_layout Standard
+The first thing I'd like to do is: Take my results and see if there is a
+ pricing mechanism can achieve what can be done with strategic information
+ disclosure.
+ Is it possible to completely eliminate the need for information withholding
+ just through pricing? 
+\end_layout
+
+\begin_layout Standard
+Then I would look at whether this pricing scheme is implementable in practice.
+ 
+\end_layout
+
+\begin_layout Standard
+One reason information design can be preferred, for the designer it can
  be easier to enforce uniformity of goods with few prices than computing
  fine prices for all transaction.
  This intuition is based on Ilya Segal's work on communication complexity.
- The other reason is that if the designer opt out of pricing and lets the
+ The other reason is that if the designer opts out of pricing and lets the
  markets work, the existing markets can be too thin under pronounced heterogenei
 ty.
  Withholding information thickens the markets and makes them work.
  The latter line of logic was used in Milgrom's work on conflation in online
  advertising.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Think about empirical project I can work on next.
+ What would you want to do empirically? 
+\end_layout
+
+\begin_layout Itemize
+running an experiment in one of these markets to see if the prices can correct
+ for one of these inefficiencies.
+ 
+\end_layout
+
+\begin_layout Itemize
+esimating demand and supply to match them efficiently.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+I want to test some predictions empirically or experimentally
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Spinning price story.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -979,6 +1227,8 @@ Other way of putting it: what additional pricing instruments the platform
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -484307115 1482433605
 \begin_inset ERT
 status open
 
@@ -1000,6 +1250,8 @@ WHAT CLASSES CAN YOU TEACH?
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1015,6 +1267,121 @@ end{document}
 
 \end_inset
 
+
+\change_inserted -484307115 1482433592
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482433624
+\begin_inset Quotes eld
+\end_inset
+
+TELL US ABOUT YOUR PAPER WITH FUDENBERG AND STRACK.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482434530
+This is a theory paper about learning with experimentation when the agent
+ model of the world is incorrect.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482434121
+In economics we use a concept of Nash equilibrium to predict the outcome
+ of strategic interaction of economic agents.
+ One of the foundations for NE says that NE is a limit point of repeated
+ interaction among the agents.
+ If the agents have psychological biases, the learning can be impaired,
+ and in this paper we explore this situation.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482434228
+We develop a model with single agent who is Bayesian but whose prior is
+ misspecified, in the sense that he puts probability zero to the true state
+ of the world.
+ For example, an individual is overconfident, or a firm estimates a constant
+ elasticity demand when it is not.
+ We completely characterize the asymptotic behavior of the agent when his
+ subjective state assumes two states of the world, and find a novel interaction
+ between misspecification and active learning.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482433624
+Let me tell you why it is a hard problem to analyze.
+ We know how to analyze learning problems when the agent is either correctly
+ specified or is myopic.
+ One the one hand, if the agent is correctly specified then we know that
+ the agent's beliefs converge.
+ These kind of results use the fact that the beliefs form a martingale wrt
+ the subjective model, and since beliefs are limited between 0 and 1, the
+ beliefs converge a.s.
+ within the subjective model.
+ Now, if the subjective model is wrong, the 
+\begin_inset Quotes eld
+\end_inset
+
+a.s.
+\begin_inset Quotes erd
+\end_inset
+
+ result tell us nothing about the true convergence.
+ On the other hand, if the agent is misspecified but myopic, we know how
+ to characterize the asymptotic beliefs using the literature that goes back
+ to Berk.
+ The agent's beliefs asymptotically concentrate on the set of the states
+ of the world closest to the true state in the sense of KL divergence.
+ When the actions are endogenous, this approach cannot be applied because
+ KLD depends on the action being played.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482433624
+We develop a model in where the agent's observed payoff evolves as a diffusion
+ process with drift dependent on his actions and the state.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482433624
+We show that if the agent is forward-looking and is misspecified, then his
+ beliefs or actions need not converge.
+ What's more interesting, the fact of convergence depends on the agent's
+ discount rate.
+ We provide a simple example with 3 actions in which a myopic agents beliefs
+ converge while a sufficiently patient agent's beliefs do not.
+ [3 mins]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1482433602
+\begin_inset Quotes eld
+\end_inset
+
+WHAT CLASSES CAN YOU TEACH?
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 

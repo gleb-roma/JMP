@@ -19,7 +19,7 @@ theorems-ams-extended-bytype
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "palatino" "default"
+\font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -46,7 +46,7 @@ theorems-ams-extended-bytype
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}"
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}, urlcolor=[rgb]{0,0.2,0.5}"
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -101,10 +101,10 @@ theorems-ams-extended-bytype
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
-\secnumdepth 3
-\tocdepth 3
-\paragraph_separation skip
-\defskip bigskip
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -118,76 +118,150 @@ theorems-ams-extended-bytype
 
 \begin_body
 
-\begin_layout Subsection*
-The spiels for the the other papers [obsolete—included in the main spiel
- file]
+\begin_layout Standard
+To whom it may concern,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
 \end_layout
 
-\begin_layout Subsubsection*
-\begin_inset Quotes eld
-\end_inset
-
-TELL US ABOUT YOUR PAPER WITH FUDENBERG AND STRACK.
-\begin_inset Quotes erd
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-This paper is about learning with experimentation when the agent model of
- the world is incorrect.
- We look at the agent who is Bayesian but whose prior is misspecified, in
- the sense that he puts probability zero to the true state of the world.
- We completely characterize the asymptotic behavior of the agent when his
- subjective state assumes two states of the world, and find a novel interaction
- between misspecification and active learning.
+Please consider my application to the position of the Assistant Professor.
+ I am a PhD candidate in economics at Harvard University with expected graduatio
+n date May 2017.
+ My primary research interests lie in the area of microeconomic theory,
+ market design, the economics of digitization, and industrial organization.
+ My job market paper, CV, the research and teaching statements are attached
+ as separate files.
+ The references are available upon request, see the list of references below.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
 \end_layout
 
-\begin_layout Standard
-Let me tell you why it is a hard problem to analyze.
- We know how to analyze learning problems when the agent is either correctly
- specified or is myopic.
- One the one hand, if the agent is correctly specified then we know that
- the agent's beliefs converge.
- These kind of results use the fact that the beliefs form a martingale wrt
- the subjective model, and since beliefs are limited between 0 and 1, the
- beliefs converge a.s.
- within the subjective model.
- Now, if the subjective model is wrong, the 
-\begin_inset Quotes eld
 \end_inset
 
-a.s.
-\begin_inset Quotes erd
+
+\end_layout
+
+\begin_layout Standard
+Best regards,
+\end_layout
+
+\begin_layout Standard
+Gleb Romanyuk
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="20text%">
+<column alignment="left" valignment="top" width="30text%">
+<column alignment="left" valignment="top" width="45text%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Littauer Center, 
+\begin_inset Newline newline
 \end_inset
 
- result tell us nothing about the true convergence.
- On the other hand, if the agent is misspecified but myopic, we know how
- to characterize the asymptotic beliefs using the literature that goes back
- to Berk.
- The agent's beliefs asymptotically concentrate on the set of the states
- of the world closest to the true state in the sense of KL divergence.
- When the actions are endogenous, this approach cannot be applied because
- KLD depends on the action being played.
- 
+1805 Cambridge St.
+\begin_inset Newline newline
+\end_inset
+
+Cambridge, MA 02138 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Email: 
+\family typewriter
+
+\begin_inset CommandInset href
+LatexCommand href
+name "glebromanyuk@g.harvard.edu"
+target "glebromanyuk@g.harvard.edu"
+type "mailto:"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Web: 
+\family typewriter
+
+\begin_inset CommandInset href
+LatexCommand href
+name "scholar.harvard.edu/gromanyuk"
+target "http://www.scholar.harvard.edu/gromanyuk"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Phone: (617) 308-8394
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-We develop a model in where the agent's observed payoff evolves as a diffusion
- process with drift dependent on his actions and the state.
- 
-\end_layout
 
-\begin_layout Standard
-We show that if the agent is forward-looking and is misspecified, then his
- beliefs or actions need not converge.
- What's more interesting, the fact of convergence depends on the agent's
- discount rate.
- We provide a simple example with 3 actions in which a myopic agents beliefs
- converge while a sufficiently patient agent's beliefs do not.
- [3 mins]
 \end_layout
 
 \end_body
