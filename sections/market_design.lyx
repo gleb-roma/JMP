@@ -154,6 +154,7 @@ theorems-ams-extended-bytype
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -295,7 +296,19 @@ This subsection establishes that full disclosure leads to a Pareto suboptimal
 \begin_layout Standard
 To present the results of this and the next sections, I need to define Pareto
  optimality in my setting.
- The market outcome 
+ 
+\change_deleted -484307115 1482523585
+The
+\change_inserted -484307115 1482523586
+An
+\change_unchanged
+ 
+\change_deleted -484307115 1482523575
+market
+\change_inserted -484307115 1482523577
+economic
+\change_unchanged
+ outcome 
 \begin_inset Formula $O=(V(\cdot),U)$
 \end_inset
 
@@ -304,7 +317,9 @@ To present the results of this and the next sections, I need to define Pareto
 \emph on
 feasible
 \emph default
- if there is a seller strategy profile that generates it and 
+ if there is a seller strategy profile that generates it
+\change_deleted -484307115 1482523539
+ and 
 \begin_inset Formula $V(y)\geq0$
 \end_inset
 
@@ -312,6 +327,8 @@ feasible
 \begin_inset Formula $y$
 \end_inset
 
+
+\change_unchanged
 .
  A feasible outcome 
 \begin_inset Formula $O$
@@ -336,7 +353,13 @@ feasible
 , and either there is at least one seller type or buyers who are strictly
  better off.
  The Pareto frontier is the set of all Pareto-optimal outcomes.
- Market outcome 
+ 
+\change_deleted -484307115 1482523571
+Market
+\change_inserted -484307115 1482523573
+Economic
+\change_unchanged
+ outcome 
 \begin_inset Formula $O$
 \end_inset
 
@@ -2065,7 +2088,11 @@ reference "cor:tau=0"
 
 \begin_layout Standard
 In the static disclosure problem, if the distribution of seller types is
- uniform, the the disclosure policy does not affect the number of matches.
+ uniform, the 
+\change_deleted -484307115 1482939331
+the
+\change_unchanged
+ disclosure policy does not affect the number of matches.
  Any coarsening of the full disclosure policy decreases the acceptance rate
  of lower-type sellers and increases the acceptance rate of higher-type
  sellers.
@@ -2160,7 +2187,12 @@ name "cor:replenished"
 
 \end_inset
 
-Suppose the distribution of available seller types is exogenous, that is,
+Suppose the distribution of available seller types is exogenous
+\change_deleted -484307115 1482939457
+, that is,
+\change_inserted -484307115 1482939460
+ and equals
+\change_unchanged
  
 \begin_inset Formula $G=U[0,1]$
 \end_inset
@@ -2170,7 +2202,17 @@ Suppose the distribution of available seller types is exogenous, that is,
 \end_inset
 
 ).
- Then only the no disclosure policy maximizes the number of matches.
+ Then only the no disclosure policy maximizes the 
+\change_deleted -484307115 1482939484
+number of
+\change_unchanged
+ match
+\change_inserted -484307115 1482939489
+ rate
+\change_deleted -484307115 1482939487
+es
+\change_unchanged
+.
  
 \end_layout
 
@@ -2213,29 +2255,68 @@ Suppose
 \begin_inset Formula $G=U[0,1]$
 \end_inset
 
+
+\change_inserted -484307115 1482939538
+ and 
+\change_deleted -484307115 1482939537
 .
- If sellers are myopic (simplification 
+
+\change_unchanged
+ 
+\change_deleted -484307115 1482939540
+If
+\change_unchanged
+ sellers are myopic (simplification 
 \begin_inset Formula $(\mathcal{O}',\mathcal{M})$
 \end_inset
 
-), then full disclosure is strictly optimal in maximization of the matching
+)
+\change_inserted -484307115 1482939547
+.
+ T
+\change_deleted -484307115 1482939545
+, t
+\change_unchanged
+hen full disclosure is strictly optimal in maximization of the matching
  rate.
  
 \end_layout
 
 \begin_layout Standard
 In this result, I shut down the dynamic match quality effect and instead
- focus on the effect of endogenous distribution of seller types.
+ focus on the 
+\change_deleted -484307115 1482939652
+effect of endogenous distribution
+\change_inserted -484307115 1482939659
+endogenous availability
+\change_unchanged
+ of seller
+\change_inserted -484307115 1482939665
+s
+\change_deleted -484307115 1482939664
+ types
+\change_unchanged
+.
  In the equilibrium, the pdf of available seller types is decreasing, because
  higher-seller types have higher acceptance rates and so are less available.
- Results from the static disclosure problem (
+ 
+\change_deleted -484307115 1482939692
+Results from
+\change_inserted -484307115 1482939697
+Analysis of
+\change_unchanged
+ the static disclosure problem (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fact:tau=0"
 
 \end_inset
 
-) suggest that in this case the full disclosure policy must be optimal.
+) suggest
+\change_inserted -484307115 1482939699
+s
+\change_unchanged
+ that in this case the full disclosure policy must be optimal.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2268,18 +2349,34 @@ reference "cor:myopic-sellers"
 
  are present.
  The resulting optimal policy is a partial coarsening.
- In the case of uniform 
+ 
+\change_inserted -484307115 1482939747
+Specifically, 
+\change_deleted -484307115 1482939748
+I
+\change_inserted -484307115 1482939749
+i
+\change_unchanged
+n the case of uniform 
 \begin_inset Formula $G$
 \end_inset
 
-, as 
+, 
+\change_deleted -484307115 1482939756
+as 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:max-J"
 
 \end_inset
 
- shows, it is upper-coarsening.
+ shows, 
+\change_inserted -484307115 1482939762
+the optimal policy
+\change_deleted -484307115 1482939756
+it
+\change_unchanged
+ is upper-coarsening.
  
 \end_layout
 
@@ -2288,9 +2385,20 @@ For general
 \begin_inset Formula $G$
 \end_inset
 
-, the shape of the optimal disclosure can be quite complex, even in the
- static case.
- The heuristic is to pool 
+, the shape of the optimal disclosure can be 
+\change_deleted -484307115 1482939779
+quite
+\change_unchanged
+ complex, even in the static case.
+ The heuristic
+\change_inserted -484307115 1482939790
+ for general 
+\begin_inset Formula $G$
+\end_inset
+
+
+\change_unchanged
+ is to pool 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2453,7 +2561,7 @@ reference "prop:max-J"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2874,7 +2982,7 @@ Let
  Let 
 \begin_inset Formula 
 \[
-\mathcal{L}:=\left\{ \Lambda(z)\colon\Lambda(z)\text{ is increasing, convex, and pointwise between }\oL(z)\text{ and }\uL(z)\right\} .
+\mathcal{L}:=\left\{ \Lambda(z)\colon\R\to\R\text{, increasing, convex, and pointwise between }\oL(z)\text{ and }\uL(z)\right\} .
 \]
 
 \end_inset

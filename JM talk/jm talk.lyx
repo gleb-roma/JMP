@@ -6,10 +6,6 @@
 \origin unavailable
 \textclass beamer
 \begin_preamble
-
-
-
-
 \usepackage{fleqn}
 \usetheme{CambridgeUS}
 %\usetheme{Madrid}
@@ -24,12 +20,12 @@
 \usepackage{xcolor}
  \usepackage{relsize}
 \usepackage{graphicx}
-\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing,decorations.text}
 
 
 \setbeamertemplate{footline}[frame number]{}
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
+%\setbeamertemplate{footline}{}
 
 
 \newcommand\myenum[1]{% 
@@ -254,6 +250,21 @@ today
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\J}{\mathcal{J}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\betaa}{\beta_{A}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\d}{\delta}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -333,7 +344,7 @@ status open
 
 \begin_layout Plain Layout
 This is a theory paper where I study how to efficiently match heterogeneous
- supply and demand using information disclosure? 
+ supply and demand using information disclosure 
 \begin_inset ERT
 status open
 
@@ -356,12 +367,12 @@ bigskip
 
 \begin_deeper
 \begin_layout Example*
-Uber driver recieves a request
+Uber driver receives a request
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-sees the passanger's rating, name and pick-up location
+sees the passenger's rating, name and pick-up location
 \end_layout
 
 \begin_layout Itemize
@@ -404,8 +415,8 @@ bigskip
 status open
 
 \begin_layout Plain Layout
-the reason I am interested in efficiency is because a primary objective
- for many matching platforms, including Uber, is to facilitate ....
+A primary objective for many matching platforms, including Uber, is to facilitat
+e ....
 \end_layout
 
 \end_inset
@@ -522,17 +533,32 @@ pause
 
 \end_inset
 
-Efficiency and supply-demand fit are important challenges for companies
- with platform business model
+Efficiency and supply-demand fit are important issues for companies with
+ platform business model
 \end_layout
 
 \begin_layout Examples
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The applications are not limited to Uber but also include markets for housing
+ rental and labor contracting.
+ 
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Transportation
+Transportation (e.g.
+ Uber/Lyft, Convoy)
 \begin_inset Note Note
 status open
 
@@ -549,7 +575,7 @@ Uber: hide passenger destination
 \end_layout
 
 \begin_layout Itemize
-Rental housing (e.g.
+Housing rental (e.g.
  Airbnb)
 \begin_inset Note Note
 status open
@@ -646,13 +672,15 @@ This paper
 status open
 
 \begin_layout Plain Layout
-To answer these questions, this paper 
+\begin_inset Quotes eld
+\end_inset
+
+To answer these questions, this paper develops a 
 \end_layout
 
 \end_inset
 
-Develops a framework for analyzing information intermediation in two-sided
- matching markets
+Framework for analyzing information intermediation in matching markets
 \begin_inset ERT
 status open
 
@@ -666,6 +694,19 @@ bigskip
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+I build a model of 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -673,7 +714,7 @@ Model of two-sided matching market with search
 \end_layout
 
 \begin_layout Itemize
-Buyers and sellers have preferences over the other side
+Buyers and sellers have preferences over each other
 \end_layout
 
 \begin_layout Itemize
@@ -703,17 +744,31 @@ Preview of Results
 
 \begin_deeper
 \begin_layout Enumerate
-Economic outcome of heterogeneous matching market is inefficient under the
- full disclosure
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Economic outcome of a heterogeneous matching market is inefficient under
+ the full disclosure
+\end_layout
+
+\end_inset
+
+Full disclosure is inefficient
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-there is an outcome with both higher buyer and seller surpluses
+i.e.
+ there is an outcome with both higher buyer and seller surpluses
 \end_layout
 
 \begin_layout Itemize
-intuition: disclosure leads to cream-skimming and low match rates
+Intuition: revealing information to agents leads to cream-skimming and low
+ match rates
 \begin_inset ERT
 status open
 
@@ -730,7 +785,7 @@ pause
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 everyone asks: always? the driving assumption here is buyer and seller preferenc
@@ -753,31 +808,34 @@ aligned
 
 \end_deeper
 \begin_layout Enumerate
-Characterization of the optimal information disclosure policy that maximizes
- the weighted average of buyer and seller surpluses
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-depends on the nature of unobserved preference heterogeneity
-\end_layout
-
-\begin_layout Itemize
-agents' capacity constraints
+Characterization of the efficient information disclosure policy.
+ Depends on:
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-NOW I want to give you intuition behind my first main result, which is the
- inefficiency of full disclosure.
- There are two components for inefficiency: the cross side effect and the
- same side effect.
- 
+\begin_inset Quotes eld
+\end_inset
+
+I show that it generally depends on ....
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the shape of unobserved preference heterogeneity
+\end_layout
+
+\begin_layout Itemize
+agents' capacity constraints
+\end_layout
+
+\begin_layout Itemize
+buyer-to-seller ratio
 \end_layout
 
 \end_deeper
@@ -810,19 +868,115 @@ name "quality_rate_main"
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Imagine the platform releases more information about buyers to the sellers
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Now I will to give you intuition behind my first main result, which is the
+ inefficiency of full disclosure.
+ There are two components for inefficiency: the inefficiency on the receiving
+ end of the information, and the inefficiency on the opposite side of the
+ market.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Let me start with the cross-side effect.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Providing information stimulates cream-skimming
+Imagine the platform releases more information about buyers to the sellers
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+When sellers decide whether or not to accept buyers, they don't internalize
+ the buyer surplus
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+This drives inefficiency when the set of matches ...
+ 
+\end_layout
+
+\end_inset
+
+Key condition: set of matches that create value for sellers is distinct
+ from the set of matches that create value for buyers
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Platform cares about both sides of the market
+\end_layout
+
+\begin_layout Itemize
+Disclosing more information to sellers reduces the platform's ability to
+ induce sellers to accept the efficient matches
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sellers will single out the matches that are valuable to them and reject
+ other matches that can be valuable to the buyers.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Providing information stimulates seller to cream-skim
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 I deliberately used a word with negative connotations but I need to explain
  you why it's bad.
- A way to understand this is in terms of the tradeoff between ....
+ A way to understand this is in terms of the tradeoff between match quality
+ and match rate.
+ 
 \end_layout
 
 \end_inset
@@ -836,11 +990,11 @@ Platform faces a tradeoff between match quality and match rate
 
 \begin_deeper
 \begin_layout Enumerate
-holding match rate fixed, info disclosure increases seller match quality
+Holding match rate fixed, info disclosure increases seller match quality
 \end_layout
 
 \begin_layout Enumerate
-but info disclosure may reveal that the marginal buyer has negative value
+But info disclosure may reveal that the marginal buyer has negative value
  
 \begin_inset Formula $\Rightarrow$
 \end_inset
@@ -885,12 +1039,13 @@ pause
 
 \end_deeper
 \begin_layout Itemize
-Sellers do not resolve quality-rate tradeoff efficiently
+Sellers make the acceptance decisions but do not resolve quality-rate tradeoff
+ efficiently
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-when buyers MRS of quality for rate is higher than of sellers'
+when buyers' MRS of quality for rate is higher than of sellers'
 \begin_inset Note Note
 status open
 
@@ -941,6 +1096,12 @@ Disclosing more information to sellers reduces the platform's ability to
  induce sellers to accept the efficient matches
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -964,7 +1125,7 @@ Forces behind Inefficiency (2): Same-side Effect
 
 \begin_deeper
 \begin_layout Itemize
-Additionally, when sellers 
+Sellers are worse off as a whole when 
 \end_layout
 
 \begin_deeper
@@ -977,13 +1138,18 @@ have limited capacity for serving buyers, and
 \end_layout
 
 \begin_layout Itemize
-are forward-looking,
+are forward-looking.
+ 
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-info disclosure stimulates sellers to chase the most valuable buyers and
- abandon buyers with average value
+Info disclosure stimulates sellers to 
+\emph on
+cream-skim
+\emph default
+, i.e.
+ to chase the most valuable buyers and abandon buyers with average value
 \end_layout
 
 \begin_layout Itemize
@@ -991,7 +1157,7 @@ Prisoners' Dilemma problem
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- further exacerbates cream-skimming
+ disclosure leads to inefficiency
 \end_layout
 
 \end_deeper
@@ -1013,18 +1179,32 @@ Contributions
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The paper's main contributions are to the two strands of economic literature.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Search-and-matching models in labor economics: Shimer-Smith 2000, 01, Kircher
- 2009
+Market/organizational design: Milgrom 2010, Hagiu-Wright 2015, Fradkin 2015,
+ Horton 2015
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Empasizes and clarifies the role of information disclosure as a policy intervent
-ion 
+Emphasizes and clarifies the role of information disclosure as a design
+ tool 
 \end_layout
 
 \begin_layout Itemize
@@ -1065,34 +1245,35 @@ Other Related Literature
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+My work is also related to a other econ and OR papers.
+ I can talk about it if there are questions, otherwise, I am going to move
+ on.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Description
-\begin_inset Note Note
-status open
-
-\begin_layout Description
-Two-sided
+Search
 \begin_inset space ~
 \end_inset
 
-markets: Rochet-Tirole 2006, Armstrong 2006, Weyl 2010, Hagiu-Wright 2015
-\end_layout
-
-\begin_layout Description
-Communication
+and
 \begin_inset space ~
 \end_inset
 
-games: Blackwell 1953, Aumann-Maschler 1995, Kamenica-Gentzkow 2011, Kolotilin
- et al.
- 2015, Bergemann et al.
- 2015 
-\end_layout
-
-\begin_layout Description
-Matching
+matching
 \begin_inset space ~
 \end_inset
 
@@ -1100,12 +1281,7 @@ in
 \begin_inset space ~
 \end_inset
 
-Labor: Becker 1973, Shimer-Smith 2000, Kircher 2009
-\end_layout
-
-\end_inset
-
-
+labor: Becker 1973, Shimer-Smith 2000, 01, Kircher 2009
 \end_layout
 
 \begin_layout Description
@@ -1132,7 +1308,7 @@ Centralized
 \begin_inset space ~
 \end_inset
 
-matching: Roth 2008, Milgrom 2010, Akbarpour et al.
+matching: Roth 2008, Akbarpour et al.
  2016
 \end_layout
 
@@ -1143,6 +1319,14 @@ Peer-to-peer
 
 markets: Hitsch et al.
  2010, Fradkin 2015, Horton 2015
+\end_layout
+
+\begin_layout Description
+Two-sided
+\begin_inset space ~
+\end_inset
+
+markets: Rochet-Tirole 2006, Armstrong 2006, Weyl 2010
 \end_layout
 
 \begin_layout Description
@@ -1157,6 +1341,60 @@ in
 OR: Ashlagi et al.
  2013, Arnosti et al.
  2014, Taylor 2016
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{document}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents[]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1271,6 +1509,10 @@ centering
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1280,6 +1522,18 @@ status open
 \backslash
 input{../pictures/matching_chart_pres.tex}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "/Users/gleb/Google Drive/Projects/JMP/pictures/matching_chart_pres.tex"
 
 \end_inset
 
@@ -1459,6 +1713,10 @@ Buyers make a single search attempt
 Simplifying assumption: lost search efforts
 \end_layout
 
+\begin_layout Itemize
+Extension in the paper
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1551,7 +1809,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="25text%">
 <column alignment="center" valignment="middle" width="25text%">
@@ -1565,9 +1823,10 @@ status open
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Plain Layout
+
 \begin_inset Formula $x\sim F$
 \end_inset
 
@@ -1595,59 +1854,6 @@ observed
 \end_inset
 
  by the platform
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-(passenger destination on Uber)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $y\in Y\subset\R^{m}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $y\sim G$
-\end_inset
-
-, pdf 
-\begin_inset Formula $g>0$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Seller characteristics 
-\begin_inset Flex Alert
-status open
-
-\begin_layout Plain Layout
-unobserved
-\end_layout
-
-\end_inset
-
- by the platform 
 \begin_inset ERT
 status open
 
@@ -1665,22 +1871,22 @@ medskip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-(driver's preference for long rides)
+(passenger destination on Uber)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $u(x,y)\geq0$
+\begin_inset Formula $u(x)\geq0$
 \end_inset
 
 
@@ -1688,7 +1894,7 @@ medskip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1697,7 +1903,7 @@ Buyer match payoff
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1712,10 +1918,18 @@ Buyer match payoff
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\pi(x,y)$
+\begin_inset Formula $\pi(x)$
 \end_inset
 
  continuous
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\exists x:\pi(x)>0$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1896,7 +2110,7 @@ coarser
 status open
 
 \begin_layout Plain Layout
-Steady State of the Matching Process
+Steady State of the Matching Process: State Variables
 \end_layout
 
 \end_inset
@@ -1910,7 +2124,7 @@ State of the matching system:
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\alpha(y)\in[0,1]$
+\begin_inset Formula $\alpha\in[0,1]$
 \end_inset
 
  
@@ -1922,12 +2136,8 @@ acceptance rate
 
 \begin_deeper
 \begin_layout Itemize
-fraction of buyers accepted by available type-
-\begin_inset Formula $y$
-\end_inset
-
- seller, 
-\begin_inset Formula $\alpha(y)=\lambda(s\mbox{ is accepted by }y\mid y\text{ is available})$
+fraction of buyers accepted by an available seller, 
+\begin_inset Formula $\alpha=\lambda(s\mbox{ is accepted})$
 \end_inset
 
 
@@ -1935,31 +2145,17 @@ fraction of buyers accepted by available type-
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset Formula $\rho(y)\in[0,1]$
+\begin_inset Formula $\rho\in[0,1]$
 \end_inset
 
- fraction of time type-
-\begin_inset Formula $y$
-\end_inset
-
- seller is busy
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
+ 
 \emph on
 utilization rate
-\emph default
- of type-
-\begin_inset Formula $y$
-\end_inset
-
- sellers 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Seller's constrained resource is time
+fraction of busy sellers
 \end_layout
 
 \end_deeper
@@ -1976,7 +2172,7 @@ Seller's constrained resource is time
 status open
 
 \begin_layout Plain Layout
-Steady State of the Matching Process
+Steady State of the Matching Process: Seller Flows
 \end_layout
 
 \end_inset
@@ -1985,57 +2181,13 @@ Steady State of the Matching Process
 \end_layout
 
 \begin_deeper
-\begin_layout ColumnsCenterAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.2
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.7
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2049,105 +2201,6 @@ centering
 \end_inset
 
 
-\begin_inset Graphics
-	filename /Users/gleb/Google Drive/Projects/Online Marketplaces/pictures/match_dynamics_pics/match_steady_state_5.eps
-	height 75pheight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Steady State of the Matching Process
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout ColumnsCenterAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.2
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $g(y)$
-\end_inset
-
- mass of 
-\begin_inset Formula $y$
-\end_inset
-
--sellers
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rho(y)$
-\end_inset
-
- utilization rate of 
-\begin_inset Formula $y$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rhobar$
-\end_inset
-
- average utilization
-\end_layout
-
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.7
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2155,22 +2208,19 @@ status open
 
 
 \backslash
-centering
+input{../pictures/SS_pres.tex}
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/gleb/Google Drive/Projects/Online Marketplaces/pictures/match_dynamics_pics/match_steady_state_6.eps
-	height 75pheight%
 
 \end_inset
 
 
 \end_layout
 
-\end_deeper
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2184,231 +2234,7 @@ centering
 status open
 
 \begin_layout Plain Layout
-Steady State of the Matching Process
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout ColumnsCenterAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.2
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $g(y)$
-\end_inset
-
- mass of 
-\begin_inset Formula $y$
-\end_inset
-
--sellers
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rho(y)$
-\end_inset
-
- utilization rate of 
-\begin_inset Formula $y$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rhobar$
-\end_inset
-
- average utilization
-\end_layout
-
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.7
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/gleb/Google Drive/Projects/Online Marketplaces/pictures/match_dynamics_pics/match_steady_state_7.eps
-	height 70pheight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Steady State of the Matching Process
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout ColumnsCenterAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.2
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $g(y)$
-\end_inset
-
- mass of 
-\begin_inset Formula $y$
-\end_inset
-
--sellers
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rho(y)$
-\end_inset
-
- utilization rate of 
-\begin_inset Formula $y$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\rhobar$
-\end_inset
-
- average utilization
-\end_layout
-
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.7
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/gleb/Google Drive/Projects/Online Marketplaces/pictures/match_dynamics_pics/match_steady_state_complete.eps
-	height 70pheight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Steady State of the Matching Process
+Steady State of the Matching Process: SS Condition
 \end_layout
 
 \end_inset
@@ -2425,7 +2251,7 @@ Steady State of the Matching Process
 In a steady state, the flows to and from the pool of busy sellers are equal:
 \begin_inset Formula 
 \[
-\beta\frac{(1-\rho(y))g(y)}{1-\rhobar}\alpha(y)=\frac{\rho(y)g(y)}{\tau},\quad\forall y\in Y.
+\beta\alpha=\frac{\rho}{\tau}.
 \]
 
 \end_inset
@@ -2449,79 +2275,30 @@ bigskip
 
 \end_layout
 
-\begin_layout Block
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Solution
+\end_deeper
+\begin_layout Frame
+Sanity check:
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-Average utilization rate 
-\begin_inset Formula $\rhobar\in[0,1]$
-\end_inset
-
- is a solution to 
-\begin_inset Formula 
-\[
-1=\int\frac{dG(y)}{1-\rhobar+\beta\tau\alpha(y)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Block
-\begin_inset Formula $\rhobar$
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\rho$
 \end_inset
 
  increases in 
-\begin_inset Formula $\alpha(y)$
-\end_inset
-
- for any 
-\begin_inset Formula $y\in Y$
+\begin_inset Formula $\alpha$
 \end_inset
 
 , in 
 \begin_inset Formula $\beta$
 \end_inset
 
- and in 
+, and in 
 \begin_inset Formula $\tau$
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Proof parts: as a result, 
-\begin_inset Formula $\rho(y)$
-\end_inset
-
- increases in 
-\begin_inset Formula $\alpha(y')$
-\end_inset
-
- for any 
-\begin_inset Formula $y'\in Y$
 \end_inset
 
 .
  
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2562,55 +2339,80 @@ name "back_ImpatientWorkers"
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $\beta_{A}=\frac{\beta}{1-\rhobar}$
+\begin_inset Formula $\beta_{A}=\frac{\beta}{1-\rho}$
 \end_inset
 
  is endogenous b/c mass of available sellers is endogenous
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $\pi(s,y):=\int_{X}\pi(x,y)\,s(dx)$
+\begin_inset Formula $\pi(s):=\int_{X}\pi(x)\,ds(x)$
 \end_inset
 
- expected profit for seller 
-\begin_inset Formula $y$
-\end_inset
-
- of job with signal 
+ expected profit if he accepts a buyer with signal 
 \begin_inset Formula $s$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Itemize
-Every time a job with signal 
+\begin_inset Formula $v(s)$
+\end_inset
+
+ be the value of a buyer with signal 
 \begin_inset Formula $s$
 \end_inset
 
- arrives, seller 
-\begin_inset Formula $y$
-\end_inset
 
- gets 
-\begin_inset Formula $v(s,y)$
-\end_inset
-
- 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $v(s,y)$
+\begin_inset Formula $v(s)$
 \end_inset
 
- includes option value of rejecting and opportunity cost of being unavailable
+ includes the option value of rejecting the buyer and the opportunity cost
+ of accepting him
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $V(y)$
+\begin_inset Formula $V$
 \end_inset
 
  per-moment value of being available, in the optimum
@@ -2622,6 +2424,8 @@ status open
 
 \backslash
 medskip
+\backslash
+pause
 \end_layout
 
 \end_inset
@@ -2640,16 +2444,10 @@ Seller optimization problem
 \end_inset
 
 
-\end_layout
-
-\begin_layout Block
 \begin_inset Formula 
-\[
-\begin{cases}
-v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}\\
-V(y)=\beta_{A}\int v(s,y)\,d\lambda(s)
-\end{cases}
-\]
+\begin{eqnarray}
+V & = & \beta_{A}\int\max\{0,\pi(s)-\tau V)\}d\lambda(s).\label{eq:V-via-pi}
+\end{eqnarray}
 
 \end_inset
 
@@ -2678,7 +2476,7 @@ beamergotobutton{Impatient Sellers}}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\sigma(s,y)\colon S\to[0,1]$
+\begin_inset Formula $\sigma(s)\colon S\to[0,1]$
 \end_inset
 
  acceptance strategy
@@ -2706,7 +2504,7 @@ Steady-State Equilibrium
 \end_layout
 
 \begin_layout Frame
-\begin_inset Formula $(\sigma,\rhobar)$
+\begin_inset Formula $(\sigma,\rho)$
 \end_inset
 
  is a 
@@ -2720,7 +2518,7 @@ steady-state equilibrium
 \begin_layout Enumerate
 [Optimality] Every available seller takes as given Poisson arrival rate
  
-\begin_inset Formula $\beta_{A}=\beta/(1-\rhobar)$
+\begin_inset Formula $\beta_{A}=\beta/(1-\rho)$
 \end_inset
 
  and acts optimally –> 
@@ -2735,12 +2533,12 @@ steady-state equilibrium
 \begin_inset Formula $\sigma$
 \end_inset
 
- induces acceptance rates 
-\begin_inset Formula $\alpha(\cdot)$
+ induces acceptance rate 
+\begin_inset Formula $\alpha$
 \end_inset
 
  –> utilization 
-\begin_inset Formula $\rhobar$
+\begin_inset Formula $\rho$
 \end_inset
 
  arises in a steady state 
@@ -2844,7 +2642,7 @@ Market Design: Information Disclosure
 \begin_deeper
 \begin_layout Standard
 Equilibrium 
-\begin_inset Formula $(\sigma,\rhobar)$
+\begin_inset Formula $(\sigma,\rho)$
 \end_inset
 
  is a function of disclosure policy 
@@ -2877,356 +2675,7 @@ How does equilibrium welfare of each side depend on
 
 \end_deeper
 \begin_layout Section
-Market Design: Information Disclosure
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-tableofcontents[currentsection]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Pareto Optimality and Implementability
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Economic outcome 
-\begin_inset Formula $O=(V(\cdot),U)$
-\end_inset
-
- is a combination of sellers' profits and buyers' surplus
-\end_layout
-
-\begin_layout Itemize
-An outcome is 
-\emph on
-feasible
-\emph default
- if there is a seller strategy profile that generate it.
-\end_layout
-
-\begin_layout Itemize
-A feasible 
-\begin_inset Formula $O$
-\end_inset
-
- is 
-\emph on
-Pareto optimal
-\emph default
- if there is no other feasible 
-\begin_inset Formula $O'$
-\end_inset
-
- such that 
-\begin_inset Formula $V(y)'>V(y)$
-\end_inset
-
- for all 
-\begin_inset Formula $y$
-\end_inset
-
-, and 
-\begin_inset Formula $U'>U$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $O$
-\end_inset
-
- is 
-\emph on
-implementable
-\emph default
- if there is a disclosure 
-\begin_inset Formula $\lambda$
-\end_inset
-
- such that the equilibrium outcome is 
-\begin_inset Formula $O$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Identical sellers
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 3
-status open
-
-\begin_layout Plain Layout
-label=prop2
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Implementability for Identical Sellers
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-Suppose sellers are identical.
- Then any point on the Pareto frontier is implementable by information disclosur
-e.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-should I change the statement in terms of maximizing the weighted sum of
- buyer and seller surplus? 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-onslide<2->{
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Proof sketch:
-\end_layout
-
-\begin_layout Enumerate
-1 seller type, 2 actions -> binary signaling structure is sufficient (Revelation
- principle)
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-signal = 
-\begin_inset Quotes eld
-\end_inset
-
-action recommendation
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $X=X_{acc}\cup X_{rej}$
-\end_inset
-
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-With binary signaling structure, seller dynamic problem reduces to static
- problem
-\end_layout
-
-\begin_layout Enumerate
-Obedience holds because the seller gets 
-\begin_inset Formula $V$
-\end_inset
-
- on 
-\begin_inset Formula $X_{acc}$
-\end_inset
-
- and 
-\begin_inset Formula $V\geq0$
-\end_inset
-
- by feasibility
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Implementability for Identical Sellers, ctd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-input{../pictures/pareto_frontier_slides_no_fulldiscl.tex}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout AgainFrame
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-prop2
-\end_layout
-
-\begin_layout Subsection
-Scheduling externality
+Inefficiency of the Full Disclosure
 \end_layout
 
 \begin_layout Frame
@@ -3272,7 +2721,7 @@ tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 status open
 
 \begin_layout Plain Layout
-Sellers' Coordination Problem
+Pareto Optimality and Implementability
 \end_layout
 
 \end_inset
@@ -3282,11 +2731,104 @@ Sellers' Coordination Problem
 
 \begin_deeper
 \begin_layout Itemize
-Back to general 
-\begin_inset Formula $Y$
+Economic outcome 
+\begin_inset Formula $O=(U,V)$
 \end_inset
 
- 
+ is a combination of buyers' and sellers' surpluses
+\end_layout
+
+\begin_layout Itemize
+An outcome is 
+\emph on
+feasible
+\emph default
+ if there is a seller strategy profile that generates it
+\end_layout
+
+\begin_layout Itemize
+A feasible 
+\begin_inset Formula $O$
+\end_inset
+
+ is 
+\emph on
+Pareto optimal
+\emph default
+ if there is no other feasible 
+\begin_inset Formula $O'$
+\end_inset
+
+ such that 
+\begin_inset Formula $U'>U$
+\end_inset
+
+ and 
+\begin_inset Formula $V'>V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $O$
+\end_inset
+
+ is 
+\emph on
+implementable
+\emph default
+ if there is a disclosure 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ such that the equilibrium outcome is 
+\begin_inset Formula $O$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Inefficiency of the Full Disclosure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $V^{\sigma}$
+\end_inset
+
+, 
+\begin_inset Formula $\rho^{\sigma}$
+\end_inset
+
+, 
+\begin_inset Formula $U^{\sigma}$
+\end_inset
+
+ denote steady-state buyers' surplus, sellers' surplus and utilization rate
+ when strategy profile 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is played
 \begin_inset ERT
 status open
 
@@ -3294,32 +2836,12 @@ status open
 
 
 \backslash
-pause
+medskip
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $V^{\sigma}(y)$
-\end_inset
-
-, 
-\begin_inset Formula $\rho^{\sigma}(y)$
-\end_inset
-
-, 
-\begin_inset Formula $CS^{\sigma}$
-\end_inset
-
- denote steady-state profits, utilization rates and consumer surplus when
- strategy profile 
-\begin_inset Formula $\sigma$
-\end_inset
-
- is played
 \end_layout
 
 \begin_layout Proposition
@@ -3327,7 +2849,7 @@ pause
 status open
 
 \begin_layout Plain Layout
-3
+2
 \end_layout
 
 \end_inset
@@ -3341,16 +2863,12 @@ status open
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
- such that for all 
-\begin_inset Formula $y$
-\end_inset
-
-: 
+ such that: 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{V}(y) & > & V^{FD}(y),\\
-\tilde{\rho}(y) & > & \rho^{FD}(y),\\
-\widetilde{CS} & \geq & CS^{FD}.
+\tilde{V} & > & V^{FD},\\
+\tilde{\rho} & > & \rho^{FD},\\
+\widetilde{U} & \geq & U^{FD}.
 \end{eqnarray*}
 
 \end_inset
@@ -3371,7 +2889,320 @@ status open
 status open
 
 \begin_layout Plain Layout
-Seller Coordination Problem, ctd
+Proof
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="40text%">
+<column alignment="center" valignment="top" width="40text%">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+In full disclosure equilibirum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total surplus maximizing
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Seller's option value of rejecting is 
+\begin_inset Formula $\tau V^{FD}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Accepted matches are 
+\begin_inset Formula $\pi(x)\geq\tau V^{FD}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\{x\colon\pi(x)+u(x)\geq0\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In full disclosure equilibrium, accepted matches are 
+\begin_inset Formula $\pi(x)\geq\tau V^{FD}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Seller's option value of rejecting is 
+\begin_inset Formula $\tau V^{FD}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Consider 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ that accepts matches 
+\begin_inset Formula 
+\[
+\{x\colon\pi(x)\geq0\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ additionally accepts 
+\begin_inset Formula $X':=\{x\colon0\leq\pi(x)<\tau V^{FD}\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sellers are better off under 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There is 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
+\begin_inset Formula $\pi(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $V^{FD}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ convex, 
+\begin_inset Formula $\pi$
+\end_inset
+
+ continuous in 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X'\neq\varnothing$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Buyers are better off under 
+\begin_inset Formula $\tilde{\sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $u(x)\geq0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ by assumption
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Disclosure Reduces Buyer Surplus: Intuition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Set of matches that create positive surplus for sellers is distinct from
+ the set of matches that create positive surplus for buyers
+\end_layout
+
+\begin_layout Itemize
+Sellers do not internalize buyer surplus 
+\end_layout
+
+\begin_layout Itemize
+Disclosing more information to the sellers reduces the platform's ability
+ to induce them to accept the efficient matches
+\end_layout
+
+\begin_layout Itemize
+Sellers cream-skim: single out the matches that are valuable to them and
+ reject other matches that can be valuable to the buyers 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Disclosure Reduces Seller Surplus: Seller Coordination Problem
 \end_layout
 
 \end_inset
@@ -3410,6 +3241,8 @@ status open
 
 \backslash
 bigskip
+\backslash
+pause
 \end_layout
 
 \end_inset
@@ -3439,21 +3272,11 @@ bigskip
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-explain better?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
-Fundamentally, sellers jointly are not capacity constrained (in time) while
- individually, they 
+Coordination problem arises because sellers jointly are not capacity constrained
+ (in time) while individually, they 
 \emph on
 are
 \emph default
@@ -3468,23 +3291,16 @@ are
 
 \end_layout
 
+\begin_layout Subsection
+Implementability with known seller preferences
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Proof Sketch
-\end_layout
 
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Drew: are all proofs written up? indicate what's left to do.
- 
 \end_layout
 
 \end_inset
@@ -3493,68 +3309,7 @@ Drew: are all proofs written up? indicate what's left to do.
 \end_layout
 
 \begin_deeper
-\begin_layout FrameSubtitle
-For the case of identical sellers
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $X$
-\end_inset
-
- convex, 
-\begin_inset Formula $\pi$
-\end_inset
-
- continuous in 
-\begin_inset Formula $x$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $V>0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Individually:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Seller's option value of rejecting is 
-\begin_inset Formula 
-\[
-\tau V>0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-in eqm, accepted jobs have profit 
-\begin_inset Formula $\pi\geq\tau V$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-all profitable jobs are 
-\begin_inset Formula $\pi\geq0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-so, some profitable jobs are rejected
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3562,7 +3317,7 @@ status open
 
 
 \backslash
-medskip
+tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 \end_layout
 
 \end_inset
@@ -3570,37 +3325,6 @@ medskip
 
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-Collectively:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-no capacity constraint in aggregate => zero option value of rejecting
-\end_layout
-
-\begin_layout Itemize
-accepted jobs have 
-\begin_inset Formula $\pi\geq0$
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Hit Uber example again here.
- Why not showing the destination helps.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3614,7 +3338,7 @@ Hit Uber example again here.
 status open
 
 \begin_layout Plain Layout
-Seller Coordination Problem, Identical Sellers
+Implementability with Known Seller Preferences
 \end_layout
 
 \end_inset
@@ -3623,7 +3347,127 @@ Seller Coordination Problem, Identical Sellers
 \end_layout
 
 \begin_deeper
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+Suppose the platform knows seller preferences.
+ Then a platform can implement any point on the Pareto frontier that satisfies
+ the participation constraint.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+should I change the statement in terms of maximizing the weighted sum of
+ buyer and seller surplus? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof sketch:
+\end_layout
+
+\begin_layout Enumerate
+1 seller type, 2 actions -> binary signaling structure is sufficient (Revelation
+ principle)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+signal = 
+\begin_inset Quotes eld
+\end_inset
+
+recommendation of actions
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X=X_{acc}\cup X_{rej}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+With binary signaling structure, seller dynamic problem reduces to static
+ problem
+\end_layout
+
+\begin_layout Enumerate
+Obedience holds because the seller gets 
+\begin_inset Formula $V$
+\end_inset
+
+ on 
+\begin_inset Formula $X_{acc}$
+\end_inset
+
+ and 
+\begin_inset Formula $V\geq0$
+\end_inset
+
+ by feasibility
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Inefficiency of Full Disclosure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3663,7 +3507,7 @@ input{../pictures/pareto_frontier_slides.tex}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Note Note
 status open
 
@@ -3682,7 +3526,7 @@ Generally, I can't get to the frontier with heterogeneous sellers
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Implement a Pareto improvement with heterogeneous sellers? 
 \end_layout
 
@@ -3691,8 +3535,81 @@ Generally not -> next section
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Sellers differentiated by skill
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementability with Known Seller Preferences
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{../pictures/pareto_frontier_pres.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Optimal Disclosure
+\end_layout
+
+\end_inset
+
+Optimal Disclosure: Unobservably Heterogeneous Seller Preferences
 \end_layout
 
 \begin_layout Standard
@@ -3746,6 +3663,320 @@ tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 status open
 
 \begin_layout Plain Layout
+Unobserved Heterogeneity in Seller Preferences
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="25text%">
+<column alignment="center" valignment="middle" width="25text%">
+<column alignment="center" valignment="middle" width="25text%">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y\in Y\subset\R^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $y\sim G$
+\end_inset
+
+, pdf 
+\begin_inset Formula $g>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Seller characteristics 
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+unobserved
+\end_layout
+
+\end_inset
+
+ by the platform 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(driver's preference for long rides)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\in X\subset\R^{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\sim F$
+\end_inset
+
+, pdf 
+\begin_inset Formula $f>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buyer characteristics 
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+observed
+\end_layout
+
+\end_inset
+
+ by the platform
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(passenger destination on Uber)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $u(x,y)\geq0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buyer match payoff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pi(x,y)$
+\end_inset
+
+ continuous
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Seller match payoff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Existence and Inefficiency Remain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ 
+\emph on
+public
+\emph default
+ disclosure policy 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Platform does not elicit 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha(y)$
+\end_inset
+
+ acceptance rate, 
+\begin_inset Formula $\rho(y)$
+\end_inset
+
+ utilization rate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Steady-state equilibrium exists and is unique.
+ Full disclosure equilibrium is inefficient.
+ 
+\end_layout
+
+\begin_layout Itemize
+Existence and inefficiency by similar reasons
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Details in the paper
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Linear Payoff Environment
 \end_layout
 
@@ -3765,7 +3996,7 @@ Linear Payoff Environment
 \begin_deeper
 \begin_layout Itemize
 e.g.
- job difficulty
+ remoteness of drop-off location 
 \end_layout
 
 \end_deeper
@@ -3779,7 +4010,7 @@ e.g.
 \begin_deeper
 \begin_layout Itemize
 e.g.
- seller skill
+ driver's preference for long rides
 \end_layout
 
 \end_deeper
@@ -3791,8 +4022,7 @@ e.g.
 \end_layout
 
 \begin_layout Itemize
-Platform does not elicit 
-\begin_inset Formula $y$
+\begin_inset Formula $u(x,y)\equiv u$
 \end_inset
 
 
@@ -3811,7 +4041,7 @@ Platform does not elicit
 status open
 
 \begin_layout Plain Layout
-Maximal #Matches
+Platform's Disclosure Problem
 \end_layout
 
 \end_inset
@@ -3820,44 +4050,10 @@ Maximal #Matches
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Imagine the platform is growing and wants to maximize #matches
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-if I end up using this objective, need to defend it.
- Devote a slide to this switch.
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-medskip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-What is the optimal disclosure policy?
-\end_layout
-
-\begin_layout Itemize
-Equivalent to maximizing capacity utilization:
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\max_{\lambda\in\Delta(S)}\rhobar
+\max_{\lambda\in\Delta(S)}\J(\gamma)=\gamma U+(1-\gamma)V
 \]
 
 \end_inset
@@ -3866,9 +4062,48 @@ Equivalent to maximizing capacity utilization:
 \end_layout
 
 \begin_layout Itemize
-Buyer-optimal outcome
+\begin_inset Formula $U$
+\end_inset
+
+ joint buyer surplus
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ joint seller surplus
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\gamma=1/2$
+\end_inset
+
+ total surplus max'n
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -3882,19 +4117,484 @@ bigskip
 
 \end_inset
 
-The problem is not trivial because: 
+Three main challenges for the analysis:
 \end_layout
 
 \begin_layout Enumerate
-sellers are heterogeneous
+The class of information structures is entire 
+\begin_inset Formula $\Delta(S)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+Sellers have private payoff types
+\end_layout
+
+\begin_layout Enumerate
+Sellers are forward-looking
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 seller availability is endogenous
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\oy}{\overline{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\uy}{\underline{y}}
+\end_inset
+
+
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimal Disclosure for Uniform Seller Distribution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+The disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is 
+\emph on
+
+\begin_inset Formula $x^{*}$
+\end_inset
+
+-upper-coarsening
+\emph default
+ for some 
+\begin_inset Formula $x^{*}\in[0,1]$
+\end_inset
+
+ if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ fully reveals 
+\begin_inset Formula $x<x^{*}$
+\end_inset
+
+ and pools all 
+\begin_inset Formula $x>x^{*}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:max-J"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $G=U[0,\oy]$
+\end_inset
+
+, 
+\begin_inset Formula $\oy\geq1$
+\end_inset
+
+.
+ Then for any 
+\begin_inset Formula $\gamma\in[0,1]$
+\end_inset
+
+, there is unique 
+\begin_inset Formula $x_{\gamma}^{*}\in[0,1]$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+-upper-coarsening maximizes 
+\begin_inset Formula $\mathcal{J}(\gamma)$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
-disclosure affects sellers' option value of rejecting
+\begin_inset Formula $x_{\gamma}^{*}$
+\end_inset
+
+ is decreasing in 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+There is 
+\begin_inset Formula $\gamma^{*}$
+\end_inset
+
+ and there exist 
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ that are large enough so that 
+\begin_inset Formula $x_{\gamma}^{*}<1$
+\end_inset
+
+ for 
+\begin_inset Formula $\gamma>\gamma^{*}$
+\end_inset
+
+ (some coarsening is strictly optimal).
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $0<\beta\tau<1/2$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{\gamma}^{*}=1$
+\end_inset
+
+ for any 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ (full disclosure is strictly optimal).
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Elaborations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+More weight on seller surplus (smaller 
+\begin_inset Formula $\gamma$
+\end_inset
+
+) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ optimal policy is more revealing 
+\end_layout
+
+\begin_layout Enumerate
+When buyer traffic (
+\begin_inset Formula $\beta$
+\end_inset
+
+) or capacity constraint (
+\begin_inset Formula $\tau$
+\end_inset
+
+) is large 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ optimal to pool high 
+\begin_inset Formula $x$
+\end_inset
+
+'s
+\end_layout
+
+\begin_layout Enumerate
+When buyer traffic and capacity constraint are small 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ truthfully reveal all 
+\begin_inset Formula $x$
+\end_inset
+
+'s
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\oy$
+\end_inset
+
+ are large 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Full disclosure is not efficient, and it maximizes neither the joint seller
+ profits nor the match rate.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{../pictures/pareto_frontier_hetero_1.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta\tau\in(0,1/2)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The implementability frontier is degenerate and consists of only the full-disclo
+sure outcome.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{../pictures/pareto_frontier_hetero_3.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intuition for Optimality of Upper-coarsening
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Buyer traffic (
+\begin_inset Formula $\beta$
+\end_inset
+
+) or capacity constraint (
+\begin_inset Formula $\tau$
+\end_inset
+
+) is large 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ sellers' option value of rejecting is big
+\end_layout
+
+\begin_layout Itemize
+High buyer types are marginal for high seller types 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ pooling those buyers makes high sellers accept more
+\end_layout
+
+\begin_layout Itemize
+Low buyer types have relatively smaller option value of rejecting, and less
+ surplus 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ need to provide information for them to make the right choices
 \end_layout
 
 \end_deeper
@@ -3910,18 +4610,7 @@ disclosure affects sellers' option value of rejecting
 status open
 
 \begin_layout Plain Layout
-Static Case
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-this slide should go very smooth, I can't stumble on it.
- 
+Special Case: Unconstrained Sellers
 \end_layout
 
 \end_inset
@@ -3948,7 +4637,7 @@ Suppose
 \begin_inset Formula $\tau=0$
 \end_inset
 
- (static setting).
+.
  Then:
 \end_layout
 
@@ -3987,7 +4676,7 @@ If
 \begin_inset Formula $g$
 \end_inset
 
- is constant, then utilization rate is information neutral
+ is constant, then disclosure is irrelevant for the matching rate
 \begin_inset ERT
 status open
 
@@ -4009,8 +4698,8 @@ Appears e.g.
 \end_layout
 
 \begin_layout Itemize
-The concavification reasoning goes back to Aumann-Maschler 1995 and Kamenica-Gen
-tzkow 2011
+The implied concavification reasoning goes back to Aumann-Maschler 1995
+ and Kamenica-Gentzkow 2011
 \end_layout
 
 \end_deeper
@@ -4026,7 +4715,7 @@ tzkow 2011
 status open
 
 \begin_layout Plain Layout
-Optimal Disclosure for Uniform Seller Distribution
+Intuition: More Detailed
 \end_layout
 
 \end_inset
@@ -4034,119 +4723,49 @@ Optimal Disclosure for Uniform Seller Distribution
 
 \end_layout
 
-\begin_deeper
-\begin_layout Definition
-Disclosure 
-\begin_inset Formula $\lambda$
-\end_inset
-
- is 
-\emph on
-
-\begin_inset Formula $x^{*}$
-\end_inset
-
--upper-censorship
-\emph default
- for 
-\begin_inset Formula $x^{*}\in[0,1]$
-\end_inset
-
- if 
-\begin_inset Formula $\lambda$
-\end_inset
-
- reveals 
-\begin_inset Formula $x<x^{*}$
-\end_inset
-
- and pools all 
-\begin_inset Formula $x>x^{*}$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-
+\begin_layout Frame
 Assume 
-\begin_inset Formula $G=U[0,\bar{y}]$
+\begin_inset Formula $G=U[0,1].$
 \end_inset
 
-.
- Then there is unique 
-\begin_inset Formula $x^{*}\in X$
+ Moving to 
+\begin_inset Formula $\tau>0$
 \end_inset
 
- such that 
-\begin_inset Formula $x^{*}$
-\end_inset
+ introduces two effects:
+\end_layout
 
--upper-censorship is optimal.
- 
-\begin_inset Newline newline
-\end_inset
-
-Furthermore, 
+\begin_deeper
+\begin_layout Enumerate
+Endogenous availability
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-if 
-\begin_inset Formula $\beta\tau<1/2$
-\end_inset
+High seller types are less available because they accept more
+\end_layout
 
-, then 
-\begin_inset Formula $x^{*}=1$
-\end_inset
+\end_deeper
+\begin_layout Enumerate
+Option value of waiting
+\end_layout
 
- (full disclosure is strictly optimal) 
+\begin_deeper
+\begin_layout Itemize
+Conceal information to reduce the option value
 \end_layout
 
 \begin_layout Itemize
-if 
-\begin_inset Formula $\bar{y}$
-\end_inset
-
- is large enough, then there is 
-\begin_inset Formula $\chi^{*}\in(1/2,1)$
-\end_inset
-
- such that if 
-\begin_inset Formula $\beta\tau>\chi^{*}$
-\end_inset
-
-, then 
-\begin_inset Formula $x^{*}<1$
-\end_inset
-
- (some coarsening is strictly optimal)
+High seller types have larger option value 
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Separator parbreak
 \end_inset
 
@@ -4164,27 +4783,15 @@ Intuition
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-David: there is a theorem that shows that in information mechanism, some
- coarsening is alway beneficial.
- ?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
-Additional effects in dynamic matching:
+Additional effects with constrained sellers:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-availability effect
+Endogenous availability
 \end_layout
 
 \begin_deeper
@@ -4203,7 +4810,7 @@ high types accept more jobs -> less available -> pdf of available sellers
 
 \end_deeper
 \begin_layout Itemize
-patience effect
+Option value of waiting 
 \end_layout
 
 \begin_deeper
@@ -4235,91 +4842,13 @@ overcomes availability effect when there are very high seller types (large
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Optimality of Information Coarsening: General 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-
- There is 
-\begin_inset Formula $\xi^{*}\in\R$
-\end_inset
-
- such that if
-\begin_inset Formula 
-\[
-g'(\bar{y})/g(\bar{y})>\xi^{*},
-\]
-
-\end_inset
-
-then full disclosure is sub-optimal.
- Furthermore, if 
-\begin_inset Formula $\bar{y}$
-\end_inset
-
- is large enough, then there is 
-\begin_inset Formula $\chi^{*}\in(1/2,1)$
-\end_inset
-
- such that if
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Formula 
-\[
-\beta\tau>\chi^{*},
-\]
-
-\end_inset
-
-then 
-\begin_inset Formula $\xi^{*}<0$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Proof 
+\begin_layout Section
+Proof Sketch of the Main Theorem
 \end_layout
 
 \begin_layout Frame
@@ -4365,7 +4894,62 @@ tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 status open
 
 \begin_layout Plain Layout
-Seller Optimization Problem 
+Proof in Four Steps
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Lemma
+\begin_inset space ~
+\end_inset
+
+1: Representation of signaling structures as a particular class of convex
+ functions
+\end_layout
+
+\begin_layout Description
+Lemma
+\begin_inset space ~
+\end_inset
+
+2: Convenient presentation of the seller dynamic optimization problem
+\end_layout
+
+\begin_layout Description
+Lemma
+\begin_inset space ~
+\end_inset
+
+3: First order condition of optimality using calculus of variation
+\end_layout
+
+\begin_layout Description
+Lemma
+\begin_inset space ~
+\end_inset
+
+4: Back out the optimal information structure from the FOC
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Representation of Disclosure Policies
 \end_layout
 
 \end_inset
@@ -4375,26 +4959,143 @@ Seller Optimization Problem
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $Z=\left\{ \int x\,s(dx)\colon s\in S\right\} $
-\end_inset
-
- is the set of posterior means of 
-\begin_inset Formula $x$
+Fix disclosure 
+\begin_inset Formula $\lambda$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $F^{\lambda}(\zeta)=\lambda\left\{ \int x\,s(dx)\leq\zeta\right\} $
+\begin_inset Formula $z(s)$
 \end_inset
 
- is the cdf of posterior means of 
+ posterior mean of buyer type 
 \begin_inset Formula $x$
 \end_inset
 
- under 
-\begin_inset Formula $\lambda$
+ after signal 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F^{\lambda}(\zeta)=\lambda\{z(s)\leq\zeta\}$
+\end_inset
+
+ cdf of posterior means 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Define the 
+\emph on
+option value function
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+continuation value? 
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $\Lambda\colon[0,\infty)\to\R_{+}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\Lambda(z;\lambda):=\int_{0}^{z}F^{\lambda}(\zeta)\,d\zeta.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\Lambda}$
+\end_inset
+
+ option value function under full disclosure
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+: 
+\begin_inset Formula $\overline{\Lambda}(z)=\int_{0}^{z}F(\zeta)d\zeta.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{\Lambda}$
+\end_inset
+
+ be the option value function under no disclosure
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+: 
+\begin_inset Formula $\underline{\Lambda}(z)=\max\{0,z-\Exp[x]\}.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
 \end_inset
 
 
@@ -4410,108 +5111,11 @@ status open
 
 \end_inset
 
-For any disclosure policy 
-\begin_inset Formula $\lambda$
+A convex function 
+\begin_inset Formula $\ell$
 \end_inset
 
-, seller's optimal strategy has a cutoff form.
- Furthermore, seller cutoff 
-\begin_inset Formula $\smuth$
-\end_inset
-
- is the solution to:
-\begin_inset Formula 
-\begin{align*}
-y-\smuth & =\tau\beta_{A}\Lambda(\smuth)
-\end{align*}
-
-\end_inset
-
-where
-\begin_inset Formula 
-\[
-\Lambda(z):=\int_{0}^{z}dF^{\lambda}(\zeta)\zeta
-\]
-
-\end_inset
-
-is the 
-\emph on
-option value function.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Disclosure Policy Representation
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\overline{W}$
-\end_inset
-
- option value function under full disclosure, 
-\begin_inset Formula 
-\[
-\overline{\Lambda}(z):=\int_{0}^{z}F(\xi)d\xi.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\underline{W}$
-\end_inset
-
- be the option value function under no disclosure, 
-\begin_inset Formula 
-\[
-\underline{\Lambda}(z):=\max\{0,z-\Exp[x]\}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-Option value function 
-\begin_inset Formula $\Lambda$
-\end_inset
-
- is implementable by some disclosure policy if and only if 
-\begin_inset Formula $\Lambda$
-\end_inset
-
- is a convex function point-wise between 
+ is point-wise between 
 \begin_inset Formula $\oW$
 \end_inset
 
@@ -4519,7 +5123,16 @@ Option value function
 \begin_inset Formula $\uW$
 \end_inset
 
- .
+ if and only if there is 
+\begin_inset Formula $\lambda\in\Delta(S)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Lambda(\cdot,\lambda)=\ell$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -4589,7 +5202,7 @@ status open
 
 
 \backslash
-input{../pictures/w.tex}
+input{../pictures/Lambda.tex}
 \end_layout
 
 \end_inset
@@ -4605,6 +5218,92 @@ input{../pictures/w.tex}
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Seller Optimization Problem 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z=\left\{ \int x\,s(dx)\colon s\in S\right\} $
+\end_inset
+
+ is the set of posterior means of 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+For any disclosure policy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, seller's optimal strategy has a cutoff form with cutoff 
+\begin_inset Formula $\smuth$
+\end_inset
+
+.
+ Furthermore, seller payoff 
+\begin_inset Formula $V(y)$
+\end_inset
+
+ and the cutoff 
+\begin_inset Formula $\smuth$
+\end_inset
+
+ are solution to:
+\begin_inset Formula 
+\[
+V(y)=\frac{y-\smuth}{\tau}=\beta_{A}\Lambda(\hat{z}(y)).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ probability of accepting and seller welfare depends on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ only through 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
 \end_inset
 
 
@@ -4646,26 +5345,68 @@ status open
 
 \end_inset
 
-The first variation of 
-\begin_inset Formula $\rhobar$
+The variational derivative of the match rate 
+\begin_inset Formula $M$
 \end_inset
 
  with respect to 
 \begin_inset Formula $\Lambda$
 \end_inset
 
- exists and is proportional to:
+ exists and equals
 \begin_inset Formula 
 \[
-\frac{\delta\rhobar}{\delta\Lambda}\propto-\left(g(y)(1-\rho(y))^{2}\right)'-g(y)\rho'(y).
+\frac{\delta M}{\delta\Lambda}=K_{1}\cdot\left[g(y)\nu'(y)-(g(y)\nu^{2}(y))'\right],
 \]
 
+\end_inset
+
+where 
+\begin_inset Formula $K_{1}>0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+ Similarly, the variational derivative of the joint seller profits 
+\begin_inset Formula $V$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ exists and equals
+\begin_inset Formula 
+\[
+\frac{\delta V}{\delta\Lambda}=\frac{\delta M}{\delta\Lambda}\cdot K_{2}+\betaa\nu(y)g(y),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $K_{2}>0.$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -4686,11 +5427,11 @@ Suppose
 \begin_inset Formula $\tau=0$
 \end_inset
 
- (static setting).
+.
  Then 
 \begin_inset Formula 
 \[
-\frac{\delta\rhobar}{\delta\Lambda}\propto-g'(y).
+\frac{\delta M}{\delta\Lambda}\propto-g'(y).
 \]
 
 \end_inset
@@ -4708,6 +5449,11 @@ If
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -4721,7 +5467,7 @@ If
 status open
 
 \begin_layout Plain Layout
-Intuition: Uniform Distribution of Seller Skill
+Intuition: Uniform Distribution of Seller Type
 \end_layout
 
 \end_inset
@@ -4739,14 +5485,14 @@ Consider
 \end_layout
 
 \begin_layout Itemize
-In statics (
+Unconstrained sellers (
 \begin_inset Formula $\tau=0$
 \end_inset
 
 ), 
 \begin_inset Formula 
 \[
-\frac{\delta\rhobar}{\delta\Lambda}=0,\quad\forall\Lambda.
+\frac{\delta M}{\delta\Lambda}=0,\quad\forall\Lambda.
 \]
 
 \end_inset
@@ -4755,14 +5501,14 @@ In statics (
 \end_layout
 
 \begin_layout Itemize
-If 
+Constrained sellers (
 \begin_inset Formula $\tau>0$
 \end_inset
 
-,
+):
 \begin_inset Formula 
 \[
-\frac{\delta\rhobar}{\delta\Lambda}\propto-(\overbrace{\underbrace{(1-\rho(y))^{2}}_{\text{availability factor}}+\underbrace{\rho(y)}_{\text{patience factor}}}^{\text{"adjusted density"}})'.
+\frac{\delta M}{\delta\Lambda}\propto-(\underbrace{(1-\rho(y))^{2}}_{\text{availability factor}}+\underbrace{\rho(y)}_{\text{continuation value factor}})'.
 \]
 
 \end_inset
@@ -4771,16 +5517,20 @@ If
 \end_layout
 
 \begin_layout Itemize
-Additional effects:
+Additional effects when 
+\begin_inset Formula $\tau>0$
+\end_inset
+
+:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-availability effect
+endogenous availability 
 \end_layout
 
 \begin_layout Itemize
-patience effect
+option value of waiting
 \end_layout
 
 \end_deeper
@@ -4797,7 +5547,7 @@ patience effect
 status open
 
 \begin_layout Plain Layout
-Proof of Proposition 4
+Intuition: General Distribution of Seller Type
 \end_layout
 
 \end_inset
@@ -4806,49 +5556,136 @@ Proof of Proposition 4
 \end_layout
 
 \begin_deeper
-\begin_layout FrameSubtitle
-Sketch
+\begin_layout Itemize
+Consider general 
+\begin_inset Formula $G$
+\end_inset
+
+ with pdf 
+\begin_inset Formula $g$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-Need to show that at 
-\begin_inset Formula $\oW(y)$
+\begin_layout Itemize
+Unconstrained sellers (
+\begin_inset Formula $\tau=0$
 \end_inset
 
-, there is deviation 
-\begin_inset Formula $\delta\Lambda(y)$
+), 
+\begin_inset Formula 
+\[
+\frac{\delta M}{\delta\Lambda}\propto-g'(y).
+\]
+
 \end_inset
 
- such that 
-\begin_inset Formula $\delta\rhobar>0$
+
+\end_layout
+
+\begin_layout Itemize
+Constrained sellers (
+\begin_inset Formula $\tau>0$
 \end_inset
 
-.
+):
+\begin_inset Formula 
+\[
+\frac{\delta M}{\delta\Lambda}=K_{1}\cdot\left[g(y)\nu'(y)-(g(y)\nu^{2}(y))'\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Back out the Information Structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ maximizes 
+\begin_inset Formula $\J$
+\end_inset
+
+, and 
+\begin_inset Formula $\d\J/\d\Lambda$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ crosses 0 from above at most once, then 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ is upper-coarsening.
  
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $\frac{(\rho(y)-\rho(y)^{2})'}{(1-\rho(y))^{2}}<\frac{g'(y)}{g(y)}$
-\end_inset
-
- for some interval of 
-\begin_inset Formula $y$
-\end_inset
-
-'s
+\end_deeper
+\begin_layout Section
+Applications
 \end_layout
 
-\begin_layout Enumerate
-LHS decreasing in 
-\begin_inset Formula $y$
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
- so take 
-\begin_inset Formula $\delta\Lambda(y)$
-\end_inset
 
- such that 
-\begin_inset Formula $\delta\Lambda(\bar{y})<0$
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
+\end_layout
+
 \end_inset
 
 
@@ -4862,94 +5699,6 @@ LHS decreasing in
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Optimality of Full Disclosure
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-6: Sufficient condition for local optimality of full disclosure
-\end_layout
-
-\end_inset
-
- If 
-\begin_inset Formula $G$
-\end_inset
-
- is concave, and 
-\begin_inset Formula $\beta\tau<1/2$
-\end_inset
-
-, then it's impossible to improve upon full disclosure by 
-\begin_inset Quotes eld
-\end_inset
-
-local coarsening
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Optimality of No Disclosure
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-7: Necessary condition for optimality of no disclosure
-\end_layout
-
-\end_inset
-
- If 
-\begin_inset Formula 
-\[
-g'(y)<g(\Exp x)\tau\beta(1-\beta\tau)^{2},\quad\forall y,
-\]
-
-\end_inset
-
-then no disclosure is suboptimal.
-\end_layout
-
-\end_deeper
 \begin_layout Section
 Conclusion
 \end_layout
@@ -5095,41 +5844,6 @@ Ranked sellers
 
 \end_layout
 
-\begin_layout Section
-Appendix
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-tableofcontents[currentsection]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 \start_of_appendix
 \begin_inset Separator plain

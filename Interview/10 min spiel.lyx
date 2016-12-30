@@ -286,7 +286,13 @@ TELL US ABOUT YOUR JOB MARKET PAPER.
 \begin_layout Standard
 In my job market paper, I theoretically study how to efficiently match heterogen
 eous supply and demand using information disclosure.
- Let me start by giving you an example.
+
+\change_deleted -484307115 1482963932
+ Let me
+\change_inserted -484307115 1482963934
+ I'll
+\change_unchanged
+ start by giving you an example.
  
 \end_layout
 
@@ -368,26 +374,23 @@ I develop a general framework, which is not limited just to Uber but also
 
 \begin_layout Standard
 I have two main results.
- Let me 
+ 
+\change_deleted -484307115 1482963954
+Let me
+\change_inserted -484307115 1482963963
+I'll
+\change_unchanged
+ 
 \bar under
 preview them
+\change_inserted -484307115 1482963969
+ now
+\change_unchanged
+
 \bar default
- before going into 
-\change_deleted -484307115 1482205273
-more
-\change_inserted -484307115 1482205273
-further
-\change_unchanged
- details.
- In my first result I show that the economic outcome
-\change_inserted -484307115 1482432883
- of heterogeneous matching market
-\change_unchanged
- is 
-\change_deleted -484307115 1482432204
-Pareto-
-\change_unchanged
-inefficient under the full disclosure.
+ before going into further details.
+ In my first result I show that the economic outcome of heterogeneous matching
+ market is inefficient under the full disclosure.
  
 \begin_inset Note Note
 status collapsed
@@ -401,23 +404,7 @@ The key tradeoff there the platform faces is between match rate and match
 \end_inset
 
 The key intuition there is that providing information to agents stimulates
- 
-\change_deleted -484307115 1482432832
-them to
-\change_unchanged
- 
-\change_inserted -484307115 1482432961
-them to 
-\change_unchanged
-cream-skim
-\change_inserted -484307115 1482432834
- 
-\change_deleted -484307115 1482432839
-, that leads
-\change_inserted -484307115 1482432841
-and leads
-\change_unchanged
- to inefficiently low match rates.
+ them to cream-skim and leads to inefficiently low match rates.
  I'll tell you more about it in a minute.
  In the second main result I look at how the platform can improve efficiency,
  and I characterize the disclosure policy that maximizes the total surplus.
@@ -429,36 +416,13 @@ and leads
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1482205388
-Now let me
-\change_inserted -484307115 1482205390
-Next, I'll
-\change_unchanged
- describe 
-\change_deleted -484307115 1482205392
-you
-\change_unchanged
-
+Next, I'll describe
 \bar under
- the 
-\change_deleted -484307115 1482205393
-model
-\change_inserted -484307115 1482205396
-framework
-\change_unchanged
-
+ the framework
 \bar default
  I am working in.
- 
-\change_inserted -484307115 1482205402
-In the model, 
-\change_deleted -484307115 1482205403
-T
-\change_inserted -484307115 1482205403
-t
-\change_unchanged
-here are three groups of players: buyers, sellers and the platform.
+ In the model, there are three groups of players: buyers, sellers and the
+ platform.
  Buyers contact sellers in continuous time and want to match quickly.
 \begin_inset Note Note
 status open
@@ -476,35 +440,16 @@ This is like on Uber or Airbnb where customers send requests for a ride
  The sellers have limited capacity for serving buyers and, critically, sellers
  have preferences over what buyers they get matched with.
  The platform is the information intermediary.
-
-\change_inserted -484307115 1482432989
  It takes prices as given and designs a policy that governs what buyer character
 istics are disclosed to the sellers before sellers accept a match and how
  coarsely.
-
-\change_unchanged
- 
-\change_inserted -484307115 1482205688
-This way, 
-\change_unchanged
-I restrict my attention to the platform's disclosure problem on the 
+ This way, I restrict my attention to the platform's disclosure problem
+ on the 
 \series bold
 seller
 \series default
- side of the market
-\change_inserted -484307115 1482205668
-.
+ side of the market.
  
-\change_deleted -484307115 1482205667
-:
-\change_unchanged
- 
-\change_deleted -484307115 1482205637
-The platform designs a policy that governs what buyer characteristics are
- disclosed to the sellers before sellers accept a match and how coarsely.
- 
-\change_unchanged
-
 \begin_inset Note Note
 status collapsed
 
@@ -519,27 +464,16 @@ I allow for arbitrary disclosure policies, that is, for an arbitrary mapping
 The platform's objective is to maximize the weighted average of the buyer
  and seller surpluses.
  
-\change_deleted -484307115 1482433059
-I hold prices fixed, because I want to focus on the search aspect of matching.
- 
-\change_inserted -484307115 1482433059
-
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1482433059
 I hold prices fixed, because I want to focus on the search aspect of matching.
  
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -566,58 +500,26 @@ a disclosure policy governs what passenger characteristics are revealed
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1482205437
-Let me tell you more
-\change_inserted -484307115 1482205439
-Next, I'll talk
-\change_unchanged
- about my 
+Next, I'll talk about my 
 \bar under
 first main result
 \bar default
 .
- I show that a policy of full disclosure is Pareto inefficient—that is 
-\change_deleted -484307115 1482433134
-it does not maximize the sum of buyer and seller surpluses
-\change_inserted -484307115 1482433164
-there is an outcome with both higher buyer and seller surpluses
-\change_unchanged
-.
+ I show that a policy of full disclosure is Pareto inefficient—that is there
+ is an outcome with both higher buyer and seller surpluses.
  It is inefficient for two reasons: full disclosure reduces buyer match
  probability, 
 \series bold
 and
 \series default
- it 
-\change_deleted -484307115 1482433199
-also
-\change_unchanged
- reduces seller payoffs.
+ it reduces seller payoffs.
+ I will first describe the reduction in buyer surplus.
+ The driver of the result here is that the set of matches that create positive
  
-\change_deleted -484307115 1482205477
-Let me
-\change_inserted -484307115 1482205480
-I will first
-\change_unchanged
- describe the reduction in buyer surplus.
- The 
-\change_inserted -484307115 1482436253
-driver of the result
-\change_deleted -484307115 1482436185
-key condition
-\change_unchanged
- here is that the set of matches that create positive 
 \series bold
 seller
 \series default
- surplus is different from the set of matches 
-\change_deleted -484307115 1482433235
-with
-\change_inserted -484307115 1482433236
-that create
-\change_unchanged
- positive 
+ surplus is different from the set of matches that create positive 
 \series bold
 buyer
 \series default
@@ -627,29 +529,14 @@ buyer
  Disclosing more information to the sellers reduces the platform's ability
  to induce them to accept the efficient matches.
  The sellers will single out the matches that are valuable to them and reject
- other matches that 
-\change_deleted -484307115 1482433288
-are
-\change_inserted -484307115 1482433289
-can be
-\change_unchanged
- valuable to the buyers.
+ other matches that can be valuable to the buyers.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1482205486
-Now let me
-\change_inserted -484307115 1482205488
-Now I will
-\change_unchanged
- describe what is perhaps more surprising
-\change_deleted -484307115 1482205494
- finding
-\change_unchanged
-, that is that under the full disclosure to sellers, the sellers as are
- also worse off as a whole.
+Now I will describe what is perhaps more surprising, that is that under
+ the full disclosure to sellers, the sellers as are also worse off as a
+ whole.
  It happens due to a Prisoners' Dilemma problem among sellers.
  Intuitively, each seller keeps his schedule open by rejecting the low-value
  matches in order to increase his individual chances of getting the high-value
@@ -667,15 +554,11 @@ the implicit assumption is that seller preferences are positively correlated
 
  Collectively, this behavior is suboptimal because all seller-valuable matches
  have to be accepted in order to maximize the joint seller surplus.
- 
-\change_inserted -484307115 1482433499
-The two reasons the inefficiency arises on the seller side are that the
+ The two reasons the inefficiency arises on the seller side are that the
  sellers have similar preferences over buyers and they are time-constrained.
- 
-\change_unchanged
-The platform's policy of withholding of information makes sellers less picky,
- they settle for less, and therefore can be directed towards accepting the
- efficient matches.
+ The platform's policy of withholding of information makes sellers less
+ picky, they settle for less, and therefore can be directed towards accepting
+ the efficient matches.
  
 \end_layout
 
@@ -778,18 +661,20 @@ Finally, the sellers are forward-looking, which as it turns out, this prevents
 
 \begin_layout Standard
 In the third point lies lies the main technical contribution of my paper,
- so let me tell you more about it.
+ so 
+\change_deleted -484307115 1482963983
+let me
+\change_inserted -484307115 1482963984
+I want to
+\change_unchanged
+ tell you more about it.
  When sellers are forward-looking, the information disclosure policy determines
  not only the seller’s stage payoff but also his continuation value.
  Continuation value depends on the distribution of expected payoffs in the
  future.
  As a result, a seller’s decision to accept depends not only on the posterior
  mean of the current buyer type—which is a standard feature in this literature—b
-ut 
-\change_deleted -484307115 1482205581
-also
-\change_unchanged
- on the entire signaling structure.
+ut on the entire signaling structure.
  Therefore, I can't use standard approaches in the literature, such as concavifi
 cation as in the recent bayesian persuasion literature, for the analysis
  of my model.
@@ -1227,34 +1112,6 @@ Other way of putting it: what additional pricing instruments the platform
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1482433605
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
-\end_layout
-
-\end_inset
-
-
-\begin_inset Quotes eld
-\end_inset
-
-WHAT CLASSES CAN YOU TEACH?
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1268,13 +1125,9 @@ end{document}
 \end_inset
 
 
-\change_inserted -484307115 1482433592
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482433624
 \begin_inset Quotes eld
 \end_inset
 
@@ -1286,16 +1139,12 @@ TELL US ABOUT YOUR PAPER WITH FUDENBERG AND STRACK.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482434530
 This is a theory paper about learning with experimentation when the agent
  model of the world is incorrect.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482434121
 In economics we use a concept of Nash equilibrium to predict the outcome
  of strategic interaction of economic agents.
  One of the foundations for NE says that NE is a limit point of repeated
@@ -1306,8 +1155,6 @@ In economics we use a concept of Nash equilibrium to predict the outcome
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482434228
 We develop a model with single agent who is Bayesian but whose prior is
  misspecified, in the sense that he puts probability zero to the true state
  of the world.
@@ -1321,8 +1168,16 @@ We develop a model with single agent who is Bayesian but whose prior is
 
 \begin_layout Standard
 
-\change_inserted -484307115 1482433624
-Let me tell you why it is a hard problem to analyze.
+\change_deleted -484307115 1482964016
+Let me tell you why i
+\change_inserted -484307115 1482964016
+I
+\change_unchanged
+t is a hard problem to analyze
+\change_inserted -484307115 1482964021
+, and that's why
+\change_unchanged
+.
  We know how to analyze learning problems when the agent is either correctly
  specified or is myopic.
  One the one hand, if the agent is correctly specified then we know that
@@ -1351,16 +1206,12 @@ a.s.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482433624
 We develop a model in where the agent's observed payoff evolves as a diffusion
  process with drift dependent on his actions and the state.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482433624
 We show that if the agent is forward-looking and is misspecified, then his
  beliefs or actions need not converge.
  What's more interesting, the fact of convergence depends on the agent's
@@ -1371,8 +1222,6 @@ We show that if the agent is forward-looking and is misspecified, then his
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1482433602
 \begin_inset Quotes eld
 \end_inset
 
@@ -1380,8 +1229,6 @@ WHAT CLASSES CAN YOU TEACH?
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -1419,6 +1266,25 @@ How broadly does it apply? What's different from a regulator in a normal
 What would you hide in the other examples, labor platforms and Airbnb? 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+
+\change_inserted -484307115 1482963151
+Airbnb hides the guests' gender, age, name and picture—when the host uses
+ the Instant Book feature.
+ Airbnb has two modes of matching guests and hosts: a regular one and the
+ Instant Book.
+ In a regular mode, the guests send a request and wait for a hosts approval.
+ In the Instant Book mode, all guests are automatically accepted by the
+ host.
+ 
+\change_deleted -484307115 1482963122
+Airbnb hides
+\change_unchanged
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 If full disclosure always inefficient?? I can see a mechanism but I am surprised
  it is always the case.
@@ -1427,6 +1293,8 @@ If full disclosure always inefficient?? I can see a mechanism but I am surprised
 
 \begin_deeper
 \begin_layout Enumerate
+
+\change_deleted -484307115 1482963183
 I said 
 \begin_inset Quotes eld
 \end_inset
@@ -1437,10 +1305,19 @@ The sellers accept the set of matches that are valuable to them, and this
 \end_inset
 
  Why? 
+\change_inserted -484307115 1482963226
+The set of matches that create positive value for the seller is distinct
+ from the set of matches that create positive value for the buyers.
+ Seller make the acceptance decision and do not internalize the buyer surplus.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+
+\change_deleted -484307115 1482963234
 \begin_inset Quotes eld
 \end_inset
 
@@ -1449,11 +1326,35 @@ I study a setting with pronounced heterogeneity, so that buyer and seller
 \begin_inset Quotes erd
 \end_inset
 
- Isn't there a price mechanism to take care of it? 
+ 
+\change_unchanged
+Isn't there a price mechanism to take care of 
+\change_inserted -484307115 1482963239
+inefficiency
+\change_deleted -484307115 1482963237
+it
+\change_unchanged
+? 
+\change_inserted -484307115 1482963249
+(Second Welfare Theorem?)
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+
+\change_inserted -484307115 1482963604
+I do not answer this question in my paper but instead focus on the information
+ disclosure policies holding the prices fixed.
+ My intuition is that a price mechanism that implements efficiency will
+ not be budget balanced for the platform.
+ The key assumption of the Second Welfare Theorem that is violated here
+ is that the agents cannot evaluate all available options for free, that
+ is that the search is costly.
+ 
+\change_deleted -484307115 1482963413
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -1464,7 +1365,36 @@ Prices are fixed.
 \begin_inset Quotes erd
 \end_inset
 
- Do you have a story why Uber is doing it using information and not prices?
+
+\change_unchanged
+ 
+\change_inserted -484307115 1482963416
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\change_inserted -484307115 1482963761
+What's the condition on the thickness of the market that drives the inefficiency
+? (You might think that if the market is thick enough there is always a
+ driver that will serve a passenger.
+ )
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\change_inserted -484307115 1482963852
+The matching friction is not about availability but about unobserved preferences
+ and search costs.
+ I show that even in an arbitrary thick market, there is still inefficiency.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do you have a story why Uber is doing it using information and not prices?
  
 \end_layout
 
@@ -1475,7 +1405,6 @@ In practice it may be easier to implement information withholding than a
  
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Can you say in one sentence what externality a seller imposes by accepting
