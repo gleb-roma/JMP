@@ -412,17 +412,45 @@ The key intuition there is that providing information to agents stimulates
  a approach to solving information disclosure problems with heterogeneous
  and forward-looking receivers—the problem impossible to crack with standard
  methods in the literature.
- 
+\change_inserted -484307115 1483125995
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -484307115 1483126045
+That was an overview of my paper.
+ Next, I will describe the model and discuss my results in further detail.
+ 
+\change_deleted -484307115 1483125995
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -484307115 1483126049
 Next, I'll describe
 \bar under
  the framework
 \bar default
  I am working in.
- In the model, there are three groups of players: buyers, sellers and the
- platform.
+\change_inserted -484307115 1483126052
+So, the 
+\bar under
+model
+\bar default
+.
+
+\change_unchanged
+ 
+\change_deleted -484307115 1483126059
+In the model, t
+\change_inserted -484307115 1483126059
+T
+\change_unchanged
+here are three groups of players: buyers, sellers and the platform.
  Buyers contact sellers in continuous time and want to match quickly.
 \begin_inset Note Note
 status open
@@ -1385,10 +1413,31 @@ What's the condition on the thickness of the market that drives the inefficiency
 \begin_deeper
 \begin_layout Enumerate
 
-\change_inserted -484307115 1482963852
+\change_inserted -484307115 1483127203
 The matching friction is not about availability but about unobserved preferences
  and search costs.
  I show that even in an arbitrary thick market, there is still inefficiency.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\change_inserted -484307115 1483127298
+What if the seller preferences over buyers are idiosyncratic? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\change_inserted -484307115 1483127452
+If the platform has no idea on what seller preferences are, it is optimal
+ to disclose all information to make sure the seller will accept at least
+ some matches.
+ If the platform has some understanding of what sellers like (up to a set
+ of parameters), it can design a more sophisticated disclosure policy.
+ This is a more interesting case, and this is what I am doing in the second
+ part of my paper.
  
 \end_layout
 
