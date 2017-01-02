@@ -36,6 +36,11 @@
       \pgftext{\usebeamerfont*{item projected}#1}} 
   \end{pgfpicture}% 
 } 
+
+%\setbeamercolor{emph}{fg=blue}
+%\renewcommand<>{\emph}[1]{%
+ % {\usebeamercolor[fg]{emph}\only#2{\itshape}#1}%
+%}
 \end_preamble
 \options fleqn
 \use_default_options true
@@ -272,48 +277,15 @@ today
 status open
 
 \begin_layout Plain Layout
-PLAN
-\end_layout
-
-\begin_layout Itemize
-Intro
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-- my paper is about how to match heterogeneous supply and demand using informato
-in disclosure.
- Let me start by giving you an example.
- Show a line which says this.
- (remember Rayo's presentation)
+Before the actual presentation:
 \end_layout
 
 \begin_layout Enumerate
-Uber example
+make sure the date is right
 \end_layout
 
 \begin_layout Enumerate
-- My Question
-\end_layout
-
-\begin_layout Enumerate
-- Generally for matching platforms (give more examples)
-\end_layout
-
-\begin_layout Enumerate
-- Preview of results.
- My story—short.
- Why is intervention necessary? what's the market failure? 
-\end_layout
-
-\begin_layout Enumerate
-- Outline of the talk
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Model.
- 
+remove page numbers
 \end_layout
 
 \end_inset
@@ -366,21 +338,21 @@ bigskip
 \end_layout
 
 \begin_deeper
-\begin_layout Example*
-Uber driver receives a request
+\begin_layout Itemize
+Uber driver receives a passenger's request
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-sees the passenger's rating, name and pick-up location
+Driver sees the passenger's rating, name and pick-up location
 \end_layout
 
 \begin_layout Itemize
-does not see passenger's destination until after he picks him up
+Driver does not see passenger's destination before the pick-up 
 \end_layout
 
 \begin_layout Itemize
-but drivers care about the destination
+But drivers care about the destination
 \end_layout
 
 \end_deeper
@@ -397,7 +369,17 @@ bigskip
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Efficient?
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -452,7 +434,15 @@ Primary objective for many matching platforms is to facilitate value-creating
 \end_layout
 
 \begin_layout Itemize
-Revealing information brings more surplus to the receiver of the info
+Efficiency = generate the most value on the marketplace in total
+\end_layout
+
+\begin_layout Itemize
+Information 
+\begin_inset Formula $\longleftrightarrow$
+\end_inset
+
+ efficiency: more information means more efficient markets
 \end_layout
 
 \end_deeper
@@ -575,7 +565,7 @@ Uber: hide passenger destination
 \end_layout
 
 \begin_layout Itemize
-Housing rental (e.g.
+Accomodation (e.g.
  Airbnb)
 \begin_inset Note Note
 status open
@@ -623,7 +613,8 @@ and other markets for services
 \end_layout
 
 \begin_layout Itemize
-Coaching
+Credit markets (e.g.
+ Prosper, Lending Club)
 \end_layout
 
 \begin_layout Standard
@@ -763,7 +754,7 @@ Full disclosure is inefficient
 \begin_deeper
 \begin_layout Itemize
 i.e.
- there is an outcome with both higher buyer and seller surpluses
+ there is an outcome with higher surplus for both buyers and sellers 
 \end_layout
 
 \begin_layout Itemize
@@ -808,8 +799,37 @@ aligned
 
 \end_deeper
 \begin_layout Enumerate
-Characterization of the efficient information disclosure policy.
- Depends on:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+In the second part of my paper I'm going to think about the platform as
+ a social planner and look at how the platform can improve the efficiency
+ of the marketplace.
+ The efficiency is justified for the platforms who face competition or in
+ the growth stage when they try to attract and lock in users.
+ I characterize ....
+\end_layout
+
+\end_inset
+
+Characterization of the efficient information disclosure policy
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Generically, partial revelation 
+\end_layout
+
+\begin_layout Itemize
+When known agent preferences, coarse revelation with two signals
+\end_layout
+
+\begin_layout Itemize
+With unknown preferences, depends on:
 \begin_inset Note Note
 status open
 
@@ -838,6 +858,7 @@ agents' capacity constraints
 buyer-to-seller ratio
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Standard
@@ -896,6 +917,27 @@ Let me start with the cross-side effect.
 
 \begin_layout Itemize
 Imagine the platform releases more information about buyers to the sellers
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+As in the example I started with, the platform chooses whether or not to
+ show the destination location to drivers.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The phenomenon is not limited to the supply side of the market, you can
+ repeat the same argument on the buyer side of the market.
+ 
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -964,7 +1006,7 @@ Sellers will single out the matches that are valuable to them and reject
  other matches that can be valuable to the buyers.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 Providing information stimulates seller to cream-skim
@@ -1121,11 +1163,27 @@ Forces behind Inefficiency (2): Same-side Effect
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+This was the component of inefficiency on the buyer side of the market.
+ What is perhaps more surprising is that information provision leads to
+ inefficiency on the seller side of the market.
+ ...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Sellers are worse off as a whole when 
+Sellers are worse off as a whole when they
 \end_layout
 
 \begin_deeper
@@ -1265,6 +1323,25 @@ My work is also related to a other econ and OR papers.
 
 \begin_deeper
 \begin_layout Description
+Information
+\begin_inset space ~
+\end_inset
+
+disclosure
+\begin_inset space ~
+\end_inset
+
+in
+\begin_inset space ~
+\end_inset
+
+markets: Akerlof 1970, Hirshleifer 1971, Spence 1973, Anderson-Renault 1999,
+ Hoppe et al.
+ 2009, Athey-Gans 2010, Bergemann-Bonatti 2011, Hagiu-Jullien 2011, Tadelis-Zett
+elmeyer 2015, Board-Lu 2015
+\end_layout
+
+\begin_layout Description
 Search
 \begin_inset space ~
 \end_inset
@@ -1285,25 +1362,6 @@ labor: Becker 1973, Shimer-Smith 2000, 01, Kircher 2009
 \end_layout
 
 \begin_layout Description
-Information
-\begin_inset space ~
-\end_inset
-
-disclosure
-\begin_inset space ~
-\end_inset
-
-in
-\begin_inset space ~
-\end_inset
-
-markets: Akerlof 1970, Hirshleifer 1971, Spence 1973, Anderson-Renault 1999,
- Hoppe et al.
- 2009, Athey-Gans 2010, Bergemann-Bonatti 2011, Hagiu-Jullien 2011, Tadelis-Zett
-elmeyer 2015, Board-Lu 2015
-\end_layout
-
-\begin_layout Description
 Centralized
 \begin_inset space ~
 \end_inset
@@ -1318,7 +1376,7 @@ Peer-to-peer
 \end_inset
 
 markets: Hitsch et al.
- 2010, Fradkin 2015, Horton 2015
+ 2010, Cullen-Farronato 2015, Fradkin 2015, Horton 2015
 \end_layout
 
 \begin_layout Description
@@ -1338,7 +1396,11 @@ in
 \begin_inset space ~
 \end_inset
 
-OR: Ashlagi et al.
+operations
+\begin_inset space ~
+\end_inset
+
+research: Ashlagi et al.
  2013, Arnosti et al.
  2014, Taylor 2016
 \end_layout
@@ -1346,22 +1408,6 @@ OR: Ashlagi et al.
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-end{document}
-\end_layout
-
 \end_inset
 
 
@@ -1411,7 +1457,7 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 end{document}
 \end_layout
@@ -1504,28 +1550,6 @@ status open
 
 \backslash
 centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-input{../pictures/matching_chart_pres.tex}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1711,10 +1735,16 @@ Buyers make a single search attempt
 
 \begin_layout Itemize
 Simplifying assumption: lost search efforts
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Extension in the paper
 \end_layout
 
-\begin_layout Itemize
-Extension in the paper
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1763,8 +1793,8 @@ No Excess Demand
 
 \end_inset
 
- Collectively, it is physically possible for sellers to complete every buyer
- job: 
+ Collectively, it is physically possible for sellers to accept all buyers:
+ 
 \begin_inset Formula $\beta\tau<1$
 \end_inset
 
@@ -1776,7 +1806,7 @@ Simplifies the notation, otherwise deal with queues
 \end_layout
 
 \begin_layout Itemize
-Easy extension in the paper
+Extension in the paper
 \end_layout
 
 \end_deeper
@@ -1811,11 +1841,11 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="25text%">
-<column alignment="center" valignment="middle" width="25text%">
+<column alignment="right" valignment="middle" width="25text%">
+<column alignment="left" valignment="middle" width="25text%">
 <column alignment="center" valignment="middle" width="25text%">
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1839,7 +1869,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1871,7 +1901,7 @@ medskip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1882,7 +1912,7 @@ medskip
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" bottomline="true" usebox="none">
+<cell alignment="right" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1894,16 +1924,29 @@ medskip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" bottomline="true" usebox="none">
+<cell alignment="left" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Buyer match payoff
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1914,7 +1957,7 @@ Buyer match payoff
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1934,7 +1977,7 @@ Buyer match payoff
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1993,25 +2036,90 @@ Platform chooses how to reveal buyer type
 \end_inset
 
  to sellers
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+But the phenomenon is broader, you can repeat the same argument on the buyer
+ side of the market.
+ 
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="middle" width="15text%">
+<column alignment="left" valignment="middle" width="35text%">
+<column alignment="center" valignment="middle" width="25text%">
+<row>
+<cell alignment="right" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Formula $S=\Delta(X)$
 \end_inset
 
- set of all posterior distributions over 
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set of all posterior distributions over 
 \begin_inset Formula $X$
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Formula $s\in S$
 \end_inset
 
- is platform's 
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Platform's 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2020,60 +2128,80 @@ signal
 \end_inset
 
  to the seller
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bigskip
 \end_layout
 
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
+\begin_layout Plain Layout
+(Hypothetical mark to Uber driver 
+\begin_inset Quotes eld
+\end_inset
 
+remote neighborhood
+\begin_inset Quotes erd
+\end_inset
+
+)
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Formula $\lambda\in\Delta(S)$
 \end_inset
 
- 
-\emph on
-disclosure policy
-\emph default
- 
+
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-\begin_inset ERT
-status open
+\end_inset
+</cell>
+<cell alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
 
-[=]
+\emph on
+Disclosure policy 
+\emph default
+=
+\emph on
+ 
+\emph default
+distribution of signals 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
- distribution of posteriors
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\lambda(s)$
-\end_inset
-
- fraction of buyers with signal 
-\begin_inset Formula $s$
-\end_inset
-
 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $\lambda'$
 \end_inset
@@ -2237,10 +2365,6 @@ status open
 Steady State of the Matching Process: SS Condition
 \end_layout
 
-\end_inset
-
-
-\begin_inset Separator latexpar
 \end_inset
 
 
@@ -2675,7 +2799,7 @@ How does equilibrium welfare of each side depend on
 
 \end_deeper
 \begin_layout Section
-Inefficiency of the Full Disclosure
+Inefficiency of Full Disclosure
 \end_layout
 
 \begin_layout Frame
@@ -2802,7 +2926,7 @@ implementable
 status open
 
 \begin_layout Plain Layout
-Inefficiency of the Full Disclosure
+First Main Result: Inefficiency of the Full Disclosure
 \end_layout
 
 \end_inset
@@ -3344,21 +3468,23 @@ Implementability with Known Seller Preferences
 \end_inset
 
 
-\end_layout
-
-\begin_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-3
+Justify efficiency as the platform's objective here.
+ 
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
 Suppose the platform knows seller preferences.
- Then a platform can implement any point on the Pareto frontier that satisfies
+ Then a platform can implement any Pareto-optimal outcome that satisfies
  the participation constraint.
  
 \begin_inset Note Note
@@ -3367,6 +3493,20 @@ status open
 \begin_layout Plain Layout
 should I change the statement in terms of maximizing the weighted sum of
  buyer and seller surplus? 
+\end_layout
+
+\begin_layout Proposition
+Suppose the platform knows seller preferences.
+ Then a platform can implement any outcome that maximizes the weighted average
+ of buyer and seller surpluses and satisfies the participation constraint.
+ 
+\end_layout
+
+\begin_layout Proposition
+Suppose the platform knows seller preferences.
+ Then a platform can implement any Pareto-optimal outcome that satisfies
+ the participation constraint.
+ 
 \end_layout
 
 \end_inset
@@ -3395,52 +3535,42 @@ Proof sketch:
 \end_layout
 
 \begin_layout Enumerate
-1 seller type, 2 actions -> binary signaling structure is sufficient (Revelation
- principle)
+Platform knows what matches should be made
+\end_layout
+
+\begin_layout Enumerate
+2 actions -> binary signaling structure is sufficient (Revelation principle)
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-signal = 
-\begin_inset Quotes eld
-\end_inset
-
-recommendation of actions
-\begin_inset Quotes erd
-\end_inset
-
-
+recommend matches to sellers
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X=X_{acc}\cup X_{rej}$
-\end_inset
-
- 
+provide no further information
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+The sellers follow the recommendations
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 With binary signaling structure, seller dynamic problem reduces to static
  problem
 \end_layout
 
-\begin_layout Enumerate
-Obedience holds because the seller gets 
-\begin_inset Formula $V$
+\begin_layout Itemize
+Pariticipation constrained holds 
+\begin_inset Formula $\Rightarrow$
 \end_inset
 
- on 
-\begin_inset Formula $X_{acc}$
-\end_inset
-
- and 
-\begin_inset Formula $V\geq0$
-\end_inset
-
- by feasibility
+ the value of the recommendation to accept is positive on average
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Note Note
@@ -4169,7 +4299,7 @@ seller availability is endogenous
 status open
 
 \begin_layout Plain Layout
-Optimal Disclosure for Uniform Seller Distribution
+Second Main Result: Optimal Disclosure for Uniform Seller Distribution
 \end_layout
 
 \end_inset
@@ -5657,6 +5787,10 @@ If
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Applications
 \end_layout
@@ -5675,7 +5809,7 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -5692,7 +5826,9 @@ tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded]
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\end_inset
+
+
 \begin_inset Separator plain
 \end_inset
 
@@ -5726,69 +5862,32 @@ Summary
 \end_layout
 
 \begin_layout Itemize
-In decentralized matching markets, there is a problem of excessive search
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- due to negative cross-side and same-side externalities 
-\end_layout
-
-\end_inset
-
-
+Heterogeneous matching market is inefficient when full information is disclosed
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-one side does not internalize time value and search efforts of the other
- side
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- sellers compete for the best jobs by ignoring other valuable jobs
-\end_layout
-
-\end_inset
-
-
+Information provision stimulates search that leads to inefficiency when
+ search is costly
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Information disclosure has competing effects
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Individual Choice Effect (pushes for more disclosure)
-\end_layout
-
-\begin_layout Enumerate
-Cross-Side Effect (pushes for less disclosure)
-\end_layout
-
-\begin_layout Enumerate
-Strategic Same-side Effect (pushes for less disclosure)
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-There is efficiency-improving information coarsening when 
+The platform can improve efficiency by limiting information exchange to
+ sellers when
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-identical sellers
+sellers' preferences are known
 \end_layout
 
 \begin_layout Itemize
-heterogeneous sellers but high buyer-to-seller ratio
+high buyer-to-seller ratio
 \end_layout
 
 \begin_layout Itemize
-heterogeneous sellers but tight capacity constraints
+tight capacity constraints
 \end_layout
 
 \end_deeper
@@ -5815,27 +5914,18 @@ Further Directions
 
 \begin_deeper
 \begin_layout Itemize
+Endogenous participation
+\end_layout
+
+\begin_layout Itemize
 Optimal pricing and disclosure to maximize revenue
 \end_layout
 
 \begin_layout Itemize
-Endogenous participation and membership prices
+Mechanism design vs.
+ information design 
 \end_layout
 
-\begin_layout Itemize
-Non-information design 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Limits on acceptance rate
-\end_layout
-
-\begin_layout Itemize
-Ranked sellers
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -6253,7 +6343,7 @@ beamergotobutton{Back}}
 status open
 
 \begin_layout Plain Layout
-Examples of Information Coarsening
+Examples of Limited Information
 \end_layout
 
 \end_inset
@@ -6285,6 +6375,16 @@ TaskRabbit (labor platform): breadth of task categories sellers commit to
 
 \begin_layout Itemize
 Star ratings: half-star step/10th-of-star step 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+anywhere, Prosper in particular
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
