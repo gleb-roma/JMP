@@ -286,13 +286,7 @@ TELL US ABOUT YOUR JOB MARKET PAPER.
 \begin_layout Standard
 In my job market paper, I theoretically study how to efficiently match heterogen
 eous supply and demand using information disclosure.
-
-\change_deleted -484307115 1482963932
- Let me
-\change_inserted -484307115 1482963934
- I'll
-\change_unchanged
- start by giving you an example.
+ I'll start by giving you an example.
  
 \end_layout
 
@@ -374,19 +368,9 @@ I develop a general framework, which is not limited just to Uber but also
 
 \begin_layout Standard
 I have two main results.
- 
-\change_deleted -484307115 1482963954
-Let me
-\change_inserted -484307115 1482963963
-I'll
-\change_unchanged
- 
+ I'll 
 \bar under
-preview them
-\change_inserted -484307115 1482963969
- now
-\change_unchanged
-
+preview them now
 \bar default
  before going into further details.
  In my first result I show that the economic outcome of heterogeneous matching
@@ -412,45 +396,21 @@ The key intuition there is that providing information to agents stimulates
  a approach to solving information disclosure problems with heterogeneous
  and forward-looking receivers—the problem impossible to crack with standard
  methods in the literature.
-\change_inserted -484307115 1483125995
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1483126045
-That was an overview of my paper.
+That was an overview of the paper.
  Next, I will describe the model and discuss my results in further detail.
  
-\change_deleted -484307115 1483125995
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -484307115 1483126049
-Next, I'll describe
-\bar under
- the framework
-\bar default
- I am working in.
-\change_inserted -484307115 1483126052
 So, the 
 \bar under
 model
 \bar default
 .
-
-\change_unchanged
- 
-\change_deleted -484307115 1483126059
-In the model, t
-\change_inserted -484307115 1483126059
-T
-\change_unchanged
-here are three groups of players: buyers, sellers and the platform.
+ There are three groups of players: buyers, sellers and the platform.
  Buyers contact sellers in continuous time and want to match quickly.
 \begin_inset Note Note
 status open
@@ -542,8 +502,8 @@ and
 \series default
  it reduces seller payoffs.
  I will first describe the reduction in buyer surplus.
- The driver of the result here is that the set of matches that create positive
- 
+ The driving force of inefficiency on the buyer side is that the set of
+ matches that create positive 
 \series bold
 seller
 \series default
@@ -644,7 +604,7 @@ status open
 
 \begin_layout Standard
 Okay, full disclosure is bad for the efficiency.
- On the other hand, no information disclosure is usually also bad.
+ Besides, no information disclosure is usually also bad.
  In a realistic setting of a matching market, most matches are not profitable
  to the sellers.
  If the platform conceals all information, then any given match has negative
@@ -689,13 +649,7 @@ Finally, the sellers are forward-looking, which as it turns out, this prevents
 
 \begin_layout Standard
 In the third point lies lies the main technical contribution of my paper,
- so 
-\change_deleted -484307115 1482963983
-let me
-\change_inserted -484307115 1482963984
-I want to
-\change_unchanged
- tell you more about it.
+ so I want to tell you more about it.
  When sellers are forward-looking, the information disclosure policy determines
  not only the seller’s stage payoff but also his continuation value.
  Continuation value depends on the distribution of expected payoffs in the
@@ -946,70 +900,99 @@ WHAT ELSE ARE YOU WORKING ON?
 \end_layout
 
 \begin_layout Standard
-The paper with Greg Lewis.
+I have a working paper with Greg Lewis and Albert Wang where we analyze
+ the incentives of search intermediary to reduce buyers search costs.
+ Many online companies such as eBay, Amazon, Airbnb, Yelp and others became
+ successful by using technology to provide search tools for accessing their
+ vast inventories.
+ And indeed, one of the most important services such platforms provide in
+ order to attract consumers and compete with their rivals is low search
+ costs.
+ In this paper we critcially examine a platform's incentive to do so.
  
 \end_layout
 
-\begin_layout Itemize
-Many of today’s leading companies can be thought of as multi-sided platforms.
+\begin_layout Standard
+We develop the following story.
+ One the one hand, zero search costs benefit searchers.
+ On the other hand, low search costs intensify competition among sellers
+ that they may not enjoy because they end up with less revenue.
+ The platform is a market maker, and so it cares about both sides of the
+ market.
+ We assume that the platform maximizes the total surplus.
+ This objective is justified either when theare strong cross-side network
+ effects of participationor when the platform maximizes the retention being
+ in the early stage of growth.
+ We show that in the optimum, the platform wants to maintain search costs
+ above zero.
  
 \end_layout
 
-\begin_layout Itemize
-One of the most important services such platforms provide in order to attract
- consumers and compete with their rivals is search intermediation.
-\end_layout
-
-\begin_layout Itemize
-The usual presumption is that these platforms try to optimally match consumers
- with the other side of the market
-\end_layout
-
-\begin_layout Itemize
-We consider the following model.
- There are two downstream markets, selling differentiated goods A and B
- respectively.
+\begin_layout Standard
+To rigorously study these effects, we build the following model.
+ There are two downstream markets, selling differentiated goods A and B.
  Consumers access these markets through a search intermediary that displays
  a default search result.
- Consumers that are dissatisfied with the default can search for an alternative,
- paying a search cost of c.
+ Consumers who are unhappy with the default can switch for an alternative,
+ paying a switching cost.
 \end_layout
 
 \begin_layout Itemize
-In this environment, the intermediary has two ways of controlling the user
- search experience.
- First, they can invest in technology to lower the search cost c.
+The intermediary controls the user search, for example it may or may not
+ invest in technology that lowers the customer switching cost.
 \end_layout
 
 \begin_layout Itemize
-By contrast, positive search costs are generically necessary for the intermediar
-y to maximize joint seller revenue.
+We show that zero search costs maximize consumer surplus, but generically
+ positive search costs are necessary to mazimize the seller surplus.
  
 \end_layout
 
 \begin_layout Itemize
-This is easiest to see in the case where goods are sold downstream at fixed
- prices.
+Let me give you some intuition for why positive search costs are necessary
+ to maxmize the seller surplus.
+ The easiest to see it is in the case where goods are sold downstream at
+ fixed prices.
  If good A has a higher price than good B, the platform would prefer for
- each consumer to buy good A rather than good B, though buying good B is
- better than them not buying at all.
- To push traffic to market A, the platform can make market A the default
- search result; but this only has bite if search costs are positive.
- On the other hand, if search costs are too high, consumers who value good
- B will see the default A result, and walk away.
+ each consumer to buy good A rather than good B.
+ To push traffic to market A, the platform can make market A as a default
+ search resultset positive switching costs.
+ It can't set search costs too high because then the consumers who value
+ good B will see the default A result, and walk away.
  
 \end_layout
 
 \begin_layout Itemize
-When there is limited supply and goods are auctioned, things become more
+When there is limited supply and prices are not fixed, things become more
  subtle, as it is harder to calculate where the platform should aim to steer
  traffic.
+ Steering more customers to market A increases price of A but some buyers
+ won't buy good A, while they could have bough good B.
+ 
+\change_deleted -484307115 1483659688
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -484307115 1483659686
 Still, starting from zero search costs there is always a local improvement
- by raising search costs and steering consumers towards the thicker market
- (in the sense of the buyer-seller ratio).
+ by raising search costs and steering consumers towards the thicker market,
+ that is the one with the higher buyer-seller ratio.
+\change_inserted -484307115 1483659604
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -484307115 1483659684
+Starting from zero search costs there is a local improvement in total revenue
+ by raising search costs, if and only if the prevalent market is thicker.
+ Prevalent=larger in the number of sellers.
+ Thicker=higher buyer-to-seller ratio.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1145,10 +1128,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -484307115 1483393897
-
-%
-\change_unchanged
 
 \backslash
 end{document}
@@ -1191,25 +1170,25 @@ We develop a model with single agent who is Bayesian but whose prior is
  misspecified, in the sense that he puts probability zero to the true state
  of the world.
  For example, an individual is overconfident, or a firm estimates a constant
- elasticity demand when it is not.
- We completely characterize the asymptotic behavior of the agent when his
- subjective state assumes two states of the world, and find a novel interaction
- between misspecification and active learning.
+ elasticity of demand when it is not.
+ We completely characterize the asymptotic behavior of the agent when assumes
+ two states of the world, and find a novel interaction between misspecification
+ and active learning.
  
 \end_layout
 
 \begin_layout Standard
+We show that if the agent is forward-looking and is misspecified, then his
+ beliefs or actions need not converge.
+ What's more interesting, the fact of convergence depends on the agent's
+ discount rate.
+ We provide a simple example with 3 actions in which a myopic agents beliefs
+ converge while a sufficiently patient agent's beliefs do not.
+ 
+\end_layout
 
-\change_deleted -484307115 1482964016
-Let me tell you why i
-\change_inserted -484307115 1482964016
-I
-\change_unchanged
-t is a hard problem to analyze
-\change_inserted -484307115 1482964021
-, and that's why
-\change_unchanged
-.
+\begin_layout Standard
+It is a hard problem to analyze, and that's why.
  We know how to analyze learning problems when the agent is either correctly
  specified or is myopic.
  One the one hand, if the agent is correctly specified then we know that
@@ -1241,16 +1220,6 @@ a.s.
 We develop a model in where the agent's observed payoff evolves as a diffusion
  process with drift dependent on his actions and the state.
  
-\end_layout
-
-\begin_layout Standard
-We show that if the agent is forward-looking and is misspecified, then his
- beliefs or actions need not converge.
- What's more interesting, the fact of convergence depends on the agent's
- discount rate.
- We provide a simple example with 3 actions in which a myopic agents beliefs
- converge while a sufficiently patient agent's beliefs do not.
- [3 mins]
 \end_layout
 
 \begin_layout Standard
@@ -1300,8 +1269,6 @@ What would you hide in the other examples, labor platforms and Airbnb?
 
 \begin_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1482963151
 Airbnb hides the guests' gender, age, name and picture—when the host uses
  the Instant Book feature.
  Airbnb has two modes of matching guests and hosts: a regular one and the
@@ -1310,10 +1277,6 @@ Airbnb hides the guests' gender, age, name and picture—when the host uses
  In the Instant Book mode, all guests are automatically accepted by the
  host.
  
-\change_deleted -484307115 1482963122
-Airbnb hides
-\change_unchanged
-
 \end_layout
 
 \end_deeper
@@ -1325,58 +1288,20 @@ If full disclosure always inefficient?? I can see a mechanism but I am surprised
 
 \begin_deeper
 \begin_layout Enumerate
-
-\change_deleted -484307115 1482963183
-I said 
-\begin_inset Quotes eld
-\end_inset
-
-The sellers accept the set of matches that are valuable to them, and this
- set does not coincide with the set of efficient matches.
-\begin_inset Quotes erd
-\end_inset
-
- Why? 
-\change_inserted -484307115 1482963226
 The set of matches that create positive value for the seller is distinct
  from the set of matches that create positive value for the buyers.
  Seller make the acceptance decision and do not internalize the buyer surplus.
  
-\change_unchanged
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-
-\change_deleted -484307115 1482963234
-\begin_inset Quotes eld
-\end_inset
-
-I study a setting with pronounced heterogeneity, so that buyer and seller
- preferences over matches are not aligned.
-\begin_inset Quotes erd
-\end_inset
-
- 
-\change_unchanged
-Isn't there a price mechanism to take care of 
-\change_inserted -484307115 1482963239
-inefficiency
-\change_deleted -484307115 1482963237
-it
-\change_unchanged
-? 
-\change_inserted -484307115 1482963249
-(Second Welfare Theorem?)
-\change_unchanged
-
+Isn't there a price mechanism to take care of inefficiency? (Second Welfare
+ Theorem?)
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1482963604
 I do not answer this question in my paper but instead focus on the information
  disclosure policies holding the prices fixed.
  My intuition is that a price mechanism that implements efficiency will
@@ -1385,29 +1310,10 @@ I do not answer this question in my paper but instead focus on the information
  is that the agents cannot evaluate all available options for free, that
  is that the search is costly.
  
-\change_deleted -484307115 1482963413
-
-\begin_inset Quotes eld
-\end_inset
-
-Prices are fixed.
- I am interested in the following question.
- Fix prices; what can the platform do just by manipulating the information
- the sellers observe about the buyers?
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_unchanged
- 
-\change_inserted -484307115 1482963416
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1482963761
 What's the condition on the thickness of the market that drives the inefficiency
 ? (You might think that if the market is thick enough there is always a
  driver that will serve a passenger.
@@ -1416,8 +1322,6 @@ What's the condition on the thickness of the market that drives the inefficiency
 
 \begin_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1483127203
 The matching friction is not about availability but about unobserved preferences
  and search costs.
  I show that even in an arbitrary thick market, there is still inefficiency.
@@ -1426,15 +1330,11 @@ The matching friction is not about availability but about unobserved preferences
 
 \end_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1483127298
 What if the seller preferences over buyers are idiosyncratic? 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-
-\change_inserted -484307115 1483127452
 If the platform has no idea on what seller preferences are, it is optimal
  to disclose all information to make sure the seller will accept at least
  some matches.

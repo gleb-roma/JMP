@@ -153,64 +153,10 @@ This paper studies the role of information intermediation in matching markets
  for match quality and match rate, the more patient and selective side of
  the market (sellers in my setting) tends to cream-skim.
  As a platform's policy, strategic limiting of information can be used to
+ reduce cream-skimming and improve total surplus.
+ In addition, limiting information benefits sellers by offsetting the externalit
+y the sellers impose on each other when cream-skimming independently.
  
-\change_inserted -484307115 1479777672
-reduce
-\change_deleted -484307115 1479777671
-inhibit
-\change_unchanged
- cream-skimming and improve total 
-\change_deleted -484307115 1479769985
-welfare
-\change_inserted -484307115 1479769987
-surplus
-\change_unchanged
-.
- In addition, limiting information 
-\change_deleted -484307115 1479777612
-can
-\change_inserted -484307115 1479777901
- benefits sellers by offsetting the externality the sellers impose on each
- other when cream-skimming independently.
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -484307115 1479777929
- alleviate seller coordination failure by offsetting the cream-skimming
- externality.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-In this paper, I formally studied how inforamtion disclosure in matching
- markets affects the tradeoff between match quality and match rate.
- Matching platforms spend significant resources eliciting match-relevant
- information from the users.
- The platform uses these data to match users more efficiently, either by
- developing a centralized assignment mechanism or by enabling effective
- search.
- Making detailed use information observable to other users ensures the most
- valuable matches are formed.
- However, increased observability can backfire.
- The search imposes cross-side and same-side externalities, which if unchecked,
- decrease the match rate and hamper the performance of the marketplace.
- The platform's goal is to make sure that both sides of the market receive
- high benefits from participation.
- First, because users must derive value on the platform comopared to transacting
- outside of the platform.
- Second, platform growth depends on the users' positive experiences.
- To offset the search externalities, the platform need to take more control
- over the matching process.
- 
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -222,15 +168,6 @@ This paper provides a case for a platform's control over the matching process
  imposed on buyers is to charge sellers a fee for every rejection.
  However, such a policy makes transactions too information-sensitive, and
  makes it unsafe for sellers to participate on the platform.
-
-\change_deleted -484307115 1479778136
-
-\series bold
- 
-\change_unchanged
-
-\series default
-
 \begin_inset Foot
 status open
 
@@ -269,51 +206,26 @@ reference "prop:FD-suboptimal"
  to nudge drivers to accept more rides and avoid the cream-skimming on destinati
 on.
  
-\change_inserted -484307115 1479831222
-
 \end_layout
 
 \begin_layout Standard
-Hiding destination 
-\change_inserted -484307115 1479831272
-improves efficiency if 
-\change_deleted -484307115 1479831277
-works in this market because
-\change_inserted -484307115 1479831434
- the resulting
-\change_unchanged
- 
-\change_deleted -484307115 1479832034
-the
-\change_unchanged
- increase in the driver's expected marginal profit is large enough to induce
- drivers to accept rides with unknown destination, but the decline in the
- expected average profit is small enough to keep drivers 
-\change_deleted -484307115 1479833628
-participating
-\change_unchanged
- on the platform.
- Buyers 
-\change_inserted -484307115 1479833647
-would 
-\change_unchanged
-significantly and unambiguously benefit from the resulting shorter wait
- times, and, in this way, information coarsening improves the quality of
- service for passengers.
+Hiding destination improves efficiency if the resulting increase in the
+ driver's expected marginal profit is large enough to induce drivers to
+ accept rides with unknown destination, but the decline in the expected
+ average profit is small enough to keep drivers on the platform.
+ Buyers would significantly and unambiguously benefit from the resulting
+ shorter wait times, and, in this way, information coarsening improves the
+ quality of service for passengers.
  
 \end_layout
 
 \begin_layout Standard
 It the current version of UberX, the passenger destination is fully concealed
  and is not used in pricing.
-\change_inserted -484307115 1479833058
-
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1479833389
 Uber drivers can use the destination filter twice a day.
  If used, the platform filters passenger requests and offers only those
  that are aligned with the driver's preferred destination.
@@ -326,33 +238,15 @@ target "http://www.ridesharingdriver.com/uber-destination-filter-get-passengers-
 \end_inset
 
 .
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
  This paper shows that partial coarsening would be more efficient.
- For example, my results show that the drivers with 
-\change_deleted -484307115 1479832136
-higher
-\change_inserted -484307115 1479832158
-better
-\change_unchanged
- outside option (low type sellers) require finer disclosure to stay profitable
- on the platform while drivers with 
-\change_deleted -484307115 1479832144
-low
-\change_inserted -484307115 1479832146
-worse
-\change_unchanged
- outside option (high type sellers) can be squeezed
-\change_inserted -484307115 1479830411
- out
-\change_unchanged
-.
+ For example, my results show that the drivers with better outside option
+ (low type sellers) require finer disclosure to stay profitable on the platform
+ while drivers with worse outside option (high type sellers) can be squeezed
+ out.
  In such situation, the following partial coarsening can work better.
  The destination of a passenger is discretized into three categories, close,
  medium-range, and far, where the medium-range is wide enough to include
@@ -497,23 +391,9 @@ reference "prop:FD-suboptimal"
  The Instant Book feature in its current version acts as an information
  coarsening policy, incentivizing hosts to accept more guest requests.
  As a first order effect, guests benefit because booking is fast.
- 
-\change_inserted -484307115 1479833773
-Hosts are squeezed out because they have less control over their guests.
- However, 
-\change_deleted -484307115 1479833773
-A
-\change_inserted -484307115 1479833773
-a
-\change_unchanged
-s a second order effect, 
-\change_inserted -484307115 1479833783
-hosts
-\change_deleted -484307115 1479833782
-sellers
-\change_unchanged
- also benefit, because better user experience attracts more guests to the
- platform.
+ Hosts are squeezed out because they have less control over their guests.
+ However, as a second order effect, hosts also benefit, because better user
+ experience attracts more guests to the platform.
  As a result, total welfare increases, in addition to platform participation.
  
 \end_layout
@@ -573,27 +453,19 @@ target "https://blog.taskrabbit.com/2014/06/17/unveiling-the-new-taskrabbit/"
  This further improves the clients' experience on the platform, because
  answering multiple questions is burdensome for the clients.
  
-\change_inserted -484307115 1479933288
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1479933325
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -484307115 1479933308
 
 
 \backslash
 ifdraft{
 \backslash
 color{blue} 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -602,9 +474,11 @@ color{blue}
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1479933944
-This paper has two implications for the platform designers.
+This paper has two implications for 
+\change_deleted -484307115 1483046449
+the
+\change_unchanged
+ platform designers.
  First, it alerts for potentially adverse effects of increased observability.
  If the buyer and seller side of a given market are not symmetric in their
  preferences for match rate and match quality, then revealing rich information
@@ -616,8 +490,6 @@ This paper has two implications for the platform designers.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1479934245
 Second, if a given market is fast-moving and match rate enters into the
  participants utility functions, limiting information can achieve better
  matching efficiency.
@@ -629,26 +501,18 @@ Second, if a given market is fast-moving and match rate enters into the
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -484307115 1479933300
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -484307115 1479933305
-
 }
 \backslash
 fi
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -702,13 +566,7 @@ First, it alerts to potentially adverse effects
 \end_layout
 
 \begin_layout Plain Layout
-of increasing 
-\change_inserted -484307115 1479830726
-observability of buyer characteristics
-\change_deleted -484307115 1479830698
-performance transparency in organizations
-\change_unchanged
-.
+of increasing observability of buyer characteristics.
 \begin_inset Quotes erd
 \end_inset
 
