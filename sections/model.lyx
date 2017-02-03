@@ -1525,6 +1525,8 @@ target "http://www.forbes.com/sites/harrycampbell/2015/03/24/just-how-far-is-you
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -484307115 1484170462
 \begin_inset CommandInset citation
 LatexCommand citet
 key "HKN"
@@ -1533,7 +1535,22 @@ key "HKN"
 
  study a natural experiment in Uber marketplace, that shows the passengers
  are very sensitive to delays.
+
+\change_unchanged
  
+\change_inserted -484307115 1484170665
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CHHLM16"
+
+\end_inset
+
+ estimate that an increase in wait time by 1 minute decrease the probability
+ of requesting a ride by 1.7 pp.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset

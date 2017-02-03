@@ -146,20 +146,62 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-This paper studies the role of information intermediation in matching markets
- and shows that strategic information disclosure can be an effective tool
- for balancing the tradeoff between match quality and match rate.
+This paper studies 
+\change_deleted -484307115 1486068532
+the role of
+\change_unchanged
+ information intermediation in matching markets and shows that strategic
+ information disclosure can be an effective tool for balancing the tradeoff
+ between match quality and match rate.
  When the two sides of the market are not symmetric in their preferences
  for match quality and match rate, the more patient and selective side of
  the market (sellers in my setting) tends to cream-skim.
- As a platform's policy, strategic limiting of information can be used to
- reduce cream-skimming and improve total surplus.
- In addition, limiting information benefits sellers by offsetting the externalit
-y the sellers impose on each other when cream-skimming independently.
+ 
+\change_deleted -484307115 1486066726
+As a
+\change_inserted -484307115 1486066726
+A
+\change_unchanged
+ platform's policy
+\change_inserted -484307115 1486066729
+ of
+\change_deleted -484307115 1486066728
+,
+\change_unchanged
+ strategic 
+\change_deleted -484307115 1486066734
+limiting of
+\change_unchanged
+ information
+\change_inserted -484307115 1486066741
+ withholding
+\change_unchanged
+ can be used to reduce cream-skimming and improve total surplus
+\change_inserted -484307115 1486066752
+ generated on the platform
+\change_unchanged
+.
+ In addition, 
+\change_inserted -484307115 1486066761
+withholding of
+\change_deleted -484307115 1486066759
+limiting
+\change_unchanged
+ information benefits sellers by offsetting the 
+\change_inserted -484307115 1486066779
+cream-skimming 
+\change_unchanged
+externality the sellers impose on each other
+\change_deleted -484307115 1486066783
+ when cream-skimming independently
+\change_unchanged
+.
  
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -484307115 1486136155
 This paper provides a case for a platform's control over the matching process
  through information design.
  Strategic information disclosure is less intrusive than direct control
@@ -169,7 +211,7 @@ This paper provides a case for a platform's control over the matching process
  However, such a policy makes transactions too information-sensitive, and
  makes it unsafe for sellers to participate on the platform.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset CommandInset citation
@@ -183,15 +225,47 @@ key "Rot08"
 
 \end_inset
 
- Strategic information limitation is relevant in practice and can be found
- in the design of many platforms.
  
+\change_inserted -484307115 1486068901
+
 \end_layout
 
 \begin_layout Standard
+Strategic information 
+\change_deleted -484307115 1486066973
+limitation
+\change_inserted -484307115 1486068773
+withholding
+\change_unchanged
+ is relevant in practice and can be found in the design
+\change_inserted -484307115 1486069000
+s
+\change_unchanged
+ of many platforms.
+ 
+\change_deleted -484307115 1486068908
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -484307115 1486068908
 Next I will consider the information design choices on the successful digital
  marketplaces.
- Uber explicitly limits information to improve the efficiency.
+
+\change_unchanged
+ 
+\change_inserted -484307115 1486067096
+Continuing with one of the examples from before, 
+\change_unchanged
+Uber explicitly limits information
+\change_inserted -484307115 1486069024
+ by hiding the passenger destination.
+ 
+\change_deleted -484307115 1486067133
+ to improve the efficiency.
+
+\change_unchanged
  
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -199,29 +273,116 @@ reference "prop:FD-suboptimal"
 
 \end_inset
 
- shows that if drivers have full information about passenger rides and full
- discretion over accepting, they cream-skim: acceptance rates are low, and
- the demand-supply fit is suboptimal.
- The platform's policy of hiding passenger destination from drivers is used
- to nudge drivers to accept more rides and avoid the cream-skimming on destinati
-on.
+
+\change_inserted -484307115 1486085598
+ shows that it can be optimal to do so to maximize the total surplus.
  
+\change_deleted -484307115 1486067147
+ shows that i
+\change_inserted -484307115 1486067147
+I
+\change_unchanged
+f drivers have
+\change_inserted -484307115 1486085609
+ too
+\change_unchanged
+ 
+\change_deleted -484307115 1486067157
+full
+\change_inserted -484307115 1486067160
+detailed
+\change_unchanged
+ information about passenger 
+\change_deleted -484307115 1486067354
+rides
+\change_inserted -484307115 1486067356
+requests
+\change_unchanged
+ and 
+\change_deleted -484307115 1486067344
+full
+\change_unchanged
+ discretion over accepting
+\change_inserted -484307115 1486085623
+ them
+\change_unchanged
+, they 
+\change_inserted -484307115 1486069088
+will 
+\change_unchanged
+cream-skim
+\change_inserted -484307115 1486067395
+.
+ This results in low
+\change_deleted -484307115 1486067396
+:
+\change_unchanged
+ acceptance rates 
+\change_deleted -484307115 1486067401
+are low,
+\change_unchanged
+ and 
+\change_deleted -484307115 1486067404
+the
+\change_inserted -484307115 1486067407
+suboptimal
+\change_unchanged
+ demand-supply fit
+\change_deleted -484307115 1486067412
+ is suboptimal
+\change_unchanged
+.
+ The platform's policy of hiding passenger destination from drivers is used
+ to nudge drivers to accept more rides and avoid 
+\change_deleted -484307115 1486135615
+the
+\change_unchanged
+ cream-skimming 
+\change_inserted -484307115 1486067456
+based 
+\change_unchanged
+on destination.
+ 
+\change_deleted -484307115 1486135877
+
 \end_layout
 
 \begin_layout Standard
-Hiding destination improves efficiency if the resulting increase in the
- driver's expected marginal profit is large enough to induce drivers to
- accept rides with unknown destination, but the decline in the expected
- average profit is small enough to keep drivers on the platform.
- Buyers would significantly and unambiguously benefit from the resulting
- shorter wait times, and, in this way, information coarsening improves the
- quality of service for passengers.
+Hiding destination improves efficiency if 
+\change_inserted -484307115 1486135841
+it increases the driver's expected marginal profit but does not decrease
+ the expected average profit so much that the driver leaves the platform.
+ 
+\change_deleted -484307115 1486135845
+the resulting increase in the driver's expected marginal profit is large
+ enough to induce drivers to accept rides with unknown destination, but
+ the decline in the expected average profit is small enough to keep drivers
+ on the platform.
+
+\change_unchanged
+ Buyers 
+\change_deleted -484307115 1486067532
+would significantly and 
+\change_unchanged
+unambiguously benefit from the resulting shorter wait times
+\change_deleted -484307115 1486135917
+, and, in this way, information coarsening improves the quality of service
+ for passengers.
+\change_inserted -484307115 1486135917
+.
+
+\change_unchanged
  
 \end_layout
 
 \begin_layout Standard
 It the current version of UberX, the passenger destination is fully concealed
+\change_deleted -484307115 1486135947
  and is not used in pricing.
+\change_inserted -484307115 1486135947
+.
+\change_unchanged
+
 \begin_inset Foot
 status open
 
@@ -242,19 +403,80 @@ target "http://www.ridesharingdriver.com/uber-destination-filter-get-passengers-
 
 \end_inset
 
- This paper shows that partial coarsening would be more efficient.
- For example, my results show that the drivers with better outside option
- (low type sellers) require finer disclosure to stay profitable on the platform
- while drivers with worse outside option (high type sellers) can be squeezed
- out.
- In such situation, the following partial coarsening can work better.
- The destination of a passenger is discretized into three categories, close,
+ This paper shows that partial 
+\change_deleted -484307115 1486135934
+coarsening
+\change_inserted -484307115 1486135936
+revelation
+\change_unchanged
+ 
+\change_deleted -484307115 1486067589
+would
+\change_inserted -484307115 1486067590
+could
+\change_unchanged
+ be more efficient.
+ 
+\change_deleted -484307115 1486067618
+For example, m
+\change_inserted -484307115 1486067618
+M
+\change_unchanged
+y results 
+\change_deleted -484307115 1486067606
+show
+\change_inserted -484307115 1486067622
+imply, for instance,
+\change_unchanged
+ that the drivers with better outside option (low type sellers) require
+ finer disclosure to stay 
+\change_deleted -484307115 1486067644
+profitable 
+\change_unchanged
+on the platform
+\change_inserted -484307115 1486067649
+,
+\change_unchanged
+ while drivers with worse outside option (high type sellers) 
+\change_inserted -484307115 1486067697
+will stay on the platform even if the provision of information is limited.
+ 
+\change_deleted -484307115 1486067699
+can be squeezed out.
+
+\change_unchanged
+ In such situation, the following
+\change_inserted -484307115 1486067734
+ policy with
+\change_unchanged
+ partial 
+\change_deleted -484307115 1486136004
+coarsening
+\change_inserted -484307115 1486136006
+revelation
+\change_unchanged
+ can work better.
+ 
+\change_inserted -484307115 1486136042
+All possible passenger destinations are broken down into three categories
+ based on the probability of getting a subsequent ride for drivers: very
+ likely, likely, and unlikely, where the middle category is large enough
+ to include most destinations.
+ The disclosure policy signals to the driver only the category the true
+ destination belongs to.
+ 
+\change_deleted -484307115 1486067840
+The destination of a passenger is discretized into three categories, close,
  medium-range, and far, where the medium-range is wide enough to include
  most rides.
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -484307115 1486136093
 UberX currently uses a simple pricing rule combined with information disclosure
  coarsening and other requirements for drivers, such as minimal acceptance
  rates.
@@ -267,7 +489,7 @@ UberX currently uses a simple pricing rule combined with information disclosure
  Second, flexible pricing that conditions on destination is a non-trivial
  development task that requires significant development resources.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 UberPool already conditions prices on many variables, and as far as I am
@@ -294,7 +516,7 @@ target "https://newsroom.uber.com/upfront-fares-no-math-and-no-surprises/"
  There is some complexity threshold for the designer beyond which increasing
  the price complexity is not justified on practicality grounds.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 See 
@@ -316,7 +538,7 @@ key "Seg07"
 \series bold
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 [
@@ -336,7 +558,7 @@ FIND A BETTER WAY TO TRANSITION TO THIS POINT FROM YOUR PREVIOUS PARAGRAPH]
  has not been implemented.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 [
@@ -349,6 +571,8 @@ FIND A BETTER WAY TO TRANSITION TO THIS closing thought]
  Understanding the benefits of information disclosure over flexible transfer
  schemes is an important venue for the future research.
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -386,16 +610,51 @@ reference "prop:FD-suboptimal"
 \end_inset
 
  shows that hosts cream-skim if they have detailed information about guests.
- This results in low acceptance rates that fail to satisfy guest demand
- for convenient booking service, thereby compromising marketplace performance.
+ This 
+\change_deleted -484307115 1486069219
+results in
+\change_inserted -484307115 1486069220
+leads to
+\change_unchanged
+ low acceptance rates that fail to satisfy guest demand for convenient booking
+ service, thereby compromising marketplace performance.
  The Instant Book feature in its current version acts as an information
  coarsening policy, incentivizing hosts to accept more guest requests.
- As a first order effect, guests benefit because booking is fast.
- Hosts are squeezed out because they have less control over their guests.
- However, as a second order effect, hosts also benefit, because better user
- experience attracts more guests to the platform.
+ 
+\change_deleted -484307115 1486068128
+As a first order effect, g
+\change_inserted -484307115 1486068129
+G
+\change_unchanged
+uests benefit because booking is fast.
+ 
+\change_inserted -484307115 1486068169
+A direct effect of this on hosts is that they lose
+\change_deleted -484307115 1486068148
+Hosts are squeezed out
+\change_unchanged
+ because they have less control over their guests.
+ However, 
+\change_deleted -484307115 1486068187
+as a second order effect
+\change_inserted -484307115 1486068192
+in an indirect effect
+\change_unchanged
+, hosts 
+\change_deleted -484307115 1486068204
+also
+\change_unchanged
+ benefit
+\change_inserted -484307115 1486068232
+ from larger number of guest attracted to the platform by a more efficient
+ disclosure policy.
+ 
+\change_deleted -484307115 1486069193
+, because better user experience attracts more guests to the platform.
  As a result, total welfare increases, in addition to platform participation.
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -421,8 +680,17 @@ reference "prop:FD-suboptimal"
 
  shows that if service providers understand well their payoffs from the
  offered tasks, they cream-skim.
- A service provider may prefer to reject the tasks that are too far in terms
- of traveling distance, inconvenient in timing, or uninteresting.
+ A service provider may prefer to reject the tasks 
+\change_deleted -484307115 1486068331
+that are too far in terms of
+\change_inserted -484307115 1486068336
+that require long
+\change_unchanged
+ traveling
+\change_deleted -484307115 1486068339
+ distance
+\change_unchanged
+, inconvenient in timing, or uninteresting.
  This cream-skimming yields low labor force utilization, which is inefficient
  from the platform's perspective.
  Buyers prefer to be able to hire workers on demand.
@@ -453,6 +721,132 @@ target "https://blog.taskrabbit.com/2014/06/17/unveiling-the-new-taskrabbit/"
  This further improves the clients' experience on the platform, because
  answering multiple questions is burdensome for the clients.
  
+\change_inserted -484307115 1486136170
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1486137131
+This paper provides a case for using information design as a way for a platform
+ to influence the matching process.
+ Strategic information disclosure is arguably less intrusive than direct
+ control and often more palatable than sophisticated pricing schemes.
+ To see why, recall that a standard economic approach to dealing with externalit
+ies is to impose corrective payments.
+ For example, a seller can be made to pay a fee for every rejection equal
+ to the buyer's cost of the rejection.
+ Such a policy, however, makes transactions too information-sensitive, and
+  the market  unsafe for the sellers to participate.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1486136170
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rot08"
+
+\end_inset
+
+ names safety as one of three key requirements for a well-functioning market.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -484307115 1486137598
+UberX currently uses a simple pricing rule
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1486137454
+The upfront UberX price is a function of the expected duration and distance
+ of the trip and the surge price coefficient.
+ The surge price coefficient depends on the how many riders and nearby drivers
+ have their Uber app open at that moment.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://newsroom.uber.com/upfront-fares-no-math-and-no-surprises/"
+target "https://newsroom.uber.com/upfront-fares-no-math-and-no-surprises/"
+
+\end_inset
+
+.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ combined with information disclosure coarsening and other requirements
+ for drivers, such as minimal acceptance rates.
+ A natural question is why Uber does not adopt a more flexible pricing scheme
+ that would, for instance, condition price on destination.
+ As far as I know, this question has not been answered well in the economic
+ literature, and here I discuss several possible rationales for the coarse
+ Uber pricing.
+ First, consumers appreciate transparent and simple pricing, both because
+ it is easier to assess the cost of a ride before looking it up in the app
+ and because complex pricing can feel like price gauging.
+ Uber has sufficient data on its users to introduce personalized pricing
+ for each passenger independent of just individual destination.
+ Because of a risk of price-discrimination litigation, however, personalized
+ pricing has not been implemented.
+ Second, flexible pricing that conditions on destination is a non-trivial
+ development task that requires significant development resources.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1486137633
+UberPool already conditions prices on many variables, and as far as I am
+ aware from private conversations, Uber is testing similarly flexible pricing
+ scheme in the UberX product.
+ 
+\end_layout
+
+\end_inset
+
+ Third, and relatedly, it is not feasible to condition on every possible
+ relevant variable in the transportation market.
+ There is some complexity threshold for the designer beyond which increasing
+ the price complexity is not justified on practicality grounds.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -484307115 1486136101
+See 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Seg07"
+
+\end_inset
+
+ for the study of communication requirements of social choice rules.
+ It demonstrates that in some social choice problems, the space of prices
+ that must be discovered is prohibitively large.
+ 
+\end_layout
+
+\end_inset
+
+  Understanding the benefits of strategic information disclosure relative
+ to flexible transfer schemes is an important venue for the future research.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -480,9 +874,13 @@ the
 \change_unchanged
  platform designers.
  First, it alerts for potentially adverse effects of increased observability.
- If the buyer and seller side of a given market are not symmetric in their
- preferences for match rate and match quality, then revealing rich information
- to the pickier side of the market hampers match rate.
+ If the buyer and seller side of a 
+\change_deleted -484307115 1486068418
+given
+\change_unchanged
+ market are not symmetric in their preferences for match rate and match
+ quality, then revealing rich information to the pickier side of the market
+ hampers match rate.
  The side of the market that values high match rate as opposed to high match
  quality suffers.
  This may create the unbalanced market that won't scale up.

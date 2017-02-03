@@ -989,10 +989,16 @@ medskip
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Platform cares about both sides of the market
 \end_layout
 
-\begin_layout Itemize
-Platform cares about both sides of the market
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1457,7 +1463,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 end{document}
 \end_layout
@@ -1623,7 +1629,7 @@ Match lasts time
 
 \begin_deeper
 \begin_layout Itemize
-during which the seller cannot accept new jobs
+during which the seller cannot accept new buyers
 \end_layout
 
 \end_deeper
@@ -1651,7 +1657,7 @@ Buyer search is costly:
 
 \begin_deeper
 \begin_layout Itemize
-accepted -> buyer stays until the job is completed
+accepted -> buyer stays until the match dissolves
 \end_layout
 
 \begin_layout Itemize
@@ -1681,6 +1687,41 @@ Assumptions on Matching Process
 \end_layout
 
 \begin_deeper
+\begin_layout Assumption
+Buyers make a single search attempt
+\end_layout
+
+\begin_layout Itemize
+Simplifying assumption: lost search efforts
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Extension in the paper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Rejections matter
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Assumption
 Buyers contact available sellers only.
  
@@ -1714,37 +1755,6 @@ Buyers contact an available seller chosen uniformly at random
 
 \begin_layout Itemize
 Relaxed in an extension in the paper
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pause
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Assumption
-Buyers make a single search attempt
-\end_layout
-
-\begin_layout Itemize
-Simplifying assumption: lost search efforts
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Extension in the paper
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2484,11 +2494,24 @@ pause
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $\pi(s):=\int_{X}\pi(x)\,ds(x)$
+\begin_inset Formula $\pi(s)$
 \end_inset
 
- expected profit if he accepts a buyer with signal 
+ expected immediate profit from a buyer with signal 
 \begin_inset Formula $s$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
 \end_inset
 
 
@@ -2498,7 +2521,7 @@ pause
 \begin_inset Formula $v(s)$
 \end_inset
 
- be the value of a buyer with signal 
+ value of a buyer with signal 
 \begin_inset Formula $s$
 \end_inset
 
@@ -2512,13 +2535,6 @@ pause
 
  includes the option value of rejecting the buyer and the opportunity cost
  of accepting him
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $v(s,y)=\max\{0,\pi(s,y)-\tau V(y)\}$
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -2547,7 +2563,47 @@ status open
 
 
 \backslash
+pause
+\backslash
 medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v(s)=\max\{0,\pi(s)-\tau V\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=\Exp[v(s)]\cdot\betaa$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
 \backslash
 pause
 \end_layout
@@ -2790,7 +2846,7 @@ bigskip
 \end_layout
 
 \begin_layout Standard
-How does equilibrium welfare of each side depend on 
+How does equilibrium surplus on each side of the market depend on 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -2859,7 +2915,7 @@ Economic outcome
 \begin_inset Formula $O=(U,V)$
 \end_inset
 
- is a combination of buyers' and sellers' surpluses
+ is a combination of buyers' surplus and sellers' surplus
 \end_layout
 
 \begin_layout Itemize
@@ -2936,23 +2992,15 @@ First Main Result: Inefficiency of the Full Disclosure
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $V^{\sigma}$
-\end_inset
-
-, 
-\begin_inset Formula $\rho^{\sigma}$
-\end_inset
-
-, 
-\begin_inset Formula $U^{\sigma}$
+\begin_inset Formula $U^{\sigma},V^{\sigma},\rho^{\sigma}$
 \end_inset
 
  denote steady-state buyers' surplus, sellers' surplus and utilization rate
- when strategy profile 
+ when sellers play strategy profile 
 \begin_inset Formula $\sigma$
 \end_inset
 
- is played
+
 \begin_inset ERT
 status open
 
@@ -3151,7 +3199,7 @@ Consider
  that accepts matches 
 \begin_inset Formula 
 \[
-\{x\colon\pi(x)\geq0\}.
+\{x\colon\pi(x)\geq0\}
 \]
 
 \end_inset
@@ -3159,8 +3207,8 @@ Consider
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+Relative to the full disclosure outcome, 
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
@@ -3184,9 +3232,8 @@ pause
 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Sellers are better off under 
+Sellers are strictly better off under 
 \begin_inset Formula $\tilde{\sigma}$
 \end_inset
 
@@ -3285,47 +3332,6 @@ Buyers are better off under
 status open
 
 \begin_layout Plain Layout
-Disclosure Reduces Buyer Surplus: Intuition
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Set of matches that create positive surplus for sellers is distinct from
- the set of matches that create positive surplus for buyers
-\end_layout
-
-\begin_layout Itemize
-Sellers do not internalize buyer surplus 
-\end_layout
-
-\begin_layout Itemize
-Disclosing more information to the sellers reduces the platform's ability
- to induce them to accept the efficient matches
-\end_layout
-
-\begin_layout Itemize
-Sellers cream-skim: single out the matches that are valuable to them and
- reject other matches that can be valuable to the buyers 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Disclosure Reduces Seller Surplus: Seller Coordination Problem
 \end_layout
 
@@ -3341,17 +3347,17 @@ Coordination problem, intuitively:
 
 \begin_deeper
 \begin_layout Itemize
-a seller keeps his schedule open by rejecting low-value jobs to increase
- his individual chances of getting high-value jobs
+a seller keeps his schedule open by rejecting low-value matches to increase
+ his individual chances of getting high-value matches
 \end_layout
 
 \begin_layout Itemize
-as a result in eqm, sellers spend a lot of time waiting for high-value jobs
+as a result in eqm, sellers spend a lot of time waiting for high-value matches
 \end_layout
 
 \begin_layout Itemize
-collectively, this behavior is suboptimal because all profitable jobs have
- to be completed
+collectively, this behavior is suboptimal because all profitable matches
+ have to be accepted
 \end_layout
 
 \begin_deeper
@@ -3381,8 +3387,8 @@ pause
 \emph on
 Cream-skimming externality
 \emph default
-: by rejecting a job a seller makes himself available and decreases the
- other sellers' chances of getting subsequent jobs
+: by rejecting a buyer a seller makes himself available and decreases the
+ other sellers' chances of getting subsequent buyers
 \begin_inset ERT
 status open
 
@@ -3405,6 +3411,47 @@ Coordination problem arises because sellers jointly are not capacity constrained
 are
 \emph default
  capacity constrained
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Disclosure Reduces Buyer Surplus: Intuition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Set of matches that create positive surplus for sellers is distinct from
+ the set of matches that create positive surplus for buyers
+\end_layout
+
+\begin_layout Itemize
+Sellers do not internalize buyer surplus 
+\end_layout
+
+\begin_layout Itemize
+Disclosing more information to the sellers reduces the platform's ability
+ to induce them to accept the efficient matches
+\end_layout
+
+\begin_layout Itemize
+With more info, sellers cream-skim: single out the matches that are valuable
+ to them and reject other matches that can be valuable to the buyers 
 \end_layout
 
 \end_deeper
@@ -3563,7 +3610,7 @@ With binary signaling structure, seller dynamic problem reduces to static
 \end_layout
 
 \begin_layout Itemize
-Pariticipation constrained holds 
+Participation constrained holds 
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
@@ -4024,7 +4071,7 @@ Seller match payoff
 status open
 
 \begin_layout Plain Layout
-Existence and Inefficiency Remain
+Existence of Equilibrium and Inefficiency Remain
 \end_layout
 
 \end_inset
@@ -4217,7 +4264,7 @@ Platform's Disclosure Problem
 \begin_inset Formula $\gamma=1/2$
 \end_inset
 
- total surplus max'n
+ platform max's total surplus 
 \begin_inset ERT
 status open
 
@@ -4719,7 +4766,7 @@ High buyer types are marginal for high seller types
 \end_layout
 
 \begin_layout Itemize
-Low buyer types have relatively smaller option value of rejecting, and less
+Low buyer types have relatively small option value of rejecting, and less
  surplus 
 \begin_inset Formula $\Rightarrow$
 \end_inset
@@ -4767,7 +4814,11 @@ Suppose
 \begin_inset Formula $\tau=0$
 \end_inset
 
-.
+ and 
+\begin_inset Formula $\J=U$
+\end_inset
+
+ (platform max's match rate).
  Then:
 \end_layout
 
@@ -4845,7 +4896,7 @@ The implied concavification reasoning goes back to Aumann-Maschler 1995
 status open
 
 \begin_layout Plain Layout
-Intuition: More Detailed
+Capacity Constraints Bring Two Additional Effects
 \end_layout
 
 \end_inset
@@ -4872,7 +4923,12 @@ Endogenous availability
 
 \begin_deeper
 \begin_layout Itemize
-High seller types are less available because they accept more
+high types accept more jobs -> less available -> pdf of available sellers
+ is decreasing -> motivation for platform to reveal 
+\begin_inset Formula $x$
+\end_inset
+
+ 
 \end_layout
 
 \end_deeper
@@ -4882,14 +4938,41 @@ Option value of waiting
 
 \begin_deeper
 \begin_layout Itemize
-Conceal information to reduce the option value
+high types have larger pool of profitable jobs -> larger opportunity cost
+ of accepting
 \end_layout
 
 \begin_layout Itemize
-High seller types have larger option value 
+Conceal information to reduce the option value
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Option value effect overcomes availability effect when there are very high
+ seller types (large 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+) and strong buyer traffic (large 
+\begin_inset Formula $\beta$
+\end_inset
+
+)
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Note Note

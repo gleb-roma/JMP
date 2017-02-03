@@ -78,7 +78,7 @@ theorems-ams-extended-bytype
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "linkcolor=[rgb]{0,0,0.5}, citecolor=[rgb]{0,0.3,0}, urlcolor=[rgb]{0,0.2,0.5}"
+\pdf_quoted_options "linkcolor=[rgb]{0,0,0}, citecolor=[rgb]{0,0,0}, urlcolor=[rgb]{0,0,0}"
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -146,6 +146,7 @@ theorems-ams-extended-bytype
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -484307115 "Gleb Romanyuk"
 \end_header
 
 \begin_body
@@ -260,7 +261,13 @@ ifdraft
 
 
 \backslash
-draftfalse
+draft
+\change_deleted -484307115 1485956435
+false
+\change_inserted -484307115 1485956436
+true
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -385,86 +392,164 @@ target "http://scholar.harvard.edu/files/gromanyuk/files/info_disclosure_in_matc
 \end_layout
 
 \begin_layout Abstract
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\series bold
-A variant.
-
-\series default
- I develop a model of a decentralized matching market in which heterogeneous
- buyers pursue sellers by requesting services.
- Buyer requests are perfectly coordinated.
- Sellers have preferences over buyers and independently choose which buyers
- to accept.
- Preference heterogeneity induces same-side and cross-side externalities
- leading to sellers' excessive screening and welfare loss.
- Platform's policy of coarse revelation of buyer information improves welfare
- by decreasing the ability of sellers to “cherry-pick” desirable buyers.
- Implication for welfare-maximizing platform is to limit information to
- the sellers when they are the more patient and more substitutable side
- of the market.
- However, if sellers have unobserved heterogeneity, coarsening is effective
- only if sellers are tightly capacity constrained or buyer-to-seller ratio
- is large.
- An approach for the problem of optimal disclosure with heterogeneous forward-lo
-oking agents with general type distribution is developed.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Abstract
-This paper develops a model for studying the problem of information disclosure
- faced by a platform that matches buyers and sellers.
- Buyers search for sellers and are time-sensitive, while sellers have limited
- capacity for serving buyers and derive heterogeneous payoffs from being
- matched with different buyers.
+This paper develops a model for studying the problem of information 
+\change_deleted -484307115 1485954109
+disclosure
+\change_inserted -484307115 1485954110
+intermediation
+\change_unchanged
+ faced by a platform that 
+\change_deleted -484307115 1485954299
+matches
+\change_inserted -484307115 1485954301
+connects
+\change_deleted -484307115 1485955906
  
+\change_inserted -484307115 1485954050
+ 
+\change_unchanged
+buyers and sellers.
+\change_inserted -484307115 1485954193
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-I develop a model in which time-sensitive buyers seek seller services, the
- sellers have variable match payoffs across buyers and limited capacity
- for serving them.
+
+\change_inserted -484307115 1485954207
+by the platform that facilitates matches between heterogeneous buyers and
+ sellers.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
+
+\change_unchanged
+ Buyers search for sellers 
+\change_inserted -484307115 1485954639
+in continuous time 
+\change_unchanged
+and are time-sensitive, while sellers have limited capacity for serving
+ buyers and derive heterogeneous payoffs from being matched with different
+ buyers.
  The platform controls the information the sellers observe about the buyers
  before forming a match.
  I show that full information disclosure is inefficient because of excessive
  rejections by the sellers.
- When the platform observes the sellers' payoff function, it can restore
- the full efficiency by using a coarse disclosure policy, which recommends
- an action to each seller.
- For the case where seller preferences are unknown to the platform, I characteri
-ze the disclosure policy that maximizes total welfare.
- Tighter capacity constraints or a higher buyer-to-seller ratio requires
- coarser disclosure.
- In a linear payoff environment with a uniform distribution of seller attributes
-, the efficient disclosure policy is 
-\emph on
-upper-coarsening
-\emph default
+ When the platform observes the sellers' 
+\change_deleted -484307115 1485916897
+payoff function
+\change_inserted -484307115 1485916899
+preferences
+\change_unchanged
+, 
+\change_inserted -484307115 1485955938
+there is a simple policy with a partial disclosure 
+\change_deleted -484307115 1485916956
+it
+\change_unchanged
+ 
+\change_inserted -484307115 1485917097
+that
+\change_deleted -484307115 1485916993
+can 
+\change_inserted -484307115 1485917354
+ 
+\change_unchanged
+restore
+\change_inserted -484307115 1485916998
+s
+\change_unchanged
+ the full efficiency
+\change_inserted -484307115 1485916964
 .
+
+\change_deleted -484307115 1485916966
+ by using a coarse disclosure policy, which recommends an action to each
+ seller.
+ For the case where seller preferences are unknown to the platform,
+\change_inserted -484307115 1485916946
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-what's upper coarsening?
+
+\change_inserted -484307115 1485916946
+which recommends an action to each seller.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
- For a general distribution of seller attributes, I develop an approach
- to solving the disclosure problem with heterogeneous and forward-looking
- sellers.
+
+\change_unchanged
+ 
+\change_inserted -484307115 1485954409
+When seller preferences are unknown to the platform, 
+\change_unchanged
+I characterize the disclosure policy that maximizes 
+\change_inserted -484307115 1485917132
+the 
+\change_unchanged
+total 
+\change_inserted -484307115 1485917136
+surplus
+\change_deleted -484307115 1485917135
+welfare
+\change_unchanged
+.
+ 
+\change_inserted -484307115 1486046293
+In a setting with linear payoffs and the uniform distribution of seller
+ attributes, I find that the optimal policy perfectly reveals low-cost buyers
+ and pools high-cost buyers (
+\emph on
+upper-coarsening
+\emph default
+).
+ 
+\change_unchanged
+Tighter 
+\change_inserted -484307115 1485954767
+sellers' 
+\change_unchanged
+capacity constraints or a higher buyer-to-seller ratio requires
+\change_inserted -484307115 1486046384
+ disclosing
+\change_unchanged
+ 
+\change_deleted -484307115 1485917288
+coarser
+\change_inserted -484307115 1485954767
+less
+\change_unchanged
+ 
+\change_deleted -484307115 1486046387
+disclosure
+\change_inserted -484307115 1486046389
+information
+\change_unchanged
+.
+ 
+\change_deleted -484307115 1485917164
+In a linear payoff environment with a uniform distribution of seller attributes,
+ the efficient disclosure policy is 
+\emph on
+upper-coarsening
+\emph default
+.
+
+\change_inserted -484307115 1485954767
+ 
+\change_unchanged
+For a general distribution of seller attributes, I develop an approach to
+ solving the disclosure problem with heterogeneous and forward-looking sellers.
  I discuss several applications to the design of digital matching platforms.
  
 \end_layout
@@ -655,7 +740,7 @@ filename "sections/appendix.lyx"
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/Users/gleb/Dropbox/Projects/bib/Online Marketplaces,/Users/gleb/Dropbox/Projects/bib/Auctions,/Users/gleb/Dropbox/Projects/bib/Theory,/Users/gleb/Dropbox/Projects/bib/Mechanism Design,/Users/gleb/Dropbox/Projects/bib/Applied Theory,/Users/gleb/Dropbox/Projects/bib/Math"
+bibfiles "/Users/gleb/Dropbox/Projects/bib/Auctions,/Users/gleb/Dropbox/Projects/bib/Theory,/Users/gleb/Dropbox/Projects/bib/Mechanism Design,/Users/gleb/Dropbox/Projects/bib/Applied Theory,/Users/gleb/Dropbox/Projects/bib/Math,/Users/gleb/Dropbox/Projects/bib/Market Design and Matching"
 options "apecon"
 
 \end_inset
